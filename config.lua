@@ -59,7 +59,7 @@ mapAuthor = "CipSoft"
 mysqlHost = "127.0.0.1"
 mysqlUser = "root"
 mysqlPass = ""
-mysqlDatabase = "nostalrius"
+mysqlDatabase = "sabrehaven"
 mysqlPort = 3306
 mysqlSock = ""
 
