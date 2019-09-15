@@ -8,7 +8,7 @@ function onLogin(player)
 			player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 		end
 
-		loginStr = string.format("Your last visit on Nostalrius: %s.", os.date("%a %b %d %X %Y", player:getLastLoginSaved()))
+		loginStr = string.format("Your last visit on " .. configManager.getString(configKeys.SERVER_NAME) .. ": %s.", os.date("%a %b %d %X %Y", player:getLastLoginSaved()))
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 
@@ -43,8 +43,10 @@ function onLogin(player)
 		player:setStorageValue(43434, 1)
 	elseif player:getStorageValue(43434) == 1 then
 		player:setStorageValue(43434, 0)
-		player:teleportTo({x = 32369, y = 32241, z = 7})
-		player:setTown(Town("Thais"))
+		if player:getVocation():getId() > 0 then
+			player:teleportTo({x = 32369, y = 32241, z = 7})
+			player:setTown(Town("Thais"))
+		end
 	end
 	
 	-- Events
