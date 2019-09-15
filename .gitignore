@@ -14,3 +14,6 @@ vc14/theforgottenserver.vcxproj.user
 vc14/.vs/
 *.pdb
 *.dll
+/.vs
+/vc14/Debug
+/vc14/UpgradeLog.htm
