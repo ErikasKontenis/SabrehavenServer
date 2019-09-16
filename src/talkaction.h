@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -51,8 +51,7 @@ class TalkActions : public BaseEvents
 		bool registerEvent(Event* event, const pugi::xml_node& node) final;
 		void clear() final;
 
-		// TODO: Store TalkAction objects directly in the list instead of using pointers
-		std::forward_list<TalkAction*> talkActions;
+		std::forward_list<TalkAction> talkActions;
 
 		LuaScriptInterface scriptInterface;
 };

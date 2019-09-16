@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1111,6 +1111,21 @@ const char* getReturnMessage(ReturnValue value)
 
 		case RETURNVALUE_YOUARENOTTHEOWNER:
 			return "You are not the owner.";
+
+		case RETURNVALUE_TRADEPLAYERFARAWAY:
+			return "Trade player is too far away.";
+
+		case RETURNVALUE_YOUDONTOWNTHISHOUSE:
+			return "You don't own this house.";
+
+		case RETURNVALUE_TRADEPLAYERALREADYOWNSAHOUSE:
+			return "Trade player already owns a house.";
+
+		case RETURNVALUE_TRADEPLAYERHIGHESTBIDDER:
+			return "Trade player is currently the highest bidder of an auctioned house.";
+
+		case RETURNVALUE_YOUCANNOTTRADETHISHOUSE:
+			return "You can not trade this house.";
 
 		default: // RETURNVALUE_NOTPOSSIBLE, etc
 			return "Sorry, not possible.";

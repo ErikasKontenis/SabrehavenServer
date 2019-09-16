@@ -69,7 +69,9 @@ freePremium = false
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
 showMonsterLoot = false
-queryPlayerContainers = false
+blockHeight = false
+dropItems = false
+
 
 -- Character Rooking
 -- Level threshold is the level requirement to teleport players back to newbie town

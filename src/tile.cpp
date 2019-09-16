@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -98,6 +98,25 @@ bool Tile::hasHeight(uint32_t n) const
 		}
 	}
 	return false;
+}
+
+int32_t Tile::getHeight() {
+	int32_t height = 0;
+	if (ground) {
+		if (ground->hasProperty(CONST_PROP_HASHEIGHT)) {
+			++height;
+		}
+	}
+
+	if (const TileItemVector* items = getItemList()) {
+		for (ItemVector::const_iterator it = items->begin(); it != items->end(); ++it) {
+			if ((*it)->hasProperty(CONST_PROP_HASHEIGHT)) {
+				++height;
+			}
+		}
+	}
+
+	return std::min(height, 4);
 }
 
 size_t Tile::getCreatureCount() const
@@ -1459,22 +1478,16 @@ bool Tile::isMoveableBlocking() const
 	return !ground || hasFlag(TILESTATE_BLOCKSOLID);
 }
 
-Item* Tile::getUseItem() const
+Item* Tile::getUseItem(int32_t index) const
 {
 	const TileItemVector* items = getItemList();
 	if (!items || items->size() == 0) {
 		return ground;
 	}
 
-	for (Item* item : boost::adaptors::reverse(*items)) {
-		if (Item::items[item->getID()].forceUse) {
-			return item;
-		}
+	if (Thing* thing = getThing(index)) {
+		return thing->getItem();
 	}
 
-	Item* item = items->getTopDownItem();
-	if (!item) {
-		item = items->getTopTopItem();
-	}
-	return item;
+	return nullptr;
 }

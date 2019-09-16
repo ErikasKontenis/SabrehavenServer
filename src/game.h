@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,7 +22,6 @@
 
 #include "account.h"
 #include "combat.h"
-#include "commands.h"
 #include "groups.h"
 #include "map.h"
 #include "position.h"
@@ -436,7 +435,7 @@ class Game
 		void combatGetTypeInfo(CombatType_t combatType, Creature* target, TextColor_t& color, uint8_t& effect);
 
 		bool combatChangeHealth(Creature* attacker, Creature* target, CombatDamage& damage);
-		bool combatChangeMana(Creature* attacker, Creature* target, int32_t manaChange);
+		bool combatChangeMana(Creature* attacker, Creature* target, CombatDamage& damage);
 
 		//animation help functions
 		void addCreatureHealth(const Creature* target);
@@ -448,9 +447,6 @@ class Game
 		void addAnimatedText(const Position& pos, uint8_t color, const std::string& text);
 		static void addAnimatedText(const SpectatorVec& list, const Position& pos, uint8_t color, const std::string& text);
 		void addMonsterSayText(const Position& pos, const std::string& text);
-
-		void addCommandTag(char tag);
-		void resetCommandTag();
 
 		void startDecay(Item* item);
 		int32_t getLightHour() const {
@@ -488,13 +484,13 @@ class Game
 		BedItem* getBedBySleeper(uint32_t guid) const;
 		void setBedSleeper(BedItem* bed, uint32_t guid);
 		void removeBedSleeper(uint32_t guid);
+		bool reload(ReloadTypes_t reloadType);
 
 		Groups groups;
 		Map map;
 		Raids raids;
 
 	protected:
-		bool playerSayCommand(Player* player, const std::string& text);
 		bool playerSaySpell(Player* player, SpeakClasses type, const std::string& text);
 		void playerWhisper(Player* player, const std::string& text);
 		bool playerYell(Player* player, const std::string& text);
@@ -518,7 +514,6 @@ class Game
 
 		std::vector<Creature*> ToReleaseCreatures;
 		std::vector<Item*> ToReleaseItems;
-		std::vector<char> commandTags;
 
 		size_t lastBucket = 0;
 
@@ -531,8 +526,6 @@ class Game
 		std::map<Item*, uint32_t> tradeItems;
 
 		std::map<uint32_t, BedItem*> bedSleepersMap;
-
-		Commands commands;
 
 		static constexpr int32_t LIGHT_LEVEL_DAY = 250;
 		static constexpr int32_t LIGHT_LEVEL_NIGHT = 40;

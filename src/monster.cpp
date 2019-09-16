@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -744,23 +744,12 @@ void Monster::setIdle(bool idle)
 
 void Monster::updateIdleStatus()
 {
-	bool idle = true;
+	bool idle = false;
 
-	if (!isSummon()) {
-		if (!targetList.empty()) {
-			// visible target
-			idle = false;
-		} else {
-			for (Condition* condition : conditions) {
-				if (condition->getType() >= CONDITION_ENERGY && condition->getType() <= CONDITION_ENERGY) {
-					// monsters with aggressive conditions never become idle
-					idle = false;
-					break;
-				}
-			}
+	if (conditions.empty()) {
+		if (!isSummon() && targetList.empty()) {
+			idle = true;
 		}
-	} else {
-		idle = false;
 	}
 
 	setIdle(idle);
@@ -887,7 +876,7 @@ void Monster::doAttacking(uint32_t)
 
 	for (spellBlock_t& spellBlock : mType->info.attackSpells) {
 		if (spellBlock.range != 0 && std::max<uint32_t>(Position::getDistanceX(myPos, targetPos), Position::getDistanceY(myPos, targetPos)) <= spellBlock.range) {
-			if (uniform_random(0, spellBlock.chance) == 0 && (master || health > mType->info.runAwayHealth || uniform_random(1, 3) == 1)) {
+			if (normal_random(0, spellBlock.chance) == 0 && (master || health > mType->info.runAwayHealth || normal_random(1, 3) == 1)) {
 				updateLookDirection();
 
 				minCombatValue = spellBlock.minCombatValue;
@@ -988,7 +977,7 @@ void Monster::onThinkTarget(uint32_t interval)
 void Monster::onThinkDefense(uint32_t)
 {
 	for (const spellBlock_t& spellBlock : mType->info.defenseSpells) {
-		if (uniform_random(0, spellBlock.chance) == 0 && (master || health > mType->info.runAwayHealth || uniform_random(1, 3) == 1)) {
+		if (normal_random(0, spellBlock.chance) == 0 && (master || health > mType->info.runAwayHealth || normal_random(1, 3) == 1)) {
 			minCombatValue = spellBlock.minCombatValue;
 			maxCombatValue = spellBlock.maxCombatValue;
 			spellBlock.spell->castSpell(this, this);
@@ -1012,7 +1001,7 @@ void Monster::onThinkDefense(uint32_t)
 				continue;
 			}
 
-			if (uniform_random(0, summonBlock.chance) == 0 && (health > mType->info.runAwayHealth || uniform_random(1, 3) == 1)) {
+			if (normal_random(0, summonBlock.chance) == 0 && (health > mType->info.runAwayHealth || normal_random(1, 3) == 1)) {
 				Monster* summon = Monster::createMonster(summonBlock.name);
 				if (summon) {
 					const Position& summonPos = getPosition();
@@ -1038,16 +1027,15 @@ void Monster::onThinkYell(uint32_t)
 	}
 
 	int32_t randomResult = rand();
-	if (randomResult == 50 * (randomResult / 50)) {
-		if (!mType->info.voiceVector.empty()) {
-			uint32_t index = uniform_random(0, mType->info.voiceVector.size() - 1);
-			const voiceBlock_t& vb = mType->info.voiceVector[index];
-		
-			if (vb.yellText) {
-				g_game.internalCreatureSay(this, TALKTYPE_MONSTER_YELL, vb.text, false);
-			} else {
-				g_game.internalCreatureSay(this, TALKTYPE_MONSTER_SAY, vb.text, false);
-			}
+	if (rand() == 50 * (randomResult / 50)) {
+		int32_t totalVoices = mType->info.voiceVector.size();
+		const voiceBlock_t& voice = mType->info.voiceVector[rand() % totalVoices + 1];
+
+		if (voice.yellText) {
+			g_game.internalCreatureSay(this, TALKTYPE_MONSTER_YELL, voice.text, false);
+		}
+		else {
+			g_game.internalCreatureSay(this, TALKTYPE_MONSTER_SAY, voice.text, false);
 		}
 	}
 }
@@ -1172,7 +1160,7 @@ bool Monster::getNextStep(Direction& direction, uint32_t& flags)
 	if ((!followCreature || !hasFollowPath) && (!isSummon() || !isMasterInRange)) {
 		if (OTSYS_TIME() >= nextDanceStepRound) {
 			updateLookDirection();
-			nextDanceStepRound = OTSYS_TIME() + 200 + getStepDuration();
+			nextDanceStepRound = OTSYS_TIME() + getStepDuration();
 
 			//choose a random direction
 			result = getRandomStep(getPosition(), direction);
@@ -1235,6 +1223,7 @@ bool Monster::getNextStep(Direction& direction, uint32_t& flags)
 									egibleToDance = false;
 									earliestWakeUpTime = OTSYS_TIME() + 1000;
 									earliestDanceTime = OTSYS_TIME() + 1000 + getStepDuration();
+									earliestAttackTime += 200;
 								}
 							}
 						}
@@ -1276,6 +1265,7 @@ bool Monster::getNextStep(Direction& direction, uint32_t& flags)
 								egibleToDance = false;
 								earliestWakeUpTime = OTSYS_TIME() + 1000;
 								earliestDanceTime = OTSYS_TIME() + 1000 + getStepDuration();
+								earliestAttackTime += 200;
 							}
 						}
 					}
@@ -2002,40 +1992,71 @@ void Monster::updateLookDirection()
 			//look EAST/WEST
 			if (offsetx < 0) {
 				newDir = DIRECTION_WEST;
-			} else {
+			}
+			else {
 				newDir = DIRECTION_EAST;
 			}
-		} else if (dx < dy) {
+		}
+		else if (dx < dy) {
 			//look NORTH/SOUTH
 			if (offsety < 0) {
 				newDir = DIRECTION_NORTH;
-			} else {
+			}
+			else {
 				newDir = DIRECTION_SOUTH;
 			}
-		} else {
+		}
+		else {
 			Direction dir = getDirection();
 			if (offsetx < 0 && offsety < 0) {
-				if (dir == DIRECTION_SOUTH || dir == DIRECTION_NORTH) {
+				if (offsetx == -1 && offsety == -1) {
+					if (dir == DIRECTION_NORTH) {
+						newDir = DIRECTION_WEST;
+					}
+				}
+				if (dir == DIRECTION_SOUTH) {
 					newDir = DIRECTION_WEST;
-				} else if (dir == DIRECTION_EAST) {
+				}
+				else if (dir == DIRECTION_EAST) {
 					newDir = DIRECTION_NORTH;
 				}
-			} else if (offsetx < 0 && offsety > 0) {
-				if (dir == DIRECTION_NORTH || dir == DIRECTION_SOUTH) {
+			}
+			else if (offsetx < 0 && offsety > 0) {
+				if (offsetx == -1 && offsety == 1) {
+					if (dir == DIRECTION_SOUTH) {
+						newDir = DIRECTION_WEST;
+					}
+				}
+				if (dir == DIRECTION_NORTH) {
 					newDir = DIRECTION_WEST;
-				} else if (dir == DIRECTION_EAST) {
+				}
+				else if (dir == DIRECTION_EAST) {
 					newDir = DIRECTION_SOUTH;
 				}
-			} else if (offsetx > 0 && offsety < 0) {
-				if (dir == DIRECTION_SOUTH || dir == DIRECTION_NORTH) {
+			}
+			else if (offsetx > 0 && offsety < 0) {
+				if (offsetx == 1 && offsety == -1) {
+					if (dir == DIRECTION_NORTH) {
+						newDir = DIRECTION_EAST;
+					}
+				}
+				if (dir == DIRECTION_SOUTH) {
 					newDir = DIRECTION_EAST;
-				} else if (dir == DIRECTION_WEST) {
+				}
+				else if (dir == DIRECTION_WEST) {
 					newDir = DIRECTION_NORTH;
 				}
-			} else {
-				if (dir == DIRECTION_NORTH || dir == DIRECTION_SOUTH) {
+			}
+			else {
+				if (offsetx == 1 && offsety == 1) {
+					if (dir == DIRECTION_SOUTH) {
+						newDir = DIRECTION_EAST;
+					}
+				}
+				if (dir == DIRECTION_NORTH) {
 					newDir = DIRECTION_EAST;
-				} else if (dir == DIRECTION_WEST) {
+				}
+				else if (dir == DIRECTION_WEST) {
 					newDir = DIRECTION_SOUTH;
 				}
 			}

@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -370,7 +370,7 @@ ReturnValue Container::queryRemove(const Thing& thing, uint32_t count, uint32_t 
 }
 
 Cylinder* Container::queryDestination(int32_t& index, const Thing &thing, Item** destItem,
-		uint32_t& flags)
+	uint32_t& flags)
 {
 	if (index == 254 /*move up*/) {
 		index = INDEX_WHEREEVER;
@@ -386,7 +386,8 @@ Cylinder* Container::queryDestination(int32_t& index, const Thing &thing, Item**
 	if (index == 255 /*add wherever*/) {
 		index = INDEX_WHEREEVER;
 		*destItem = nullptr;
-	} else if (index >= static_cast<int32_t>(capacity())) {
+	}
+	else if (index >= static_cast<int32_t>(capacity())) {
 		/*
 		if you have a container, maximize it to show all 20 slots
 		then you open a bag that is inside the container you will have a bag with 8 slots
@@ -401,6 +402,20 @@ Cylinder* Container::queryDestination(int32_t& index, const Thing &thing, Item**
 	const Item* item = thing.getItem();
 	if (!item) {
 		return this;
+	}
+
+	if (index != INDEX_WHEREEVER) {
+		Item* itemFromIndex = getItemByIndex(index);
+		if (itemFromIndex) {
+			*destItem = itemFromIndex;
+		}
+
+		Cylinder* subCylinder = dynamic_cast<Cylinder*>(*destItem);
+		if (subCylinder) {
+			index = INDEX_WHEREEVER;
+			*destItem = nullptr;
+			return subCylinder;
+		}
 	}
 
 	if (g_config.getBoolean(ConfigManager::STACK_CUMULATIVES)) {
@@ -419,19 +434,6 @@ Cylinder* Container::queryDestination(int32_t& index, const Thing &thing, Item**
 		}
 	}
 
-	if (index != INDEX_WHEREEVER) {
-		Item* itemFromIndex = getItemByIndex(index);
-		if (itemFromIndex) {
-			*destItem = itemFromIndex;
-		}
-
-		Cylinder* subCylinder = dynamic_cast<Cylinder*>(*destItem);
-		if (subCylinder) {
-			index = INDEX_WHEREEVER;
-			*destItem = nullptr;
-			return subCylinder;
-		}
-	}
 	return this;
 }
 

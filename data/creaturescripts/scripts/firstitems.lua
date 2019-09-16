@@ -1,7 +1,5 @@
 function onLogin(player)
-	if player:getLastLoginSaved() <= 0 or player:getStorageValue(30017) == 1 then
-		player:setStorageValue(30017, 0) -- reset storage for first items
-		
+	if player:getLastLoginSaved() <= 0 then
 		-- Items
 		if player:getSex() == PLAYERSEX_FEMALE then
 			player:addItem(3562, 1, true, -1, CONST_SLOT_ARMOR)

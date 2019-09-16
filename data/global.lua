@@ -41,3 +41,7 @@ table.contains = function(array, value)
 	end
 	return false
 end
+
+function isNumber(str)
+	return tonumber(str) ~= nil
+end
