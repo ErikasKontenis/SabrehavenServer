@@ -28,8 +28,7 @@
   <raid name="edronorshabaal" repeat="false" margin="0" interval2="31104000" file="edronorshabaal.xml"/>
   <raid name="edronskunks" repeat="true" margin="0" interval2="2592000" file="edronskunks.xml"/>
   <raid name="foldayetis" repeat="true" margin="0" interval2="2592000" file="foldayetis.xml"/>
-  <!--halloweenhare commented because invalid spawn positions. Fix it and uncomment-->
-  <!--<raid name="halloweenhare" repeat="true" margin="0" interval2="1130763600" file="halloweenhare.xml"/>-->
+  <raid name="halloweenhare" repeat="true" margin="0" interval2="1130763600" file="halloweenhare.xml"/>
   <raid name="kazordoonhornedfox" repeat="true" margin="0" interval2="1209600" file="kazordoonhornedfox.xml"/>
   <raid name="kazordoonspiderplague" repeat="true" margin="0" interval2="1209600" file="kazordoonspiderplague.xml"/>
   <raid name="mintwalinminogeneral" repeat="true" margin="0" interval2="1209600" file="mintwalinminogeneral.xml"/>
