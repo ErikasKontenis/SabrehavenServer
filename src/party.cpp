@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,9 +22,11 @@
 #include "party.h"
 #include "game.h"
 #include "configmanager.h"
+#include "events.h"
 
 extern Game g_game;
 extern ConfigManager g_config;
+extern Events* g_events;
 
 Party::Party(Player* leader) : leader(leader)
 {
@@ -33,6 +35,11 @@ Party::Party(Player* leader) : leader(leader)
 
 void Party::disband()
 {
+	if (!g_events->eventPartyOnDisband(this)) {
+		return;
+	}
+
+
 	Player* currentLeader = leader;
 	leader = nullptr;
 
@@ -76,6 +83,10 @@ bool Party::leaveParty(Player* player)
 	}
 
 	if (player->getParty() != this && leader != player) {
+		return false;
+	}
+
+	if (!g_events->eventPartyOnLeave(this, player)) {
 		return false;
 	}
 
@@ -171,6 +182,10 @@ bool Party::passPartyLeadership(Player* player)
 
 bool Party::joinParty(Player& player)
 {
+	if (!g_events->eventPartyOnJoin(this, &player)) {
+		return false;
+	}
+
 	auto it = std::find(inviteList.begin(), inviteList.end(), &player);
 	if (it == inviteList.end()) {
 		return false;
@@ -380,13 +395,15 @@ bool Party::setSharedExperience(Player* player, bool sharedExpActive)
 	return true;
 }
 
-void Party::shareExperience(uint64_t experience)
+void Party::shareExperience(uint64_t experience, Creature* source/* = nullptr*/)
 {
-	uint64_t shareExperience = static_cast<uint64_t>(std::ceil((static_cast<double>(experience) * (extraExpRate + 1)) / (memberList.size() + 1)));
+	uint64_t shareExperience = experience;
+	g_events->eventPartyOnShareExperience(this, shareExperience);
+
 	for (Player* member : memberList) {
-		member->onGainSharedExperience(shareExperience);
+		member->onGainSharedExperience(shareExperience, source);
 	}
-	leader->onGainSharedExperience(shareExperience);
+	leader->onGainSharedExperience(shareExperience, source);
 }
 
 bool Party::canUseSharedExperience(const Player* player) const

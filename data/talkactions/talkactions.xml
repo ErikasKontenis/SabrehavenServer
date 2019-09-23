@@ -27,7 +27,9 @@
 	<talkaction words="/removetutor" separator=" " script="remove_tutor.lua" />
 	<talkaction words="/looktype" separator=" " script="looktype.lua" />
 	<talkaction words="/summon" separator=" " script="place_summon.lua" />
-	<talkaction words="/chameleon" separator=" " script="chameleon.lua" />
+  <talkaction words="/reload" separator=" " script="reload.lua" />
+  <talkaction words="/save" script="save.lua" />
+  <talkaction words="/chameleon" separator=" " script="chameleon.lua" />
 	<talkaction words="/addskill" separator=" " script="add_skill.lua" />
 	<talkaction words="/mccheck" script="mccheck.lua" />
 	<talkaction words="/ghost" script="ghost.lua" />
@@ -37,6 +39,7 @@
 	<!-- player talkactions -->
 	<talkaction words="!buypremium" script="buyprem.lua"/>
 	<talkaction words="!buyhouse" script="buyhouse.lua"/>
+  <talkaction words="!sellhouse" separator=" " script="sellhouse.lua" />
 	<talkaction words="!leavehouse" script="leavehouse.lua"/>
 	<talkaction words="!changesex" script="changesex.lua"/>
 	<talkaction words="!uptime" script="uptime.lua"/>

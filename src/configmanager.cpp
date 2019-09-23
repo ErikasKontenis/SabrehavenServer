@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -77,7 +77,9 @@ bool ConfigManager::load()
 	boolean[CONVERT_UNSAFE_SCRIPTS] = getGlobalBoolean(L, "convertUnsafeScripts", true);
 	boolean[TELEPORT_NEWBIES] = getGlobalBoolean(L, "teleportNewbies", true);
 	boolean[STACK_CUMULATIVES] = getGlobalBoolean(L, "autoStackCumulatives", false);
-	boolean[QUERY_PLAYER_CONTAINERS] = getGlobalBoolean(L, "queryPlayerContainers", false);
+	boolean[BLOCK_HEIGHT] = getGlobalBoolean(L, "blockHeight", false);
+	boolean[DROP_ITEMS] = getGlobalBoolean(L, "dropItems", false);
+
 
 	string[DEFAULT_PRIORITY] = getGlobalString(L, "defaultPriority", "high");
 	string[SERVER_NAME] = getGlobalString(L, "serverName", "");

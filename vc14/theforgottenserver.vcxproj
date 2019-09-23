@@ -149,7 +149,6 @@
     <ClCompile Include="..\src\behaviourdatabase.cpp" />
     <ClCompile Include="..\src\chat.cpp" />
     <ClCompile Include="..\src\combat.cpp" />
-    <ClCompile Include="..\src\commands.cpp" />
     <ClCompile Include="..\src\condition.cpp" />
     <ClCompile Include="..\src\configmanager.cpp" />
     <ClCompile Include="..\src\connection.cpp" />
@@ -161,6 +160,7 @@
     <ClCompile Include="..\src\databasemanager.cpp" />
     <ClCompile Include="..\src\databasetasks.cpp" />
     <ClCompile Include="..\src\depotlocker.cpp" />
+	<ClCompile Include="..\src\events.cpp" />
     <ClCompile Include="..\src\fileloader.cpp" />
     <ClCompile Include="..\src\game.cpp" />
     <ClCompile Include="..\src\globalevent.cpp" />
@@ -225,7 +225,6 @@
     <ClInclude Include="..\src\behaviourdatabase.h" />
     <ClInclude Include="..\src\chat.h" />
     <ClInclude Include="..\src\combat.h" />
-    <ClInclude Include="..\src\commands.h" />
     <ClInclude Include="..\src\condition.h" />
     <ClInclude Include="..\src\configmanager.h" />
     <ClInclude Include="..\src\connection.h" />
@@ -239,6 +238,7 @@
     <ClInclude Include="..\src\databasetasks.h" />
     <ClInclude Include="..\src\definitions.h" />
     <ClInclude Include="..\src\depotlocker.h" />
+	<ClInclude Include="..\src\events.h" />
     <ClInclude Include="..\src\enums.h" />
     <ClInclude Include="..\src\fileloader.h" />
     <ClInclude Include="..\src\game.h" />

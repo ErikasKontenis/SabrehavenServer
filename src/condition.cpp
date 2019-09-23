@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -227,7 +227,7 @@ bool Condition::isPersistent() const
 		return false;
 	}
 
-	if (!(id == CONDITIONID_DEFAULT || id == CONDITIONID_COMBAT)) {
+	if (!(id == CONDITIONID_DEFAULT || id == CONDITIONID_COMBAT || conditionType == CONDITION_MUTED)) {
 		return false;
 	}
 
@@ -655,7 +655,9 @@ bool ConditionRegeneration::executeCondition(Creature* creature, int32_t interva
 
 		if (internalManaTicks >= manaTicks) {
 			internalManaTicks = 0;
-			creature->changeMana(manaGain);
+			if (Player* player = creature->getPlayer()) {
+				player->changeMana(manaGain);
+			}
 		}
 	}
 
@@ -756,8 +758,6 @@ bool ConditionSoul::setParam(ConditionParam_t param, int32_t value)
 
 bool ConditionDamage::setParam(ConditionParam_t param, int32_t value)
 {
-	Condition::setParam(param, value);
-
 	switch (param) {
 		case CONDITION_PARAM_OWNER:
 			owner = value;
@@ -927,6 +927,7 @@ bool ConditionDamage::doDamage(Creature* creature, int32_t healthChange)
 	}
 
 	CombatDamage damage;
+	damage.origin = ORIGIN_CONDITION;
 	damage.value = healthChange;
 	damage.type = Combat::ConditionToDamageType(conditionType);
 

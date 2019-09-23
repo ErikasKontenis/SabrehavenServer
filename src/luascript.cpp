@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -676,6 +676,18 @@ void LuaScriptInterface::setCreatureMetatable(lua_State* L, int32_t index, const
 }
 
 // Get
+CombatDamage LuaScriptInterface::getCombatDamage(lua_State* L)
+{
+	CombatDamage damage;
+	damage.value = getNumber<int32_t>(L, -4);
+	damage.type = getNumber<CombatType_t>(L, -3);
+	damage.min = getNumber<int32_t>(L, -2);
+	damage.max = getNumber<CombatType_t>(L, -1);
+
+	lua_pop(L, 4);
+	return damage;
+}
+
 std::string LuaScriptInterface::getString(lua_State* L, int32_t arg)
 {
 	size_t len;
@@ -838,6 +850,16 @@ void LuaScriptInterface::pushBoolean(lua_State* L, bool value)
 {
 	lua_pushboolean(L, value ? 1 : 0);
 }
+
+void LuaScriptInterface::pushCombatDamage(lua_State* L, const CombatDamage& damage)
+{
+	lua_pushnumber(L, damage.value);
+	lua_pushnumber(L, damage.type);
+	lua_pushnumber(L, damage.min);
+	lua_pushnumber(L, damage.max);
+	lua_pushnumber(L, damage.origin);
+}
+
 
 void LuaScriptInterface::pushPosition(lua_State* L, const Position& position, int32_t stackpos/* = 0*/)
 {
@@ -1465,6 +1487,13 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(SLOTP_DEPOT)
 	registerEnum(SLOTP_TWO_HAND)
 
+	// Use with combat functions
+	registerEnum(ORIGIN_NONE)
+	registerEnum(ORIGIN_CONDITION)
+	registerEnum(ORIGIN_SPELL)
+	registerEnum(ORIGIN_MELEE)
+	registerEnum(ORIGIN_RANGED)
+
 	// Use with house:getAccessList, house:setAccessList
 	registerEnum(GUEST_LIST)
 	registerEnum(SUBOWNER_LIST)
@@ -1533,6 +1562,31 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(RETURNVALUE_CANONLYUSEONESHIELD)
 	registerEnum(RETURNVALUE_NOPARTYMEMBERSINRANGE)
 	registerEnum(RETURNVALUE_YOUARENOTTHEOWNER)
+	registerEnum(RETURNVALUE_TRADEPLAYERFARAWAY)
+	registerEnum(RETURNVALUE_YOUDONTOWNTHISHOUSE)
+	registerEnum(RETURNVALUE_TRADEPLAYERALREADYOWNSAHOUSE)
+	registerEnum(RETURNVALUE_TRADEPLAYERHIGHESTBIDDER)
+	registerEnum(RETURNVALUE_YOUCANNOTTRADETHISHOUSE)
+	
+	registerEnum(RELOAD_TYPE_ALL)
+	registerEnum(RELOAD_TYPE_ACTIONS)
+	registerEnum(RELOAD_TYPE_CHAT)
+	registerEnum(RELOAD_TYPE_COMMANDS)
+	registerEnum(RELOAD_TYPE_CONFIG)
+	registerEnum(RELOAD_TYPE_CREATURESCRIPTS)
+	registerEnum(RELOAD_TYPE_EVENTS)
+	registerEnum(RELOAD_TYPE_GLOBAL)
+	registerEnum(RELOAD_TYPE_GLOBALEVENTS)
+	registerEnum(RELOAD_TYPE_ITEMS)
+	registerEnum(RELOAD_TYPE_MONSTERS)
+	registerEnum(RELOAD_TYPE_MOUNTS)
+	registerEnum(RELOAD_TYPE_MOVEMENTS)
+	registerEnum(RELOAD_TYPE_NPCS)
+	registerEnum(RELOAD_TYPE_QUESTS)
+	registerEnum(RELOAD_TYPE_RAIDS)
+	registerEnum(RELOAD_TYPE_SPELLS)
+	registerEnum(RELOAD_TYPE_TALKACTIONS)
+	registerEnum(RELOAD_TYPE_WEAPONS)
 
 	// _G
 	registerGlobalVariable("INDEX_WHEREEVER", INDEX_WHEREEVER);
@@ -1608,6 +1662,8 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::MAX_PACKETS_PER_SECOND)
 	registerEnumIn("configKeys", ConfigManager::NEWBIE_TOWN)
 	registerEnumIn("configKeys", ConfigManager::NEWBIE_LEVEL_THRESHOLD)
+	registerEnumIn("configKeys", ConfigManager::BLOCK_HEIGHT)
+	registerEnumIn("configKeys", ConfigManager::DROP_ITEMS)
 
 	// os
 	registerMethod("os", "mtime", LuaScriptInterface::luaSystemTime);
@@ -1645,6 +1701,8 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Game", "createTile", LuaScriptInterface::luaGameCreateTile);
 
 	registerMethod("Game", "startRaid", LuaScriptInterface::luaGameStartRaid);
+
+	registerMethod("Game", "reload", LuaScriptInterface::luaGameReload);
 
 	// Variant
 	registerClass("Variant", "", LuaScriptInterface::luaVariantCreate);
@@ -1853,10 +1911,6 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Creature", "getMaxHealth", LuaScriptInterface::luaCreatureGetMaxHealth);
 	registerMethod("Creature", "setMaxHealth", LuaScriptInterface::luaCreatureSetMaxHealth);
 
-	registerMethod("Creature", "getMana", LuaScriptInterface::luaCreatureGetMana);
-	registerMethod("Creature", "addMana", LuaScriptInterface::luaCreatureAddMana);
-	registerMethod("Creature", "getMaxMana", LuaScriptInterface::luaCreatureGetMaxMana);
-
 	registerMethod("Creature", "getSkull", LuaScriptInterface::luaCreatureGetSkull);
 	registerMethod("Creature", "setSkull", LuaScriptInterface::luaCreatureSetSkull);
 
@@ -1914,6 +1968,9 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("Player", "getMagicLevel", LuaScriptInterface::luaPlayerGetMagicLevel);
 	registerMethod("Player", "getBaseMagicLevel", LuaScriptInterface::luaPlayerGetBaseMagicLevel);
+	registerMethod("Player", "getMana", LuaScriptInterface::luaPlayerGetMana);
+	registerMethod("Player", "addMana", LuaScriptInterface::luaPlayerAddMana);
+	registerMethod("Player", "getMaxMana", LuaScriptInterface::luaPlayerGetMaxMana);
 	registerMethod("Player", "setMaxMana", LuaScriptInterface::luaPlayerSetMaxMana);
 	registerMethod("Player", "getManaSpent", LuaScriptInterface::luaPlayerGetManaSpent);
 	registerMethod("Player", "addManaSpent", LuaScriptInterface::luaPlayerAddManaSpent);
@@ -2122,6 +2179,7 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("House", "getOwnerGuid", LuaScriptInterface::luaHouseGetOwnerGuid);
 	registerMethod("House", "setOwnerGuid", LuaScriptInterface::luaHouseSetOwnerGuid);
+	registerMethod("House", "startTrade", LuaScriptInterface::luaHouseStartTrade);
 
 	registerMethod("House", "getBeds", LuaScriptInterface::luaHouseGetBeds);
 	registerMethod("House", "getBedCount", LuaScriptInterface::luaHouseGetBedCount);
@@ -2196,6 +2254,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Combat", "setArea", LuaScriptInterface::luaCombatSetArea);
 	registerMethod("Combat", "setCondition", LuaScriptInterface::luaCombatSetCondition);
 	registerMethod("Combat", "setCallback", LuaScriptInterface::luaCombatSetCallback);
+	registerMethod("Combat", "setOrigin", LuaScriptInterface::luaCombatSetOrigin);
 
 	registerMethod("Combat", "execute", LuaScriptInterface::luaCombatExecute);
 
@@ -2794,7 +2853,7 @@ int LuaScriptInterface::luaCreateCombatArea(lua_State* L)
 
 int LuaScriptInterface::luaDoAreaCombatHealth(lua_State* L)
 {
-	//doAreaCombatHealth(cid, type, pos, area, min, max, effect)
+	//doAreaCombatHealth(cid, type, pos, area, min, max, effect[, origin = ORIGIN_SPELL])
 	Creature* creature = getCreature(L, 1);
 	if (!creature && (!isNumber(L, 1) || getNumber<uint32_t>(L, 1) != 0)) {
 		reportErrorFunc(getErrorDesc(LUA_ERROR_CREATURE_NOT_FOUND));
@@ -2812,6 +2871,7 @@ int LuaScriptInterface::luaDoAreaCombatHealth(lua_State* L)
 		params.impactEffect = getNumber<uint8_t>(L, 7);
 
 		CombatDamage damage;
+		damage.origin = getNumber<CombatOrigin>(L, 8, ORIGIN_SPELL);
 		damage.type = combatType;
 		damage.value = normal_random(getNumber<int32_t>(L, 6), getNumber<int32_t>(L, 5));
 
@@ -2826,7 +2886,7 @@ int LuaScriptInterface::luaDoAreaCombatHealth(lua_State* L)
 
 int LuaScriptInterface::luaDoTargetCombatHealth(lua_State* L)
 {
-	//doTargetCombatHealth(cid, target, type, min, max, effect)
+	//doTargetCombatHealth(cid, target, type, min, max, effect[, origin = ORIGIN_SPELL])
 	Creature* creature = getCreature(L, 1);
 	if (!creature && (!isNumber(L, 1) || getNumber<uint32_t>(L, 1) != 0)) {
 		reportErrorFunc(getErrorDesc(LUA_ERROR_CREATURE_NOT_FOUND));
@@ -2848,6 +2908,7 @@ int LuaScriptInterface::luaDoTargetCombatHealth(lua_State* L)
 	params.impactEffect = getNumber<uint8_t>(L, 6);
 
 	CombatDamage damage;
+	damage.origin = getNumber<CombatOrigin>(L, 7, ORIGIN_SPELL);
 	damage.type = combatType;
 	damage.value = normal_random(getNumber<int32_t>(L, 4), getNumber<int32_t>(L, 5));
 
@@ -2858,7 +2919,7 @@ int LuaScriptInterface::luaDoTargetCombatHealth(lua_State* L)
 
 int LuaScriptInterface::luaDoAreaCombatMana(lua_State* L)
 {
-	//doAreaCombatMana(cid, pos, area, min, max, effect)
+	//doAreaCombatMana(cid, pos, area, min, max, effect[, origin = ORIGIN_SPELL])
 	Creature* creature = getCreature(L, 1);
 	if (!creature && (!isNumber(L, 1) || getNumber<uint32_t>(L, 1) != 0)) {
 		reportErrorFunc(getErrorDesc(LUA_ERROR_CREATURE_NOT_FOUND));
@@ -2873,6 +2934,7 @@ int LuaScriptInterface::luaDoAreaCombatMana(lua_State* L)
 		params.impactEffect = getNumber<uint8_t>(L, 6);
 
 		CombatDamage damage;
+		damage.origin = getNumber<CombatOrigin>(L, 7, ORIGIN_SPELL);
 		damage.type = COMBAT_MANADRAIN;
 		damage.value = normal_random(getNumber<int32_t>(L, 4), getNumber<int32_t>(L, 5));
 
@@ -2888,7 +2950,7 @@ int LuaScriptInterface::luaDoAreaCombatMana(lua_State* L)
 
 int LuaScriptInterface::luaDoTargetCombatMana(lua_State* L)
 {
-	//doTargetCombatMana(cid, target, min, max, effect)
+	//doTargetCombatMana(cid, target, min, max, effect[, origin = ORIGIN_SPELL)
 	Creature* creature = getCreature(L, 1);
 	if (!creature && (!isNumber(L, 1) || getNumber<uint32_t>(L, 1) != 0)) {
 		reportErrorFunc(getErrorDesc(LUA_ERROR_CREATURE_NOT_FOUND));
@@ -2907,6 +2969,7 @@ int LuaScriptInterface::luaDoTargetCombatMana(lua_State* L)
 	params.impactEffect = getNumber<uint8_t>(L, 5);
 
 	CombatDamage damage;
+	damage.origin = getNumber<CombatOrigin>(L, 6, ORIGIN_SPELL);
 	damage.type = COMBAT_MANADRAIN;
 	damage.value = normal_random(getNumber<int32_t>(L, 3), getNumber<int32_t>(L, 4));
 
@@ -4141,6 +4204,25 @@ int LuaScriptInterface::luaGameStartRaid(lua_State* L)
 	g_game.raids.setRunning(raid);
 	raid->startRaid();
 	lua_pushnumber(L, RETURNVALUE_NOERROR);
+	return 1;
+}
+
+int LuaScriptInterface::luaGameReload(lua_State* L)
+{
+	// Game.reload(reloadType)
+	ReloadTypes_t reloadType = getNumber<ReloadTypes_t>(L, 1);
+	if (!reloadType) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	if (reloadType == RELOAD_TYPE_GLOBAL) {
+		pushBoolean(L, g_luaEnvironment.loadFile("data/global.lua") == 0);
+	}
+	else {
+		pushBoolean(L, g_game.reload(reloadType));
+	}
+	lua_gc(g_luaEnvironment.getLuaState(), LUA_GCCOLLECT, 0);
 	return 1;
 }
 
@@ -6575,50 +6657,6 @@ int LuaScriptInterface::luaCreatureSetMaxHealth(lua_State* L)
 	return 1;
 }
 
-int LuaScriptInterface::luaCreatureGetMana(lua_State* L)
-{
-	// creature:getMana()
-	const Creature* creature = getUserdata<const Creature>(L, 1);
-	if (creature) {
-		lua_pushnumber(L, creature->getMana());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaCreatureAddMana(lua_State* L)
-{
-	// creature:addMana(manaChange[, animationOnLoss = false])
-	Creature* creature = getUserdata<Creature>(L, 1);
-	if (!creature) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	int32_t manaChange = getNumber<int32_t>(L, 2);
-	bool animationOnLoss = getBoolean(L, 3, false);
-	if (!animationOnLoss && manaChange < 0) {
-		creature->changeMana(manaChange);
-	} else {
-		g_game.combatChangeMana(nullptr, creature, manaChange);
-	}
-	pushBoolean(L, true);
-	return 1;
-}
-
-int LuaScriptInterface::luaCreatureGetMaxMana(lua_State* L)
-{
-	// creature:getMaxMana()
-	const Creature* creature = getUserdata<const Creature>(L, 1);
-	if (creature) {
-		lua_pushnumber(L, creature->getMaxMana());
-	} else {
-		lua_pushnil(L);
-	}
-	return 1;
-}
-
 int LuaScriptInterface::luaCreatureGetSkull(lua_State* L)
 {
 	// creature:getSkull()
@@ -7191,15 +7229,15 @@ int LuaScriptInterface::luaPlayerGetExperience(lua_State* L)
 
 int LuaScriptInterface::luaPlayerAddExperience(lua_State* L)
 {
-	// player:addExperience(experience[, sendText = false[, applyStages = true])
+	// player:addExperience(experience[, sendText = false])
 	Player* player = getUserdata<Player>(L, 1);
 	if (player) {
 		int64_t experience = getNumber<int64_t>(L, 2);
 		bool sendText = getBoolean(L, 3, false);
-		bool applyStages = getBoolean(L, 4, true);
-		player->addExperience(experience, sendText, applyStages);
+		player->addExperience(nullptr, experience, sendText);
 		pushBoolean(L, true);
-	} else {
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;
@@ -7250,6 +7288,56 @@ int LuaScriptInterface::luaPlayerGetBaseMagicLevel(lua_State* L)
 	if (player) {
 		lua_pushnumber(L, player->getBaseMagicLevel());
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerGetMana(lua_State* L)
+{
+	// player:getMana()
+	const Player* player = getUserdata<const Player>(L, 1);
+	if (player) {
+		lua_pushnumber(L, player->getMana());
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerAddMana(lua_State* L)
+{
+	// player:addMana(manaChange[, animationOnLoss = false])
+	Player* player = getUserdata<Player>(L, 1);
+	if (!player) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	int32_t manaChange = getNumber<int32_t>(L, 2);
+	bool animationOnLoss = getBoolean(L, 3, false);
+	if (!animationOnLoss && manaChange < 0) {
+		player->changeMana(manaChange);
+	}
+	else {
+		CombatDamage damage;
+		damage.value = manaChange;
+		damage.origin = ORIGIN_NONE;
+		g_game.combatChangeMana(nullptr, player, damage);
+	}
+	pushBoolean(L, true);
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerGetMaxMana(lua_State* L)
+{
+	// player:getMaxMana()
+	const Player* player = getUserdata<const Player>(L, 1);
+	if (player) {
+		lua_pushnumber(L, player->getMaxMana());
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;
@@ -7723,12 +7811,20 @@ int LuaScriptInterface::luaPlayerSetBankBalance(lua_State* L)
 {
 	// player:setBankBalance(bankBalance)
 	Player* player = getUserdata<Player>(L, 1);
-	if (player) {
-		player->setBankBalance(getNumber<uint64_t>(L, 2));
-		pushBoolean(L, true);
-	} else {
+	if (!player) {
 		lua_pushnil(L);
+		return 1;
 	}
+
+	int64_t balance = getNumber<int64_t>(L, 2);
+	if (balance < 0) {
+		reportErrorFunc("Invalid bank balance value.");
+		lua_pushnil(L);
+		return 1;
+	}
+
+	player->setBankBalance(balance);
+	pushBoolean(L, true);
 	return 1;
 }
 
@@ -9473,6 +9569,53 @@ int LuaScriptInterface::luaHouseSetOwnerGuid(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaHouseStartTrade(lua_State* L)
+{
+	// house:startTrade(player, tradePartner)
+	House* house = getUserdata<House>(L, 1);
+	Player* player = getUserdata<Player>(L, 2);
+	Player* tradePartner = getUserdata<Player>(L, 3);
+
+	if (!player || !tradePartner || !house) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	if (!Position::areInRange<2, 2, 0>(tradePartner->getPosition(), player->getPosition())) {
+		lua_pushnumber(L, RETURNVALUE_TRADEPLAYERFARAWAY);
+		return 1;
+	}
+
+	if (house->getOwner() != player->getGUID()) {
+		lua_pushnumber(L, RETURNVALUE_YOUDONTOWNTHISHOUSE);
+		return 1;
+	}
+
+	if (g_game.map.houses.getHouseByPlayerId(tradePartner->getGUID())) {
+		lua_pushnumber(L, RETURNVALUE_TRADEPLAYERALREADYOWNSAHOUSE);
+		return 1;
+	}
+
+	if (IOLoginData::hasBiddedOnHouse(tradePartner->getGUID())) {
+		lua_pushnumber(L, RETURNVALUE_TRADEPLAYERHIGHESTBIDDER);
+		return 1;
+	}
+
+	Item* transferItem = house->getTransferItem();
+	if (!transferItem) {
+		lua_pushnumber(L, RETURNVALUE_YOUCANNOTTRADETHISHOUSE);
+		return 1;
+	}
+
+	transferItem->getParent()->setParent(player);
+	if (!g_game.internalStartTrade(player, tradePartner, transferItem)) {
+		house->resetTransferItem();
+	}
+
+	lua_pushnumber(L, RETURNVALUE_NOERROR);
+	return 1;
+}
+
 int LuaScriptInterface::luaHouseGetBeds(lua_State* L)
 {
 	// house:getBeds()
@@ -10222,6 +10365,20 @@ int LuaScriptInterface::luaCombatSetCallback(lua_State* L)
 
 	const std::string& function = getString(L, 3);
 	pushBoolean(L, callback->loadCallBack(getScriptEnv()->getScriptInterface(), function));
+	return 1;
+}
+
+int LuaScriptInterface::luaCombatSetOrigin(lua_State* L)
+{
+	// combat:setOrigin(origin)
+	Combat* combat = getUserdata<Combat>(L, 1);
+	if (combat) {
+		combat->setOrigin(getNumber<CombatOrigin>(L, 2));
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
 	return 1;
 }
 
@@ -11222,7 +11379,7 @@ int LuaScriptInterface::luaPartyShareExperience(lua_State* L)
 	uint64_t experience = getNumber<uint64_t>(L, 2);
 	Party* party = getUserdata<Party>(L, 1);
 	if (party) {
-		party->shareExperience(experience);
+		party->shareExperience(experience, nullptr);
 		pushBoolean(L, true);
 	} else {
 		lua_pushnil(L);

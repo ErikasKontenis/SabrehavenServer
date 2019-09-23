@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -1786,7 +1786,7 @@ void ProtocolGame::AddCreature(NetworkMessage& msg, const Creature* creature, bo
 	msg.addByte(std::ceil((static_cast<double>(creature->getHealth()) / std::max<int32_t>(creature->getMaxHealth(), 1)) * 100));
 	msg.addByte(creature->getDirection());
 
-	if (!creature->isInvisible() || !otherPlayer && player->canSeeInvisibility()) {
+	if (!creature->isInGhostMode() && !creature->isInvisible()) {
 		AddOutfit(msg, creature->getCurrentOutfit());
 	} else {
 		static Outfit_t outfit;

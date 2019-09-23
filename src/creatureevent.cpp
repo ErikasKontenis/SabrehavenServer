@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -177,6 +177,10 @@ bool CreatureEvent::configureEvent(const pugi::xml_node& node)
 		type = CREATURE_EVENT_KILL;
 	} else if (tmpStr == "advance") {
 		type = CREATURE_EVENT_ADVANCE;
+	} else if (tmpStr == "healthchange") {
+		type = CREATURE_EVENT_HEALTHCHANGE;
+	} else if (tmpStr == "manachange") {
+		type = CREATURE_EVENT_MANACHANGE;
 	} else if (tmpStr == "extendedopcode") {
 		type = CREATURE_EVENT_EXTENDED_OPCODE;
 	} else {
@@ -212,6 +216,12 @@ std::string CreatureEvent::getScriptEventName() const
 
 		case CREATURE_EVENT_ADVANCE:
 			return "onAdvance";
+
+		case CREATURE_EVENT_HEALTHCHANGE:
+			return "onHealthChange";
+
+		case CREATURE_EVENT_MANACHANGE:
+			return "onManaChange";
 
 		case CREATURE_EVENT_EXTENDED_OPCODE:
 			return "onExtendedOpcode";
@@ -407,6 +417,85 @@ void CreatureEvent::executeOnKill(Creature* creature, Creature* target)
 	LuaScriptInterface::pushUserdata<Creature>(L, target);
 	LuaScriptInterface::setCreatureMetatable(L, -1, target);
 	scriptInterface->callVoidFunction(2);
+}
+
+void CreatureEvent::executeHealthChange(Creature* creature, Creature* attacker, CombatDamage& damage)
+{
+	//onHealthChange(creature, attacker, value, type, min, max, origin)
+	if (!scriptInterface->reserveScriptEnv()) {
+		std::cout << "[Error - CreatureEvent::executeHealthChange] Call stack overflow" << std::endl;
+		return;
+	}
+
+	ScriptEnvironment* env = scriptInterface->getScriptEnv();
+	env->setScriptId(scriptId, scriptInterface);
+
+	lua_State* L = scriptInterface->getLuaState();
+	scriptInterface->pushFunction(scriptId);
+
+	LuaScriptInterface::pushUserdata(L, creature);
+	LuaScriptInterface::setCreatureMetatable(L, -1, creature);
+	if (attacker) {
+		LuaScriptInterface::pushUserdata(L, attacker);
+		LuaScriptInterface::setCreatureMetatable(L, -1, attacker);
+	}
+	else {
+		lua_pushnil(L);
+	}
+
+	LuaScriptInterface::pushCombatDamage(L, damage);
+
+	if (scriptInterface->protectedCall(L, 7, 4) != 0) {
+		LuaScriptInterface::reportError(nullptr, LuaScriptInterface::popString(L));
+	}
+	else {
+		damage.value = std::abs(LuaScriptInterface::getNumber<int32_t>(L, -4));
+		damage.type = LuaScriptInterface::getNumber<CombatType_t>(L, -3);
+		damage.min = std::abs(LuaScriptInterface::getNumber<int32_t>(L, -2));
+		damage.max = LuaScriptInterface::getNumber<CombatType_t>(L, -1);
+
+		lua_pop(L, 4);
+		if (damage.type != COMBAT_HEALING) {
+			damage.value = -damage.value;
+		}
+	}
+
+	scriptInterface->resetScriptEnv();
+}
+
+void CreatureEvent::executeManaChange(Creature* creature, Creature* attacker, CombatDamage& damage) {
+	//onManaChange(creature, attacker, value, type, min, max, origin)
+	if (!scriptInterface->reserveScriptEnv()) {
+		std::cout << "[Error - CreatureEvent::executeManaChange] Call stack overflow" << std::endl;
+		return;
+	}
+
+	ScriptEnvironment* env = scriptInterface->getScriptEnv();
+	env->setScriptId(scriptId, scriptInterface);
+
+	lua_State* L = scriptInterface->getLuaState();
+	scriptInterface->pushFunction(scriptId);
+
+	LuaScriptInterface::pushUserdata(L, creature);
+	LuaScriptInterface::setCreatureMetatable(L, -1, creature);
+	if (attacker) {
+		LuaScriptInterface::pushUserdata(L, attacker);
+		LuaScriptInterface::setCreatureMetatable(L, -1, attacker);
+	}
+	else {
+		lua_pushnil(L);
+	}
+
+	LuaScriptInterface::pushCombatDamage(L, damage);
+
+	if (scriptInterface->protectedCall(L, 7, 4) != 0) {
+		LuaScriptInterface::reportError(nullptr, LuaScriptInterface::popString(L));
+	}
+	else {
+		damage = LuaScriptInterface::getCombatDamage(L);
+	}
+
+	scriptInterface->resetScriptEnv();
 }
 
 void CreatureEvent::executeExtendedOpcode(Player* player, uint8_t opcode, const std::string& buffer)

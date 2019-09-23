@@ -1,6 +1,6 @@
 /**
 * Tibia GIMUD Server - a free and open-source MMORPG server emulator
-* Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+* Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
 *
 * This program is free software; you can redistribute it and/or modify
 * it under the terms of the GNU General Public License as published by
@@ -820,10 +820,6 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 				}
 			} while (amount);
 		} else {
-			if (it.charges) {
-				data = it.charges;
-			}
-
 			for (int32_t i = 0; i < std::max<int32_t>(1, amount); i++) {
 				Item* item = Item::CreateItem(itemId, data);
 				if (!item) {
@@ -937,7 +933,7 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 	}
 	case BEHAVIOUR_TYPE_EXPERIENCE: {
 		int32_t experience = evaluate(action->expression, player, message);
-		player->addExperience(experience, true, false);
+		player->addExperience(nullptr, experience, false);
 		break;
 	}
 	case BEHAVIOUR_TYPE_WITHDRAW: {

@@ -1,6 +1,6 @@
 /**
  * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2017  Alejandro Mujica <alejandrodemujica@gmail.com>
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -372,6 +372,18 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 			combat->setParam(COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE);
 			combat->setParam(COMBAT_PARAM_BLOCKARMOR, 1);
 			combat->setParam(COMBAT_PARAM_BLOCKSHIELD, 1);
+			uint32_t tD = this->getMonsterType(description)->info.targetDistance;
+			if (tD == 1) {
+				if (sb.range > 1) {
+					combat->setOrigin(ORIGIN_RANGED);
+				}
+				else {
+					combat->setOrigin(ORIGIN_MELEE);
+				}
+			}
+			else if (tD > 1 && sb.range > 1) {
+				combat->setOrigin(ORIGIN_RANGED);
+			}
 		} else if (tmpName == "bleed") {
 			combat->setParam(COMBAT_PARAM_TYPE, COMBAT_PHYSICALDAMAGE);
 		} else if (tmpName == "poison" || tmpName == "earth") {
