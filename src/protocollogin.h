@@ -38,13 +38,12 @@ class ProtocolLogin : public Protocol
 
 		explicit ProtocolLogin(Connection_ptr connection) : Protocol(connection) {}
 
-		void onRecvFirstMessage(NetworkMessage& msg);
+		void onRecvFirstMessage(NetworkMessage& msg) override;
 
-	protected:
-		void sendUpdateRequest();
-		void disconnectClient(const std::string& message);
+	private:
+		void disconnectClient(const std::string& message, uint16_t version);
 
-		void getCharacterList(uint32_t accountNumber, const std::string& password);
+		void getCharacterList(uint32_t accountNumber, const std::string& password, const std::string& token, uint16_t version);
 };
 
 #endif

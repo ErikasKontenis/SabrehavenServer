@@ -30,6 +30,7 @@
 void printXMLError(const std::string& where, const std::string& fileName, const pugi::xml_parse_result& result);
 
 std::string transformToSHA1(const std::string& input);
+std::string generateToken(const std::string& key, uint32_t ticks);
 uint8_t getLiquidColor(uint8_t type);
 
 void extractArticleAndName(std::string& data, std::string& article, std::string& name);
@@ -82,6 +83,8 @@ FluidTypes_t getFluidType(const std::string& strValue);
 std::string getCombatName(CombatType_t combatType);
 
 std::string getSkillName(uint8_t skillid);
+
+uint32_t adlerChecksum(const uint8_t* data, size_t length);
 
 std::string ucfirst(std::string str);
 std::string ucwords(std::string str);

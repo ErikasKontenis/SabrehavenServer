@@ -224,7 +224,7 @@ Action* Actions::getAction(const Item* item)
 	return g_spells->getRuneSpell(item->getID());
 }
 
-ReturnValue Actions::internalUseItem(Player* player, const Position& pos, uint8_t index, Item* item)
+ReturnValue Actions::internalUseItem(Player* player, const Position& pos, uint8_t index, Item* item, bool isHotkey)
 {
 	if (Door* door = item->getDoor()) {
 		if (!door->canUse(player)) {
@@ -235,12 +235,16 @@ ReturnValue Actions::internalUseItem(Player* player, const Position& pos, uint8_
 	Action* action = getAction(item);
 	if (action) {
 		if (action->isScripted()) {
-			if (action->executeUse(player, item, pos, nullptr, pos)) {
+			if (action->executeUse(player, item, pos, nullptr, pos, isHotkey)) {
 				return RETURNVALUE_NOERROR;
 			}
 
 			if (item->isRemoved()) {
 				return RETURNVALUE_CANNOTUSETHISOBJECT;
+			}
+		} else if (action->function) {
+			if (action->function(player, item, pos, nullptr, pos, isHotkey)) {
+				return RETURNVALUE_NOERROR;
 			}
 		}
 	}
@@ -271,6 +275,11 @@ ReturnValue Actions::internalUseItem(Player* player, const Position& pos, uint8_
 				openContainer = myDepotLocker;
 			} else {
 				openContainer = container;
+			}
+
+			uint32_t corpseOwner = container->getCorpseOwner();
+			if (corpseOwner != 0 && !player->canOpenCorpse(corpseOwner)) {
+				return RETURNVALUE_YOUARENOTTHEOWNER;
 			}
 
 			//open/close container
@@ -309,12 +318,16 @@ ReturnValue Actions::internalUseItem(Player* player, const Position& pos, uint8_
 	return RETURNVALUE_CANNOTUSETHISOBJECT;
 }
 
-bool Actions::useItem(Player* player, const Position& pos, uint8_t index, Item* item)
+bool Actions::useItem(Player* player, const Position& pos, uint8_t index, Item* item, bool isHotkey)
 {
 	player->setNextAction(OTSYS_TIME() + g_config.getNumber(ConfigManager::ACTIONS_DELAY_INTERVAL));
 	player->stopWalk();
 
-	ReturnValue ret = internalUseItem(player, pos, index, item);
+	if (isHotkey) {
+		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), -1));
+	}
+
+	ReturnValue ret = internalUseItem(player, pos, index, item, isHotkey);
 	if (ret != RETURNVALUE_NOERROR) {
 		player->sendCancelMessage(ret);
 		return false;
@@ -323,7 +336,7 @@ bool Actions::useItem(Player* player, const Position& pos, uint8_t index, Item* 
 }
 
 bool Actions::useItemEx(Player* player, const Position& fromPos, const Position& toPos,
-                        uint8_t toStackPos, Item* item, Creature* creature/* = nullptr*/)
+                        uint8_t toStackPos, Item* item, bool isHotkey, Creature* creature/* = nullptr*/)
 {
 	player->setNextAction(OTSYS_TIME() + g_config.getNumber(ConfigManager::EX_ACTIONS_DELAY_INTERVAL));
 	player->stopWalk();
@@ -340,7 +353,11 @@ bool Actions::useItemEx(Player* player, const Position& fromPos, const Position&
 		return false;
 	}
 
-	if (!action->executeUse(player, item, fromPos, action->getTarget(player, creature, toPos, toStackPos), toPos)) {
+	if (isHotkey) {
+		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), -1));
+	}
+
+	if (!action->executeUse(player, item, fromPos, action->getTarget(player, creature, toPos, toStackPos), toPos, isHotkey)) {
 		if (!action->hasOwnErrorHandler()) {
 			player->sendCancelMessage(RETURNVALUE_CANNOTUSETHISOBJECT);
 		}
@@ -349,8 +366,25 @@ bool Actions::useItemEx(Player* player, const Position& fromPos, const Position&
 	return true;
 }
 
+void Actions::showUseHotkeyMessage(Player* player, const Item* item, uint32_t count)
+{
+	std::ostringstream ss;
+
+	const ItemType& it = Item::items[item->getID()];
+	if (!it.showCount) {
+		ss << "Using one of " << item->getName() << "...";
+	}
+	else if (count == 1) {
+		ss << "Using the last " << item->getName() << "...";
+	}
+	else {
+		ss << "Using one of " << count << ' ' << item->getPluralName() << "...";
+	}
+	player->sendTextMessage(MESSAGE_INFO_DESCR, ss.str());
+}
+
 Action::Action(LuaScriptInterface* interface) :
-	Event(interface), allowFarUse(false), checkFloor(true), checkLineOfSight(true) {}
+	Event(interface), function(nullptr), allowFarUse(false), checkFloor(true), checkLineOfSight(true) {}
 
 Action::Action(const Action* copy) :
 	Event(copy), allowFarUse(copy->allowFarUse), checkFloor(copy->checkFloor), checkLineOfSight(copy->checkLineOfSight) {}
@@ -359,17 +393,17 @@ bool Action::configureEvent(const pugi::xml_node& node)
 {
 	pugi::xml_attribute allowFarUseAttr = node.attribute("allowfaruse");
 	if (allowFarUseAttr) {
-		setAllowFarUse(allowFarUseAttr.as_bool());
+		allowFarUse = allowFarUseAttr.as_bool();
 	}
 
 	pugi::xml_attribute blockWallsAttr = node.attribute("blockwalls");
 	if (blockWallsAttr) {
-		setCheckLineOfSight(blockWallsAttr.as_bool());
+		checkLineOfSight = blockWallsAttr.as_bool();
 	}
 
 	pugi::xml_attribute checkFloorAttr = node.attribute("checkfloor");
 	if (checkFloorAttr) {
-		setCheckFloor(checkFloorAttr.as_bool());
+		checkFloor = checkFloorAttr.as_bool();
 	}
 
 	return true;
@@ -382,10 +416,11 @@ std::string Action::getScriptEventName() const
 
 ReturnValue Action::canExecuteAction(const Player* player, const Position& toPos)
 {
-	if (!getAllowFarUse()) {
+	if (!allowFarUse) {
 		return g_actions->canUse(player, toPos);
-	} else {
-		return g_actions->canUseFar(player, toPos, getCheckLineOfSight(), getCheckFloor());
+	}
+	else {
+		return g_actions->canUseFar(player, toPos, checkLineOfSight, checkFloor);
 	}
 }
 
@@ -397,9 +432,9 @@ Thing* Action::getTarget(Player* player, Creature* targetCreature, const Positio
 	return g_game.internalGetThing(player, toPosition, toStackPos, 0, STACKPOS_USETARGET);
 }
 
-bool Action::executeUse(Player* player, Item* item, const Position& fromPos, Thing* target, const Position& toPos)
+bool Action::executeUse(Player* player, Item* item, const Position& fromPosition, Thing* target, const Position& toPosition, bool isHotkey)
 {
-	//onUse(player, item, fromPosition, target, toPosition)
+	//onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if (!scriptInterface->reserveScriptEnv()) {
 		std::cout << "[Error - Action::executeUse] Call stack overflow" << std::endl;
 		return false;
@@ -416,10 +451,11 @@ bool Action::executeUse(Player* player, Item* item, const Position& fromPos, Thi
 	LuaScriptInterface::setMetatable(L, -1, "Player");
 
 	LuaScriptInterface::pushThing(L, item);
-	LuaScriptInterface::pushPosition(L, fromPos);
+	LuaScriptInterface::pushPosition(L, fromPosition);
 
 	LuaScriptInterface::pushThing(L, target);
-	LuaScriptInterface::pushPosition(L, toPos);
+	LuaScriptInterface::pushPosition(L, toPosition);
 
-	return scriptInterface->callFunction(5);
+	LuaScriptInterface::pushBoolean(L, isHotkey);
+	return scriptInterface->callFunction(6);
 }
