@@ -198,13 +198,13 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 
 	uint32_t accountNumber = msg.get<uint32_t>();
 	if (!accountNumber) {
-		disconnectClient("Invalid account number.");
+		disconnectClient("Invalid account number.", version);
 		return;
 	}
 
 	std::string password = msg.getString();
 	if (password.empty()) {
-		disconnectClient("Invalid password.");
+		disconnectClient("Invalid password.", version);
 		return;
 	}
 
@@ -218,5 +218,5 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	std::string authToken = msg.getString();
 
 	auto thisPtr = std::static_pointer_cast<ProtocolLogin>(shared_from_this());
-	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, accountNumber, password, version)));
+	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, accountNumber, password, authToken, version)));
 }

@@ -43,7 +43,11 @@ class OutputMessage : public NetworkMessage
 			add_header(info.length);
 		}
 
-		void addCryptoHeader() {
+		void addCryptoHeader(bool addChecksum) {
+			if (addChecksum) {
+				add_header(adlerChecksum(buffer + outputBufferStart, info.length));
+			}
+
 			writeMessageLength();
 		}
 

@@ -22,11 +22,14 @@
 
 static constexpr auto STATUS_SERVER_NAME = "Sabrehaven";
 static constexpr auto STATUS_SERVER_VERSION = "1.0";
-static constexpr auto STATUS_SERVER_DEVELOPERS = "Sabrehaven Developers Team";
+static constexpr auto STATUS_SERVER_DEVELOPERS = "OTLand community & Sabrehaven Developers Team";
 
 static constexpr auto CLIENT_VERSION_MIN = 772;
 static constexpr auto CLIENT_VERSION_MAX = 772;
 static constexpr auto CLIENT_VERSION_STR = "7.72";
+
+static constexpr auto AUTHENTICATOR_DIGITS = 6U;
+static constexpr auto AUTHENTICATOR_PERIOD = 30U;
 
 #ifndef __FUNCTION__
 #define __FUNCTION__ __func__
