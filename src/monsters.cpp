@@ -759,6 +759,10 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 			if ((attr = node.attribute("feet"))) {
 				mType->info.outfit.lookFeet = pugi::cast<uint16_t>(attr.value());
 			}
+
+			if ((attr = node.attribute("addons"))) {
+				mType->info.outfit.lookAddons = pugi::cast<uint16_t>(attr.value());
+			}
 		} else if ((attr = node.attribute("typeex"))) {
 			mType->info.outfit.lookTypeEx = pugi::cast<uint16_t>(attr.value());
 		} else {

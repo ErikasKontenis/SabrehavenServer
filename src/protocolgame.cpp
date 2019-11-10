@@ -242,8 +242,6 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	OperatingSystem_t operatingSystem = static_cast<OperatingSystem_t>(msg.get<uint16_t>());
 	version = msg.get<uint16_t>();
 
-	msg.skipBytes(7); // U32 client version, U8 client type, U16 dat revision
-
 	if (!Protocol::RSA_decrypt(msg)) {
 		disconnect();
 		return;
@@ -304,45 +302,24 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 		disconnectClient("Account number or password is not correct.");
 		return;
 	}
-	
+
 	Account account;
 	if (!IOLoginData::loginserverAuthentication(accountNumber, password, account)) {
 		disconnectClient("Account number or password is not correct.");
 		return;
 	}
-	
+
 	//Update premium days
 	Game::updatePremium(account);
 
 	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem)));
+
 }
 
 void ProtocolGame::onConnect()
 {
-	auto output = OutputMessagePool::getOutputMessage();
-	static std::random_device rd;
-	static std::ranlux24 generator(rd());
-	static std::uniform_int_distribution<uint16_t> randNumber(0x00, 0xFF);
 
-	// Skip checksum
-	output->skipBytes(sizeof(uint32_t));
 
-	// Packet length & type
-	output->add<uint16_t>(0x0006);
-	output->addByte(0x1F);
-
-	// Add timestamp & random number
-	challengeTimestamp = static_cast<uint32_t>(time(nullptr));
-	output->add<uint32_t>(challengeTimestamp);
-
-	challengeRandom = randNumber(generator);
-	output->addByte(challengeRandom);
-
-	// Go back and write checksum
-	output->skipBytes(-12);
-	output->add<uint32_t>(adlerChecksum(output->getOutputBuffer() + sizeof(uint32_t), 8));
-
-	send(output);
 }
 
 void ProtocolGame::disconnectClient(const std::string& message) const
@@ -464,12 +441,15 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 
 void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 {
+	msg.add<uint16_t>(0x00); //environmental effects
+
 	int32_t count;
 	Item* ground = tile->getGround();
 	if (ground) {
 		msg.addItem(ground);
 		count = 1;
-	} else {
+	}
+	else {
 		count = 0;
 	}
 
@@ -478,7 +458,11 @@ void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 		for (auto it = items->getBeginTopItem(), end = items->getEndTopItem(); it != end; ++it) {
 			msg.addItem(*it);
 
-			if (++count == 10) {
+			count++;
+			if (count == 9 && tile->getPosition() == player->getPosition()) {
+				break;
+			}
+			else if (count == 10) {
 				return;
 			}
 		}
@@ -486,9 +470,18 @@ void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 
 	const CreatureVector* creatures = tile->getCreatures();
 	if (creatures) {
+		bool playerAdded = false;
 		for (const Creature* creature : boost::adaptors::reverse(*creatures)) {
 			if (!player->canSeeCreature(creature)) {
 				continue;
+			}
+
+			if (tile->getPosition() == player->getPosition() && count == 9 && !playerAdded) {
+				creature = player;
+			}
+
+			if (creature->getID() == player->getID()) {
+				playerAdded = true;
 			}
 
 			bool known;
@@ -1864,11 +1857,17 @@ void ProtocolGame::AddPlayerStats(NetworkMessage& msg)
 	msg.add<uint16_t>(std::min<int32_t>(player->getMaxMana(), std::numeric_limits<uint16_t>::max()));
 
 	msg.addByte(std::min<uint32_t>(player->getMagicLevel(), std::numeric_limits<uint8_t>::max()));
+	msg.addByte(std::min<uint32_t>(player->getBaseMagicLevel(), std::numeric_limits<uint8_t>::max()));
 	msg.addByte(player->getMagicLevelPercent());
 
 	msg.addByte(player->getSoul());
 
 	msg.add<uint16_t>(player->getStaminaMinutes());
+
+	msg.add<uint16_t>(player->getBaseSpeed() / 2);
+
+	Condition* condition = player->getCondition(CONDITION_REGENERATION);
+	msg.add<uint16_t>(condition ? condition->getTicks() / 1000 : 0x00);
 
 	msg.add<uint16_t>(0); // xp boost time (seconds)
 }
