@@ -43,7 +43,7 @@ public:
 		add_header(info.length);
 	}
 
-	void addCryptoHeader(bool addChecksum) {
+	void addCryptoHeader() {
 		writeMessageLength();
 	}
 

@@ -75,9 +75,6 @@ protected:
 	void setXTEAKey(xtea::key key) {
 		this->key = std::move(key);
 	}
-	void disableChecksum() {
-		checksumEnabled = false;
-	}
 
 	static bool RSA_decrypt(NetworkMessage& msg);
 
@@ -98,7 +95,6 @@ private:
 	const ConnectionWeak_ptr connection;
 	xtea::key key;
 	bool encryptionEnabled = false;
-	bool checksumEnabled = true;
 	bool rawMessages = false;
 };
 

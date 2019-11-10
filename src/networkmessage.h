@@ -37,7 +37,6 @@ class NetworkMessage
 		// 2 bytes for encrypted message size
 		static constexpr MsgSize_t INITIAL_BUFFER_POSITION = 4;
 		enum { HEADER_LENGTH = 2 };
-		enum { CHECKSUM_LENGTH = 4 };
 		enum { XTEA_MULTIPLE = 8 };
 		enum { MAX_BODY_LENGTH = NETWORKMESSAGE_MAXSIZE - HEADER_LENGTH - XTEA_MULTIPLE };
 		enum { MAX_PROTOCOL_BODY_LENGTH = MAX_BODY_LENGTH - 10 };

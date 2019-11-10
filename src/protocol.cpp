@@ -33,7 +33,7 @@ void Protocol::onSendMessage(const OutputMessage_ptr& msg) const
 
 		if (encryptionEnabled) {
 			XTEA_encrypt(*msg);
-			msg->addCryptoHeader(checksumEnabled);
+			msg->addCryptoHeader();
 		}
 	}
 }
