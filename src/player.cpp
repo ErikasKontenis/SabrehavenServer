@@ -509,6 +509,20 @@ uint16_t Player::getLookCorpse() const
 
 void Player::addStorageValue(const uint32_t key, const int32_t value)
 {
+	if (IS_IN_KEYRANGE(key, RESERVED_RANGE)) {
+		if (IS_IN_KEYRANGE(key, OUTFITS_RANGE)) {
+			outfits.emplace_back(
+				value >> 16,
+				value & 0xFF
+			);
+			return;
+		}
+		else {
+			std::cout << "Warning: unknown reserved key: " << key << " player: " << getName() << std::endl;
+			return;
+		}
+	}
+
 	if (value != -1) {
 		storageMap[key] = value;
 	} else {

@@ -220,6 +220,13 @@ void mainLoader(int, char*[], ServiceManager* services)
 		return;
 	}
 
+	std::cout << ">> Loading outfits" << std::endl;
+	auto& outfits = Outfits::getInstance();
+	if (!outfits.loadFromXml()) {
+		startupErrorMessage("Unable to load outfits!");
+		return;
+	}
+
 	std::cout << ">> Checking world type... " << std::flush;
 	std::string worldType = asLowerCaseString(g_config.getString(ConfigManager::WORLD_TYPE));
 	if (worldType == "pvp") {
