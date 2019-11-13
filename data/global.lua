@@ -45,3 +45,7 @@ end
 function isNumber(str)
 	return tonumber(str) ~= nil
 end
+
+if not nextUseStaminaTime then
+	nextUseStaminaTime = {}
+end

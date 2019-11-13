@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `nostalrius`
+-- Database: `sabrehaven`
 --
 
 -- --------------------------------------------------------
@@ -1171,8 +1171,8 @@ CREATE TABLE `players` (
 --
 
 INSERT INTO `players` (`id`, `name`, `group_id`, `account_id`, `level`, `vocation`, `health`, `healthmax`, `experience`, `lookbody`, `lookfeet`, `lookhead`, `looklegs`, `looktype`, `maglevel`, `mana`, `manamax`, `manaspent`, `soul`, `town_id`, `posx`, `posy`, `posz`, `conditions`, `cap`, `sex`, `lastlogin`, `lastip`, `save`, `skull`, `skulltime`, `lastlogout`, `blessings`, `onlinetime`, `deletion`, `balance`, `skill_fist`, `skill_fist_tries`, `skill_club`, `skill_club_tries`, `skill_sword`, `skill_sword_tries`, `skill_axe`, `skill_axe_tries`, `skill_dist`, `skill_dist_tries`, `skill_shielding`, `skill_shielding_tries`, `skill_fishing`, `skill_fishing_tries`, `deleted`) VALUES
-(1, 'GM Nostalrius', 3, 1234567, 2, 0, 155, 155, 105, 106, 95, 78, 58, 75, 100, 5, 5, 0, 100, 1, 32370, 32231, 7, '', 405, 0, 1547336581, 75260863, 1, 0, 0, 1547336668, 0, 7631, 0, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0),
-(2, 'GM Nostalrius 2', 3, 1234567, 2, 0, 155, 155, 105, 106, 95, 78, 58, 75, 0, 5, 5, 0, 100, 10, 33211, 31646, 13, 0x018000000002000000000360361e001c0000000013d70000001408000000151027000016aecb0300fe, 405, 0, 1547183307, 75260863, 1, 0, 0, 1547183320, 0, 781, 0, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0),
+(1, 'GM Sabrehaven', 3, 1234567, 2, 0, 155, 155, 105, 106, 95, 78, 58, 75, 100, 5, 5, 0, 100, 1, 32370, 32231, 7, '', 405, 0, 1547336581, 75260863, 1, 0, 0, 1547336668, 0, 7631, 0, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0),
+(2, 'GM Sabrehaven 2', 3, 1234567, 2, 0, 155, 155, 105, 106, 95, 78, 58, 75, 0, 5, 5, 0, 100, 10, 33211, 31646, 13, 0x018000000002000000000360361e001c0000000013d70000001408000000151027000016aecb0300fe, 405, 0, 1547183307, 75260863, 1, 0, 0, 1547183320, 0, 781, 0, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 10, 0, 0),
 (3, 'Mage', 1, 1234567, 89, 2, 1171, 2045, 10982400, 106, 95, 78, 58, 128, 62, 10, 4770, 7200, 2, 1, 32367, 32230, 7, '', 1490, 232, 1547334403, 75260863, 1, 0, 0, 1547335694, 0, 7330, 0, 0, 10, 0, 10, 19, 10, 0, 10, 0, 10, 0, 39, 10439596, 10, 0, 0);
 
 --
