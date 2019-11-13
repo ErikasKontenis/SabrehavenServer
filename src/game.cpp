@@ -3762,6 +3762,11 @@ void Game::internalDecayItem(Item* item)
 	}
 }
 
+void Game::RemoveCorpseOwner(Item* item)
+{
+	item->removeAttribute(ITEM_ATTRIBUTE_CORPSEOWNER);
+}
+
 void Game::checkDecay()
 {
 	g_scheduler.addEvent(createSchedulerTask(EVENT_DECAYINTERVAL, std::bind(&Game::checkDecay, this)));

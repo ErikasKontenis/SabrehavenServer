@@ -712,6 +712,7 @@ bool Creature::dropCorpse(Creature* lastHitCreature, Creature* mostDamageCreatur
 	if (corpse) {
 		g_game.internalAddItem(tile, corpse, INDEX_WHEREEVER, FLAG_NOLIMIT);
 		g_game.startDecay(corpse);
+		g_scheduler.addEvent(createSchedulerTask(10000, std::bind(&Game::RemoveCorpseOwner, &g_game, corpse)));
 	}
 
 	//scripting event - onDeath
