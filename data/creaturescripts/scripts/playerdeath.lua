@@ -3,7 +3,10 @@ local maxDeathRecords = 50
 
 function onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDamageUnjustified)
 	local playerId = player:getId()
-
+	if nextUseStaminaTime[playerId] then
+		nextUseStaminaTime[playerId] = nil
+	end
+	
 	player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You are dead.")
 	
 	-- restart blessings values

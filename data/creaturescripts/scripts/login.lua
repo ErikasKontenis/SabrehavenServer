@@ -11,7 +11,10 @@ function onLogin(player)
 		loginStr = string.format("Your last visit on " .. configManager.getString(configKeys.SERVER_NAME) .. ": %s.", os.date("%a %b %d %X %Y", player:getLastLoginSaved()))
 	end
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
-
+	
+	-- Stamina
+	nextUseStaminaTime[player.uid] = 0
+	
 	-- Promotion
 	if player:isPremium() then
 		if player:getVocation():getId() ~= 0 and player:getVocation():getId() < 5 and player:getStorageValue(30018) == 1 then
