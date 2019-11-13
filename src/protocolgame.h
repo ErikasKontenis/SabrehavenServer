@@ -234,7 +234,6 @@ class ProtocolGame final : public Protocol
 		void AddPlayerSkills(NetworkMessage& msg);
 		void AddWorldLight(NetworkMessage& msg, const LightInfo& lightInfo);
 		void AddCreatureLight(NetworkMessage& msg, const Creature* creature);
-		void AddCreatureSpeak(NetworkMessage& msg, const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId, const Position* pos = nullptr);
 
 		//tiles
 		static void RemoveTileThing(NetworkMessage& msg, const Position& pos, uint32_t stackpos);

@@ -1168,11 +1168,12 @@ void ProtocolGame::sendChannel(uint16_t channelId, const std::string& channelNam
 	writeToOutputBuffer(msg);
 }
 
+
 void ProtocolGame::sendIcons(uint16_t icons)
 {
 	NetworkMessage msg;
 	msg.addByte(0xA2);
-	msg.addByte(static_cast<uint8_t>(icons));
+	msg.add<uint16_t>(icons);
 	writeToOutputBuffer(msg);
 }
 
@@ -1203,6 +1204,8 @@ void ProtocolGame::sendContainer(uint8_t cid, const Container* container, bool h
 	}
 	writeToOutputBuffer(msg);
 }
+
+
 
 void ProtocolGame::sendTradeItemRequest(const std::string& traderName, const Item* item, bool ack)
 {
@@ -1277,14 +1280,61 @@ void ProtocolGame::sendCreatureTurn(const Creature* creature, uint32_t stackPos)
 void ProtocolGame::sendCreatureSay(const Creature* creature, SpeakClasses type, const std::string& text, const Position* pos/* = nullptr*/)
 {
 	NetworkMessage msg;
-	AddCreatureSpeak(msg, creature, type, text, 0, pos);
+	msg.addByte(0xAA);
+
+	static uint32_t statementId = 0;
+	msg.add<uint32_t>(++statementId);
+
+	msg.addString(creature->getName());
+
+	//Add level only for players
+	if (const Player* speaker = creature->getPlayer()) {
+		msg.add<uint16_t>(speaker->getLevel());
+	}
+	else {
+		msg.add<uint16_t>(0x00);
+	}
+
+	msg.addByte(type);
+	if (pos) {
+		msg.addPosition(*pos);
+	}
+	else {
+		msg.addPosition(creature->getPosition());
+	}
+
+	msg.addString(text);
 	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendToChannel(const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId)
 {
 	NetworkMessage msg;
-	AddCreatureSpeak(msg, creature, type, text, channelId);
+	msg.addByte(0xAA);
+
+	static uint32_t statementId = 0;
+	msg.add<uint32_t>(++statementId);
+	if (!creature) {
+		msg.add<uint32_t>(0x00);
+	}
+	else if (type == TALKTYPE_CHANNEL_R2) {
+		msg.add<uint32_t>(0x00);
+		type = TALKTYPE_CHANNEL_R1;
+	}
+	else {
+		msg.addString(creature->getName());
+		//Add level only for players
+		if (const Player* speaker = creature->getPlayer()) {
+			msg.add<uint16_t>(speaker->getLevel());
+		}
+		else {
+			msg.add<uint16_t>(0x00);
+		}
+	}
+
+	msg.addByte(type);
+	msg.add<uint16_t>(channelId);
+	msg.addString(text);
 	writeToOutputBuffer(msg);
 }
 
@@ -1294,16 +1344,13 @@ void ProtocolGame::sendPrivateMessage(const Player* speaker, SpeakClasses type, 
 	msg.addByte(0xAA);
 	static uint32_t statementId = 0;
 	msg.add<uint32_t>(++statementId);
-	if (type == TALKTYPE_RVR_ANSWER) {
-		msg.addString("Gamemaster");
-	} else {
-		if (speaker) {
-			msg.addString(speaker->getName());
-		} else {
-			msg.add<uint32_t>(0x00);
-		}
+	if (speaker) {
+		msg.addString(speaker->getName());
+		msg.add<uint16_t>(speaker->getLevel());
 	}
-
+	else {
+		msg.add<uint32_t>(0x00);
+	}
 	msg.addByte(type);
 	msg.addString(text);
 	writeToOutputBuffer(msg);
@@ -1888,53 +1935,6 @@ void ProtocolGame::AddCreatureLight(NetworkMessage& msg, const Creature* creatur
 	msg.add<uint32_t>(creature->getID());
 	msg.addByte((player->isAccessPlayer() ? 0xFF : lightInfo.level));
 	msg.addByte(lightInfo.color);
-}
-
-void ProtocolGame::AddCreatureSpeak(NetworkMessage& msg, const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId, const Position* pos /*= nullptr*/)
-{
-	msg.addByte(0xAA);
-	static uint32_t statementId = 0;
-	msg.add<uint32_t>(++statementId);
-
-	if (type != TALKTYPE_RVR_ANSWER) {
-		if (type != TALKTYPE_CHANNEL_R2) {
-			if (creature) {
-				msg.addString(creature->getName());
-			} else {
-				msg.add<uint16_t>(0);
-			}
-		} else {
-			msg.add<uint16_t>(0);
-		}
-	}
-
-	msg.addByte(type);
-	switch (type) {
-	case TALKTYPE_SAY:
-	case TALKTYPE_WHISPER:
-	case TALKTYPE_YELL:
-	case TALKTYPE_MONSTER_SAY:
-	case TALKTYPE_MONSTER_YELL:
-		if (!pos) {
-			msg.addPosition(creature->getPosition());
-		} else {
-			msg.addPosition(*pos);
-		}
-		break;
-	case TALKTYPE_CHANNEL_Y:
-	case TALKTYPE_CHANNEL_R1:
-	case TALKTYPE_CHANNEL_R2:
-	case TALKTYPE_CHANNEL_O:
-		msg.add<uint16_t>(channelId);
-		break;
-	case TALKTYPE_RVR_CHANNEL:
-		msg.add<uint32_t>(0);
-		break;
-	default:
-		break;
-	}
-
-	msg.addString(text);
 }
 
 //tile

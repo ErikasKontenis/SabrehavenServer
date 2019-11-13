@@ -1046,7 +1046,7 @@ class Player final : public Creature, public Cylinder
 		int32_t shieldBlockCount = 0;
 		int32_t idleTime = 0;
 
-		uint16_t staminaMinutes = 2520;
+		uint16_t staminaMinutes = 3360;
 		uint16_t maxWriteLen = 0;
 
 		uint8_t soul = 0;
