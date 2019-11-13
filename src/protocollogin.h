@@ -31,20 +31,18 @@ class ProtocolLogin : public Protocol
 		// static protocol information
 		enum {server_sends_first = false};
 		enum {protocol_identifier = 0x01};
-		enum {use_checksum = true};
 		static const char* protocol_name() {
 			return "login protocol";
 		}
 
 		explicit ProtocolLogin(Connection_ptr connection) : Protocol(connection) {}
 
-		void onRecvFirstMessage(NetworkMessage& msg);
+		void onRecvFirstMessage(NetworkMessage& msg) override;
 
-	protected:
-		void sendUpdateRequest();
-		void disconnectClient(const std::string& message);
+	private:
+		void disconnectClient(const std::string& message, uint16_t version);
 
-		void getCharacterList(uint32_t accountNumber, const std::string& password);
+		void getCharacterList(uint32_t accountNumber, const std::string& password, uint16_t version);
 };
 
 #endif

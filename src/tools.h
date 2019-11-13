@@ -30,6 +30,7 @@
 void printXMLError(const std::string& where, const std::string& fileName, const pugi::xml_parse_result& result);
 
 std::string transformToSHA1(const std::string& input);
+std::string generateToken(const std::string& key, uint32_t ticks);
 uint8_t getLiquidColor(uint8_t type);
 
 void extractArticleAndName(std::string& data, std::string& article, std::string& name);

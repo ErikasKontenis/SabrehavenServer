@@ -32,32 +32,22 @@
 extern ConfigManager g_config;
 extern Game g_game;
 
-void ProtocolLogin::sendUpdateRequest()
+void ProtocolLogin::disconnectClient(const std::string& message, uint16_t version)
 {
 	auto output = OutputMessagePool::getOutputMessage();
 
-	output->addByte(0x1E);
-	send(output);
-
-	disconnect();
-}
-
-void ProtocolLogin::disconnectClient(const std::string& message)
-{
-	auto output = OutputMessagePool::getOutputMessage();
-
-	output->addByte(0x0A);
+	output->addByte(version >= 1076 ? 0x0B : 0x0A);
 	output->addString(message);
 	send(output);
 
 	disconnect();
 }
 
-void ProtocolLogin::getCharacterList(uint32_t accountNumber, const std::string& password)
+void ProtocolLogin::getCharacterList(uint32_t accountNumber, const std::string& password, uint16_t version)
 {
 	Account account;
 	if (!IOLoginData::loginserverAuthentication(accountNumber, password, account)) {
-		disconnectClient("Accountnumber or password is not correct.");
+		disconnectClient("Accountnumber or password is not correct.", version);
 		return;
 	}
 
@@ -91,7 +81,8 @@ void ProtocolLogin::getCharacterList(uint32_t accountNumber, const std::string& 
 	//Add premium days
 	if (g_config.getBoolean(ConfigManager::FREE_PREMIUM)) {
 		output->add<uint16_t>(0xFFFF);
-	} else {
+	}
+	else {
 		output->add<uint16_t>(account.premiumDays);
 	}
 
@@ -99,6 +90,7 @@ void ProtocolLogin::getCharacterList(uint32_t accountNumber, const std::string& 
 
 	disconnect();
 }
+
 
 void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 {
@@ -109,14 +101,27 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 
 	msg.skipBytes(2); // client OS
 
-	/*uint16_t version =*/ msg.get<uint16_t>();
-	msg.skipBytes(12);
+	uint16_t version = msg.get<uint16_t>();
+	if (version >= 971) {
+		msg.skipBytes(17);
+	}
+	else {
+		msg.skipBytes(12);
+	}
 
 	/*
 	 * Skipped bytes:
 	 * 4 bytes: protocolVersion
 	 * 12 bytes: dat, spr, pic signatures (4 bytes each)
+	 * 1 byte: 0
 	 */
+
+	if (version <= 760) {
+		std::ostringstream ss;
+		ss << "Only clients with protocol " << CLIENT_VERSION_STR << " allowed!";
+		disconnectClient(ss.str(), version);
+		return;
+	}
 
 	if (!Protocol::RSA_decrypt(msg)) {
 		disconnect();
@@ -131,19 +136,20 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	enableXTEAEncryption();
 	setXTEAKey(key);
 
-	/*if (version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX) {
-		//sendUpdateRequest();
-		disconnectClient("Use Tibia 7.72 to login!");
+	if (version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX) {
+		std::ostringstream ss;
+		ss << "Only clients with protocol " << CLIENT_VERSION_STR << " allowed!";
+		disconnectClient(ss.str(), version);
 		return;
-	}*/
+	}
 
 	if (g_game.getGameState() == GAME_STATE_STARTUP) {
-		disconnectClient("Gameworld is starting up. Please wait.");
+		disconnectClient("Gameworld is starting up. Please wait.", version);
 		return;
 	}
 
 	if (g_game.getGameState() == GAME_STATE_MAINTAIN) {
-		disconnectClient("Gameworld is under maintenance.\nPlease re-connect in a while.");
+		disconnectClient("Gameworld is under maintenance.\nPlease re-connect in a while.", version);
 		return;
 	}
 
@@ -160,22 +166,22 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 
 		std::ostringstream ss;
 		ss << "Your IP has been banned until " << formatDateShort(banInfo.expiresAt) << " by " << banInfo.bannedBy << ".\n\nReason specified:\n" << banInfo.reason;
-		disconnectClient(ss.str());
+		disconnectClient(ss.str(), version);
 		return;
 	}
 
 	uint32_t accountNumber = msg.get<uint32_t>();
 	if (!accountNumber) {
-		disconnectClient("Invalid account number.");
+		disconnectClient("Invalid account number.", version);
 		return;
 	}
 
 	std::string password = msg.getString();
 	if (password.empty()) {
-		disconnectClient("Invalid password.");
+		disconnectClient("Invalid password.", version);
 		return;
 	}
 
 	auto thisPtr = std::static_pointer_cast<ProtocolLogin>(shared_from_this());
-	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, accountNumber, password)));
+	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, accountNumber, password, version)));
 }

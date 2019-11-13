@@ -56,7 +56,7 @@ class Spells final : public BaseEvents
 		TalkActionResult_t playerSaySpell(Player* player, std::string& words);
 
 		static Position getCasterPosition(Creature* creature, Direction dir);
-		std::string getScriptBaseName() const final;
+		std::string getScriptBaseName() const override;
 
 	protected:
 		void clear() final;
@@ -94,9 +94,9 @@ class CombatSpell final : public Event, public BaseSpell
 		CombatSpell(const CombatSpell&) = delete;
 		CombatSpell& operator=(const CombatSpell&) = delete;
 
-		bool castSpell(Creature* creature) final;
-		bool castSpell(Creature* creature, Creature* target) final;
-		bool configureEvent(const pugi::xml_node&) final {
+		bool castSpell(Creature* creature) override;
+		bool castSpell(Creature* creature, Creature* target) override;
+		bool configureEvent(const pugi::xml_node&) override {
 			return true;
 		}
 
@@ -109,7 +109,7 @@ class CombatSpell final : public Event, public BaseSpell
 		}
 
 	protected:
-		std::string getScriptEventName() const final {
+		std::string getScriptEventName() const override {
 			return "onCastSpell";
 		}
 
@@ -209,7 +209,7 @@ class InstantSpell : public TalkAction, public Spell
 		//scripting
 		bool executeCastSpell(Creature* creature, const LuaVariant& var);
 
-		bool isInstant() const final {
+		bool isInstant() const override {
 			return true;
 		}
 		bool getHasParam() const {
@@ -291,13 +291,13 @@ class RuneSpell final : public Action, public Spell
 			return targetCreature;
 		}
 
-		bool executeUse(Player* player, Item* item, const Position& fromPosition, Thing* target, const Position& toPosition) final;
+		bool executeUse(Player* player, Item* item, const Position& fromPosition, Thing* target, const Position& toPosition, bool isHotkey) override;
 
 		bool castSpell(Creature* creature) final;
 		bool castSpell(Creature* creature, Creature* target) final;
 
 		//scripting
-		bool executeCastSpell(Creature* creature, const LuaVariant& var);
+		bool executeCastSpell(Creature* creature, const LuaVariant& var, bool isHotkey);
 
 		bool isInstant() const final {
 			return false;
@@ -312,7 +312,7 @@ class RuneSpell final : public Action, public Spell
 		static RuneSpellFunction Illusion;
 		static RuneSpellFunction Convince;
 
-		bool internalCastSpell(Creature* creature, const LuaVariant& var);
+		bool internalCastSpell(Creature* creature, const LuaVariant& var, bool isHotkey);
 
 		RuneSpellFunction* runeFunction = nullptr;
 		uint16_t runeId = 0;

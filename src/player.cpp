@@ -493,6 +493,11 @@ uint16_t Player::getContainerIndex(uint8_t cid) const
 	return it->second.index;
 }
 
+bool Player::canOpenCorpse(uint32_t ownerId) const
+{
+	return getID() == ownerId || (party && party->canOpenCorpse(ownerId));
+}
+
 uint16_t Player::getLookCorpse() const
 {
 	if (sex == PLAYERSEX_FEMALE) {
@@ -504,6 +509,20 @@ uint16_t Player::getLookCorpse() const
 
 void Player::addStorageValue(const uint32_t key, const int32_t value)
 {
+	if (IS_IN_KEYRANGE(key, RESERVED_RANGE)) {
+		if (IS_IN_KEYRANGE(key, OUTFITS_RANGE)) {
+			outfits.emplace_back(
+				value >> 16,
+				value & 0xFF
+			);
+			return;
+		}
+		else {
+			std::cout << "Warning: unknown reserved key: " << key << " player: " << getName() << std::endl;
+			return;
+		}
+	}
+
 	if (value != -1) {
 		storageMap[key] = value;
 	} else {
@@ -3129,7 +3148,7 @@ bool Player::onKilledCreature(Creature* target, bool lastHit/* = true*/)
 
 void Player::gainExperience(uint64_t gainExp, Creature* source)
 {
-	if (hasFlag(PlayerFlag_NotGainExperience) || gainExp == 0) {
+	if (hasFlag(PlayerFlag_NotGainExperience) || gainExp == 0 || staminaMinutes == 0) {
 		return;
 	}
 
@@ -3223,26 +3242,31 @@ void Player::changeSoul(int32_t soulChange)
 	sendStats();
 }
 
-bool Player::canWear(uint32_t lookType) const
+bool Player::canWear(uint32_t lookType, uint8_t addons) const
 {
 	if (group->access) {
 		return true;
 	}
 
-	if (getSex() == PLAYERSEX_MALE) {
-		if (lookType >= 132 && lookType <= 134 && isPremium()) {
-			return true;
-		} else if (lookType >= 128 && lookType <= 131) {
-			return true;
-		}
-	} else if (getSex() == PLAYERSEX_FEMALE) {
-		if (lookType >= 140 && lookType <= 142 && isPremium()) {
-			return true;
-		} else if (lookType >= 136 && lookType <= 139) {
-			return true;
-		}
+	const Outfit* outfit = Outfits::getInstance().getOutfitByLookType(sex, lookType);
+	if (!outfit) {
+		return false;
 	}
 
+	if (outfit->premium && !isPremium()) {
+		return false;
+	}
+
+	if (outfit->unlocked && addons == 0) {
+		return true;
+	}
+
+	for (const OutfitEntry& outfitEntry : outfits) {
+		if (outfitEntry.lookType != lookType) {
+			continue;
+		}
+		return (outfitEntry.addons & addons) == addons;
+	}
 	return false;
 }
 
@@ -3261,6 +3285,77 @@ bool Player::canLogout()
 	}
 
 	return !isPzLocked() && !hasCondition(CONDITION_INFIGHT);
+}
+
+void Player::genReservedStorageRange()
+{
+	//generate outfits range
+	uint32_t base_key = PSTRG_OUTFITS_RANGE_START;
+	for (const OutfitEntry& entry : outfits) {
+		storageMap[++base_key] = (entry.lookType << 16) | entry.addons;
+	}
+}
+
+void Player::addOutfit(uint16_t lookType, uint8_t addons)
+{
+	for (OutfitEntry& outfitEntry : outfits) {
+		if (outfitEntry.lookType == lookType) {
+			outfitEntry.addons |= addons;
+			return;
+		}
+	}
+	outfits.emplace_back(lookType, addons);
+}
+
+bool Player::removeOutfit(uint16_t lookType)
+{
+	for (auto it = outfits.begin(), end = outfits.end(); it != end; ++it) {
+		OutfitEntry& entry = *it;
+		if (entry.lookType == lookType) {
+			outfits.erase(it);
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Player::removeOutfitAddon(uint16_t lookType, uint8_t addons)
+{
+	for (OutfitEntry& outfitEntry : outfits) {
+		if (outfitEntry.lookType == lookType) {
+			outfitEntry.addons &= ~addons;
+			return true;
+		}
+	}
+	return false;
+}
+
+bool Player::getOutfitAddons(const Outfit& outfit, uint8_t& addons) const
+{
+	if (group->access) {
+		addons = 3;
+		return true;
+	}
+
+	if (outfit.premium && !isPremium()) {
+		return false;
+	}
+
+	for (const OutfitEntry& outfitEntry : outfits) {
+		if (outfitEntry.lookType != outfit.lookType) {
+			continue;
+		}
+
+		addons = outfitEntry.addons;
+		return true;
+	}
+
+	if (!outfit.unlocked) {
+		return false;
+	}
+
+	addons = 0;
+	return true;
 }
 
 void Player::setSex(PlayerSex_t newSex)

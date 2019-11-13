@@ -182,7 +182,8 @@ void Connection::parsePacket(const boost::system::error_code& error)
 	if (error) {
 		close(FORCE_CLOSE);
 		return;
-	} else if (connectionState != CONNECTION_STATE_OPEN) {
+	}
+	else if (connectionState != CONNECTION_STATE_OPEN) {
 		return;
 	}
 
@@ -197,29 +198,34 @@ void Connection::parsePacket(const boost::system::error_code& error)
 				close(FORCE_CLOSE);
 				return;
 			}
-		} else {
+		}
+		else {
 			msg.skipBytes(1);    // Skip protocol ID
 		}
 
 		protocol->onRecvFirstMessage(msg);
-	} else {
+	}
+	else {
 		protocol->onRecvMessage(msg);    // Send the packet to the current protocol
 	}
 
 	try {
 		readTimer.expires_from_now(boost::posix_time::seconds(CONNECTION_READ_TIMEOUT));
 		readTimer.async_wait(std::bind(&Connection::handleTimeout, std::weak_ptr<Connection>(shared_from_this()),
-		                                    std::placeholders::_1));
+			std::placeholders::_1));
 
 		// Wait to the next packet
 		boost::asio::async_read(socket,
-		                        boost::asio::buffer(msg.getBuffer(), NetworkMessage::HEADER_LENGTH),
-		                        std::bind(&Connection::parseHeader, shared_from_this(), std::placeholders::_1));
-	} catch (boost::system::system_error& e) {
+			boost::asio::buffer(msg.getBuffer(), NetworkMessage::HEADER_LENGTH),
+			std::bind(&Connection::parseHeader, shared_from_this(), std::placeholders::_1));
+	}
+	catch (boost::system::system_error& e) {
 		std::cout << "[Network error - Connection::parsePacket] " << e.what() << std::endl;
 		close(FORCE_CLOSE);
 	}
 }
+
+
 
 void Connection::send(const OutputMessage_ptr& msg)
 {

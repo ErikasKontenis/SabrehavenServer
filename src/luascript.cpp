@@ -730,6 +730,8 @@ Position LuaScriptInterface::getPosition(lua_State* L, int32_t arg)
 Outfit_t LuaScriptInterface::getOutfit(lua_State* L, int32_t arg)
 {
 	Outfit_t outfit;
+	outfit.lookAddons = getField<uint8_t>(L, arg, "lookAddons");
+
 	outfit.lookFeet = getField<uint8_t>(L, arg, "lookFeet");
 	outfit.lookLegs = getField<uint8_t>(L, arg, "lookLegs");
 	outfit.lookBody = getField<uint8_t>(L, arg, "lookBody");
@@ -882,6 +884,7 @@ void LuaScriptInterface::pushOutfit(lua_State* L, const Outfit_t& outfit)
 	setField(L, "lookBody", outfit.lookBody);
 	setField(L, "lookLegs", outfit.lookLegs);
 	setField(L, "lookFeet", outfit.lookFeet);
+	setField(L, "lookAddons", outfit.lookAddons);
 }
 
 #define registerEnum(value) { std::string enumName = #value; registerGlobalVariable(enumName.substr(enumName.find_last_of(':') + 1), value); }
@@ -1607,6 +1610,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::ALLOW_CLONES)
 	registerEnumIn("configKeys", ConfigManager::BIND_ONLY_GLOBAL_ADDRESS)
 	registerEnumIn("configKeys", ConfigManager::OPTIMIZE_DATABASE)
+	registerEnumIn("configKeys", ConfigManager::STAMINA_SYSTEM)
 	registerEnumIn("configKeys", ConfigManager::WARN_UNSAFE_SCRIPTS)
 	registerEnumIn("configKeys", ConfigManager::CONVERT_UNSAFE_SCRIPTS)
 	registerEnumIn("configKeys", ConfigManager::TELEPORT_NEWBIES)
@@ -2007,6 +2011,9 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("Player", "getGroup", LuaScriptInterface::luaPlayerGetGroup);
 	registerMethod("Player", "setGroup", LuaScriptInterface::luaPlayerSetGroup);
+
+	registerMethod("Player", "getStamina", LuaScriptInterface::luaPlayerGetStamina);
+	registerMethod("Player", "setStamina", LuaScriptInterface::luaPlayerSetStamina);
 
 	registerMethod("Player", "getSoul", LuaScriptInterface::luaPlayerGetSoul);
 	registerMethod("Player", "addSoul", LuaScriptInterface::luaPlayerAddSoul);
@@ -7757,6 +7764,35 @@ int LuaScriptInterface::luaPlayerSetGroup(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaPlayerGetStamina(lua_State* L)
+{
+	// player:getStamina()
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		lua_pushnumber(L, player->getStaminaMinutes());
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerSetStamina(lua_State* L)
+{
+	// player:setStamina(stamina)
+	uint16_t stamina = getNumber<uint16_t>(L, 2);
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		player->staminaMinutes = std::min<uint16_t>(3360, stamina);
+		player->sendStats();
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
 int LuaScriptInterface::luaPlayerGetSoul(lua_State* L)
 {
 	// player:getSoul()
@@ -10616,11 +10652,12 @@ int LuaScriptInterface::luaConditionSetSpeedDelta(lua_State* L)
 int LuaScriptInterface::luaConditionSetOutfit(lua_State* L)
 {
 	// condition:setOutfit(outfit)
-	// condition:setOutfit(lookTypeEx, lookType, lookHead, lookBody, lookLegs, lookFeet)
+	// condition:setOutfit(lookTypeEx, lookType, lookHead, lookBody, lookLegs, lookFeet[, lookAddons])
 	Outfit_t outfit;
 	if (isTable(L, 2)) {
 		outfit = getOutfit(L, 2);
 	} else {
+		outfit.lookAddons = getNumber<uint8_t>(L, 8, outfit.lookAddons);
 		outfit.lookFeet = getNumber<uint8_t>(L, 7);
 		outfit.lookLegs = getNumber<uint8_t>(L, 6);
 		outfit.lookBody = getNumber<uint8_t>(L, 5);

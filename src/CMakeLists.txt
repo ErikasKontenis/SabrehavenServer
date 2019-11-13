@@ -41,6 +41,7 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/networkmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/npc.cpp
 	${CMAKE_CURRENT_LIST_DIR}/otserv.cpp
+	${CMAKE_CURRENT_LIST_DIR}/outfit.cpp
 	${CMAKE_CURRENT_LIST_DIR}/outputmessage.cpp
 	${CMAKE_CURRENT_LIST_DIR}/party.cpp
 	${CMAKE_CURRENT_LIST_DIR}/player.cpp
@@ -66,5 +67,6 @@ set(tfs_SRC
 	${CMAKE_CURRENT_LIST_DIR}/vocation.cpp
 	${CMAKE_CURRENT_LIST_DIR}/waitlist.cpp
 	${CMAKE_CURRENT_LIST_DIR}/wildcardtree.cpp
+	${CMAKE_CURRENT_LIST_DIR}/xtea.cpp
 )
 

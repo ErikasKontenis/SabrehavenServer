@@ -302,25 +302,24 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 		disconnectClient("Account number or password is not correct.");
 		return;
 	}
-	
+
 	Account account;
 	if (!IOLoginData::loginserverAuthentication(accountNumber, password, account)) {
 		disconnectClient("Account number or password is not correct.");
 		return;
 	}
-	
+
 	//Update premium days
 	Game::updatePremium(account);
 
 	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem)));
+
 }
 
-void ProtocolGame::sendUpdateRequest()
+void ProtocolGame::onConnect()
 {
-	auto output = OutputMessagePool::getOutputMessage();
-	output->addByte(0x11);
-	send(output);
-	disconnect();
+
+
 }
 
 void ProtocolGame::disconnectClient(const std::string& message) const
@@ -447,7 +446,8 @@ void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 	if (ground) {
 		msg.addItem(ground);
 		count = 1;
-	} else {
+	}
+	else {
 		count = 0;
 	}
 
@@ -456,7 +456,11 @@ void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 		for (auto it = items->getBeginTopItem(), end = items->getEndTopItem(); it != end; ++it) {
 			msg.addItem(*it);
 
-			if (++count == 10) {
+			count++;
+			if (count == 9 && tile->getPosition() == player->getPosition()) {
+				break;
+			}
+			else if (count == 10) {
 				return;
 			}
 		}
@@ -464,9 +468,18 @@ void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 
 	const CreatureVector* creatures = tile->getCreatures();
 	if (creatures) {
+		bool playerAdded = false;
 		for (const Creature* creature : boost::adaptors::reverse(*creatures)) {
 			if (!player->canSeeCreature(creature)) {
 				continue;
+			}
+
+			if (tile->getPosition() == player->getPosition() && count == 9 && !playerAdded) {
+				creature = player;
+			}
+
+			if (creature->getID() == player->getID()) {
+				playerAdded = true;
 			}
 
 			bool known;
@@ -693,6 +706,7 @@ void ProtocolGame::parseSetOutfit(NetworkMessage& msg)
 	newOutfit.lookBody = msg.getByte();
 	newOutfit.lookLegs = msg.getByte();
 	newOutfit.lookFeet = msg.getByte();
+	newOutfit.lookAddons = msg.getByte();
 	addGameTask(&Game::playerChangeOutfit, player->getID(), newOutfit);
 }
 
@@ -1154,11 +1168,12 @@ void ProtocolGame::sendChannel(uint16_t channelId, const std::string& channelNam
 	writeToOutputBuffer(msg);
 }
 
+
 void ProtocolGame::sendIcons(uint16_t icons)
 {
 	NetworkMessage msg;
 	msg.addByte(0xA2);
-	msg.addByte(static_cast<uint8_t>(icons));
+	msg.add<uint16_t>(icons);
 	writeToOutputBuffer(msg);
 }
 
@@ -1189,6 +1204,8 @@ void ProtocolGame::sendContainer(uint8_t cid, const Container* container, bool h
 	}
 	writeToOutputBuffer(msg);
 }
+
+
 
 void ProtocolGame::sendTradeItemRequest(const std::string& traderName, const Item* item, bool ack)
 {
@@ -1263,14 +1280,61 @@ void ProtocolGame::sendCreatureTurn(const Creature* creature, uint32_t stackPos)
 void ProtocolGame::sendCreatureSay(const Creature* creature, SpeakClasses type, const std::string& text, const Position* pos/* = nullptr*/)
 {
 	NetworkMessage msg;
-	AddCreatureSpeak(msg, creature, type, text, 0, pos);
+	msg.addByte(0xAA);
+
+	static uint32_t statementId = 0;
+	msg.add<uint32_t>(++statementId);
+
+	msg.addString(creature->getName());
+
+	//Add level only for players
+	if (const Player* speaker = creature->getPlayer()) {
+		msg.add<uint16_t>(speaker->getLevel());
+	}
+	else {
+		msg.add<uint16_t>(0x00);
+	}
+
+	msg.addByte(type);
+	if (pos) {
+		msg.addPosition(*pos);
+	}
+	else {
+		msg.addPosition(creature->getPosition());
+	}
+
+	msg.addString(text);
 	writeToOutputBuffer(msg);
 }
 
 void ProtocolGame::sendToChannel(const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId)
 {
 	NetworkMessage msg;
-	AddCreatureSpeak(msg, creature, type, text, channelId);
+	msg.addByte(0xAA);
+
+	static uint32_t statementId = 0;
+	msg.add<uint32_t>(++statementId);
+	if (!creature) {
+		msg.add<uint32_t>(0x00);
+	}
+	else if (type == TALKTYPE_CHANNEL_R2) {
+		msg.add<uint32_t>(0x00);
+		type = TALKTYPE_CHANNEL_R1;
+	}
+	else {
+		msg.addString(creature->getName());
+		//Add level only for players
+		if (const Player* speaker = creature->getPlayer()) {
+			msg.add<uint16_t>(speaker->getLevel());
+		}
+		else {
+			msg.add<uint16_t>(0x00);
+		}
+	}
+
+	msg.addByte(type);
+	msg.add<uint16_t>(channelId);
+	msg.addString(text);
 	writeToOutputBuffer(msg);
 }
 
@@ -1280,16 +1344,13 @@ void ProtocolGame::sendPrivateMessage(const Player* speaker, SpeakClasses type, 
 	msg.addByte(0xAA);
 	static uint32_t statementId = 0;
 	msg.add<uint32_t>(++statementId);
-	if (type == TALKTYPE_RVR_ANSWER) {
-		msg.addString("Gamemaster");
-	} else {
-		if (speaker) {
-			msg.addString(speaker->getName());
-		} else {
-			msg.add<uint32_t>(0x00);
-		}
+	if (speaker) {
+		msg.addString(speaker->getName());
+		msg.add<uint16_t>(speaker->getLevel());
 	}
-
+	else {
+		msg.add<uint32_t>(0x00);
+	}
 	msg.addByte(type);
 	msg.addString(text);
 	writeToOutputBuffer(msg);
@@ -1493,7 +1554,8 @@ void ProtocolGame::sendAddCreature(const Creature* creature, const Position& pos
 	msg.addByte(0x0A);
 
 	msg.add<uint32_t>(player->getID());
-	msg.add<uint16_t>(0x32); // beat duration (50)
+	msg.addByte(0x32); // beat duration (50)
+	msg.addByte(0x00);
 
 	// can report bugs?
 	if (player->getAccountType() >= ACCOUNT_TYPE_TUTOR) {
@@ -1517,16 +1579,9 @@ void ProtocolGame::sendAddCreature(const Creature* creature, const Position& pos
 		sendMagicEffect(pos, CONST_ME_TELEPORT);
 	}
 
-	sendInventoryItem(CONST_SLOT_HEAD, player->getInventoryItem(CONST_SLOT_HEAD));
-	sendInventoryItem(CONST_SLOT_NECKLACE, player->getInventoryItem(CONST_SLOT_NECKLACE));
-	sendInventoryItem(CONST_SLOT_BACKPACK, player->getInventoryItem(CONST_SLOT_BACKPACK));
-	sendInventoryItem(CONST_SLOT_ARMOR, player->getInventoryItem(CONST_SLOT_ARMOR));
-	sendInventoryItem(CONST_SLOT_RIGHT, player->getInventoryItem(CONST_SLOT_RIGHT));
-	sendInventoryItem(CONST_SLOT_LEFT, player->getInventoryItem(CONST_SLOT_LEFT));
-	sendInventoryItem(CONST_SLOT_LEGS, player->getInventoryItem(CONST_SLOT_LEGS));
-	sendInventoryItem(CONST_SLOT_FEET, player->getInventoryItem(CONST_SLOT_FEET));
-	sendInventoryItem(CONST_SLOT_RING, player->getInventoryItem(CONST_SLOT_RING));
-	sendInventoryItem(CONST_SLOT_AMMO, player->getInventoryItem(CONST_SLOT_AMMO));
+	for (int i = CONST_SLOT_FIRST; i <= CONST_SLOT_LAST; ++i) {
+		sendInventoryItem(static_cast<slots_t>(i), player->getInventoryItem(static_cast<slots_t>(i)));
+	}
 
 	sendStats();
 	sendSkills();
@@ -1715,20 +1770,30 @@ void ProtocolGame::sendOutfitWindow()
 	Outfit_t currentOutfit = player->getDefaultOutfit();
 	AddOutfit(msg, currentOutfit);
 
-	if (player->getSex() == PLAYERSEX_MALE) {
-		msg.add<uint16_t>(128);
-		if (player->isPremium()) {
-			msg.add<uint16_t>(134);
-		} else {
-			msg.add<uint16_t>(131);
-		}
-	} else {
-		msg.add<uint16_t>(136);
-		if (player->isPremium()) {
-			msg.add<uint16_t>(142);
-		} else {
-			msg.add<uint16_t>(139);
+	std::vector<ProtocolOutfit> protocolOutfits;
+	if (player->isAccessPlayer()) {
+		static const std::string gamemasterOutfitName = "Gamemaster";
+		protocolOutfits.emplace_back(gamemasterOutfitName, 75, 0);
 	}
+
+	const auto& outfits = Outfits::getInstance().getOutfits(player->getSex());
+	protocolOutfits.reserve(outfits.size());
+	for (const Outfit& outfit : outfits) {
+		uint8_t addons;
+		if (!player->getOutfitAddons(outfit, addons)) {
+			continue;
+		}
+
+		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
+		if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits
+			break;
+		}
+	}
+
+	msg.addByte(protocolOutfits.size());
+	for (const ProtocolOutfit& outfit : protocolOutfits) {
+		msg.add<uint16_t>(outfit.lookType);
+		msg.addByte(outfit.addons);
 	}
 
 	writeToOutputBuffer(msg);
@@ -1810,14 +1875,14 @@ void ProtocolGame::AddPlayerStats(NetworkMessage& msg)
 
 	msg.add<uint16_t>(std::min<int32_t>(player->getHealth(), std::numeric_limits<uint16_t>::max()));
 	msg.add<uint16_t>(std::min<int32_t>(player->getMaxHealth(), std::numeric_limits<uint16_t>::max()));
-	msg.add<uint16_t>(static_cast<uint16_t>(player->getFreeCapacity() / 100.));
-	if (player->getExperience() >= std::numeric_limits<uint32_t>::max()) {
-		msg.add<uint32_t>(0);
-	} else {
-		msg.add<uint32_t>(static_cast<uint32_t>(player->getExperience()));
-	}
-	msg.add<uint16_t>(static_cast<uint16_t>(player->getLevel()));
+	
+	msg.add<uint16_t>(player->getFreeCapacity() / 100);
+
+	msg.add<uint32_t>(std::min<uint32_t>(player->getExperience(), 0x7FFFFFFF));
+
+	msg.add<uint16_t>(player->getLevel());
 	msg.addByte(player->getLevelPercent());
+
 	msg.add<uint16_t>(std::min<int32_t>(player->getMana(), std::numeric_limits<uint16_t>::max()));
 	msg.add<uint16_t>(std::min<int32_t>(player->getMaxMana(), std::numeric_limits<uint16_t>::max()));
 
@@ -1825,6 +1890,8 @@ void ProtocolGame::AddPlayerStats(NetworkMessage& msg)
 	msg.addByte(player->getMagicLevelPercent());
 
 	msg.addByte(player->getSoul());
+
+	msg.add<uint16_t>(player->getStaminaMinutes());
 }
 
 void ProtocolGame::AddPlayerSkills(NetworkMessage& msg)
@@ -1846,6 +1913,7 @@ void ProtocolGame::AddOutfit(NetworkMessage& msg, const Outfit_t& outfit)
 		msg.addByte(outfit.lookBody);
 		msg.addByte(outfit.lookLegs);
 		msg.addByte(outfit.lookFeet);
+		msg.addByte(outfit.lookAddons);
 	} else {
 		msg.addItemId(outfit.lookTypeEx);
 	}
@@ -1867,53 +1935,6 @@ void ProtocolGame::AddCreatureLight(NetworkMessage& msg, const Creature* creatur
 	msg.add<uint32_t>(creature->getID());
 	msg.addByte((player->isAccessPlayer() ? 0xFF : lightInfo.level));
 	msg.addByte(lightInfo.color);
-}
-
-void ProtocolGame::AddCreatureSpeak(NetworkMessage& msg, const Creature* creature, SpeakClasses type, const std::string& text, uint16_t channelId, const Position* pos /*= nullptr*/)
-{
-	msg.addByte(0xAA);
-	static uint32_t statementId = 0;
-	msg.add<uint32_t>(++statementId);
-
-	if (type != TALKTYPE_RVR_ANSWER) {
-		if (type != TALKTYPE_CHANNEL_R2) {
-			if (creature) {
-				msg.addString(creature->getName());
-			} else {
-				msg.add<uint16_t>(0);
-			}
-		} else {
-			msg.add<uint16_t>(0);
-		}
-	}
-
-	msg.addByte(type);
-	switch (type) {
-	case TALKTYPE_SAY:
-	case TALKTYPE_WHISPER:
-	case TALKTYPE_YELL:
-	case TALKTYPE_MONSTER_SAY:
-	case TALKTYPE_MONSTER_YELL:
-		if (!pos) {
-			msg.addPosition(creature->getPosition());
-		} else {
-			msg.addPosition(*pos);
-		}
-		break;
-	case TALKTYPE_CHANNEL_Y:
-	case TALKTYPE_CHANNEL_R1:
-	case TALKTYPE_CHANNEL_R2:
-	case TALKTYPE_CHANNEL_O:
-		msg.add<uint16_t>(channelId);
-		break;
-	case TALKTYPE_RVR_CHANNEL:
-		msg.add<uint32_t>(0);
-		break;
-	default:
-		break;
-	}
-
-	msg.addString(text);
 }
 
 //tile

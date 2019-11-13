@@ -51,7 +51,8 @@ OutputMessage_ptr Protocol::getOutputBuffer(int32_t size)
 	//dispatcher thread
 	if (!outputBuffer) {
 		outputBuffer = OutputMessagePool::getOutputMessage();
-	} else if ((outputBuffer->getLength() + size) > NetworkMessage::MAX_PROTOCOL_BODY_LENGTH) {
+	}
+	else if ((outputBuffer->getLength() + size) > NetworkMessage::MAX_PROTOCOL_BODY_LENGTH) {
 		send(outputBuffer);
 		outputBuffer = OutputMessagePool::getOutputMessage();
 	}
@@ -71,7 +72,7 @@ void Protocol::XTEA_encrypt(OutputMessage& msg) const
 	uint8_t* buffer = msg.getOutputBuffer();
 	const size_t messageLength = msg.getLength();
 	size_t readPos = 0;
-	const uint32_t k[] = {key[0], key[1], key[2], key[3]};
+	const uint32_t k[] = { key[0], key[1], key[2], key[3] };
 	while (readPos < messageLength) {
 		uint32_t v0;
 		memcpy(&v0, buffer + readPos, 4);
@@ -95,16 +96,16 @@ void Protocol::XTEA_encrypt(OutputMessage& msg) const
 
 bool Protocol::XTEA_decrypt(NetworkMessage& msg) const
 {
-	if (((msg.getLength() - 2) % 8) != 0) {
+	if (((msg.getLength() - 2) & 7) != 0) {
 		return false;
 	}
 
 	const uint32_t delta = 0x61C88647;
 
 	uint8_t* buffer = msg.getBuffer() + msg.getBufferPosition();
-	const size_t messageLength = (msg.getLength() - 6);
+	const size_t messageLength = (msg.getLength() - 2);
 	size_t readPos = 0;
-	const uint32_t k[] = {key[0], key[1], key[2], key[3]};
+	const uint32_t k[] = { key[0], key[1], key[2], key[3] };
 	while (readPos < messageLength) {
 		uint32_t v0;
 		memcpy(&v0, buffer + readPos, 4);
@@ -136,7 +137,7 @@ bool Protocol::XTEA_decrypt(NetworkMessage& msg) const
 
 bool Protocol::RSA_decrypt(NetworkMessage& msg)
 {
-	if ((msg.getLength() - msg.getBufferPosition()) < 128) {
+	if ((msg.getLength() - msg.getBufferPosition()) != 128) {
 		return false;
 	}
 

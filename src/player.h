@@ -23,6 +23,7 @@
 #include "creature.h"
 #include "container.h"
 #include "cylinder.h"
+#include "outfit.h"
 #include "enums.h"
 #include "vocation.h"
 #include "protocolgame.h"
@@ -77,9 +78,10 @@ struct OpenContainer {
 };
 
 struct OutfitEntry {
-	constexpr OutfitEntry(uint16_t lookType) : lookType(lookType) {}
+	constexpr OutfitEntry(uint16_t lookType, uint8_t addons) : lookType(lookType), addons(addons) {}
 
 	uint16_t lookType;
+	uint8_t addons;
 };
 
 struct Skill {
@@ -146,6 +148,10 @@ class Player final : public Creature, public Cylinder
 		static uint64_t getExpForLevel(int32_t lv) {
 			lv--;
 			return ((50ULL * lv * lv * lv) - (150ULL * lv * lv) + (400ULL * lv)) / 3ULL;
+		}
+
+		uint16_t getStaminaMinutes() const {
+			return staminaMinutes;
 		}
 
 		uint64_t getBankBalance() const {
@@ -265,8 +271,11 @@ class Player final : public Creature, public Cylinder
 		int8_t getContainerID(const Container* container) const;
 		uint16_t getContainerIndex(uint8_t cid) const;
 
+		bool canOpenCorpse(uint32_t ownerId) const;
+
 		void addStorageValue(const uint32_t key, const int32_t value);
 		bool getStorageValue(const uint32_t key, int32_t& value) const;
+		void genReservedStorageRange();
 
 		void setGroup(Group* newGroup) {
 			group = newGroup;
@@ -556,7 +565,12 @@ class Player final : public Creature, public Cylinder
 		}
 		void checkSkullTicks();
 
-		bool canWear(uint32_t lookType) const;
+		bool canWear(uint32_t lookType, uint8_t addons) const;
+		void addOutfit(uint16_t lookType, uint8_t addons);
+		bool removeOutfit(uint16_t lookType);
+		bool removeOutfitAddon(uint16_t lookType, uint8_t addons);
+		bool getOutfitAddons(const Outfit& outfit, uint8_t& addons) const;
+
 
 		bool canLogout();
 
@@ -1032,6 +1046,7 @@ class Player final : public Creature, public Cylinder
 		int32_t shieldBlockCount = 0;
 		int32_t idleTime = 0;
 
+		uint16_t staminaMinutes = 3360;
 		uint16_t maxWriteLen = 0;
 
 		uint8_t soul = 0;
