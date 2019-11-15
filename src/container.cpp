@@ -326,7 +326,7 @@ ReturnValue Container::queryMaxCount(int32_t index, const Thing& thing, uint32_t
 			}
 		} else {
 			const Item* destItem = getItemByIndex(index);
-			if (item->equals(destItem) && destItem->getItemCount() < 100) {
+			if (item->equals(destItem) && !destItem->isRune() && destItem->getItemCount() < 100) {
 				uint32_t remainder = 100 - destItem->getItemCount();
 				if (queryAdd(index, *item, remainder, flags) == RETURNVALUE_NOERROR) {
 					n = remainder;

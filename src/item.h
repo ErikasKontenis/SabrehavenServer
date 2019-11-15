@@ -711,7 +711,9 @@ class Item : virtual public Thing
 		bool canDistUse() const {
 			return items[id].distUse;
 		}
-
+		bool isRune() const {
+			return items[id].isRune();
+		}
 		const std::string& getName() const {
 			if (hasAttribute(ITEM_ATTRIBUTE_NAME)) {
 				return getStrAttr(ITEM_ATTRIBUTE_NAME);

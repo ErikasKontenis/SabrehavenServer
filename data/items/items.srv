@@ -4842,47 +4842,47 @@ Attributes  = {ExpireTarget=1066,TotalExpireTime=75}
 
 TypeID      = 1068
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1069
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1070
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1071
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1072
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1073
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1074
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1075
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1076
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1077
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1078
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1079
 Name        = "an ant-hill"
@@ -8148,23 +8148,23 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1854
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1855
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1856
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1857
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1858
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1859
 Name        = "a stone"
@@ -8192,15 +8192,15 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1865
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1866
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1867
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1868
 Name        = "a stone"
@@ -14119,282 +14119,282 @@ Attributes  = {Weight=120}
 
 TypeID      = 3148
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3149
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3150
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3151
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3152
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3153
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3154
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3155
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3156
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3157
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3158
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3159
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3160
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3161
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3162
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3163
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3164
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3165
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3166
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3167
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3168
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3169
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3170
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3171
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3172
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3173
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3174
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3175
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3176
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3177
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3178
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3179
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3180
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3181
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3182
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3183
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3184
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3185
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3186
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3187
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3188
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3189
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3190
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3191
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3192
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3193
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3194
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3195
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3196
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3197
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3198
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3199
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3200
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3201
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3202
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3203
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3204
@@ -17685,11 +17685,11 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3906
 Name        = "a dead man's saddle"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3907
 Name        = "dead man's saddles"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3908
 Name        = "a moss cap mushroom"
@@ -17717,27 +17717,27 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3914
 Name        = "a giggle mushroom"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3915
 Name        = "giggle mushrooms"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3916
 Name        = "a cat's food mushroom"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3917
 Name        = "cat's food mushrooms"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3918
 Name        = "a glimmer cap mushroom"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3919
 Name        = "glimmer cap mushrooms"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3920
 Name        = "a giant glimmer cap mushroom"
@@ -23156,3 +23156,1439 @@ TypeID      = 5090
 Name        = "a treasure map"
 Flags       = {Text,Take}
 Attributes  = {Weight=830}
+
+TypeID      = 5091
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5092
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5093
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5094
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5095
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5096
+Name        = "a mango"
+Flags       = {Cumulative,Take}
+Attributes  = {Nutrition=5,Weight=180}
+
+TypeID      = 5097
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5098
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5099
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5100
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5101
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5102
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5103
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5104
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5105
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5106
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5107
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5108
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5109
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5110
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5111
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5112
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5113
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5114
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5115
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5116
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5117
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5118
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5119
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5120
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5121
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5122
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5123
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5124
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5125
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5126
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5127
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5128
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5129
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5130
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5131
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5132
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5133
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5134
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5135
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5136
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5137
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5138
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5139
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5140
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5141
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5142
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5143
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5144
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5145
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5146
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5147
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5148
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5149
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5150
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5151
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5152
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5153
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5154
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5155
+Name        = "a mango tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5156
+Name        = "a mango tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5157
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5158
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5159
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5160
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5161
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5162
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5163
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5164
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5165
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5166
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5167
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5168
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5169
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5170
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5171
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5172
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5173
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5174
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5175
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5176
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5177
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5178
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5179
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5180
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5181
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5182
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5183
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5184
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5185
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5186
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5187
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5188
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5189
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5190
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5191
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5192
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5193
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5194
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5195
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5196
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5197
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5198
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5199
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5200
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5201
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5202
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5203
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5204
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5205
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5206
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5207
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5208
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5209
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5210
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5211
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5212
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5213
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5214
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5215
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5216
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5217
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5218
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5219
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5220
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5221
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5222
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5223
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5224
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5225
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5226
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5227
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5228
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5230
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5231
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5232
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5233
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5234
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5235
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5236
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5237
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5238
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5239
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5240
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5241
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5242
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5243
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5244
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5245
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5246
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5247
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5248
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5249
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5250
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5251
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5252
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5253
+Name        = "a wooden railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5254
+Name        = "a wooden railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5255
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5256
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5257
+Name        = "stairs"
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
+
+TypeID      = 5258
+Name        = "stairs"
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
+
+TypeID      = 5259
+Name        = "stairs"
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
+
+TypeID      = 5260
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5261
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5262
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5263
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5264
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5265
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5266
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5267
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5268
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5269
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5270
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5271
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5272
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5273
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5274
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5275
+Name        = "a wooden window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5276
+Name        = "a wooden window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5277
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5278
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5279
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5280
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5281
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5282
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5283
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5284
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5285
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5286
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5287
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5288
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5289
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5290
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5291
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5292
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5293
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5294
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5295
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5296
+Name        = "a wooden planks"
+Flags       = {Unmove}
+
+TypeID      = 5297
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5298
+Name        = "a wooden planks"
+Flags       = {Unmove}
+
+TypeID      = 5299
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5300
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5301
+Name        = "a wooden planks"
+Flags       = {Unmove}
+
+TypeID      = 5302
+Name        = "a white stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5303
+Name        = "a white stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5304
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5305
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5306
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5307
+Name        = "a white stone pillar"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5308
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5309
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5310
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5311
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5312
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5313
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5314
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5315
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5316
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5317
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5318
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5319
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5320
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5321
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5322
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5323
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5324
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5325
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5326
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5327
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5328
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5329
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5330
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5331
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5332
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5333
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5334
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5335
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5336
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5337
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5338
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5339
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5340
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5341
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5342
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5343
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5344
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5345
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5346
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5347
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5348
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5349
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5350
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5351
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5352
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5353
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5354
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5355
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5356
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5357
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5358
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5359
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5360
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5361
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5362
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5363
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5364
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5365
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5366
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5367
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5368
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5369
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5370
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5371
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5372
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5373
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5374
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5375
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5376
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5377
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5378
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5379
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5380
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5381
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5382
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5383
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5384
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5385
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5386
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5387
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5388
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5389
+Name        = "a pawpaw tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5390
+Name        = "a pawpaw tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5391
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5392
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5393
+Name        = "a dry mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5394
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5395
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5396
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5397
+Name        = "a dry mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5398
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5399
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5400
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5401
+Name        = "a bamboo lamp"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {Brightness=7,LightColor=207}
+
+TypeID      = 5402
+Name        = "a bamboo lamp"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {Brightness=7,LightColor=207}
+
+TypeID      = 5403
+Name        = "a bamboo lamp"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {Brightness=7,LightColor=207}
+
+TypeID      = 5404
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5405
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5406
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5407
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5408
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5409
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5410
+Name        = "a stone"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5411
+Name        = "a stone"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5412
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5413
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5414
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5415
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5416
+Name        = "a starfish"
+Flags       = {Unmove}
+
+TypeID      = 5417
+Name        = "a sea anemone"
+Flags       = {Unmove}
+
+TypeID      = 5418
+Name        = "bubbles"
+Flags       = {Top,Unmove}
+
+TypeID      = 5419
+Name        = "bubbles"
+Flags       = {Top,Unmove}
+
+TypeID      = 5420
+Name        = "kelp"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5421
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5422
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5423
+Name        = "a water wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5424
+Name        = "a water wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5425
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5426
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5427
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5428
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5429
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5430
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5431
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5432
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5433
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5434
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5435
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5436
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5437
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5438
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5439
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5440
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5441
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5442
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
