@@ -26070,3 +26070,108 @@ Flags       = {Unpass,Unmove,Unlay}
 TypeID      = 5778
 Name        = "a target board"
 Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5779
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5780
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5781
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5782
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5783
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5784
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5785
+Name        = "a medal of honour"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1000}
+
+TypeID      = 5786
+Name        = "a wooden whistle"
+Flags       = {Take}
+Attributes  = {Weight=100} # TODO: implement music like in tibia wiki says
+
+TypeID      = 5787
+Name        = "a training dummy"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5788
+Name        = "a training dummy"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5789
+Name        = "a stuck axe"
+Flags       = {Unmove}
+
+TypeID      = 5790
+Name        = "a stuck axe"
+Flags       = {Unmove}
+
+TypeID      = 5791
+Name        = "a stuffed dragon"
+Flags       = {Take}
+Attributes  = {Weight=850} # TODO: implement like in tibia wiki says
+
+TypeID      = 5792
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200} # TODO: implement like in tibia wiki says
+
+TypeID      = 5793
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5794
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5795
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5796
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5797
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5798
+Name        = "an abacus"
+Description = "If you use it wisely, you may write yourself into the history books"
+Flags       = {Take}
+Attributes  = {Weight=1200}
+
+TypeID      = 5799
+Name        = "a golden figurine"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5800
+Name        = "a grappling hook"
+Flags       = {Unmove}
+
+TypeID      = 5801
+Name        = "a key ring"
+Flags       = {Container,Take}
+Attributes  = {Capacity=20,Weight=50}
