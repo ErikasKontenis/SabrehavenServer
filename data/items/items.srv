@@ -26175,3 +26175,688 @@ TypeID      = 5801
 Name        = "a key ring"
 Flags       = {Container,Take}
 Attributes  = {Capacity=20,Weight=50}
+
+TypeID      = 5802
+Name        = "a message in a bottle"
+Flags       = {Take}
+Attributes  = {Weight=1200}
+
+TypeID      = 5803
+Name        = "an arbalest"
+Description = "It is a bit heavy due to the iron mounting, but very precise"
+Flags       = {Take,Distance}
+Attributes  = {Weight=9500,SlotType=TWOHANDED,Range=6,AmmoType=BOLT}
+
+TypeID      = 5804
+Name        = "a nose ring"
+Description = "It was the favourite trinket of the famous Horned Fox"
+Flags       = {Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5805
+Name        = "a golden goblet"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5806
+Name        = "a silver goblet"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5807
+Name        = "a bronze goblet"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5808
+Name        = "Orshabaal's brain"
+Flags       = {Take}
+Attributes  = {Weight=3500}
+
+TypeID      = 5809
+Name        = "a soul stone"
+Description = "It contains the essence of countless tormented souls"
+Flags       = {Take}
+Attributes  = {Weight=30}
+
+TypeID      = 5810
+Name        = "a pirate voodoo doll"
+Flags       = {Take}
+Attributes  = {Weight=650}
+
+TypeID      = 5811
+Name        = "a mermaid"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5812
+Name        = "a skull candle"
+Flags       = {ChangeUse,Take,Expire}
+Attributes  = {ChangeTarget=5813,Weight=2200,Brightness=3,LightColor=206,ExpireTarget=3114,TotalExpireTime=3000}
+
+TypeID      = 5813
+Name        = "a skull candle"
+Flags       = {ChangeUse,Take,ExpireStop}
+Attributes  = {ChangeTarget=5812,Weight=2200,Brightness=0,LightColor=215} # TODO: implement like in tibia wiki
+
+TypeID      = 5814
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5815
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=140}
+
+TypeID      = 5816
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5817
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5818
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5819
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5820
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5821
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5822
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5823
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5824
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5825
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5826
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5827
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5828
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5829
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5830
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5831
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5832
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5833
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5834
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5835
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5836
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5837
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5838
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5839
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5840
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5841
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5842
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5843
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5844
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5845
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5846
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5847
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5848
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5849
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5850
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5851
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5852
+Name        = "a weapon rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5853
+Name        = "a weapon rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5854
+Name        = "a lance"
+Flags       = {Unmove}
+
+TypeID      = 5855
+Name        = "a lance"
+Flags       = {Unmove}
+
+TypeID      = 5856
+Name        = "a sword"
+Flags       = {Unmove}
+
+TypeID      = 5857
+Name        = "a sword"
+Flags       = {Unmove}
+
+TypeID      = 5858
+Name        = "a scimitar"
+Flags       = {Unmove}
+
+TypeID      = 5859
+Name        = "a scimitar"
+Flags       = {Unmove}
+
+TypeID      = 5860
+Name        = "an armour rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5861
+Name        = "an armour rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5862
+Name        = "an armour rack"
+Flags       = {Unmove}
+
+TypeID      = 5863
+Name        = "an armour rack"
+Flags       = {Unmove}
+
+TypeID      = 5864
+Name        = "" # this is nothing in client
+
+TypeID      = 5865
+Name        = "a juice squeezer"
+Flags       = {Take}
+Attributes  = {Weight=1500} # TODO: Implement like in tibia wiki
+
+TypeID      = 5866
+Name        = "rubble"
+Flags       = {Top,Unpass,Unmove,Unlay}
+
+TypeID      = 5867
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5868
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5869
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5870
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5871
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5872
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5873
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5874
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5875
+Name        = "sniper gloves"
+Description = "They are the pride of the paladin guild"
+Flags       = {Take}
+Attributes  = {Weight=400}
+
+TypeID      = 5876
+Name        = "a lizard leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=50}
+
+TypeID      = 5877
+Name        = "a green dragon leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=50}
+
+TypeID      = 5878
+Name        = "a minotaur leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=40}
+
+TypeID      = 5879
+Name        = "a spider silk"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=10}
+
+TypeID      = 5880
+Name        = "an iron ore"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5881
+Name        = "a lizard scale"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5882
+Name        = "a red dragon scale"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=90}
+
+TypeID      = 5883
+Name        = "an ape fur"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5884
+Name        = "a spirit container"
+Description = "It contains pure fighting spirit"
+Flags       = {Take}
+Attributes  = {Weight=600}
+
+TypeID      = 5885
+Name        = "a flask of warrior's sweat"
+Description = "It contains the sweat spilled in many battles and is said to be used for certain perfumes too"
+Flags       = {Take}
+Attributes  = {Weight=300}
+
+TypeID      = 5886
+Name        = "a spool of yarn"
+Description = "It is made from fine spider silk"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5887
+Name        = "a piece of royal steel"
+Description = "Even the king would be proud to wear an armour made of this refined steel"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5888
+Name        = "a piece of hell steel"
+Description = "This rare metal must have been refined in the depths"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5889
+Name        = "a piece of draconian steel"
+Description = "An armour made of this steel is said to protect against fiery dragon breath"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5890
+Name        = "a chicken feather"
+Description = "Some thousands of these would probably make an extremely comfortable pillow"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=10}
+
+TypeID      = 5891
+Name        = "an enchanted chicken wing"
+Description = "It is said to make your feet fly"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=1000}
+
+TypeID      = 5892
+Name        = "a huge chunk of crude iron"
+Flags       = {Take}
+Attributes  = {Weight=5000}
+
+TypeID      = 5893
+Name        = "a perfect behemoth fang"
+Description = "Collectors all around the world crave for this item"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5894
+Name        = "a bat wing"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5895
+Name        = "a fish fin"
+Description = "It once belonged to a mighty creature of the deep"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5896
+Name        = "a bear paw"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5897
+Name        = "a wolf paw"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5898
+Name        = "a beholder's eye"
+Description = "You could swear it just winked at you"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5899
+Name        = "a turtle shell"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5900
+Name        = "a dwarven beard"
+Description = "It was once worn proudly by a dwarfish warrior - or maiden"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=50}
+
+TypeID      = 5901
+Name        = "wood"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5902
+Name        = "a honeycomb"
+Description = "Some people swear it makes an excellent glue"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5903
+Name        = "Ferumbras' hat"
+Description = "It is the proof that Ferumbras has fallen. For now. The Edron Academy should be interested in this"
+Flags       = {Take,Armor}
+Attributes  = {Weight=850,SlotType=HEAD,ArmorValue=1}
+
+TypeID      = 5904
+Name        = "a magic sulphur"
+Description = "It smells rather badly but is said to be an important catalyst for magical rituals"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5905
+Name        = "a vampire dust"
+Description = "Sun can be a merciless killer, but so can you"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5906
+Name        = "a demon dust"
+Description = "It reeks of hatred and malice"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5907
+Name        = "a slingshot"
+Description = "A hermit near Carlin might be able to tell you more about it"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5908
+Name        = "an obsidian knife"
+Description = "Sharp and light, this is a useful tool for tanners, doctors and assassins"
+Flags       = {Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5909
+Name        = "a white piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5910
+Name        = "a green piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5911
+Name        = "a red piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5912
+Name        = "a blue piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5913
+Name        = "a brown piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5914
+Name        = "a yellow piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5915
+Name        = "a large throne"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5916
+Name        = "a large throne"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5917
+Name        = "a bandana"
+Description = "It is quite fashionable as well as useful for anyone spending huge amounts of time in the sun"
+Flags       = {Take,Armor}
+Attributes  = {Weight=850,SlotType=HEAD,ArmorValue=1}
+
+TypeID      = 5918
+Name        = "pirate knee breeches"
+Description = "It is quite fashionable as well as useful for anyone spending huge amounts of time in the sun"
+Flags       = {Take,Armor}
+Attributes  = {Weight=1200,SlotType=LEGS,ArmorValue=1}
+
+TypeID      = 5919
+Name        = "a dragon claw"
+Description = "It is the claw of Demodras"
+Flags       = {Take}
+Attributes  = {Weight=1250}
+
+TypeID      = 5920
+Name        = "a green dragon scale"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5921
+Name        = "a heaven blossom"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=210}
+
+TypeID      = 5922
+Name        = "a holy orchid"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=250}
+
+TypeID      = 5923
+Name        = "" # this is nothing in client
+
+TypeID      = 5924
+Name        = "a damaged steel helmet"
+Description = "The words 'Ramsay the Reckless' are engraved inside. It appears to be cracked and broken"
+Flags       = {Take}
+Attributes  = {Weight=4600}
+
+TypeID      = 5925
+Name        = "a hardened bone"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=600}
+
+TypeID      = 5926
+Name        = "a pirate backpack"
+Flags       = {Container,Take}
+Attributes  = {Capacity=20,Weight=1800,SlotType=BACKPACK}
+
+TypeID      = 5927
+Name        = "a pirate bag"
+Flags       = {Container,Take}
+Attributes  = {Capacity=8,Weight=800,SlotType=BACKPACK}
+
+TypeID      = 5928
+Name        = "an empty goldfish bowl" # TODO: implement functionality like in tibia wiki
+Flags       = {Take}
+Attributes  = {Weight=3200}
+
+TypeID      = 5929
+Name        = "a goldfish bow"
+Flags       = {Take}
+Attributes  = {Weight=3200}
+
+TypeID      = 5930
+Name        = "a behemoth claw"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=1250}
+
+TypeID      = 5931
+Name        = "the remains of ferumbras"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5932,TotalExpireTime=900}
+
+TypeID      = 5932
+Name        = "the remains of ferumbras"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5933,TotalExpireTime=600}
+
+TypeID      = 5933
+Name        = "the remains of ferumbras"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5934
+Name        = "a dead frog"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=5,Weight=1000,FluidSource=BLOOD,ExpireTarget=5935,TotalExpireTime=600}
+
+TypeID      = 5935
+Name        = "a dead frog"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=800,ExpireTarget=5936,TotalExpireTime=600}
+
+TypeID      = 5936
+Name        = "a dead frog"
+Flags       = {Corpse,Take,Expire}
+Attributes  = {Weight=500,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5937
+Name        = "a botanist's container"
+Description = "It holds a sample of the rare griffinclaw flower"
+Flags       = {Take}
+Attributes  = {Weight=2000}
+
+TypeID      = 5938
+Name        = "Ceiron's waterskin"
+Flags       = {Take}
+Attributes  = {Weight=700}
+
+TypeID      = 5939
+Name        = "Ceiron's waterskin"
+Flags       = {Take}
+Attributes  = {Weight=700}
+
+TypeID      = 5940
+Name        = "Ceiron's wolf tooth chain"
+Description = "It has the letter 'C' carved into one of the teeth"
+Flags       = {Take}
+Attributes  = {Weight=330,SlotType=NECKLACE}
