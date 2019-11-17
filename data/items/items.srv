@@ -27582,3 +27582,249 @@ TypeID      = 6084
 Name        = "a dead human"
 Flags       = {Container,Expire}
 Attributes  = {Capacity=10,ExpireTarget=6082,TotalExpireTime=120}
+
+TypeID      = 6085
+Name        = "a large trunk"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 6086
+Name        = "a faked label"
+Flags       = {Take}
+Attributes  = {Weight=10}
+
+TypeID      = 6087
+Name        = "a music sheet"
+Description = "It contains the first verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6088
+Name        = "a music sheet"
+Description = "It contains the second verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6089
+Name        = "a music sheet"
+Description = "It contains the third verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6090
+Name        = "a music sheet"
+Description = "It contains the fourth and last verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6091
+Name        = "a very noble-looking watch"
+Description = "Unfortunately it seems to be broken"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6092
+Name        = "a very noble-looking watch"
+Flags       = {Take,Expire}
+Attributes  = {Weight=50,ExpireTarget=6091,TotalExpireTime=259200} # TODO: Implement functionality like in tibia wiki
+
+TypeID      = 6093
+Name        = "a crystal ring"
+Description = "The initials E.S. are engraved on it"
+Flags       = {Take}
+Attributes  = {Weight=90}
+
+TypeID      = 6094
+Name        = "a thread tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 6095
+Name        = "a pirate shirt"
+Flags       = {Take,Armor}
+Attributes  = {Weight=2000,SlotType=BODY,ArmorValue=3}
+
+TypeID      = 6096
+Name        = "a pirate hat"
+Flags       = {Take,Armor}
+Attributes  = {Weight=1250,SlotType=HEAD,ArmorValue=3}
+
+TypeID      = 6097
+Name        = "a hook"
+Description = "It belonged once to a pirate"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 6098
+Name        = "an eye patch"
+Description = "It belonged once to a pirate"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=150}
+
+TypeID      = 6099
+Name        = "Brutus Bloodbeard's hat"
+Flags       = {Take}
+Attributes  = {Weight=1250}
+
+TypeID      = 6100
+Name        = "the Lethal Lissy's shirt"
+Flags       = {Take}
+Attributes  = {Weight=2000}
+
+TypeID      = 6101
+Name        = "Ron the Ripper's sabre"
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=2500,WeaponType=SWORD,Attack=12,Defense=10}
+
+TypeID      = 6102
+Name        = "Deadeye Devious' eye patch"
+Flags       = {Take}
+Attributes  = {Weight=150}
+
+TypeID      = 6103
+Name        = "an unholy boo"
+Flags       = {Take}
+Attributes  = {Weight=150}
+
+TypeID      = 6104
+Name        = "a jewel case"
+Flags       = {Container,Take}
+Attributes  = {Capacity=1,Weight=170}
+
+TypeID      = 6105
+Name        = "Striker's favourite pillow"
+Flags       = {Take}
+Attributes  = {Weight=1700}
+
+TypeID      = 6106
+Name        = "a bottle of whisper beer"
+Flags       = {Take}
+Attributes  = {Weight=300}
+
+TypeID      = 6107
+Name        = "a staff"
+Description = "It must be the one which Simon the Beggar talked about"
+Flags       = {Take}
+Attributes  = {Weight=3800}
+
+TypeID      = 6108
+Name        = "an atlas"
+Description = "It is filled with detailed maps"
+Flags       = {Take}
+Attributes  = {Weight=1300}
+
+TypeID      = 6109
+Name        = "a weapon rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6110}
+
+TypeID      = 6110
+Name        = "a weapon rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6109}
+
+TypeID      = 6111
+Name        = "an armor rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6112}
+
+TypeID      = 6112
+Name        = "an armor rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6111}
+
+TypeID      = 6113
+Name        = "a letter to Eremo"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6114
+Name        = "an armor rack kit"
+Description = "Use it in your house to construct an armor rack" # TODO: Implement like in tibia wiki
+Flags       = {Take,Unpass}
+Attributes  = {Weight=3500}
+
+TypeID      = 6115
+Name        = "a weapon rack kit"
+Description = "Use it in your house to construct a weapon rack" # TODO: Implement like in tibia wiki
+Flags       = {Take,Unpass}
+Attributes  = {Weight=3500}
+
+TypeID      = 6116
+Name        = "electric sparks"
+Flags       = {Bottom,Unmove,Avoid}
+Attributes  = {Brightness=2,LightColor=137}
+
+TypeID      = 6117
+Name        = "electric sparks"
+Flags       = {Bottom,Unmove,Avoid}
+Attributes  = {Brightness=2,LightColor=137}
+
+TypeID      = 6118
+Name        = "a treasure map"
+Description = "It obviously shows Treasure Island including a big, red cross"
+Flags       = {Unmove}
+
+TypeID      = 6119
+Name        = "a scroll"
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 6120
+Name        = "Dragha's spellbook"
+Description = "It apparently belonged to someone called Dragha, the apprentice of a voodoomaster"
+Flags       = {Take}
+Attributes  = {Weight=5800}
+
+TypeID      = 6121
+Name        = "a note pinned on the wall"
+Flags       = {Unmove}
+
+TypeID      = 6122
+Name        = "a note pinned on the wall"
+Flags       = {Unmove}
+
+TypeID      = 6123
+Name        = "a piano"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 6124
+Name        = "a damaged logbook"
+Description = "It must be the one which the explorer society requested"
+Flags       = {Take}
+Attributes  = {Weight=1100}
+
+TypeID      = 6125
+Name        = "a tortoise egg from Nargor"
+Description = "Handle with care and don't try to eat it" # TODO: Make it eatable and implement from quest details
+Flags       = {Take}
+Attributes  = {Weight=30}
+
+TypeID      = 6126
+Name        = "a peg leg"
+Description = "It belonged once to a pirate"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 6127
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6128
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6129
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6130
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6131
+Name        = "a tortoise shield"
+Flags       = {Take,Shield}
+Attributes  = {Weight=5200,Defense=26}
