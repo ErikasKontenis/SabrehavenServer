@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="lich" nameDescription="a lich" race="undead" experience="900" speed="65" manacost="0">
 	<health now="880" max="880" />
-	<look type="99" head="0" body="0" legs="0" feet="0" corpse="4206" />
+	<look type="99" head="0" body="0" legs="0" feet="0" corpse="6028" />
 	<targetchange interval="1000" chance="3" />
 	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
 	<flags>

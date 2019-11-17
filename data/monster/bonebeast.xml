@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="bonebeast" nameDescription="a bonebeast" race="undead" experience="580" speed="69" manacost="0">
 	<health now="515" max="515" />
-	<look type="101" head="0" body="0" legs="0" feet="0" corpse="4212" />
+	<look type="101" head="0" body="0" legs="0" feet="0" corpse="6030" />
 	<targetchange interval="1000" chance="20" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

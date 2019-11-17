@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="poison spider" nameDescription="a poison spider" race="venom" experience="22" speed="40" manacost="270">
 	<health now="26" max="26" />
-	<look type="36" head="0" body="0" legs="0" feet="0" corpse="4029" />
+	<look type="36" head="0" body="0" legs="0" feet="0" corpse="5974" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Omruc" nameDescription="Omruc" race="undead" experience="2950" speed="115" manacost="0">
 	<health now="4300" max="4300" />
-	<look type="90" head="0" body="0" legs="0" feet="0" corpse="4197" />
+	<look type="90" head="0" body="0" legs="0" feet="0" corpse="6025" />
 	<targetchange interval="1000" chance="7" />
 	<targetstrategy nearest="70" weakest="10" mostdamage="20" random="0" />
 	<flags>

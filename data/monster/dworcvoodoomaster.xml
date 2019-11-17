@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="dworc voodoomaster" nameDescription="a dworc voodoomaster" race="blood" experience="50" speed="35" manacost="300">
 	<health now="80" max="80" />
-	<look type="214" head="0" body="0" legs="0" feet="0" corpse="4369" />
+	<look type="214" head="0" body="0" legs="0" feet="0" corpse="6055" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

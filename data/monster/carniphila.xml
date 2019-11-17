@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="carniphila" nameDescription="a carniphila" race="venom" experience="150" speed="15" manacost="490">
 	<health now="255" max="255" />
-	<look type="120" head="0" body="0" legs="0" feet="0" corpse="4345" />
+	<look type="120" head="0" body="0" legs="0" feet="0" corpse="6047" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
 	<flags>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="winter wolf" nameDescription="a winter wolf" race="blood" experience="20" speed="45" manacost="260">
 	<health now="30" max="30" />
-	<look type="52" head="0" body="0" legs="0" feet="0" corpse="4105" />
+	<look type="52" head="0" body="0" legs="0" feet="0" corpse="5997" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

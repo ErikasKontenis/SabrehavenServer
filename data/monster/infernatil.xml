@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Infernatil" nameDescription="Infernatil" race="fire" experience="30000" speed="210" manacost="0">
 	<health now="110000" max="110000" />
-	<look type="35" head="0" body="0" legs="0" feet="0" corpse="4097" />
+	<look type="35" head="0" body="0" legs="0" feet="0" corpse="5995" />
 	<targetchange interval="1000" chance="15" />
 	<targetstrategy nearest="60" weakest="5" mostdamage="30" random="5" />
 	<flags>

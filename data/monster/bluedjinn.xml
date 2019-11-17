@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="blue djinn" nameDescription="a blue djinn" race="blood" experience="190" speed="70" manacost="0">
 	<health now="330" max="330" />
-	<look type="80" head="0" body="0" legs="0" feet="0" corpse="4182" />
+	<look type="80" head="0" body="0" legs="0" feet="0" corpse="6020" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

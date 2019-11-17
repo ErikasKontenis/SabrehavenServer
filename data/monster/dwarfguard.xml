@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="dwarf guard" nameDescription="a dwarf guard" race="blood" experience="165" speed="63" manacost="650">
 	<health now="245" max="245" />
-	<look type="70" head="0" body="0" legs="0" feet="0" corpse="4164" />
+	<look type="70" head="0" body="0" legs="0" feet="0" corpse="6013" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="0" mostdamage="20" random="10" />
 	<flags>

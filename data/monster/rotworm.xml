@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="rotworm" nameDescription="a rotworm" race="blood" experience="40" speed="18" manacost="305">
 	<health now="65" max="65" />
-	<look type="26" head="0" body="0" legs="0" feet="0" corpse="4005" />
+	<look type="26" head="0" body="0" legs="0" feet="0" corpse="5967" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

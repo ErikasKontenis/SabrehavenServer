@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="assassin" nameDescription="an assassin" race="blood" experience="105" speed="72" manacost="450">
 	<health now="175" max="175" />
-	<look type="129" head="95" body="95" legs="95" feet="95" corpse="4240" />
+	<look type="129" head="95" body="95" legs="95" feet="95" corpse="6080" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="20" mostdamage="10" random="0" />
 	<flags>

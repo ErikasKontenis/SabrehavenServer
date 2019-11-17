@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="dwarf" nameDescription="a dwarf" race="blood" experience="45" speed="45" manacost="320">
 	<health now="90" max="90" />
-	<look type="69" head="0" body="0" legs="0" feet="0" corpse="4141" />
+	<look type="69" head="0" body="0" legs="0" feet="0" corpse="6007" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

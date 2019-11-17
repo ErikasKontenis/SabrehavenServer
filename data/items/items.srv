@@ -19610,7 +19610,7 @@ Attributes  = {Capacity=15}
 
 TypeID      = 4311
 Name        = "a dead human"
-Flags       = {Container}
+Flags       = {Container,Corpse}
 Attributes  = {Capacity=10}
 
 TypeID      = 4312
@@ -26959,3 +26959,626 @@ Attributes  = {Weight=120}
 
 TypeID      = 5959
 Name        = "" # this is nothing in client
+
+TypeID      = 5960
+Name        = "a dead troll"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=3987,TotalExpireTime=10}
+
+TypeID      = 5961
+Name        = "a dead spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=SLIME,ExpireTarget=3988,TotalExpireTime=10}
+
+TypeID      = 5962
+Name        = "a dead cyclops"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=3989,TotalExpireTime=10}
+
+TypeID      = 5963
+Name        = "a slain skeleton"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=3990,TotalExpireTime=10}
+
+TypeID      = 5964
+Name        = "a dead rat"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=3994,TotalExpireTime=10}
+
+TypeID      = 5965
+Name        = "a dead human"
+Flags       = {Container}
+Attributes  = {Capacity=10}
+
+TypeID      = 5966
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4001,TotalExpireTime=10}
+
+TypeID      = 5967
+Name        = "a dead rotworm"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4005,TotalExpireTime=10}
+
+TypeID      = 5968
+Name        = "a dead wolf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4007,TotalExpireTime=10}
+
+TypeID      = 5969
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4011,TotalExpireTime=10}
+
+TypeID      = 5970
+Name        = "a dead deer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4016,TotalExpireTime=10}
+
+TypeID      = 5971
+Name        = "a dead dog"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4020,TotalExpireTime=10}
+
+TypeID      = 5972
+Name        = "a slain skeleton"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4024,TotalExpireTime=10}
+
+TypeID      = 5973
+Name        = "a dead dragon"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4025,TotalExpireTime=10}
+
+TypeID      = 5974
+Name        = "a dead spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4029,TotalExpireTime=10}
+
+TypeID      = 5975
+Name        = "a dead bear"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4030,TotalExpireTime=10}
+
+TypeID      = 5976
+Name        = "a slain ghoul"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4034,TotalExpireTime=10}
+
+TypeID      = 5977
+Name        = "a dead giant spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=SLIME,ExpireTarget=4038,TotalExpireTime=10}
+
+TypeID      = 5978
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4041,TotalExpireTime=10}
+
+TypeID      = 5979
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4043,TotalExpireTime=10}
+
+TypeID      = 5980
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4045,TotalExpireTime=10}
+
+TypeID      = 5981
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4047,TotalExpireTime=10}
+
+TypeID      = 5982
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4052,TotalExpireTime=10}
+
+TypeID      = 5983
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4057,TotalExpireTime=10}
+
+TypeID      = 5984
+Name        = "a dead dragon"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4062,TotalExpireTime=10}
+
+TypeID      = 5985
+Name        = "a dead fire devil"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4067,TotalExpireTime=10}
+
+TypeID      = 5986
+Name        = "a dead lion"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4070,TotalExpireTime=10}
+
+TypeID      = 5987
+Name        = "a dead bear"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4074,TotalExpireTime=10}
+
+TypeID      = 5988
+Name        = "a dead scorpion"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4078,TotalExpireTime=10}
+
+TypeID      = 5989
+Name        = "a dead wasp"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4080,TotalExpireTime=10}
+
+TypeID      = 5990
+Name        = "a dead bug"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4083,TotalExpireTime=10}
+
+TypeID      = 5991
+Name        = "a dead sheep"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4086,TotalExpireTime=10}
+
+TypeID      = 5992
+Name        = "a dead beholder"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=SLIME,ExpireTarget=4089,TotalExpireTime=10}
+
+TypeID      = 5993
+Name        = "remains of a ghost"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4094,TotalExpireTime=10}
+
+TypeID      = 5994
+Name        = "a dead sheep"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4095,TotalExpireTime=10}
+
+TypeID      = 5995
+Name        = "a slain demon"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,ExpireTarget=4097,TotalExpireTime=10}
+
+TypeID      = 5996
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4101,TotalExpireTime=10}
+
+TypeID      = 5997
+Name        = "a dead wolf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4105,TotalExpireTime=10}
+
+TypeID      = 5998
+Name        = "a dead troll"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4109,TotalExpireTime=10}
+
+TypeID      = 5999
+Name        = "a dead behemoth"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4112,TotalExpireTime=10}
+
+TypeID      = 6000
+Name        = "a dead pig"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4116,TotalExpireTime=10}
+
+TypeID      = 6001
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4119,TotalExpireTime=10}
+
+TypeID      = 6002
+Name        = "a dead goblin"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4121,TotalExpireTime=10}
+
+TypeID      = 6003
+Name        = "a dead elf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4126,TotalExpireTime=10}
+
+TypeID      = 6004
+Name        = "remains of a mummy"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4130,TotalExpireTime=10}
+
+TypeID      = 6005
+Name        = "a split stone golem"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,ExpireTarget=4133,TotalExpireTime=10}
+
+TypeID      = 6006
+Name        = "a slain vampire"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4137,TotalExpireTime=10}
+
+TypeID      = 6007
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4141,TotalExpireTime=10}
+
+TypeID      = 6008
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4148,TotalExpireTime=10}
+
+TypeID      = 6009
+Name        = "a dead war wolf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4150,TotalExpireTime=10}
+
+TypeID      = 6010
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4153,TotalExpireTime=10}
+
+TypeID      = 6011
+Name        = "a dead elf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4160,TotalExpireTime=10}
+
+TypeID      = 6012
+Name        = "a dead elf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4162,TotalExpireTime=10}
+
+TypeID      = 6013
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4164,TotalExpireTime=10}
+
+TypeID      = 6014
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4166,TotalExpireTime=10}
+
+TypeID      = 6015
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4168,TotalExpireTime=10}
+
+TypeID      = 6016
+Name        = "a dead djinn"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4170,TotalExpireTime=10}
+
+TypeID      = 6017
+Name        = "a dead rabbit"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4173,TotalExpireTime=10}
+
+TypeID      = 6018
+Name        = "a dead troll"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4176,TotalExpireTime=10}
+
+TypeID      = 6019
+Name        = "a slain banshee"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4179,TotalExpireTime=10}
+
+TypeID      = 6020
+Name        = "a dead djinn"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4182,TotalExpireTime=10}
+
+TypeID      = 6021
+Name        = "a dead scarab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=SLIME,ExpireTarget=4185,TotalExpireTime=10}
+
+TypeID      = 6022
+Name        = "a dead human"
+Flags       = {Container}
+Attributes  = {Capacity=10}
+
+TypeID      = 6023
+Name        = "a dead larva"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4191,TotalExpireTime=10}
+
+TypeID      = 6024
+Name        = "a dead scarab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4194,TotalExpireTime=10}
+
+TypeID      = 6025
+Name        = "a dead pharaoh"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4197,TotalExpireTime=10}
+
+TypeID      = 6026
+Name        = "a dead hyaena"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4200,TotalExpireTime=10}
+
+TypeID      = 6027
+Name        = "a dead gargoyle"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4203,TotalExpireTime=10}
+
+TypeID      = 6028
+Name        = "a slain lich"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4206,TotalExpireTime=10}
+
+TypeID      = 6029
+Name        = "a slain crypt shambler"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4209,TotalExpireTime=10}
+
+TypeID      = 6030
+Name        = "a slain bonebeast"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4212,TotalExpireTime=10}
+
+TypeID      = 6031
+Name        = "a dead pharaoh"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4215,TotalExpireTime=10}
+
+TypeID      = 6032
+Name        = "a dead efreet"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4218,TotalExpireTime=10}
+
+TypeID      = 6033
+Name        = "a dead marid"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4221,TotalExpireTime=10}
+
+TypeID      = 6034
+Name        = "a dead badger"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4224,TotalExpireTime=10}
+
+TypeID      = 6035
+Name        = "a dead skunk"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4227,TotalExpireTime=10}
+
+TypeID      = 6036
+Name        = "a dead gazer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4230,TotalExpireTime=10}
+
+TypeID      = 6037
+Name        = "a dead elder beholder"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4233,TotalExpireTime=10}
+
+TypeID      = 6038
+Name        = "a dead yeti"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4236,TotalExpireTime=10}
+
+TypeID      = 6039
+Name        = "a dead crab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4318,TotalExpireTime=10}
+
+TypeID      = 6040
+Name        = "a dead lizard sentinel"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4324,TotalExpireTime=10}
+
+TypeID      = 6041
+Name        = "a dead lizard snakecharmer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4327,TotalExpireTime=10}
+
+TypeID      = 6042
+Name        = "a dead chicken"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4330,TotalExpireTime=10}
+
+TypeID      = 6043
+Name        = "a dead kongra"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4333,TotalExpireTime=10}
+
+TypeID      = 6044
+Name        = "a dead merlkin"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4336,TotalExpireTime=10}
+
+TypeID      = 6045
+Name        = "a dead sibang"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4339,TotalExpireTime=10}
+
+TypeID      = 6046
+Name        = "a dead crocodile"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4342,TotalExpireTime=10}
+
+TypeID      = 6047
+Name        = "a dead carniphila"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4345,TotalExpireTime=10}
+
+TypeID      = 6048
+Name        = "a dead hydra"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4348,TotalExpireTime=10}
+
+TypeID      = 6049
+Name        = "a dead panda"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4351,TotalExpireTime=10}
+
+TypeID      = 6050
+Name        = "a dead centipede"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4354,TotalExpireTime=10}
+
+TypeID      = 6051
+Name        = "a dead tiger"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4357,TotalExpireTime=10}
+
+TypeID      = 6052
+Name        = "a dead elephant"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4360,TotalExpireTime=10}
+
+TypeID      = 6053
+Name        = "a dead bat"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4363,TotalExpireTime=10}
+
+TypeID      = 6054
+Name        = "a dead flamingo"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4366,TotalExpireTime=10}
+
+TypeID      = 6055
+Name        = "a dead dworc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4369,TotalExpireTime=10}
+
+TypeID      = 6056
+Name        = "a dead parrot"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4379,TotalExpireTime=10}
+
+TypeID      = 6057
+Name        = "a dead bird"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4382,TotalExpireTime=10}
+
+TypeID      = 6058
+Name        = "a dead dworc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4372,TotalExpireTime=10}
+
+TypeID      = 6059
+Name        = "a dead dworc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4375,TotalExpireTime=10}
+
+TypeID      = 6060
+Name        = "a dead tarantula"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4385,TotalExpireTime=10}
+
+TypeID      = 6061
+Name        = "a dead serpent spawn"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4388,TotalExpireTime=10}
+
+TypeID      = 6062
+Name        = "a lifeless nettle"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4391,TotalExpireTime=10}
+
+TypeID      = 6063
+Name        = "a dead quara pincher"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5521,TotalExpireTime=10}
+
+TypeID      = 6064
+Name        = "a dead quara mantassin"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5522,TotalExpireTime=10}
+
+TypeID      = 6065
+Name        = "a dead quara constrictor"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5523,TotalExpireTime=10}
+
+TypeID      = 6066
+Name        = "a dead quara hydromancer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5524,TotalExpireTime=10}
+
+TypeID      = 6067
+Name        = "a dead quara predator"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5525,TotalExpireTime=10}
+
+TypeID      = 6068
+Name        = "demon dust"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=24,FluidSource=BLOOD,ExpireTarget=5526,TotalExpireTime=10}
+
+TypeID      = 6069
+Name        = "a dead carrion worm"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5539,TotalExpireTime=10}
+
+TypeID      = 6070
+Name        = "a slain pirate skeleton"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5564,TotalExpireTime=10}
+
+TypeID      = 6071
+Name        = "a slain pirate ghost"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5565,TotalExpireTime=10}
+
+TypeID      = 6072
+Name        = "a dead tortoise"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=BLOOD,ExpireTarget=5624,TotalExpireTime=10}
+
+TypeID      = 6073
+Name        = "a dead thornback tortoise"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=BLOOD,ExpireTarget=5627,TotalExpireTime=10}
+
+TypeID      = 6074
+Name        = "a dead mammoth"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=5665,TotalExpireTime=10}
+
+TypeID      = 6075
+Name        = "a dead blood crab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5688,TotalExpireTime=10}
+
+TypeID      = 6076
+Name        = "a dead seagull"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=5727,TotalExpireTime=10}
+
+TypeID      = 6077
+Name        = "a dead toad"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5765,TotalExpireTime=10}
+
+TypeID      = 6078
+Name        = "remains of Ferumbras"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5931,TotalExpireTime=10}
+
+TypeID      = 6079
+Name        = "a dead frog"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=5934,TotalExpireTime=10}
+
+TypeID      = 6080
+Name        = "a dead human"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4240,TotalExpireTime=10}
+
+TypeID      = 6081
+Name        = "a dead human"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4247,TotalExpireTime=10}
+
+TypeID      = 6082
+Name        = "a dead human"
+
+TypeID      = 6083
+Name        = "a dead human"
+Flags       = {Container}
+Attributes  = {Capacity=10}
+
+TypeID      = 6084
+Name        = "a dead human"
+Flags       = {Container,Expire}
+Attributes  = {Capacity=10,ExpireTarget=6082,TotalExpireTime=120}

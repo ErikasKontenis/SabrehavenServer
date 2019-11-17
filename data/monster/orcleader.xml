@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="orc leader" nameDescription="an orc leader" race="blood" experience="270" speed="75" manacost="640">
 	<health now="450" max="450" />
-	<look type="59" head="0" body="0" legs="0" feet="0" corpse="4119" />
+	<look type="59" head="0" body="0" legs="0" feet="0" corpse="6001" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="15" mostdamage="15" random="0" />
 	<flags>

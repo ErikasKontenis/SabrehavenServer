@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Grorlam" nameDescription="Grorlam" race="undead" experience="1600" speed="100" manacost="590">
 	<health now="2700" max="2700" />
-	<look type="205" head="0" body="0" legs="0" feet="0" corpse="4133" />
+	<look type="205" head="0" body="0" legs="0" feet="0" corpse="6005" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

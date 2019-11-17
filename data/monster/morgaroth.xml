@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Morgaroth" nameDescription="Morgaroth" race="fire" experience="15000" speed="185" manacost="0">
 	<health now="55000" max="55000" />
-	<look type="35" head="0" body="0" legs="0" feet="0" corpse="4097" />
+	<look type="35" head="0" body="0" legs="0" feet="0" corpse="5995" />
 	<targetchange interval="1000" chance="10" />
 	<targetstrategy nearest="65" weakest="5" mostdamage="15" random="15" />
 	<flags>

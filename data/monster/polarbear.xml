@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="polar bear" nameDescription="a polar bear" race="blood" experience="28" speed="38" manacost="315">
 	<health now="85" max="85" />
-	<look type="42" head="0" body="0" legs="0" feet="0" corpse="4074" />
+	<look type="42" head="0" body="0" legs="0" feet="0" corpse="5987" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
