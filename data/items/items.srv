@@ -26860,3 +26860,102 @@ Name        = "Ceiron's wolf tooth chain"
 Description = "It has the letter 'C' carved into one of the teeth"
 Flags       = {Take}
 Attributes  = {Weight=330,SlotType=NECKLACE}
+
+TypeID      = 5941
+Name        = "a wooden stake"
+Description = "It is a simple wooden stake"
+Flags       = {Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5942
+Name        = "a blessed wooden stake"
+Description = "Many mighty priests have blessed this stake"
+Flags       = {Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5943
+Name        = "Morgaroth's heart"
+Flags       = {Take}
+Attributes  = {Weight=3500}
+
+TypeID      = 5944
+Name        = "a soul orb"
+Description = "This strange object seems to be made of half spirit, half metal. It is unknown to most smiths"
+Flags       = {Take}
+Attributes  = {Weight=20}
+
+TypeID      = 5945
+Name        = "a coral comb"
+Description = "It once belonged to a mermaid"
+Flags       = {Take}
+Attributes  = {Weight=450}
+
+TypeID      = 5946
+Name        = "a comb"
+Flags       = {Take}
+Attributes  = {Weight=450}
+
+TypeID      = 5947
+Name        = "Elane's crossbow"
+Description = "'For Elane, with Love' is engraved on it"
+Flags       = {Take}
+Attributes  = {Weight=4000}
+
+TypeID      = 5948
+Name        = "a red dragon leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=60}
+
+TypeID      = 5949
+Name        = "a beach backpack"
+Flags       = {Container,Take}
+Attributes  = {Capacity=20,Weight=1800,SlotType=BACKPACK}
+
+TypeID      = 5950
+Name        = "a beach bag"
+Flags       = {Container,Take}
+Attributes  = {Capacity=8,Weight=800,SlotType=BACKPACK}
+
+TypeID      = 5951
+Name        = "a fish tail"
+Flags       = {Take}
+Attributes  = {Weight=250}
+
+TypeID      = 5952
+Name        = "a scroll"
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5953
+Name        = "a raven herb"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5954
+Name        = "a demon horn"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=1000}
+
+TypeID      = 5955
+Name        = "" # this is nothing in client
+
+TypeID      = 5956
+Name        = "an old parchment"
+Description = "It is covered with foreign symbols"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5957
+Name        = "a lottery ticket"
+Description = "It has not been used yet" # TODO: Implement like in tibia wiki
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5958
+Name        = "a winning lottery ticket"
+Description = "You were lucky! Go claim your prize at the potion store in Edron"
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5959
+Name        = "" # this is nothing in client
