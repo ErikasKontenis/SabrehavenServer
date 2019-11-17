@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="sibang" nameDescription="a sibang" race="blood" experience="100" speed="67" manacost="0">
 	<health now="225" max="225" />
-	<look type="118" head="0" body="0" legs="0" feet="0" corpse="4339" />
+	<look type="118" head="0" body="0" legs="0" feet="0" corpse="6045" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

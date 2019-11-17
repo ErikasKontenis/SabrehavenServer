@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="stalker" nameDescription="a stalker" race="blood" experience="90" speed="90" manacost="0">
 	<health now="120" max="120" />
-	<look type="128" head="97" body="116" legs="95" feet="95" corpse="4240" />
+	<look type="128" head="97" body="116" legs="95" feet="95" corpse="6080" />
 	<targetchange interval="1000" chance="10" />
 	<targetstrategy nearest="60" weakest="0" mostdamage="0" random="40" />
 	<flags>

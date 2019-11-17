@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="minotaur" nameDescription="a minotaur" race="blood" experience="50" speed="44" manacost="330">
 	<health now="100" max="100" />
-	<look type="25" head="0" body="0" legs="0" feet="0" corpse="4011" />
+	<look type="25" head="0" body="0" legs="0" feet="0" corpse="5969" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

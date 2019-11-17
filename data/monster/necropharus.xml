@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Necropharus" nameDescription="Necropharus" race="blood" experience="700" speed="60" manacost="0">
 	<health now="750" max="750" />
-	<look type="209" head="0" body="0" legs="0" feet="0" corpse="4240" />
+	<look type="209" head="0" body="0" legs="0" feet="0" corpse="6080" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

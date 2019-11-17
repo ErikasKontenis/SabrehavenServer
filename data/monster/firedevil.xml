@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="fire devil" nameDescription="a fire devil" race="blood" experience="110" speed="50" manacost="530">
 	<health now="200" max="200" />
-	<look type="40" head="0" body="0" legs="0" feet="0" corpse="4067" />
+	<look type="40" head="0" body="0" legs="0" feet="0" corpse="5985" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="ancient scarab" nameDescription="an ancient scarab" race="venom" experience="720" speed="69" manacost="0">
 	<health now="1000" max="1000" />
-	<look type="79" head="0" body="0" legs="0" feet="0" corpse="4185" />
+	<look type="79" head="0" body="0" legs="0" feet="0" corpse="6021" />
 	<targetchange interval="1000" chance="10" />
 	<targetstrategy nearest="70" weakest="20" mostdamage="0" random="10" />
 	<flags>

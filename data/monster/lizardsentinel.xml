@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="lizard sentinel" nameDescription="a lizard sentinel" race="blood" experience="105" speed="50" manacost="560">
 	<health now="265" max="265" />
-	<look type="114" head="0" body="0" legs="0" feet="0" corpse="4324" />
+	<look type="114" head="0" body="0" legs="0" feet="0" corpse="6040" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

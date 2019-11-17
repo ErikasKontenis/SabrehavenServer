@@ -4842,47 +4842,47 @@ Attributes  = {ExpireTarget=1066,TotalExpireTime=75}
 
 TypeID      = 1068
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1069
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1070
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1071
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1072
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1073
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1074
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1075
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1076
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1077
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1078
 Name        = "an ant trail"
-Flags       = {Clip,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1079
 Name        = "an ant-hill"
@@ -8148,23 +8148,23 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1854
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1855
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1856
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1857
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1858
 Name        = "stones"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1859
 Name        = "a stone"
@@ -8192,15 +8192,15 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 1865
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1866
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1867
 Name        = "a stone"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 1868
 Name        = "a stone"
@@ -14119,282 +14119,282 @@ Attributes  = {Weight=120}
 
 TypeID      = 3148
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3149
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3150
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3151
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3152
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3153
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3154
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3155
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3156
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3157
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3158
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3159
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3160
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3161
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3162
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3163
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3164
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3165
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3166
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3167
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3168
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3169
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3170
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3171
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3172
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3173
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3174
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3175
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3176
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3177
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3178
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3179
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120}
 
 TypeID      = 3180
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3181
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3182
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3183
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3184
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3185
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3186
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3187
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3188
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3189
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3190
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3191
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3192
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3193
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3194
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3195
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3196
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3197
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3198
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3199
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3200
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3201
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3202
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3203
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take}
+Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3204
@@ -17685,11 +17685,11 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3906
 Name        = "a dead man's saddle"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3907
 Name        = "dead man's saddles"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3908
 Name        = "a moss cap mushroom"
@@ -17717,27 +17717,27 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 3914
 Name        = "a giggle mushroom"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3915
 Name        = "giggle mushrooms"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3916
 Name        = "a cat's food mushroom"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3917
 Name        = "cat's food mushrooms"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3918
 Name        = "a glimmer cap mushroom"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3919
 Name        = "glimmer cap mushrooms"
-Flags       = {Bottom,Unmove}
+Flags       = {Unmove}
 
 TypeID      = 3920
 Name        = "a giant glimmer cap mushroom"
@@ -19610,7 +19610,7 @@ Attributes  = {Capacity=15}
 
 TypeID      = 4311
 Name        = "a dead human"
-Flags       = {Container}
+Flags       = {Container,Corpse}
 Attributes  = {Capacity=10}
 
 TypeID      = 4312
@@ -23156,3 +23156,4675 @@ TypeID      = 5090
 Name        = "a treasure map"
 Flags       = {Text,Take}
 Attributes  = {Weight=830}
+
+TypeID      = 5091
+Name        = "a banana tree" # TODO: Banana tree should be harvestable?
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5092
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5093
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5094
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5095
+Name        = "a banana tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5096
+Name        = "a mango"
+Flags       = {Cumulative,Take}
+Attributes  = {Nutrition=5,Weight=180}
+
+TypeID      = 5097
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5098
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5099
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5100
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5101
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5102
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5103
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5104
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5105
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5106
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5107
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5108
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5109
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5110
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5111
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5112
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5113
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5114
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5115
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5116
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5117
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5118
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5119
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5120
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5121
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5122
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5123
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5124
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5125
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5126
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5127
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5128
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5129
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5130
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5131
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5132
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5133
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5134
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5135
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5136
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5137
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5138
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5139
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5140
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5141
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5142
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5143
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5144
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5145
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5146
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5147
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5148
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5149
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5150
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5151
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5152
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5153
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5154
+Name        = "a framework wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5155
+Name        = "a mango tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay} # TODO: Mango Tree should be harvestable?
+
+TypeID      = 5156
+Name        = "a mango tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5157
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5158
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5159
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5160
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5161
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5162
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5163
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5164
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5165
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5166
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5167
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5168
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5169
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5170
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5171
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5172
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5173
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5174
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5175
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5176
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5177
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5178
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5179
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5180
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5181
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5182
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5183
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5184
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5185
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5186
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5187
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5188
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5189
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5190
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5191
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5192
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5193
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5194
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5195
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5196
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5197
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5198
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5199
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5200
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5201
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5202
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5203
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5204
+Name        = "a striped marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5205
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5206
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5207
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5208
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5209
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5210
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5211
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5212
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5213
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5214
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5215
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5216
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5217
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5218
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5219
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5220
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5221
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5222
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5223
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5224
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5225
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5226
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5227
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5228
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5230
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5231
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5232
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5233
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5234
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5235
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5236
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5237
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5238
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5239
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5240
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5241
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5242
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5243
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5244
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5245
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5246
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5247
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5248
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5249
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5250
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5251
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5252
+Name        = "a marquee"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5253
+Name        = "a wooden railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5254
+Name        = "a wooden railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5255
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5256
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5257
+Name        = "stairs"
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
+
+TypeID      = 5258
+Name        = "stairs"
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
+
+TypeID      = 5259
+Name        = "stairs"
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
+
+TypeID      = 5260
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5261
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5262
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5263
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5264
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5265
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5266
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5267
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5268
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5269
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5270
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5271
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5272
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5273
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5274
+Name        = "a wooden wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5275
+Name        = "a wooden window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5276
+Name        = "a wooden window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5277
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5278
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5279
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5280
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {UseEvent,Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5281
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5282
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5283
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5284
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5285
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5286
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5287
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5288
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5289
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5290
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5291
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5292
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5293
+Name        = "a gate of expertise"
+Description = "Only the worthy may pass"
+Flags       = {Door,Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5294
+Name        = "a gate of expertise"
+Flags       = {Door,Top,SeparationEvent,Unmove}
+
+TypeID      = 5295
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5296
+Name        = "a wooden planks"
+Flags       = {Unmove}
+
+TypeID      = 5297
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5298
+Name        = "a wooden planks"
+Flags       = {Unmove}
+
+TypeID      = 5299
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5300
+Name        = "a wooden plank"
+Flags       = {Unmove}
+
+TypeID      = 5301
+Name        = "a wooden planks"
+Flags       = {Unmove}
+
+TypeID      = 5302
+Name        = "a white stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5303
+Name        = "a white stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5304
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5305
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5306
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5307
+Name        = "a white stone pillar"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5308
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5309
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5310
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5311
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5312
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5313
+Name        = "a white stone railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5314
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5315
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5316
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5317
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5318
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5319
+Name        = "a wooden railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5320
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5321
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5322
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5323
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5324
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5325
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5326
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5327
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5328
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5329
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5330
+Name        = "a wooden column"
+Flags       = {Top,Unmove,Unlay}
+
+TypeID      = 5331
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5332
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5333
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5334
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5335
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5336
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5337
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5338
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5339
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5340
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5341
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5342
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5343
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5344
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5345
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5346
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5347
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5348
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5349
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5350
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5351
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5352
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5353
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5354
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5355
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5356
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5357
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5358
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5359
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5360
+Name        = "a sign"
+Flags       = {Bottom,Unpass,Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5361
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5362
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5363
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5364
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5365
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5366
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5367
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5368
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5369
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5370
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5371
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5372
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5373
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5374
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5375
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5376
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5377
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5378
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5379
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5380
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5381
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5382
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5383
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5384
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5385
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5386
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5387
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5388
+Name        = "a sign"
+Flags       = {Unmove,Unlay,AllowDistRead}
+
+TypeID      = 5389
+Name        = "a pawpaw tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay} # TODO: Should be harvestable?
+
+TypeID      = 5390
+Name        = "a pawpaw tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5391
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5392
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5393
+Name        = "a dry mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5394
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5395
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5396
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5397
+Name        = "a dry mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5398
+Name        = "a mangrove"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5399
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5400
+Name        = "a stone wall window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5401
+Name        = "a bamboo lamp"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {Brightness=7,LightColor=207}
+
+TypeID      = 5402
+Name        = "a bamboo lamp"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {Brightness=7,LightColor=207}
+
+TypeID      = 5403
+Name        = "a bamboo lamp"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {Brightness=7,LightColor=207}
+
+TypeID      = 5404
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5405
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5406
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5407
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5408
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5409
+Name        = "ocean floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5410
+Name        = "a stone"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5411
+Name        = "a stone"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5412
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5413
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5414
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5415
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5416
+Name        = "a starfish"
+Flags       = {Unmove}
+
+TypeID      = 5417
+Name        = "a sea anemone"
+Flags       = {Unmove}
+
+TypeID      = 5418
+Name        = "bubbles"
+Flags       = {Top,Unmove}
+
+TypeID      = 5419
+Name        = "bubbles"
+Flags       = {Top,Unmove}
+
+TypeID      = 5420
+Name        = "kelp"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5421
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5422
+Name        = "a coral"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5423
+Name        = "a water wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5424
+Name        = "a water wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5425
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5426
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5427
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5428
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5429
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5430
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5431
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5432
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5433
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5434
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5435
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5436
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5437
+Name        = "ocean floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5438
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5439
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5440
+Name        = "an old steering wheel"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5441
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5442
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5443
+Name        = "a rusty anchor"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5444
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove}
+
+TypeID      = 5445
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove}
+
+TypeID      = 5446
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove}
+
+TypeID      = 5447
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove}
+
+TypeID      = 5448
+Name        = "the remains of a mast"
+Flags       = {Bottom,Unpass,Unmove}
+
+TypeID      = 5449
+Name        = "a wrecked ship cabin wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5450
+Name        = "a wrecked figurehead"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5451
+Name        = "a wrecked ship cabin wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5452
+Name        = "a wrecked ship cabin wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5453
+Name        = "a wrecked ship cabin railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5454
+Name        = "a wrecked ship cabin railing"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5455
+Name        = "a wrecked ship hull"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5456
+Name        = "a wrecked ship hull"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5457
+Name        = "a wrecked ship hull"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5458
+Name        = "a wrecked ship hull"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5459
+Name        = "a wrecked ventilation grill"
+Flags       = {Unmove}
+
+TypeID      = 5460
+Name        = "a helmet of the deep"
+Description = "Enables underwater exploration"
+Flags       = {Take,Armor}
+Attributes  = {Weight=21000,SlotType=HEAD,ArmorValue=2} # TODO: Drown protection!
+
+TypeID      = 5461
+Name        = "pirate boots"
+Flags       = {Take,Armor}
+Attributes  = {Weight=800,SlotType=FEET,ArmorValue=2}
+
+TypeID      = 5462
+Name        = "a sugar cane"
+Description = "It has just been harvested"
+Flags       = {Unmove,Expire}
+Attributes  = {ExpireTarget=5470,TotalExpireTime=240}
+
+TypeID      = 5463
+Name        = "a sugar cane"
+Description = "It can be harvested"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5464
+Name        = "a burning sugar cane"
+Flags       = {Unpass,Unmove,Expire}
+Attributes  = {ExpireTarget=5463,TotalExpireTime=10}
+
+TypeID      = 5465
+Name        = "a sugar cane"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5466
+Name        = "a bunch of sugar cane"
+Flags       = {UseEvent,Cumulative,MultiUse,Take}
+Attributes  = {Weight=2250}
+
+TypeID      = 5467
+Name        = "a fire bug"
+Description = "This strange creature has the tendency to set certain things on fire"
+Flags       = {UseEvent,MultiUse,Take}
+Attributes  = {Weight=3050,Brightness=3,LightColor=206} # TODO: Use action to harvest
+
+TypeID      = 5468
+Name        = "a distilling machine"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5469
+Name        = "a distilling machine"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5470
+Name        = "a sugar cane"
+Flags       = {Unmove,Expire}
+Attributes  = {ExpireTarget=5465,TotalExpireTime=240}
+
+TypeID      = 5471
+Name        = "a ball on chains"
+
+TypeID      = 5472
+Name        = "a ball on chains"
+
+TypeID      = 5473
+Name        = "an iron maiden"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5474
+Name        = "an iron maiden"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5475
+Name        = "a pillory"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5476
+Name        = "a pillory"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5477
+Name        = "a barred window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5478
+Name        = "a barred window"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5479
+Name        = "a cat's paw"
+Flags       = {Take}
+Attributes  = {Weight=1000}
+
+TypeID      = 5480
+Name        = "a shackles"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5481
+Name        = "a shackles"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5482
+Name        = "wall chains"
+Flags       = {Unmove}
+
+TypeID      = 5483
+Name        = "wall chains"
+Flags       = {Unmove}
+
+TypeID      = 5484
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5485
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5486
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5487
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5488
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5489
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5490
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5491
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5492
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5493
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5494
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5495
+Name        = "a straw mat"
+Flags       = {UseEvent,Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=NORTH,BedFree=5501}
+
+TypeID      = 5496
+Name        = "a straw mat"
+Description = "Somebody is sleeping there"
+Flags       = {Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=SOUTH,BedFree=5502}
+
+TypeID      = 5497
+Name        = "a straw mat"
+Flags       = {UseEvent,Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=EAST,BedFree=5499}
+
+TypeID      = 5498
+Name        = "a straw mat"
+Description = "Somebody is sleeping there"
+Flags       = {Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=WEST,BedFree=5500}
+
+TypeID      = 5499
+Name        = "a straw mat"
+Flags       = {UseEvent,Bed,Unpass,Unmove,Unlay,Height} # TODO: Every straw mat should be a bed to lay in house
+Attributes  = {BedDirection=EAST,BedTarget=5497}
+
+TypeID      = 5500
+Name        = "a straw mat"
+Flags       = {Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=WEST,BedTarget=5498}
+
+TypeID      = 5501
+Name        = "a straw mat"
+Flags       = {UseEvent,Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=NORTH,BedTarget=5495}
+
+TypeID      = 5502
+Name        = "a straw mat"
+Flags       = {Bed,Unpass,Unmove,Unlay,Height}
+Attributes  = {BedDirection=SOUTH,BedTarget=5496}
+
+TypeID      = 5503
+Name        = "a wooden column"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5504
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5505
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5506
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5507
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5508
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5509
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5510
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5511
+Name        = "a pulley"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5512
+Name        = "a distilling machine"
+Flags       = {Bottom,Unpass,Unmove,Unlay,Expire}
+Attributes  = {FluidSource=WINE,ExpireTarget=5468,TotalExpireTime=15} # TODO: FluidSource should be RUM
+
+TypeID      = 5513
+Name        = "a distilling machine"
+Flags       = {Bottom,Unpass,Unmove,Unlay,Expire}
+Attributes  = {FluidSource=WINE,ExpireTarget=5469,TotalExpireTime=15} # TODO: FluidSource should be RUM
+
+TypeID      = 5514
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5515
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5516
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5517
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5518
+Name        = "a sandstone wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5519
+Name        = "a sandstone wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5520
+Name        = "a wooden railing"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5521
+Name        = "a dead quara pincher"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5536,TotalExpireTime=900}
+
+TypeID      = 5522
+Name        = "a dead quara mantassin"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5532,TotalExpireTime=900}
+
+TypeID      = 5523
+Name        = "a dead quara constrictor"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5530,TotalExpireTime=900}
+
+TypeID      = 5524
+Name        = "a dead quara hydromancer"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5528,TotalExpireTime=900}
+
+TypeID      = 5525
+Name        = "a dead quara predator"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5534,TotalExpireTime=900}
+
+TypeID      = 5526
+Name        = "a demon dust"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=24,FluidSource=BLOOD,ExpireTarget=5527,TotalExpireTime=900}
+
+TypeID      = 5527
+Name        = "a demon dust"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5528
+Name        = "a dead quara hydromancer"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5529,TotalExpireTime=900}
+
+TypeID      = 5529
+Name        = "a dead quara hydromancer"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5530
+Name        = "a dead quara constrictor"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5531,TotalExpireTime=900}
+
+TypeID      = 5531
+Name        = "a dead quara constrictor"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5532
+Name        = "a dead quara mantassin"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5533,TotalExpireTime=900}
+
+TypeID      = 5533
+Name        = "a dead quara mantassin"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5534
+Name        = "a dead quara predator"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5535,TotalExpireTime=900}
+
+TypeID      = 5535
+Name        = "a dead quara predator"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5536
+Name        = "a dead quara pincher"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5537,TotalExpireTime=900}
+
+TypeID      = 5537
+Name        = "a dead quara pincher"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5538
+Name        = "a rum cask"
+Flags       = {Unpass,Unmove,Unlay}
+Attributes  = {FluidSource=WINE} # TODO: FluidSource should be RUM
+
+TypeID      = 5539
+Name        = "a dead carrion worm"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5540,TotalExpireTime=900}
+
+TypeID      = 5540
+Name        = "a dead carrion worm"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5541,TotalExpireTime=600}
+
+TypeID      = 5541
+Name        = "a dead carrion worm"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=4000,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5542
+Name        = "a rope-ladder"
+Flags       = {Bottom,UseEvent,ForceUse,Unmove}
+
+TypeID      = 5543
+Name        = "a cart"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5544
+Name        = "a trapdoor"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=100}
+
+TypeID      = 5545
+Name        = "a cart"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5546
+Name        = "a cart"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5547
+Name        = "a pile of sugar cane"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5548
+Name        = "a pile of sugar cane"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5549
+Name        = "a pile of sugar cane"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5550
+Name        = "a pile of sugar cane"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5551
+Name        = "a pile of sugar cane"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5552
+Name        = "a rum flask"
+Flags       = {MultiUse,FluidContainer,Take} # TODO: make it useable
+Attributes  = {Weight=280}
+
+TypeID      = 5553
+Name        = "a small fish"
+Flags       = {Unmove}
+
+TypeID      = 5554
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5555
+Name        = "straw"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5556
+Name        = "a mossy wall"
+Flags       = {Unmove}
+
+TypeID      = 5557
+Name        = "a mossy wall"
+Flags       = {Unmove}
+
+TypeID      = 5558
+Name        = "a mossy wall"
+Flags       = {Unmove}
+
+TypeID      = 5559
+Name        = "a mossy wall"
+Flags       = {Unmove}
+
+TypeID      = 5560
+Name        = "a small branches"
+Flags       = {Unmove}
+
+TypeID      = 5561
+Name        = "a small branches"
+Flags       = {Unmove}
+
+TypeID      = 5562
+Name        = "a slimy wall"
+Flags       = {Unmove}
+
+TypeID      = 5563
+Name        = "a slimy wall"
+Flags       = {Unmove}
+
+TypeID      = 5564
+Name        = "a slain pirate skeleton"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=10,Weight=40000,ExpireTarget=0,TotalExpireTime=900}
+
+TypeID      = 5565
+Name        = "a slain pirate ghost"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=10,Weight=20000,ExpireTarget=5566,TotalExpireTime=900}
+
+TypeID      = 5566
+Name        = "a slain pirate ghost"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=20000,ExpireTarget=5567,TotalExpireTime=600}
+
+TypeID      = 5567
+Name        = "a slain pirate ghost"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=20000,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5568
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5569
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5570
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5571
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5572
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5573
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5574
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5575
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5576
+Name        = "a blue carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5577
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5578
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5579
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5580
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5581
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5582
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5583
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5584
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5585
+Name        = "a green carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5586
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5587
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5588
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5589
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5590
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5591
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5592
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5593
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5594
+Name        = "a brown carpet"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5595
+Name        = "a crossed weapons"
+Flags       = {Unmove,Hang}
+
+TypeID      = 5596
+Name        = "a crossed weapons"
+Flags       = {Unmove,Hang}
+
+TypeID      = 5597
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5598
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5599
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5600
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5601
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5602
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5603
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5604
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5605
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5606
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5607
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5608
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5609
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5610
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5611
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5612
+Name        = "a catapult"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5613
+Name        = "a pirate flag"
+Flags       = {Unmove}
+
+TypeID      = 5614
+Name        = "a pirate flag"
+Flags       = {Unmove}
+
+TypeID      = 5615
+Name        = "a pirate tapestry"
+Flags       = {Take,Hang}
+Attributes  = {Weight=1000}
+
+TypeID      = 5616
+Name        = "a pirate flag"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5617
+Name        = "a pirate flag"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5618
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5619
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5620
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5621
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5622
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5623
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5624
+Name        = "a dead tortoise"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=6,Weight=1000,FluidSource=BLOOD,ExpireTarget=5625,TotalExpireTime=900}
+
+TypeID      = 5625
+Name        = "a dead tortoise"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=1000,ExpireTarget=5626,TotalExpireTime=600}
+
+TypeID      = 5626
+Name        = "a dead tortoise"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=1000,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5627
+Name        = "a dead thornback tortoise"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=BLOOD,ExpireTarget=5628,TotalExpireTime=900}
+
+TypeID      = 5628
+Name        = "a dead thornback tortoise"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=5629,TotalExpireTime=600}
+
+TypeID      = 5629
+Name        = "a dead thornback tortoise"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=6000,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5630
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5631
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5632
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5633
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5634
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5635
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5636
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5637
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5638
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5639
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5640
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5641
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5642
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5643
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5644
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5645
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5646
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5647
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5648
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5649
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5650
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5651
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5652
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5653
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5654
+Name        = "a map"
+Flags       = {Unmove,Unlay}
+
+TypeID      = 5655
+Name        = "a map"
+Flags       = {Unmove,Unlay}
+
+TypeID      = 5656
+Name        = "a map"
+Flags       = {Unmove,Unlay}
+
+TypeID      = 5657
+Name        = "a map"
+Flags       = {Unmove,Unlay}
+
+TypeID      = 5658
+Name        = "a blooming griffinclaw"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5659
+Name        = "a water trickle"
+Flags       = {Unmove}
+
+TypeID      = 5660
+Name        = "a water trickle"
+Flags       = {Unmove}
+
+TypeID      = 5661
+Name        = "a water trickle"
+Flags       = {Unmove}
+
+TypeID      = 5662
+Name        = "a water trickle"
+Flags       = {Unmove}
+
+TypeID      = 5663
+Name        = "a water trickle"
+Flags       = {Unmove}
+
+TypeID      = 5664
+Name        = "a water trickle"
+Flags       = {Unmove}
+
+TypeID      = 5665
+Name        = "a dead mammoth"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=5666,TotalExpireTime=900}
+
+TypeID      = 5666
+Name        = "a dead mammoth"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=15,ExpireTarget=5667,TotalExpireTime=600}
+
+TypeID      = 5667
+Name        = "a dead mammoth"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5668
+Name        = "a mysterious voodoo skull"
+Flags       = {Take}
+Attributes  = {Weight=1400}
+
+TypeID      = 5669
+Name        = "a enigmatic voodoo skull"
+Description = "It is not time yet"
+Flags       = {Take,Expire}
+Attributes  = {Weight=1400,ExpireTarget=5668,TotalExpireTime=72000} # TODO: make it useable like in wiki
+
+TypeID      = 5670
+Name        = "a pirate statue"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5671
+Name        = "a pirate statue"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5672
+Name        = "a pirate statue"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5673
+Name        = "a pirate statue"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5674
+Name        = "a treasure chest"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5675
+Name        = "a treasure chest"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5676
+Name        = "a hydra's nest"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5677
+Name        = "a tortoise's nest"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5678
+Name        = "a tortoise egg"
+Flags       = {Cumulative,Take}
+Attributes  = {Nutrition=6,Weight=30} # TODO: make it eatable
+
+TypeID      = 5679
+Name        = "a shell"
+Flags       = {Unmove}
+
+TypeID      = 5680
+Name        = "a spiral shell"
+Flags       = {Unmove}
+
+TypeID      = 5681
+Name        = "some shells"
+Flags       = {Unmove}
+
+TypeID      = 5682
+Name        = "a piece of a shell"
+Flags       = {Unmove}
+
+TypeID      = 5683
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5684
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5685
+Name        = "a dirt wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5686
+Name        = "a stone wall"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5687
+Name        = "a dry griffinclaw"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5688
+Name        = "a dead blood crab"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=5689,TotalExpireTime=900}
+
+TypeID      = 5689
+Name        = "a dead blood crab"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=5690,TotalExpireTime=600}
+
+TypeID      = 5690
+Name        = "a dead blood crab"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5691
+Name        = "a trapdoor"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=110}
+
+TypeID      = 5692
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5693
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5694
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5695
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5696
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5697
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5698
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5699
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5700
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5701
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5702
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5703
+Name        = "a ballista"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5704
+Name        = "a shark fin"
+Flags       = {Unmove,Unlay}
+
+TypeID      = 5705
+Name        = "a shark fin"
+Flags       = {Unmove,Unlay}
+
+TypeID      = 5706
+Name        = "a treasure map"
+Description = "It obviously shows Treasure Island including a big, red cross"
+Flags       = {Take}
+Attributes  = {Weight=830}
+
+TypeID      = 5707
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5708
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5709
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5710
+Name        = "a light shovel"
+Flags       = {MultiUse,UseEvent,Take} # TODO: make to work as shovel
+Attributes  = {Weight=1500}
+
+TypeID      = 5711
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5712
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5713
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5714
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5715
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5716
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5717
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5718
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5719
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5720
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5721
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5722
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5723
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5724
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5725
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5726
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 5727
+Name        = "a dead seagull"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=5,Weight=1000,FluidSource=BLOOD,ExpireTarget=5728,TotalExpireTime=600}
+
+TypeID      = 5728
+Name        = "a dead seagull"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=800,ExpireTarget=5729,TotalExpireTime=600}
+
+TypeID      = 5729
+Name        = "a dead seagull"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=500,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5730
+Name        = "" # this is nothing in client
+
+TypeID      = 5731
+Name        = "a hole"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=130}
+
+TypeID      = 5732
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {Bottom,UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5733
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5734
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5735
+Name        = "a closed door"
+Description = "It is locked"
+Flags       = {Bottom,UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5736
+Name        = "a closed door"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5737
+Name        = "an open door"
+Flags       = {Top,Door,Unmove}
+
+TypeID      = 5738
+Name        = "a shark fin"
+Flags       = {Unmove}
+
+TypeID      = 5739
+Name        = "an antic well"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {FluidSource=WATER}
+
+TypeID      = 5740
+Name        = "an antic well"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+Attributes  = {FluidSource=WATER}
+
+TypeID      = 5741
+Name        = "a skull helmet"
+Flags       = {Take,Armor}
+Attributes  = {Weight=4200,SlotType=HEAD,ArmorValue=9}
+
+TypeID      = 5742
+Name        = "" # this is nothing in client
+
+TypeID      = 5743
+Name        = "wooden floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5744
+Name        = "wooden floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5745
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5746
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5747
+Name        = "an earth pile"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5748
+Name        = "an open door"
+Flags       = {Top,SeparationEvent,Door,Unmove}
+
+TypeID      = 5749
+Name        = "a closed door"
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 5750
+Name        = "an earth pile"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5751
+Name        = "an earth pile"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5752
+Name        = "an earth pile"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5753
+Name        = "an earth pile"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5754
+Name        = "an earth pile"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5755
+Name        = "a turtle"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=160}
+
+TypeID      = 5756
+Name        = "a turtle"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=160}
+
+TypeID      = 5757
+Name        = "a turtle"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5758
+Name        = "a turtle"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5759
+Name        = "a turtle"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5760
+Name        = "a turtle"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5761
+Name        = "a turtle"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5762
+Name        = "a dead quara constrictor"
+Flags       = {Container,Corpse}
+Attributes  = {Capacity=10,FluidSource=BLOOD}
+
+TypeID      = 5763
+Name        = "a trapdoor"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=110}
+
+TypeID      = 5764
+Name        = "a ventilation grille"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=500}
+
+TypeID      = 5765
+Name        = "a dead toad"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5766,TotalExpireTime=600}
+
+TypeID      = 5766
+Name        = "a dead toad"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5767,TotalExpireTime=600}
+
+TypeID      = 5767
+Name        = "a dead toad"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5768
+Name        = "a drawbridge"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=90}
+
+TypeID      = 5769
+Name        = "a drawbridge"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=90}
+
+TypeID      = 5770
+Name        = "a drawbridge"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=90}
+
+TypeID      = 5771
+Name        = "metal fittings"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5772
+Name        = "metal fittings"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5773
+Name        = "metal fittings"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5774
+Name        = "metal fittings"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5775
+Name        = "" # this is nothing in client
+
+TypeID      = 5776
+Name        = "" # this is nothing in client
+
+TypeID      = 5777
+Name        = "a target board"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5778
+Name        = "a target board"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5779
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5780
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5781
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5782
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5783
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5784
+Name        = "a stuck arrow"
+Flags       = {Unmove}
+
+TypeID      = 5785
+Name        = "a medal of honour"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1000}
+
+TypeID      = 5786
+Name        = "a wooden whistle"
+Flags       = {Take}
+Attributes  = {Weight=100} # TODO: implement music like in tibia wiki says
+
+TypeID      = 5787
+Name        = "a training dummy"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5788
+Name        = "a training dummy"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 5789
+Name        = "a stuck axe"
+Flags       = {Unmove}
+
+TypeID      = 5790
+Name        = "a stuck axe"
+Flags       = {Unmove}
+
+TypeID      = 5791
+Name        = "a stuffed dragon"
+Flags       = {Take}
+Attributes  = {Weight=850} # TODO: implement like in tibia wiki says
+
+TypeID      = 5792
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200} # TODO: implement like in tibia wiki says
+
+TypeID      = 5793
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5794
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5795
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5796
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5797
+Name        = "a die"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5798
+Name        = "an abacus"
+Description = "If you use it wisely, you may write yourself into the history books"
+Flags       = {Take}
+Attributes  = {Weight=1200}
+
+TypeID      = 5799
+Name        = "a golden figurine"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5800
+Name        = "a grappling hook"
+Flags       = {Unmove}
+
+TypeID      = 5801
+Name        = "a key ring"
+Flags       = {Container,Take}
+Attributes  = {Capacity=20,Weight=50}
+
+TypeID      = 5802
+Name        = "a message in a bottle"
+Flags       = {Take}
+Attributes  = {Weight=1200}
+
+TypeID      = 5803
+Name        = "an arbalest"
+Description = "It is a bit heavy due to the iron mounting, but very precise"
+Flags       = {Take,Distance}
+Attributes  = {Weight=9500,SlotType=TWOHANDED,Range=6,AmmoType=BOLT}
+
+TypeID      = 5804
+Name        = "a nose ring"
+Description = "It was the favourite trinket of the famous Horned Fox"
+Flags       = {Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5805
+Name        = "a golden goblet"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5806
+Name        = "a silver goblet"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5807
+Name        = "a bronze goblet"
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {MaxLength=99,Weight=1500}
+
+TypeID      = 5808
+Name        = "Orshabaal's brain"
+Flags       = {Take}
+Attributes  = {Weight=3500}
+
+TypeID      = 5809
+Name        = "a soul stone"
+Description = "It contains the essence of countless tormented souls"
+Flags       = {Take}
+Attributes  = {Weight=30}
+
+TypeID      = 5810
+Name        = "a pirate voodoo doll"
+Flags       = {Take}
+Attributes  = {Weight=650}
+
+TypeID      = 5811
+Name        = "a mermaid"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5812
+Name        = "a skull candle"
+Flags       = {ChangeUse,Take,Expire}
+Attributes  = {ChangeTarget=5813,Weight=2200,Brightness=3,LightColor=206,ExpireTarget=3114,TotalExpireTime=3000}
+
+TypeID      = 5813
+Name        = "a skull candle"
+Flags       = {ChangeUse,Take,ExpireStop}
+Attributes  = {ChangeTarget=5812,Weight=2200,Brightness=0,LightColor=215} # TODO: implement like in tibia wiki
+
+TypeID      = 5814
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unpass,Unmove}
+
+TypeID      = 5815
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=140}
+
+TypeID      = 5816
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5817
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5818
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5819
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5820
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5821
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5822
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5823
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5824
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5825
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5826
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5827
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5828
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5829
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5830
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5831
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5832
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5833
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5834
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5835
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5836
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5837
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5838
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5839
+Name        = "rock soil"
+Flags       = {Clip,Unmove}
+
+TypeID      = 5840
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5841
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5842
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5843
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5844
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5845
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5846
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5847
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5848
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5849
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5850
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5851
+Name        = "small lava cracks"
+Description = "The ground is steaming hot"
+Flags       = {Unmove}
+
+TypeID      = 5852
+Name        = "a weapon rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5853
+Name        = "a weapon rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5854
+Name        = "a lance"
+Flags       = {Unmove}
+
+TypeID      = 5855
+Name        = "a lance"
+Flags       = {Unmove}
+
+TypeID      = 5856
+Name        = "a sword"
+Flags       = {Unmove}
+
+TypeID      = 5857
+Name        = "a sword"
+Flags       = {Unmove}
+
+TypeID      = 5858
+Name        = "a scimitar"
+Flags       = {Unmove}
+
+TypeID      = 5859
+Name        = "a scimitar"
+Flags       = {Unmove}
+
+TypeID      = 5860
+Name        = "an armour rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5861
+Name        = "an armour rack"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5862
+Name        = "an armour rack"
+Flags       = {Unmove}
+
+TypeID      = 5863
+Name        = "an armour rack"
+Flags       = {Unmove}
+
+TypeID      = 5864
+Name        = "" # this is nothing in client
+
+TypeID      = 5865
+Name        = "a juice squeezer"
+Flags       = {Take}
+Attributes  = {Weight=1500} # TODO: Implement like in tibia wiki
+
+TypeID      = 5866
+Name        = "rubble"
+Flags       = {Top,Unpass,Unmove,Unlay}
+
+TypeID      = 5867
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5868
+Name        = "rubble"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 5869
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5870
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5871
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5872
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5873
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5874
+Name        = "a poison trickle"
+Flags       = {Unmove}
+
+TypeID      = 5875
+Name        = "sniper gloves"
+Description = "They are the pride of the paladin guild"
+Flags       = {Take}
+Attributes  = {Weight=400}
+
+TypeID      = 5876
+Name        = "a lizard leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=50}
+
+TypeID      = 5877
+Name        = "a green dragon leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=50}
+
+TypeID      = 5878
+Name        = "a minotaur leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=40}
+
+TypeID      = 5879
+Name        = "a spider silk"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=10}
+
+TypeID      = 5880
+Name        = "an iron ore"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5881
+Name        = "a lizard scale"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5882
+Name        = "a red dragon scale"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=90}
+
+TypeID      = 5883
+Name        = "an ape fur"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5884
+Name        = "a spirit container"
+Description = "It contains pure fighting spirit"
+Flags       = {Take}
+Attributes  = {Weight=600}
+
+TypeID      = 5885
+Name        = "a flask of warrior's sweat"
+Description = "It contains the sweat spilled in many battles and is said to be used for certain perfumes too"
+Flags       = {Take}
+Attributes  = {Weight=300}
+
+TypeID      = 5886
+Name        = "a spool of yarn"
+Description = "It is made from fine spider silk"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5887
+Name        = "a piece of royal steel"
+Description = "Even the king would be proud to wear an armour made of this refined steel"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5888
+Name        = "a piece of hell steel"
+Description = "This rare metal must have been refined in the depths"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5889
+Name        = "a piece of draconian steel"
+Description = "An armour made of this steel is said to protect against fiery dragon breath"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5890
+Name        = "a chicken feather"
+Description = "Some thousands of these would probably make an extremely comfortable pillow"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=10}
+
+TypeID      = 5891
+Name        = "an enchanted chicken wing"
+Description = "It is said to make your feet fly"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=1000}
+
+TypeID      = 5892
+Name        = "a huge chunk of crude iron"
+Flags       = {Take}
+Attributes  = {Weight=5000}
+
+TypeID      = 5893
+Name        = "a perfect behemoth fang"
+Description = "Collectors all around the world crave for this item"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5894
+Name        = "a bat wing"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5895
+Name        = "a fish fin"
+Description = "It once belonged to a mighty creature of the deep"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5896
+Name        = "a bear paw"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5897
+Name        = "a wolf paw"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5898
+Name        = "a beholder's eye"
+Description = "You could swear it just winked at you"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5899
+Name        = "a turtle shell"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5900
+Name        = "a dwarven beard"
+Description = "It was once worn proudly by a dwarfish warrior - or maiden"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=50}
+
+TypeID      = 5901
+Name        = "wood"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5902
+Name        = "a honeycomb"
+Description = "Some people swear it makes an excellent glue"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5903
+Name        = "Ferumbras' hat"
+Description = "It is the proof that Ferumbras has fallen. For now. The Edron Academy should be interested in this"
+Flags       = {Take,Armor}
+Attributes  = {Weight=850,SlotType=HEAD,ArmorValue=1}
+
+TypeID      = 5904
+Name        = "a magic sulphur"
+Description = "It smells rather badly but is said to be an important catalyst for magical rituals"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5905
+Name        = "a vampire dust"
+Description = "Sun can be a merciless killer, but so can you"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5906
+Name        = "a demon dust"
+Description = "It reeks of hatred and malice"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5907
+Name        = "a slingshot"
+Description = "A hermit near Carlin might be able to tell you more about it"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5908
+Name        = "an obsidian knife"
+Description = "Sharp and light, this is a useful tool for tanners, doctors and assassins"
+Flags       = {Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5909
+Name        = "a white piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5910
+Name        = "a green piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5911
+Name        = "a red piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5912
+Name        = "a blue piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5913
+Name        = "a brown piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5914
+Name        = "a yellow piece of cloth"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5915
+Name        = "a large throne"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5916
+Name        = "a large throne"
+Flags       = {Unmove,Avoid}
+
+TypeID      = 5917
+Name        = "a bandana"
+Description = "It is quite fashionable as well as useful for anyone spending huge amounts of time in the sun"
+Flags       = {Take,Armor}
+Attributes  = {Weight=850,SlotType=HEAD,ArmorValue=1}
+
+TypeID      = 5918
+Name        = "pirate knee breeches"
+Description = "It is quite fashionable as well as useful for anyone spending huge amounts of time in the sun"
+Flags       = {Take,Armor}
+Attributes  = {Weight=1200,SlotType=LEGS,ArmorValue=1}
+
+TypeID      = 5919
+Name        = "a dragon claw"
+Description = "It is the claw of Demodras"
+Flags       = {Take}
+Attributes  = {Weight=1250}
+
+TypeID      = 5920
+Name        = "a green dragon scale"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=80}
+
+TypeID      = 5921
+Name        = "a heaven blossom"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=210}
+
+TypeID      = 5922
+Name        = "a holy orchid"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=250}
+
+TypeID      = 5923
+Name        = "" # this is nothing in client
+
+TypeID      = 5924
+Name        = "a damaged steel helmet"
+Description = "The words 'Ramsay the Reckless' are engraved inside. It appears to be cracked and broken"
+Flags       = {Take}
+Attributes  = {Weight=4600}
+
+TypeID      = 5925
+Name        = "a hardened bone"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=600}
+
+TypeID      = 5926
+Name        = "a pirate backpack"
+Flags       = {Container,Take}
+Attributes  = {Capacity=20,Weight=1800,SlotType=BACKPACK}
+
+TypeID      = 5927
+Name        = "a pirate bag"
+Flags       = {Container,Take}
+Attributes  = {Capacity=8,Weight=800,SlotType=BACKPACK}
+
+TypeID      = 5928
+Name        = "an empty goldfish bowl" # TODO: implement functionality like in tibia wiki
+Flags       = {Take}
+Attributes  = {Weight=3200}
+
+TypeID      = 5929
+Name        = "a goldfish bow"
+Flags       = {Take}
+Attributes  = {Weight=3200}
+
+TypeID      = 5930
+Name        = "a behemoth claw"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=1250}
+
+TypeID      = 5931
+Name        = "the remains of ferumbras"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5932,TotalExpireTime=900}
+
+TypeID      = 5932
+Name        = "the remains of ferumbras"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5933,TotalExpireTime=600}
+
+TypeID      = 5933
+Name        = "the remains of ferumbras"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5934
+Name        = "a dead frog"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=5,Weight=1000,FluidSource=BLOOD,ExpireTarget=5935,TotalExpireTime=600}
+
+TypeID      = 5935
+Name        = "a dead frog"
+Flags       = {Take,Corpse,Expire}
+Attributes  = {Weight=800,ExpireTarget=5936,TotalExpireTime=600}
+
+TypeID      = 5936
+Name        = "a dead frog"
+Flags       = {Corpse,Take,Expire}
+Attributes  = {Weight=500,ExpireTarget=0,TotalExpireTime=600}
+
+TypeID      = 5937
+Name        = "a botanist's container"
+Description = "It holds a sample of the rare griffinclaw flower"
+Flags       = {Take}
+Attributes  = {Weight=2000}
+
+TypeID      = 5938
+Name        = "Ceiron's waterskin"
+Flags       = {Take}
+Attributes  = {Weight=700}
+
+TypeID      = 5939
+Name        = "Ceiron's waterskin"
+Flags       = {Take}
+Attributes  = {Weight=700}
+
+TypeID      = 5940
+Name        = "Ceiron's wolf tooth chain"
+Description = "It has the letter 'C' carved into one of the teeth"
+Flags       = {Take}
+Attributes  = {Weight=330,SlotType=NECKLACE}
+
+TypeID      = 5941
+Name        = "a wooden stake"
+Description = "It is a simple wooden stake"
+Flags       = {Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5942
+Name        = "a blessed wooden stake"
+Description = "Many mighty priests have blessed this stake"
+Flags       = {Take}
+Attributes  = {Weight=500}
+
+TypeID      = 5943
+Name        = "Morgaroth's heart"
+Flags       = {Take}
+Attributes  = {Weight=3500}
+
+TypeID      = 5944
+Name        = "a soul orb"
+Description = "This strange object seems to be made of half spirit, half metal. It is unknown to most smiths"
+Flags       = {Take}
+Attributes  = {Weight=20}
+
+TypeID      = 5945
+Name        = "a coral comb"
+Description = "It once belonged to a mermaid"
+Flags       = {Take}
+Attributes  = {Weight=450}
+
+TypeID      = 5946
+Name        = "a comb"
+Flags       = {Take}
+Attributes  = {Weight=450}
+
+TypeID      = 5947
+Name        = "Elane's crossbow"
+Description = "'For Elane, with Love' is engraved on it"
+Flags       = {Take}
+Attributes  = {Weight=4000}
+
+TypeID      = 5948
+Name        = "a red dragon leather"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=60}
+
+TypeID      = 5949
+Name        = "a beach backpack"
+Flags       = {Container,Take}
+Attributes  = {Capacity=20,Weight=1800,SlotType=BACKPACK}
+
+TypeID      = 5950
+Name        = "a beach bag"
+Flags       = {Container,Take}
+Attributes  = {Capacity=8,Weight=800,SlotType=BACKPACK}
+
+TypeID      = 5951
+Name        = "a fish tail"
+Flags       = {Take}
+Attributes  = {Weight=250}
+
+TypeID      = 5952
+Name        = "a scroll"
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5953
+Name        = "a raven herb"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=100}
+
+TypeID      = 5954
+Name        = "a demon horn"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=1000}
+
+TypeID      = 5955
+Name        = "" # this is nothing in client
+
+TypeID      = 5956
+Name        = "an old parchment"
+Description = "It is covered with foreign symbols"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
+TypeID      = 5957
+Name        = "a lottery ticket"
+Description = "It has not been used yet" # TODO: Implement like in tibia wiki
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5958
+Name        = "a winning lottery ticket"
+Description = "You were lucky! Go claim your prize at the potion store in Edron"
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 5959
+Name        = "" # this is nothing in client
+
+TypeID      = 5960
+Name        = "a dead troll"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=3987,TotalExpireTime=10}
+
+TypeID      = 5961
+Name        = "a dead spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=SLIME,ExpireTarget=3988,TotalExpireTime=10}
+
+TypeID      = 5962
+Name        = "a dead cyclops"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=3989,TotalExpireTime=10}
+
+TypeID      = 5963
+Name        = "a slain skeleton"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=3990,TotalExpireTime=10}
+
+TypeID      = 5964
+Name        = "a dead rat"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=3994,TotalExpireTime=10}
+
+TypeID      = 5965
+Name        = "a dead human"
+Flags       = {Container}
+Attributes  = {Capacity=10}
+
+TypeID      = 5966
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4001,TotalExpireTime=10}
+
+TypeID      = 5967
+Name        = "a dead rotworm"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4005,TotalExpireTime=10}
+
+TypeID      = 5968
+Name        = "a dead wolf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4007,TotalExpireTime=10}
+
+TypeID      = 5969
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4011,TotalExpireTime=10}
+
+TypeID      = 5970
+Name        = "a dead deer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4016,TotalExpireTime=10}
+
+TypeID      = 5971
+Name        = "a dead dog"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4020,TotalExpireTime=10}
+
+TypeID      = 5972
+Name        = "a slain skeleton"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4024,TotalExpireTime=10}
+
+TypeID      = 5973
+Name        = "a dead dragon"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4025,TotalExpireTime=10}
+
+TypeID      = 5974
+Name        = "a dead spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4029,TotalExpireTime=10}
+
+TypeID      = 5975
+Name        = "a dead bear"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4030,TotalExpireTime=10}
+
+TypeID      = 5976
+Name        = "a slain ghoul"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4034,TotalExpireTime=10}
+
+TypeID      = 5977
+Name        = "a dead giant spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=SLIME,ExpireTarget=4038,TotalExpireTime=10}
+
+TypeID      = 5978
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4041,TotalExpireTime=10}
+
+TypeID      = 5979
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4043,TotalExpireTime=10}
+
+TypeID      = 5980
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4045,TotalExpireTime=10}
+
+TypeID      = 5981
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4047,TotalExpireTime=10}
+
+TypeID      = 5982
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4052,TotalExpireTime=10}
+
+TypeID      = 5983
+Name        = "a dead minotaur"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4057,TotalExpireTime=10}
+
+TypeID      = 5984
+Name        = "a dead dragon"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4062,TotalExpireTime=10}
+
+TypeID      = 5985
+Name        = "a dead fire devil"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4067,TotalExpireTime=10}
+
+TypeID      = 5986
+Name        = "a dead lion"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4070,TotalExpireTime=10}
+
+TypeID      = 5987
+Name        = "a dead bear"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4074,TotalExpireTime=10}
+
+TypeID      = 5988
+Name        = "a dead scorpion"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4078,TotalExpireTime=10}
+
+TypeID      = 5989
+Name        = "a dead wasp"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4080,TotalExpireTime=10}
+
+TypeID      = 5990
+Name        = "a dead bug"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4083,TotalExpireTime=10}
+
+TypeID      = 5991
+Name        = "a dead sheep"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4086,TotalExpireTime=10}
+
+TypeID      = 5992
+Name        = "a dead beholder"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=SLIME,ExpireTarget=4089,TotalExpireTime=10}
+
+TypeID      = 5993
+Name        = "remains of a ghost"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4094,TotalExpireTime=10}
+
+TypeID      = 5994
+Name        = "a dead sheep"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4095,TotalExpireTime=10}
+
+TypeID      = 5995
+Name        = "a slain demon"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,ExpireTarget=4097,TotalExpireTime=10}
+
+TypeID      = 5996
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4101,TotalExpireTime=10}
+
+TypeID      = 5997
+Name        = "a dead wolf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4105,TotalExpireTime=10}
+
+TypeID      = 5998
+Name        = "a dead troll"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4109,TotalExpireTime=10}
+
+TypeID      = 5999
+Name        = "a dead behemoth"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4112,TotalExpireTime=10}
+
+TypeID      = 6000
+Name        = "a dead pig"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4116,TotalExpireTime=10}
+
+TypeID      = 6001
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4119,TotalExpireTime=10}
+
+TypeID      = 6002
+Name        = "a dead goblin"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4121,TotalExpireTime=10}
+
+TypeID      = 6003
+Name        = "a dead elf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4126,TotalExpireTime=10}
+
+TypeID      = 6004
+Name        = "remains of a mummy"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4130,TotalExpireTime=10}
+
+TypeID      = 6005
+Name        = "a split stone golem"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,ExpireTarget=4133,TotalExpireTime=10}
+
+TypeID      = 6006
+Name        = "a slain vampire"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4137,TotalExpireTime=10}
+
+TypeID      = 6007
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4141,TotalExpireTime=10}
+
+TypeID      = 6008
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4148,TotalExpireTime=10}
+
+TypeID      = 6009
+Name        = "a dead war wolf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4150,TotalExpireTime=10}
+
+TypeID      = 6010
+Name        = "a dead orc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4153,TotalExpireTime=10}
+
+TypeID      = 6011
+Name        = "a dead elf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4160,TotalExpireTime=10}
+
+TypeID      = 6012
+Name        = "a dead elf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4162,TotalExpireTime=10}
+
+TypeID      = 6013
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4164,TotalExpireTime=10}
+
+TypeID      = 6014
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4166,TotalExpireTime=10}
+
+TypeID      = 6015
+Name        = "a dead dwarf"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4168,TotalExpireTime=10}
+
+TypeID      = 6016
+Name        = "a dead djinn"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4170,TotalExpireTime=10}
+
+TypeID      = 6017
+Name        = "a dead rabbit"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4173,TotalExpireTime=10}
+
+TypeID      = 6018
+Name        = "a dead troll"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4176,TotalExpireTime=10}
+
+TypeID      = 6019
+Name        = "a slain banshee"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4179,TotalExpireTime=10}
+
+TypeID      = 6020
+Name        = "a dead djinn"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4182,TotalExpireTime=10}
+
+TypeID      = 6021
+Name        = "a dead scarab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=SLIME,ExpireTarget=4185,TotalExpireTime=10}
+
+TypeID      = 6022
+Name        = "a dead human"
+Flags       = {Container}
+Attributes  = {Capacity=10}
+
+TypeID      = 6023
+Name        = "a dead larva"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4191,TotalExpireTime=10}
+
+TypeID      = 6024
+Name        = "a dead scarab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4194,TotalExpireTime=10}
+
+TypeID      = 6025
+Name        = "a dead pharaoh"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4197,TotalExpireTime=10}
+
+TypeID      = 6026
+Name        = "a dead hyaena"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4200,TotalExpireTime=10}
+
+TypeID      = 6027
+Name        = "a dead gargoyle"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4203,TotalExpireTime=10}
+
+TypeID      = 6028
+Name        = "a slain lich"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4206,TotalExpireTime=10}
+
+TypeID      = 6029
+Name        = "a slain crypt shambler"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4209,TotalExpireTime=10}
+
+TypeID      = 6030
+Name        = "a slain bonebeast"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4212,TotalExpireTime=10}
+
+TypeID      = 6031
+Name        = "a dead pharaoh"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4215,TotalExpireTime=10}
+
+TypeID      = 6032
+Name        = "a dead efreet"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4218,TotalExpireTime=10}
+
+TypeID      = 6033
+Name        = "a dead marid"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=4221,TotalExpireTime=10}
+
+TypeID      = 6034
+Name        = "a dead badger"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4224,TotalExpireTime=10}
+
+TypeID      = 6035
+Name        = "a dead skunk"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4227,TotalExpireTime=10}
+
+TypeID      = 6036
+Name        = "a dead gazer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4230,TotalExpireTime=10}
+
+TypeID      = 6037
+Name        = "a dead elder beholder"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4233,TotalExpireTime=10}
+
+TypeID      = 6038
+Name        = "a dead yeti"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4236,TotalExpireTime=10}
+
+TypeID      = 6039
+Name        = "a dead crab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4318,TotalExpireTime=10}
+
+TypeID      = 6040
+Name        = "a dead lizard sentinel"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4324,TotalExpireTime=10}
+
+TypeID      = 6041
+Name        = "a dead lizard snakecharmer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4327,TotalExpireTime=10}
+
+TypeID      = 6042
+Name        = "a dead chicken"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4330,TotalExpireTime=10}
+
+TypeID      = 6043
+Name        = "a dead kongra"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4333,TotalExpireTime=10}
+
+TypeID      = 6044
+Name        = "a dead merlkin"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4336,TotalExpireTime=10}
+
+TypeID      = 6045
+Name        = "a dead sibang"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4339,TotalExpireTime=10}
+
+TypeID      = 6046
+Name        = "a dead crocodile"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4342,TotalExpireTime=10}
+
+TypeID      = 6047
+Name        = "a dead carniphila"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4345,TotalExpireTime=10}
+
+TypeID      = 6048
+Name        = "a dead hydra"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4348,TotalExpireTime=10}
+
+TypeID      = 6049
+Name        = "a dead panda"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4351,TotalExpireTime=10}
+
+TypeID      = 6050
+Name        = "a dead centipede"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4354,TotalExpireTime=10}
+
+TypeID      = 6051
+Name        = "a dead tiger"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4357,TotalExpireTime=10}
+
+TypeID      = 6052
+Name        = "a dead elephant"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4360,TotalExpireTime=10}
+
+TypeID      = 6053
+Name        = "a dead bat"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4363,TotalExpireTime=10}
+
+TypeID      = 6054
+Name        = "a dead flamingo"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4366,TotalExpireTime=10}
+
+TypeID      = 6055
+Name        = "a dead dworc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4369,TotalExpireTime=10}
+
+TypeID      = 6056
+Name        = "a dead parrot"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4379,TotalExpireTime=10}
+
+TypeID      = 6057
+Name        = "a dead bird"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4382,TotalExpireTime=10}
+
+TypeID      = 6058
+Name        = "a dead dworc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4372,TotalExpireTime=10}
+
+TypeID      = 6059
+Name        = "a dead dworc"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4375,TotalExpireTime=10}
+
+TypeID      = 6060
+Name        = "a dead tarantula"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=SLIME,ExpireTarget=4385,TotalExpireTime=10}
+
+TypeID      = 6061
+Name        = "a dead serpent spawn"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=4388,TotalExpireTime=10}
+
+TypeID      = 6062
+Name        = "a lifeless nettle"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=4391,TotalExpireTime=10}
+
+TypeID      = 6063
+Name        = "a dead quara pincher"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5521,TotalExpireTime=10}
+
+TypeID      = 6064
+Name        = "a dead quara mantassin"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5522,TotalExpireTime=10}
+
+TypeID      = 6065
+Name        = "a dead quara constrictor"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5523,TotalExpireTime=10}
+
+TypeID      = 6066
+Name        = "a dead quara hydromancer"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5524,TotalExpireTime=10}
+
+TypeID      = 6067
+Name        = "a dead quara predator"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5525,TotalExpireTime=10}
+
+TypeID      = 6068
+Name        = "demon dust"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=24,FluidSource=BLOOD,ExpireTarget=5526,TotalExpireTime=10}
+
+TypeID      = 6069
+Name        = "a dead carrion worm"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5539,TotalExpireTime=10}
+
+TypeID      = 6070
+Name        = "a slain pirate skeleton"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5564,TotalExpireTime=10}
+
+TypeID      = 6071
+Name        = "a slain pirate ghost"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,ExpireTarget=5565,TotalExpireTime=10}
+
+TypeID      = 6072
+Name        = "a dead tortoise"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=BLOOD,ExpireTarget=5624,TotalExpireTime=10}
+
+TypeID      = 6073
+Name        = "a dead thornback tortoise"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=6,FluidSource=BLOOD,ExpireTarget=5627,TotalExpireTime=10}
+
+TypeID      = 6074
+Name        = "a dead mammoth"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=15,FluidSource=BLOOD,ExpireTarget=5665,TotalExpireTime=10}
+
+TypeID      = 6075
+Name        = "a dead blood crab"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5688,TotalExpireTime=10}
+
+TypeID      = 6076
+Name        = "a dead seagull"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=5727,TotalExpireTime=10}
+
+TypeID      = 6077
+Name        = "a dead toad"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5765,TotalExpireTime=10}
+
+TypeID      = 6078
+Name        = "remains of Ferumbras"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=5931,TotalExpireTime=10}
+
+TypeID      = 6079
+Name        = "a dead frog"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=5,FluidSource=BLOOD,ExpireTarget=5934,TotalExpireTime=10}
+
+TypeID      = 6080
+Name        = "a dead human"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4240,TotalExpireTime=10}
+
+TypeID      = 6081
+Name        = "a dead human"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=4247,TotalExpireTime=10}
+
+TypeID      = 6082
+Name        = "a dead human"
+
+TypeID      = 6083
+Name        = "a dead human"
+Flags       = {Container}
+Attributes  = {Capacity=10}
+
+TypeID      = 6084
+Name        = "a dead human"
+Flags       = {Container,Expire}
+Attributes  = {Capacity=10,ExpireTarget=6082,TotalExpireTime=120}
+
+TypeID      = 6085
+Name        = "a large trunk"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 6086
+Name        = "a faked label"
+Flags       = {Take}
+Attributes  = {Weight=10}
+
+TypeID      = 6087
+Name        = "a music sheet"
+Description = "It contains the first verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6088
+Name        = "a music sheet"
+Description = "It contains the second verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6089
+Name        = "a music sheet"
+Description = "It contains the third verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6090
+Name        = "a music sheet"
+Description = "It contains the fourth and last verse of a hymn"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6091
+Name        = "a very noble-looking watch"
+Description = "Unfortunately it seems to be broken"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6092
+Name        = "a very noble-looking watch"
+Flags       = {Take,Expire}
+Attributes  = {Weight=50,ExpireTarget=6091,TotalExpireTime=259200} # TODO: Implement functionality like in tibia wiki
+
+TypeID      = 6093
+Name        = "a crystal ring"
+Description = "The initials E.S. are engraved on it"
+Flags       = {Take}
+Attributes  = {Weight=90}
+
+TypeID      = 6094
+Name        = "a thread tree"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 6095
+Name        = "a pirate shirt"
+Flags       = {Take,Armor}
+Attributes  = {Weight=2000,SlotType=BODY,ArmorValue=3}
+
+TypeID      = 6096
+Name        = "a pirate hat"
+Flags       = {Take,Armor}
+Attributes  = {Weight=1250,SlotType=HEAD,ArmorValue=3}
+
+TypeID      = 6097
+Name        = "a hook"
+Description = "It belonged once to a pirate"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 6098
+Name        = "an eye patch"
+Description = "It belonged once to a pirate"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=150}
+
+TypeID      = 6099
+Name        = "Brutus Bloodbeard's hat"
+Flags       = {Take}
+Attributes  = {Weight=1250}
+
+TypeID      = 6100
+Name        = "the Lethal Lissy's shirt"
+Flags       = {Take}
+Attributes  = {Weight=2000}
+
+TypeID      = 6101
+Name        = "Ron the Ripper's sabre"
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=2500,WeaponType=SWORD,Attack=12,Defense=10}
+
+TypeID      = 6102
+Name        = "Deadeye Devious' eye patch"
+Flags       = {Take}
+Attributes  = {Weight=150}
+
+TypeID      = 6103
+Name        = "an unholy boo"
+Flags       = {Take}
+Attributes  = {Weight=150}
+
+TypeID      = 6104
+Name        = "a jewel case"
+Flags       = {Container,Take}
+Attributes  = {Capacity=1,Weight=170}
+
+TypeID      = 6105
+Name        = "Striker's favourite pillow"
+Flags       = {Take}
+Attributes  = {Weight=1700}
+
+TypeID      = 6106
+Name        = "a bottle of whisper beer"
+Flags       = {Take}
+Attributes  = {Weight=300}
+
+TypeID      = 6107
+Name        = "a staff"
+Description = "It must be the one which Simon the Beggar talked about"
+Flags       = {Take}
+Attributes  = {Weight=3800}
+
+TypeID      = 6108
+Name        = "an atlas"
+Description = "It is filled with detailed maps"
+Flags       = {Take}
+Attributes  = {Weight=1300}
+
+TypeID      = 6109
+Name        = "a weapon rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6110}
+
+TypeID      = 6110
+Name        = "a weapon rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6109}
+
+TypeID      = 6111
+Name        = "an armor rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6112}
+
+TypeID      = 6112
+Name        = "an armor rack"
+Flags       = {Container,Unpass,Unlay,Rotate}
+Attributes  = {Capacity=20,RotateTarget=6111}
+
+TypeID      = 6113
+Name        = "a letter to Eremo"
+Flags       = {Take}
+Attributes  = {Weight=50}
+
+TypeID      = 6114
+Name        = "an armor rack kit"
+Description = "Use it in your house to construct an armor rack" # TODO: Implement like in tibia wiki
+Flags       = {Take,Unpass}
+Attributes  = {Weight=3500}
+
+TypeID      = 6115
+Name        = "a weapon rack kit"
+Description = "Use it in your house to construct a weapon rack" # TODO: Implement like in tibia wiki
+Flags       = {Take,Unpass}
+Attributes  = {Weight=3500}
+
+TypeID      = 6116
+Name        = "electric sparks"
+Flags       = {Bottom,Unmove,Avoid}
+Attributes  = {Brightness=2,LightColor=137}
+
+TypeID      = 6117
+Name        = "electric sparks"
+Flags       = {Bottom,Unmove,Avoid}
+Attributes  = {Brightness=2,LightColor=137}
+
+TypeID      = 6118
+Name        = "a treasure map"
+Description = "It obviously shows Treasure Island including a big, red cross"
+Flags       = {Unmove}
+
+TypeID      = 6119
+Name        = "a scroll"
+Flags       = {Take}
+Attributes  = {Weight=120}
+
+TypeID      = 6120
+Name        = "Dragha's spellbook"
+Description = "It apparently belonged to someone called Dragha, the apprentice of a voodoomaster"
+Flags       = {Take}
+Attributes  = {Weight=5800}
+
+TypeID      = 6121
+Name        = "a note pinned on the wall"
+Flags       = {Unmove}
+
+TypeID      = 6122
+Name        = "a note pinned on the wall"
+Flags       = {Unmove}
+
+TypeID      = 6123
+Name        = "a piano"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 6124
+Name        = "a damaged logbook"
+Description = "It must be the one which the explorer society requested"
+Flags       = {Take}
+Attributes  = {Weight=1100}
+
+TypeID      = 6125
+Name        = "a tortoise egg from Nargor"
+Description = "Handle with care and don't try to eat it" # TODO: Make it eatable and implement from quest details
+Flags       = {Take}
+Attributes  = {Weight=30}
+
+TypeID      = 6126
+Name        = "a peg leg"
+Description = "It belonged once to a pirate"
+Flags       = {Cumulative,Take}
+Attributes  = {Weight=500}
+
+TypeID      = 6127
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6128
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6129
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6130
+Name        = "a ramp"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=150}
+
+TypeID      = 6131
+Name        = "a tortoise shield"
+Flags       = {Take,Shield}
+Attributes  = {Weight=5200,Defense=26}

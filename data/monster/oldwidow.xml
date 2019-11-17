@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="The Old Widow" nameDescription="The Old Widow" race="venom" experience="2800" speed="99" manacost="0">
 	<health now="3550" max="3550" />
-	<look type="208" head="0" body="0" legs="0" feet="0" corpse="4038" />
+	<look type="208" head="0" body="0" legs="0" feet="0" corpse="5977" />
 	<targetchange interval="1000" chance="10" />
 	<targetstrategy nearest="70" weakest="20" mostdamage="0" random="10" />
 	<flags>

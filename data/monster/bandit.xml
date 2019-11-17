@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="bandit" nameDescription="a bandit" race="blood" experience="65" speed="50" manacost="450">
 	<health now="245" max="245" />
-	<look type="129" head="58" body="40" legs="24" feet="95" corpse="4240" />
+	<look type="129" head="58" body="40" legs="24" feet="95" corpse="6080" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

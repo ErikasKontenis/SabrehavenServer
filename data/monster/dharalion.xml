@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Dharalion" nameDescription="Dharalion" race="blood" experience="380" speed="72" manacost="0">
 	<health now="390" max="390" />
-	<look type="203" head="0" body="0" legs="0" feet="0" corpse="4160" />
+	<look type="203" head="0" body="0" legs="0" feet="0" corpse="6011" />
 	<targetchange interval="1000" chance="7" />
 	<targetstrategy nearest="10" weakest="10" mostdamage="20" random="60" />
 	<flags>

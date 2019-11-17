@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="efreet" nameDescription="an efreet" race="blood" experience="300" speed="77" manacost="0">
 	<health now="550" max="550" />
-	<look type="103" head="0" body="0" legs="0" feet="0" corpse="4218" />
+	<look type="103" head="0" body="0" legs="0" feet="0" corpse="6032" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

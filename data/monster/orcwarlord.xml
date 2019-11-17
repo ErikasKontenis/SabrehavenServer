@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="orc warlord" nameDescription="an orc warlord" race="blood" experience="670" speed="77" manacost="0">
 	<health now="950" max="950" />
-	<look type="2" head="0" body="0" legs="0" feet="0" corpse="4148" />
+	<look type="2" head="0" body="0" legs="0" feet="0" corpse="6008" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="15" mostdamage="15" random="0" />
 	<flags>

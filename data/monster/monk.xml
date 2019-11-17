@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="monk" nameDescription="a monk" race="blood" experience="200" speed="80" manacost="600">
 	<health now="240" max="240" />
-	<look type="57" head="0" body="0" legs="0" feet="0" corpse="4240" />
+	<look type="57" head="0" body="0" legs="0" feet="0" corpse="6080" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="20" mostdamage="10" random="0" />
 	<flags>

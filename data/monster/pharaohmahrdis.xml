@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="Mahrdis" nameDescription="Mahrdis" race="undead" experience="3050" speed="110" manacost="0">
 	<health now="3900" max="3900" />
-	<look type="86" head="0" body="0" legs="0" feet="0" corpse="4197" />
+	<look type="86" head="0" body="0" legs="0" feet="0" corpse="6025" />
 	<targetchange interval="1000" chance="3" />
 	<targetstrategy nearest="80" weakest="10" mostdamage="10" random="0" />
 	<flags>

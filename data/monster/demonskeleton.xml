@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="demon skeleton" nameDescription="a demon skeleton" race="undead" experience="240" speed="50" manacost="620">
 	<health now="400" max="400" />
-	<look type="37" head="0" body="0" legs="0" feet="0" corpse="3990" />
+	<look type="37" head="0" body="0" legs="0" feet="0" corpse="5963" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
 	<flags>

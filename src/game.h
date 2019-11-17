@@ -485,7 +485,6 @@ class Game
 		void setBedSleeper(BedItem* bed, uint32_t guid);
 		void removeBedSleeper(uint32_t guid);
 		bool reload(ReloadTypes_t reloadType);
-		void Game::RemoveCorpseOwner(Item* item);
 		Groups groups;
 		Map map;
 		Raids raids;

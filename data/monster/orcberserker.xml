@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="orc berserker" nameDescription="an orc berserker" race="blood" experience="195" speed="85" manacost="590">
 	<health now="210" max="210" />
-	<look type="8" head="0" body="0" legs="0" feet="0" corpse="4045" />
+	<look type="8" head="0" body="0" legs="0" feet="0" corpse="5980" />
 	<targetchange interval="1000" chance="10" />
 	<targetstrategy nearest="60" weakest="40" mostdamage="0" random="0" />
 	<flags>
