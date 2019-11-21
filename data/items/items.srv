@@ -10126,17 +10126,17 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2314
 Name        = "a big table"
-Flags       = {Destroy,Unpass,Height}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2315
 Name        = "a square table"
-Flags       = {Destroy,Unpass,Height}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2316
 Name        = "a small round table"
-Flags       = {Destroy,Unpass,Height}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2317
@@ -10149,7 +10149,7 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2319
 Name        = "a small table"
-Flags       = {Destroy,Unpass,Height}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3140}
 
 TypeID      = 2320
@@ -10655,22 +10655,22 @@ Attributes  = {Capacity=6}
 
 TypeID      = 2431
 Name        = "drawers"
-Flags       = {Container,Rotate,Unpass,Destroy,Height}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2434,DestroyTarget=3136}
 
 TypeID      = 2432
 Name        = "drawers"
-Flags       = {Container,Rotate,Unpass,Destroy,Height}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2431,DestroyTarget=3136}
 
 TypeID      = 2433
 Name        = "drawers"
-Flags       = {Container,Rotate,Unpass,Destroy,Height}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2432,DestroyTarget=3136}
 
 TypeID      = 2434
 Name        = "drawers"
-Flags       = {Container,Rotate,Unpass,Destroy,Height}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2433,DestroyTarget=3136}
 
 TypeID      = 2435
@@ -10860,7 +10860,7 @@ Attributes  = {Capacity=15,Weight=8000,DestroyTarget=3135}
 
 TypeID      = 2472
 Name        = "a chest"
-Flags       = {Container,Unpass,Take,Rotate,Destroy,Height}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2482,DestroyTarget=3137}
 
 TypeID      = 2473
@@ -10896,17 +10896,17 @@ Attributes  = {DisguiseTarget=2472}
 
 TypeID      = 2480
 Name        = "a chest"
-Flags       = {Container,Unpass,Take,Rotate,Destroy,Height}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2481,DestroyTarget=3137}
 
 TypeID      = 2481
 Name        = "a chest"
-Flags       = {Container,Unpass,Take,Rotate,Destroy,Height}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2472,DestroyTarget=3137}
 
 TypeID      = 2482
 Name        = "a chest"
-Flags       = {Container,Unpass,Take,Rotate,Destroy,Height}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2480,DestroyTarget=3137}
 
 TypeID      = 2483
@@ -11089,7 +11089,7 @@ Flags       = {Unmove}
 
 TypeID      = 2519
 Name        = "a barrel"
-Flags       = {Container,Unpass,Destroy,Height}
+Flags       = {Container,Destroy,Height,Avoid}
 Attributes  = {Capacity=25,DestroyTarget=3138}
 
 TypeID      = 2520
@@ -11109,7 +11109,7 @@ Attributes  = {FluidSource=WINE}
 
 TypeID      = 2523
 Name        = "a barrel"
-Flags       = {Container,Unpass,Destroy,Height}
+Flags       = {Container,Destroy,Height,Avoid}
 Attributes  = {Capacity=25,DestroyTarget=3135}
 
 TypeID      = 2524
