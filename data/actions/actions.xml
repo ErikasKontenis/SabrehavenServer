@@ -263,6 +263,7 @@
 	<action itemid="3730" script="misc/food.lua" />
 	<action itemid="3731" script="misc/food.lua" />
 	<action itemid="3732" script="misc/food.lua" />
+	<action itemid="5096" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />
@@ -278,6 +279,7 @@
 	<action itemid="1691" script="misc/doors.lua" />
 	<action itemid="5006" script="misc/doors.lua" />
 	<action itemid="5007" script="misc/doors.lua" />
+	<action itemid="5097" script="misc/doors.lua" />
 	
 	<!-- Level Doors -->
 	<action itemid="1646" script="misc/doors.lua" />
@@ -319,7 +321,7 @@
 	<action itemid="4912" script="misc/doors.lua" />
 	<action itemid="4913" script="misc/doors.lua" />
 	<action itemid="5082" script="misc/doors.lua" />
-	<action itemid="5084" script="misc/doors.lua" />
+	<action itemid="5098" script="misc/doors.lua" />
 	
 	<!-- Open Vertical Doors -->
 	<action itemid="1630" script="misc/doors.lua" />
@@ -360,4 +362,5 @@
 	<action itemid="4911" script="misc/doors.lua" />
 	<action itemid="5085" script="misc/doors.lua" />
 	<action itemid="2180" script="misc/doors.lua" />
+	<action itemid="5099" script="misc/doors.lua" />
 </actions>

@@ -23158,7 +23158,7 @@ Flags       = {Text,Take}
 Attributes  = {Weight=830}
 
 TypeID      = 5091
-Name        = "a banana tree" # TODO: Banana tree should be harvestable?
+Name        = "a banana tree"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 5092
@@ -23180,7 +23180,7 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 TypeID      = 5096
 Name        = "a mango"
 Flags       = {Cumulative,Take}
-Attributes  = {Nutrition=5,Weight=180}
+Attributes  = {Nutrition=4,Weight=180}
 
 TypeID      = 5097
 Name        = "a closed door"
@@ -23194,7 +23194,7 @@ Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}
 TypeID      = 5099
 Name        = "an open door"
 Flags       = {Top,Door,Unmove}
-
+# pradeti nuo cia: 5100
 TypeID      = 5100
 Name        = "a closed door"
 Flags       = {Bottom,Door,Unpass,Unmove,Unthrow,Unlay}

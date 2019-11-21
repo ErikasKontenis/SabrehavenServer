@@ -1,5 +1,5 @@
 local lockedDoors = {
-	1628, 1631, 1650, 1653, 1668, 1671, 1682, 1691, 5006, 5007
+	1628, 1631, 1650, 1653, 1668, 1671, 1682, 1691, 5006, 5007, 5097
 }
 
 local closedNormalDoors = {
@@ -23,6 +23,7 @@ local closedNormalDoors = {
 	[5084] = 5085,
 	[2177] = 2178,
 	[2179] = 2180,
+	[5098] = 5099,
 }
 
 local openVerticalDoors = {
@@ -65,6 +66,7 @@ local openHorizontalDoors = {
 	[4911] = 4912,
 	[5085] = 5084,
 	[2180] = 2179,
+	[5099] = 5098,
 }
 
 local levelDoors = {
