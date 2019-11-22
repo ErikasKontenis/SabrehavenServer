@@ -11,6 +11,11 @@ function onUse(player, item, fromPosition, target, toPosition)
 		target:decay()
 		Game.createItem(3605, 1, target:getPosition()) 
 		return true
+	elseif target:getId() == 5463 then
+		target:transform(5462, 1)
+		target:decay()
+		Game.createItem(5466, 1, target:getPosition()) 
+		return true
 	end
 	return doDestroyItem(target)
 end
