@@ -37,6 +37,12 @@ Name		= "lifefluid"
 TypeID		= 12
 Name		= "lemonade"
 
+TypeID		= 13
+Name		= "rum"
+
+TypeID		= 14
+Name		= "coconut milk"
+
 # --- end of server specific object types ---
 
 TypeID      = 100
@@ -24702,7 +24708,7 @@ Name        = "a fire bug"
 Description = "This strange creature has the tendency to set certain things on fire"
 Flags       = {UseEvent,MultiUse,Take}
 Attributes  = {Weight=3050,Brightness=3,LightColor=206}
-# pradeti nuo cia jau padariau, kad iseitu harvestinti sugar cane ir nepamirsti pridedineti naujus daiktus prie npc ir monstru, kurie jau egzistuoja
+
 TypeID      = 5468
 Name        = "a distilling machine"
 Flags       = {Bottom,Unpass,Unmove,Unlay}
@@ -24892,13 +24898,13 @@ Flags       = {Unpass,Unmove,Unlay}
 TypeID      = 5512
 Name        = "a distilling machine"
 Flags       = {Bottom,Unpass,Unmove,Unlay,Expire}
-Attributes  = {FluidSource=WINE,ExpireTarget=5468,TotalExpireTime=15} # TODO: FluidSource should be RUM
+Attributes  = {FluidSource=RUM,ExpireTarget=5468,TotalExpireTime=10}
 
 TypeID      = 5513
 Name        = "a distilling machine"
 Flags       = {Bottom,Unpass,Unmove,Unlay,Expire}
-Attributes  = {FluidSource=WINE,ExpireTarget=5469,TotalExpireTime=15} # TODO: FluidSource should be RUM
-
+Attributes  = {FluidSource=RUM,ExpireTarget=5469,TotalExpireTime=10}
+# pradeti nuo cia
 TypeID      = 5514
 Name        = "a closed door"
 Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}

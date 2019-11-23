@@ -135,6 +135,7 @@
 	<action itemid="4852" script="misc/ectoplasm_container.lua" />
 	<action itemid="3217" script="misc/letter_bag.lua" />
 	<action fromid="3603" toid="3605" script="misc/baking.lua" />
+	<action itemid="5466" script="misc/distilling_rum.lua" />
 	<action fromid="3264" toid="3276" script="misc/weapons.lua" />
 	<action fromid="3278" toid="3286" script="misc/weapons.lua" />
 	<action fromid="3288" toid="3297" script="misc/weapons.lua" />
