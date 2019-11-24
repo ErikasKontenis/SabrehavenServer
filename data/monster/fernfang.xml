@@ -71,5 +71,6 @@
 		<item id="3736" countmax="1" chance="90" /> <!-- a star herb -->
 		<item id="3012" countmax="1" chance="100" /> <!-- a wolf tooth chain -->
 		<item id="3037" countmax="1" chance="4" /> <!-- a yellow gem -->
+		<item id="5786" countmax="1" chance="13000" /> <!-- wooden whistle -->
 	</loot>
 </monster>

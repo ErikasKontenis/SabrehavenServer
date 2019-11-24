@@ -24904,7 +24904,7 @@ TypeID      = 5513
 Name        = "a distilling machine"
 Flags       = {Bottom,Unpass,Unmove,Unlay,Expire}
 Attributes  = {FluidSource=RUM,ExpireTarget=5469,TotalExpireTime=10}
-# pradeti nuo cia
+
 TypeID      = 5514
 Name        = "a closed door"
 Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
@@ -25021,7 +25021,7 @@ Attributes  = {ExpireTarget=0,TotalExpireTime=600}
 TypeID      = 5538
 Name        = "a rum cask"
 Flags       = {Unpass,Unmove,Unlay}
-Attributes  = {FluidSource=WINE} # TODO: FluidSource should be RUM
+Attributes  = {FluidSource=RUM}
 
 TypeID      = 5539
 Name        = "a dead carrion worm"
@@ -25081,7 +25081,7 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 5552
 Name        = "a rum flask"
-Flags       = {MultiUse,FluidContainer,Take} # TODO: make it useable
+Flags       = {MultiUse,FluidContainer,Take}
 Attributes  = {Weight=280}
 
 TypeID      = 5553
@@ -25584,14 +25584,14 @@ Attributes  = {ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 5668
 Name        = "a mysterious voodoo skull"
-Flags       = {Take}
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=1400}
 
 TypeID      = 5669
 Name        = "a enigmatic voodoo skull"
 Description = "It is not time yet"
 Flags       = {Take,Expire}
-Attributes  = {Weight=1400,ExpireTarget=5668,TotalExpireTime=72000} # TODO: make it useable like in wiki
+Attributes  = {Weight=1400,ExpireTarget=5668,TotalExpireTime=72000}
 
 TypeID      = 5670
 Name        = "a pirate statue"
@@ -25628,7 +25628,7 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 TypeID      = 5678
 Name        = "a tortoise egg"
 Flags       = {Cumulative,Take}
-Attributes  = {Nutrition=6,Weight=30} # TODO: make it eatable
+Attributes  = {Nutrition=8,Weight=30}
 
 TypeID      = 5679
 Name        = "a shell"
@@ -25766,7 +25766,7 @@ Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 5710
 Name        = "a light shovel"
-Flags       = {MultiUse,UseEvent,Take} # TODO: make to work as shovel
+Flags       = {MultiUse,UseEvent,Take}
 Attributes  = {Weight=1500}
 
 TypeID      = 5711
@@ -26109,8 +26109,8 @@ Attributes  = {MaxLength=99,Weight=1000}
 TypeID      = 5786
 Name        = "a wooden whistle"
 Flags       = {Take}
-Attributes  = {Weight=100} # TODO: implement music like in tibia wiki says
-
+Attributes  = {Weight=100}
+# pradzia nuo cia
 TypeID      = 5787
 Name        = "a training dummy"
 Flags       = {Unpass,Unmove,Unlay}
@@ -26130,7 +26130,7 @@ Flags       = {Unmove}
 TypeID      = 5791
 Name        = "a stuffed dragon"
 Flags       = {Take}
-Attributes  = {Weight=850} # TODO: implement like in tibia wiki says
+Attributes  = {Weight=850}
 
 TypeID      = 5792
 Name        = "a die"

@@ -538,6 +538,14 @@
 	<movevent event="AddItem" itemid="5258" tileitem="1" script="misc/floorchange.lua" />
 	<movevent event="StepIn" itemid="5259" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="5259" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="5544" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="5544" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="5691" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="5691" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="5731" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="5731" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="5763" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="5763" tileitem="1" script="misc/floorchange.lua" />
 	
 	<!-- Damage -->
 	<movevent event="StepIn" itemid="2145" script="misc/damage.lua" />
@@ -601,6 +609,8 @@
 	<movevent event="StepOut" itemid="5290" script="misc/doors.lua" />
 	<movevent event="StepOut" itemid="5292" script="misc/doors.lua" />
 	<movevent event="StepOut" itemid="5294" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="5746" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="5748" script="misc/doors.lua" />
 	
 	<!-- Magic Fields -->
 	<movevent event="StepIn" itemid="1998"  function="onStepInField" />

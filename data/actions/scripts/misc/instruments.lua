@@ -8,6 +8,15 @@ function onUse(player, item, fromPosition, target, toPosition)
 		item:getPosition():sendMagicEffect(CONST_ME_SOUND_PURPLE)
 	elseif item:getId() == 3219 then
 		item:getPosition():sendMagicEffect(19)
+	elseif item:getId() == 5786 then
+		Game.createMonster("wolf", player:getPosition())
+		local random = math.random(1,10)
+		if random > 3 then -- destroy 70% chance
+			item:getPosition():sendMagicEffect(CONST_ME_SOUND_RED)
+			item:remove(1)
+		else
+			item:getPosition():sendMagicEffect(CONST_ME_SOUND_YELLOW)
+		end
 	end
 	
 	return true
