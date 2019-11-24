@@ -720,7 +720,8 @@ FluidNames fluidNames[] = {
 	{"manafluid",		FLUID_MANAFLUID},
 	{"lifefluid",		FLUID_LIFEFLUID},
 	{"lemonade",		FLUID_LEMONADE},
-	{"rum",				FLUID_RUM}
+	{"rum",				FLUID_RUM},
+	{"coconutmilk",		FLUID_COCONUTMILK}
 };
 
 MagicEffectClasses getMagicEffect(const std::string& strValue)

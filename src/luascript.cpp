@@ -1408,6 +1408,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(FLUID_LIFEFLUID)
 	registerEnum(FLUID_LEMONADE)
 	registerEnum(FLUID_RUM)
+	registerEnum(FLUID_COCONUTMILK)
 
 	registerEnum(TALKTYPE_SAY)
 	registerEnum(TALKTYPE_WHISPER)

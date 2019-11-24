@@ -21,7 +21,9 @@ local messages = {
 	[FLUID_MILK] = "Mmmh.",
 	[FLUID_MANAFLUID] = "Aaaah...",
 	[FLUID_LIFEFLUID] = "Aaaah...",
-	[FLUID_LEMONADE] = "Mmmh."
+	[FLUID_LEMONADE] = "Mmmh.",
+	[FLUID_RUM] = "Aah...",
+	[FLUID_COCONUTMILK] = "Mmmh."
 }
 
 function onUse(player, item, fromPosition, target, toPosition)
@@ -43,7 +45,7 @@ function onUse(player, item, fromPosition, target, toPosition)
 			player:sendCancelMessage("It is empty.")
 		else
 			local self = target == player
-			if self and item:getFluidType() == FLUID_BEER or item:getFluidType() == FLUID_WINE then
+			if self and item:getFluidType() == FLUID_BEER or item:getFluidType() == FLUID_WINE or item:getFluidType() == FLUID_RUM then
 				player:addCondition(drunk)
 			elseif self and item:getFluidType() == FLUID_SLIME then
 				player:addCondition(slime)
