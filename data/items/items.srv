@@ -26226,7 +26226,8 @@ Flags       = {Take}
 Attributes  = {Weight=30}
 
 TypeID      = 5810
-Name        = "a pirate voodoo doll"
+Name        = "a voodoo doll"
+Description = "It looks like a small pirate"
 Flags       = {Take}
 Attributes  = {Weight=650}
 
@@ -26242,7 +26243,7 @@ Attributes  = {ChangeTarget=5813,Weight=2200,Brightness=3,LightColor=206,ExpireT
 TypeID      = 5813
 Name        = "a skull candle"
 Flags       = {ChangeUse,Take,ExpireStop}
-Attributes  = {ChangeTarget=5812,Weight=2200,Brightness=0,LightColor=215} # TODO: implement like in tibia wiki
+Attributes  = {ChangeTarget=5812,Weight=2200,Brightness=0,LightColor=215}
 
 TypeID      = 5814
 Name        = "small lava cracks"
@@ -26473,7 +26474,7 @@ Flags       = {Unmove}
 
 TypeID      = 5864
 Name        = "" # this is nothing in client
-
+# pradzia nuo cia jau reikia implementuoti juiceri
 TypeID      = 5865
 Name        = "a juice squeezer"
 Flags       = {Take}
