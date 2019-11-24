@@ -646,6 +646,8 @@ MagicEffectNames magicEffectNames[] = {
 	{"purplenote",		CONST_ME_SOUND_PURPLE},
 	{"bluenote",		CONST_ME_SOUND_BLUE},
 	{"whitenote",		CONST_ME_SOUND_WHITE},
+	{"bubbles",		CONST_ME_BUBBLES},
+	{"dice",		CONST_ME_CRAPS},
 };
 
 ShootTypeNames shootTypeNames[] = {

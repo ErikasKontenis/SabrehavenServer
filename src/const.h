@@ -50,6 +50,8 @@ enum MagicEffectClasses : uint8_t {
 	CONST_ME_SOUND_PURPLE = 23,
 	CONST_ME_SOUND_BLUE = 24,
 	CONST_ME_SOUND_WHITE = 25,
+	CONST_ME_BUBBLES = 26,
+	CONST_ME_CRAPS = 27,
 };
 
 enum ShootType_t : uint8_t {

@@ -146,6 +146,7 @@
 	<action fromid="3331" toid="3348" script="misc/weapons.lua" />
 	<action itemid="3208" script="misc/weapons.lua" />
 	<action itemid="3059" script="misc/spellbook.lua" />
+	<action fromid="5792" toid="5797" script="misc/dice.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />

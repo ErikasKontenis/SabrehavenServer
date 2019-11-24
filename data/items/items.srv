@@ -26110,7 +26110,7 @@ TypeID      = 5786
 Name        = "a wooden whistle"
 Flags       = {Take}
 Attributes  = {Weight=100}
-# pradzia nuo cia
+
 TypeID      = 5787
 Name        = "a training dummy"
 Flags       = {Unpass,Unmove,Unlay}
@@ -26129,37 +26129,37 @@ Flags       = {Unmove}
 
 TypeID      = 5791
 Name        = "a stuffed dragon"
-Flags       = {Take}
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=850}
 
 TypeID      = 5792
-Name        = "a die"
-Flags       = {Take}
-Attributes  = {Weight=200} # TODO: implement like in tibia wiki says
+Name        = "a dice"
+Flags       = {UseEvent,Take}
+Attributes  = {Weight=200}
 
 TypeID      = 5793
-Name        = "a die"
-Flags       = {Take}
+Name        = "a dice"
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=200}
 
 TypeID      = 5794
-Name        = "a die"
-Flags       = {Take}
+Name        = "a dice"
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=200}
 
 TypeID      = 5795
-Name        = "a die"
-Flags       = {Take}
+Name        = "a dice"
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=200}
 
 TypeID      = 5796
-Name        = "a die"
-Flags       = {Take}
+Name        = "a dice"
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=200}
 
 TypeID      = 5797
-Name        = "a die"
-Flags       = {Take}
+Name        = "a dice"
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=200}
 
 TypeID      = 5798
