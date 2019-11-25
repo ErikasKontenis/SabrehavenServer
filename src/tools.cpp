@@ -220,6 +220,7 @@ uint8_t getLiquidColor(uint8_t type)
 		break;
 	case FLUID_URINE:
 	case FLUID_LEMONADE:
+	case FLUID_FRUITJUICE:
 		result = FLUID_COLOR_YELLOW;
 		break;
 	default:
@@ -723,7 +724,8 @@ FluidNames fluidNames[] = {
 	{"lifefluid",		FLUID_LIFEFLUID},
 	{"lemonade",		FLUID_LEMONADE},
 	{"rum",				FLUID_RUM},
-	{"coconutmilk",		FLUID_COCONUTMILK}
+	{"coconutmilk",		FLUID_COCONUTMILK},
+	{"fruitjuice",		FLUID_FRUITJUICE}
 };
 
 MagicEffectClasses getMagicEffect(const std::string& strValue)

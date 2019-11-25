@@ -126,6 +126,7 @@ enum FluidTypes_t : uint8_t
 	FLUID_LEMONADE,
 	FLUID_RUM,
 	FLUID_COCONUTMILK,
+	FLUID_FRUITJUICE,
 };
 
 enum FluidColor_t : uint8_t

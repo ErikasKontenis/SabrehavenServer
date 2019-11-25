@@ -59,6 +59,7 @@ VANISH,!                 -> "Asha Thrazi."
 "strawberry"      -> Type=3591, Amount=1, Price=1, "Do you want to buy a strawberry for %P gold?", Topic=1
 "carrot"          -> Type=3595, Amount=1, Price=3, "Do you want to buy a carrot for %P gold?", Topic=1
 "pumpkin"         -> Type=3594, Amount=1, Price=10, "Do you want to buy a pumpkin for %P gold?", Topic=1
+"juice squeezer"  -> Type=5865, Amount=1, Price=100, "Do you want to buy a juice squeezer for %P gold?", Topic=1
 
 %1,1<%1,"corncob"         -> Type=3597, Amount=%1, Price=3*%1, "Do you want to buy %A corncobs for %P gold?", Topic=1
 %1,1<%1,"cherr"           -> Type=3590, Amount=%1, Price=1*%1, "Do you want to buy %A cherries for %P gold?", Topic=1
@@ -68,6 +69,7 @@ VANISH,!                 -> "Asha Thrazi."
 %1,1<%1,"strawberries"    -> Type=3591, Amount=%1, Price=1*%1, "Do you want to buy %A strawberries for %P gold?", Topic=1
 %1,1<%1,"carrot"          -> Type=3595, Amount=%1, Price=3*%1, "Do you want to buy %A carrots for %P gold?", Topic=1
 %1,1<%1,"pumpkin"         -> Type=3594, Amount=%1, Price=10*%1, "Do you want to buy %A pumpkins for %P gold?", Topic=1
+%1,1<%1,"juice squeezer"  -> Type=5865, Amount=%1, Price=100*%1, "Do you want to buy %A juice squeezers for %P gold?", Topic=1
 
 "bugmilk" -> Type=2875, Data=9, Amount=1, Price=15, "Do you want to buy a bottle of bugmilk for %P gold?", Topic=1
 

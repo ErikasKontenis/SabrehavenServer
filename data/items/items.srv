@@ -43,6 +43,9 @@ Name		= "rum"
 TypeID		= 14
 Name		= "coconut milk"
 
+TypeID		= 15
+Name		= "fruit juice"
+
 # --- end of server specific object types ---
 
 TypeID      = 100
@@ -26474,11 +26477,11 @@ Flags       = {Unmove}
 
 TypeID      = 5864
 Name        = "" # this is nothing in client
-# pradzia nuo cia jau reikia implementuoti juiceri
+
 TypeID      = 5865
 Name        = "a juice squeezer"
 Flags       = {Take}
-Attributes  = {Weight=1500} # TODO: Implement like in tibia wiki
+Attributes  = {Weight=1500}
 
 TypeID      = 5866
 Name        = "rubble"
@@ -26515,7 +26518,7 @@ Flags       = {Unmove}
 TypeID      = 5874
 Name        = "a poison trickle"
 Flags       = {Unmove}
-
+# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
 TypeID      = 5875
 Name        = "sniper gloves"
 Description = "They are the pride of the paladin guild"

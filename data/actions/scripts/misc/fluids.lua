@@ -23,7 +23,8 @@ local messages = {
 	[FLUID_LIFEFLUID] = "Aaaah...",
 	[FLUID_LEMONADE] = "Mmmh.",
 	[FLUID_RUM] = "Aah...",
-	[FLUID_COCONUTMILK] = "Mmmh."
+	[FLUID_COCONUTMILK] = "Mmmh.",
+	[FLUID_FRUITJUICE] = "Mmmh."
 }
 
 function onUse(player, item, fromPosition, target, toPosition)
@@ -34,8 +35,7 @@ function onUse(player, item, fromPosition, target, toPosition)
 			item:transform(item:getId(), 0)
 			return true
 		elseif target:getFluidType() ~= 0 and item:getFluidType() == 0 then
-			target:transform(target:getId(), 0)
-			item:transform(item:getId(), target:getFluidType())
+			player:sendCancelMessage("You cannot use this object.")
 			return true
 		end
 	end

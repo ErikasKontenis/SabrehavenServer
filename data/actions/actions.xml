@@ -176,6 +176,7 @@
 	<action itemid="3457" script="misc/shovel.lua" />
 	<action itemid="5710" script="misc/shovel.lua" />
 	<action itemid="3483" allowfaruse="1" script="misc/fishing_rod.lua" />
+	<action itemid="5865" script="misc/juice_squeezer.lua" />
 	
 	<!-- Miscellaneous -->
 	<action itemid="4867" script="misc/botanist_container.lua" />
@@ -214,6 +215,7 @@
 	<action itemid="2524" script="misc/fluids.lua" />
 	<action itemid="2873" script="misc/fluids.lua" />
 	<action itemid="2874" script="misc/fluids.lua" />
+	<action itemid="2875" script="misc/fluids.lua" />
 	<action itemid="2876" script="misc/fluids.lua" />
 	<action itemid="2877" script="misc/fluids.lua" />
 	<action itemid="2879" script="misc/fluids.lua" />
