@@ -56,6 +56,7 @@
 		<item id="3031" countmax="20" chance="600" /> <!-- a gold coin -->
 		<item id="3276" countmax="1" chance="90" /> <!-- a hatchet -->
 		<item id="3577" countmax="1" chance="100" /> <!-- meat -->
-		<item id="5804" countmax="1" chance="100000" /> <!-- nose ring -->
+		<item id="5804" countmax="1" chance="1000" /> <!-- nose ring -->
+		<item id="5878" countmax="1" chance="600" /> <!-- minotaur leather -->
 	</loot>
 </monster>

@@ -51,5 +51,6 @@
 		<item id="3559" countmax="1" chance="150" /> <!-- leather legs -->
 		<item id="2920" countmax="2" chance="300" /> <!-- a torch -->
 		<item id="3073" countmax="1" chance="5" /> <!-- a wand of cosmic energy -->
+		<item id="5878" countmax="1" chance="10" /> <!-- minotaur leather -->
 	</loot>
 </monster>

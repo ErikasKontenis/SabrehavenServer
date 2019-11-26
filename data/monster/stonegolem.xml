@@ -35,5 +35,6 @@
 		<item id="1781" countmax="4" chance="130" /> <!-- a small stone -->
 		<item id="3409" countmax="1" chance="70" /> <!-- a steel shield -->
 		<item id="2920" countmax="1" chance="55" /> <!-- a torch -->
+		<item id="5880" countmax="1" chance="7" /> <!-- iron ore -->
 	</loot>
 </monster>

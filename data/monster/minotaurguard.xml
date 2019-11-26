@@ -35,5 +35,6 @@
 		<item id="3276" countmax="1" chance="100" /> <!-- a hatchet -->
 		<item id="3559" countmax="1" chance="150" /> <!-- leather legs -->
 		<item id="3577" countmax="1" chance="100" /> <!-- meat -->
+		<item id="5878" countmax="1" chance="10" /> <!-- minotaur leather -->
 	</loot>
 </monster>

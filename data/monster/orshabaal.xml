@@ -119,6 +119,6 @@
 		<item id="3002" countmax="1" chance="1" /> <!-- a voodoo doll -->
 		<item id="3069" countmax="1" chance="35" /> <!-- a volcanic rod -->
 		<item id="3026" countmax="15" chance="125" /> <!-- a white pearl -->
-		<item id="5808" countmax="1" chance="6666" /> <!-- orshabaal's brain -->
+		<item id="5808" countmax="1" chance="100" /> <!-- orshabaal's brain -->
 	</loot>
 </monster>

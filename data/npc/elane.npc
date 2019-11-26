@@ -2,7 +2,7 @@
 # elane.npc: Datenbank für die Paladinin Elane
 
 Name = "Elane"
-Outfit = (137,113-63-120-119)
+Outfit = (137,113-63-120-119-2)
 Home = [32343,32239,7]
 Radius = 4
 
@@ -47,6 +47,7 @@ VANISH,!                   -> "Bye."
 "lugri"     -> "A follower of evil that will get what he deserves one day."
 "excalibug" -> "A weapon of myth. I don't believe that this weapon exists."
 "news"      -> "I am a paladin, not a storyteller."
+"Sniper gloves"      -> "We are always looking for sniper gloves. They are supposed to raise accuracy. If you find a pair, bring them here. Maybe I can offer you a nice trade."
 
 "member"        -> "Every paladin profits from his vocation. It has many advantages to be a paladin."
 "profit"        -> "We will help you to improve your skills. Besides I offer spells for paladins."

@@ -51,5 +51,6 @@
 		<item id="3059" countmax="1" chance="4" /> <!-- a spellbook -->
 		<item id="3362" countmax="1" chance="200" /> <!-- studded legs -->
 		<item id="3723" countmax="2" chance="600" /> <!-- a white mushroom -->
+		<item id="5880" countmax="1" chance="1" /> <!-- Iron Ore -->
 	</loot>
 </monster>

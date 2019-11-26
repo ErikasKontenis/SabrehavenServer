@@ -26518,7 +26518,7 @@ Flags       = {Unmove}
 TypeID      = 5874
 Name        = "a poison trickle"
 Flags       = {Unmove}
-# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
+
 TypeID      = 5875
 Name        = "sniper gloves"
 Description = "They are the pride of the paladin guild"
@@ -26549,7 +26549,7 @@ TypeID      = 5880
 Name        = "an iron ore"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=200}
-
+# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
 TypeID      = 5881
 Name        = "a lizard scale"
 Flags       = {Cumulative,Take}

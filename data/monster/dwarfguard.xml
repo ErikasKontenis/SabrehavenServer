@@ -38,5 +38,6 @@
 		<item id="3033" countmax="1" chance="1" /> <!-- a small amethyst -->
 		<item id="3351" countmax="1" chance="20" /> <!-- a steel helmet -->
 		<item id="3723" countmax="2" chance="550" /> <!-- a white mushroom -->
+		<item id="5880" countmax="1" chance="8" /> <!-- iron ore -->
 	</loot>
 </monster>

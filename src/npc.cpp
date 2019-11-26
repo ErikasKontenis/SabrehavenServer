@@ -143,6 +143,7 @@ bool Npc::load()
 				currentOutfit.lookBody = c[1];
 				currentOutfit.lookLegs = c[2];
 				currentOutfit.lookFeet = c[3];
+				currentOutfit.lookAddons = c[4];
 			} else {
 				currentOutfit.lookTypeEx = script.readNumber();
 			}
