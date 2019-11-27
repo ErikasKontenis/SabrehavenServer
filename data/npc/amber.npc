@@ -2,7 +2,7 @@
 # amber.npc: Datenbank für die Abenteurerin Amber
 
 Name = "Amber"
-Outfit = (137,59-113-132-76)
+Outfit = (136,59-113-132-76-1)
 Home = [32103,32182,8]
 Radius = 4
 

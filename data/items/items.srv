@@ -26549,7 +26549,7 @@ TypeID      = 5880
 Name        = "an iron ore"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=200}
-# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
+
 TypeID      = 5881
 Name        = "a lizard scale"
 Flags       = {Cumulative,Take}
@@ -26564,7 +26564,7 @@ TypeID      = 5883
 Name        = "an ape fur"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=120}
-
+# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
 TypeID      = 5884
 Name        = "a spirit container"
 Description = "It contains pure fighting spirit"
