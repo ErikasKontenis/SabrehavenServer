@@ -61,5 +61,6 @@
 		<item id="3409" countmax="1" chance="150" /> <!-- a steel shield -->
 		<item id="3071" countmax="1" chance="10" /> <!-- a wand of inferno -->
 		<item id="5877" countmax="1" chance="10" /> <!-- green dragon leather -->
+		<item id="5920" countmax="1" chance="10" /> <!-- green dragon scale -->
 	</loot>
 </monster>

@@ -53,5 +53,6 @@
 		<item id="3732" countmax="1" chance="15" /> <!-- a green mushroom -->
 		<item id="3357" countmax="1" chance="80" /> <!-- a plate armor -->
 		<item id="3114" countmax="1" chance="200" /> <!-- a skull -->
+		<item id="5925" countmax="1" chance="10" /> <!-- a hardened bone -->
 	</loot>
 </monster>

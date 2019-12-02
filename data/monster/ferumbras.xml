@@ -132,5 +132,7 @@
 		<item id="3002" countmax="1" chance="1" /> <!-- a voodoo doll -->
 		<item id="3069" countmax="1" chance="35" /> <!-- a volcanic rod -->
 		<item id="3026" countmax="15" chance="125" /> <!-- a white pearl -->
+		<item id="5944" countmax="8" chance="125" /> <!-- a soul orb -->
+		<item id="5903" countmax="1" chance="1000" /> <!-- Ferumbras' hat -->
 	</loot>
 </monster>

@@ -78,5 +78,6 @@
 		<item id="3032" countmax="1" chance="110" /> <!-- a small emerald -->
 		<item id="3049" countmax="1" chance="14" /> <!-- a stealth ring -->
 		<item id="3034" countmax="1" chance="35" /> <!-- a talon -->
+		<item id="5954" countmax="1" chance="100" /> <!-- a demon horn -->
 	</loot>
 </monster>

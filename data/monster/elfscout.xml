@@ -44,5 +44,6 @@
 		<item id="3378" countmax="1" chance="120" /> <!-- a studded armor -->
 		<item id="3376" countmax="1" chance="80" /> <!-- a studded helmet -->
 		<item id="2901" countmax="1" chance="140" /> <!-- a waterskin -->
+		<item id="5921" countmax="1" chance="10" /> <!-- a heaven blossom -->
 	</loot>
 </monster>

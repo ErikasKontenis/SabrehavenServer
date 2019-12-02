@@ -61,5 +61,6 @@
 		<item id="3265" countmax="1" chance="15" /> <!-- a two handed sword -->
 		<item id="3279" countmax="1" chance="10" /> <!-- a war hammer -->
 		<item id="3004" countmax="1" chance="50" /> <!-- a wedding ring -->
+		<item id="5911" countmax="1" chance="25" /> <!-- a red piece of cloth -->
 	</loot>
 </monster>

@@ -50,5 +50,6 @@
 		<item id="3017" countmax="1" chance="40" /> <!-- a silver brooch -->
 		<item id="3045" countmax="1" chance="50" /> <!-- a strange talisman -->
 		<item id="3492" countmax="3" chance="700" /> <!-- a worm -->
+		<item id="5914" countmax="1" chance="10" /> <!-- a yellow piece of cloth -->
 	</loot>
 </monster>

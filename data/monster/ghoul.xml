@@ -40,5 +40,6 @@
 		<item id="2920" countmax="1" chance="600" /> <!-- a torch -->
 		<item id="3367" countmax="1" chance="50" /> <!-- a viking helmet -->
 		<item id="3492" countmax="6" chance="800" /> <!-- a worm -->
+		<item id="5913" countmax="1" chance="10" /> <!-- a brown piece of cloth -->
 	</loot>
 </monster>

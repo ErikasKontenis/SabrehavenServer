@@ -65,5 +65,6 @@
 		<item id="3289" countmax="1" chance="110" /> <!-- a staff -->
 		<item id="3073" countmax="1" chance="10" /> <!-- a wand of cosmic energy -->
 		<item id="3037" countmax="1" chance="2" /> <!-- a yellow gem -->
+		<item id="5922" countmax="1" chance="25" /> <!-- a holy orchid -->
 	</loot>
 </monster>

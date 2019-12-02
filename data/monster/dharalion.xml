@@ -66,5 +66,6 @@
 		<item id="3289" countmax="1" chance="110" /> <!-- a staff -->
 		<item id="3037" countmax="1" chance="4" /> <!-- a yellow gem -->
 		<item id="5805" countmax="1" chance="65" /> <!-- a golden goblet -->
+		<item id="5922" countmax="1" chance="1000" /> <!-- a holy orchid -->
 	</loot>
 </monster>
