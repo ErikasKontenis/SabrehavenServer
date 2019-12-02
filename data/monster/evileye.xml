@@ -79,5 +79,6 @@
 		<item id="3409" countmax="1" chance="40" /> <!-- a steel shield -->
 		<item id="3265" countmax="1" chance="40" /> <!-- a two handed sword -->
 		<item id="3412" countmax="1" chance="15" /> <!-- a wooden shield -->
+		<item id="5898" countmax="1" chance="1000" /> <!-- beholder eye -->
 	</loot>
 </monster>

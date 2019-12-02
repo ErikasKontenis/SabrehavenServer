@@ -59,5 +59,6 @@
 		<item id="3351" countmax="1" chance="100" /> <!-- a steel helmet -->
 		<item id="3053" countmax="1" chance="14" /> <!-- a time ring -->
 		<item id="5879" countmax="1" chance="500" /> <!-- spider silk -->
+		<item id="5886" countmax="1" chance="6" /> <!-- spool of yarn -->
 	</loot>
 </monster>

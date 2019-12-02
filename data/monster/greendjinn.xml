@@ -60,5 +60,6 @@
 		<item id="3574" countmax="1" chance="1" /> <!-- a mystic turban -->
 		<item id="3032" countmax="4" chance="27" /> <!-- a small emerald -->
 		<item id="2933" countmax="1" chance="75" /> <!-- a small oil lamp -->
+		<item id="5910" countmax="1" chance="25" /> <!-- green piece of cloth -->
 	</loot>
 </monster>

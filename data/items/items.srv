@@ -26564,7 +26564,7 @@ TypeID      = 5883
 Name        = "an ape fur"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=120}
-# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
+
 TypeID      = 5884
 Name        = "a spirit container"
 Description = "It contains pure fighting spirit"
@@ -26718,7 +26718,7 @@ TypeID      = 5910
 Name        = "a green piece of cloth"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=500}
-
+# pradeti nuo cia ir nepamirsti implementuoti visiem npc ir monstram
 TypeID      = 5911
 Name        = "a red piece of cloth"
 Flags       = {Cumulative,Take}
