@@ -28,5 +28,6 @@
 		<item id="3606" countmax="1" chance="10" /> <!-- an egg -->
 		<item id="3577" countmax="2" chance="20" /> <!-- meat -->
 		<item id="3492" countmax="3" chance="300" /> <!-- a worm -->
+		<item id="5890" countmax="1" chance="300" /> <!-- chicken feather -->
 	</loot>
 </monster>

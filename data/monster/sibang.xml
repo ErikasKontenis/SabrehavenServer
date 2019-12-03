@@ -43,5 +43,6 @@
 		<item id="3593" countmax="1" chance="100" /> <!-- a melon -->
 		<item id="3586" countmax="5" chance="200" /> <!-- an orange -->
 		<item id="1781" countmax="3" chance="300" /> <!-- a small stone -->
+		<item id="5883" countmax="1" chance="8" /> <!-- ape fur -->
 	</loot>
 </monster>

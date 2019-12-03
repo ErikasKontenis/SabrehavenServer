@@ -60,5 +60,6 @@
 		<item id="3294" countmax="1" chance="86" /> <!-- a short sword -->
 		<item id="3114" countmax="1" chance="160" /> <!-- a skull -->
 		<item id="3324" countmax="1" chance="4" /> <!-- a skull staff -->
+		<item id="5809" countmax="1" chance="1000" /> <!-- soul stone -->
 	</loot>
 </monster>

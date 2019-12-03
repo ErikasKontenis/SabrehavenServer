@@ -94,6 +94,7 @@
 	<action fromid="2948" toid="2950" script="misc/instruments.lua" />
 	<action fromid="2952" toid="2965" script="misc/instruments.lua" />
 	<action itemid="3219" script="misc/instruments.lua" />
+	<action itemid="5786" script="misc/instruments.lua" />
 	
 	<!-- Strange Levers -->
 	<action fromid="2566" toid="2567" script="misc/strange_lever.lua" />
@@ -103,6 +104,7 @@
 	<action itemid="435" script="misc/teleporters.lua" />
 	<action itemid="1948" script="misc/teleporters.lua" />
 	<action itemid="1968" script="misc/teleporters.lua" />
+	<action itemid="5542" script="misc/teleporters.lua" />
 	
 	<!-- Special Right -->
 	<action itemid="372" script="misc/special_rights.lua" />
@@ -118,7 +120,6 @@
 	
 	<!-- Fun -->
 	<action itemid="611" script="misc/snowheap.lua" />
-	<action itemid="5080" script="misc/panda_teddy.lua" />
 	<action itemid="2974" script="misc/water_pipe.lua" />
 	<action itemid="2976" script="misc/birdcage.lua" />
 	<action itemid="3103" script="misc/cornucopia.lua" />
@@ -135,6 +136,7 @@
 	<action itemid="4852" script="misc/ectoplasm_container.lua" />
 	<action itemid="3217" script="misc/letter_bag.lua" />
 	<action fromid="3603" toid="3605" script="misc/baking.lua" />
+	<action itemid="5466" script="misc/distilling_rum.lua" />
 	<action fromid="3264" toid="3276" script="misc/weapons.lua" />
 	<action fromid="3278" toid="3286" script="misc/weapons.lua" />
 	<action fromid="3288" toid="3297" script="misc/weapons.lua" />
@@ -144,6 +146,13 @@
 	<action fromid="3331" toid="3348" script="misc/weapons.lua" />
 	<action itemid="3208" script="misc/weapons.lua" />
 	<action itemid="3059" script="misc/spellbook.lua" />
+	<action fromid="5792" toid="5797" script="misc/dice.lua" />
+	<action itemid="3114" script="misc/skull_candle.lua" />
+	
+	<!-- Dolls -->
+	<action itemid="5080" script="misc/dolls.lua" />
+	<action itemid="5668" script="misc/dolls.lua" />
+	<action itemid="5791" script="misc/dolls.lua" />
 	
 	<!-- Keys -->
 	<action fromid="2967" toid="2973" script="misc/key.lua" />
@@ -165,11 +174,14 @@
 	<action itemid="4872" script="misc/ice_pick.lua" />
 	<action itemid="3456" script="misc/pick.lua" />
 	<action itemid="3457" script="misc/shovel.lua" />
+	<action itemid="5710" script="misc/shovel.lua" />
 	<action itemid="3483" allowfaruse="1" script="misc/fishing_rod.lua" />
+	<action itemid="5865" script="misc/juice_squeezer.lua" />
 	
 	<!-- Miscellaneous -->
 	<action itemid="4867" script="misc/botanist_container.lua" />
 	<action itemid="4863" script="misc/butterfly_conservation_kit.lua" />
+	<action itemid="5467" script="misc/fire_bug.lua" />
 	
 	<!-- Chests -->
 	<action itemid="2479" script="misc/chests.lua" />
@@ -203,6 +215,7 @@
 	<action itemid="2524" script="misc/fluids.lua" />
 	<action itemid="2873" script="misc/fluids.lua" />
 	<action itemid="2874" script="misc/fluids.lua" />
+	<action itemid="2875" script="misc/fluids.lua" />
 	<action itemid="2876" script="misc/fluids.lua" />
 	<action itemid="2877" script="misc/fluids.lua" />
 	<action itemid="2879" script="misc/fluids.lua" />
@@ -222,6 +235,7 @@
 	<action itemid="3478" script="misc/fluids.lua" />
 	<action itemid="3479" script="misc/fluids.lua" />
 	<action itemid="3480" script="misc/fluids.lua" />
+	<action itemid="5552" script="misc/fluids.lua" />
 
 	<!-- Food -->
 	<action itemid="3250" script="misc/food.lua" />
@@ -263,6 +277,8 @@
 	<action itemid="3730" script="misc/food.lua" />
 	<action itemid="3731" script="misc/food.lua" />
 	<action itemid="3732" script="misc/food.lua" />
+	<action itemid="5096" script="misc/food.lua" />
+	<action itemid="5678" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />
@@ -278,6 +294,18 @@
 	<action itemid="1691" script="misc/doors.lua" />
 	<action itemid="5006" script="misc/doors.lua" />
 	<action itemid="5007" script="misc/doors.lua" />
+	<action itemid="5097" script="misc/doors.lua" />
+	<action itemid="5106" script="misc/doors.lua" />
+	<action itemid="5115" script="misc/doors.lua" />
+	<action itemid="5124" script="misc/doors.lua" />
+	<action itemid="5133" script="misc/doors.lua" />
+	<action itemid="5136" script="misc/doors.lua" />
+	<action itemid="5139" script="misc/doors.lua" />
+	<action itemid="5142" script="misc/doors.lua" />
+	<action itemid="5277" script="misc/doors.lua" />
+	<action itemid="5280" script="misc/doors.lua" />
+	<action itemid="5732" script="misc/doors.lua" />
+	<action itemid="5735" script="misc/doors.lua" />
 	
 	<!-- Level Doors -->
 	<action itemid="1646" script="misc/doors.lua" />
@@ -288,6 +316,12 @@
 	<action itemid="1680" script="misc/doors.lua" />
 	<action itemid="1687" script="misc/doors.lua" />
 	<action itemid="1696" script="misc/doors.lua" />
+	<action itemid="5102" script="misc/doors.lua" />
+	<action itemid="5111" script="misc/doors.lua" />
+	<action itemid="5120" script="misc/doors.lua" />
+	<action itemid="5129" script="misc/doors.lua" />
+	<action itemid="5291" script="misc/doors.lua" />
+	<action itemid="5293" script="misc/doors.lua" />
 	
 	<!-- Quest Doors -->
 	<action itemid="1642" script="misc/doors.lua" />
@@ -298,6 +332,14 @@
 	<action itemid="1676" script="misc/doors.lua" />
 	<action itemid="1689" script="misc/doors.lua" />
 	<action itemid="1698" script="misc/doors.lua" />
+	<action itemid="5104" script="misc/doors.lua" />
+	<action itemid="5113" script="misc/doors.lua" />
+	<action itemid="5122" script="misc/doors.lua" />
+	<action itemid="5131" script="misc/doors.lua" />
+	<action itemid="5287" script="misc/doors.lua" />
+	<action itemid="5289" script="misc/doors.lua" />
+	<action itemid="5745" script="misc/doors.lua" />
+	<action itemid="5749" script="misc/doors.lua" />
 	
 	<!-- Closed Normal Doors -->
 	<action itemid="2177" script="misc/doors.lua" />
@@ -319,7 +361,26 @@
 	<action itemid="4912" script="misc/doors.lua" />
 	<action itemid="4913" script="misc/doors.lua" />
 	<action itemid="5082" script="misc/doors.lua" />
-	<action itemid="5084" script="misc/doors.lua" />
+	<action itemid="5098" script="misc/doors.lua" />
+	<action itemid="5100" script="misc/doors.lua" />
+	<action itemid="5107" script="misc/doors.lua" />
+	<action itemid="5109" script="misc/doors.lua" />
+	<action itemid="5116" script="misc/doors.lua" />
+	<action itemid="5118" script="misc/doors.lua" />
+	<action itemid="5125" script="misc/doors.lua" />
+	<action itemid="5127" script="misc/doors.lua" />
+	<action itemid="5134" script="misc/doors.lua" />
+	<action itemid="5137" script="misc/doors.lua" />
+	<action itemid="5140" script="misc/doors.lua" />
+	<action itemid="5143" script="misc/doors.lua" />
+	<action itemid="5278" script="misc/doors.lua" />
+	<action itemid="5281" script="misc/doors.lua" />
+	<action itemid="5283" script="misc/doors.lua" />
+	<action itemid="5285" script="misc/doors.lua" />
+	<action itemid="5514" script="misc/doors.lua" />
+	<action itemid="5516" script="misc/doors.lua" />
+	<action itemid="5733" script="misc/doors.lua" />
+	<action itemid="5736" script="misc/doors.lua" />
 	
 	<!-- Open Vertical Doors -->
 	<action itemid="1630" script="misc/doors.lua" />
@@ -340,6 +401,23 @@
 	<action itemid="4914" script="misc/doors.lua" />
 	<action itemid="5083" script="misc/doors.lua" />
 	<action itemid="2178" script="misc/doors.lua" />
+	<action itemid="5108" script="misc/doors.lua" />
+	<action itemid="5110" script="misc/doors.lua" />
+	<action itemid="5112" script="misc/doors.lua" />
+	<action itemid="5114" script="misc/doors.lua" />
+	<action itemid="5126" script="misc/doors.lua" />
+	<action itemid="5128" script="misc/doors.lua" />
+	<action itemid="5130" script="misc/doors.lua" />
+	<action itemid="5132" script="misc/doors.lua" />
+	<action itemid="5141" script="misc/doors.lua" />
+	<action itemid="5144" script="misc/doors.lua" />
+	<action itemid="5282" script="misc/doors.lua" />
+	<action itemid="5284" script="misc/doors.lua" />
+	<action itemid="5288" script="misc/doors.lua" />
+	<action itemid="5292" script="misc/doors.lua" />
+	<action itemid="5515" script="misc/doors.lua" />
+	<action itemid="5737" script="misc/doors.lua" />
+	<action itemid="5748" script="misc/doors.lua" />
 	
 	<!-- Open Horizontal Doors -->
 	<action itemid="1633" script="misc/doors.lua" />
@@ -360,4 +438,21 @@
 	<action itemid="4911" script="misc/doors.lua" />
 	<action itemid="5085" script="misc/doors.lua" />
 	<action itemid="2180" script="misc/doors.lua" />
+	<action itemid="5099" script="misc/doors.lua" />
+	<action itemid="5101" script="misc/doors.lua" />
+	<action itemid="5103" script="misc/doors.lua" />
+	<action itemid="5105" script="misc/doors.lua" />
+	<action itemid="5117" script="misc/doors.lua" />
+	<action itemid="5119" script="misc/doors.lua" />
+	<action itemid="5121" script="misc/doors.lua" />
+	<action itemid="5123" script="misc/doors.lua" />
+	<action itemid="5135" script="misc/doors.lua" />
+	<action itemid="5138" script="misc/doors.lua" />
+	<action itemid="5279" script="misc/doors.lua" />
+	<action itemid="5286" script="misc/doors.lua" />
+	<action itemid="5290" script="misc/doors.lua" />
+	<action itemid="5294" script="misc/doors.lua" />
+	<action itemid="5517" script="misc/doors.lua" />
+	<action itemid="5734" script="misc/doors.lua" />
+	<action itemid="5746" script="misc/doors.lua" />
 </actions>

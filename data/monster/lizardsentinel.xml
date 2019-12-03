@@ -39,5 +39,7 @@
 		<item id="3444" countmax="1" chance="3" /> <!-- a sentinel shield -->
 		<item id="3028" countmax="1" chance="1" /> <!-- a small diamond -->
 		<item id="3277" countmax="3" chance="100" /> <!-- a spear -->
+		<item id="5876" countmax="1" chance="9" /> <!-- lizard leather -->
+		<item id="5881" countmax="1" chance="9" /><!-- lizard scale -->
 	</loot>
 </monster>

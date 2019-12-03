@@ -40,11 +40,22 @@ VANISH,!           -> "Hey, you can't leave. Luck is smiling on you. I can feel 
 "game"  -> *
 "dice"  -> *
 
-Topic=1,"yes" -> "I will roll a dice. If it shows 6, you will get five times your bet. How much do you want to bet?", Amount=Random(1,6), Topic=2
+Topic=1,"yes" -> "Hmmm, would you like to play for money or for a chance to win your own dice?", Topic=3
 Topic=1,"no"  -> "Oh come on, don't be a child."
 
-Topic=2,%1,0<%1,100>%1,CountMoney>=%1,Amount=6 -> Price=%1*5, "Ok, here we go ... 6! You have won %P, congratulations. One more game?", CreateMoney, Topic=1
-Topic=2,%1,0<%1,100>%1,CountMoney>=%1          -> Price=%1, "Ok, here we go ... %A! You have lost. Bad luck. One more game?", DeleteMoney, Topic=1
+Topic=3,"money" -> "I thought so. Okay, I will roll a dice. If it shows 6, you will get five times your bet. How much do you want to bet?", Amount=Random(1,6), Topic=2
+Topic=3,"dice"  -> "Hehe, good choice. Okay, the price for this game is 100 gold pieces. I will roll a dice. If I roll a 6, you can have my dice. Agreed?", Amount=Random(1,6), Topic=4
+
+Topic=6,"yes" -> "Okay, I will roll a dice. If it shows 6, you will get five times your bet. How much do you want to bet?", Amount=Random(1,6), Topic=2
+Topic=6,"no"  -> "Oh come on, don't be a child."
+Topic=2,%1,0<%1,100>%1,CountMoney>=%1,Amount=6 -> Price=%1*5, "Ok, here we go ... 6! You have won %P, congratulations. One more game?", CreateMoney, EffectMe(27), Topic=6
+Topic=2,%1,0<%1,100>%1,CountMoney>=%1          -> Price=%1, "Ok, here we go ... %A! You have lost. Bad luck. One more game?", DeleteMoney, EffectMe(27), Topic=6
 Topic=2,%1,0<%1,100>%1                         -> "I am sorry, but you don't have so much money. How much do you want to bet?", Topic=2
 Topic=2,%1                                     -> "I am sorry, but I accept only bets between 1 and 99 gold. I don't want to ruin you after all. How much do you want to bet?", Topic=2
+
+Topic=5,"yes" -> "Okay, the price for this game is 100 gold pieces. I will roll a dice. If I roll a 6, you can have my dice. Agreed?", Amount=Random(1,6), Topic=4
+Topic=5,"no"  -> "Oh come on, don't be a child."
+Topic=4,"yes",CountMoney>=100,Amount=6 -> Price=100, Type=5792, Amount=1, "Ok, here we go ... 6! You have won a dice, congratulations. One more game?", DeleteMoney, Create(Type), EffectMe(27), Topic=5
+Topic=4,"yes",CountMoney>=100          -> Price=100, "Ok, here we go ... %A! You have lost. Bad luck. One more game?", DeleteMoney, EffectMe(27), Topic=5
+Topic=4,"yes"                          -> "I am sorry, but you don't have so much money."
 }

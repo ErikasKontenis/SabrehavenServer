@@ -50,14 +50,35 @@ VANISH,!           -> "Hum Humm."
 "cyclops"        -> "Me people not live here much. Most are far away."
 "excalibug"      -> "Me wish I could make weapon like it."
 
-"fire","sword"         -> "Do lil' one want to trade a fire sword?", topic=1 
-"bright","word"        -> "Do lil' one want to trade a bright sword?", topic=1 
-"warlord","sword"      -> "Do lil' one want to trade a warlord sword?", topic=1 
-"sword","of","valor"   -> "Do lil' one want to trade a sword of valor?", topic=1 
-"serpent","sword"      -> "Do lil' one want to trade a serpent sword?", topic=1 
-"enchanted","plate"    -> "Do lil' one want to trade an enchanted plate armor?", topic=1 
-"dragon","shield"      -> "Do lil' one want to trade a dragon shield?", topic=1 
+"uth'kean"         -> Type=3381, Amount=1,  "Very noble. Shiny. Me like. But breaks so fast. Me can make from shiny armour. Lil' one want to trade?", Topic=1
+Topic=1,"yes",QuestValue(17500)<2,!     -> "Wait. Me work no cheap is. Do favour for me first, yes?", Topic=2
+Topic=1,"yes",Count(Type)>=Amount -> "Cling clang!", Delete(Type), Type=5887, Amount=1, Create(Type)
+Topic=1,"yes"                             -> "You not have stuff me want for."
+Topic=1                                   -> "Silly lil' one you are."
 
-Topic=1,"yes" -> "You not have stuff me want for."
-Topic=1       -> "Silly lil' one you are."
+"uth'lokr"         -> Type=3416, Amount=1,  "Firy steel it is. Need green ones' breath to melt. Or red even better. Me can make from shield. Lil' one want to trade?", Topic=4
+Topic=4,"yes",QuestValue(17500)<2,!     -> "Wait. Me work no cheap is. Do favour for me first, yes?", Topic=2
+Topic=4,"yes",Count(Type)>=Amount -> "Cling clang!", Delete(Type), Type=5889, Amount=1, Create(Type)
+Topic=4,"yes"                             -> "You not have stuff me want for."
+Topic=4                                   -> "Silly lil' one you are."
+
+"za'ralator"         -> Type=3356, Amount=1,  "Hellsteel is. Cursed and evil. Dangerous to work with. Me can make from evil helmet. Lil' one want to trade?", Topic=5
+Topic=5,"yes",QuestValue(17500)<2,!     -> "Wait. Me work no cheap is. Do favour for me first, yes?", Topic=2
+Topic=5,"yes",Count(Type)>=Amount -> "Cling clang!", Delete(Type), Type=5888, Amount=1, Create(Type)
+Topic=5,"yes"                             -> "You not have stuff me want for."
+Topic=5                                   -> "Silly lil' one you are."
+
+"uth'prta"         -> Type=3281, Amount=1,  "Good iron is. Me friends use it much for fight. Me can make from weapon. Lil' one want to trade?", Topic=6
+Topic=6,"yes",QuestValue(17500)<2,!     -> "Wait. Me work no cheap is. Do favour for me first, yes?", Topic=2
+Topic=6,"yes",Count(Type)>=Amount -> "Cling clang!", Delete(Type), Type=5892, Amount=1, Create(Type)
+Topic=6,"yes"                             -> "You not have stuff me want for."
+Topic=6                                   -> "Silly lil' one you are."
+
+Topic=2,"yes"                 -> "Me need gift for woman. We dance, so me want to give her bast skirt. But she big is. So I need many to make big one. Bring three okay? Me wait.", SetQuestValue(17500,1)
+
+"bast skirt",QuestValue(17500)=1         -> Type=3560, Amount=3,  "Lil' one bring three bast skirts?", Topic=3
+Topic=3,"yes",Count(Type)>=Amount -> "Good good! Woman happy will be. Now me happy too and help you.", Delete(Type), SetQuestValue(17500,2)
+Topic=3,"yes"                             -> "You not have stuff me want for."
+Topic=3                                   -> "Silly lil' one you are."
+
 }

@@ -75,5 +75,6 @@
 		<item id="3029" countmax="2" chance="70" /> <!-- a small sapphire -->
 		<item id="3067" countmax="1" chance="5" /> <!-- a tempest rod -->
 		<item id="2948" countmax="1" chance="3" /> <!-- a wooden flute -->
+		<item id="5912" countmax="1" chance="25" /> <!-- a blue piece of cloth -->
 	</loot>
 </monster>

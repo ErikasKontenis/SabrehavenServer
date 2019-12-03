@@ -36,5 +36,7 @@
 		<item id="3351" countmax="1" chance="20" /> <!-- a steel helmet -->
 		<item id="3264" countmax="1" chance="50" /> <!-- a sword -->
 		<item id="3345" countmax="1" chance="5" /> <!-- a templar scytheblade -->
+		<item id="5876" countmax="1" chance="10" /> <!-- lizard leather -->
+		<item id="5881" countmax="1" chance="10" /><!-- lizard scale -->
 	</loot>
 </monster>

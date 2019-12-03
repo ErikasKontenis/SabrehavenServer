@@ -61,5 +61,7 @@
 		<item id="3029" countmax="1" chance="50" /> <!-- a small sapphire -->
 		<item id="3373" countmax="1" chance="4" /> <!-- a strange helmet -->
 		<item id="3428" countmax="1" chance="3" /> <!-- a tower shield -->
+		<item id="5882" countmax="1" chance="18" /> <!-- red dragon scale -->
+		<item id="5948" countmax="1" chance="10" /> <!-- red dragon leather -->
 	</loot>
 </monster>

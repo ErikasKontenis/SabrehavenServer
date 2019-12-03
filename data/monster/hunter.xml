@@ -40,5 +40,6 @@
 		<item id="3601" countmax="2" chance="110" /> <!-- a roll -->
 		<item id="3030" countmax="1" chance="2" /> <!-- a small ruby -->
 		<item id="2920" countmax="1" chance="50" /> <!-- a torch -->
+		<item id="5875" countmax="1" chance="7" /> <!-- sniper gloves -->
 	</loot>
 </monster>

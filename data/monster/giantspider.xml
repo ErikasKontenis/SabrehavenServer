@@ -47,5 +47,6 @@
 		<item id="3055" countmax="1" chance="1" /> <!-- a platinum amulet -->
 		<item id="3351" countmax="1" chance="50" /> <!-- a steel helmet -->
 		<item id="3053" countmax="1" chance="7" /> <!-- a time ring -->
+		<item id="5879" countmax="1" chance="21" /> <!-- spider silk -->
 	</loot>
 </monster>

@@ -39,5 +39,6 @@
 		<item id="3577" countmax="1" chance="100" /> <!-- meat -->
 		<item id="3377" countmax="1" chance="10" /> <!-- a scale armor -->
 		<item id="3375" countmax="1" chance="20" /> <!-- a soldier helmet -->
+		<item id="5878" countmax="1" chance="10" /> <!-- minotaur leather -->
 	</loot>
 </monster>

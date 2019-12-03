@@ -46,5 +46,6 @@
 		<item id="1781" countmax="4" chance="130" /> <!-- a small stone -->
 		<item id="3554" countmax="1" chance="5" /> <!-- steel boots -->
 		<item id="3409" countmax="1" chance="70" /> <!-- a steel shield -->
+		<item id="5880" countmax="1" chance="130" /> <!-- Iron Ore -->
 	</loot>
 </monster>

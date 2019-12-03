@@ -52,5 +52,6 @@
 		<item id="3483" countmax="1" chance="50" /> <!-- a fishing rod -->
 		<item id="3031" countmax="50" chance="600" /> <!-- a gold coin -->
 		<item id="3577" countmax="1" chance="100" /> <!-- meat -->
+		<item id="5878" chance="100" /> <!-- minotaur leather -->
 	</loot>
 </monster>

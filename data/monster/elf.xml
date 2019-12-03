@@ -41,5 +41,6 @@
 		<item id="3585" countmax="2" chance="200" /> <!-- a red apple -->
 		<item id="3378" countmax="1" chance="110" /> <!-- a studded armor -->
 		<item id="3376" countmax="1" chance="150" /> <!-- a studded helmet -->
+		<item id="5921" countmax="1" chance="10" /> <!-- a heaven blossom -->
 	</loot>
 </monster>

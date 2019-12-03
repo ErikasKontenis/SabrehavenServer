@@ -158,4 +158,32 @@ Topic=11,"yes",Count(Type)>=Amount -> "Good. Here is your money.", Delete(Type),
 Topic=11,"yes"                             -> "You do not have one, human!"
 Topic=11,"yes",Amount>1                    -> "You do not have that many, human!"
 Topic=11                                   -> "As you wish."
+
+"fighting","spirit"          -> Type=3392, Amount=2,  "Do you want to trade %A royal helmets for fighting spirit?", Topic=12
+Topic=12,QuestValue(288)<3,!     -> "I'm sorry, but you don't have Malor's permission to trade with me."
+Topic=12,"yes",Count(Type)>=Amount -> "Good. Here you are.", Delete(Type), Type=5884, Amount=1, Create(Type)
+Topic=12,"yes"                             -> "You do not have one, human!"
+Topic=12,"yes",Amount>1                    -> "You do not have that many, human!"
+Topic=12                                   -> "As you wish."
+
+"magic","sulphur"          -> Type=3280, Amount=3,  "Do you want to trade %A fire swords for magic sulphur?", Topic=13
+Topic=13,QuestValue(288)<3,!     -> "I'm sorry, but you don't have Malor's permission to trade with me."
+Topic=13,"yes",Count(Type)>=Amount -> "Good. Here you are.", Delete(Type), Type=5904, Amount=1, Create(Type)
+Topic=13,"yes"                             -> "You do not have one, human!"
+Topic=13,"yes",Amount>1                    -> "You do not have that many, human!"
+Topic=13                                   -> "As you wish."
+
+"warrior","sweat"          -> Type=3369, Amount=4,  "Do you want to trade %A warrior helmets for flask of warrior's sweat?", Topic=14
+Topic=14,QuestValue(288)<3,!     -> "I'm sorry, but you don't have Malor's permission to trade with me."
+Topic=14,"yes",Count(Type)>=Amount -> "Good. Here you are.", Delete(Type), Type=5885, Amount=1, Create(Type)
+Topic=14,"yes"                             -> "You do not have one, human!"
+Topic=14,"yes",Amount>1                    -> "You do not have that many, human!"
+Topic=14                                   -> "As you wish."
+
+"chicken","wing"          -> Type=3079, Amount=1,  "Do you want to trade %A boots of haste for enchanted chicken wing?", Topic=15
+Topic=15,QuestValue(288)<3,!     -> "I'm sorry, but you don't have Malor's permission to trade with me."
+Topic=15,"yes",Count(Type)>=Amount -> "Good. Here you are.", Delete(Type), Type=5891, Amount=1, Create(Type)
+Topic=15,"yes"                             -> "You do not have one, human!"
+Topic=15,"yes",Amount>1                    -> "You do not have that many, human!"
+Topic=15                                   -> "As you wish."
 }

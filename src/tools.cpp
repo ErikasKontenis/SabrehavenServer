@@ -188,40 +188,43 @@ std::string transformToSHA1(const std::string& input)
 
 uint8_t getLiquidColor(uint8_t type)
 {
-	uint8_t result = 0;
+	uint8_t result = FLUID_COLOR_NONE;
 	switch (type)
 	{
-	case 1:
-		result = 1;
+	case FLUID_WATER:
+		result = FLUID_COLOR_BLUE;
 		break;
-	case 0:
-		result = 0;
+	case FLUID_NONE:
+		result = FLUID_COLOR_NONE;
 		break;
-	case 6:
-		result = 4;
+	case FLUID_SLIME:
+		result = FLUID_COLOR_GREEN;
 		break;
-	case 3:
-	case 4:
-	case 7:
-		result = 3;
+	case FLUID_BEER:
+	case FLUID_MUD:
+	case FLUID_OIL:
+	case FLUID_RUM:
+		result = FLUID_COLOR_BROWN;
 		break;
-	case 9:
-		result = 6;
+	case FLUID_MILK:
+	case FLUID_COCONUTMILK:
+		result = FLUID_COLOR_WHITE;
 		break;
-	case 2:
-	case 10:
-		result = 7;
+	case FLUID_WINE:
+	case FLUID_MANAFLUID:
+		result = FLUID_COLOR_PURPLE;
 		break;
-	case 5:
-	case 11:
-		result = 2;
+	case FLUID_BLOOD:
+	case FLUID_LIFEFLUID:
+		result = FLUID_COLOR_RED;
 		break;
-	case 8:
-	case 12:
-		result = 5;
+	case FLUID_URINE:
+	case FLUID_LEMONADE:
+	case FLUID_FRUITJUICE:
+		result = FLUID_COLOR_YELLOW;
 		break;
 	default:
-		result = 0;
+		result = FLUID_COLOR_NONE;
 		break;
 	}
 	return result;
@@ -644,6 +647,8 @@ MagicEffectNames magicEffectNames[] = {
 	{"purplenote",		CONST_ME_SOUND_PURPLE},
 	{"bluenote",		CONST_ME_SOUND_BLUE},
 	{"whitenote",		CONST_ME_SOUND_WHITE},
+	{"bubbles",		CONST_ME_BUBBLES},
+	{"dice",		CONST_ME_CRAPS},
 };
 
 ShootTypeNames shootTypeNames[] = {
@@ -717,7 +722,10 @@ FluidNames fluidNames[] = {
 	{"milk",			FLUID_MILK},
 	{"manafluid",		FLUID_MANAFLUID},
 	{"lifefluid",		FLUID_LIFEFLUID},
-	{"lemonade",		FLUID_LEMONADE}
+	{"lemonade",		FLUID_LEMONADE},
+	{"rum",				FLUID_RUM},
+	{"coconutmilk",		FLUID_COCONUTMILK},
+	{"fruitjuice",		FLUID_FRUITJUICE}
 };
 
 MagicEffectClasses getMagicEffect(const std::string& strValue)

@@ -75,5 +75,6 @@
 		<item id="3032" countmax="2" chance="70" /> <!-- a small emerald -->
 		<item id="2933" countmax="1" chance="200" /> <!-- a small oil lamp -->
 		<item id="3071" countmax="1" chance="5" /> <!-- a wand of inferno -->
+		<item id="5910" countmax="1" chance="25" /> <!-- green piece of cloth -->
 	</loot>
 </monster>

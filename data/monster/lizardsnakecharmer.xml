@@ -54,5 +54,7 @@
 		<item id="3033" countmax="1" chance="5" /> <!-- a small amethyst -->
 		<item id="3066" countmax="1" chance="1" /> <!-- a snakebite rod -->
 		<item id="3037" countmax="1" chance="2" /> <!-- a yellow gem -->
+		<item id="5876" countmax="1" chance="9" /> <!-- lizard leather -->
+		<item id="5881" countmax="1" chance="9" /><!-- lizard scale -->
 	</loot>
 </monster>

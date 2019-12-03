@@ -28,5 +28,7 @@
 		<item id="3582" countmax="2" chance="400" /> <!-- ham -->
 		<item id="3577" countmax="4" chance="700" /> <!-- meat -->
 		<item id="3492" countmax="1" chance="50" /> <!-- a worm -->
+		<item id="5896" countmax="1" chance="25" /> <!-- bear paw -->
+		<item id="5902" countmax="1" chance="10" /> <!-- honeycomb -->
 	</loot>
 </monster>
