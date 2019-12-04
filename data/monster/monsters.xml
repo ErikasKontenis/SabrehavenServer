@@ -163,4 +163,49 @@
 	<monster name="witch" file="witch.xml" />
 	<monster name="wolf" file="wolf.xml" />
 	<monster name="yeti" file="yeti.xml" />
+	
+	<!-- 781 -->
+	<monster name="acolyte of the cult" file="781/acolyte of the cult.xml" />
+	<monster name="adept of the cult" file="781/adept of the cult.xml" />
+	<monster name="azure frog" file="781/azure frog.xml" />
+	<monster name="blood crab" file="781/blood crab.xml" />
+	<monster name="brutus bloodbeard" file="781/brutus bloodbeard.xml" />
+	<monster name="carrion worm" file="781/carrion worm.xml" />
+	<monster name="coral frog" file="781/coral frog.xml" />
+	<monster name="crimson frog" file="781/crimson frog.xml" />
+	<monster name="deadeye devious" file="781/deadeye devious.xml" />
+	<monster name="enlightened of the cult" file="781/enlightened of the cult.xml" />
+	<monster name="green frog" file="781/green frog.xml" />
+	<monster name="island troll" file="781/island troll.xml" />
+	<monster name="lavahole" file="781/lavahole.xml" />
+	<monster name="lethal lissy" file="781/lethal lissy.xml" />
+	<monster name="mammoth" file="781/mammoth.xml" />
+	<monster name="massive water elemental" file="781/massive water elemental.xml" />
+	<monster name="morgaroth" file="781/morgaroth.xml" />
+	<monster name="novice of the cult" file="781/novice of the cult.xml" />
+	<monster name="orchid frog" file="781/orchid frog.xml" />
+	<monster name="pirate buccaneer" file="781/pirate buccaneer.xml" />
+	<monster name="pirate corsair" file="781/pirate corsair.xml" />
+	<monster name="pirate cutthroat" file="781/pirate cutthroat.xml" />
+	<monster name="pirate ghost" file="781/pirate ghost.xml" />
+	<monster name="pirate marauder" file="781/pirate marauder.xml" />
+	<monster name="pirate skeleton" file="781/pirate skeleton.xml" />
+	<monster name="quara constrictor scout" file="781/quara constrictor scout.xml" />
+	<monster name="quara constrictor" file="781/quara constrictor.xml" />
+	<monster name="quara hydromancer scout" file="781/quara hydromancer scout.xml" />
+	<monster name="quara hydromancer" file="781/quara hydromancer.xml" />
+	<monster name="quara mantassin scout" file="781/quara mantassin scout.xml" />
+	<monster name="quara mantassin" file="781/quara mantassin.xml" />
+	<monster name="quara pincher scout" file="781/quara pincher scout.xml" />
+	<monster name="quara pincher" file="781/quara pincher.xml" />
+	<monster name="quara predator scout" file="781/quara predator scout.xml" />
+	<monster name="quara predator" file="781/quara predator.xml" />
+	<monster name="ron the ripper" file="781/ron the ripper.xml" />
+	<monster name="seagull" file="781/seagull.xml" />
+	<monster name="thornback tortoise" file="781/thornback tortoise.xml" />
+	<monster name="thul" file="781/thul.xml" />
+	<monster name="tiquandas revenge" file="781/tiquandas revenge.xml" />
+	<monster name="toad" file="781/toad.xml" />
+	<monster name="tortoise" file="781/tortoise.xml" />
+	<monster name="water elemental" file="781/water elemental.xml" />
 </monsters>

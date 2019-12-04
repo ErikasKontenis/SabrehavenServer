@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Thul" nameDescription="thul" race="undead" experience="2700" speed="75" manacost="0">
+	<health now="2950" max="2950"/>
+	<look type="46" corpse="6065"/>
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag lightlevel="0"/>
+		<flag lightcolor="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks skill="45" attack="100">
+		<attack name="physical" chance="25" radius="3" target="0" min="-0" max="-170">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="poison" chance="20" range="7" radius="4" target="0" min="-0" max="-0">
+			<attribute key="areaEffect" value="poison"/>
+		</attack>	
+		<attack name="speed" chance="10" range="7" target="1" speedchange="-600" duration="20000">
+			<attribute key="shootEffect" value="snowball"/>
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="40">
+		<defense name="ice" chance="20" radius="1" target="0" min="-105" max="-140">
+			<attribute key="areaEffect" value="icearea"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity earth="1"/>
+		<immunity drown="1"/>
+		<immunity invisible="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Gaaahhh!"/>
+	</voices>
+	<summons maxSummons="2">
+		<summon name="massive water elemental" chance="25" max="2"/>
+	</summons>
+	<loot>
+		<item id="2148" countmax="90" chance="100000"/><!-- gold coin -->
+		<item id="2148" countmax="90" chance="100000"/><!-- gold coin -->
+		<item id="5895" countmax="1" chance="100000"/><!-- fish fin -->
+	</loot>
+</monster>

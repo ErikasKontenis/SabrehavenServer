@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Carrion Worm" nameDescription="a carrion worm" race="blood" experience="70" speed="25" manacost="380">
+	<health now="145" max="145"/>
+	<look type="192" corpse="6069"/>
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks skill="20" attack="30">
+	</attacks>
+	<defenses armor="8" defense="11"/>
+	<immunities>
+		<immunity lifedrain="0"/>
+		<immunity paralyze="0"/>
+		<immunity outfit="0"/>
+		<immunity drunk="0"/>
+		<immunity invisible="0"/>
+	</immunities>
+	<loot>
+    <item id="2148" countmax="45" chance="18700" /><!-- gold coin -->
+    <item id="11186" chance="10625" /><!-- carrion worm fang -->
+    <item id="3976" countmax="2" chance="2275" /><!-- worm -->
+    <item id="2666" chance="10000" /><!-- meat -->
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

@@ -102,8 +102,9 @@ enum CombatType_t : uint16_t {
 	COMBAT_LIFEDRAIN = 1 << 5,
 	COMBAT_MANADRAIN = 1 << 6,
 	COMBAT_HEALING = 1 << 7,
+	COMBAT_DROWNDAMAGE = 1 << 8,
 
-	COMBAT_COUNT = 9
+	COMBAT_COUNT = 10
 };
 
 enum CombatParam_t {
@@ -249,6 +250,7 @@ enum ConditionType_t {
 	CONDITION_EXHAUST = 1 << 17,
 	CONDITION_PACIFIED = 1 << 18,
 	CONDITION_AGGRESSIVE = 1 << 19,
+	CONDITION_DROWN = 1 << 20,
 };
 
 enum ConditionId_t : int8_t {

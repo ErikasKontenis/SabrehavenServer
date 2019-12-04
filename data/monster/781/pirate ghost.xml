@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Pirate Ghost" nameDescription="a pirate ghost" race="undead" experience="250" speed="70" manacost="0">
+	<health now="275" max="275"/>
+	<look type="196" corpse="6071"/>
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="1"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks skill="30" attack="50" poison="40">
+		<attack name="lifedrain" chance="12" range="7" min="-30" max="-80">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</attack>
+		<attack name="physical" chance="15" range="7" radius="2" target="1" max="-65">
+			<attribute key="areaEffect" value="rednote"/>
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="25">
+		<defense name="healing" chance="15" min="24" max="30">
+			<attribute key="areaEffect" value="blueshimmer"/>
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity physical="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity poison="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Yooh Ho Hooh Ho!"/>
+		<voice sentence="Hell is waiting for You!"/>
+		<voice sentence="It's alive!"/>
+		<voice sentence="The curse! Aww the curse!"/>
+		<voice sentence="You will not get my treasure!"/>
+	</voices>
+	<loot>
+    <item id="2165" chance="1350" /><!-- stealth ring -->
+    <item id="2148" countmax="63" chance="17350" /><!-- gold coin -->
+    <item id="10600" chance="5200" /><!-- tattered piece of robe -->
+    <item id="1987" chance="100000"><!-- bag -->
+        <inside>
+            <item id="1948" chance="925" /><!-- parchment -->
+            <item id="2383" chance="700" /><!-- spike sword -->
+            <item id="2655" chance="700" /><!-- red robe -->
+        </inside>
+    </item>
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

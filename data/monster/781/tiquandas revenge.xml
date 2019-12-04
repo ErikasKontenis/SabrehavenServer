@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Tiquandas Revenge" nameDescription="a tiquandas revenge" race="venom" experience="2635" speed="110" manacost="0">
+	<health now="2400" max="2400"/>
+	<look type="120" corpse="6047"/>
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="15" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="0"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="1"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="400"/>
+	</flags>
+	<attacks skill="70" attack="55" poison="180">
+		<attack name="poison" chance="25" range="7" min="-0" max="-440">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="poison"/>
+		</attack>
+		<attack name="speed" chance="20" range="7" target="1" speedchange="-850" duration="30000">
+			<attribute key="shootEffect" value="poison"/>
+			<attribute key="areaEffect" value="greenspark"/>
+		</attack>
+		<attack name="earth" chance="12" radius="3" target="0" min="-0" max="-250">
+			<attribute key="areaEffect" value="plantattack"/>
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="31">
+		<defense name="ultimate healing" chance="35" min="600" max="800"/>
+		<defense name="speed" chance="10" speedchange="800" duration="5000">
+			<attribute key="areaEffect" value="redshimmer"/>
+		</defense>	
+	</defenses>
+	<immunities>
+		<immunity invisible="1"/>
+		<immunity earth="1"/>
+	</immunities>
+	<loot>
+    <item id="2666" chance="70500" /><!-- meat -->
+    <item id="5015" chance="100500" /><!-- mandrake -->
+    <item id="2671" chance="65500" /><!-- ham -->
+    <item id="1987" chance="100000"><!-- bag -->
+        <inside>
+            <item id="7732" countmax="2" chance="53000" /><!-- seeds -->
+            <item id="2148" countmax="99" chance="56550" /><!-- gold coin -->
+            <item id="2792" countmax="5" chance="7500" /><!-- dark mushroom -->
+        </inside>
+    </item>
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

@@ -2951,6 +2951,10 @@ void Player::onAddCombatCondition(ConditionType_t type)
 		sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are poisoned.");
 		break;
 
+		case CONDITION_DROWN:
+		sendTextMessage(MESSAGE_STATUS_SMALL, "You are drowning.");
+		break;
+
 		case CONDITION_PARALYZE:
 		sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are paralyzed.");
 		break;

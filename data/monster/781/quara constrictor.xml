@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<monster name="Quara Constrictor" nameDescription="a quara constrictor" race="blood" experience="250" speed="130" manacost="670">
+	<health now="450" max="450"/>
+	<look type="46" corpse="6065"/>
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0"/>
+		<flag attackable="1"/>
+		<flag hostile="1"/>
+		<flag illusionable="0"/>
+		<flag convinceable="1"/>
+		<flag pushable="0"/>
+		<flag canpushitems="1"/>
+		<flag canpushcreatures="0"/>
+		<flag targetdistance="1"/>
+		<flag runonhealth="0"/>
+	</flags>
+	<attacks skill="50" attack="50" poison="20">
+		<attack name="lifedrain" chance="11" radius="3" target="0" min="-50" max="-90">
+			<attribute key="areaEffect" value="blackspark"/>
+		</attack>
+		<attack name="ice" chance="12" range="7" min="-40" max="-70" target="0" radius="4">
+			<attribute key="areaEffect" value="iceattack"/>
+		</attack> 	
+		<attack name="energycondition" chance="10" min="-75" max="-75" range="1" target="1">
+			<attribute key="shootEffect" value="energy"/>
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15"/>
+	<immunities>
+		<immunity lifedrain="1"/>
+		<immunity paralyze="1"/>
+		<immunity drown="1"/>
+		<immunity fire="1"/>
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Gaaahhh!"/>
+		<voice sentence="Gluh! Gluh!"/>
+		<voice sentence="Tssss!"/>
+		<voice sentence="Boohaa!"/>
+	</voices>
+	<loot>
+    <item id="2148" countmax="100" chance="29000" /><!-- gold coin -->
+    <item id="2397" chance="5500" /><!-- longsword -->
+    <item id="2150" chance="775" /><!-- small amethyst -->
+    <item id="2460" chance="10400" /><!-- brass helmet -->
+    <item id="1987" chance="100000"><!-- bag -->
+        <inside>
+            <item id="2465" chance="2500" /><!-- brass armor -->
+            <item id="2670" chance="5475" /><!-- shrimp -->
+            <item id="5895" chance="1025" /><!-- fish fin -->
+            <item id="2406" chance="7075" /><!-- short sword -->
+        </inside>
+    </item>
+</loot>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</monster>

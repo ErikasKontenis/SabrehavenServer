@@ -392,6 +392,8 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 			combat->setParam(COMBAT_PARAM_TYPE, COMBAT_FIREDAMAGE);
 		} else if (tmpName == "energy") {
 			combat->setParam(COMBAT_PARAM_TYPE, COMBAT_ENERGYDAMAGE);
+		} else if (tmpName == "drown") {
+			combat->setParam(COMBAT_PARAM_TYPE, COMBAT_DROWNDAMAGE);
 		} else if (tmpName == "lifedrain") {
 			combat->setParam(COMBAT_PARAM_TYPE, COMBAT_LIFEDRAIN);
 		} else if (tmpName == "manadrain") {
@@ -480,7 +482,7 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 		} else if (tmpName == "firecondition" || tmpName == "energycondition" ||
 		           tmpName == "earthcondition" || tmpName == "poisoncondition" ||
 		           tmpName == "icecondition" || tmpName == "freezecondition" ||
-		           tmpName == "physicalcondition") {
+		           tmpName == "physicalcondition" || tmpName == "drowncondition") {
 			ConditionType_t conditionType = CONDITION_NONE;
 
 			if (tmpName == "firecondition") {
@@ -489,6 +491,8 @@ bool Monsters::deserializeSpell(const pugi::xml_node& node, spellBlock_t& sb, co
 				conditionType = CONDITION_POISON;
 			} else if (tmpName == "energycondition") {
 				conditionType = CONDITION_ENERGY;
+			} else if (tmpName == "drowncondition") {
+				conditionType = CONDITION_DROWN;
 			}
 
 			int32_t cycle = 0;
@@ -828,6 +832,9 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				} else if (tmpStrValue == "fire") {
 					mType->info.damageImmunities |= COMBAT_FIREDAMAGE;
 					mType->info.conditionImmunities |= CONDITION_FIRE;
+				} else if (tmpStrValue == "drown") {
+					mType->info.damageImmunities |= COMBAT_DROWNDAMAGE;
+					mType->info.conditionImmunities |= CONDITION_DROWN;
 				} else if (tmpStrValue == "poison" ||
 							tmpStrValue == "earth") {
 					mType->info.damageImmunities |= COMBAT_EARTHDAMAGE;
@@ -860,6 +867,11 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				if (attr.as_bool()) {
 					mType->info.damageImmunities |= COMBAT_FIREDAMAGE;
 					mType->info.conditionImmunities |= CONDITION_FIRE;
+				}
+			} else if ((attr = immunityNode.attribute("drown"))) {
+				if (attr.as_bool()) {
+					mType->info.damageImmunities |= COMBAT_DROWNDAMAGE;
+					mType->info.conditionImmunities |= CONDITION_DROWN;
 				}
 			} else if ((attr = immunityNode.attribute("poison")) || (attr = immunityNode.attribute("earth"))) {
 				if (attr.as_bool()) {
