@@ -28,7 +28,7 @@
 			<attribute key="shootEffect" value="ice"/>
 			<attribute key="areaEffect" value="icearea"/>
 		</attack> 
-		<attack name="drown" chance="100" target="1" range="7" radius="2" min="-330" max="-450">
+		<attack name="drown" chance="10" target="1" range="7" radius="2" min="-330" max="-450">
 			<attribute key="areaEffect" value="bluebubble"/>
 		</attack>	
 	</attacks>

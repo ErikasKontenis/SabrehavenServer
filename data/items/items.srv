@@ -9303,7 +9303,7 @@ TypeID      = 2121
 Name        = "poison gas"
 Flags       = {CollisionEvent,Unmove,Avoid,MagicField,Expire}
 Attributes  = {AvoidDamageTypes=POISON,Brightness=2,LightColor=104,ExpireTarget=0,TotalExpireTime=250}
-MagicField  = {Type=POISON,Count=100}
+MagicField  = {Type=POISON,Count=100,Damage=5}
 
 TypeID      = 2122
 Name        = "an energy field"
@@ -9338,7 +9338,7 @@ TypeID      = 2127
 Name        = "poison gas"
 Flags       = {CollisionEvent,Unmove,Avoid,MagicField}
 Attributes  = {AvoidDamageTypes=POISON,Brightness=2,LightColor=104}
-MagicField  = {Type=POISON,Count=100}
+MagicField  = {Type=POISON,Count=100,Damage=5}
 
 TypeID      = 2128
 Name        = "a magic wall"
@@ -9376,7 +9376,7 @@ TypeID      = 2134
 Name        = "poison gas"
 Flags       = {CollisionEvent,Unmove,Avoid,MagicField,Expire}
 Attributes  = {AvoidDamageTypes=POISON,Brightness=2,LightColor=214,ExpireTarget=0,TotalExpireTime=8}
-MagicField  = {Type=POISON,Count=100}
+MagicField  = {Type=POISON,Count=100,Damage=5}
 
 TypeID      = 2135
 Name        = "an energy field"
@@ -24442,7 +24442,7 @@ Attributes  = {Brightness=7,LightColor=207}
 
 TypeID      = 5404
 Name        = "ocean floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5405

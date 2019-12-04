@@ -255,6 +255,8 @@ class ConditionDamage final : public Condition
 				count = max_count = 8;
 			} else if (type == CONDITION_ENERGY) {
 				count = max_count = 10;
+			} else if (type == CONDITION_DROWN) {
+				count = max_count = 3;
 			}
 		}
 

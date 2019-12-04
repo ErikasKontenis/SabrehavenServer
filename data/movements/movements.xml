@@ -388,7 +388,9 @@
 	<movevent event="StepIn" movementid="237" script="nostalrius/237.lua" />
 	
 	<!-- Nostalrius Default Movements -->
-
+	<movevent event="StepIn" itemid="5404" script="misc/drowning.lua" />
+	<movevent event="StepOut" itemid="5404" script="misc/drowning.lua"/>
+	
 	<!-- Floorchange -->
 	<movevent event="StepIn" itemid="293" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="293" tileitem="1" script="misc/floorchange.lua" />

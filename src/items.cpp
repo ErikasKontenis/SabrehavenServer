@@ -515,7 +515,6 @@ bool Items::loadItems()
 							items[id].conditionDamage.reset(conditionDamage);
 						} else if (identifier == "poison") {
 							conditionDamage = new ConditionDamage(CONDITIONID_COMBAT, CONDITION_POISON);
-							conditionDamage->setParam(CONDITION_PARAM_DELAYED, true);
 							combatType = COMBAT_EARTHDAMAGE;
 							items[id].combatType = combatType;
 							items[id].conditionDamage.reset(conditionDamage);
