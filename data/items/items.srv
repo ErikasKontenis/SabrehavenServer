@@ -24447,27 +24447,27 @@ Attributes  = {Waypoints=500}
 
 TypeID      = 5405
 Name        = "ocean floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5406
 Name        = "ocean floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5407
 Name        = "ocean floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5408
 Name        = "ocean floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5409
 Name        = "ocean floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5410
@@ -25925,12 +25925,12 @@ Name        = "" # this is nothing in client
 
 TypeID      = 5743
 Name        = "wooden floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5744
 Name        = "wooden floor"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5745
@@ -26017,7 +26017,7 @@ Attributes  = {Waypoints=110}
 
 TypeID      = 5764
 Name        = "a ventilation grille"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=500}
 
 TypeID      = 5765

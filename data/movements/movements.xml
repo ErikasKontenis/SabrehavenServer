@@ -388,8 +388,12 @@
 	<movevent event="StepIn" movementid="237" script="nostalrius/237.lua" />
 	
 	<!-- Nostalrius Default Movements -->
-	<movevent event="StepIn" itemid="5404" script="misc/drowning.lua" />
-	<movevent event="StepOut" itemid="5404" script="misc/drowning.lua"/>
+	<movevent event="StepIn" fromid="5404" toid="5409" script="misc/drowning.lua" />
+	<movevent event="StepOut" fromid="5404" toid="5409" script="misc/drowning.lua"/>
+	<movevent event="StepIn" fromid="5743" toid="5744" script="misc/drowning.lua" />
+	<movevent event="StepOut" fromid="5743" toid="5744" script="misc/drowning.lua"/>
+	<movevent event="StepIn" itemid="5764" script="misc/drowning.lua" />
+	<movevent event="StepOut" itemid="5764" script="misc/drowning.lua"/>
 	
 	<!-- Floorchange -->
 	<movevent event="StepIn" itemid="293" script="misc/floorchange.lua" />
@@ -666,6 +670,10 @@
 	<movevent event="StepIn" itemid="2151"  function="onStepInField" />
 	<movevent event="AddItem" itemid="2151" function="onAddField" />
 
+	<!-- Helmets -->
+	<movevent event="Equip" itemid="5460" slot="head" function="onEquipItem" script="misc/helmet_of_the_deep.lua" />
+	<movevent event="DeEquip" itemid="5460" slot="head" function="onDeEquipItem" />
+	
 	<!-- Boots -->
 	<movevent event="Equip" itemid="3079" slot="feet" function="onEquipItem" />
 	<movevent event="DeEquip" itemid="3079" slot="feet" function="onDeEquipItem" />

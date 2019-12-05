@@ -1164,6 +1164,7 @@ void Player::onThink(uint32_t interval)
 		addMessageBuffer();
 	}
 
+	lastWalkingTime += interval;
 	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT) && !isAccessPlayer()) {
 		idleTime += interval;
 		const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);

@@ -917,6 +917,13 @@ bool ConditionDamage::executeCondition(Creature* creature, int32_t)
 			return false;
 		}
 	} else if (conditionType == CONDITION_DROWN) {
+		if (isFirstCycle && count - max_count == -2) {
+			doDamage(creature, -20);
+			isFirstCycle = false;
+			count = max_count;
+			return true;
+		}
+		
 		const int32_t r_cycle = cycle;
 		if (r_cycle) {
 			if (count <= 0) {

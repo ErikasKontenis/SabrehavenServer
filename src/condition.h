@@ -283,7 +283,7 @@ class ConditionDamage final : public Condition
 		int32_t max_count = 0;
 		int32_t factor_percent = -1;
 		int32_t hit_damage = 0;
-
+		bool isFirstCycle = true;
 		uint32_t owner = 0;
 
 		bool doDamage(Creature* creature, int32_t healthChange);

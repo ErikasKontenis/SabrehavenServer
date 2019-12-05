@@ -286,6 +286,19 @@ class Player final : public Creature, public Cylinder
 
 		void resetIdleTime() {
 			idleTime = 0;
+			resetLastWalkingTime();
+		}
+
+		int32_t getIdleTime() const {
+			return idleTime;
+		}
+
+		void resetLastWalkingTime() {
+			lastWalkingTime = 0;
+		}
+
+		int32_t getLastWalkingTime() const {
+			return lastWalkingTime;
 		}
 
 		bool isInGhostMode() const {
@@ -1045,6 +1058,7 @@ class Player final : public Creature, public Cylinder
 		int32_t bloodHitCount = 0;
 		int32_t shieldBlockCount = 0;
 		int32_t idleTime = 0;
+		int32_t lastWalkingTime = 0;
 
 		uint16_t staminaMinutes = 3360;
 		uint16_t maxWriteLen = 0;
