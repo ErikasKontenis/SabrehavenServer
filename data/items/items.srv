@@ -24674,7 +24674,7 @@ TypeID      = 5460
 Name        = "a helmet of the deep"
 Description = "Enables underwater exploration"
 Flags       = {Take,Armor}
-Attributes  = {Weight=21000,SlotType=HEAD,ArmorValue=2} # TODO: Drown protection!
+Attributes  = {Weight=21000,SlotType=HEAD,ArmorValue=2,AbsorbDrown=100}
 
 TypeID      = 5461
 Name        = "pirate boots"

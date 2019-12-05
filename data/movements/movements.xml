@@ -671,7 +671,7 @@
 	<movevent event="AddItem" itemid="2151" function="onAddField" />
 
 	<!-- Helmets -->
-	<movevent event="Equip" itemid="5460" slot="head" function="onEquipItem" script="misc/helmet_of_the_deep.lua" />
+	<movevent event="Equip" itemid="5460" slot="head" function="onEquipItem" /> 
 	<movevent event="DeEquip" itemid="5460" slot="head" function="onDeEquipItem" />
 	
 	<!-- Boots -->
