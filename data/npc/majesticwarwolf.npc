@@ -1,0 +1,19 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "A Majestic Warwolf"
+Outfit = (3,0-0-0-0)
+Home = [33355,31991,8]
+Radius = 4
+
+Behaviour = {
+ADDRESS,"hello$",! -> NOP
+ADDRESS,"hi$",!    -> NOP
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> NOP
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"       -> Idle
+
+}

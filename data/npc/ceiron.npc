@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Ceiron"
+Outfit = (144,78-100-119-116-3)
+Home = [32661,31715,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Always nice to meet a fellow druid, %N."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "May Crunor bless and guide you, %N."
+
+"bye"            -> "May Crunor bless and guide you, %N.", Idle
+"farewell"       -> *
+
+
+}

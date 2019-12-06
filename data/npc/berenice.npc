@@ -1,0 +1,66 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Berenice"
+Outfit = (140,5-87-104-106)
+Home = [32359,32812,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings, what can I do for you? If you're interested in the explorer society, just ask me."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye.", Idle
+"farewell"       -> *
+"job"         -> "I am the local representative of the explorer society in Liberty Bay."
+"me"       -> *
+"explorer society"         -> "Our noble society is dedicated to explore the unknown. No location is too remote for our members to travel there ...",
+							  "No beast is too wild to be hunted. No treasure buried too deep to be unearthed ...",
+							  "Only the most dedicated and fearless adventurers may join our ranks."
+"rank",QuestValue(300)>0,QuestValue(300)<4 -> "You are a novice of the explorer society." 
+"rank",QuestValue(300)>3,QuestValue(300)<7 -> "You are a journeyman of the explorer society." 
+"rank",QuestValue(300)>6,QuestValue(300)<9 -> "You are a relic hunter of the explorer society." 
+"rank",QuestValue(300)>8                   -> "You are an explorer of the explorer society."
+"liberty bay"         -> "For an outpost it is quite well organised and comfortable. Uhm ... not that a true explorer would give much about comfort."
+"outpost"         -> "Sadly the governor is too occupied with other issues, so his support of our noble efforts is only nominal. However, our own resources are large enough to maintain our researches here on our own."
+"governor"       -> *
+"bases"         -> "Currently we maintain public bases in Port Hope and Northport. We have also established this humble outpost here."
+"researches"         -> "The local flora and fauna hold surely some surprises for us. Also the history of the isles is worth some closer investigation. Finally there is the unknown sea and its depths that hide secrets yet to be discovered."
+"pirates"         -> "Pirates are a pain. Constantly we lose supplies and important papers, that document our progress here, due to their inroads on our ships. The military really has to eradicate this pest once and for all."
+"quaras"         -> "The quara as a race are a phenomenon! There are either different types of quara or they are able to reshape and upgrade their bodies in some way ...",
+					"To discover the secret magic behind such techniques would be invaluable."
+"voodoo"         -> "The magic of this isle has its twists. That was the easy part for our mages to find out. The more difficult part will be to figure out why it is that way and what it means for users of magic and for ordinary people ...",
+					"In the light of this knowledge this 'voodoo' is worth some closer researches."
+"cult"         -> "Sadly the town is full of superstitious rumours. Although we appreciate folklore now and then, we first have to accomplish the scientific part of investigations ...",
+				  "So we have no time for rumours about a hidden cult that probably does not exist at all. ...",
+				  "But if you should find anything that proves their existence, I'll buy it from you."
+"superstitious"         -> "That is one of the things we have to explore after all."
+"sugar"         -> "It is astonishing how fertile the soil here seems to be for sugar canes. There is something special about the isles."
+"plantations"         -> "Well, there are some plantations in the western part of the isle."
+"rum"         -> "I send some rum to the other bases of our society each month. We like to taste exotic beverages now and then ...",
+				 "That is one of the things we have to explore after all."
+"venore"         -> "Venore is a centre of commerce. It has only little to offer to our efforts to explore and to gain further knowledge ...",
+					"Sometimes though, the generous tradesmen sponsor some of our missions and now and then we can sell some of our knowledge or recovered artefacts to them."
+"thais"         -> "Thais is a great city, but not such a centre of learning and knowledge like Edron."
+"king"         -> "The king is a great supporter and a honourary member of our society."
+"djinn"         -> "Djinns are an extremely interesting topic. Luckily you have just found an expert in djinn lore! To keep matters short, let me only tell you the most notable facts: ...",
+				   "Have you known that there are green and blue djinns? Well that's because there are no less than two types of djinns ...",
+				   "<minutes later> Which does mean that some are green and others are blue! ...",
+				   "<several minutes later> I can not stress enough the relevance of the fact that djinns have no need for shoes at all. That leads to astounding facts like ...",
+				   "<another few minutes later> Without shoes you'd think a society would concentrate on some kinds of gloves, but no! ...",
+				   "<after loosing track of time at some point> Which leads to a completely shoeless society that is divided in two colours! ...",
+				   "I see the implication of this fact makes you sweat and your face turn greenish, at last someone who can comprehend the significance of my studies! ...",
+				   "If you ever want to hear more about djinns, just ask me!"
+"ferumbras"         -> "This evil wizard once maintained a centre of power here on those isles. After his demise, the Edron academy sealed that place and is extremely secretive about it ...",
+					   "Although it is understandable, it is still an unacceptable hindrance to free research."
+"Admiral Wyrmslicer"         -> "The admiral is of little help to us. Instead of providing us troops for protection, he is more concerned that we could draw the attention of imagined enemies on the settlement or destroy something."
+"Charlotta"         -> "That old woman was of some help in cataloguing the local fauna. Still I think she withholds some vital knowledge about local plants."
+"Eleonore"         -> "This young lady has probably more interest in make-up than in education."
+"Theodore Loveless"         -> "Mr. Loveless is a man of education and style. He certainly knows how to run festivities of all kinds."
+"Chondur"         -> "Chondur ... Chondur ... I really don't know where to put that name. Some local celebrity I guess."
+"Raymond Striker"         -> "This Striker is one of the most dangerous pirates. The society has put an additional bounty on his head."
+}

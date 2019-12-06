@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Atrad"
+Outfit = (152,77-113-132-94-3)
+Home = [32077,32533,9]
+Radius = 5
+
+Behaviour = {
+ADDRESS,"hello$",Burning>0 -> "Hehe. That\'s a good show, %N, with all the pyro effects. You got my attention. For a minute or so."
+ADDRESS,"hi$",Burning>0    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"            -> "Bye, %N!", Idle
+"farewell"       -> *
+
+
+}

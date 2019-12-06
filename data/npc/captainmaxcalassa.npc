@@ -1,0 +1,48 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Captain Max"
+Outfit = (134,95-10-56-77)
+Home = [31915,32710,6]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",!        -> "Ahoy, %N. On a mission for the explorer society, eh?"
+ADDRESS,"hi$",!           -> *
+ADDRESS,!                 -> Idle
+BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
+BUSY,"hi$",!              -> *
+BUSY,!                    -> NOP
+VANISH,!                  -> "Good bye."
+
+"bye"          -> "Good bye.", Idle
+"farewell"     -> *
+"name"         -> "My name is Captain Maximilian."
+"job"          -> "I am the captain of this ship."
+"captain"      -> *
+"sail"          -> "Welcome on board, noble %N. I can bring you back to Liberty Bay. Do you want me to do it?", Topic=1
+"passage"          -> *
+"back"          -> *
+
+"liberty bay"       -> "Do you want go back to Liberty Bay?", Topic=1
+
+Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
+
+
+Topic=1,"yes" -> "Set the sails!", Idle, EffectOpp(11), Teleport(32298,32895,6), EffectOpp(11)
+Topic=1                                 -> "Maybe another time, then."
+
+"helmet","of","the","deep"         -> Type=5460, Amount=1, Price=5000,   "Do you want to buy a helmet of the deep for %P gold?", Topic=2
+%1,1<%1,"helmet","of","the","deep"            -> Type=5460, Amount=%1, Price=5000*%1,    "Do you want to buy %A helmets of the deep for %P gold?", Topic=1
+Topic=2,"yes",CountMoney>=Price -> "Thank you. Here it is.", DeleteMoney, Create(Type)
+Topic=2,"yes"                   -> "Sorry, you do not have enough gold."
+Topic=2                         -> "Maybe you will buy it another time."
+
+"sell","helmet","of","the","deep"      -> Type=5460, Amount=1, Price=5000,  "Do you want to sell a helmet of the deep for %P gold?", Topic=3
+"return" -> *
+"sell",%1,1<%1,"helmet","of","the","deep"        -> Type=5460, Amount=%1, Price=5000*%1,  "Do you want to sell %A helmets of the deep for %P gold?", Topic=2
+"return",%1,1<%1 -> *
+Topic=3,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=3,"yes"                             -> "Sorry, you do not have one."
+Topic=3,"yes",Amount>1                    -> "Sorry, you do not have so many."
+Topic=3                                   -> "Maybe next time."
+}

@@ -395,9 +395,6 @@
 		<monster name="centipede" x="1" y="-1" z="3" spawntime="60" />
 		<monster name="centipede" x="-2" y="1" z="3" spawntime="60" />
 	</spawn>
-	<spawn centerx="32395" centery="32821" centerz="3" radius="2">
-		<npc name="Admiral Wyrmslicer" x="1" y="0" z="3" spawntime="60" />
-	</spawn>
 	<spawn centerx="31985" centery="32823" centerz="3" radius="3">
 		<monster name="pirate marauder" x="-1" y="0" z="3" spawntime="59" />
 		<monster name="smuggler" x="-2" y="2" z="3" spawntime="59" />
@@ -3209,9 +3206,6 @@
 		<monster name="warlock" x="3" y="1" z="6" spawntime="59" />
 		<monster name="lich" x="-1" y="2" z="6" spawntime="59" />
 	</spawn>
-	<spawn centerx="31914" centery="32710" centerz="6" radius="3">
-		<npc name="Captain Max Calassa" x="1" y="0" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="33049" centery="32720" centerz="6" radius="1">
 		<monster name="dragon" x="0" y="0" z="6" spawntime="800" />
 	</spawn>
@@ -3478,9 +3472,6 @@
 	<spawn centerx="32285" centery="32891" centerz="6" radius="2">
 		<npc name="Jack Fate" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
-	<spawn centerx="32298" centery="32896" centerz="6" radius="3">
-		<npc name="Captain Max" x="0" y="-1" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="31953" centery="32897" centerz="6" radius="2">
 		<monster name="pirate marauder" x="1" y="-2" z="6" spawntime="59" />
 		<monster name="smuggler" x="0" y="1" z="6" spawntime="59" />
@@ -3710,6 +3701,9 @@
 	<spawn centerx="32018" centery="31624" centerz="7" radius="3">
 		<monster name="polar bear" x="0" y="0" z="7" spawntime="700" />
 		<monster name="polar bear" x="-1" y="1" z="7" spawntime="700" />
+	</spawn>
+	<spawn centerx="32362" centery="31624" centerz="7" radius="1">
+		<npc name="Gelagos" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32488" centery="31627" centerz="7" radius="1">
 		<monster name="chicken" x="0" y="0" z="7" spawntime="600" />
@@ -9831,10 +9825,6 @@
 	<spawn centerx="31944" centery="32592" centerz="7" radius="2">
 		<monster name="bonebeast" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="32334" centery="32592" centerz="7" radius="1" />
-	<spawn centerx="32337" centery="32592" centerz="7" radius="1">
-		<npc name="Ariella" x="-1" y="1" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32358" centery="32592" centerz="7" radius="1" />
 	<spawn centerx="32857" centery="32592" centerz="7" radius="1">
 		<monster name="kongra" x="0" y="0" z="7" spawntime="600" />
@@ -11627,9 +11617,6 @@
 		<monster name="poison spider" x="-4" y="-3" z="7" spawntime="600" />
 		<monster name="poison spider" x="-4" y="0" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32276" centery="32708" centerz="7" radius="3">
-		<npc name="Braden" x="1" y="-1" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32721" centery="32708" centerz="7" radius="1">
 		<monster name="cobra" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -12563,9 +12550,6 @@
 	<spawn centerx="32199" centery="32792" centerz="7" radius="5">
 		<npc name="Hamilton" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="32365" centery="32792" centerz="7" radius="2">
-		<npc name="Chantalle" x="-2" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32785" centery="32792" centerz="7" radius="4">
 		<monster name="centipede" x="-3" y="-3" z="7" spawntime="600" />
 		<monster name="centipede" x="-2" y="-2" z="7" spawntime="600" />
@@ -12623,9 +12607,6 @@
 	</spawn>
 	<spawn centerx="32993" centery="32797" centerz="7" radius="4">
 		<monster name="spit nettle" x="-3" y="2" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32356" centery="32798" centerz="7" radius="2">
-		<npc name="Bertram" x="-1" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32715" centery="32799" centerz="7" radius="3">
 		<monster name="spider" x="0" y="0" z="7" spawntime="600" />
@@ -12776,9 +12757,6 @@
 		<monster name="hyaena" x="0" y="0" z="7" spawntime="600" />
 		<monster name="hyaena" x="3" y="0" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32359" centery="32812" centerz="7" radius="1">
-		<npc name="Berenice" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32747" centery="32812" centerz="7" radius="1">
 		<monster name="cobra" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -12835,9 +12813,6 @@
 		<monster name="lizard templar" x="0" y="0" z="7" spawntime="600" />
 		<monster name="lizard templar" x="1" y="1" z="7" spawntime="600" />
 		<monster name="lizard sentinel" x="0" y="3" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32293" centery="32817" centerz="7" radius="2">
-		<npc name="Cedrik" x="-1" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32834" centery="32817" centerz="7" radius="4">
 		<monster name="bug" x="0" y="0" z="7" spawntime="600" />
@@ -13086,9 +13061,6 @@
 		<monster name="purple butterfly" x="-1" y="1" z="7" spawntime="600" />
 		<monster name="purple butterfly" x="0" y="1" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32300" centery="32837" centerz="7" radius="2">
-		<npc name="Bradford" x="-1" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32618" centery="32837" centerz="7" radius="1">
 		<monster name="cobra" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -13149,12 +13121,6 @@
 		<monster name="lizard templar" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="32982" centery="32840" centerz="7" radius="3" />
-	<spawn centerx="32197" centery="32841" centerz="7" radius="3">
-		<npc name="Cameron" x="-1" y="-1" z="7" spawntime="60" />
-	</spawn>
-	<spawn centerx="32269" centery="32841" centerz="7" radius="1">
-		<npc name="Charlotta" x="-1" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32761" centery="32841" centerz="7" radius="5">
 		<monster name="poison spider" x="0" y="0" z="7" spawntime="600" />
 		<monster name="poison spider" x="2" y="0" z="7" spawntime="600" />
@@ -13821,9 +13787,6 @@
 		<monster name="orchid frog" x="0" y="4" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32605" centery="32912" centerz="7" radius="1" />
-	<spawn centerx="32132" centery="32914" centerz="7" radius="2">
-		<npc name="Captain Waverider" x="-1" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32599" centery="32914" centerz="7" radius="1">
 		<monster name="spit nettle" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -13931,9 +13894,6 @@
 		<monster name="poison spider" x="0" y="0" z="7" spawntime="600" />
 		<monster name="poison spider" x="4" y="1" z="7" spawntime="600" />
 		<monster name="poison spider" x="-3" y="4" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32141" centery="32929" centerz="7" radius="4">
-		<npc name="Barney" x="0" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32735" centery="32929" centerz="7" radius="1">
 		<monster name="cobra" x="0" y="0" z="7" spawntime="600" />
@@ -25133,9 +25093,6 @@
 		<monster name="scarab" x="0" y="0" z="9" spawntime="600" />
 		<monster name="scarab" x="1" y="0" z="9" spawntime="600" />
 		<monster name="scarab" x="1" y="2" z="9" spawntime="600" />
-	</spawn>
-	<spawn centerx="32076" centery="32533" centerz="9" radius="1">
-		<npc name="Atrad" x="1" y="0" z="9" spawntime="60" />
 	</spawn>
 	<spawn centerx="32844" centery="32533" centerz="9" radius="4">
 		<monster name="sibang" x="-3" y="-1" z="9" spawntime="600" />
