@@ -20,10 +20,10 @@
 		<attack name="lifedrain" chance="11" radius="3" target="0" min="-50" max="-90">
 			<attribute key="areaEffect" value="blackspark"/>
 		</attack>
-		<attack name="ice" chance="12" range="7" min="-40" max="-70" target="0" radius="4">
-			<attribute key="areaEffect" value="iceattack"/>
+		<attack name="lifedrain" chance="12" range="7" min="-40" max="-70" target="0" radius="4">
+			<attribute key="areaEffect" value="redshimmer"/>
 		</attack> 	
-		<attack name="energycondition" chance="10" min="-75" max="-75" range="1" target="1">
+		<attack name="energycondition" count="80" chance="10" min="-75" max="-75" range="1" target="1">
 			<attribute key="shootEffect" value="energy"/>
 		</attack>
 	</attacks>

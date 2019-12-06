@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <monster name="Lavahole" nameDescription="a lavahole" race="undead" experience="0" speed="0" manacost="0">
 	<health now="100" max="100"/>
-	<look typeex="389"/>
+	<look typeex="391"/>
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="10" />
 	<flags>

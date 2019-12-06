@@ -17,7 +17,7 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks skill="45" attack="40">
-		<attack name="poisoncondition" chance="10" range="5" poison="40">
+		<attack name="poisoncondition" count="20" chance="10" range="5" poison="40">
 			<attribute key="shooteffect" value="poison"/>
 		</attack>
 	</attacks>

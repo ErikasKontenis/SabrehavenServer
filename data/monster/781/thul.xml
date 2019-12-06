@@ -21,17 +21,17 @@
 		<attack name="physical" chance="25" radius="3" target="0" min="-0" max="-170">
 			<attribute key="areaEffect" value="blackspark"/>
 		</attack>
-		<attack name="poison" chance="20" range="7" radius="4" target="0" min="-0" max="-0">
-			<attribute key="areaEffect" value="poison"/>
-		</attack>	
+		<attack name="poisonfield" chance="19" range="7" radius="3" target="0">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
 		<attack name="speed" chance="10" range="7" target="1" speedchange="-600" duration="20000">
 			<attribute key="shootEffect" value="snowball"/>
 		</attack>
+		<attack name="lifedrain" chance="20" range="7" target="1" min="-108" max="-137">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
 	</attacks>
 	<defenses armor="35" defense="40">
-		<defense name="ice" chance="20" radius="1" target="0" min="-105" max="-140">
-			<attribute key="areaEffect" value="icearea"/>
-		</defense>
 	</defenses>
 	<immunities>
 		<immunity lifedrain="1"/>

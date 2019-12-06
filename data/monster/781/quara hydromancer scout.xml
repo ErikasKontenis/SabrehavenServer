@@ -17,11 +17,11 @@
 		<flag runonhealth="0"/>
 	</flags>
 	<attacks skill="30" attack="20">
-		<attack name="ice" chance="9" length="8" spread="0" min="-125" max="-250">
+		<attack name="lifedrain" chance="9" length="8" spread="0" min="-125" max="-250">
 			<attribute key="areaEffect" value="bubbles"/>
 		</attack>
-		<attack name="ice" chance="12" radius="3" target="0" min="-130" max="-165">
-			<attribute key="areaEffect" value="bubbles"/>
+		<attack name="lifedrain" chance="12" radius="3" target="0" min="-130" max="-165">
+			<attribute key="areaEffect" value="redshimmer"/>
 		</attack>
 		<attack name="lifedrain" chance="7" length="8" spread="3" max="-210">
 			<attribute key="areaEffect" value="greenspark"/>
