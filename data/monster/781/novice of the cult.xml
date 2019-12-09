@@ -1,0 +1,48 @@
+<monster name="Novice of the Cult" nameDescription="a novice of the cult" race="blood" experience="100" speed="62" manacost="0">
+	<health now="285" max="285" />
+	<look type="133" head="114" body="95" legs="114" feet="114" corpse="6080" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="40" />
+	</flags>
+	<attacks skill="55" attack="20" poison="10">
+		<attack name="lifedrain" chance="15" range="7" target="1" min="-20" max="-80">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="10">
+		<defense name="healing" chance="17" min="30" max="50">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<summons maxSummons="1">
+		<summon name="Chicken" chance="20" max="1" />
+	</summons>
+	<voices interval="5000" chance="10">
+		<voice sentence="Fear us!" />
+		<voice sentence="You will not tell anyone what you have seen." />
+		<voice sentence="Your curiosity will be punished!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="39" chance="138" /><!-- gold coin -->
+		<item id="3286" chance="52" /><!-- mace -->
+		<item id="3028" chance="7" /><!-- small diamond -->
+		<item id="3572" chance="37" /><!-- scarf -->
+		<item id="6087" chance="17" /><!-- music sheet -->
+		<item id="2843" chance="11" /><!-- book -->
+		<item id="3097" chance="10" /><!-- dwarven ring -->
+		<item id="3083" chance="9" /><!-- garlic necklace -->
+		<item id="3074" chance="11" /><!-- wand of vortex -->
+		<item id="5810" chance="10" /><!-- pirate voodoo doll -->
+	</loot>
+</monster>

@@ -672,6 +672,7 @@ ShootTypeNames shootTypeNames[] = {
 CombatTypeNames combatTypeNames[] = {
 	{"physical",		COMBAT_PHYSICALDAMAGE},
 	{"energy",		COMBAT_ENERGYDAMAGE},
+	{"drown",		COMBAT_DROWNDAMAGE},
 	{"earth",		COMBAT_EARTHDAMAGE},
 	{"poison",			COMBAT_EARTHDAMAGE},
 	{"fire",		COMBAT_FIREDAMAGE},
@@ -914,6 +915,8 @@ size_t combatTypeToIndex(CombatType_t combatType)
 			return 6;
 		case COMBAT_HEALING:
 			return 7;
+		case COMBAT_DROWNDAMAGE:
+			return 8;
 		default:
 			return 0;
 	}

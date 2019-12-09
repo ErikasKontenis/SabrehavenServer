@@ -1,0 +1,18 @@
+<monster name="Seagull" nameDescription="a seagull" race="blood" experience="0" speed="80" manacost="250">
+	<health now="25" max="25" />
+	<look type="223" corpse="6076" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="11" />
+	</flags>
+	<defenses armor="5" defense="5" />
+</monster>

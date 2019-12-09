@@ -2,12 +2,7 @@ local drunk = Condition(CONDITION_DRUNK)
 drunk:setParameter(CONDITION_PARAM_TICKS, 60000)
 
 local poison = Condition(CONDITION_POISON)
-poison:setParameter(CONDITION_PARAM_DELAYED, true)
-poison:setParameter(CONDITION_PARAM_MINVALUE, -50)
-poison:setParameter(CONDITION_PARAM_MAXVALUE, -120)
-poison:setParameter(CONDITION_PARAM_STARTVALUE, -5)
-poison:setParameter(CONDITION_PARAM_TICKINTERVAL, 5000)
-poison:setParameter(CONDITION_PARAM_FORCEUPDATE, true)
+poison:setTiming(100)
 
 local messages = {
 	[FLUID_WATER] = "Gulp.",
@@ -48,7 +43,7 @@ function onUse(player, item, fromPosition, target, toPosition)
 			if self and item:getFluidType() == FLUID_BEER or item:getFluidType() == FLUID_WINE or item:getFluidType() == FLUID_RUM then
 				player:addCondition(drunk)
 			elseif self and item:getFluidType() == FLUID_SLIME then
-				player:addCondition(slime)
+				player:addCondition(poison)
 			elseif item:getFluidType() == FLUID_MANAFLUID then
 				target:addMana(math.random(50, 100))
 				target:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)

@@ -1,0 +1,48 @@
+<monster name="Pirate Marauder" nameDescription="a pirate marauder" race="blood" experience="125" speed="70" manacost="490">
+	<health now="210" max="210" />
+	<look type="93" corpse="6080" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="25" />
+	</flags>
+	<attacks skill="60" attack="40">
+		<attack name="physical" chance="15" range="7" min="-0" max="-40">
+			<attribute key="shootEffect" value="spear" />
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="20" />
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Plundeeeeer!" />
+		<voice sentence="Give up!" />
+		<voice sentence="Hiyaa!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="40" chance="309" /><!-- gold coin -->
+		<item id="5927" chance="10" /><!-- pirate bag -->
+		<item id="2920" chance="99" /><!-- torch -->
+		<item id="3358" chance="33" /><!-- chain armor -->
+		<item id="6097" chance="10" /><!-- hook -->
+		<item id="3277" countmax="2" chance="40" /><!-- spear -->
+		<item id="5090" chance="14" /><!-- treasure map -->
+		<item id="6126" chance="10" /><!-- peg leg -->
+		<item id="3410" chance="55" /><!-- plate shield -->
+		<item id="5917" chance="15" /><!-- bandana -->
+		<item id="5552" chance="5" /><!-- rum flask -->
+		<item id="6098" chance="10" /><!-- eye patch -->
+		<item id="5928" chance="6" /><!-- goldfish bowl -->
+		<item id="5792" chance="6" /><!-- dice -->
+	</loot>
+</monster>

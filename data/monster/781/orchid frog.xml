@@ -1,0 +1,25 @@
+<monster name="Orchid Frog" nameDescription="a orchid frog" race="blood" experience="20" speed="95" manacost="305">
+	<health now="60" max="60" />
+	<look type="226" head="109" body="14" legs="109" feet="114" corpse="6079" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="10" attack="25">
+	</attacks>
+	<defenses armor="2" defense="3" />
+	<loot>
+    <item id="3031" countmax="10" chance="309" /><!-- gold coin -->
+    <item id="3492" chance="186" /><!-- worm -->
+</loot>
+</monster>

@@ -1,0 +1,39 @@
+<monster name="Quara Predator Scout" nameDescription="a quara predator scout" race="blood" experience="400" speed="72" manacost="0">
+	<health now="890" max="890" />
+	<look type="20" corpse="6067" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="50" weakest="15" mostdamage="15" random="20" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="30" attack="95">
+	</attacks>
+	<defenses armor="20" defense="29" />
+	<immunities>
+		<immunity fire="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drown="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Gnarrr!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="42" chance="242" /><!-- gold coin -->
+		<item id="3111" chance="101" /><!-- fishbone -->
+		<item id="3275" chance="43" /><!-- double axe -->
+		<item id="3377" chance="55" /><!-- scale armor -->
+		<item id="3028" chance="9" /><!-- small diamond -->
+		<item id="5895" chance="9" /><!-- fish fin -->
+	</loot>
+</monster>

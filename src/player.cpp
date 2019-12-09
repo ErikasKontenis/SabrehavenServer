@@ -1164,6 +1164,7 @@ void Player::onThink(uint32_t interval)
 		addMessageBuffer();
 	}
 
+	lastWalkingTime += interval;
 	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT) && !isAccessPlayer()) {
 		idleTime += interval;
 		const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);
@@ -2949,6 +2950,10 @@ void Player::onAddCombatCondition(ConditionType_t type)
 	switch (type) {
 		case CONDITION_POISON:
 		sendTextMessage(MESSAGE_STATUS_DEFAULT, "You are poisoned.");
+		break;
+
+		case CONDITION_DROWN:
+		sendTextMessage(MESSAGE_STATUS_SMALL, "You are drowning.");
 		break;
 
 		case CONDITION_PARALYZE:

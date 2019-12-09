@@ -1,0 +1,48 @@
+<monster name="Deadeye Devious" nameDescription="Deadeye Devious" race="blood" experience="500" speed="65" manacost="0">
+	<health now="1450" max="1450" />
+	<look type="151" head="115" body="76" legs="35" feet="117" addons="2" corpse="6080" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag lightlevel="0" />
+		<flag lightcolor="0" />
+		<flag targetdistance="3" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="40" attack="60">
+		<attack name="physical" chance="25" min="-40" max="-160">
+			<attribute key="shootEffect" value="throwingknife" />
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="50">
+		<defense name="healing" chance="10" min="50" max="150">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Let's kill 'em" />
+		<voice sentence="Arrrgh!" />
+		<voice sentence="You'll never take me alive!" />
+	</voices>
+	<loot>
+		<item id="3357" chance="1005" /><!-- plate armor -->
+		<item id="3031" countmax="88" chance="651" /><!-- gold coin -->
+		<item id="6102" chance="1005" /><!-- deadeye devious' eye patch -->
+		<item id="3370" chance="186" /><!-- knight armor -->
+		<item id="3114" countmax="2" chance="686" /><!-- skull -->
+		<item id="3577" chance="277" /><!-- meat -->
+		<item id="3028" chance="186" /><!-- small diamond -->
+		<item id="3267" chance="277" /><!-- dagger -->
+		<item id="5926" chance="96" /><!-- pirate backpack -->
+	</loot>
+</monster>

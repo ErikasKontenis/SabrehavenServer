@@ -1,0 +1,30 @@
+<monster name="Mammoth" nameDescription="a mammoth" race="blood" experience="160" speed="58" manacost="500">
+	<health now="320" max="320" />
+	<look type="199" corpse="6074" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="45" attack="40">
+	</attacks>
+	<defenses armor="40" defense="57" />
+	<voices interval="5000" chance="10">
+		<voice sentence="Troooooot!" />
+		<voice sentence="Hooooot-Toooooot!" />
+		<voice sentence="Tooooot." />
+	</voices>
+	<loot>
+		<item id="3582" chance="202" /><!-- ham -->
+		<item id="3031" countmax="20" chance="162" /><!-- gold coin -->
+	</loot>
+</monster>

@@ -1,0 +1,30 @@
+<monster name="Pirate Skeleton" nameDescription="a pirate skeleton" race="undead" experience="85" speed="45" manacost="0">
+	<health now="190" max="190" />
+	<look type="195" corpse="6070" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="20" />
+	</flags>
+	<attacks skill="40" attack="20">
+	</attacks>
+	<defenses armor="18" defense="19" />
+	<loot>
+		<item id="3031" countmax="25" chance="256" /><!-- gold coin -->
+		<item id="3115" chance="72" /><!-- bone -->
+		<item id="3116" chance="60" /><!-- big bone -->
+		<item id="3114" chance="38" /><!-- skull -->
+		<item id="3294" chance="13" /><!-- short sword -->
+		<item id="3337" chance="18" /><!-- bone club -->
+		<item id="3264" chance="12" /><!-- sword -->
+	</loot>
+</monster>

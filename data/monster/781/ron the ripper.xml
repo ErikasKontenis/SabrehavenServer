@@ -1,0 +1,41 @@
+<monster name="Ron the Ripper" nameDescription="Ron the Ripper" race="blood" experience="500" speed="60" manacost="0">
+	<health now="1500" max="1500" />
+	<look type="151" head="95" body="94" legs="117" feet="97" addons="1" corpse="6080" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag lightlevel="0" />
+		<flag lightcolor="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="250" />
+	</flags>
+	<attacks skill="90" attack="50">
+		<attack name="lifedrain" chance="10" range="7" target="1" min="-0" max="-0">
+			<attribute key="areaEffect" value="whitenote" />
+		</attack>	
+		<attack name="physical" chance="15" min="-0" max="-160">
+			<attribute key="shootEffect" value="throwingknife" />
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="50">
+		<defense name="healing" chance="10" min="125" max="175">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<loot>
+		<item id="6101" chance="1000" /><!-- ron the ripper's sabre -->
+		<item id="3031" countmax="50" chance="1000" /><!-- gold coin -->
+		<item id="3370" chance="12" /><!-- knight armor -->
+		<item id="3275" chance="15" /><!-- double axe -->
+		<item id="3357" chance="40" /><!-- plate armor -->
+		<item id="3267" chance="85" /><!-- dagger -->
+		<item id="3114" countmax="2" chance="1000" /><!-- skull -->
+	</loot>
+</monster>

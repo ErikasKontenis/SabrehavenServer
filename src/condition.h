@@ -255,6 +255,8 @@ class ConditionDamage final : public Condition
 				count = max_count = 8;
 			} else if (type == CONDITION_ENERGY) {
 				count = max_count = 10;
+			} else if (type == CONDITION_DROWN) {
+				count = max_count = 3;
 			}
 		}
 
@@ -281,7 +283,7 @@ class ConditionDamage final : public Condition
 		int32_t max_count = 0;
 		int32_t factor_percent = -1;
 		int32_t hit_damage = 0;
-
+		bool isFirstCycle = true;
 		uint32_t owner = 0;
 
 		bool doDamage(Creature* creature, int32_t healthChange);

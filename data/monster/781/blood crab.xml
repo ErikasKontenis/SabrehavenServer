@@ -1,0 +1,32 @@
+<monster name="Blood Crab" nameDescription="a blood crab" race="blood" experience="160" speed="50" manacost="505">
+	<health now="290" max="290" />
+	<look type="200" corpse="6075" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="100" attack="20">
+	</attacks>
+	<defenses armor="10" defense="15" />
+	<immunities>
+		<immunity drown="1" />
+		<immunity earth="1" />
+	</immunities>
+	<loot>
+    <item id="3358" chance="55" /><!-- chain armor -->
+    <item id="3372" chance="22" /><!-- brass legs -->
+    <item id="3031" countmax="20" chance="310" /><!-- gold coin -->
+    <item id="3578" chance="107" /><!-- fish -->
+    <item id="3026" chance="10" /><!-- white pearl -->
+</loot>
+</monster>

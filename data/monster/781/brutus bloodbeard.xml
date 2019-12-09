@@ -1,0 +1,40 @@
+<monster name="Brutus Bloodbeard" nameDescription="Brutus Bloodbeard" race="blood" experience="500" speed="65" manacost="0">
+	<health now="1200" max="1200" />
+	<look type="98" corpse="6080" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag lightlevel="0" />
+		<flag lightcolor="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="30" attack="50">
+		<attack name="physical" chance="40" range="7" min="-0" max="-100">
+			<attribute key="shootEffect" value="throwingknife" />
+		</attack>
+		<attack name="drunk" chance="30" range="7" spread="3" length="6">
+			<attribute key="areaEffect" value="poff" />
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="50" />
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item id="3577" chance="200" /><!-- meat -->
+		<item id="3031" countmax="71" chance="535" /><!-- gold coin -->
+		<item id="6099" chance="1000" /><!-- brutus bloodbeard's hat -->
+		<item id="3370" chance="200" /><!-- knight armor -->
+		<item id="3267" chance="600" /><!-- dagger -->
+		<item id="3114" countmax="2" chance="600" /><!-- skull -->
+		<item id="3357" chance="400" /><!-- plate armor -->
+	</loot>
+</monster>

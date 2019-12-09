@@ -1,0 +1,28 @@
+<monster name="Crimson Frog" nameDescription="a crimson frog" race="blood" experience="20" speed="95" manacost="305">
+	<health now="60" max="60" />
+	<look type="226" head="94" body="78" legs="94" feet="78" corpse="6079" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="0" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="10" attack="25">
+	</attacks>
+	<defenses armor="8" defense="8" />
+	<voices interval="5000" chance="10">
+		<voice sentence="Ribbit!" />
+	</voices>
+	<loot>
+    <item id="3031" countmax="7" chance="253" /><!-- gold coin -->
+    <item id="3492" chance="309" /><!-- worm -->
+</loot>
+</monster>

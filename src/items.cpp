@@ -402,6 +402,8 @@ bool Items::loadItems()
 						items[id].getAbilities().absorbPercent[combatTypeToIndex(COMBAT_FIREDAMAGE)] += script.readNumber();
 					} else if (identifier == "absorbpoison") {
 						items[id].getAbilities().absorbPercent[combatTypeToIndex(COMBAT_EARTHDAMAGE)] += script.readNumber();
+					} else if (identifier == "absorbdrown") {
+					items[id].getAbilities().absorbPercent[combatTypeToIndex(COMBAT_DROWNDAMAGE)] += script.readNumber();
 					} else if (identifier == "absorblifedrain") {
 						items[id].getAbilities().absorbPercent[combatTypeToIndex(COMBAT_LIFEDRAIN)] += script.readNumber();
 					} else if (identifier == "absorbmanadrain") {
@@ -515,7 +517,6 @@ bool Items::loadItems()
 							items[id].conditionDamage.reset(conditionDamage);
 						} else if (identifier == "poison") {
 							conditionDamage = new ConditionDamage(CONDITIONID_COMBAT, CONDITION_POISON);
-							conditionDamage->setParam(CONDITION_PARAM_DELAYED, true);
 							combatType = COMBAT_EARTHDAMAGE;
 							items[id].combatType = combatType;
 							items[id].conditionDamage.reset(conditionDamage);

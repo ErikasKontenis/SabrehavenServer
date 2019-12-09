@@ -646,6 +646,10 @@ uint32_t MoveEvent::EquipItem(MoveEvent* moveEvent, Player* player, Item* item, 
 		player->sendIcons();
 	}
 
+	if (it.abilities->absorbPercent[combatTypeToIndex(COMBAT_DROWNDAMAGE)] == 100) {
+		player->removeCondition(CONDITION_DROWN);
+	}
+
 	if (it.abilities->regeneration) {
 		Condition* condition = Condition::createCondition(static_cast<ConditionId_t>(slot), CONDITION_REGENERATION, -1, 0);
 

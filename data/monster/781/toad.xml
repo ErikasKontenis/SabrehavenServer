@@ -1,0 +1,34 @@
+<monster name="Toad" nameDescription="a toad" race="blood" experience="60" speed="52" manacost="400">
+	<health now="135" max="135" />
+	<look type="222" corpse="6077" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="20" />
+	</flags>
+	<attacks skill="30" attack="15" poision="20">
+		<attack name="physical" chance="10" range="7" min="-8" max="-17">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="12" defense="10" />
+	<voices interval="5000" chance="30">
+		<voice sentence="Ribbit, ribbit!" />
+		<voice sentence="Ribbit!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="20" chance="256" /><!-- gold coin -->
+		<item id="3578" chance="218" /><!-- fish -->
+		<item id="3279" chance="7" /><!-- war hammer -->
+		<item id="3286" chance="23" /><!-- mace -->
+	</loot>
+</monster>

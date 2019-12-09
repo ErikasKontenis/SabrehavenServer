@@ -131,6 +131,7 @@ Condition* Condition::createCondition(ConditionId_t id, ConditionType_t type, in
 		case CONDITION_POISON:
 		case CONDITION_FIRE:
 		case CONDITION_ENERGY:
+		case CONDITION_DROWN:
 			return new ConditionDamage(id, type, subId);
 
 		case CONDITION_HASTE:
@@ -915,6 +916,28 @@ bool ConditionDamage::executeCondition(Creature* creature, int32_t)
 		} else {
 			return false;
 		}
+	} else if (conditionType == CONDITION_DROWN) {
+		if (isFirstCycle && count - max_count == -2) {
+			doDamage(creature, -20);
+			isFirstCycle = false;
+			count = max_count;
+			return true;
+		}
+		
+		const int32_t r_cycle = cycle;
+		if (r_cycle) {
+			if (count <= 0) {
+				count = max_count;
+				cycle = r_cycle + 2 * (r_cycle <= 0) - 1;
+				doDamage(creature, -20);
+			}
+			else {
+				--count;
+			}
+		}
+		else {
+			return false;
+		}
 	}
 
 	return true;
@@ -992,6 +1015,10 @@ uint32_t ConditionDamage::getIcons() const
 
 		case CONDITION_POISON:
 			icons |= ICON_POISON;
+			break;
+
+		case CONDITION_DROWN:
+			icons |= ICON_DROWNING;
 			break;
 
 		default:

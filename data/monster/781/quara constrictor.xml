@@ -1,0 +1,52 @@
+<monster name="Quara Constrictor" nameDescription="a quara constrictor" race="blood" experience="250" speed="130" manacost="670">
+	<health now="450" max="450" />
+	<look type="46" corpse="6065" />
+	<targetchange interval="1000" chance="20" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="50" attack="50" poison="20">
+		<attack name="lifedrain" chance="11" radius="3" target="0" min="-50" max="-90">
+			<attribute key="areaEffect" value="blackspark" />
+		</attack>
+		<attack name="lifedrain" chance="12" range="7" min="-40" max="-70" target="0" radius="4">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack> 	
+		<attack name="energycondition" count="80" chance="10" min="-75" max="-75" range="1" target="1">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15" />
+	<immunities>
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity drown="1" />
+		<immunity fire="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Gaaahhh!" />
+		<voice sentence="Gluh! Gluh!" />
+		<voice sentence="Tssss!" />
+		<voice sentence="Boohaa!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="290" /><!-- gold coin -->
+		<item id="3285" chance="55" /><!-- longsword -->
+		<item id="3033" chance="7" /><!-- small amethyst -->
+		<item id="3354" chance="104" /><!-- brass helmet -->
+		<item id="3359" chance="25" /><!-- brass armor -->
+		<item id="3581" chance="54" /><!-- shrimp -->
+		<item id="5895" chance="10" /><!-- fish fin -->
+		<item id="3294" chance="70" /><!-- short sword -->
+	</loot>
+</monster>

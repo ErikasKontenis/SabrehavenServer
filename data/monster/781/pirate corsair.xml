@@ -1,0 +1,50 @@
+<monster name="Pirate Corsair" nameDescription="a pirate corsair" race="blood" experience="350" speed="75" manacost="775">
+	<health now="675" max="675" />
+	<look type="98" corpse="6080" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="75" attack="40">
+		<attack name="physical" chance="15" range="7" max="-150">
+			<attribute key="shootEffect" value="throwingstar" />
+		</attack>
+		<attack name="physical" chance="20" target="0" min="-0" max="-0">
+			<attribute key="areaEffect" value="rednote" />
+		</attack>
+	</attacks>
+	<defenses armor="25" defense="20" />
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="5000" chance="10">
+		<voice sentence="Give up!" />
+		<voice sentence="Hiyaa!" />
+		<voice sentence="Plundeeeeer!" />
+	</voices>
+	<loot>
+		<item id="3287" countmax="12" chance="51" /><!-- throwing star -->
+		<item id="5552" chance="6" /><!-- rum flask -->
+		<item id="3031" countmax="83" chance="178" /><!-- gold coin -->
+		<item id="3273" chance="105" /><!-- sabre -->
+		<item id="3421" chance="18" /><!-- dark shield -->
+		<item id="6126" chance="10" /><!-- peg leg -->
+		<item id="5461" chance="9" /><!-- pirate boots -->
+		<item id="6097" chance="13" /><!-- hook -->
+		<item id="3383" chance="25" /><!-- dark armor -->
+		<item id="5926" chance="12" /><!-- pirate backpack -->
+		<item id="6098" chance="6" /><!-- eye patch -->
+		<item id="6096" chance="12" /><!-- pirate hat -->
+		<item id="5813" chance="6" /><!-- skull candle -->
+	</loot>
+</monster>

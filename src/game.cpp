@@ -3391,6 +3391,12 @@ void Game::combatGetTypeInfo(CombatType_t combatType, Creature* target, TextColo
 			effect = CONST_ME_MAGIC_RED;
 			break;
 		}
+
+		case COMBAT_DROWNDAMAGE: {
+			color = TEXTCOLOR_LIGHTBLUE;
+			effect = CONST_ME_LOSEENERGY;
+			break;
+		}
 		default: {
 			color = TEXTCOLOR_NONE;
 			effect = CONST_ME_NONE;

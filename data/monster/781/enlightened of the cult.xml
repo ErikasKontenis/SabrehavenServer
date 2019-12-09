@@ -1,0 +1,63 @@
+<monster name="Enlightened of the Cult" nameDescription="a enlightened of the cult" race="blood" experience="500" speed="60" manacost="0">
+	<health now="700" max="700" />
+	<look type="193" corpse="6080" />
+	<targetchange interval="1000" chance="50" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="5" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="30" attack="50" poison="80">
+		<attack name="lifedrain" min="-70" max="-185" range="3" chance="20" target="1">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="drunk" duration="5000" range="7" chance="15" target="1">
+			<attribute key="shootEffect" value="energy" />
+			<attribute key="areaEffect" value="teleport" />
+		</attack>
+		<attack name="physical" chance="17" range="7" radius="1" target="1" min="-70" max="-185">
+			<attribute key="shootEffect" value="energy" />
+		</attack>
+		<attack name="speed" chance="10" range="7" speedchange="-220" duration="5000">
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="20">
+		<defense name="invisible" chance="15" duration="6000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="healing" chance="30" min="30" max="50">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<summons maxSummons="2">
+		<summon name="Crypt Shambler" chance="10" max="2" />
+		<summon name="Ghost" chance="10" max="2" />
+	</summons>
+	<loot>
+		<item id="3031" countmax="69" chance="236" /><!-- gold coin -->
+		<item id="3084" chance="16" /><!-- protection amulet -->
+		<item id="3051" chance="10" /><!-- energy ring -->
+		<item id="3567" chance="6" /><!-- blue robe -->
+		<item id="5810" chance="10" /><!-- pirate voodoo doll -->
+		<item id="3324" chance="8" /><!-- skull staff -->
+		<item id="2843" chance="13" /><!-- book -->
+		<item id="3071" chance="7" /><!-- wand of inferno -->
+		<item id="3029" chance="10" /><!-- small sapphire -->
+		<item id="6090" chance="9" /><!-- music sheet -->
+		<item id="5668" chance="5" /><!-- mysterious voodoo skull -->
+		<item id="3055" chance="6" /><!-- platinum amulet -->
+		<item id="2995" chance="5" /><!-- piggy bank -->
+	</loot>
+</monster>

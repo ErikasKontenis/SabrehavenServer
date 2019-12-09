@@ -1,0 +1,99 @@
+<monster name="Morgaroth" nameDescription="Morgaroth" race="undead" experience="15000" speed="180" manacost="0">
+	<health now="55000" max="55000" />
+	<look type="12" head="0" body="94" legs="79" feet="79" corpse="6068" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="240" attack="180">
+		<attack name="fire" chance="30" range="7" radius="7" target="1" min="-500" max="-600">
+			<attribute key="shootEffect" value="fire" />
+			<attribute key="areaEffect" value="firearea" />
+		</attack>
+		<attack name="physical" chance="25" length="8" spread="0" min="-0" max="-580">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="speed" chance="15" range="7" speedchange="-850" duration="50000">
+			<attribute key="areaEffect" value="whitenote" />
+		</attack>
+		<attack name="physical" chance="20" target="0" radius="7" min="-500" max="-800">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<defenses armor="55" defense="65">
+		<defense name="healing" chance="20" min="250" max="750">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" chance="80" speedchange="808" duration="6000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity fire="1" />
+		<immunity earth="1" />
+	</immunities>
+	<summons maxSummons="6">
+		<summon name="Demon" chance="20" max="6" />
+	</summons>
+	<voices interval="5000" chance="30">
+		<voice sentence="I AM MORGAROTH, LORD OF THE TRIANGLE... AND YOU ARE LOST!" yell="1" />
+		<voice sentence="MY SEED IS FEAR AND MY HARVEST ARE YOUR SOULS!" yell="1" />
+		<voice sentence="THE TRIANGLE OF TERROR WILL RISE!" yell="1" />
+		<voice sentence="ZATHROTH! LOOK AT THE DESTRUCTION I AM CAUSING IN YOUR NAME!" yell="1" />
+	</voices>
+	<loot>
+    <item id="3076" chance="127" /><!-- crystal ball -->
+    <item id="3034" chance="29" /><!-- talon -->
+    <item id="3048" chance="53" /><!-- might ring -->
+    <item id="3414" chance="200" /><!-- mastermind shield -->
+    <item id="3309" chance="53" /><!-- thunder hammer -->
+    <item id="3041" chance="127" /><!-- blue gem -->
+    <item id="3364" chance="78" /><!-- golden legs -->
+    <item id="3356" chance="127" /><!-- devil helmet -->
+    <item id="3320" chance="102" /><!-- fire axe -->
+    <item id="3006" chance="78" /><!-- ring of the sky -->
+    <item id="3422" chance="127" /><!-- great shield -->
+    <item id="3281" chance="78" /><!-- giant sword -->
+    <item id="3049" chance="127" /><!-- stealth ring -->
+    <item id="3062" chance="151" /><!-- mind stone -->
+    <item id="3055" chance="29" /><!-- platinum amulet -->
+    <item id="2993" chance="127" /><!-- teddy bear -->
+    <item id="3026" countmax="14" chance="76" /><!-- white pearl -->
+    <item id="3046" chance="151" /><!-- magic light wand -->
+    <item id="3420" chance="78" /><!-- demon shield -->
+    <item id="3058" chance="224" /><!-- strange symbol -->
+    <item id="3038" chance="371" /><!-- green gem -->
+    <item id="3028" countmax="5" chance="131" /><!-- small diamond -->
+    <item id="3051" chance="78" /><!-- energy ring -->
+    <item id="5954" countmax="2" chance="224" /><!-- demon horn -->
+    <item id="3027" countmax="15" chance="71" /><!-- black pearl -->
+    <item id="3029" countmax="8" chance="203" /><!-- small sapphire -->
+    <item id="3061" chance="200" /><!-- life crystal -->
+    <item id="3084" chance="29" /><!-- protection amulet -->
+    <item id="2852" chance="127" /><!-- red tome -->
+    <item id="3275" chance="175" /><!-- double axe -->
+    <item id="3032" countmax="10" chance="141" /><!-- small emerald -->
+    <item id="3060" chance="102" /><!-- orb -->
+    <item id="3098" chance="200" /><!-- ring of healing -->
+    <item id="3081" chance="29" /><!-- stone skin amulet -->
+    <item id="3366" chance="127" /><!-- magic plate armor -->
+    <item id="5943" chance="273" /><!-- morgaroth's heart -->
+    <item id="3035" countmax="74" chance="578" /><!-- platinum coin -->
+    <item id="3554" chance="29" /><!-- steel boots -->
+    <item id="3033" countmax="20" chance="149" /><!-- small amethyst -->
+    <item id="3063" chance="29" /><!-- gold ring -->
+    <item id="2903" chance="29" /><!-- golden mug -->
+</loot>
+</monster>
