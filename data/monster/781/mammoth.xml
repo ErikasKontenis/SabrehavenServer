@@ -1,54 +1,30 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Mammoth" nameDescription="a mammoth" race="blood" experience="160" speed="58" manacost="500">
-	<health now="320" max="320"/>
-	<look type="199" corpse="6074"/>
+	<health now="320" max="320" />
+	<look type="199" corpse="6074" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="1"/>
-		<flag pushable="1"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="45" attack="40">
 	</attacks>
-	<defenses armor="40" defense="57"/>
+	<defenses armor="40" defense="57" />
 	<voices interval="5000" chance="10">
-		<voice sentence="Troooooot!"/>
-		<voice sentence="Hooooot-Toooooot!"/>
-		<voice sentence="Tooooot."/>
+		<voice sentence="Troooooot!" />
+		<voice sentence="Hooooot-Toooooot!" />
+		<voice sentence="Tooooot." />
 	</voices>
 	<loot>
-    <item id="2671" chance="20200" /><!-- ham -->
-    <item id="11218" chance="2625" /><!-- thick fur -->
-    <item id="2148" countmax="20" chance="16225" /><!-- gold coin -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="11232" countmax="2" chance="5475" /><!-- mammoth tusk -->
-            <item id="7432" chance="800" /><!-- furry club -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3582" chance="202" /><!-- ham -->
+		<item id="3031" countmax="20" chance="162" /><!-- gold coin -->
+	</loot>
 </monster>

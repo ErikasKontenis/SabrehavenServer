@@ -1,73 +1,47 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Quara Pincher" nameDescription="a quara pincher" race="blood" experience="1200" speed="135" manacost="0">
-	<health now="1800" max="1800"/>
-	<look type="77" corpse="6063"/>
-	<targetchange interval="1000" chance="0" />
-	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<health now="1800" max="1800" />
+	<look type="77" corpse="6063" />
+	<targetchange interval="1000" chance="20" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="75" attack="80">
 		<attack name="speed" chance="12" range="1" speedchange="-600" duration="3000">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 	</attacks>
-	<defenses armor="18" defense="25"/>
+	<defenses armor="18" defense="25" />
 	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity invisible="1"/>
-		<immunity drown="1"/>
-		<immunity fire="1"/>
+		<immunity lifedrain="1" />
+		<immunity invisible="1" />
+		<immunity drown="1" />
+		<immunity fire="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Clank clank!"/>
-		<voice sentence="Clap!"/>
-		<voice sentence="Crrrk! Crrrk!"/>
+		<voice sentence="Clank clank!" />
+		<voice sentence="Clap!" />
+		<voice sentence="Crrrk! Crrrk!" />
 	</voices>
 	<loot>
-    <item id="2148" countmax="100" chance="19600" /><!-- gold coin -->
-    <item id="2148" countmax="28" chance="19600" /><!-- gold coin -->
-    <item id="2398" chance="10500" /><!-- mace -->
-    <item id="2381" chance="20625" /><!-- halberd -->
-    <item id="2670" chance="5425" /><!-- shrimp -->
-    <item id="2394" chance="5425" /><!-- morning star -->
-    <item id="2475" chance="1550" /><!-- warrior helmet -->
-    <item id="2147" chance="5475" /><!-- small ruby -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="7591" chance="950" /><!-- great health potion -->
-            <item id="5895" chance="2025" /><!-- fish fin -->
-            <item id="7897" chance="600" /><!-- glacier robe -->
-            <item id="2487" chance="825" /><!-- crown armor -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3031" countmax="100" chance="196" /><!-- gold coin -->
+		<item id="3031" countmax="28" chance="196" /><!-- gold coin -->
+		<item id="3286" chance="105" /><!-- mace -->
+		<item id="3269" chance="206" /><!-- halberd -->
+		<item id="3581" chance="54" /><!-- shrimp -->
+		<item id="3282" chance="54" /><!-- morning star -->
+		<item id="3369" chance="15" /><!-- warrior helmet -->
+		<item id="3030" chance="54" /><!-- small ruby -->
+		<item id="5895" chance="20" /><!-- fish fin -->
+		<item id="3381" chance="8" /><!-- crown armor -->
+	</loot>
 </monster>

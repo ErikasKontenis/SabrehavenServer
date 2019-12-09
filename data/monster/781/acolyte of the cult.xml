@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Acolyte of the Cult" nameDescription="an acolyte of the cult" race="blood" experience="300" speed="60" manacost="0">
-	<health now="390" max="390"/>
-	<look type="194" head="114" body="121" legs="121" feet="57" corpse="6080"/>
+	<health now="390" max="390" />
+	<look type="194" head="114" body="121" legs="121" feet="57" corpse="6080" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="5"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="5" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="30" attack="50" poison="40">
 		<attack name="lifedrain" chance="15" range="7" target="1" min="-60" max="-120">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</attack>		
 		<attack name="drunk" duration="5000" range="7" chance="15" target="1">
 			<attribute key="shootEffect" value="energy" />
@@ -27,50 +26,27 @@
 	</attacks>
 	<defenses armor="10" defense="20">
 		<defense name="healing" chance="17" min="40" max="60">
-			<attribute key="areaEffect" value="blueshimmer"/>
+			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
 	<immunities>
-		<immunity invisible="1"/>
+		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="2">
-		<summon name="Skeleton" chance="10" max="2"/>
+		<summon name="Skeleton" chance="10" max="2" />
 	</summons>
 	<voices interval="5000" chance="10">
-		<voice sentence="Praise voodoo!"/>
+		<voice sentence="Praise voodoo!" />
 	</voices>
 	<loot>
-    <item id="2201" chance="1450" /><!-- dragon necklace -->
-    <item id="1950" chance="1300" /><!-- book -->
-    <item id="5810" chance="1475" /><!-- pirate voodoo doll -->
-    <item id="6088" chance="1050" /><!-- music sheet -->
-    <item id="10555" chance="8400" /><!-- cultish robe -->
-    <item id="2394" chance="5650" /><!-- morning star -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="2168" chance="900" /><!-- life ring -->
-            <item id="2148" countmax="40" chance="24000" /><!-- gold coin -->
-            <item id="2149" chance="1075" /><!-- small emerald -->
-            <item id="2181" chance="725" /><!-- terra rod -->
-        </inside>
-    </item>
+    <item id="3085" chance="14" /><!-- dragon necklace -->
+    <item id="2843" chance="13" /><!-- book -->
+    <item id="5810" chance="14" /><!-- pirate voodoo doll -->
+    <item id="6088" chance="10" /><!-- music sheet -->
+    <item id="3282" chance="56" /><!-- morning star -->
+    <item id="3052" chance="9" /><!-- life ring -->
+    <item id="3031" countmax="40" chance="240" /><!-- gold coin -->
+    <item id="3032" chance="10" /><!-- small emerald -->
+    <item id="3065" chance="7" /><!-- terra rod -->
 </loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </monster>

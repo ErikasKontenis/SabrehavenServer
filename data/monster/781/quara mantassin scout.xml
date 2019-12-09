@@ -1,66 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Quara Mantassin Scout" nameDescription="a quara mantassin scout" race="blood" experience="100" speed="67" manacost="480">
-	<health now="220" max="220"/>
-	<look type="72" corpse="6064"/>
-	<targetchange interval="1000" chance="0" />
-	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<health now="220" max="220" />
+	<look type="72" corpse="6064" />
+	<targetchange interval="1000" chance="20" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="45" attack="40">
 	</attacks>
-	<defenses armor="15" defense="15"/>
+	<defenses armor="15" defense="15" />
 	<immunities>
-		<immunity fire="1"/>
-		<immunity drown="1"/>
-		<immunity lifedrain="1"/>
-		<immunity paralyze="1"/>
-		<immunity invisible="1"/>
+		<immunity fire="1" />
+		<immunity drown="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Zuerk Pachak!"/>
-		<voice sentence="Shrrrr"/>
+		<voice sentence="Zuerk Pachak!" />
+		<voice sentence="Shrrrr" />
 	</voices>
 	<loot>
-    <item id="2148" countmax="30" chance="25675" /><!-- gold coin -->
-    <item id="2464" chance="5825" /><!-- chain armor -->
-    <item id="2229" chance="10700" /><!-- skull -->
-    <item id="2165" chance="825" /><!-- stealth ring -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="5895" chance="675" /><!-- fish fin -->
-            <item id="2377" chance="1600" /><!-- two handed sword -->
-            <item id="2146" chance="575" /><!-- small sapphire -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3031" countmax="30" chance="256" /><!-- gold coin -->
+		<item id="3358" chance="58" /><!-- chain armor -->
+		<item id="3114" chance="107" /><!-- skull -->
+		<item id="3049" chance="8" /><!-- stealth ring -->
+		<item id="5895" chance="6" /><!-- fish fin -->
+		<item id="3265" chance="16" /><!-- two handed sword -->
+		<item id="3029" chance="5" /><!-- small sapphire -->
+	</loot>
 </monster>

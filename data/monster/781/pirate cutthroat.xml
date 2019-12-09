@@ -1,70 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Pirate Cutthroat" nameDescription="a pirate cutthroat" race="blood" experience="175" speed="71" manacost="495">
-	<health now="325" max="325"/>
-	<look type="96" corpse="6080"/>
-	<targetchange interval="1000" chance="50" />
-	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<health now="325" max="325" />
+	<look type="96" corpse="6080" />
+	<targetchange interval="1000" chance="100" />
+	<targetstrategy nearest="0" weakest="100" mostdamage="0" random="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="1"/>
-		<flag pushable="1"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="75" attack="40" poison="80">
 		<attack name="fire" chance="34" range="1" radius="1" target="1" min="-0" max="-95">
-			<attribute key="areaEffect" value="explosion"/>
+			<attribute key="areaEffect" value="explosion" />
 		</attack>
 	</attacks>
-	<defenses armor="25" defense="23"/>
+	<defenses armor="25" defense="23" />
 	<immunities>
-		<immunity invisible="1"/>
+		<immunity invisible="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Give up!"/>
-		<voice sentence="Hiyaa!"/>
-		<voice sentence="Plundeeeeer!"/>
+		<voice sentence="Give up!" />
+		<voice sentence="Hiyaa!" />
+		<voice sentence="Plundeeeeer!" />
 	</voices>
 	<loot>
-    <item id="2148" countmax="49" chance="32625" /><!-- gold coin -->
-    <item id="5710" chance="2350" /><!-- light shovel -->
-    <item id="11213" chance="10300" /><!-- compass -->
-    <item id="5927" chance="1500" /><!-- pirate bag -->
-    <item id="2509" chance="3350" /><!-- steel shield -->
-    <item id="5091" chance="1300" /><!-- treasure map -->
-    <item id="2483" chance="3350" /><!-- scale armor -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="6098" chance="1100" /><!-- eye patch -->
-            <item id="5918" chance="1625" /><!-- pirate knee breeches -->
-            <item id="6126" chance="975" /><!-- peg leg -->
-            <item id="6097" chance="1050" /><!-- hook -->
-            <item id="5553" chance="650" /><!-- rum flask -->
-            <item id="5792" chance="550" /><!-- dice -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3031" countmax="49" chance="326" /><!-- gold coin -->
+		<item id="5710" chance="23" /><!-- light shovel -->
+		<item id="5927" chance="15" /><!-- pirate bag -->
+		<item id="3409" chance="33" /><!-- steel shield -->
+		<item id="5090" chance="13" /><!-- treasure map -->
+		<item id="3377" chance="33" /><!-- scale armor -->
+		<item id="6098" chance="11" /><!-- eye patch -->
+		<item id="5918" chance="16" /><!-- pirate knee breeches -->
+		<item id="6126" chance="9" /><!-- peg leg -->
+		<item id="6097" chance="10" /><!-- hook -->
+		<item id="5552" chance="6" /><!-- rum flask -->
+		<item id="5792" chance="5" /><!-- dice -->
+	</loot>
 </monster>
