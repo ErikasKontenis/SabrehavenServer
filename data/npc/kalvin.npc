@@ -1,0 +1,46 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Kalvin"
+Outfit = (132,115-117-120-125-3)
+Home = [32943,32108,5]
+Radius = 4
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Be greeted, %N! If you need information about outfits, I'm your man."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+"job"         -> "I'm an apprentice of Hugo. My current task is to inform everyone about our summer collection."
+"name"         -> "My name is Kalvin."
+"hugo"         -> "I hope that one day I will have grand visions, too."
+"outfit"         -> "Ah, I can tell you all about the newest range of patterns! There are, all in all, four free outfits, seven premium outfits, and four quest outfits."
+"free","outfit"         -> "Well, we have the traditional knight outfit, the hunter outfit, the mage outfit and the citizen outfit."
+"premium","outfit"         -> "Premium outfits are only available to characters on a premium account. They include the nobleman outfit, the summoner outfit, the warrior outfit, the barbarian outfit, the wizard outfit, the oriental outfit and the druid outfit."
+"quest","outfit"         -> "Quest outfits require certain tasks to be fulfilled before the outfit becomes accessible. Those quests are only available for premium customers. ...",
+							"We currently have the pirate outfit, the assassin outfit, the beggar outfit and the shaman outfit."
+"addons"         -> "Addons are usually accessories. Each outfit has two addons which can be worn only together with this outfit. All addons have to be earned through quests."
+"quest"         -> "Many addon quests require that a number of ingredients are collected."
+"Irmana"         -> "<blushes> Such a beautiful and charming lady."
+"knight"         -> "If you spend your time fighting monsters and need that little extra protection, this well-armored outfit is great for you. Addons are usually awarded by knight guilds."
+"hunter"         -> "A light and comfortable ranger outfit which every paladin simply loves to wear. If you are looking to earn addons for this outfit, a good place to start would be the paladin guild in Thais."
+"mage"         -> "Great for wise old male mages as well as for pretty enchantresses. If you are looking to earn addons, ladies should take a stroll in Port Hope, whereas elders should explore the Dark Cathedral."
+"citizen"         -> "Your basic starter outfit - simple, but practical. If you are looking to earn addons for this outfit, you should walk around Thais and look for citizens wearing a hat or a backpack."
+"nobleman"         -> "One of our finest pieces. If you have the money and wish to show how wealthy and noble you are, this is the outfit for you. We also create addons especially for you, right here."
+"summoner"         -> "Great for young mages and ladies who love witchcraft. If you are looking to earn addons, gentlemen should take a stroll in Port Hope, whereas ladies should explore the Dark Cathedral."
+"warrior"         -> "The lighter version of the knight outfit is great if you want to save stamina and maintain agility. Addons are usually awarded by knight guilds."
+"barbarian"         -> "This outfit stands for raw power, battle cries and lack of manners. I heard that there are a few barbarians living near Northport. They might just be able to provide fitting addons."
+"wizard"         -> "Are you feeling evil today? This outfit is fitting for mages pursuing the dark side of sorcery. Shunned by the magic academy of Edron, you might find wizards hiding near Thais."
+"oriental"         -> "This comfortable, yet fashionable outfit will create the romantic mood of Thousand and One Nights. A good place to look around for addons are naturally Darama and Ankrahmun."
+"druid"         -> "Nature-loving and peaceful druids might like this outfit, especially the beastlike addons. I heard there is a druid living near Ab'Dendriel, who might be able to provide fitting addons."
+"pirate"         -> "Yo ho ho and a bottle of rum! If you love the pirate way of life and sneer at landlubbers, this might be the right outfit for you. Pirates are said to roam the Shattered Isles..."
+"assassin"         -> "Mysterious and lethal, assassins are hard to find and almost impossible to befriend. I know of one assassin hiding away on the Daramian Plague Spire. If you are lucky, he won't kill you."
+"beggar"         -> "Ah, Hugo is working on designing this look. He might need some inspiration, so if you have some time to spare, don't hesitate to contribute some ideas to him."
+"shaman"         -> "If you have seen everything and worn every look, this outfit will put the icing on your cake. Maybe you can earn it by becoming the apprentice of a shaman... or voodoo priest."
+
+}

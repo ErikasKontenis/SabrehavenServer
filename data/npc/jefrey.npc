@@ -1,0 +1,24 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Jefrey"
+Outfit = (132,57-63-5-81-2)
+Home = [32338,32834,7]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hello, what can I do for you? Welcome to the Tibian Bank."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "It's not your turn %N. Wait please.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "What else should I have expected other than that?"
+
+"bye"       -> "Good bye, %N.", Idle
+"farewell"  -> *
+"job"       -> "I am running this Bank"
+"time"      -> "It is %T, precisely."
+"king"      -> "Hail to the king!"
+
+@"gen-bank.ndb"
+}

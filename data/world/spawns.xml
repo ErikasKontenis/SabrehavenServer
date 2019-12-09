@@ -933,9 +933,6 @@
 		<monster name="pirate Buccaneer" x="-1" y="-1" z="4" spawntime="59" />
 		<monster name="pirate marauder" x="2" y="1" z="4" spawntime="59" />
 	</spawn>
-	<spawn centerx="32413" centery="32830" centerz="4" radius="2">
-		<npc name="Isolde" x="-1" y="0" z="4" spawntime="60" />
-	</spawn>
 	<spawn centerx="32045" centery="32836" centerz="4" radius="3">
 		<monster name="pirate marauder" x="2" y="-2" z="4" spawntime="59" />
 		<monster name="pirate cutthroat" x="-1" y="1" z="4" spawntime="59" />
@@ -2939,9 +2936,6 @@
 		<monster name="larva" x="0" y="0" z="6" spawntime="600" />
 		<monster name="larva" x="2" y="2" z="6" spawntime="600" />
 	</spawn>
-	<spawn centerx="32161" centery="32556" centerz="6" radius="3">
-		<npc name="Jack Fate Goroma" x="0" y="2" z="6" spawntime="60" />
-	</spawn>
 	<spawn centerx="33132" centery="32556" centerz="6" radius="3">
 		<monster name="stone golem" x="0" y="0" z="6" spawntime="600" />
 		<monster name="stone golem" x="0" y="2" z="6" spawntime="600" />
@@ -3465,9 +3459,6 @@
 	</spawn>
 	<spawn centerx="31995" centery="32890" centerz="6" radius="2">
 		<monster name="pirate marauder" x="-2" y="0" z="6" spawntime="59" />
-	</spawn>
-	<spawn centerx="32285" centery="32891" centerz="6" radius="2">
-		<npc name="Jack Fate" x="-1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="31953" centery="32897" centerz="6" radius="2">
 		<monster name="pirate marauder" x="1" y="-2" z="6" spawntime="59" />
@@ -11948,9 +11939,6 @@
 		<monster name="centipede" x="1" y="1" z="7" spawntime="600" />
 		<monster name="centipede" x="3" y="3" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32184" centery="32736" centerz="7" radius="3">
-		<npc name="Irvin" x="1" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32846" centery="32736" centerz="7" radius="4">
 		<monster name="bug" x="1" y="-1" z="7" spawntime="600" />
 		<monster name="bug" x="0" y="0" z="7" spawntime="600" />
@@ -12529,9 +12517,6 @@
 		<monster name="lizard templar" x="3" y="2" z="7" spawntime="600" />
 		<monster name="lizard templar" x="-1" y="3" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32199" centery="32792" centerz="7" radius="5">
-		<npc name="Hamilton" x="1" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32785" centery="32792" centerz="7" radius="4">
 		<monster name="centipede" x="-3" y="-3" z="7" spawntime="600" />
 		<monster name="centipede" x="-2" y="-2" z="7" spawntime="600" />
@@ -13015,9 +13000,6 @@
 	<spawn centerx="32968" centery="32832" centerz="7" radius="3">
 		<monster name="crocodile" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32338" centery="32833" centerz="7" radius="1">
-		<npc name="Jefrey" x="0" y="1" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32964" centery="32833" centerz="7" radius="1">
 		<monster name="lizard snakecharmer" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -13079,9 +13061,6 @@
 	<spawn centerx="31939" centery="32839" centerz="7" radius="3">
 		<monster name="thornback tortoise" x="-2" y="-1" z="7" spawntime="59" />
 		<monster name="thornback tortoise" x="1" y="0" z="7" spawntime="59" />
-	</spawn>
-	<spawn centerx="32331" centery="32839" centerz="7" radius="1">
-		<npc name="Herbert" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32984" centery="32839" centerz="7" radius="4">
 		<monster name="lizard sentinel" x="0" y="0" z="7" spawntime="600" />
@@ -13661,9 +13640,6 @@
 		<monster name="spider" x="-2" y="-1" z="7" spawntime="600" />
 		<monster name="spider" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32138" centery="32904" centerz="7" radius="1">
-		<npc name="John" x="0" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32383" centery="32904" centerz="7" radius="5">
 		<monster name="crocodile" x="-4" y="-3" z="7" spawntime="60" />
 		<monster name="coral frog" x="-1" y="-1" z="7" spawntime="60" />
@@ -13956,9 +13932,6 @@
 		<monster name="dworc fleshhunter" x="0" y="-3" z="7" spawntime="600" />
 		<monster name="dworc fleshhunter" x="0" y="-1" z="7" spawntime="600" />
 		<monster name="dworc fleshhunter" x="0" y="0" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32164" centery="32941" centerz="7" radius="4">
-		<npc name="Jason" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32384" centery="32942" centerz="7" radius="3">
 		<monster name="toad" x="3" y="-2" z="7" spawntime="60" />

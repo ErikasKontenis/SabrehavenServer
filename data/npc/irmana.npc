@@ -1,0 +1,73 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Irmana"
+Outfit = (140,78-90-13-15-3)
+Home = [32952,32109,5]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Welcome to the house of fashion, %N!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "I am already talking, %N. Please wait a moment.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye, %N."
+
+"bye"           -> "Good bye, %N.", Idle
+"farewell"      -> *
+"fashion"          -> "I'm currently interested in monster materials like cloth and leather. I can also fabricate cloth."
+"fabricate"          -> "I can fabricate green cloth from green tunics, red cloth from red robes and blue cloth from mystic turbans."
+
+"sell","ape","fur"                    -> Type=5883, Amount=1, Price=120, "Do you want to sell a ape fur for %P gold?", Topic=1
+"sell","blue","piece","of","cloth"                    -> Type=5912, Amount=1, Price=200, "Do you want to sell a blue piece of cloth for %P gold?", Topic=1
+"sell","brown","piece","of","cloth"                   -> Type=5913, Amount=1, Price=100, "Do you want to sell a brown piece of cloth for %P gold?", Topic=1
+"sell","green","dragon","leather"                    -> Type=5877, Amount=1, Price=100, "Do you want to sell a green dragon leather for %P gold?", Topic=1
+"sell","green","piece","of","cloth"                    -> Type=5910, Amount=1, Price=200, "Do you want to sell a green piece of cloth for %P gold?", Topic=1
+"sell","lizard","leather"                    -> Type=5876, Amount=1, Price=150, "Do you want to sell a lizard leather for %P gold?", Topic=1
+"sell","minotaur","leather"                    -> Type=5878, Amount=1, Price=80, "Do you want to sell a minotaur leather for %P gold?", Topic=1
+"sell","red","dragon","leather"                    -> Type=5948, Amount=1, Price=200, "Do you want to sell a red dragon leather for %P gold?", Topic=1
+"sell","red","piece","of","cloth"                    -> Type=5911, Amount=1, Price=300, "Do you want to sell a red piece of cloth for %P gold?", Topic=1
+"sell","simple","dress"                    -> Type=3568, Amount=1, Price=50, "Do you want to sell a simple dress for %P gold?", Topic=1
+"sell","spool","of","yarn"                    -> Type=5886, Amount=1, Price=1000, "Do you want to sell a spool of yarn for %P gold?", Topic=1
+"sell","white","piece","of","cloth"                   -> Type=5909, Amount=1, Price=100, "Do you want to sell a white piece of cloth for %P gold?", Topic=1
+"sell","yellow","piece","of","cloth"                   -> Type=5914, Amount=1, Price=150, "Do you want to sell a yellow piece of cloth for %P gold?", Topic=1
+
+"sell",%1,1<%1,"ape","fur"                     -> Type=5883, Amount=%1, Price=120*%1, "Do you want to sell %A ape furs for %P gold?", Topic=1
+"sell",%1,1<%1,"blue","piece","of","cloth"                     -> Type=5912, Amount=%1, Price=200*%1, "Do you want to sell %A blue pieces of cloth for %P gold?", Topic=1
+"sell",%1,1<%1,"brown","piece","of","cloth"                    -> Type=5913, Amount=%1, Price=100*%1, "Do you want to sell %A brown pieces of cloth for %P gold?", Topic=1
+"sell",%1,1<%1,"green","dragon","leather"                     -> Type=5877, Amount=%1, Price=100*%1, "Do you want to sell %A green dragon leathers for %P gold?", Topic=1
+"sell",%1,1<%1,"green","piece","of","cloth"                   -> Type=5910, Amount=%1, Price=200*%1, "Do you want to sell %A green pieces of cloth for %P gold?", Topic=1
+"sell",%1,1<%1,"lizard","leather"                     -> Type=5876, Amount=%1, Price=150*%1, "Do you want to sell %A lizard leathers for %P gold?", Topic=1
+"sell",%1,1<%1,"minotaur","leather"                     -> Type=5878, Amount=%1, Price=80*%1, "Do you want to sell %A minotaur leathers for %P gold?", Topic=1
+"sell",%1,1<%1,"red","dragon","leather"                     -> Type=5948, Amount=%1, Price=200*%1, "Do you want to sell %A red dragon leathers for %P gold?", Topic=1
+"sell",%1,1<%1,"red","piece","of","cloth"                     -> Type=5911, Amount=%1, Price=300*%1, "Do you want to sell %A red pieces of cloth for %P gold?", Topic=1
+"sell",%1,1<%1,"simple","dress"                     -> Type=3568, Amount=%1, Price=50*%1, "Do you want to sell %A simple dress for %P gold?", Topic=1
+"sell",%1,1<%1,"spool","of","yarn"                     -> Type=5886, Amount=%1, Price=1000*%1, "Do you want to sell %A spool of yarns for %P gold?", Topic=1
+"sell",%1,1<%1,"white","piece","of","cloth"                     -> Type=5909, Amount=%1, Price=100*%1, "Do you want to sell %A white pieces of cloth for %P gold?", Topic=1
+"sell",%1,1<%1,"yellow","piece","of","cloth"                    -> Type=5914, Amount=%1, Price=150*%1, "Do you want to sell %A yellow pieces of cloth for %P gold?", Topic=1
+
+Topic=1,"yes",Count(Type)>=Amount -> "Thank you. Here is your money.", Delete(Type), CreateMoney
+Topic=1,"yes"                             -> "You do not have one."
+Topic=1,"yes",Amount>1                    -> "You do not have that many."
+Topic=1                                   -> "Perhaps another time then."
+
+"red","robe"          -> Type=3566, Amount=1,  "Do you want to fabricate %A red robe for red piece of cloth?", Topic=12
+Topic=12,"yes",Count(Type)>=Amount -> "Here you are.", Delete(Type), Type=5911, Amount=1, Create(Type)
+Topic=12,"yes"                             -> "You do not have one."
+Topic=12,"yes",Amount>1                    -> "You do not have that many."
+Topic=12                                   -> "Perhaps another time then."
+
+"mystic","turban"          -> Type=3574, Amount=1,  "Do you want to fabricate %A mystic turban for blue piece of cloth?", Topic=13
+Topic=13,"yes",Count(Type)>=Amount -> "Here you are.", Delete(Type), Type=5912, Amount=1, Create(Type)
+Topic=13,"yes"                             -> "You do not have one."
+Topic=13,"yes",Amount>1                    -> "You do not have that many."
+Topic=13                                   -> "Perhaps another time then."
+
+"green","tunic"          -> Type=3563, Amount=150,  "Do you want to fabricate %A green tunics for green piece of cloth?", Topic=13
+Topic=13,"yes",Count(Type)>=Amount -> "Here you are.", Delete(Type), Type=5910, Amount=1, Create(Type)
+Topic=13,"yes"                             -> "You do not have one."
+Topic=13,"yes",Amount>1                    -> "You do not have that many."
+Topic=13                                   -> "Perhaps another time then."
+
+}
