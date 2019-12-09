@@ -1,92 +1,67 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Quara Hydromancer" nameDescription="a quara hydromancer" race="blood" experience="800" speed="130" manacost="0">
-	<health now="1100" max="1100"/>
-	<look type="47" corpse="6066"/>
-	<targetchange interval="1000" chance="0" />
-	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<health now="1100" max="1100" />
+	<look type="47" corpse="6066" />
+	<targetchange interval="1000" chance="20" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="30"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="30" />
 	</flags>
 	<attacks skill="30" attack="40" poison="100">
 		<attack name="lifedrain" chance="9" length="8" spread="0" min="-100" max="-180">
-			<attribute key="areaEffect" value="bubbles"/>
+			<attribute key="areaEffect" value="bubbles" />
 		</attack>
 		<attack name="lifedrain" chance="12" radius="3" target="0" min="-90" max="-150">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 		<attack name="lifedrain" chance="7" length="8" spread="3" min="-170" max="-240">
-			<attribute key="areaEffect" value="greenshimmer"/>
+			<attribute key="areaEffect" value="greenshimmer" />
 		</attack>	
 		<attack name="lifedrain" chance="8" range="7" target="1" min="-0" max="-170">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</attack>	
 			<attack name="speed" chance="10" range="7" speedchange="-600" duration="5000">
 		</attack>	
 	</attacks>
 	<defenses armor="15" defense="18">
 	<defense name="healing" chance="10" min="100" max="120">
-			<attribute key="areaEffect" value="blueshimmer"/>
+			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>	
 	</defenses>
 	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity paralyze="1"/>
-		<immunity invisible="1"/>
-		<immunity drown="1"/>
-		<immunity fire="1"/>
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drown="1" />
+		<immunity fire="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Qua hah tsh!"/>
-		<voice sentence="Teech tsha tshul!"/>
-		<voice sentence="Quara tsha Fach!"/>
-		<voice sentence="Tssssha Quara!"/>
-		<voice sentence="Blubber."/>
-		<voice sentence="Blup."/>
+		<voice sentence="Qua hah tsh!" />
+		<voice sentence="Teech tsha tshul!" />
+		<voice sentence="Quara tsha Fach!" />
+		<voice sentence="Tssssha Quara!" />
+		<voice sentence="Blubber." />
+		<voice sentence="Blup." />
 	</voices>
 	<loot>
-    <item id="2401" chance="10675" /><!-- staff -->
-    <item id="2670" chance="5450" /><!-- shrimp -->
-    <item id="2148" countmax="88" chance="24175" /><!-- gold coin -->
-    <item id="2144" chance="2400" /><!-- black pearl -->
-    <item id="2240" chance="5125" /><!-- remains of a fish -->
-    <item id="2149" chance="1475" /><!-- small emerald -->
-    <item id="2214" chance="950" /><!-- ring of healing -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="2189" chance="1450" /><!-- wand of cosmic energy -->
-            <item id="2143" chance="2450" /><!-- white pearl -->
-            <item id="2476" chance="875" /><!-- knight armor -->
-            <item id="7590" chance="875" /><!-- great mana potion -->
-            <item id="5895" chance="1575" /><!-- fish fin -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3289" chance="106" /><!-- staff -->
+		<item id="3581" chance="54" /><!-- shrimp -->
+		<item id="3031" countmax="88" chance="241" /><!-- gold coin -->
+		<item id="3027" chance="24" /><!-- black pearl -->
+		<item id="3125" chance="51" /><!-- remains of a fish -->
+		<item id="3032" chance="14" /><!-- small emerald -->
+		<item id="3098" chance="9" /><!-- ring of healing -->
+		<item id="3073" chance="14" /><!-- wand of cosmic energy -->
+		<item id="3026" chance="24" /><!-- white pearl -->
+		<item id="3370" chance="8" /><!-- knight armor -->
+		<item id="5895" chance="15" /><!-- fish fin -->
+	</loot>
 </monster>

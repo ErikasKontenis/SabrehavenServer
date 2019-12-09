@@ -1,53 +1,31 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Thornback Tortoise" nameDescription="a thornback tortoise" race="blood" experience="150" speed="50" manacost="490">
-	<health now="300" max="300"/>
-	<look type="198" corpse="6073"/>
+	<health now="300" max="300" />
+	<look type="198" corpse="6073" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="1"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="45" attack="40">
 		<attack name="poisoncondition" count="20" chance="10" range="5" poison="40">
-			<attribute key="shooteffect" value="poison"/>
+			<attribute key="shooteffect" value="poison" />
 		</attack>
 	</attacks>
-	<defenses armor="18" defense="18"/>
+	<defenses armor="18" defense="18" />
 	<loot>
-    <item id="2148" countmax="26" chance="30475" /><!-- gold coin -->
-    <item id="2667" chance="12100" /><!-- fish -->
-    <item id="10559" chance="5475" /><!-- thorn -->
-    <item id="2787" chance="1600" /><!-- white mushroom -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="5678" countmax="3" chance="1050" /><!-- tortoise egg -->
-            <item id="7618" chance="2200" /><!-- health potion -->
-            <item id="2391" chance="1050" /><!-- war hammer -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3031" countmax="26" chance="304" /><!-- gold coin -->
+		<item id="3578" chance="121" /><!-- fish -->
+		<item id="3723" chance="16" /><!-- white mushroom -->
+		<item id="5678" countmax="3" chance="10" /><!-- tortoise egg -->
+		<item id="3279" chance="10" /><!-- war hammer -->
+	</loot>
 </monster>

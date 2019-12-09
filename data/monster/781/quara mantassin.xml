@@ -1,75 +1,51 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Quara Mantassin" nameDescription="a quara mantassin" race="blood" experience="400" speed="130" manacost="480">
-	<health now="800" max="800"/>
-	<look type="72" corpse="6064"/>
-	<targetchange interval="1000" chance="0" />
-	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<health now="800" max="800" />
+	<look type="72" corpse="6064" />
+	<targetchange interval="1000" chance="20" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="40"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="40" />
 	</flags>
 	<attacks skill="60" attack="40">
 	</attacks>
 	<defenses armor="15" defense="15">
 		<defense name="invisible" chance="25" duration="2000">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="speed" chance="10" speedchange="800" duration="5000">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</defense>	
 	</defenses>
 	<immunities>
-		<immunity lifedrain="1"/>
-		<immunity drown="1"/>
-		<immunity fire="1"/>
+		<immunity lifedrain="1" />
+		<immunity drown="1" />
+		<immunity fire="1" />
 	</immunities>
 	<voices interval="5000" chance="10">
-		<voice sentence="Zuerk Pachak!"/>
-		<voice sentence="Shrrrr"/>
+		<voice sentence="Zuerk Pachak!" />
+		<voice sentence="Shrrrr" />
 	</voices>
 	<loot>
-    <item id="2670" chance="5600" /><!-- shrimp -->
-    <item id="2148" countmax="100" chance="27100" /><!-- gold coin -->
-    <item id="2148" countmax="30" chance="27100" /><!-- gold coin -->
-    <item id="2377" chance="10200" /><!-- two handed sword -->
-    <item id="2229" chance="5575" /><!-- skull -->
-    <item id="2654" chance="10200" /><!-- cape -->
-    <item id="2165" chance="1550" /><!-- stealth ring -->
-    <item id="5895" chance="1050" /><!-- fish fin -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="2146" chance="975" /><!-- small sapphire -->
-            <item id="2381" chance="4050" /><!-- halberd -->
-            <item id="2479" chance="600" /><!-- strange helmet -->
-            <item id="2656" chance="600" /><!-- blue robe -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3581" chance="56" /><!-- shrimp -->
+		<item id="3031" countmax="100" chance="271" /><!-- gold coin -->
+		<item id="3031" countmax="30" chance="271" /><!-- gold coin -->
+		<item id="3265" chance="102" /><!-- two handed sword -->
+		<item id="3114" chance="55" /><!-- skull -->
+		<item id="3565" chance="102" /><!-- cape -->
+		<item id="3049" chance="15" /><!-- stealth ring -->
+		<item id="5895" chance="10" /><!-- fish fin -->
+		<item id="3029" chance="9" /><!-- small sapphire -->
+		<item id="3269" chance="40" /><!-- halberd -->
+		<item id="3373" chance="6" /><!-- strange helmet -->
+		<item id="3567" chance="6" /><!-- blue robe -->
+	</loot>
 </monster>

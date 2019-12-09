@@ -1,67 +1,40 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Island Troll" nameDescription="an island troll" race="blood" experience="20" speed="23" manacost="290">
-	<health now="50" max="50"/>
+	<health now="50" max="50" />
 	<look type="15" head="0" body="0" legs="0" feet="0" corpse="5960" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
-		<flag summonable="1"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="1"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="15"/>
+		<flag summonable="1" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="1" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="15" />
 	</flags>
 	<attacks skill="10" attack="10">
 	</attacks>
-	<defenses armor="7" defense="9"/>
+	<defenses armor="7" defense="9" />
 	<voices interval="5000" chance="10">
-		<voice sentence="Hmmm, turtles"/>
-		<voice sentence="Hmmm, dogs"/>
-		<voice sentence="Hmmm, wormds"/>
-		<voice sentence="Groar"/>
-		<voice sentence="Gruntz!"/>
+		<voice sentence="Hmmm, turtles" />
+		<voice sentence="Hmmm, dogs" />
+		<voice sentence="Hmmm, wormds" />
+		<voice sentence="Groar" />
+		<voice sentence="Gruntz!" />
 	</voices>
 	<loot>
-    <item id="2448" chance="4400" /><!-- studded club -->
-    <item id="2120" chance="8175" /><!-- rope -->
-    <item id="2148" countmax="10" chance="34075" /><!-- gold coin -->
-    <item id="5097" chance="5150" /><!-- mango -->
-    <item id="5901" chance="30725" /><!-- wood -->
-    <item id="2380" chance="20025" /><!-- hand axe -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="2461" chance="9700" /><!-- leather helmet -->
-            <item id="2389" chance="21025" /><!-- spear -->
-            <item id="2512" chance="16625" /><!-- wooden shield -->
-            <item id="2643" chance="11325" /><!-- leather boots -->
-            <item id="7963" chance="625" /><!-- marlin -->
-        </inside>
-    </item>
+    <item id="3336" chance="44" /><!-- studded club -->
+    <item id="3003" chance="81" /><!-- rope -->
+    <item id="3031" countmax="10" chance="340" /><!-- gold coin -->
+    <item id="5096" chance="51" /><!-- mango -->
+    <item id="5901" chance="307" /><!-- wood -->
+    <item id="3268" chance="200" /><!-- hand axe -->
+    <item id="3355" chance="97" /><!-- leather helmet -->
+    <item id="3277" chance="210" /><!-- spear -->
+    <item id="3412" chance="166" /><!-- wooden shield -->
+    <item id="3552" chance="113" /><!-- leather boots -->
 </loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </monster>

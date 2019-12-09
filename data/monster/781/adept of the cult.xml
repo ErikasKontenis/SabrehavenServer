@@ -1,24 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Adept of the Cult" nameDescription="an adept of the cult" race="blood" experience="400" speed="58" manacost="0">
-	<health now="430" max="430"/>
-	<look type="194" head="114" body="94" legs="94" feet="57" corpse="6080"/>
+	<health now="430" max="430" />
+	<look type="194" head="114" body="94" legs="94" feet="57" corpse="6080" />
 	<targetchange interval="1000" chance="50" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="0"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="4"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="4" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="30" attack="50" poison="40">
 		<attack name="lifedrain" chance="15" range="7" target="1" min="-70" max="-150">
-			<attribute key="areaEffect" value="redshimmer"/>
+			<attribute key="areaEffect" value="redshimmer" />
 		</attack>		
 		<attack name="drunk" duration="5000" range="7" chance="15" target="1">
 			<attribute key="shootEffect" value="energy" />
@@ -27,53 +26,28 @@
 	</attacks>
 	<defenses armor="20" defense="20">
 		<defense name="healing" chance="17" min="40" max="60">
-			<attribute key="areaEffect" value="blueshimmer"/>
+			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 		<defense name="invisible" chance="20" duration="5000">
-			<attribute key="areaEffect" value="blueshimmer"/>									
+			<attribute key="areaEffect" value="blueshimmer" />									
 		</defense>	
 	</defenses>
 	<immunities>
-		<immunity invisible="1"/>
+		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="2">
-		<summon name="Ghoul" chance="10" max="2"/>
+		<summon name="Ghoul" chance="10" max="2" />
 	</summons>
 	<loot>
-    <item id="7426" chance="1000" /><!-- amber staff -->
-    <item id="2169" chance="975" /><!-- time ring -->
-    <item id="5810" chance="1950" /><!-- pirate voodoo doll -->
-    <item id="1950" chance="1350" /><!-- book -->
-    <item id="2170" chance="1550" /><!-- silver amulet -->
-    <item id="10555" chance="10575" /><!-- cultish robe -->
-    <item id="2148" countmax="60" chance="22750" /><!-- gold coin -->
-    <item id="2423" chance="1475" /><!-- clerical mace -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="6089" chance="1000" /><!-- music sheet -->
-            <item id="2183" chance="725" /><!-- hailstorm rod -->
-            <item id="2655" chance="650" /><!-- red robe -->
-            <item id="2147" chance="775" /><!-- small ruby -->
-            <item id="7424" chance="600" /><!-- lunar staff -->
-        </inside>
-    </item>
+    <item id="3053" chance="9" /><!-- time ring -->
+    <item id="5810" chance="19" /><!-- pirate voodoo doll -->
+    <item id="2843" chance="13" /><!-- book -->
+    <item id="3054" chance="15" /><!-- silver amulet -->
+    <item id="3031" countmax="60" chance="227" /><!-- gold coin -->
+    <item id="3311" chance="14" /><!-- clerical mace -->
+    <item id="6089" chance="10" /><!-- music sheet -->
+    <item id="3067" chance="7" /><!-- hailstorm rod -->
+    <item id="3566" chance="6" /><!-- red robe -->
+    <item id="3030" chance="7" /><!-- small ruby -->
 </loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 </monster>

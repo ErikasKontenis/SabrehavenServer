@@ -1,64 +1,39 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Quara Constrictor Scout" nameDescription="a quara constrictor scout" race="undead" experience="250" speed="72" manacost="670">
-	<health now="450" max="450"/>
-	<look type="46" corpse="6065"/>
-	<targetchange interval="1000" chance="0" />
-	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
+	<health now="450" max="450" />
+	<look type="46" corpse="6065" />
+	<targetchange interval="1000" chance="20" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
-		<flag summonable="0"/>
-		<flag attackable="1"/>
-		<flag hostile="1"/>
-		<flag illusionable="0"/>
-		<flag convinceable="1"/>
-		<flag pushable="0"/>
-		<flag canpushitems="1"/>
-		<flag canpushcreatures="0"/>
-		<flag targetdistance="1"/>
-		<flag runonhealth="0"/>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="55" attack="40">
 		<attack name="lifedrain" chance="15" radius="3" target="0" max="-80">
-			<attribute key="areaEffect" value="blackspark"/>
+			<attribute key="areaEffect" value="blackspark" />
 		</attack>
 	</attacks>
-	<defenses armor="15" defense="15"/>
+	<defenses armor="15" defense="15" />
 	<immunities>
-		<immunity fire="1"/>
-		<immunity drown="1"/>
-		<immunity lifedrain="0"/>
-		<immunity paralyze="0"/>
-		<immunity invisible="0"/>
+		<immunity fire="1" />
+		<immunity drown="1" />
+		<immunity lifedrain="0" />
+		<immunity paralyze="0" />
+		<immunity invisible="0" />
 	</immunities>
 	<loot>
-    <item id="2148" countmax="40" chance="24725" /><!-- gold coin -->
-    <item id="2460" chance="9525" /><!-- brass helmet -->
-    <item id="2397" chance="5700" /><!-- longsword -->
-    <item id="1987" chance="100000"><!-- bag -->
-        <inside>
-            <item id="2465" chance="2300" /><!-- brass armor -->
-            <item id="5895" chance="1050" /><!-- fish fin -->
-            <item id="2150" chance="950" /><!-- small amethyst -->
-        </inside>
-    </item>
-</loot>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		<item id="3031" countmax="40" chance="247" /><!-- gold coin -->
+		<item id="3354" chance="95" /><!-- brass helmet -->
+		<item id="3285" chance="57" /><!-- longsword -->
+		<item id="3359" chance="23" /><!-- brass armor -->
+		<item id="5895" chance="10" /><!-- fish fin -->
+		<item id="3033" chance="9" /><!-- small amethyst -->
+	</loot>
 </monster>
