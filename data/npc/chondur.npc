@@ -1,0 +1,50 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Chondur"
+Outfit = (154,38-113-119-116-3)
+Home = [32361,32550,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Be greeted, child. What do you want in an old shaman's hut?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+"shaman"         -> "I was chosen by the spirits of the ancestors to serve the people as healer and spiritual leader."
+"spirits"         -> "Spirits are all around us and on these isles they are especially strong and numerous."
+"ancestors"         -> "The ancestors still have contact to the world of those alive. If you know how to talk to them, they can be wise guides and powerful friends."
+"isles"         -> "These isles are a place of strong but secret magic. This magic is strong enough to devour the souls of the weak."
+"magic"         -> "Magic here is like a powerful and wild beast. You need all your strength to master it. If you fail, your punishment will be swift and hard. Voodoo gives me the power and wisdom necessary to handle those energies."
+"magic currents"         -> "Hm, well one could call it like this I guess. Magic is strong on these isles. Too strong for many to handle it safely."
+"secrets"         -> "The spirits speak about a great battle on these isles. Cause for the conflict was the strong magic here. ...",
+					 "The peaceful dwellers, that used to live here in a magical paradise created by themselves, were attacked by a dark power from the depths of the ocean. ...",
+					 "The war destroyed both races and changed the flow of magic forever."
+"voodoo"         -> "Together with the spirits of the ancestors, I seek for wisdom. Together we can change the flow of magic to do things that are beyond the limits of ordinary magic. ...",
+					"In conversations with the spirits, I gain insight into secrets that would have been lost otherwise."
+"dark power"         -> "In the shadow of the depth, a strange and enigmatic race evolved. Using magic to the darkest purposes. ...",
+						"What they lacked in understanding magic like the dwellers, they made up for in number and destructive determination."
+"forever"         -> "Yes, the ancestors hint that there has been some disaster in the past that disarranged the magic of the isles and destroyed whole civilisations."
+"disaster"       -> *
+"disarranged"         -> "Hm, well one could call it like this I guess. Magic is strong on these isles. Too strong for many to handle it safely."
+"civilisations"         -> "The spirits tell about two powerful races that once called this area their home. They annihilated themselves in a war."
+"quaras"         -> "This race rose from slavery to a shadow of their former masters. The dark power that once ruled the ocean here was annihilated by some disaster and the quara used to be one of their serving races."
+"mermaid"         -> "The mermaids are a possible offspring of one of the magical creatures that some ancient race once created here. ...",
+					 "They are vain and self-centred. Their magic is powerful and almost impossible to reverse once it is cast on some human. ...",
+					 "The only good thing is they quickly lose interest into their victims if something of slightly more interest comes up. ...",
+					 "If you are ever in trouble with a mermaid, look for a distraction."
+"king"         -> "The king is far away. Our myth are closer to us than any king in faraway Thais could ever be."
+"thais"         -> "The people see the Thaian occupation like a crippling disease that befalls our isles. Some try to live with it, others are looking for a cure."
+"cure"         -> "It's my part to cure the body and the spirit. Only the people can cure the land they inhabit."
+"venore"         -> "The tradesmen of Venore are tainted with greed. They have so little spirituality that their souls must be starving."
+"cult"         -> "The cult is a mockery of true voodoo. They play with powers they don't even rudimentarily understand and some dark and sinister power is working behind the curtains. Some evil puppet master is misusing them for plans unknown to me."
+"goroma"         -> "One of the Forbidden Islands. No sane captain will agree to bring you there."
+"banana"         -> "A banana staff is the sign of a high ape magician."
+"pirates"         -> "You have to understand that there are two groups of people that are called pirates. One consists of evil thieves and murderers for whom the word pirate actually stands for. ...",
+					 "The others are resistance fighters for whom old ideals are hold true and that are the assertors of the native people."
+}

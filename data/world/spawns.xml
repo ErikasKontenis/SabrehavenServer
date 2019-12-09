@@ -1705,9 +1705,6 @@
 	<spawn centerx="33042" centery="32728" centerz="5" radius="1">
 		<monster name="dragon" x="0" y="0" z="5" spawntime="850" />
 	</spawn>
-	<spawn centerx="32332" centery="32764" centerz="5" radius="1">
-		<npc name="Eleonore" x="-1" y="-1" z="5" spawntime="60" />
-	</spawn>
 	<spawn centerx="33011" centery="32764" centerz="5" radius="4">
 		<monster name="bat" x="-3" y="-2" z="5" spawntime="600" />
 		<monster name="bat" x="-2" y="-2" z="5" spawntime="600" />
@@ -3701,9 +3698,6 @@
 	<spawn centerx="32018" centery="31624" centerz="7" radius="3">
 		<monster name="polar bear" x="0" y="0" z="7" spawntime="700" />
 		<monster name="polar bear" x="-1" y="1" z="7" spawntime="700" />
-	</spawn>
-	<spawn centerx="32362" centery="31624" centerz="7" radius="1">
-		<npc name="Gelagos" x="1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32488" centery="31627" centerz="7" radius="1">
 		<monster name="chicken" x="0" y="0" z="7" spawntime="600" />
@@ -8918,9 +8912,6 @@
 		<monster name="Island troll" x="-2" y="-1" z="7" spawntime="60" />
 		<monster name="Island troll" x="1" y="1" z="7" spawntime="60" />
 	</spawn>
-	<spawn centerx="32362" centery="32549" centerz="7" radius="1">
-		<npc name="Chondur" x="-1" y="1" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32760" centery="32549" centerz="7" radius="1">
 		<monster name="kongra" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -10065,9 +10056,6 @@
 		<monster name="flamingo" x="0" y="-1" z="7" spawntime="600" />
 		<monster name="flamingo" x="0" y="0" z="7" spawntime="600" />
 		<monster name="flamingo" x="-3" y="2" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32331" centery="32604" centerz="7" radius="3">
-		<npc name="Duncan" x="-1" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32356" centery="32604" centerz="7" radius="1">
 		<monster name="chicken" x="0" y="-1" z="7" spawntime="60" />
@@ -12162,9 +12150,6 @@
 		<monster name="poison spider" x="0" y="0" z="7" spawntime="600" />
 		<monster name="poison spider" x="-4" y="4" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32202" centery="32756" centerz="7" radius="3">
-		<npc name="Doug" x="-1" y="0" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32900" centery="32756" centerz="7" radius="4">
 		<monster name="flamingo" x="0" y="0" z="7" spawntime="600" />
 		<monster name="flamingo" x="2" y="0" z="7" spawntime="600" />
@@ -12276,9 +12261,6 @@
 	<spawn centerx="32883" centery="32769" centerz="7" radius="3">
 		<monster name="cobra" x="0" y="-2" z="7" spawntime="600" />
 		<monster name="cobra" x="0" y="0" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32185" centery="32770" centerz="7" radius="4">
-		<npc name="Gordon" x="-1" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32225" centery="32770" centerz="7" radius="3">
 		<npc name="Norris" x="-1" y="0" z="7" spawntime="60" />
@@ -12704,9 +12686,6 @@
 		<monster name="lizard sentinel" x="3" y="0" z="7" spawntime="600" />
 		<monster name="lizard sentinel" x="0" y="1" z="7" spawntime="600" />
 		<monster name="spit nettle" x="-4" y="5" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32345" centery="32807" centerz="7" radius="1">
-		<npc name="Frederik" x="0" y="1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32714" centery="32808" centerz="7" radius="4">
 		<monster name="bug" x="0" y="0" z="7" spawntime="600" />
@@ -13513,9 +13492,6 @@
 		<monster name="pirate marauder" x="-1" y="-1" z="7" spawntime="59" />
 		<monster name="pirate marauder" x="0" y="2" z="7" spawntime="59" />
 	</spawn>
-	<spawn centerx="32259" centery="32882" centerz="7" radius="1">
-		<npc name="Evan" x="0" y="-1" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32460" centery="32884" centerz="7" radius="5">
 		<monster name="Seagull" x="0" y="-4" z="7" spawntime="60" />
 		<monster name="Seagull" x="3" y="-4" z="7" spawntime="60" />
@@ -14048,9 +14024,6 @@
 		<monster name="dworc voodoomaster" x="-1" y="2" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="32812" centery="32949" centerz="7" radius="4" />
-	<spawn centerx="32187" centery="32950" centerz="7" radius="4">
-		<npc name="Danlon" x="0" y="-1" z="7" spawntime="60" />
-	</spawn>
 	<spawn centerx="32335" centery="32950" centerz="7" radius="4">
 		<monster name="azure frog" x="2" y="-3" z="7" spawntime="60" />
 		<monster name="Seagull" x="-4" y="-1" z="7" spawntime="60" />
@@ -14085,9 +14058,6 @@
 		<monster name="dworc venomsniper" x="0" y="-1" z="7" spawntime="600" />
 		<monster name="dworc venomsniper" x="0" y="0" z="7" spawntime="600" />
 		<monster name="spit nettle" x="0" y="2" z="7" spawntime="600" />
-	</spawn>
-	<spawn centerx="32121" centery="32954" centerz="7" radius="4">
-		<npc name="Eranth" x="2" y="-1" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32701" centery="32955" centerz="7" radius="1" />
 	<spawn centerx="32526" centery="32956" centerz="7" radius="4">
@@ -20601,9 +20571,6 @@
 	<spawn centerx="32498" centery="32911" centerz="8" radius="2">
 		<monster name="Tortoise" x="2" y="-1" z="8" spawntime="60" />
 		<monster name="toad" x="-1" y="1" z="8" spawntime="60" />
-	</spawn>
-	<spawn centerx="32517" centery="32911" centerz="8" radius="1">
-		<npc name="Erayo" x="1" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="32651" centery="32911" centerz="8" radius="1" />
 	<spawn centerx="32762" centery="32911" centerz="8" radius="3">

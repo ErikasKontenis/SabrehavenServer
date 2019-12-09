@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Gelagos"
+Outfit = (128,114-91-85-79)
+Home = [32363,31624,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hi."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"            -> "Bye.", Idle
+"farewell"       -> *
+
+
+}

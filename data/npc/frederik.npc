@@ -1,0 +1,57 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Frederik"
+Outfit = (128,97-85-77-93-2)
+Home = [32345,32808,7]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hi$",!                    -> "Hi there and welcome to my little magic shop."
+ADDRESS,"hello$",!                 -> "Hi there and welcome to my little magic shop."
+ADDRESS,!                          -> Idle
+BUSY,"hello$",!                    -> "Wait, %N! One after the other.", Queue
+BUSY,"hi$",!                       -> *
+BUSY,!                             -> NOP
+VANISH,!                           -> "However."
+
+"bye"              -> "Yeah, bye.", Idle
+"farewell"         -> *
+"magic"             -> "I'm selling health and mana fluids, runes, wands, rods and spellbooks."
+
+"rune"             -> "I sell blank runes and spell runes."
+"spellbook"        -> Type=3059, Amount=1,  Price=150,   "A spellbook is a nice tool for beginners. Do you want to buy one for %P gold?",Topic=2
+"blank","rune"     -> Type=3147, Amount=1,  Price=10,    "Do you want to buy one for %P gold?", Topic=2
+"mana","fluid"     -> Type=2874, Data=10, Amount=1,  Price=55,    "Do you want to buy mana fluid for %P gold?", Topic=3
+"life","fluid"     -> Type=2874, Data=11, Amount=1,  Price=60,     "Do you want to buy life fluid for %P gold?", Topic=3
+
+%1,1<%1,"spellbook"     -> Type=3059, Amount=%1, Price=150*%1, "Do you want to buy %A spellbooks for %P gold?",Topic=2
+%1,1<%1,"blank","rune"  -> Type=3147, Amount=%1, Price=10*%1,  "Do you want to buy %A runes for %P gold?", Topic=2
+%1,1<%1,"mana","fluid"  -> Type=2874, Data=10, Amount=%1, Price=55*%1, "Do you want to buy %A potions of mana fluid for %P gold?", Topic=3
+%1,1<%1,"life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=60*%1,  "Do you want to buy %A potions of life fluid for %P gold?", Topic=3
+
+"sell","talon"          -> Type=3034, Amount=1, Price=320, "Do you want to sell one of the magic gems called talon for %P gold?", Topic=6
+"sell",%1,1<%1,"talon"  -> Type=3034, Amount=%1, Price=320*%1, "Do you want to sell %A magic gems called talon for %P gold?", Topic=6
+
+Topic=2,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=2,"yes"                   -> "Come back when you have enough money."
+Topic=2                         -> "Hmm, maybe next time."
+
+Topic=3,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold for an empty vial.", DeleteMoney, Create(Type)
+Topic=3,"yes"                   -> "Come back, when you have enough money."
+Topic=3                         -> "Hmm, but next time."
+
+"deposit"                   -> "I will pay you 5 gold for every empty vial. Ok?", Data=0, Topic=5
+"vial"                      -> *
+"flask"                     -> *
+Topic=5,"yes",Count(2874)>0 -> Amount=Count(2874), Price=Amount*5, "Here you are ... %P gold.", Delete(2874), CreateMoney
+Topic=5,"yes"               -> "You don't have any empty vials."
+Topic=5                     -> "Hmm, but please keep Tibia litter free."
+
+Topic=6,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=6,"yes"                             -> "Sorry, you do not have one."
+Topic=6,"yes", Amount>1                   -> "Sorry, you do not have so many."
+Topic=6                                   -> "Maybe next time."
+
+@"gen-t-runes-free-s.ndb"
+@"gen-t-wands-free-s.ndb"
+}

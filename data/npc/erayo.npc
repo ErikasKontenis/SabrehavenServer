@@ -1,0 +1,20 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Erayo"
+Outfit = (152,85-86-106-86-3)
+Home = [32518,32911,8]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "What the... I mean, of course I sensed you.!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,"hail$",!  -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait a minute, %N."
+BUSY,"hi$",!       -> *
+BUSY,"hail$",!     -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye, %N."
+
+"bye"               -> "Good bye, %N.", Idle
+}
