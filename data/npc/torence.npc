@@ -1,0 +1,22 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Torence"
+Outfit = (128,79-37-116-76)
+Home = [32181,32829,7]
+Radius = 8
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hiho, %N!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,"hiho$",!  -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait please, %N!", Queue
+BUSY,"hi$",!       -> *
+BUSY,"hiho$",!     -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"           -> "Good bye.", Idle
+"farewell"      -> *
+
+}

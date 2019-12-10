@@ -321,6 +321,9 @@ bool BehaviourDatabase::loadActions(ScriptReader& script, NpcBehaviour* behaviou
 			} else if (identifier == "burning") {
 				action->type = BEHAVIOUR_TYPE_BURNING;
 				searchType = BEHAVIOUR_PARAMETER_TWO;
+			} else if (identifier == "drunk") {
+				action->type = BEHAVIOUR_TYPE_BURNING;
+				searchType = BEHAVIOUR_PARAMETER_TWO;
 			} else if (identifier == "setquestvalue") {
 				action->type = BEHAVIOUR_TYPE_QUESTVALUE;
 				searchType = BEHAVIOUR_PARAMETER_TWO;
@@ -496,6 +499,9 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 	} else if (identifier == "burning") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_BURNING;
+	} else if (identifier == "drunk") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_DRUNK;
 	} else if (identifier == "level") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_LEVEL;
@@ -1031,6 +1037,14 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		}
 
 		return damage->getTotalDamage();
+	}
+	case BEHAVIOUR_TYPE_DRUNK: {
+		Condition* condition = player->getCondition(CONDITION_DRUNK);
+		if (!condition) {
+			return false;
+		}
+
+		return true;
 	}
 	case BEHAVIOUR_TYPE_POISON: {
 		Condition* condition = player->getCondition(CONDITION_POISON);

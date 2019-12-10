@@ -1,0 +1,28 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Marcus"
+Outfit = (128,115-59-78-41)
+Home = [32316,32861,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hello %N."
+ADDRESS,"hi$",!    -> "Hello %N."
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Sorry %N, I am busy right now.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Bye."
+
+"bye"      -> "Bye, %N.", Idle
+"farewell" -> *
+"pirates"      -> "Be mourned, pilgrim in<spits on the floor> I killed my share of pirates in my youth. Scum bags that
+give sailors a bad name. Nothing more than bandits."
+"voodoo"      -> "Hah! What they call voodoo here is nothing compared to the things I have seen on my journeys when I was still young. I could tell you stories that would turn your hairgrey ...",
+				 "but I am not in the mood of storytelling right now."
+"ferumbras"      -> "Although he's dead, they say that he is the father of all klabautermen."
+"klabautermen"      -> "A klabauterman is some sort of imp that lives on ships and plays quite evil and sometimes lethal pranks on those who annoy him or don't buy his sympathy with little gifts."
+"Eleonore"      -> "The governor's little princess, eh? Too fine and important to care about us
+ordinary people of course. Why should we careabout her?"
+
+}

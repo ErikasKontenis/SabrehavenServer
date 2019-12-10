@@ -1,0 +1,42 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Theodore Loveless"
+Outfit = (132,19-57-76-114-1)
+Home = [32362,32787,6]
+Radius = 4
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings, dear visitor."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+"job"         -> "I am honoured to humbly serve as the spokesman of the Venorean trading companies."
+"Venore"         -> "Venore has become an impressive little point of trade for wares from all over the world. The steady work pays off and brings us a modest state of luxury ...",
+					"We have learnt much from our big brother Thais which we admire and where we are still searching for guidance."
+"Liberty Bay"         -> "We put great hope in this settlement. The Venorean traders invested much money in the growth of that community here ...",
+						 "We have to see that the little profit we make will be enough to cover our expenses in the remote future ...",
+						 "But we are happy that our money could help to bring peace and to civilise the natives here ...",
+						 "Thais finally brought order to the locals that were torn from fightings and hunger before our arrival."
+"Thais"         -> "Thais is such a lovely city. The bustling centre of civilisation. The world has to thank Thais for so many things."
+"sugar"         -> "Sugar is money. Sugar is business. It's as easy as that."
+"Ferumbras"         -> "I heard he has some relation to these isles. To learn more about it, you probably talk to the mage from Edron that resides in a tower here in the city."
+"king"         -> "The king has again proven his great wisdom. The way how he allowed to settle the affairs in Liberty Bays was more than smart ...",
+				  "The trust he has put in the governor, the local military and the help from Venore begins slowly to pay off ...",
+				  "People have work and something to do. The number of fights decreased to the brawls between drunks that are usual for seaports ...",
+				  "As soon as we have the pirates eliminated, we can lower many of the restrictions we had to enforce for the safety of all."
+"governor"         -> "Governor Silverhand is such a fine person. He does so much for the city and receives so little in return. I hope we can cheer him up now and then. That's the least we can do for this great man that sacrifices himself for the good of his people."
+"companies"         -> "Ah, my young friend, you have no idea how many companies have some sort of interest in seeing this settlement prosper."
+"pirates"         -> "The pirates are all what is left from the warlords that once terrorised this region. Now that peace and the protection of Liberty Bay byour military moves in, their days are numbered ...",
+					 "One day, hopefully in the near future, the sea will be just as safe as this isle."
+"Isolde"         -> "I must admit I am a bit suspicious of this young lady. As far as I know she was not overly fond of the Thaian nobility. Add her strong family ties to this rebel townCarlin and you begin to wonder what that woman is up to. All of a sudden she accepted a mission for the nobility that she did not acknowledge before? And this unholy influence on this poor young Tristan whom she seduced with her beauty. I must admit, I am concerned."
+"Tristan"         -> "What a fine young man. I just wonder what brought him here in the first place. Of course I don't believe into rumours that he left a sick wife and 3 childrensomewhere to begin a new life here. That is probably just made up by those that are jealous of him."
+"Admiral Wyrmslicer"         -> "Even the mentionable efforts of this great admiral could not stop the pirates yet. But he will not rest until the last one of this scum will hang for the glory of Thais."
+"Eleonore"         -> "Miss Eleonore is so charming, so beautiful. Her strong will and her independence poses surely a great challenge to every man who wants to marry her. But one look into her beautiful eyes and you will see that she is worth the effort. Perhaps one day I might be allowed to take that challenge ...",
+					  "who knows."
+}

@@ -85,6 +85,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_BLESS, // add blessing to player
 	BEHAVIOUR_TYPE_CREATECONTAINER, // create a container of an item in particular
 	BEHAVIOUR_TYPE_TOWN, // change player town
+	BEHAVIOUR_TYPE_DRUNK, // get/set drunk (set not done)
 };
 
 enum NpcBehaviourOperator_t

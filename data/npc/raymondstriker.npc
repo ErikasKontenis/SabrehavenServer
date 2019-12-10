@@ -1,0 +1,19 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Raymond Striker"
+Outfit = (151,58-77-60-114-1)
+Home = [32350,32588,7]
+Radius = 4
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Be greeted."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+}

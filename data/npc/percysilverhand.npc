@@ -1,0 +1,19 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Percy Silverhand"
+Outfit = (132,0-112-74-109-1)
+Home = [32330,32767,6]
+Radius = 4
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings, %N."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+}

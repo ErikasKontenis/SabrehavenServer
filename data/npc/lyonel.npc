@@ -1,0 +1,40 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Lyonel"
+Outfit = (151,38-58-22-95)
+Home = [32298,32832,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Welcome, my friend. Make yourself comfortable and have some food and rum."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "You're served soon, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Someone must have been in a hurry."
+
+"bye"          -> "Good bye and come again.", Idle
+"farewell"  -> *
+
+"buy"             -> "Food and rum as much as you can pay for."
+"do","you","sell" -> *
+"do","you","have" -> *
+"food"            -> "I can offer you bread, cheese, ham, or meat."
+
+"bread"    -> Type=3600, Amount=1, Price=4, "Do you want to buy a bread for %P gold?", Topic=1
+"cheese"   -> Type=3607, Amount=1, Price=6, "Do you want to buy cheese for %P gold?", Topic=1
+"meat"     -> Type=3577, Amount=1, Price=5, "Do you want to buy meat for %P gold?", Topic=1
+"ham"      -> Type=3582, Amount=1, Price=8, "Do you want to buy a ham for %P gold?", Topic=1
+
+%1,1<%1,"bread"         -> Type=3600, Amount=%1, Price=4*%1, "Do you wanna buy %A breads for %P gold?", Topic=1
+%1,1<%1,"cheese"        -> Type=3607, Amount=%1, Price=6*%1, "Do you wanna buy %A cheese for %P gold?", Topic=1
+%1,1<%1,"meat"          -> Type=3577, Amount=%1, Price=5*%1, "Do you wanna buy %A meat for %P gold?", Topic=1
+%1,1<%1,"ham"           -> Type=3582, Amount=%1, Price=8*%1, "Do you wanna buy %A ham for %P gold?", Topic=1
+
+"rum" -> Type=5552, Data=13, Amount=1, Price=150, "Do you want to buy a flask of rum for %P gold?", Topic=1
+
+Topic=1,"yes",CountMoney>=Price -> "And here is what you ordered.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "Where's your money then?", Idle
+Topic=1                         -> "Maybe next time."
+}
