@@ -1,0 +1,97 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Isolde"
+Outfit = (139,3-14-52-128-1)
+Home = [32412,32830,4]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Oh, be greeted. Maybe you require my assistance as a paladin spell trainer."
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Bye."
+
+"bye"             -> "Good bye.", Idle
+"farewell"        -> *
+"assistance"             -> "I serve as officer and trainer for paladins in this fortress."
+"pirates"            -> "I can understand their desire for freedom. This, of course, does not justify robbery or murder in any way."
+"time"            -> "It is %T."
+"quaras"          -> "The quara pose an even greater danger than the pirates do. Whereas the pirates are out for plunder, the quara try to destroy us all."
+"cult"          -> "There is something evil brewing under the surface of Liberty Bay. The angry and the discontented are easily swayed by the promises of sinister seducers."
+"voodoo"         -> "<shivers> I think that is dark magic and a mockery of the gods. Sadly the natives seem not to recognise what they are dealing with."
+"thais"        -> "Thais was so crowded I hardly found a space to breath. And the city was too busy to get my thoughts sorted. Here everything seems closer, more real. The sea, the people, enemies and friends."
+"venore"        -> "Venore always seemed to me like a lurking moloch. A greedy octopus whose arms are everywhere ... but of course that's only a foolish impression and I don't judge people based on such ponderings."
+"liberty bay"        -> "My duties hardly leave me time to visit the town. I don't like crowded streets and too many people anyway. I rather prefer a walk along the beach, to watch the sea from the cliffs or to listen to the music of wind and waves."
+"djinn"        -> "As a child I heard stories about these magical spirits. There are good djinns and evil djinns. It is rumoured that they live somewhere in the lands of the pyramids and deserts."
+"king"        -> "Although I admire our king, all the crowded festivities were not to my taste. I don't mind my noble heritage too much and so I gladly accepted my duties here."
+"chondur"        -> "His name was mentioned once or twice by whispering locals. I think he does not live in this town if he exists at all."
+"ferumbras"        -> "The evil he represents cannot be stopped easily. Perhaps you should talk to Malunga, the mage from Edron. As far as I know, the academy knows more about the connection of the dark ones to these isles."
+"governor"        -> "The governor is a very busy man. He leaves military issues in the competent hands of admiral Wyrmslicer."
+"Wyrmslicer"        -> "Admiral Wyrmslicer is a man of principles. He is rather a man of doings than of great words. That might put him in a disadvantage on battlegrounds that are parlours and not a field or the sea."
+"eleonore"        -> "The governor's daughter is rumoured to be a bit rebellious <smiles>. Perhaps she is only missing the right man at her side."
+"raymond striker"        -> "That man leads some of the pirates. He is famous for his daring robberies and his escapes from justice. In the end though, his legacy will consist only of a few stories that are shared in a smoky tavern by some old sea dogs."
+"sugar"        -> "They say the sugar is the treasure of the isle."
+"rum"        -> "If people would be more disciplined in the use of rum, everything were only half as bad."
+"charlotta"        -> "This old woman gives me shivers. Another reason to avoid the town. She has some way to look at me ... as if she knew something about me that not even I am aware of ... but forgive me, that's just my imagination."
+"Theodore Loveless"        -> "I wish Tristan would be more careful about that man. Although only a tradesman, there is something dangerous about him. It does not seem wise to have him as an enemy."
+"Tristan"        -> "Tristan ... Tristan ... Oh how even his name lets my heart jump in joy. <blushes> Forgive me, I really adore this young hero and our hearts will always be united in love."
+"plantations"        -> "The people work quite hard on the plantations in the West. I sometimes listen to the sad melodies the workers are singing."
+
+"spell",Paladin -> "I can teach you rune spells and instant spells. What kind of spell do you wish to learn? You can also tell me for which level you would like to learn a spell, if you prefer that.", Topic=2
+"spell"         -> "Sorry, I only sell spells to paladins."
+
+Topic=2,"rune","spell"        -> "I sell 'Light Magic Missile', 'Heavy Magic Missile', 'Fireball' and 'Destroy Field'."
+Topic=2,"instant","spell"     -> "I sell healing spells, supply spells and support spells. Which of these interests you most?"
+Topic=2,"level"               -> "For which level would you like to learn a spell?", Topic=2
+Topic=2,"bye"                 -> "Good bye.", Idle
+
+Topic=2,"8$"  -> "For level 8 I have 'Find Person' and 'Light'.", Topic=2
+Topic=2,"9$"  -> "For level 9 I have 'Light Healing'.", Topic=2
+Topic=2,"10$" -> "For level 10 I have 'Antidote'.", Topic=2
+Topic=2,"11$" -> "For level 11 I have 'Intense Healing'.", Topic=2
+Topic=2,"13$" -> "For level 13 I have 'Great Light' and 'Conjure Arrow'.", Topic=2
+Topic=2,"14$" -> "For level 14 I have 'Food' and 'Magic Shield'.", Topic=2
+Topic=2,"15$" -> "For level 15 I have 'Light Magic Missile'.", Topic=2
+Topic=2,"16$" -> "For level 16 I have 'Poisoned Arrow'.", Topic=2
+Topic=2,"17$" -> "For level 17 I have 'Fireball' and 'Destroy Field'.", Topic=2
+Topic=2,"20$" -> "For level 20 I have 'Ultimate Healing'.", Topic=2
+Topic=2,"25$" -> "For level 25 I have 'Explosive Arrow' and 'Heavy Magic Missile'.", Topic=2
+Topic=2,"35$" -> "For level 35 I have 'Invisible'.", Topic=2
+
+Topic=2       -> "Sorry, I have only spells for level 8 to 11 and 13 to 17 as well as for level 20, 25 and 35.", Topic=2
+
+Paladin,"rune","spell"        -> "I sell 'Light Magic Missile', 'Heavy Magic Missile', 'Fireball' and 'Destroy Field'."
+Paladin,"instant","spell"     -> "I sell healing spells, supply spells and support spells. Which of these interests you most?"
+Paladin,"level"               -> "For which level would you like to learn a spell?", Topic=2
+
+Paladin,"healing","spell"          -> "In this category I have 'Light Healing', 'Intense Healing', 'Ultimate Healing' and 'Antidote'."
+Paladin,"supply","spell"           -> "In this category I have 'Food', 'Conjure Arrow', 'Poisoned Arrow' and 'Explosive Arrow'."
+Paladin,"support","spell"          -> "In this category I have 'Find Person', 'Light', 'Great Light', 'Magic Shield' and 'Invisible'."
+
+Paladin,"find","person"      -> String="Find Person", Price=80,   "Do you want to buy the spell 'Find Person' for %P gold?", Topic=3
+Paladin,"light"              -> String="Light", Price=100,  "Do you want to buy the spell 'Light' for %P gold?", Topic=3
+Paladin,"food"               -> String="Food", Price=300,  "Do you want to buy the spell 'Food' for %P gold?", Topic=3
+Paladin,"light","healing"    -> String="Light Healing", Price=170,  "Do you want to buy the spell 'Light Healing' for %P gold?", Topic=3
+Paladin,"light","missile"    -> String="Light Magic Missile", Price=500,  "Do you want to buy the spell 'Light Magic Missile' for %P gold?", Topic=3
+Paladin,"antidote"           -> String="Antidote", Price=150,  "Do you want to buy the spell 'Antidote' for %P gold?", Topic=3
+Paladin,"intense","healing"  -> String="Intense Healing", Price=350,  "Do you want to buy the spell 'Intense Healing' for %P gold?", Topic=3
+Paladin,"conjure","arrow"    -> String="Conjure Arrow", Price=450,  "Do you want to buy the spell 'Conjure Arrow' for %P gold?", Topic=3
+Paladin,"great","light"      -> String="Great Light", Price=500,  "Do you want to buy the spell 'Great Light' for %P gold?", Topic=3
+Paladin,"heavy","missile"    -> String="Heavy Magic Missile", Price=1500,  "Do you want to buy the spell 'Heavy Magic Missile' for %P gold?", Topic=3
+Paladin,"magic","shield"     -> String="Magic Shield", Price=450,  "Do you want to buy the spell 'Magic Shield' for %P gold?", Topic=3
+Paladin,"fireball"           -> String="Fireball", Price=800,  "Do you want to buy the spell 'Fireball' for %P gold?", Topic=3
+Paladin,"poison","arrow"     -> String="Poisoned Arrow", Price=700,  "Do you want to buy the spell 'Poisoned Arrow' for %P gold?", Topic=3
+Paladin,"destroy","field"    -> String="Destroy Field", Price=700,  "Do you want to buy the spell 'Destroy Field' for %P gold?", Topic=3
+Paladin,"ultimate","healing" -> String="Ultimate Healing", Price=1000, "Do you want to buy the spell 'Ultimate Healing' for %P gold?", Topic=3
+Paladin,"explosive","arrow"  -> String="Explosive Arrow", Price=1000, "Do you want to buy the spell 'Explosive Arrow' for %P gold?", Topic=3
+Paladin,"invisible"          -> String="Invisible", Price=2000, "Do you want to buy the spell 'Invisible' for %P gold?", Topic=3
+
+Topic=3,"yes",SpellKnown(String)=1        -> "You already know how to cast this spell."
+Topic=3,"yes",Level<SpellLevel(String)    -> Amount=SpellLevel(String), "You must be level %A to learn this spell."
+Topic=3,"yes",CountMoney<Price            -> "Oh. You do not have enough money."
+Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
+Topic=3                                   -> "Ok. Then not."
+}

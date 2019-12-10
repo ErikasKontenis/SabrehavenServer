@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Bradford"
+Outfit = (128,38-93-82-116-2)
+Home = [32299,32837,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings, traveller %N."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Oh, just when I wanted to tell him about that treasure."
+
+"bye"            -> "Farewell, %N.", Idle
+"farewell"       -> *
+
+
+}

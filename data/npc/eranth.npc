@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Eranth"
+Outfit = (129,116-79-78-113)
+Home = [32123,32953,7]
+Radius = 5
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hi."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"            -> "Bye.", Idle
+"farewell"       -> *
+
+
+}

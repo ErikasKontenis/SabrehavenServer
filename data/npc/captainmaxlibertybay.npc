@@ -1,0 +1,35 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Captain Max"
+Outfit = (134,95-10-56-77)
+Home = [32298,32895,6]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",!        -> "Ahoy, %N. On a mission for the explorer society, eh?"
+ADDRESS,"hi$",!           -> *
+ADDRESS,!                 -> Idle
+BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
+BUSY,"hi$",!              -> *
+BUSY,!                    -> NOP
+VANISH,!                  -> "Good bye."
+
+"bye"          -> "Good bye.", Idle
+"farewell"     -> *
+"name"         -> "My name is Captain Maximilian."
+"job"          -> "I am the captain of this ship."
+"captain"      -> *
+"sail"          -> "Welcome on board, noble %N. I can bring you to Calassa, but only if you have the according mission from Berenice."
+"passage"          -> *
+
+"calassa"       -> Price=200, "That is quite a long unprofitable travel. I'll bring you to Calassa though for %P gold. Do you want me to do it?", Topic=1
+
+Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
+
+
+Topic=1,"yes",QuestValue(300)>8,Premium,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(31911,32710,6), EffectOpp(11)
+Topic>0,"yes",CountMoney>=Price,QuestValue(300)>8         -> "I'm sorry, but you need a premium account in order to travel onboard our ships."
+Topic>0,"yes",CountMoney<Price                           -> "You don't have enough money."
+Topic=1,"yes",QuestValue(300)<9        -> "I'm sorry, but I can't ship to Calassa with someone of your rank."
+Topic>0                                 -> "Maybe another time, then."
+}

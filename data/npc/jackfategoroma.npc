@@ -1,0 +1,74 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Jack Fate"
+Outfit = (129,19-69-107-50)
+Home = [32161,32558,6]
+Radius = 5
+
+Behaviour = {
+ADDRESS,"hello$",male,!   -> "Welcome on board, Sir %N."
+ADDRESS,"hi$",male,!      -> *
+ADDRESS,"hello$",female,! -> "Welcome on board, Madam %N."
+ADDRESS,"hi$",female,!    -> *
+ADDRESS,!                 -> Idle
+BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
+BUSY,"hi$",!              -> *
+BUSY,!                    -> NOP
+VANISH,!                  -> "Good bye. Recommend us, if you were satisfied with our service."
+
+"bye"          -> "Good bye. Recommend us, if you were satisfied with our service.", Idle
+"farewell"     -> *
+"name"         -> "My name is Jack Fate from the Royal Tibia Line."
+"job"          -> "I am the captain of this sailing-ship."
+"captain"      -> *
+"ship"         -> "The Royal Tibia Line connects all seaside towns of Tibia."
+"line"         -> *
+"company"      -> *
+"route"        -> *
+"tibia"        -> *
+"good"         -> "We can transport everything you want."
+"passenger"    -> "We would like to welcome you on board."
+
+"trip",QuestValue(17501)=0         -> "I'd love to bring you back to Liberty Bay, but as you can see, my ship is ruined. I also hurt my leg and can barely move. Can you help me?", Topic=1
+"passage",QuestValue(17501)=0      -> *
+"town",QuestValue(17501)=0         -> *
+"destination",QuestValue(17501)=0  -> *
+"sail",QuestValue(17501)=0         -> *
+"go",QuestValue(17501)=0           -> *
+"back",QuestValue(17501)=0           -> *
+"liberty","bay",QuestValue(17501)=0           -> *
+
+"trip",QuestValue(17501)=1         -> Type=5901, Amount=30, "Have you brought 30 pieces of wood so that I can repair the ship?", Topic=3
+"passage",QuestValue(17501)=1      -> *
+"town",QuestValue(17501)=1         -> *
+"destination",QuestValue(17501)=1  -> *
+"sail",QuestValue(17501)=1         -> *
+"go",QuestValue(17501)=1           -> *
+"back",QuestValue(17501)=1           -> *
+"liberty","bay",QuestValue(17501)=1           -> *
+
+"trip",QuestValue(17501)>1         -> "Do you want to travel back to Liberty Bay?", Topic=4
+"passage",QuestValue(17501)>1      -> *
+"town",QuestValue(17501)>1         -> *
+"destination",QuestValue(17501)>1  -> *
+"sail",QuestValue(17501)>1         -> *
+"go",QuestValue(17501)>1           -> *
+"back",QuestValue(17501)>1           -> *
+"liberty","bay",QuestValue(17501)>1           -> *
+
+Topic>0,Topic<8,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
+
+Topic=1,"yes" -> "Thank you. Luckily the damage my ship has taken looks more severe than it is, so I will only need a few wooden boards. ...",
+				 "I saw some lousy trolls running away with some parts of the ship. It might be a good idea to follow them and check if they have some more wood. ...",
+				 "We will need 30 pieces of wood, no more, no less. Did you understand everything?", Topic=2
+Topic=1                                   -> "Oh, well."
+Topic=2,"yes" -> "Good! Please return once you have gathered 30 pieces of wood.", SetQuestValue(17501,1)
+Topic=2                                   -> "Oh, well."
+
+Topic=3,"yes",Count(Type)>=Amount -> "Excellent! Now we can leave this godforsaken place. Thank you for your help. Should you ever want to return to this island, ask me for a passage to Goroma.", Delete(Type), SetQuestValue(17501,2)
+Topic=3,"yes"					           -> "You don't have that many."
+Topic=3                                   -> "Oh, I'm still waiting then."
+
+Topic=4,"yes" -> "Set the sails!", Idle, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+Topic=4                                 -> "We would like to serve you some time."
+}

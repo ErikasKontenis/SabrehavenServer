@@ -861,9 +861,6 @@
 	<house name="Darashia 8, Flat 12" houseid="859" entryx="33249" entryy="32446" entryz="6" rent="3520" townid="6" size="28" />
 	<house name="Darashia 8, Flat 13" houseid="860" entryx="33254" entryy="32449" entryz="6" rent="3880" townid="6" size="32" />
 	<house name="Darashia 8, Flat 14" houseid="861" entryx="33254" entryy="32449" entryz="6" rent="3520" townid="6" size="31" />
-	<house name="Admiral's Avenue 3" houseid="2013" entryx="32336" entryy="32806" entryz="7" rent="4115" townid="12" size="68" />
-	<house name="Admiral's Avenue 2" houseid="2014" entryx="32326" entryy="32806" entryz="7" rent="5470" townid="12" size="85" />
-	<house name="Admiral's Avenue 1" houseid="2015" entryx="32309" entryy="32805" entryz="7" rent="5105" townid="12" size="83" />
 	<house name="Ivory Circle 1" houseid="2012" entryx="32347" entryy="32799" entryz="7" rent="4280" townid="7" size="71" />
 	<house name="Admiral's Avenue 3" houseid="2013" entryx="32336" entryy="32806" entryz="7" rent="4115" townid="7" size="68" />
 	<house name="Admiral's Avenue 2" houseid="2014" entryx="32326" entryy="32806" entryz="7" rent="5470" townid="7" size="85" />
@@ -932,5 +929,5 @@
 	<house name="Sugar Street 4a" houseid="2079" entryx="32279" entryy="32813" entryz="7" rent="950" townid="7" size="12" />
 	<house name="Trader's Point 1" houseid="2080" entryx="32306" entryy="32826" entryz="7" rent="2200" townid="7" size="38" />
 	<house name="Mountain Hideout" houseid="2081" entryx="32392" entryy="32705" entryz="6" rent="15550" guildhall="true" townid="7" size="234" />
-	<house name="Meriana Beach" houseid="2381" entryx="32383" entryy="32584" entryz="7" rent="8230" townid="7" size="140" />
+	<house name="Meriana Beach" houseid="2381" entryx="32383" entryy="32584" entryz="7" rent="8230" townid="7" size="96" />
 </houses>

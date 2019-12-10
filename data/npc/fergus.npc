@@ -1,0 +1,20 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Fergus"
+Outfit = (128,0-37-116-76)
+Home = [32221,32810,7]
+Radius = 5
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hello, %N!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Just a moment please, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"      -> "Good bye.", Idle
+"farewell" -> *
+
+}

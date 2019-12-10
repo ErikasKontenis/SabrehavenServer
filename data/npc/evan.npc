@@ -1,0 +1,27 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Evan"
+Outfit = (132,115-87-81-76)
+Home = [32259,32881,7]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hello there. What are you doing in the distillery?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,"hail$",!  -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait a minute, %N."
+BUSY,"hi$",!       -> *
+BUSY,"hail$",!     -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye, %N."
+
+"bye"               -> "Good bye, %N.", Idle
+
+"fire bug"            -> Type=5467, Amount=1,  Price=100,    "Do you want to buy a fire bug for %P gold?", Topic=1
+%1,1<%1,"fire bug"    -> Type=5467, Amount=%1, Price=100*%1, "Do you want to buy %A fire bugs for %P gold?", Topic=1
+
+Topic=1,"yes",CountMoney>=Price -> "Here you go.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "Come back when you have enough money."
+Topic=1                         -> "Maybe next time."
+}

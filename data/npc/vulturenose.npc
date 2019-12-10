@@ -1,0 +1,34 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Vulturenose"
+Outfit = (96,0-0-0-0)
+Home = [31977,32856,3]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hrrrrm. So what?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N. I am busy.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Get lost."
+
+"bye"            -> "Get lost.", Idle
+"farewell"       -> *
+"what"         -> "I guard this door. I won't let anyone pass who is not supposed to enter."
+"enter"         -> "YOU WILL NOT PASS! Erm ... I mean you don't look like a true pirate to me. You won't get in."
+"pirate"         -> "Yoho, a pirate's life for me!"
+"name"         -> "They call me Vulturenose."
+"rum"         -> "You won't bribe old Vulturenose with some rum. No way."
+"raymond striker"         -> "Sooner or later he will run out of luck and then we will get his head."
+"king tibianus"         -> "We are the undisputed kings of the seas."
+"excalibug"         -> "Only a wimp needs magical weapons."
+"ferumbras"         -> "If he'd be still alive, he'd make a fine ship magician. Ho Ho Ho."
+"sugar"         -> "You can call me honey."
+"liberty bay"         -> "For us Liberty Bay is an open treasure chest. Ho Ho Ho."
+"venore"         -> "The Venoreans don't care about the likes of you."
+"thais"         -> "Thais is a town full of wimps."
+"carlin"         -> "A city full of women? That calls for plunder. Sadly, a bit far away. Ho Ho Ho."
+
+}

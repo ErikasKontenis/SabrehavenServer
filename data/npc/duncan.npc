@@ -1,0 +1,29 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Duncan"
+Outfit = (151,38-23-0-116-1)
+Home = [32330,32605,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hi %N, come closer. Have a look at my wares and such."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Bye"
+
+"bye"            -> "Good bye.", Idle
+"farewell"       -> *
+"do","you","sell"       -> "Well erm, currently we are a little short on weapons and the like, but I still have pirate tapestries for sale."
+"wares"       -> *
+"offer"       -> *
+
+"pirate tapestry"            -> Type=5615, Amount=1,  Price=40,    "Do you want to buy a pirate tapestry for %P gold?", Topic=1
+%1,1<%1,"pirate tapestry"    -> Type=5615, Amount=%1, Price=40*%1, "Do you want to buy %A pirate tapestries for %P gold?", Topic=1
+
+Topic=1,"yes",CountMoney>=Price -> "Here you go. Those would fit nicely into your house, showing that you're a fan and supporter and all that.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "Come back when you have enough money."
+Topic=1                         -> "Maybe next time."
+}

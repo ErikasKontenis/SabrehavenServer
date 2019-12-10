@@ -1,0 +1,19 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Marina"
+Outfit = (0,5811)
+Home = [32329,32528,7]
+Radius = 0
+
+Behaviour = {
+ADDRESS,"hello$",! -> "You wouldn't keep a pretty lady like me waiting, would you?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait a second please, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "How rude."
+
+"bye"          -> "Good bye, %N.", Idle
+
+}

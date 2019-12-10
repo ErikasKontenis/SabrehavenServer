@@ -1,0 +1,73 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Fiona"
+Outfit = (137,115-63-95-38)
+Home = [33282,31846,5]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Good day, %N. I hope you bring a lot of magical ingredients with you."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye and please come back soon."
+
+"bye"            -> "Good bye and please come back soon.", Idle
+"farewell"       -> *
+"magical ingredients"       -> "Oof, there are too many to list. Magical ingredients can sometimes be found when you defeat a monster, for example bat wings. I buy many of these things if you don't want to use them for quests."
+"wares"       -> *
+"offer"       -> *
+
+"sell","bat","wing"    -> Type=5894, Amount=1, Price=50, "Do you want to sell a bat wing for %P gold?", Topic=1
+"sell","behemoth","claw"    -> Type=5930, Amount=1, Price=2000, "Do you want to sell a behemoth claw for %P gold?", Topic=1
+"sell","beholder","eye"  -> Type=5898, Amount=1, Price=80, "Do you want to sell a beholder's eye for %P gold?", Topic=1
+"sell","chicken","feather" -> Type=5890, Amount=1, Price=30, "Do you want to sell a chicken feather for %P gold?", Topic=1
+"sell","demon","dust"     -> Type=5906, Amount=1, Price=300, "Do you want to sell a demon dust for %P gold?", Topic=1
+"sell","demon","horn"  -> Type=5954, Amount=1, Price=1000, "Do you want to sell a demon horn for %P gold?", Topic=1
+"sell","enchanted","chicken","wing" -> Type=5891, Amount=1, Price=20000, "Do you want to sell a enchanted chicken wing for %P gold?", Topic=1
+"sell","fish","fin"  -> Type=5895, Amount=1, Price=150, "Do you want to sell a fish fin for %P gold?", Topic=1
+"sell","flask","of","warrior","sweat"  -> Type=5885, Amount=1, Price=10000, "Do you want to sell a flask of warrior's sweat for %P gold?", Topic=1
+"sell","green","dragon","scale"  -> Type=5920, Amount=1, Price=100, "Do you want to sell a green dragon scale for %P gold?", Topic=1
+"sell","hardened","bone"  -> Type=5925, Amount=1, Price=70, "Do you want to sell a hardened bone for %P gold?", Topic=1
+"sell","heaven","blossom"  -> Type=3657, Amount=1, Price=50, "Do you want to sell a heaven blossom for %P gold?", Topic=1
+"sell","holy","orchid"  -> Type=5922, Amount=1, Price=90, "Do you want to sell a holy orchid for %P gold?", Topic=1
+"sell","honeycomb"  -> Type=5902, Amount=1, Price=40, "Do you want to sell a honeycomb for %P gold?", Topic=1
+"sell","lizard","scale"  -> Type=5881, Amount=1, Price=120, "Do you want to sell a lizard scale for %P gold?", Topic=1
+"sell","magic","sulphur"  -> Type=5904, Amount=1, Price=8000, "Do you want to sell a magic sulphur for %P gold?", Topic=1
+"sell","perfect","behemoth","fang"  -> Type=5893, Amount=1, Price=250, "Do you want to sell a perfect behemoth fang for %P gold?", Topic=1
+"sell","red","dragon","scale"  -> Type=5882, Amount=1, Price=200, "Do you want to sell a red dragon scale for %P gold?", Topic=1
+"sell","spider","silk"  -> Type=5879, Amount=1, Price=100, "Do you want to sell a spider silk for %P gold?", Topic=1
+"sell","spirit","container"  -> Type=5884, Amount=1, Price=40000, "Do you want to sell a spirit container for %P gold?", Topic=1
+"sell","turtle","shell"  -> Type=5899, Amount=1, Price=90, "Do you want to sell a turtle shell for %P gold?", Topic=1
+"sell","vampire","dust"  -> Type=5905, Amount=1, Price=100, "Do you want to sell a vampire dust for %P gold?", Topic=1
+
+"sell",%1,1<%1,"bat","wing"    -> Type=5894, Amount=%1, Price=50*%1, "Do you want to sell %A bat wings for %P gold?", Topic=1
+"sell",%1,1<%1,"behemoth","claw"    -> Type=5930, Amount=%1, Price=2000*%1, "Do you want to sell %A behemoth claws for %P gold?", Topic=1
+"sell",%1,1<%1,"beholder","eye"  -> Type=5898, Amount=%1, Price=80*%1, "Do you want to sell %A beholder's eyes for %P gold?", Topic=1
+"sell",%1,1<%1,"chicken","feather" -> Type=5890, Amount=%1, Price=30*%1, "Do you want to sell %A chicken feathers for %P gold?", Topic=1
+"sell",%1,1<%1,"demon","dust"     -> Type=5906, Amount=%1, Price=300*%1, "Do you want to sell %A demon dusts for %P gold?", Topic=1
+"sell",%1,1<%1,"demon","horn"  -> Type=5954, Amount=%1, Price=1000*%1, "Do you want to sell %A demon horns for %P gold?", Topic=1
+"sell",%1,1<%1,"enchanted","chicken","wing" -> Type=5891, Amount=%1, Price=20000*%1, "Do you want to sell %A enchanted chicken wings for %P gold?", Topic=1
+"sell",%1,1<%1,"fish","fin"  -> Type=5895, Amount=%1, Price=150*%1, "Do you want to sell %A fish fins for %P gold?", Topic=1
+"sell",%1,1<%1,"flask","of","warrior","sweat"  -> Type=5885, Amount=%1, Price=10000*%1, "Do you want to sell %A flasks of warrior's sweat for %P gold?", Topic=1
+"sell",%1,1<%1,"green","dragon","scale"  -> Type=5920, Amount=%1, Price=100*%1, "Do you want to sell %A green dragon scales for %P gold?", Topic=1
+"sell",%1,1<%1,"hardened","bone"  -> Type=5925, Amount=%1, Price=70*%1, "Do you want to sell %A hardened bones for %P gold?", Topic=1
+"sell",%1,1<%1,"heaven","blossom"  -> Type=3657, Amount=%1, Price=50*%1, "Do you want to sell %A heaven blossoms for %P gold?", Topic=1
+"sell",%1,1<%1,"holy","orchid"  -> Type=5922, Amount=%1, Price=90*%1, "Do you want to sell %A holy orchids for %P gold?", Topic=1
+"sell",%1,1<%1,"honeycomb"  -> Type=5902, Amount=%1, Price=40*%1, "Do you want to sell %A honeycombs for %P gold?", Topic=1
+"sell",%1,1<%1,"lizard","scale"  -> Type=5881, Amount=%1, Price=120*%1, "Do you want to sell %A lizard scales for %P gold?", Topic=1
+"sell",%1,1<%1,"magic","sulphur"  -> Type=5904, Amount=%1, Price=8000*%1, "Do you want to sell %A magic sulphurs for %P gold?", Topic=1
+"sell",%1,1<%1,"perfect","behemoth","fang"  -> Type=5893, Amount=%1, Price=250*%1, "Do you want to sell %A perfect behemoth fangs for %P gold?", Topic=1
+"sell",%1,1<%1,"red","dragon","scale"  -> Type=5882, Amount=%1, Price=200*%1, "Do you want to sell %A red dragon scales for %P gold?", Topic=1
+"sell",%1,1<%1,"spider","silk"  -> Type=5879, Amount=%1, Price=100*%1, "Do you want to sell %A spider silks for %P gold?", Topic=1
+"sell",%1,1<%1,"spirit","container"  -> Type=5884, Amount=%1, Price=40000*%1, "Do you want to sell %A spirit containers for %P gold?", Topic=1
+"sell",%1,1<%1,"turtle","shell"  -> Type=5899, Amount=%1, Price=90*%1, "Do you want to sell %A turtle shells for %P gold?", Topic=1
+"sell",%1,1<%1,"vampire","dust"  -> Type=5905, Amount=%1, Price=100*%1, "Do you want to sell %A vampire dusts for %P gold?", Topic=1
+
+Topic=1,"yes",Count(Type)>=Amount -> "Here is your money.", Delete(Type), CreateMoney
+Topic=1,"yes"                             -> "I am sorry, but you do not have one."
+Topic=1,"yes",Amount>1                    -> "Sorry, you do not have so many."
+Topic=1                                   -> "Maybe next time."
+}

@@ -1,0 +1,27 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Samir"
+Outfit = (153,38-40-39-114-3)
+Home = [33027,32417,4]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings, %N."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait a moment!", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Bye."
+
+"bye"       -> "Bye.", Idle
+"life"      -> "You would not want to lead such a life, believe me. And I simply refuse to take anyone as my apprentice anymore."
+"job"      -> "I don't have a job anymore. Long time ago, I used to be an assassin... but that is a dark chapter of my past. Nowadays I'm a simple hermit."
+"hermit"      -> "That is the life I chose now. My sins can't be made undone, but my life in solitude is my self-imposed punishment."
+"assassin"      -> "It is true - I once made a living from... well, putting people away who made others feel uncomfortable. It is not an easy life."
+"apprentice"      -> "No way. I am old and weary. If you really want to throw your life away and become an assassin, go bother Atrad, Vescu or Erayo and try not to get killed."
+"Atrad"      -> "The red death. As far as I know, he hides somewhere on the Forbidden Islands. Usually he prefers hot places, which fits his temper."
+"Vescu"      -> "The green death. I think the last time I heard about him, he roamed Tiquanda. In his spare time he prefers jungle surroundings, which matches his confused mind."
+"Erayo"      -> "The blue death. If he isn't on a killing spree, he loves places with a lot of water, such as the Laguna Islands. He is a quiet one, but don't underestimate him."
+
+}

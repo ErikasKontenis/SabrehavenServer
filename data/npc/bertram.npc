@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Bertram"
+Outfit = (132,57-114-0-114)
+Home = [32355,32797,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hello, %N."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"            -> "Bye, %N.", Idle
+"farewell"       -> *
+
+
+}

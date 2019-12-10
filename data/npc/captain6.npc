@@ -27,13 +27,14 @@ VANISH,!                  -> "Good bye!"
 "venore"       -> Price=60, "Do you want to get to Venore for %P gold?", Topic=1
 "ankrahmun"    -> Price=100, "Do you want to get to Ankrahmun for %P gold?", Topic=2
 "port","hope"  -> Price=180, "Do you seek a passage to Port Hope for %P gold?", Topic=8
-
+"liberty","bay" -> Price=200, "Do you seek a passage to Liberty Bay for %P gold?", Topic=9
 
 "venore",QuestValue(250)>2       -> Price=50, "Do you want to get to Venore for %P gold?", Topic=1
 "ankrahmun",QuestValue(250)>2    -> Price=90, "Do you want to get to Ankrahmun for %P gold?", Topic=2
 "port","hope",QuestValue(250)>2  -> Price=170, "Do you seek a passage to Port Hope for %P gold?", Topic=8
+"liberty","bay",QuestValue(250)>2   -> Price=190, "Do you seek a passage to Liberty Bay for %P gold?", Topic=9
 
-Topic>0,Topic<9,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
+Topic>0,Topic<10,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
 
 #Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
 #Topic=2,"yes",PZBlock,! -> *
@@ -41,6 +42,7 @@ Topic>0,Topic<9,"yes",PZBlock,! -> "First get rid of those blood stains! You are
 Topic=1,"yes",CountMoney>=Price -> "Here we go!", DeleteMoney, Idle, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
 Topic=2,"yes",CountMoney>=Price -> "Here we go!", DeleteMoney, Idle, EffectOpp(11), Teleport(33091,32883,6), EffectOpp(11)
 Topic=8,"yes",Premium,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
+Topic=9,"yes",Premium,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
 
 Topic>0,"yes"                   -> "You don't have enough money."
 Topic>0                         -> "Maybe later."

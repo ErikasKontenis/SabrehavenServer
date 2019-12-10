@@ -1,0 +1,45 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Admiral Wyrmslicer"
+Outfit = (132,19-113-112-114)
+Home = [32396,32821,3]
+Radius = 4
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings, %N. Have you anything to report?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please wait a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"            -> "Good bye, %N!", Idle
+"farewell"       -> *
+"report"         -> "I heard enough of the gossip and superstitions. I am fed up with that nonsense!"
+"gossip"         -> "Spare me the nonsense that people made up like sinister cultists, quara infiltrators, pirate hideouts voodoo curses and whatnot! ...",
+					"I've heared it all and it is completely rubbish and a waste of my time! We have everything firmly under control. And to ensure this I warn you not to talk to the townspeople about such issues!"
+"cultistis"         -> "The talks about the cult are getting tiresome. There is no such thing. It is only another superstition here."
+"quara"         -> "The quara are treacherous foes that don't fight with common tactics. This and the security of the seas, to what they can withdraw, make it difficult to handle them properly."
+"pirate"         -> "Pirates are vermin and we will wipe them from the map wherever they raise their ugly heads."
+"voodoo"         -> "Superstition! We have real sorcerers and none of them uses such prankish trickery."
+"job"         -> "I am admiral of the Thaian fleet and commander of this fort and the local military."
+"Wyrmslicer"         -> "My family is respected for many deeds of heroism. There is a well-known dragon slayer in our bloodline which earned us that name of honour."
+"raymond striker"         -> "Captain Striker is one of the more cunning pirates. Up to now, he managed to escape but sooner or later he will run out of luck."
+"chondur"         -> "I heard about that man. For some people he is some kind of father figure. If he should ever misuse that, we will take a closer look at him."
+"thais"         -> "Thais is of course the crown of our kingdom and the place where our hearts will belong to forever."
+"venore"         -> "The efforts Venore put into this city are admirable. It's only fair that they gain a certain profit from that."
+"king"         -> "LONG LIVE THE KING!"
+"sugar"         -> "We need the sugar. We will ensure with everything that is at our command that the supply of sugar is kept up."
+"rum"         -> "Rum can be just as good for morale as it can be bad. It has to be administered with care."
+"governor"         -> "The governor is a fine man and I do my best to support him in all his efforts."
+"eleonore"         -> "This young lady truly graces Liberty Bay with her presence. It is always a pleasure to meet her."
+"liberty bay"         -> "It might take some time but with our guidance the city will flourish and prosper."
+"carlin"         -> "Sooner or later Carlin will be nothing more than a footnote in history. Look at the size of our kingdom and compare it with Carlin ...",
+					"One day they will accept that it is better to rejoin the kingdom and to combine our efforts and resources for the good of all."
+"charlotta"         -> "I believe she is this old healer in town. I don't think she is happy with our presence here but she did nothing yet that would justify to arrest her."
+"Isolde"         -> "Competent and efficient. I give nothing about ugly rumours and she never ever betrayed the trust put into her."
+"Theodore Loveless"         -> "Mr. Loveless has a sharp and quick mind. If he were no trader, he would have made a great officer."
+"Tristan"         -> "A fine knight indeed. I am very pleased with his efforts."
+"ferumbras"         -> "I am not familiar with witchcraft and sorcery. Perhaps you should ask someone else."
+}

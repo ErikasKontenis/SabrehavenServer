@@ -1,0 +1,23 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Vescu"
+Outfit = (152,81-101-122-63-3)
+Home = [32565,32651,7]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",Drunk>0 -> "Hey t-there, you look like someone who enjoys a good booze."
+ADDRESS,"hi$",Drunk>0    -> *
+ADDRESS,"hello$",Drunk=0 -> "Oh, two t-trolls. Hellooo, wittle twolls. <hicks>", Idle
+ADDRESS,"hi$",Drunk=0    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Oh, two t-trolls. Hellooo, wittle twolls. <hicks>"
+
+"bye"            -> "T-time for another b-beer. <hicks>", Idle
+"farewell"       -> *
+
+
+}

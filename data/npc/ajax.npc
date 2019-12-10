@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Ajax"
+Outfit = (143,78-101-120-94-1)
+Home = [32417,31583,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hi."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> NOP
+
+"bye"            -> "Bye.", Idle
+"farewell"       -> *
+
+
+}

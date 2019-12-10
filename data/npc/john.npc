@@ -1,0 +1,52 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "John"
+Outfit = (128,58-68-12-114)
+Home = [32138,32904,7]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hello, hello, %N! Please come in, look, and buy!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "I'll be with you in a moment, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Bye, bye."
+
+"bye"             -> "Bye, bye.", Idle
+"farewell"        -> *
+"how","are","you" -> "I am fine. I'm so glad to have you here as my customer."
+"sell"            -> "Souvenirs! Shovels! Treasure maps! Noble watches! Tools! All here for great prices!"
+"job"             -> "I am a merchant. What can I do for you?"
+
+"wares"           -> "Souvenirs! Shovels! Treasure maps! Noble watches! Tools! All here for great prices!"
+"offer"           -> *
+
+"backpack"              -> Type=2872, Amount=1, Price=30,  "Do you want to buy a camouflage backpack for %P gold?", Topic=1
+"bag"             -> Type=2864, Amount=1, Price=10,  "Do you want to buy a camouflage bag for %P gold?", Topic=1
+"fishing","rod"              -> Type=3483, Amount=1, Price=300,  "Do you want to buy a fishing rod for %P gold?", Topic=1
+"pick"             -> Type=3456, Amount=1, Price=100,   "Do you want to buy a pick for %P gold?", Topic=1
+"rope"             -> Type=3003, Amount=1, Price=100,   "Do you want to buy a rope for %P gold?", Topic=1               
+"shovel"         -> Type=3457, Amount=1, Price=100,   "Do you want to buy a shovel for %P gold?", Topic=1
+"watch"                -> Type=6091, Amount=1, Price=500,  "Do you want to buy a very noble-looking watch. for %P gold?", Topic=1
+"treasure","map"      -> Type=5090, Amount=1, Price=1000,  "Do you want to buy a treasure map for %P gold?", Topic=1
+"worm"             -> Type=3492, Amount=1, Price=2,  "Do you want to buy a worm for %P gold?", Topic=1
+"torch"              -> Type=2920, Amount=1, Price=2,   "Do you want to buy a torch for %P gold?", Topic=1
+
+%1,1<%1,"backpack"              -> Type=2872, Amount=%1, Price=30*%1,  "Do you want to buy %A camouflage backpacks for %P gold?", Topic=1
+%1,1<%1,"bag"             -> Type=2864, Amount=%1, Price=10*%1,  "Do you want to buy %A camouflage bags for %P gold?", Topic=1
+%1,1<%1,"fishing","rod"              -> Type=3483, Amount=%1, Price=300*%1,  "Do you want to buy %A fishing rods for %P gold?", Topic=1
+%1,1<%1,"pick"             -> Type=3456, Amount=%1, Price=100*%1,   "Do you want to buy %A picks for %P gold?", Topic=1
+%1,1<%1,"rope"             -> Type=3003, Amount=%1, Price=100*%1,   "Do you want to buy %A ropes for %P gold?", Topic=1               
+%1,1<%1,"shovel"         -> Type=3457, Amount=%1, Price=100*%1,   "Do you want to buy %A shovels for %P gold?", Topic=1
+%1,1<%1,"watch"                -> Type=6091, Amount=%1, Price=500*%1,  "Do you want to buy %A very noble-looking watches. for %P gold?", Topic=1
+%1,1<%1,"treasure","map"      -> Type=5090, Amount=%1, Price=1000*%1,  "Do you want to buy %A treasure maps for %P gold?", Topic=1
+%1,1<%1,"worm"             -> Type=3492, Amount=%1, Price=2*%1,  "Do you want to buy %A worms for %P gold?", Topic=1
+%1,1<%1,"torch"              -> Type=2920, Amount=%1, Price=2*%1,   "Do you want to buy %A torches for %P gold?", Topic=1
+
+Topic=1,"yes",CountMoney>=Price -> "Thank you. Here it is.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "Sorry, you do not have enough gold."
+Topic=1                         -> "Maybe you will buy it another time."
+
+}
