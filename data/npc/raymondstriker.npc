@@ -3,10 +3,10 @@
 Name = "Raymond Striker"
 Outfit = (151,58-77-60-114-1)
 Home = [32350,32588,7]
-Radius = 4
+Radius = 2
 
 Behaviour = {
-ADDRESS,"hello$",! -> "Be greeted."
+ADDRESS,"hello$",! -> "Be greeted. Is there anything I can do for you?"
 ADDRESS,"hi$",!    -> *
 ADDRESS,!          -> Idle
 BUSY,"hello$",!    -> "Wait a minute, %N.", Queue
@@ -16,4 +16,9 @@ VANISH,!           -> "Good bye."
 
 "bye"            -> "Good bye, %N!", Idle
 "farewell"       -> *
+
+"mission",QuestValue(17502)=6 -> "Don't ask about silly missions. All I can think about is this lovely mermaid.", Topic=1
+"Eleonore",QuestValue(17502)=6 -> "Eleonore ... Yes, I remember her... vaguely. She is a pretty girl ... but still only a girl and now I am in love with a beautiful and passionate woman. A true mermaid even.", Topic=1
+Topic=1,"mermaid"                   -> "The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her.", SetQuestValue(17502,7)
+"mermaid",QuestValue(17502)=7 -> "The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her."
 }

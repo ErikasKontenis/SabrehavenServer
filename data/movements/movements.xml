@@ -585,6 +585,7 @@
 	<movevent event="AddItem" itemid="2526" tileitem="1" script="misc/dustbin.lua" />
 	<movevent event="RemoveItem" itemid="2927" script="misc/candelabrum.lua" />
 	<movevent event="RemoveItem" itemid="3482" script="misc/open_trap.lua" />
+	<movevent event="StepIn" frommovementid="51191" tomovementid="51198" script="misc/turtles.lua" />
 	
 	<!--Doors -->
 	<movevent event="StepOut" itemid="1643" script="misc/doors.lua" />

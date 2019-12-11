@@ -31,4 +31,19 @@ VANISH,!           -> "Farewell, human."
 "pirates"          -> "Many humans sail the seas, I can't tell them apart. You humans look all the same to me."
 "voodoo"          -> "Some humans are tapping the energy of these isles with some strange results. Perhaps that explains the voodoo we've heard about."
 
+"Eleonore",QuestValue(17502)=8 -> "I heard the birds sing about her beauty. But how could a human rival the enchanting beauty of a mermaid?", Topic=1
+Topic=1,"mermaid"                   -> "Oh yes, I noticed that lovely mermaid. From afar of course. I would not dare to step into the eyes of such a lovely creature. ...",
+									   "I guess I am quite shy. Oh my, if I were not blue, I would turn red now. If there would be someone to arrange a date with her.", Topic=2
+Topic=2,"date"                   -> "Will you ask the mermaid Marina if she would date me?", Topic=3
+Topic=3,"yes"                   -> "Thank you. How ironic, a human granting a djinn a wish.", SetQuestValue(17502,9)
+Topic=3,                  -> "Too bad."
+
+"mermaid",QuestValue(17502)=10 -> "Oh my. Its not easy to impress a mermaid I guess. Please get me a love poem. I think elves are the greatest poets so their city seems like a good place to look for one.", SetQuestValue(17502,11)
+"marina",QuestValue(17502)=10 -> *
+
+"love","poem",QuestValue(17502)=11 -> Type=5952, Amount=1, "Did you get a love poem from Ab'Dendriel?", Topic=4
+Topic=4,"yes",Count(Type)>=Amount -> "Excellent. Here, with this little spell I enable you to recite the poem like a true elven poet. Now go and ask her for a date again.", SetQuestValue(17502,12)
+Topic=4,"yes"                             -> "It looks like you forgot it somewhere."
+Topic=4                                   -> "Maybe another time."
+
 }

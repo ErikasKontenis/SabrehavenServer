@@ -113,4 +113,9 @@ Topic=3,"yes",CountMoney<Price            -> "Sorry, you do not have enough gold
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=3                                   -> "Maybe next time."
 
+"mission",QuestValue(17502)=3      -> Price=200, "Oh, so you brought some gold from Eleonore to me?", Topic=4
+"errand",QuestValue(17502)=3      -> *
+
+Topic=4,"yes" -> "Hmm, it seems that Eleonore does trust you. Perhaps she is even right. However. Since we need some help right now I guess we can't be too picky. Return to Eleonore and tell her the secret password: 'peg leg'. She will tell you more about her problem.", DeleteMoney, SetQuestValue(17502,4)
+Topic=4                         -> "Hmm, interesting how do you even know about the errand then..."
 }
