@@ -2,7 +2,7 @@
 # tom.npc: Datenbank fuer den Gerber Tom
 
 Name = "Tom"
-Outfit = (129,113-115-58-115)
+Outfit = (144,113-115-58-115-1)
 Home = [32085,32199,7]
 Radius = 1
 
@@ -64,4 +64,20 @@ Topic=2,"yes",Amount>1                    -> "Sorry, you do not have so many."
 Topic=2                                   -> "Maybe another time."
 
 "sell"            -> "Sorry. I'm only selling to major customers. But I'm buying fresh corpses of rats, rabbits and wolves from you."
+
+
+"addon",QuestValue(18504)=0,premium         -> "Would you like to wear bear paws like I do? No problem, just bring me 50 bear paws and 50 wolf paws and I'll fit them on.", SetQuestValue(18504,1)
+"paws",QuestValue(18504)=0,premium      -> *
+"addon",QuestValue(18504)=0         -> "Addons can be wear only by premium players."
+"paws",QuestValue(18504)=0      -> *
+
+"addon",QuestValue(18504)=1         -> "Have you brought 50 bear paws and 50 wolf paws?", Topic=3
+"paws",QuestValue(18504)=1      -> *
+Topic=3,"yes",Count(5897)>=50,Count(5896)>=50 -> "Excellent! Like promised, here are your bear paws.", DeleteAmount(5897,50), DeleteAmount(5896,50), SetQuestValue(18504,2), AddOutfitAddon(148,1), AddOutfitAddon(144,1)
+Topic=3,"yes"					           -> "You don't have required ingredients."
+Topic=3                                   -> "Maybe another time."
+
+"addon",QuestValue(18504)=2         -> "I see that you like your new bear paws!"
+"paws",QuestValue(18504)=2      -> *
+
 }

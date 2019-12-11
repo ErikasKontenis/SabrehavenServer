@@ -175,7 +175,9 @@ function Player:onGainExperience(source, exp, rawExp)
 	end
 
 	-- Apply experience stage multiplier
-	exp = exp * Game.getExperienceStage(self:getLevel())
+	if (vocation:getId() > 0 or self:getLevel() < 8) then
+		exp = exp * Game.getExperienceStage(self:getLevel())
+	end
 	
 	-- Stamina modifier
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then

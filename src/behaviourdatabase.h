@@ -86,6 +86,9 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_CREATECONTAINER, // create a container of an item in particular
 	BEHAVIOUR_TYPE_TOWN, // change player town
 	BEHAVIOUR_TYPE_DRUNK, // get/set drunk (set not done)
+	BEHAVIOUR_TYPE_ADDOUTFITADDON, // Add Outfit Addon
+	BEHAVIOUR_TYPE_DELETEAMOUNT, // deletes an item according specified amount
+	BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE, // get/set expiring quest value
 };
 
 enum NpcBehaviourOperator_t
