@@ -882,6 +882,11 @@ class LuaScriptInterface
 
 		static int luaPlayerGetParty(lua_State* L);
 
+		static int luaPlayerAddOutfit(lua_State* L);
+		static int luaPlayerAddOutfitAddon(lua_State* L);
+		static int luaPlayerRemoveOutfit(lua_State* L);
+		static int luaPlayerRemoveOutfitAddon(lua_State* L);
+		static int luaPlayerHasOutfit(lua_State* L);
 		static int luaPlayerSendOutfitWindow(lua_State* L);
 
 		static int luaPlayerGetPremiumDays(lua_State* L);

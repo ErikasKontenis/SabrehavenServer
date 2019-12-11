@@ -303,6 +303,9 @@ bool BehaviourDatabase::loadActions(ScriptReader& script, NpcBehaviour* behaviou
 			} else if (identifier == "delete") {
 				action->type = BEHAVIOUR_TYPE_DELETE;
 				searchType = BEHAVIOUR_PARAMETER_ONE;
+			} else if (identifier == "deleteamount") {
+				action->type = BEHAVIOUR_TYPE_DELETEAMOUNT;
+				searchType = BEHAVIOUR_PARAMETER_TWO;
 			} else if (identifier == "teachspell") {
 				action->type = BEHAVIOUR_TYPE_TEACHSPELL;
 				searchType = BEHAVIOUR_PARAMETER_ONE;
@@ -326,6 +329,12 @@ bool BehaviourDatabase::loadActions(ScriptReader& script, NpcBehaviour* behaviou
 				searchType = BEHAVIOUR_PARAMETER_TWO;
 			} else if (identifier == "setquestvalue") {
 				action->type = BEHAVIOUR_TYPE_QUESTVALUE;
+				searchType = BEHAVIOUR_PARAMETER_TWO;
+			} else if (identifier == "setexpiringquestvalue") {
+				action->type = BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE;
+				searchType = BEHAVIOUR_PARAMETER_TWO;
+			} else if (identifier == "addoutfitaddon") {
+				action->type = BEHAVIOUR_TYPE_ADDOUTFITADDON;
 				searchType = BEHAVIOUR_PARAMETER_TWO;
 			} else if (identifier == "poison") {
 				action->type = BEHAVIOUR_TYPE_POISON;
@@ -522,6 +531,10 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 	} else if (identifier == "questvalue") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_QUESTVALUE;
+		searchType = BEHAVIOUR_PARAMETER_ONE;
+	} else if (identifier == "expiringquestvalue") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE;
 		searchType = BEHAVIOUR_PARAMETER_ONE;
 	} else if (identifier == "count") {
 		node = new NpcBehaviourNode();
@@ -854,6 +867,19 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 		}
 		break;
 	}
+	case BEHAVIOUR_TYPE_DELETEAMOUNT: {
+		type = evaluate(action->expression, player, message);
+		int32_t amount = evaluate(action->expression2, player, message);
+		const ItemType& itemType = Item::items[type];
+		if (itemType.stackable || !itemType.hasSubType()) {
+			data = -1;
+		}
+
+		if (!player->removeItemOfType(type, amount, data, true)) {
+			player->removeItemOfType(type, amount, data, false);
+		}
+		break;
+	}
 	case BEHAVIOUR_TYPE_EFFECTME:
 		g_game.addMagicEffect(npc->getPosition(), evaluate(action->expression, player, message));
 		break;
@@ -902,6 +928,18 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 		int32_t questNumber = evaluate(action->expression, player, message);
 		int32_t questValue = evaluate(action->expression2, player, message);
 		player->addStorageValue(questNumber, questValue);
+		break;
+	}
+	case BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE: {
+		int32_t questNumber = evaluate(action->expression, player, message);
+		int32_t ticks = evaluate(action->expression2, player, message);
+		player->addStorageValue(questNumber, OTSYS_TIME() + ticks);
+		break;
+	}
+	case BEHAVIOUR_TYPE_ADDOUTFITADDON: {
+		int32_t lookType = evaluate(action->expression, player, message);
+		int32_t addon = evaluate(action->expression2, player, message);
+		player->addOutfit(lookType, addon);
 		break;
 	}
 	case BEHAVIOUR_TYPE_TELEPORT: {
@@ -1071,6 +1109,12 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		int32_t questValue;
 		player->getStorageValue(questNumber, questValue);
 		return questValue;
+	}
+	case BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE: {
+		int32_t questNumber = evaluate(node->left, player, message);
+		int32_t questValue;
+		player->getStorageValue(questNumber, questValue);
+		return questValue - OTSYS_TIME();
 	}
 	case BEHAVIOUR_TYPE_MESSAGE_COUNT: {
 		int32_t value = searchDigit(message);

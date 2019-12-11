@@ -2052,6 +2052,11 @@ void LuaScriptInterface::registerFunctions()
 
 	registerMethod("Player", "getParty", LuaScriptInterface::luaPlayerGetParty);
 
+	registerMethod("Player", "addOutfit", LuaScriptInterface::luaPlayerAddOutfit);
+	registerMethod("Player", "addOutfitAddon", LuaScriptInterface::luaPlayerAddOutfitAddon);
+	registerMethod("Player", "removeOutfit", LuaScriptInterface::luaPlayerRemoveOutfit);
+	registerMethod("Player", "removeOutfitAddon", LuaScriptInterface::luaPlayerRemoveOutfitAddon);
+	registerMethod("Player", "hasOutfit", LuaScriptInterface::luaPlayerHasOutfit);
 	registerMethod("Player", "sendOutfitWindow", LuaScriptInterface::luaPlayerSendOutfitWindow);
 
 	registerMethod("Player", "getPremiumDays", LuaScriptInterface::luaPlayerGetPremiumDays);
@@ -8254,6 +8259,80 @@ int LuaScriptInterface::luaPlayerGetParty(lua_State* L)
 		pushUserdata<Party>(L, party);
 		setMetatable(L, -1, "Party");
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerAddOutfit(lua_State* L)
+{
+	// player:addOutfit(lookType)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		player->addOutfit(getNumber<uint16_t>(L, 2), 0);
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerAddOutfitAddon(lua_State* L)
+{
+	// player:addOutfitAddon(lookType, addon)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		uint16_t lookType = getNumber<uint16_t>(L, 2);
+		uint8_t addon = getNumber<uint8_t>(L, 3);
+		player->addOutfit(lookType, addon);
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerRemoveOutfit(lua_State* L)
+{
+	// player:removeOutfit(lookType)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		uint16_t lookType = getNumber<uint16_t>(L, 2);
+		pushBoolean(L, player->removeOutfit(lookType));
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerRemoveOutfitAddon(lua_State* L)
+{
+	// player:removeOutfitAddon(lookType, addon)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		uint16_t lookType = getNumber<uint16_t>(L, 2);
+		uint8_t addon = getNumber<uint8_t>(L, 3);
+		pushBoolean(L, player->removeOutfitAddon(lookType, addon));
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerHasOutfit(lua_State* L)
+{
+	// player:hasOutfit(lookType[, addon = 0])
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		uint16_t lookType = getNumber<uint16_t>(L, 2);
+		uint8_t addon = getNumber<uint8_t>(L, 3, 0);
+		pushBoolean(L, player->canWear(lookType, addon));
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;
