@@ -38,6 +38,7 @@ VANISH,!                   -> "Please come back, but don't tell others."
 "hugo"            -> "I think Todd mentioned a Hugo once."
 "news"    -> "Some travelers from Edron told about a great treasure guarded by cruel demons in the dungeons there."
 "rumors"  -> *
+"whisper","beer",QuestValue(17521)=3  -> Type=6106, Amount=1, Price=80, "Do you want to buy a bottle of our finest whisper beer for %P gold?", Topic=1
 "beer"  -> Type=2880, Data=3, Amount=1, Price=20, "Do you want to buy a mug of beer for %P gold?", Topic=1
 Topic=1,"yes",CountMoney>=Price -> "Here. Don't take it into the city though.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Sorry, come back with more gold."

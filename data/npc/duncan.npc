@@ -26,4 +26,14 @@ VANISH,!           -> "Bye"
 Topic=1,"yes",CountMoney>=Price -> "Here you go. Those would fit nicely into your house, showing that you're a fan and supporter and all that.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back when you have enough money."
 Topic=1                         -> "Maybe next time."
+
+"mission",QuestValue(17520)=1,QuestValue(17523)=0 -> "I need a new quality atlas for our captains. Only one of the best will do it. I heard the explorers society sells the best, but only to members of a certain rank. You will have to get this rank or ask a high ranking member to buy it for you.", SetQuestValue(17523,1)
+
+"mission",QuestValue(17523)=1 -> Type=6108, Amount=1, "Did you get an atlas of the explorers society as I requested?", Topic=2
+"atlas",QuestValue(17523)=1 -> *
+Topic=2,"yes",Count(Type)>=Amount -> "Indeed, what a fine work... the book I mean. Your work was acceptable all in all.", Delete(Type), SetQuestValue(17523,2)
+Topic=2,"yes"                     -> "Sorry, you do not have it."
+Topic=2                           -> "Maybe another time."
+
+"mission"             -> "Sorry, I don't have any missions for you."
 }

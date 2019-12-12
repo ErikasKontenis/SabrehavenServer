@@ -80,4 +80,18 @@ Topic=5,"yes"                     -> "You don't have any dead black sheep with y
 Topic=5                           -> "Maybe another time."
 
 "counterspell",QuestValue(17509)>4 -> "Hm. I don't think you need another one of my counterspells to cross the barrier on Goroma."
+
+"mission",QuestValue(17520)=1,QuestValue(17524)=0 -> "The evil cult has placed a curse on one of the captains here. I need at least five of their pirate voodoo dolls to lift that curse.", SetQuestValue(17524,1)
+
+"mission",QuestValue(17524)>0,QuestValue(17524)<5 -> Type=5810, Amount=1, "Did you bring one of the required pirate voodoo dolls?", Topic=6
+"doll",QuestValue(17524)>0,QuestValue(17524)<5 -> *
+
+"mission",QuestValue(17524)=5 -> Type=5810, Amount=1, "Did you bring the last of the required voodoo dolls?", Topic=6
+"doll",QuestValue(17524)=5, -> *
+Topic=6,"yes",Count(Type)>=Amount -> "Now I can weaken that curse a bit. Thank you.", Delete(Type), SetQuestValue(17524,QuestValue(17524)+1)
+Topic=6,"yes",Count(Type)>=Amount,QuestValue(17524)=5 -> "Finally I can put an end to that curse. I thank you so much.", Delete(Type), SetQuestValue(17524,QuestValue(17524)+1)
+Topic=6,"yes"                     -> "Sorry, you do not have it."
+Topic=6                           -> "Maybe another time."
+
+"mission"             -> "Sorry, I don't have any missions for you."
 }
