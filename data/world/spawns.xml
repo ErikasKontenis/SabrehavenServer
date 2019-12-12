@@ -852,6 +852,18 @@
 		<monster name="hydra" x="0" y="0" z="4" spawntime="600" />
 		<monster name="hydra" x="0" y="2" z="4" spawntime="600" />
 	</spawn>
+	<spawn centerx="32119" centery="32681" centerz="4" radius="1">
+		<monster name="magic pillar" x="0" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="32124" centery="32681" centerz="4" radius="1">
+		<monster name="magic pillar" x="0" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="32115" centery="32685" centerz="4" radius="1">
+		<monster name="magic pillar" x="0" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="32128" centery="32685" centerz="4" radius="1">
+		<monster name="magic pillar" x="0" y="0" z="4" spawntime="60" />
+	</spawn>
 	<spawn centerx="32121" centery="32687" centerz="4" radius="4">
 		<monster name="demon" x="-4" y="-4" z="4" spawntime="59" />
 		<monster name="demon" x="4" y="-4" z="4" spawntime="59" />
@@ -862,6 +874,12 @@
 	<spawn centerx="33044" centery="32690" centerz="4" radius="3">
 		<monster name="dragon lord" x="-2" y="0" z="4" spawntime="1200" />
 		<monster name="dragon lord" x="0" y="0" z="4" spawntime="1200" />
+	</spawn>
+	<spawn centerx="32118" centery="32693" centerz="4" radius="1">
+		<monster name="magic pillar" x="0" y="0" z="4" spawntime="60" />
+	</spawn>
+	<spawn centerx="32125" centery="32693" centerz="4" radius="1">
+		<monster name="magic pillar" x="0" y="0" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="33041" centery="32708" centerz="4" radius="1">
 		<monster name="dragon" x="0" y="0" z="4" spawntime="900" />

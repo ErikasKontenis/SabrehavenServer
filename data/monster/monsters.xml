@@ -207,4 +207,5 @@
 	<monster name="tiquandas revenge" file="781/tiquandas revenge.xml" />
 	<monster name="toad" file="781/toad.xml" />
 	<monster name="tortoise" file="781/tortoise.xml" />
+	<monster name="magic pillar" file="781/magic pillar.xml" />
 </monsters>

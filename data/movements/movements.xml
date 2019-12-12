@@ -395,6 +395,34 @@
 	<movevent event="StepIn" itemid="5764" script="misc/drowning.lua" />
 	<movevent event="StepOut" itemid="5764" script="misc/drowning.lua"/>
 	
+	<!-- Goroma -->
+	<movevent event="StepIn" frommovementid="17506" tomovementid="17508" script="goroma/energy_barrier.lua" />
+	<movevent event="StepIn" movementid="17510" script="goroma/to_ramoa.lua" />
+	<movevent event="AddItem" movementid="17510" tileitem="1" script="goroma/to_ramoa.lua" />
+	<movevent event="StepIn" movementid="17511" script="goroma/back_ramoa.lua" />
+	<movevent event="AddItem" movementid="17511" tileitem="1" script="goroma/back_ramoa.lua" />
+	<movevent event="StepIn" movementid="17512" script="goroma/to_talahu.lua" />
+	<movevent event="AddItem" movementid="17512" tileitem="1" script="goroma/to_talahu.lua" />
+	<movevent event="StepIn" movementid="17513" script="goroma/sacrifice_mushroom_talahu.lua" />
+	<movevent event="AddItem" movementid="17513" tileitem="1" script="goroma/sacrifice_mushroom_talahu.lua" />
+	<movevent event="StepIn" movementid="17514" script="goroma/back_sacrifice_mushroom_talahu.lua" />
+	<movevent event="AddItem" movementid="17514" tileitem="1" script="goroma/back_sacrifice_mushroom_talahu.lua" />
+	<movevent event="StepIn" movementid="17515" script="goroma/back_talahu.lua" />
+	<movevent event="AddItem" movementid="17515" tileitem="1" script="goroma/back_talahu.lua" />
+	<movevent event="StepIn" movementid="17516" script="goroma/to_malada.lua" />
+	<movevent event="AddItem" movementid="17516" tileitem="1" script="goroma/to_malada.lua" />
+	<movevent event="StepIn" movementid="17517" script="goroma/back_malada.lua" />
+	<movevent event="AddItem" movementid="17517" tileitem="1" script="goroma/back_malada.lua" />
+	<movevent event="StepIn" movementid="17518" script="goroma/back_kharos.lua" />
+	<movevent event="AddItem" movementid="17518" tileitem="1" script="goroma/back_kharos.lua" />
+	<movevent event="StepIn" frommovementid="17519" tomovementid="17522" script="goroma/energy_barrier_kharos.lua" />
+	<movevent event="StepIn" frommovementid="17523" tomovementid="17524" script="goroma/entrance_kharos.lua" />
+	<movevent event="StepIn" movementid="17525" script="goroma/second_ferumbras_floor.lua" />
+	<movevent event="AddItem" movementid="17525" tileitem="1" script="goroma/second_ferumbras_floor.lua" />
+	<movevent event="StepIn" movementid="17526" script="goroma/final_ferumbras_floor.lua" />
+	<movevent event="AddItem" movementid="17526" tileitem="1" script="goroma/final_ferumbras_floor.lua" />
+	<movevent event="StepIn" movementid="17527" script="goroma/back_ferumbras_floor.lua" />
+	<movevent event="AddItem" movementid="17527" tileitem="1" script="goroma/back_ferumbras_floor.lua" />
 	<!-- Floorchange -->
 	<movevent event="StepIn" itemid="293" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="293" tileitem="1" script="misc/floorchange.lua" />

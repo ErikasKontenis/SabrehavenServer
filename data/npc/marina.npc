@@ -19,9 +19,11 @@ VANISH,!           -> "How rude."
 # The Mermaid Marina Quest
 "silk","yarn",QuestValue(17504)=0 -> "Um. You mean, you really want me to touch that gooey spider silk just because you need yarn? Well... do you think that I'm pretty?", Topic=1
 Topic=1,"yes"                   -> "Well, everyone would say that in your position. Do you think that I'm really, absolutely the most stunning being that you have ever seen?", Topic=2
+Topic=1							-> "Get out of there!"
 Topic=2,"yes"                   -> "<giggles> It's funny how easy it is to get humans to say what you want. Now, proving it will be even more fun! ...",
 								   "You want me to touch something gooey, so you have to touch something gooey for me too. <giggles> ...",
 								   "I love honey and I haven't eaten it in a while, so bring me 50 honeycombs and worship my beauty a little more, then we will see.", SetQuestValue(17504,1)
+Topic=2							-> "Get out of there!"
 
 "honeycomb",QuestValue(17504)=1 -> Type=5902, Amount=50, "Did you bring me the 50 honeycombs I requested and do you absolutely admire my beauty?", Topic=3
 Topic=3,"yes",Count(Type)>=Amount -> "Oh goodie! Thank you! Okay... I guess since my fingers are sticky now anyway, I will help you. From now on, if you bring me 10 pieces of spider silk, I will create one spool of yarn.", Delete(Type), SetQuestValue(17504,2)

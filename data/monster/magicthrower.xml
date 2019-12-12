@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="magicthrower" nameDescription="a magicthrower" race="undead" experience="18" speed="0" manacost="0">
 	<health now="100" max="100" />
-	<look typeex="0" />
+	<look typeex="2190" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
@@ -15,6 +15,7 @@
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
 		<flag runonhealth="100" />
+		<flag hidehealth="1"/>
 	</flags>
 	<attacks attack="1" skill="1">
 		<attack name="poison" min="-50" max="-100" range="7" chance="1">
