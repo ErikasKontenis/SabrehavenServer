@@ -690,6 +690,8 @@ bool Monsters::loadMonster(const std::string& file, const std::string& monsterNa
 				mType->info.targetDistance = std::max<int32_t>(1, pugi::cast<int32_t>(attr.value()));
 			} else if (strcasecmp(attrName, "runonhealth") == 0) {
 				mType->info.runAwayHealth = pugi::cast<int32_t>(attr.value());
+			} else if (strcasecmp(attrName, "hidehealth") == 0) {
+				mType->info.hiddenHealth = attr.as_bool();
 			} else {
 				std::cout << "[Warning - Monsters::loadMonster] Unknown flag attribute: " << attrName << ". " << file << std::endl;
 			}

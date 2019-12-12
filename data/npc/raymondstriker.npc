@@ -14,11 +14,24 @@ BUSY,"hi$",!       -> *
 BUSY,!             -> NOP
 VANISH,!           -> "Good bye."
 
-"bye"            -> "Good bye, %N!", Idle
+"bye"            -> "May there always be wind in your sails, %N.", Idle
 "farewell"       -> *
+
+"name" -> "Raymond Striker, at your service."
+"job" -> "I am one of the free captains of the Shattered Isles, who selected me as their spokesperson."
+"captains" -> "We don't consider ourselves as pirates, but as freedom fighters. But there are indeed pirates out there. They are true bandits, cutthroats and murderers. They are the ones responsible for the horrible acts that are accredited to us."
+"ferumbras" -> "It is rumoured that he has established some base on one of the isles in the past."
+"Liberty","Bay" -> "One day the city will bear this name justly and with pride."
+"Thais" -> "Thais is not the source of the evil that has befallen our isles. It might end up as a victim itself whenever Venore feels powerful enough."
+"Venore" -> "The scheming trade barons of Venore know nothing but profit and power. For that, they lie and murder and would readily sell their souls."
+"Carlin" -> "We have loose trade relations with Carlin."
+"Eleonore",QuestValue(17502)>12 -> "She is my only and true love. It hurts me deeply that the mermaid's magic let me forget her. I feel so guilty and can only hope that Eleonore can forgive my weakness."
+"King" -> "I doubt the king gains as much from the occupation of the isles as the Venoreans do."
 
 "mission",QuestValue(17502)=6 -> "Don't ask about silly missions. All I can think about is this lovely mermaid.", Topic=1
 "Eleonore",QuestValue(17502)=6 -> "Eleonore ... Yes, I remember her... vaguely. She is a pretty girl ... but still only a girl and now I am in love with a beautiful and passionate woman. A true mermaid even.", Topic=1
 Topic=1,"mermaid"                   -> "The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her.", SetQuestValue(17502,7)
-"mermaid",QuestValue(17502)=7 -> "The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her."
+"mermaid",QuestValue(17502)>6,QuestValue(17502)<12 -> "The mermaid is the most beautiful creature I have ever met. She is so wonderful. It was some kind of magic as we first met. A look in her eyes and I suddenly knew there would be never again another woman in my life but her."
+"mermaid",QuestValue(17502)>12 -> "I am deeply ashamed that I lacked the willpower to resist her spell. Thank you for your help in that matter. Now my head is once more free to think about our mission."
+"marina",QuestValue(17502)>12 -> *
 }

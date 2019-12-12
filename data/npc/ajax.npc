@@ -6,7 +6,7 @@ Home = [32417,31583,7]
 Radius = 3
 
 Behaviour = {
-ADDRESS,"hello$",! -> "Hi."
+ADDRESS,"hello$",! -> "Whatcha do in my place?"
 ADDRESS,"hi$",!    -> *
 ADDRESS,!          -> Idle
 BUSY,"hello$",!    -> "Wait, %N.", Queue
@@ -17,5 +17,7 @@ VANISH,!           -> NOP
 "bye"            -> "Bye.", Idle
 "farewell"       -> *
 
-
+"fight"       -> "You. Weak."
+"job"       -> "No time for such a stupid thing."
+"name"       -> "Ajax."
 }

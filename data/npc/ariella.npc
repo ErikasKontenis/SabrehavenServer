@@ -16,10 +16,13 @@ VANISH,!           -> "Good bye."
 
 "bye"       -> "Good bye.", Idle
 
-"buy"             -> "I can offer you food."
+"drinks"             -> "Well, we usually drink around here, but right now we're running dry. However, I sell juice squeezers to make fruit juice."
+"tavern"             -> "I can offer you food and drinks. I also offer juice squeezers."
+"buy"             -> *
 "do","you","sell" -> *
 "do","you","have" -> *
-"food"            -> "Are you looking for food? I have banana, blueberry, cheese, mango, meat, melon, orange, pear, pumpkin, red apple and strawberry."
+"food"            -> "Are you looking for food? I have cheese, ham and meat as well as a variety of fruits."
+"fruits"             -> "I have bananas, apples, oranges, strawberries, melons, pumpkin, blueberries, mangoes and pears, sweety."
 
 "banana"    -> Type=3587, Amount=1, Price=5, "Do you want to buy a banana for %P gold?", Topic=1
 "blueberry"   -> Type=3588, Amount=1, Price=1, "Do you want to buy blueberry for %P gold?", Topic=1
