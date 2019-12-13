@@ -87,8 +87,10 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_TOWN, // change player town
 	BEHAVIOUR_TYPE_DRUNK, // get/set drunk (set not done)
 	BEHAVIOUR_TYPE_ADDOUTFITADDON, // Add Outfit Addon
+	BEHAVIOUR_TYPE_ADDOUTFIT, // Add Outfit
 	BEHAVIOUR_TYPE_DELETEAMOUNT, // deletes an item according specified amount
 	BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE, // get/set expiring quest value
+	BEHAVIOUR_TYPE_SLOTITEM, // get slot item
 };
 
 enum NpcBehaviourOperator_t

@@ -59,4 +59,11 @@ Topic=2                         -> "Hmm, but next time."
 Topic=3,"yes",Count(2874)>0 -> Amount=Count(2874), Price=Amount*5, "Here you are ... %P gold.", Delete(2874), CreateMoney
 Topic=3,"yes"               -> "You don't have any empty vials."
 Topic=3                     -> "Hmm, but please keep Tibia litter free."
+
+"mission",QuestValue(17520)=2 -> "Pssht, not that loud. So they have sent you to get... the stuff?", Topic=4
+"fafnar","fire",QuestValue(17520)=2 -> *
+Topic=4,"yes" -> "Finally. You have no idea how difficult it is to keep something secret here. And you brought me all the crystal coins I demanded?", Topic=5
+Topic=4                           -> "How do you even know about the stuff then..."
+Topic=5,"Your","continued","existence","is","payment","enough" -> "What?? How dare you?! I am a sorcerer of the most reknown academy on the face of this world. Do you think some lousy pirates could scare me? Get lost! Now! I will have no further dealings with the likes of you!", SetQuestValue(17520,3)
+Topic=5                           -> "I see no deal with you then."
 }

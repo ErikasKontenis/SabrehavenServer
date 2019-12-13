@@ -22,7 +22,6 @@ VANISH,!           -> "Use your knowledge wisely."
 "king"      -> "King Tibianus III was the founder of our academy."
 "tibianus"  -> * 
 "army"      -> "They rely too much on their brawn instead of their brain."
-"ferumbras" -> "A fallen sorcerer, indeed. What a shame."
 "excalibug" -> "You will need no weapon if you manipulate the essence of magic."
 "thais"     -> "Thais is a place of barbary."
 "tibia"     -> "There is still much left to be explored in this world."
@@ -59,4 +58,28 @@ Topic=1,"yes",Level<SpellLevel(String) -> Amount=SpellLevel(String), "Don't be i
 Topic=1,"yes",CountMoney<Price            -> "Want to learn one of the most powerful spells, and don't even know how much money you have?"
 Topic=1,"yes"                             -> "Congratulations. You now know one of the most powerful spells. Use it wisely.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=1                                   -> "Lost your heart?"
+
+"ferumbras", QuestValue(17513)>0 -> "I see, you managed to reach Kharos, the harbinger isle, and discovered the gates to Ferumbras' citadel, and now you are here full of questions. Are you ready to listen?", Topic=3
+Topic=3,"yes" -> "So know that destroying the mortal shell of the being called Ferumbras was the best we were able to achieve with our combined efforts in the past. ...",
+				 "He was destroyed not only once but several times. Eventually we were able to figure out the secret of his seeming immortality. ...",
+				 "On one of the most remote islands of the Shattered Isles, he built a citadel with demonic aid right around a powerful magical nexus. ...",
+				 "The only reason for the whole complex was to establish a point of return into our world. Whenever he is slain, his soul retreats to some demonic dimension to regain enough strength to re-enter the world. ...",
+				 "We were not able to destroy his citadel, this unholy construct. To make matters worse, the nexus makes it easy for demons of all kind to pass into our world. ...",
+				 "The best thing we could do was to seal the citadel and to install a device that will alarm us whenever Ferumbras tries to re-enter our world. ...",
+				 "We grant heroes like you the permission to pass our seals and enter Ferumbras' citadel. ...",
+				 "Just ask for the permission if you are ready to go there. Be warned that the citadel is no holiday place though. You will encounter large amounts of demons and traps that scare off most adventurers. ...",
+				 "On the other hand, WHEN Ferumbras re-enters the world we need heroes like you to face him on his very own ground before he can escape. ...",
+				 "His return is not very likely but it can happen each and every day. If you should manage to defeat him, bring a proof of his death here and you will be rewarded."
+Topic=3                           -> "Lost your heart?"
+"ferumbras", QuestValue(17513)=0 -> "A fallen sorcerer, indeed. What a shame."
+
+"permission",QuestValue(17513)=0 -> "I see no reason to discuss this matter with you."
+"permission",QuestValue(17513)=1 -> Price=500, "The attuning to our seals is a costly process and it will grant you access to the citadel ONLY ONCE. Each time you want to enter, you will need a new attuning. Are you willing to pay 500 gold pieces to become attuned to the seal of the citadel?", Topic=2
+Topic=2,"yes",CountMoney>=Price -> "SO BE IT!", DeleteMoney, SetQuestValue(17513,2), EffectOpp(15)
+Topic=2,"yes"                     -> "Don't even know how much money you have?"
+Topic=2                           -> "Lost your heart?"
+
+"permission",QuestValue(17513)=2 -> "You already have the permission to enter the citadel."
+
+
 }

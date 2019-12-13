@@ -26,4 +26,27 @@ VANISH,!           -> "Bye"
 Topic=1,"yes",CountMoney>=Price -> "Here you go. Those would fit nicely into your house, showing that you're a fan and supporter and all that.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back when you have enough money."
 Topic=1                         -> "Maybe next time."
+
+"mission",QuestValue(17520)=1,QuestValue(17523)=0 -> "I need a new quality atlas for our captains. Only one of the best will do it. I heard the explorers society sells the best, but only to members of a certain rank. You will have to get this rank or ask a high ranking member to buy it for you.", SetQuestValue(17523,1)
+
+"mission",QuestValue(17523)=1 -> Type=6108, Amount=1, "Did you get an atlas of the explorers society as I requested?", Topic=2
+"atlas",QuestValue(17523)=1 -> *
+Topic=2,"yes",Count(Type)>=Amount -> "Indeed, what a fine work... the book I mean. Your work was acceptable all in all.", Delete(Type), SetQuestValue(17523,2)
+Topic=2,"yes"                     -> "Sorry, you do not have it."
+Topic=2                           -> "Maybe another time."
+
+"mission",QuestValue(17525)=0,QuestValue(17520)>4 -> "You did some impressive things. I think people here start considering you as one of us. But these are dire times and everyone of us is expected to give his best and even exceed himself. Do you think you can handle that?", Topic=3
+Topic=3,"yes" -> "I am glad to hear this. Please listen. The pirates on Nargor are breeding tortoises. They think eating tortoises makes a hard man even harder. ...",
+				"However I am quite fond of tortoises and can't stand the thought of them being eaten. So I convinced Captain Striker that I can train them to help us. As a substitute for rafts and such ...",
+				"All I need is one tortoise egg from Nargor. This is the opportunity to save a tortoise from a gruesome fate! ...",
+				"I will ask Sebastian to bring you there. Travel to Nargor, find their tortoise eggs and bring me at least one of them.", SetQuestValue(17525,1)
+Topic=3                           -> "Maybe another time."
+
+"mission",QuestValue(17525)=1 -> Type=6125, Amount=1, "Did you rescue one of those poor soon-to-be baby tortoises from Nargor?", Topic=4
+"egg",QuestValue(17525)=1 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "A real tortoise egg ... I guess you are more accustomed to rescue some noblewoman in distress but you did something good today.", Delete(Type), SetQuestValue(17525,2)
+Topic=4,"yes"                     -> "Sorry, you do not have it."
+Topic=4                           -> "Maybe another time."
+
+"mission"             -> "Sorry, I don't have any missions for you."
 }

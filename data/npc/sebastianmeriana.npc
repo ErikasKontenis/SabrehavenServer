@@ -23,6 +23,7 @@ VANISH,!                  -> "Hm."
 "meriana"          -> "Yes. We are in Meriana."
 
 "liberty bay"       -> Price=50, "Do you seek a passage to Liberty Bay for %P?", Topic=1
+"nargor",QuestValue(17520)<4       -> "Sorry, but you have to get permission from the Raymond Striker if you wan't to sail to Nargor."
 "nargor"       -> Price=50, "Do you seek a passage to Nargor for %P?", Topic=2
 
 Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"

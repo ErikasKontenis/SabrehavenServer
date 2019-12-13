@@ -1922,6 +1922,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Creature", "addHealth", LuaScriptInterface::luaCreatureAddHealth);
 	registerMethod("Creature", "getMaxHealth", LuaScriptInterface::luaCreatureGetMaxHealth);
 	registerMethod("Creature", "setMaxHealth", LuaScriptInterface::luaCreatureSetMaxHealth);
+	registerMethod("Creature", "setHiddenHealth", LuaScriptInterface::luaCreatureSetHiddenHealth);
 
 	registerMethod("Creature", "getSkull", LuaScriptInterface::luaCreatureGetSkull);
 	registerMethod("Creature", "setSkull", LuaScriptInterface::luaCreatureSetSkull);
@@ -2311,6 +2312,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("MonsterType", "isIllusionable", LuaScriptInterface::luaMonsterTypeIsIllusionable);
 	registerMethod("MonsterType", "isHostile", LuaScriptInterface::luaMonsterTypeIsHostile);
 	registerMethod("MonsterType", "isPushable", LuaScriptInterface::luaMonsterTypeIsPushable);
+	registerMethod("MonsterType", "isHealthShown", LuaScriptInterface::luaMonsterTypeIsHealthShown);
 
 	registerMethod("MonsterType", "canPushItems", LuaScriptInterface::luaMonsterTypeCanPushItems);
 	registerMethod("MonsterType", "canPushCreatures", LuaScriptInterface::luaMonsterTypeCanPushCreatures);
@@ -6677,6 +6679,21 @@ int LuaScriptInterface::luaCreatureSetMaxHealth(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaCreatureSetHiddenHealth(lua_State* L)
+{
+	// creature:setHiddenHealth(hide)
+	Creature* creature = getUserdata<Creature>(L, 1);
+	if (creature) {
+		creature->setHiddenHealth(getBoolean(L, 2));
+		g_game.addCreatureHealth(creature);
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
 int LuaScriptInterface::luaCreatureGetSkull(lua_State* L)
 {
 	// creature:getSkull()
@@ -10875,6 +10892,19 @@ int LuaScriptInterface::luaMonsterTypeIsPushable(lua_State* L)
 	if (monsterType) {
 		pushBoolean(L, monsterType->info.pushable);
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaMonsterTypeIsHealthShown(lua_State* L)
+{
+	// monsterType:isHealthShown()
+	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+	if (monsterType) {
+		pushBoolean(L, !monsterType->info.hiddenHealth);
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;

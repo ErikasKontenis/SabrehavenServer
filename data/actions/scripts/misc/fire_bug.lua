@@ -1,4 +1,10 @@
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
+	if player:getStorageValue(17520) == 5 and target.itemid == 5601 then
+		player:setStorageValue(17520, 6)
+		toPosition:sendMagicEffect(CONST_ME_FIREAREA)
+		return true
+	end
+	
 	local random = math.random(10)
 	if random >= 4 then --success 6% chance
 		if target.itemid == 5465 then --Burn Sugar Cane

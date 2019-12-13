@@ -162,6 +162,13 @@ class Creature : virtual public Thing
 			direction = dir;
 		}
 
+		bool isHealthHidden() const {
+			return hiddenHealth;
+		}
+		void setHiddenHealth(bool b) {
+			hiddenHealth = b;
+		}
+
 		int32_t getThrowRange() const final {
 			return 1;
 		}
@@ -511,6 +518,7 @@ class Creature : virtual public Thing
 		bool cancelNextWalk = false;
 		bool hasFollowPath = false;
 		bool forceUpdateFollowPath = false;
+		bool hiddenHealth = false;
 
 		//creature script events
 		bool hasEventRegistered(CreatureEventType_t event) const {

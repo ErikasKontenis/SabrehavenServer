@@ -322,3 +322,17 @@ Topic=56,"yes",CountMoney>=Price -> "Here, better don't lose it.", DeleteMoney, 
 Topic=56,"yes"                   -> "Sorry, you don't have the money for this transaction."
 Topic=56       -> "Is there anything else I can do for you?"
 
+######################
+"atlas" -> Amount=1, Type=6108, Price=150, "Do you want to buy an atlas for %P gold?", Topic=57
+
+Topic=57,"yes",QuestValue(300)<5 -> "Oh, sorry but we sell atlas only for members with a special rank."
+Topic=57,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=57,"yes"                   -> "Sorry, you don't have the money for this transaction."
+Topic=57      -> "Is there anything else I can do for you?"
+
+%1,1<%1,"atlas" -> Amount=%1, Type=6108, Price=150*%1,  "Do you want to buy %A atlas for %P gold?", Topic=58
+
+Topic=58,"yes",QuestValue(300)<5 -> "Oh, sorry but we sell atlas only for members with a special rank."
+Topic=58,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=58,"yes"                   -> "Sorry, you don't have the money for this transaction."
+Topic=58       -> "Is there anything else I can do for you?"

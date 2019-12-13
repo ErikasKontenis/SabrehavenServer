@@ -12,7 +12,7 @@ ADDRESS,!          -> Idle
 BUSY,"hello$",!    -> "Wait a moment, %N. I'll be here soon.", Queue
 BUSY,"hi$",!       -> *
 BUSY,!             -> NOP
-VANISH,!           -> "Arrr!"
+VANISH,!           -> "Whenever your throat is dry, you know where to find my tavern."
 
 "bye"       -> "Whenever your throat is dry, you know where to find my tavern.", Idle
 "farewell"  -> *
@@ -51,4 +51,14 @@ Topic=5,"no"  -> "Oh come on, don't be a child."
 Topic=4,"yes",CountMoney>=100,Amount=6 -> Price=100, Type=5792, Amount=1, "Ok, here we go ... 6! You have won a dice, congratulations. One more game?", DeleteMoney, Create(Type), EffectMe(27), Topic=5
 Topic=4,"yes",CountMoney>=100          -> Price=100, "Ok, here we go ... %A! You have lost. Har Har Har. One more game?", DeleteMoney, EffectMe(27), Topic=5
 Topic=4,"yes"                          -> "You don't have so much money."
+
+"mission",QuestValue(17520)=9,QuestValue(17531)=0 -> "Hmm, you look like a seasoned seadog. Kill Captain Ray Striker, bring me his lucky pillow as a proof and you are our hero!", SetQuestValue(17531,1)
+
+"mission",QuestValue(17531)=1 -> Type=6105, Amount=1, "Do you have Striker's pillow?", Topic=7
+"pillow",QuestValue(17531)=1 -> *
+Topic=7,"yes",Count(Type)>=Amount -> "You DID it!!! Incredible! Boys, lets have a PAAAAAARTY!!!!", Delete(Type), SetQuestValue(17531,2)
+Topic=7,"yes"                     -> "No you not!"
+Topic=7                           -> "Maybe another time."
+
+"mission"             -> "Sorry, I don't have any missions for you."
 }

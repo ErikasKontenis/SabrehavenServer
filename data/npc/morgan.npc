@@ -17,4 +17,13 @@ VANISH,!           -> "Good bye."
 "bye"       -> "Good bye.", Idle
 "farewell"  -> *
 
+"mission",QuestValue(17520)=1,QuestValue(17522)=0 -> Type=6113, Amount=1, "Hm, if you are that eager to work I have an idea how you could help me out. A distant relative of mine, the old sage Eremo lives on the isle Cormaya, near Edron. ...",
+													 "He has not heard from me since ages. He might assume that I am dead. Since I don't want him to get into trouble for receiving a letter from a pirate I ask you to deliver it personally. ...",
+													 "Of course it's a long journey but you asked for it. You will have to prove us your worth. Are you up to that?", Topic=1
+Topic=1,"yes" -> "Alright, we will see. Here, take this letter and deliver it safely to old Eremo on Cormaya.", Create(Type), SetQuestValue(17522,1)
+Topic=1                           -> "Maybe another time."
+
+"mission",QuestValue(17522)=1 -> "Please deliver my letter to Eremo as fast as you can."
+"mission",QuestValue(17522)=2 -> "Thank you for delivering my letter to Eremo. I have no more missions for you.", SetQuestValue(17522,3)
+"mission"             -> "Sorry, I don't have any missions for you."
 }

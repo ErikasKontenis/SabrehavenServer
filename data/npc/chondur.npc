@@ -47,4 +47,51 @@ VANISH,!           -> "Good bye."
 "banana"         -> "A banana staff is the sign of a high ape magician."
 "pirates"         -> "You have to understand that there are two groups of people that are called pirates. One consists of evil thieves and murderers for whom the word pirate actually stands for. ...",
 					 "The others are resistance fighters for whom old ideals are hold true and that are the assertors of the native people."
+		
+"spellbook",QuestValue(17509)=0,Count(6120)>=1 -> "Ah, thank you very much! I will honour his memory.", Amount=1, Delete(6120), SetQuestValue(17509,1)	
+"counterspell",QuestValue(17509)=0 -> "You should not talk about things you don't know anything about."
+"energy","field",QuestValue(17509)=0 -> *
+"spellbook",QuestValue(17509)=0 -> *
+"energy","field",QuestValue(17509)>0 -> "Ah, the energy barrier set up by the cult is maintained by lousy magic, but is still effective. Without a proper counterspell you won't be able to pass it."
+
+"counterspell",QuestValue(17509)=1 -> "You mean, you are interested in a counterspell to cross the energy barrier on Goroma?", Topic=1
+Topic=1,"yes"                   -> "This is really not advisable. Behind this barrier, strong forces are raging violently. Are you sure that you want to go there?", Topic=2
+Topic=1							-> "It's much safer for you to stay here anyway, trust me."
+Topic=2,"yes"                   -> "I guess I cannot stop you then. Since you told me about my apprentice, it is my turn to help you. I will perform a ritual for you, but I need a few ingredients. ...",
+								   "Bring me one fresh dead chicken, one fresh dead rat and one fresh dead black sheep, in that order. Summoned ones will do as well as natural ones.", SetQuestValue(17509,2)	
+Topic=2							-> "It's much safer for you to stay here anyway, trust me."
+
+"counterspell",QuestValue(17509)=2 -> Type=4330, Amount=1, "Did you bring the fresh dead chicken?", Topic=3
+"chicken",QuestValue(17509)=2 -> *
+Topic=3,"yes",Count(Type)>=Amount -> "Very good! <mumblemumble> 'Your soul shall be protected!' Now, I need a fresh dead rat.", Delete(Type), SetQuestValue(17509,3)
+Topic=3,"yes"                     -> "You don't have any dead chicken with you don't you?"
+Topic=3                           -> "Maybe another time."
+
+"counterspell",QuestValue(17509)=3 -> Type=3994, Amount=1, "Did you bring the fresh dead rat?", Topic=4
+"rat",QuestValue(17509)=3 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "Very good! <chants and dances> 'You shall face black magic without fear!' Now, I need a fresh dead black sheep.", Delete(Type), SetQuestValue(17509,4)
+Topic=4,"yes"                     -> "You don't have any dead rat with you don't you?"
+Topic=4                           -> "Maybe another time."
+
+"counterspell",QuestValue(17509)=4 -> Type=4095, Amount=1, "Did you bring the fresh dead black sheep?", Topic=5
+"sheep",QuestValue(17509)=4 -> *
+Topic=5,"yes",Count(Type)>=Amount -> "Very good! <stomps staff on ground> 'EVIL POWERS SHALL NOT KEEP YOU ANYMORE! SO BE IT!'", Delete(Type), SetQuestValue(17509,5)
+Topic=5,"yes"                     -> "You don't have any dead black sheep with you don't you?"
+Topic=5                           -> "Maybe another time."
+
+"counterspell",QuestValue(17509)>4 -> "Hm. I don't think you need another one of my counterspells to cross the barrier on Goroma."
+
+"mission",QuestValue(17520)=1,QuestValue(17524)=0 -> "The evil cult has placed a curse on one of the captains here. I need at least five of their pirate voodoo dolls to lift that curse.", SetQuestValue(17524,1)
+
+"mission",QuestValue(17524)>0,QuestValue(17524)<5 -> Type=5810, Amount=1, "Did you bring one of the required pirate voodoo dolls?", Topic=6
+"doll",QuestValue(17524)>0,QuestValue(17524)<5 -> *
+
+"mission",QuestValue(17524)=5 -> Type=5810, Amount=1, "Did you bring the last of the required voodoo dolls?", Topic=6
+"doll",QuestValue(17524)=5, -> *
+Topic=6,"yes",Count(Type)>=Amount -> "Now I can weaken that curse a bit. Thank you.", Delete(Type), SetQuestValue(17524,QuestValue(17524)+1)
+Topic=6,"yes",Count(Type)>=Amount,QuestValue(17524)=5 -> "Finally I can put an end to that curse. I thank you so much.", Delete(Type), SetQuestValue(17524,QuestValue(17524)+1)
+Topic=6,"yes"                     -> "Sorry, you do not have it."
+Topic=6                           -> "Maybe another time."
+
+"mission"             -> "Sorry, I don't have any missions for you."
 }

@@ -54,6 +54,7 @@ Monster::Monster(MonsterType* mtype) :
 	healthMax = mType->info.healthMax;
 	baseSpeed = mType->info.baseSpeed;
 	internalLight = mType->info.light;
+	hiddenHealth = mType->info.hiddenHealth;
 
 	// register creature events
 	for (const std::string& scriptName : mType->info.scripts) {

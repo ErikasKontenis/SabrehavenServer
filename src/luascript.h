@@ -752,6 +752,7 @@ class LuaScriptInterface
 		static int luaCreatureAddHealth(lua_State* L);
 		static int luaCreatureGetMaxHealth(lua_State* L);
 		static int luaCreatureSetMaxHealth(lua_State* L);
+		static int luaCreatureSetHiddenHealth(lua_State* L);
 
 		static int luaCreatureGetSkull(lua_State* L);
 		static int luaCreatureSetSkull(lua_State* L);
@@ -1128,6 +1129,7 @@ class LuaScriptInterface
 		static int luaMonsterTypeIsIllusionable(lua_State* L);
 		static int luaMonsterTypeIsHostile(lua_State* L);
 		static int luaMonsterTypeIsPushable(lua_State* L);
+		static int luaMonsterTypeIsHealthShown(lua_State* L);
 
 		static int luaMonsterTypeCanPushItems(lua_State* L);
 		static int luaMonsterTypeCanPushCreatures(lua_State* L);
