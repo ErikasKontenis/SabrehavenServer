@@ -336,6 +336,9 @@ bool BehaviourDatabase::loadActions(ScriptReader& script, NpcBehaviour* behaviou
 			} else if (identifier == "addoutfitaddon") {
 				action->type = BEHAVIOUR_TYPE_ADDOUTFITADDON;
 				searchType = BEHAVIOUR_PARAMETER_TWO;
+			} else if (identifier == "addoutfit") {
+				action->type = BEHAVIOUR_TYPE_ADDOUTFIT;
+				searchType = BEHAVIOUR_PARAMETER_ONE;
 			} else if (identifier == "poison") {
 				action->type = BEHAVIOUR_TYPE_POISON;
 				searchType = BEHAVIOUR_PARAMETER_TWO;
@@ -544,6 +547,10 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_RANDOM;
 		searchType = BEHAVIOUR_PARAMETER_TWO;
+	} else if (identifier == "slotitem") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_SLOTITEM;
+		searchType = BEHAVIOUR_PARAMETER_ONE;
 	}
 
 	if (searchType == BEHAVIOUR_PARAMETER_ONE) {
@@ -942,6 +949,12 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 		player->addOutfit(lookType, addon);
 		break;
 	}
+	case BEHAVIOUR_TYPE_ADDOUTFIT: {
+		int32_t lookType = evaluate(action->expression, player, message);
+
+		player->addOutfit(lookType, 0);
+		break;
+	}
 	case BEHAVIOUR_TYPE_TELEPORT: {
 		Position pos;
 		pos.x = evaluate(action->expression, player, message);
@@ -1109,6 +1122,21 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		int32_t questValue;
 		player->getStorageValue(questNumber, questValue);
 		return questValue;
+	}
+	case BEHAVIOUR_TYPE_SLOTITEM: {
+		int32_t slot = evaluate(node->left, player, message);
+		
+		Thing* thing = player->getThing(slot);
+		if (!thing) {
+			return 0;
+		}
+
+		Item* item = thing->getItem();
+		if (!item) {
+			return 0;
+		}
+
+		return item->getID();
 	}
 	case BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE: {
 		int32_t questNumber = evaluate(node->left, player, message);

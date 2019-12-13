@@ -35,5 +35,18 @@ Topic=2,"yes",Count(Type)>=Amount -> "Indeed, what a fine work... the book I mea
 Topic=2,"yes"                     -> "Sorry, you do not have it."
 Topic=2                           -> "Maybe another time."
 
+"mission",QuestValue(17525)=0,QuestValue(17520)>4 -> "You did some impressive things. I think people here start considering you as one of us. But these are dire times and everyone of us is expected to give his best and even exceed himself. Do you think you can handle that?", Topic=3
+Topic=3,"yes" -> "I am glad to hear this. Please listen. The pirates on Nargor are breeding tortoises. They think eating tortoises makes a hard man even harder. ...",
+				"However I am quite fond of tortoises and can't stand the thought of them being eaten. So I convinced Captain Striker that I can train them to help us. As a substitute for rafts and such ...",
+				"All I need is one tortoise egg from Nargor. This is the opportunity to save a tortoise from a gruesome fate! ...",
+				"I will ask Sebastian to bring you there. Travel to Nargor, find their tortoise eggs and bring me at least one of them.", SetQuestValue(17525,1)
+Topic=3                           -> "Maybe another time."
+
+"mission",QuestValue(17525)=1 -> Type=6125, Amount=1, "Did you rescue one of those poor soon-to-be baby tortoises from Nargor?", Topic=4
+"egg",QuestValue(17525)=1 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "A real tortoise egg ... I guess you are more accustomed to rescue some noblewoman in distress but you did something good today.", Delete(Type), SetQuestValue(17525,2)
+Topic=4,"yes"                     -> "Sorry, you do not have it."
+Topic=4                           -> "Maybe another time."
+
 "mission"             -> "Sorry, I don't have any missions for you."
 }

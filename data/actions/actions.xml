@@ -84,7 +84,10 @@
 	<action actionid="81" script="nostalrius/81.lua" />
 	<action actionid="82" script="nostalrius/82.lua" />
 	<action actionid="83" script="nostalrius/83.lua" />
-
+	
+	<action actionid="17525" script="meriana_quest/tortoise_egg.lua" />
+	<action fromaid="17528" toaid="17530" script="meriana_quest/pirate_map.lua" />
+	
 	<!-- Nostalrius Default Actions -->
 	<!-- Furniture Parcels -->
 	<action fromid="2775" toid="2812" script="misc/furniture_parcels.lua" />
@@ -280,6 +283,7 @@
 	<action itemid="3732" script="misc/food.lua" />
 	<action itemid="5096" script="misc/food.lua" />
 	<action itemid="5678" script="misc/food.lua" />
+	<action itemid="6125" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />

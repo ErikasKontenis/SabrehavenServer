@@ -27805,9 +27805,9 @@ Attributes  = {Weight=1100}
 
 TypeID      = 6125
 Name        = "a tortoise egg from Nargor"
-Description = "Handle with care and don't try to eat it" # TODO: Make it eatable and implement from quest details
+Description = "Handle with care and don't try to eat it"
 Flags       = {Take}
-Attributes  = {Weight=30}
+Attributes  = {Nutrition=8,Weight=30}
 
 TypeID      = 6126
 Name        = "a peg leg"

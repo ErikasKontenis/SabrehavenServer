@@ -27,7 +27,7 @@ VANISH,!           -> "Farewell, human."
 "king"          -> "Human kings come and go. Djinns are not such short-lived creatures and don't care much about humans."
 "thais"          -> "The noisy human cities are of absolutely no interest for me."
 "raymond striker"          -> "Now that Marina and me have arranged a date, I hope this human is forgotten soon."
-"marina"          -> "Marina and I have arranged a date already, I am so excited."
+"marina",QuestValue(17502)>12          -> "Marina and I have arranged a date already, I am so excited."
 "pirates"          -> "Many humans sail the seas, I can't tell them apart. You humans look all the same to me."
 "voodoo"          -> "Some humans are tapping the energy of these isles with some strange results. Perhaps that explains the voodoo we've heard about."
 

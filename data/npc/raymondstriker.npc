@@ -38,9 +38,43 @@ Topic=1,"mermaid"                   -> "The mermaid is the most beautiful creatu
 
 # Meriana_Quest
 "mission",QuestValue(17502)>12,QuestValue(17520)=0 -> "Ask around in the settlement where you can help out. If you have proven your worth I might have some missions for you.", SetQuestValue(17520,1)
-"mission",QuestValue(17520)=1 -> "Ask around in the settlement where you can help out. If you have proven your worth I might have some missions for you."
 "mission",QuestValue(17520)=1,QuestValue(17521)=4,QuestValue(17522)=3,QuestValue(17523)=2,QuestValue(17524)=6 -> "Indeed, I could use some help. The evil pirates of Nargor have convinced an alchemist from Edron to supply them with a substance called Fafnar's Fire ...",
 																							"It can burn even on water and is a threat to us all. I need you to travel to Edron and pretend to the alchemist Sandra that you are the one whom the other pirates sent to get the fire ...",
 																							"When she asks for a payment, tell her 'Your continued existence is payment enough'. That should enrage any member of the Edron academy enough to refuse any further deals with the pirates.", SetQuestValue(17520,2)
+"mission",QuestValue(17520)=1 -> "Ask around in the settlement where you can help out. If you have proven your worth I might have some missions for you."
 "mission",QuestValue(17520)=2 -> "I am still waiting news from you about Fafnar's Fire from alchemist Sandra."
+"mission",QuestValue(17520)=3 -> "I think that means 'mission accomplished'. Hehe. I guess that will put an end to their efforts to buy any alchemical substance from Edron.", SetQuestValue(17520,4)
+"mission",QuestValue(17520)=4 -> "The mission on which I will send you is vital to our cause. It is a sabotage mission. Nargor is guarded by several heavy catapults. ...",
+								"I need you to sabotage the most dangerous of those catapults which can be found right in their harbour, aiming at ships passing by the entrance. ...",
+								"Get a fire bug - you can buy them in Liberty Bay - and set this catapult on fire. ...",
+								"Make sure to use the bug on the left part of the catapult where its lever is. That is where it's most vulnerable. ...",
+								"If you see a short explosion, you will know that it worked. I will tell Sebastian to bring you to Nargor, but beware. ...",
+								"Of course, he can't drop you off directly in the pirate's base. However, we have discovered a secret way into the Howling Grotto. ...",
+								"Try to make your way through the caves of Nargor to reach their harbour. This is where you will find the catapult in question.", SetQuestValue(17520,5)
+"mission",QuestValue(17520)=5 -> "Sail with Sebastian to Nargor and make your way to the pirate's harbour. Once arrived there, find the catapult and use a fire bug on the left part. ...",
+								"A small explosion will show you that you have succeeded. Afterwards, report to me about your mission. Good luck!"
+								
+"mission",QuestValue(17520)=6 -> "You did it! Excellent!", SetQuestValue(17520,7)
+"mission",QuestValue(17520)=7,QuestValue(17525)<2 -> "I have heard that Duncan has a mission for you this time."
+"mission",QuestValue(17520)=7 -> "If you manage to accomplish this vital mission you will prove yourself to be a worthy member of our community. I might even grant you your own ship and pirate clothing! ...",
+								"So listen to the first step of my plan. I want you to infiltrate their base. Try to enter their tavern, which means that you have to get past the guard. ...",
+								"You will probably have to deceive him somehow, so that he thinks you are one of them. ...",
+								"In the tavern, the pirates feel safe and plan their next strikes. Study ALL of their maps and plans lying around ...",
+								"Afterwards, return here and report to me about your mission.", SetQuestValue(17520,8)
+
+"mission",QuestValue(17520)=8,QuestValue(17528)=1,QuestValue(17529)=1,QuestValue(17530)=1 -> "Well done, my friend. That will help us a lot. Of course there are other things to be done though. ...",
+																							"I learned that Klaus, the owner of the tavern, wants me dead. He is offering any of those pirates a mission to kill me....",
+																							"If we could convince him that you fulfilled that mission, the pirates will have the party of their lives. This would be our chance for a sneak attack to damage their boats and steal their plunder! ...",
+																							"Obtain this mission from him and learn what he needs as a proof. Then return to me and report to me about your mission so we can formulate an appropriate plan.", SetQuestValue(17520,9)
+"mission",QuestValue(17520)=8 -> "I am waiting for the information about the pirate plans my friend."
+
+"mission",QuestValue(17520)=9 -> "Still planning to go to Klaus right?"
+"mission",QuestValue(17520)=9,QuestValue(17531)=1 -> Type=6105, Amount=1, "My pillow?? They know me all too well... <sigh> I've owned it since my childhood. However. Here, take it and convince him that I am dead.", Create(Type), SetQuestValue(17520,10)
+"mission",QuestValue(17520)=10 -> "Pillow is already yours. Just go to Klaus and convince him that I am dead."
+"mission",QuestValue(17520)=10,QuestValue(17531)=2 -> Type=2994, Amount=1, "Incredible! You did what no other did even dare to think about! You are indeed a true hero to our cause ...",
+													"Sadly I have no ship that lacks a captain, else you would of course be our first choice. I am still true to my word as best as I am able. ...",
+													"So take this as your very own ship. Oh, and remind me about the pirate outfit sometime.", Create(Type), SetQuestValue(17520,11)
+"mission"             -> "Sorry, I don't have any missions for you."
+
+"outfit",QuestValue(17520)=11 -> "Ah, right! The pirate outfit! Here you go, now you are truly one of us.", AddOutfit(155), AddOutfit(151), SetQuestValue(17520,12)
 }

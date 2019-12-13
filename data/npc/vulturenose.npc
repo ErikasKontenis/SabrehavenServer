@@ -17,7 +17,6 @@ VANISH,!           -> "Get lost."
 "bye"            -> "Get lost.", Idle
 "farewell"       -> *
 "what"         -> "I guard this door. I won't let anyone pass who is not supposed to enter."
-"enter"         -> "YOU WILL NOT PASS! Erm ... I mean you don't look like a true pirate to me. You won't get in."
 "pirate"         -> "Yoho, a pirate's life for me!"
 "name"         -> "They call me Vulturenose."
 "rum"         -> "You won't bribe old Vulturenose with some rum. No way."
@@ -31,4 +30,7 @@ VANISH,!           -> "Get lost."
 "thais"         -> "Thais is a town full of wimps."
 "carlin"         -> "A city full of women? That calls for plunder. Sadly, a bit far away. Ho Ho Ho."
 
+"enter",QuestValue(17527)=1 -> "Hey, I rarely see a dashing pirate like you! Get in, matey!"
+"enter",QuestValue(17527)=0,SlotItem(1)=6096,SlotItem(4)=6095,SlotItem(7)=5918,SlotItem(8)=5461 -> "Hey, I rarely see a dashing pirate like you! Get in, matey!", SetQuestValue(17527,1)
+"enter",QuestValue(17527)=0 -> "YOU WILL NOT PASS! Erm ... I mean you don't look like a true pirate to me. You won't get in."
 }
