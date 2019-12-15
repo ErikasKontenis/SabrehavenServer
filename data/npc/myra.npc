@@ -4,7 +4,7 @@
 Name = "Myra"
 Outfit = (140,115-0-19-95)
 Home = [32580,32751,6]
-Radius = 0
+Radius = 1
 
 Behaviour = {
 ADDRESS,"hello$",! -> "Greetings."

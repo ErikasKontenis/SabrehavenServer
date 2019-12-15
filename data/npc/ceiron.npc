@@ -17,5 +17,82 @@ VANISH,!           -> "May Crunor bless and guide you, %N."
 "bye"            -> "May Crunor bless and guide you, %N.", Idle
 "farewell"       -> *
 
+"addon",QuestValue(17535)=10 -> "I am proud to see you with the Faolan gift."
+"outfit",QuestValue(17535)=10 -> *
+"addon",QuestValue(17535)=0 -> "What are you thinking! I would never allow you to slay my beloved friends for the sake of your narcism. Only Faolan can grant you a fur like this one.", Topic=1
+"outfit",QuestValue(17535)=0 -> *
+Topic=1,"faolan" -> "I know where the great wolf mother lives, but I will not tell that to just anyone. You have to earn my respect first. Are you willing to help me?", Topic=2
+Topic=2,"yes" -> "I hope that I am not asking too much of you with this task. I heard of a flower which is currently unique in Tibia and can survive at only one place. ...",
+				"This place is somewhere in the bleak mountains of Nargor. I would love to have a sample of its blossom, but the problem is that it seldom actually blooms. ...",
+				"I cannot afford to travel there each day just to check whether the time has already come, besides I have no idea where to start looking. ...",
+				"I would be deeply grateful if you could support me in this matter and collect a sample of the blooming Griffinclaw for me. ...",
+				"Have you understood everything I told you and will fulfill this task for me?", Topic=3
+Topic=2 -> "Maybe another time."
+Topic=3,"yes" -> Type=4867, Amount=1, "Alright then. Take this botanist's container and return to me once you were able to retrieve a sample. Don't lose patience!", Create(Type), SetQuestValue(17535,1)
+Topic=3 -> "Maybe another time."
 
+"task",QuestValue(17535)=1 -> Type=5937, Amount=1, "Were you able to obtain a sample of the Griffinclaw?", Topic=4
+"mission",QuestValue(17535)=1 -> *
+"griffinclaw",QuestValue(17535)=1 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "Crunor be praised! The Griffinclaw really exists! Now, I will make sure that it will not become extinct. If you are ready to help me again, just ask me for a task.", Delete(Type), SetQuestValue(17535,2)
+Topic=4,"yes" -> "Sorry, you do not have it."
+Topic=4 -> "Maybe another time."
+
+"task",QuestValue(17535)=2 -> "Listen, your next task is not exactly easy either. ...",
+							"In the mountains between Ankrahmun and Tiquanda are two hydra lairs. The northern one has many waterfalls whereas the southern one has just tiny water trickles. ...",
+							"However, these trickles are said to contain water as pure and clean as nowhere else in Tibia. ...",
+							"If you could reach one of these trickles and retrieve a water sample for me, it would be a great help. ...",
+							"It is important that you take the water directly from the trickle, not from the pond - else it will not be so pure anymore. ...",
+							"Have you understood everything I told you and will you fulfill this task for me?", Topic=5
+"mission",QuestValue(17535)=2 -> *
+Topic=5,"yes" -> Type=5938, Amount=1, "Great! Here, take my waterskin and try to fill it with water from this special trickle. Don't lose my waterskin, I will not accept some random dirty waterskin.", Create(Type), SetQuestValue(17535,3)
+Topic=5 -> "Maybe another time."
+
+"waterskin",QuestValue(17535)=3 -> Type=5938, Amount=1, Price=1000, "Have you lost my waterskin? Would you like to buy another one for %P gold?", Topic=6
+Topic=6,"yes",CountMoney>=Price -> "Here, better don't lose it.", DeleteMoney, Create(Type)
+Topic=6,"yes"                     -> "I am sorry, but you do not have enough gold."
+Topic=6                           -> "Maybe another time."
+
+"task",QuestValue(17535)=3 -> Type=5939, Amount=1, "Did you bring me a sample of the water from the hydra cave?", Topic=7
+"mission",QuestValue(17535)=3 -> *
+"water",QuestValue(17535)=3 -> *
+Topic=7,"yes",Count(Type)>=Amount -> "Good work, %N! This water looks indeed extremely clear. I will examine it right away. If you are ready to help me again, just ask me for a task.", Delete(Type), SetQuestValue(17535,4)
+Topic=7,"yes" -> "Sorry, you do not have it."
+Topic=7 -> "Maybe another time."
+
+"task",QuestValue(17535)=4 -> "I'm glad that you are still with me, %N. Especially because my next task might require even more patience from your side than the ones before. ...",
+							"Demons... these unholy creatures should have never been able to walk the earth. They are a brood fuelled only by hatred and malice. ...",
+							"Even if slain, their evil spirit is not fully killed. It needs a blessed stake to release their last bit of fiendishness and turn them into dust. ...",
+							"It does not work all the time, but if you succeed, their vicious spirit is finally defeated. ...",
+							"I want proof that you are on the right side against Zathroth. Bring me 100 ounces of demon dust and I shall be convinced. ...",
+							"You'll probably need to ask a priest for help to obtain a blessed stake. ...",
+							"Have you understood everything I told you and will you fulfil this task for me?", Topic=8
+"mission",QuestValue(17535)=4 -> *
+Topic=8,"yes" -> "Good! I will eagerly await your return.", SetQuestValue(17535,5)
+Topic=8 -> "Maybe another time."
+
+"task",QuestValue(17535)=5 -> Type=5906, Amount=100, "Were you really able to collect 100 ounces of demon dust?", Topic=9
+"mission",QuestValue(17535)=5 -> *
+"demon","dust",QuestValue(17535)=5 -> *
+Topic=9,"yes",Count(Type)>=Amount -> "I'm very impressed, %N. With this task you have proven that you are not only on the right side, but also quite powerful. If you are ready to help me again, just ask me for a task.", Delete(Type), SetQuestValue(17535,6)
+Topic=9,"yes" -> "Sorry, you do not have that many."
+Topic=9 -> "Maybe another time."
+
+"task",QuestValue(17535)=6 -> "I have one final task for you, %N. Many months ago, I was trying to free the war wolves which are imprisoned inside the orc fortress. ...",
+							"Unfortunately, my intrusion was discovered and I had to run for my life. During my escape, I lost my favourite wolf tooth chain. ...",
+							"It should still be somewhere in the fortress if the orcs did not try to eat it. I really wish you could retrieve it for me. ...",
+							"It has the letter 'C' carved into one of the teeth. Please look for it. ...",
+							"Have you understood everything I told you and will you fulfil this task for me?", Topic=10
+"mission",QuestValue(17535)=6 -> *
+Topic=10,"yes" -> "Good! I will eagerly await your return.", SetQuestValue(17535,7)
+Topic=10 -> "Maybe another time."
+
+"task",QuestValue(17535)=7 -> Type=5940, Amount=1, "Have you really found my wolf tooth chain??", Topic=11
+"mission",QuestValue(17535)=7 -> *
+"wolf ","tooth","chain",QuestValue(17535)=7 -> *
+Topic=11,"yes",Count(Type)>=Amount -> "Crunor be praised! You found my beloved chain! %N, you really earned my respect and I consider you as a friend from now on. Remind me to tell you about Faolan sometime.", Delete(Type), SetQuestValue(17535,8)
+Topic=11,"yes" -> "Sorry, you do not have it."
+Topic=11 -> "Maybe another time."
+
+"faolan",QuestValue(17535)=8 -> "Right, I will keep my promise. Faolan roams Tibia freely, but her favourite sleeping cave is on Cormaya. I will cast a spell on you that enables you to speak the wolf language for a while.", SetQuestValue(17535,9), EffectOpp(13)
 }

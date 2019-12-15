@@ -7431,12 +7431,12 @@ Flags       = {Door,Top,SeparationEvent,Unmove}
 
 TypeID      = 1682
 Name        = "a closed door"
-Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
+Description = "It is locked"
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 1683
 Name        = "a closed door"
-Description = "It is locked"
-Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 1684
 Name        = "an open door"
@@ -7470,12 +7470,12 @@ Flags       = {Top,SeparationEvent,Door,Unmove}
 
 TypeID      = 1691
 Name        = "a closed door"
-Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
+Description = "It is locked"
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 1692
 Name        = "a closed door"
-Description = "It is locked"
-Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 1693
 Name        = "an open door"
@@ -26857,11 +26857,13 @@ Attributes  = {Weight=2000}
 
 TypeID      = 5938
 Name        = "Ceiron's waterskin"
+Description = "It is empty"
 Flags       = {Take}
 Attributes  = {Weight=700}
 
 TypeID      = 5939
 Name        = "Ceiron's waterskin"
+Description = "It contains a special sample of water from a hydra cave"
 Flags       = {Take}
 Attributes  = {Weight=700}
 

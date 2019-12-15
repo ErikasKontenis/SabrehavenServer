@@ -186,9 +186,11 @@
 	<action itemid="4867" script="misc/botanist_container.lua" />
 	<action itemid="4863" script="misc/butterfly_conservation_kit.lua" />
 	<action itemid="5467" script="misc/fire_bug.lua" />
+	<action itemid="5938" script="misc/ceirons_waterskin.lua" />
 	
 	<!-- Chests -->
 	<action itemid="2479" script="misc/chests.lua" />
+	<action itemid="2480" script="misc/chests.lua" />
 	<action itemid="2543" script="misc/chests.lua" />
 	<action itemid="2544" script="misc/chests.lua" />
 	<action itemid="2545" script="misc/chests.lua" />

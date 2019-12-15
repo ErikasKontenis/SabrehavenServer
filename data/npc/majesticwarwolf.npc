@@ -6,14 +6,22 @@ Home = [33355,31991,8]
 Radius = 4
 
 Behaviour = {
-ADDRESS,"hello$",! -> NOP
-ADDRESS,"hi$",!    -> NOP
+ADDRESS,"hello$",QuestValue(17535)>8,!      -> "Interesting. A human who can speak the language of wolves."
+ADDRESS,"hi$",QuestValue(17535)>8,!         -> *
 ADDRESS,!          -> Idle
 BUSY,"hello$",!    -> NOP
 BUSY,"hi$",!       -> *
 BUSY,!             -> NOP
-VANISH,!           -> NOP
+VANISH,!           -> "YOOOOUHHOOOUU!"
 
-"bye"       -> Idle
+"bye"       -> "YOOOOUHHOOOUU!", Idle
+
+"addon",QuestValue(17535)=9         -> "I can see in your eyes that you are a honest and friendly person, %N. You were patient enough to learn our language and I will grant you a special gift. Will you accept it?", Topic=1
+"outfit",QuestValue(17535)=9         -> *
+Topic=1,"yes", -> "From now on, you shall be known as %N, the bear warrior. You shall be strong and proud as Angros, the great dark bear. He shall guide your path.", SetQuestValue(17535,10), AddOutfitAddon(144,1), AddOutfitAddon(148,1)
+Topic=1                                   -> "Maybe another time."
+
+"addon",QuestValue(17535)=10 -> "I am proud to see you as strong as the Angros!"
+"outfit",QuestValue(17535)=10 -> *
 
 }

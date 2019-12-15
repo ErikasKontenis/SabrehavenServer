@@ -1363,6 +1363,25 @@ INSERT INTO `server_config` (`config`, `value`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `global_storage`
+--
+
+CREATE TABLE IF NOT EXISTS `global_storage` (
+  `key` int(10) unsigned NOT NULL DEFAULT '0',
+  `value` int(11) DEFAULT NULL,
+  PRIMARY KEY (`key`)
+) ENGINE=InnoDB DEFAULT CHARACTER SET=utf8;
+
+--
+-- Dumping data for table `global_storage`
+--
+
+INSERT INTO `global_storage` (`key`, `value`) VALUES
+(1, 0); -- key 1 = blooming griffinclaw; value 0 = not started in this month, value 1 = already started once
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tile_store`
 --
 

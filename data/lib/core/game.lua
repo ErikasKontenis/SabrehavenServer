@@ -117,9 +117,32 @@ if not globalStorageTable then
 end
 
 function Game.getStorageValue(key)
-	return globalStorageTable[key]
+	-- Return from local table if possible
+    if globalStorageTable[key] ~= nil then
+        return globalStorageTable[key]
+    end
+
+    -- Else look for it on the DB
+    local dbData = db.storeQuery("SELECT `value` FROM `global_storage` WHERE `key` = " .. key .. " LIMIT 1;")
+    if dbData ~= false then
+        local value = result.getNumber(dbData, "value")
+        if value ~= nil then
+            -- Save it to globalStorageTable
+            globalStorageTable[key] = value
+            return value
+        end
+    end
+
+    return nil
 end
 
 function Game.setStorageValue(key, value)
 	globalStorageTable[key] = value
+
+    local dbData = db.storeQuery("SELECT `value` FROM `global_storage` WHERE `key` = " .. key .. " LIMIT 1;")
+    if dbData ~= false then
+        db.query("UPDATE `global_storage` SET `value`='".. value .."' WHERE `key` = " .. key .. " LIMIT 1;")
+    else
+        db.query("INSERT INTO `global_storage` (`key`, `value`) VALUES (" .. key .. ", " .. value .. ");")
+    end
 end
