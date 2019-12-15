@@ -77,5 +77,9 @@ Topic=9                           -> "Maybe another time."
 Topic=10,"yes"                     -> "I have kept this traditional barbarian wig safe for many years now. It is now yours! I hope you will wear it proudly, friend.", AddOutfitAddon(147,2), AddOutfitAddon(143,2), SetQuestValue(17532,12)
 Topic=10                           -> "Okey, ask for it when you feel ready, friend."
 
+"axe",QuestValue(17532)=17      -> "I know it is you who helped with the present for me from my brother Ajax. Thank you! Wear your axe proudly!"
+"addon",QuestValue(17532)=17 -> *
+"wig",QuestValue(17532)>11         -> "I hope you will wear the traditional barbarian wig proudly, friend."
+"addon",QuestValue(17532)>11 -> *
 
 }

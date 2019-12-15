@@ -40,5 +40,41 @@ Topic=5 -> "ARRRRRRRRRR!!!", Idle
 "Gelagos",QuestValue(17532)=5 -> "Annoying kid. Bro hates him, but talking no help. Bro needs fighting spirit!"
 "fighting","spirit",QuestValue(17532)=5 -> "If you want to help bro, bring him fighting spirit. Magic fighting spirit. Ask Djinn."
 
-"present",QuestValue(17532)=12 -> "Bron gave me present. Ugly, but nice from him. Me want to give present too. You help me?"
+"present",QuestValue(17532)=12 -> "Bron gave me present. Ugly, but nice from him. Me want to give present too. You help me?", Topic=6
+Topic=6,"yes" -> "Good! Me make shiny weapon. If you help me, I make one for you too. Like axe I wear. I need stuff. Listen. ...",
+				"Me need 100 iron ore. Then need crude iron. Then after that 50 behemoth fangs. And 50 lizard leather. You understand?",
+				"Help me yes or no?", Topic=7
+Topic=6 -> "Maybe later."
+Topic=7,"yes" -> "Good. You get 100 iron ore first. Come back.", SetQuestValue(17532,13)
+Topic=7 -> "Maybe later."
+
+"iron","ore",QuestValue(17532)=13 -> Type=5880, Amount=100, "You bring 100 iron ore?", Topic=8
+Topic=8,"yes",Count(Type)>=Amount -> "Good! Now bring crude iron.", Delete(Type), SetQuestValue(17532,14)
+Topic=8,"yes"                     -> "You do not have that many."
+Topic=8                           -> "Maybe another time."
+
+"crude","iron",QuestValue(17532)=14 -> Type=5892, Amount=1, "You bring crude iron?", Topic=9
+Topic=9,"yes",Count(Type)>=Amount -> "Good! Now bring 50 behemoth fangs.", Delete(Type), SetQuestValue(17532,14)
+Topic=9,"yes"                     -> "You do not have it."
+Topic=9                           -> "Maybe another time."
+
+"behemoth","fang",QuestValue(17532)=14 -> Type=5893, Amount=50, "You bring 50 behemoth fangs?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "Good! Now bring 50 lizard leather.", Delete(Type), SetQuestValue(17532,15)
+Topic=10,"yes"                     -> "You do not have that many."
+Topic=10                           -> "Maybe another time."
+
+"lizard","leather",QuestValue(17532)=15 -> Type=5876, Amount=50, "You bring 50 lizard leather?", Topic=11
+Topic=11,"yes",Count(Type)>=Amount -> "Ah! All stuff there. I will start making axes now. Come later and ask me for axe.", Delete(Type), SetQuestValue(17532,16), SetExpiringQuestValue(17534, 7200000)
+Topic=11,"yes"                     -> "You do not have that many."
+Topic=11                           -> "Maybe another time."
+
+"addon",ExpiringQuestValue(17534)>0         -> "Wait! I making axes now. Come later, okey?"
+"axe",ExpiringQuestValue(17534)>0      -> *
+
+"addon",ExpiringQuestValue(17534)<0,QuestValue(17532)=16         -> "Axe is done! For you. Take. Wear like me.", SetQuestValue(17532,17), AddOutfitAddon(147,1), AddOutfitAddon(143,1)
+"axe",ExpiringQuestValue(17534)<0,QuestValue(17532)=16      -> *
+
+"addon",QuestValue(17532)=17         -> "Nice axe. Nice axe."
+"axe",QuestValue(17532)=17      -> *
+
 }
