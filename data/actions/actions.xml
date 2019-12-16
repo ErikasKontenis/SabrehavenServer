@@ -85,8 +85,13 @@
 	<action actionid="82" script="nostalrius/82.lua" />
 	<action actionid="83" script="nostalrius/83.lua" />
 	
+	<!-- Meriana Quest -->
 	<action actionid="17525" script="meriana_quest/tortoise_egg.lua" />
 	<action fromaid="17528" toaid="17530" script="meriana_quest/pirate_map.lua" />
+	
+	<!-- Liberty Bay Misc -->
+	<action fromid="6087" toid="6090" script="liberty_bay/cult_hymn.lua"/>
+	<action actionid="33216" script="liberty_bay/cult_piano_teleport.lua"/>
 	
 	<!-- Nostalrius Default Actions -->
 	<!-- Furniture Parcels -->
@@ -189,6 +194,7 @@
 	<action itemid="5938" script="misc/ceirons_waterskin.lua" />
 	
 	<!-- Chests -->
+	<action itemid="2472" script="misc/chests.lua" />
 	<action itemid="2479" script="misc/chests.lua" />
 	<action itemid="2480" script="misc/chests.lua" />
 	<action itemid="2543" script="misc/chests.lua" />

@@ -47,7 +47,6 @@ VANISH,!                   -> "Bye."
 "lugri"     -> "A follower of evil that will get what he deserves one day."
 "excalibug" -> "A weapon of myth. I don't believe that this weapon exists."
 "news"      -> "I am a paladin, not a storyteller."
-"Sniper gloves"      -> "We are always looking for sniper gloves. They are supposed to raise accuracy. If you find a pair, bring them here. Maybe I can offer you a nice trade."
 
 "member"        -> "Every paladin profits from his vocation. It has many advantages to be a paladin."
 "profit"        -> "We will help you to improve your skills. Besides I offer spells for paladins."
@@ -113,4 +112,65 @@ Topic=3,"yes",Level<SpellLevel(String)    -> Amount=SpellLevel(String), "You mus
 Topic=3,"yes",CountMoney<Price            -> "Oh. You do not have enough money."
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=3                                   -> "Ok. Then not."
+
+"sniper","gloves",Count(5875)<=0 -> "We are always looking for sniper gloves. They are supposed to raise accuracy. If you find a pair, bring them here. Maybe I can offer you a nice trade."
+"sniper","gloves",QuestValue(17538)=0 -> Type=5875, Amount=1, "You found sniper gloves?! Incredible! Listen, if you give them to me, I will grant you the right to wear the sniper gloves accessory. How about it?", Topic=4
+Topic=4,"yes",Count(Type)>=Amount -> "Great! I hereby grant you the right to wear the sniper gloves as accessory. Congratulations!", Delete(Type), SetQuestValue(17538,1), AddOutfitAddon(137,1), AddOutfitAddon(129,1), EffectOpp(13)
+Topic=4,"yes"					           -> "You don't have it."
+Topic=4                                   -> "Maybe another time."
+
+"sniper","gloves",QuestValue(17538)=1 -> Type=5875, Amount=1, Price=2000, "You found sniper gloves?! Incredible! I would pay you 2000 gold pieces for them. How about it?", Topic=5
+Topic=5,"yes",Count(Type)>=Amount -> "Congratulations.", Delete(Type), CreateMoney
+Topic=5,"yes" -> "You don't have it."
+Topic=5 -> "Maybe another time."
+
+"outfit" -> "Oh, my winged tiara? Those are traditionally awarded after having completed a difficult task for our guild, only to female aspirants though. Male warriors will receive a hooded cloak."
+"addon" -> *
+
+"task",QuestValue(17539)=0,male -> "So you are saying that you would like to prove that you deserve to wear such a hooded cloak?", Topic=6
+"mission",QuestValue(17539)=0,male -> *
+"task",QuestValue(17539)=0,female -> "So you are saying that you would like to prove that you deserve to wear such a winged tiara?", Topic=6
+"mission",QuestValue(17539)=0,female -> *
+Topic=6,"yes" -> "Alright, I will give you a chance. Pay close attention to what I'm going to tell you now. ...",
+				"Recently, one of our members moved to Liberty Bay out of nowhere, talking about some strange cult. That is not the problem, but he took my favourite crossbow with him. ...",
+				"Please find my crossbow. It has my name engraved on it and is very special to me. ...",
+				"Secondly, we need a lot of leather for new quivers. 100 pieces of lizard leather and 100 pieces of red dragon leather should suffice. ...",
+				"Third, since we are giving out tiaras, we are always in need of enchanted chicken wings. Please bring me 5, that would help us tremendously. ...",
+				"Lastly, for our arrow heads we need a lot of steel. Best would be one piece of royal steel, one piece of draconian steel and one piece of hell steel. ...",
+				"Did you understand everything I told you and are willing to handle this task?", Topic=7
+Topic=6 -> "However."
+Topic=7,"yes" -> "That's the spirit! I hope you will find my crossbow, %N.", SetQuestValue(17539,1)
+Topic=7 -> "Maybe another time."
+
+"crossbow",QuestValue(17539)=1 -> Type=5947, Amount=1, "I'm so excited! Have you really found my crossbow?", Topic=8
+"mission",QuestValue(17539)=1 -> *
+"task",QuestValue(17539)=1 -> *
+Topic=8,"yes",Count(Type)>=Amount,male -> "Yeah! I could kiss you right here and there! Besides, you're a handsome one. <giggles> Please bring me 100 pieces of lizard leather and 100 pieces of red dragon leather now!", Delete(Type), SetQuestValue(17539,2)
+Topic=8,"yes",Count(Type)>=Amount,female -> "Good work, %N! Please bring me 100 pieces of lizard leather and 100 pieces of red dragon leather now!", Delete(Type), SetQuestValue(17539,2)
+Topic=8,"yes" -> "You don't have it."
+Topic=8 -> "Maybe another time."
+
+"leather",QuestValue(17539)=2 -> "Did you bring me 100 pieces of lizard leather and 100 pieces of red dragon leather?", Topic=9
+"mission",QuestValue(17539)=2 -> *
+"task",QuestValue(17539)=2 -> *
+Topic=9,"yes",Count(5948)>=100,Count(5876)>=100 -> "Good work, %N! That is enough leather for a lot of sturdy quivers. Now, please bring me 5 enchanted chicken wings.", DeleteAmount(5948,100), DeleteAmount(5876,100), SetQuestValue(17539,3)
+Topic=9,"yes" -> "You don't have that many."
+Topic=9 -> "Maybe another time."
+
+"enchanted","chicken","wing",QuestValue(17539)=3 -> Type=5891, Amount=5, "Were you able to get hold of 5 enchanted chicken wings?", Topic=10
+"mission",QuestValue(17539)=3 -> *
+"task",QuestValue(17539)=3 -> *
+Topic=10,"yes",Count(Type)>=Amount -> "Great! Now we can create a few more Tiaras. If only they weren't that expensive... Well anyway, please obtain one piece of royal steel, draconian steel and hell steel each.", Delete(Type), SetQuestValue(17539,4)
+Topic=10,"yes" -> "You don't have that many."
+Topic=10 -> "Maybe another time."
+
+"steel",QuestValue(17539)=4 -> "Ah, have you brought one piece of royal steel, draconian steel and hell steel each?", Topic=11
+"mission",QuestValue(17539)=4 -> *
+"task",QuestValue(17539)=4 -> *
+Topic=11,"yes",Count(5888)>=1,Count(5889)>=1,Count(5887)>=1 -> "Wow, I'm impressed, %N. Your really are a valuable member of our paladin guild. I shall grant you your reward now. Wear it proudly!", DeleteAmount(5888,1), DeleteAmount(5889,1), DeleteAmount(5887,1), SetQuestValue(17539,5), AddOutfitAddon(137,2), AddOutfitAddon(129,2), EffectOpp(13)
+Topic=11,"yes" -> "You don't have that many."
+Topic=11 -> "Maybe another time."
+
+"mission",QuestValue(17539)=5 -> "Paladin guild has no more tasks for you our loyal %N."
+"task",QuestValue(17539)=5 -> *
 }

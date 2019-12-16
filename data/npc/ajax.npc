@@ -50,31 +50,31 @@ Topic=7 -> "Maybe later."
 
 "iron","ore",QuestValue(17532)=13 -> Type=5880, Amount=100, "You bring 100 iron ore?", Topic=8
 Topic=8,"yes",Count(Type)>=Amount -> "Good! Now bring crude iron.", Delete(Type), SetQuestValue(17532,14)
-Topic=8,"yes"                     -> "You do not have that many."
-Topic=8                           -> "Maybe another time."
+Topic=8,"yes" -> "You do not have that many."
+Topic=8 -> "Maybe another time."
 
 "crude","iron",QuestValue(17532)=14 -> Type=5892, Amount=1, "You bring crude iron?", Topic=9
 Topic=9,"yes",Count(Type)>=Amount -> "Good! Now bring 50 behemoth fangs.", Delete(Type), SetQuestValue(17532,14)
-Topic=9,"yes"                     -> "You do not have it."
-Topic=9                           -> "Maybe another time."
+Topic=9,"yes" -> "You do not have it."
+Topic=9 -> "Maybe another time."
 
 "behemoth","fang",QuestValue(17532)=14 -> Type=5893, Amount=50, "You bring 50 behemoth fangs?", Topic=10
 Topic=10,"yes",Count(Type)>=Amount -> "Good! Now bring 50 lizard leather.", Delete(Type), SetQuestValue(17532,15)
-Topic=10,"yes"                     -> "You do not have that many."
-Topic=10                           -> "Maybe another time."
+Topic=10,"yes" -> "You do not have that many."
+Topic=10 -> "Maybe another time."
 
 "lizard","leather",QuestValue(17532)=15 -> Type=5876, Amount=50, "You bring 50 lizard leather?", Topic=11
 Topic=11,"yes",Count(Type)>=Amount -> "Ah! All stuff there. I will start making axes now. Come later and ask me for axe.", Delete(Type), SetQuestValue(17532,16), SetExpiringQuestValue(17534, 7200000)
-Topic=11,"yes"                     -> "You do not have that many."
-Topic=11                           -> "Maybe another time."
+Topic=11,"yes" -> "You do not have that many."
+Topic=11 -> "Maybe another time."
 
-"addon",ExpiringQuestValue(17534)>0         -> "Wait! I making axes now. Come later, okey?"
-"axe",ExpiringQuestValue(17534)>0      -> *
+"addon",ExpiringQuestValue(17534)>0 -> "Wait! I making axes now. Come later, okey?"
+"axe",ExpiringQuestValue(17534)>0 -> *
 
-"addon",ExpiringQuestValue(17534)<0,QuestValue(17532)=16         -> "Axe is done! For you. Take. Wear like me.", SetQuestValue(17532,17), AddOutfitAddon(147,1), AddOutfitAddon(143,1)
-"axe",ExpiringQuestValue(17534)<0,QuestValue(17532)=16      -> *
+"addon",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> "Axe is done! For you. Take. Wear like me.", SetQuestValue(17532,17), AddOutfitAddon(147,1), AddOutfitAddon(143,1)
+"axe",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> *
 
-"addon",QuestValue(17532)=17         -> "Nice axe. Nice axe."
-"axe",QuestValue(17532)=17      -> *
+"addon",QuestValue(17532)=17 -> "Nice axe. Nice axe."
+"axe",QuestValue(17532)=17 -> *
 
 }
