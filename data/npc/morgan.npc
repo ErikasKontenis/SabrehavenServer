@@ -26,4 +26,14 @@ Topic=1                           -> "Maybe another time."
 "mission",QuestValue(17522)=1 -> "Please deliver my letter to Eremo as fast as you can."
 "mission",QuestValue(17522)=2 -> "Thank you for delivering my letter to Eremo. I have no more missions for you.", SetQuestValue(17522,3)
 "mission"             -> "Sorry, I don't have any missions for you."
+
+"addon" -> "I can forge the finest weapons for knights and warriors. They may wear them proudly and visible to everyone."
+"outfit" -> *
+
+"weapon", -> "Would you rather be interested in a knight's sword or in a warrior's sword?", Topic=2
+"forge", -> "What would you like me to forge for you? A knight's sword or a warrior's sword?", Topic=2
+Topic=2,"knight",QuestValue(17541)=0 -> "Great! Simply bring me 100 Iron Ore and one Crude Iron and I will happily forge it for you.", SetQuestValue(17541,1)
+Topic=2,"knight",QuestValue(17541)=1,Count(5880)>=100,Count(5892)>=1 -> "Alright! As a matter of fact, I have one in store. Here you go!", DeleteAmount(5880,100), DeleteAmount(5892,1), SetQuestValue(17541,2), AddOutfitAddon(139,1), AddOutfitAddon(131,1), EffectOpp(13)
+Topic=2,"knight",QuestValue(17541)=2 -> "Sorry since you already have one sword I will not forge more for you."
+Topic=2 -> "Maybe another time."
 }

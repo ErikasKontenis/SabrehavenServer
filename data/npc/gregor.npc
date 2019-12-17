@@ -2,7 +2,7 @@
 # gregor.npc: Datenbank fuer den Ritter Gregor
 
 Name = "Gregor"
-Outfit = (131,38-38-38-38)
+Outfit = (131,38-38-38-38-2)
 Home = [32407,32202,6]
 Radius = 4
 
@@ -81,4 +81,58 @@ Topic=3,"yes",Level<SpellLevel(String)    -> Amount=SpellLevel(String), "You hav
 Topic=3,"yes",CountMoney<Price            -> "Return when you have enough gold."
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=3                                   -> "Maybe next time."
+
+"outfit" -> "Only the bravest warriors may wear adorned helmets. They are traditionally awarded after having completed a difficult task for our guild."
+"addon" -> *
+
+"task",QuestValue(17542)=0 -> "You mean, you would like to prove that you deserve to wear such a helmet?", Topic=4
+"mission",QuestValue(17542)=0 -> *
+Topic=4,"yes" -> "Well then, listen closely. First, you will have to prove that you are a fierce and restless warrior by bringing me 100 perfect behemoth fangs. ...",
+				"Secondly, please retrieve a helmet for us which has been lost a long time ago. The famous Ramsay the Reckless wore it when exploring an ape settlement. ...",
+				"Third, we need a new flask of warrior's sweat. We've run out of it recently, but we need a small amount for the show battles in our arena. ...",
+				"Lastly, I will have our smith refine your helmet if you bring me royal steel, an especially noble metal. ...",
+				"Did you understand everything I told you and are willing to handle this task?", Topic=5
+Topic=4 -> "However."
+Topic=5,"yes" -> "Alright then. Come back to me once you have collected 100 perfect behemoth fangs.", SetQuestValue(17542,1)
+Topic=5 -> "Maybe another time."
+
+"behemoth","fang",QuestValue(17542)=1 -> Type=5893, Amount=100, "Have you really managed to fulfill the task and brought me 100 perfect behemoth fangs?", Topic=6
+"mission",QuestValue(17542)=1 -> *
+"task",QuestValue(17542)=1 -> *
+Topic=6,"yes",Count(Type)>=Amount,Knight -> "I'm deeply impressed, brave Knight %N. Now, please retrieve Ramsay's helmet.", Delete(Type), SetQuestValue(17542,2)
+Topic=6,"yes",Count(Type)>=Amount -> "I'm deeply impressed, %N. Even if you are not a knight, you certainly possess knight qualities. Now, please retrieve Ramsay's helmet.", Delete(Type), SetQuestValue(17542,2)
+Topic=6,"yes" -> "You don't have that many."
+Topic=6 -> "Maybe another time."
+
+"reckless","helmet",QuestValue(17542)=2 -> Type=5924, Amount=1, "Did you recover the helmet of Ramsay the Reckless?", Topic=7
+"mission",QuestValue(17542)=2 -> *
+"task",QuestValue(17542)=2 -> *
+Topic=7,"yes",Count(Type)>=Amount,Knight -> "Good work, brave Knight %N! Even though it is damaged, it has a lot of sentimental value. Now, please bring me warrior's sweat.", Delete(Type), SetQuestValue(17542,3)
+Topic=7,"yes",Count(Type)>=Amount -> "Good work, %N! Even though it is damaged, it has a lot of sentimental value. Now, please bring me warrior's sweat.", Delete(Type), SetQuestValue(17542,3)
+Topic=7,"yes" -> "You don't have it."
+Topic=7 -> "Maybe another time."
+
+"warriors","sweat",QuestValue(17542)=3 -> Type=5885, Amount=1, "Were you able to get hold of a flask with pure warrior's sweat?", Topic=8
+"mission",QuestValue(17542)=3 -> *
+"task",QuestValue(17542)=3 -> *
+Topic=8,"yes",Count(Type)>=Amount,Knight -> "Now that is a pleasant surprise, brave Knight %N! There is only one task left now: Obtain royal steel to have your helmet refined.", Delete(Type), SetQuestValue(17542,4)
+Topic=8,"yes",Count(Type)>=Amount -> "Now that is a pleasant surprise, %N! There is only one task left now: Obtain royal steel to have your helmet refined.", Delete(Type), SetQuestValue(17542,4)
+Topic=8,"yes" -> "You don't have it."
+Topic=8 -> "Maybe another time."
+
+"royal","steel",QuestValue(17542)=4 -> Type=5887, Amount=1, "Ah, have you brought the royal steel?", Topic=9
+"mission",QuestValue(17542)=4 -> *
+"task",QuestValue(17542)=4 -> *
+Topic=9,"yes",Count(Type)>=Amount,Knight -> "You truly deserve to wear an adorned helmet, brave Knight %N. Please talk to Sam and tell him I sent you. I'm sure he will be glad to refine your helmet.", Delete(Type), SetQuestValue(17542,5)
+Topic=9,"yes",Count(Type)>=Amount -> "You truly deserve to wear an adorned helmet, %N. Please talk to Sam and tell him I sent you. I'm sure he will be glad to refine your helmet.", Delete(Type), SetQuestValue(17542,5), SetExpiringQuestValue(17544, 7200000)
+Topic=9,"yes" -> "You don't have it."
+Topic=9 -> "Maybe another time."
+
+"helmet",QuestValue(17542)=5 -> "Please talk to Sam and tell him I sent you. I'm sure he will be glad to refine your helmet."
+"mission",QuestValue(17542)=5 -> *
+"task",QuestValue(17542)=5 -> *
+
+"helmet",QuestValue(17542)=6 -> "I see Sam did a great work with your helmet!"
+"mission",QuestValue(17542)=6 -> "Sorry, but I don't have any task for you now."
+"task",QuestValue(17542)=6 -> *
 }

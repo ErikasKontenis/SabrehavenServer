@@ -71,7 +71,7 @@ Topic=11 -> "Maybe another time."
 "addon",ExpiringQuestValue(17534)>0 -> "Wait! I making axes now. Come later, okey?"
 "axe",ExpiringQuestValue(17534)>0 -> *
 
-"addon",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> "Axe is done! For you. Take. Wear like me.", SetQuestValue(17532,17), AddOutfitAddon(147,1), AddOutfitAddon(143,1)
+"addon",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> "Axe is done! For you. Take. Wear like me.", SetQuestValue(17532,17), AddOutfitAddon(147,1), AddOutfitAddon(143,1), EffectOpp(13)
 "axe",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> *
 
 "addon",QuestValue(17532)=17 -> "Nice axe. Nice axe."

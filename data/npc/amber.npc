@@ -85,7 +85,7 @@ Topic=6                         -> "Too bad."
 "addon",ExpiringQuestValue(18503)>0         -> "Please be patient! I am still working on the backpack details. Come back later, okey?"
 "backpack",ExpiringQuestValue(18503)>0      -> *
 
-"addon",ExpiringQuestValue(18503)<0,QuestValue(18502)=2         -> "Just in time! Your backpack is finished. Here you go, I hope you like it.", SetQuestValue(18502,3), AddOutfitAddon(136,1), AddOutfitAddon(128,1)
+"addon",ExpiringQuestValue(18503)<0,QuestValue(18502)=2         -> "Just in time! Your backpack is finished. Here you go, I hope you like it.", SetQuestValue(18502,3), AddOutfitAddon(136,1), AddOutfitAddon(128,1), EffectOpp(13)
 "backpack",ExpiringQuestValue(18503)<0,QuestValue(18502)=2      -> *
 
 "addon",QuestValue(18502)=3         -> "Oh, you also have a nice backpack just like me!"

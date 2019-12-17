@@ -77,7 +77,7 @@ Topic=2                                   -> "Maybe another time."
 
 "addon",QuestValue(18504)=1         -> "Have you brought 50 bear paws and 50 wolf paws?", Topic=3
 "paws",QuestValue(18504)=1      -> *
-Topic=3,"yes",Count(5897)>=50,Count(5896)>=50 -> "Excellent! Like promised, here are your bear paws.", DeleteAmount(5897,50), DeleteAmount(5896,50), SetQuestValue(18504,2), AddOutfitAddon(148,1), AddOutfitAddon(144,1)
+Topic=3,"yes",Count(5897)>=50,Count(5896)>=50 -> "Excellent! Like promised, here are your bear paws.", DeleteAmount(5897,50), DeleteAmount(5896,50), SetQuestValue(18504,2), AddOutfitAddon(148,1), AddOutfitAddon(144,1), EffectOpp(13)
 Topic=3,"yes"					           -> "You don't have required ingredients."
 Topic=3                                   -> "Maybe another time."
 
