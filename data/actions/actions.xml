@@ -156,6 +156,7 @@
 	<action itemid="3059" script="misc/spellbook.lua" />
 	<action fromid="5792" toid="5797" script="misc/dice.lua" />
 	<action itemid="3114" script="misc/skull_candle.lua" />
+	<action itemid="5957" script="misc/lottery_ticket.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />
