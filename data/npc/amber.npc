@@ -68,26 +68,26 @@ Topic=3,"yes",Count(Type)>=Amount -> "Thank you. Orcs call arrows 'pixo'.", Dele
 Topic=3,"yes" -> "You don't have one!"
 Topic=3       -> "Ok, then I don't tell you more about the orcish language."
 
-"addon",QuestValue(18502)=0,premium         -> "Ah, you noticed my new accessory? Sorry, this one is not for sale. It's handmade from rare minotaur leather.", Topic=4
-"backpack",QuestValue(18502)=0,premium      -> *
-"addon",QuestValue(18502)=0         -> "Ah, you noticed my new accessory? Sorry, this one is not for sale."
-"backpack",QuestValue(18502)=0      -> *
+"addon",QuestValue(18502)=0,premium -> "Ah, you noticed my new accessory? Sorry, this one is not for sale. It's handmade from rare minotaur leather.", Topic=4
+"backpack",QuestValue(18502)=0,premium -> *
+"addon",QuestValue(18502)=0 -> "Ah, you noticed my new accessory? Sorry, this one is not for sale."
+"backpack",QuestValue(18502)=0 -> *
 Topic=4,"minotaur","leather" -> "Well, if you really like this backpack, I could make one for you, but minotaur leather is hard to come by these days. Are you willing to put some work into this?", Topic=5
 Topic=5,"yes" -> "Alright then, if you bring me 100 pieces of fine minotaur leather I will see what I can do for you. You probably have to kill really many minotaurs though...",
 				 "so good luck!", SetQuestValue(18502,1)
 				 
-"addon",QuestValue(18502)=1         -> Type=5878, Amount=100, "Ah, right, almost forgot about the backpack! Have you brought me 100 pieces of minotaur leather as requested?", Topic=6
-"backpack",QuestValue(18502)=1      -> *
+"addon",QuestValue(18502)=1 -> Type=5878, Amount=100, "Ah, right, almost forgot about the backpack! Have you brought me 100 pieces of minotaur leather as requested?", Topic=6
+"backpack",QuestValue(18502)=1 -> *
 Topic=6,"yes",Count(Type)>=Amount -> "Great! Alright, I need a while to finish this backpack for you. Come ask me later, okay?", Delete(Type), SetExpiringQuestValue(18503, 7200000), SetQuestValue(18502,2)
-Topic=6,"yes"                   -> "You don't have that many!"
-Topic=6                         -> "Too bad."
+Topic=6,"yes" -> "You don't have that many!"
+Topic=6 -> "Too bad."
 
-"addon",ExpiringQuestValue(18503)>0         -> "Please be patient! I am still working on the backpack details. Come back later, okey?"
-"backpack",ExpiringQuestValue(18503)>0      -> *
+"addon",ExpiringQuestValue(18503)>0 -> "Please be patient! I am still working on the backpack details. Come back later, okey?"
+"backpack",ExpiringQuestValue(18503)>0 -> *
 
-"addon",ExpiringQuestValue(18503)<0,QuestValue(18502)=2         -> "Just in time! Your backpack is finished. Here you go, I hope you like it.", SetQuestValue(18502,3), AddOutfitAddon(136,1), AddOutfitAddon(128,1), EffectOpp(13)
-"backpack",ExpiringQuestValue(18503)<0,QuestValue(18502)=2      -> *
+"addon",ExpiringQuestValue(18503)<0,QuestValue(18502)=2 -> "Just in time! Your backpack is finished. Here you go, I hope you like it.", SetQuestValue(18502,3), AddOutfitAddon(136,1), AddOutfitAddon(128,1), EffectOpp(13)
+"backpack",ExpiringQuestValue(18503)<0,QuestValue(18502)=2 -> *
 
-"addon",QuestValue(18502)=3         -> "Oh, you also have a nice backpack just like me!"
-"backpack",QuestValue(18502)=3      -> *
+"addon",QuestValue(18502)=3 -> "Oh, you also have a nice backpack just like me!"
+"backpack",QuestValue(18502)=3 -> *
 }

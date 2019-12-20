@@ -6,6 +6,9 @@ Home = [32635,32402,10]
 Radius = 1
 
 Behaviour = {
+ADDRESS,"hello$",QuestValue(17549)=0,! -> "The gods must be praised that I am finally saved. I do not have many worldly possessions, but please accept a small reward, do you?", Topic=2
+ADDRESS,"hi$",QuestValue(17549)=0,!    -> *
+ADDRESS,"hiho$",QuestValue(17549)=0,!  -> *
 ADDRESS,"hello$",! -> "The gods must be praised that I am finally saved."
 ADDRESS,"hi$",!    -> *
 ADDRESS,"hiho$",!  -> *
@@ -64,6 +67,9 @@ VANISH,!           -> "May the gods bless you."
 "door"        -> *
 Topic=1,"yes" -> "So be it!", Idle, EffectOpp(11), Teleport(32626,32402,10), EffectOpp(11)
 Topic=1       -> "As you wish."
+
+Topic=2,"yes" -> "I will tell you a small secret now. My friend Lynda in Thais can create a blessed wand. Greet her from me, maybe shewill aid you.", SetQuestValue(17549,1)
+Topic=2       -> "As you wish."
 
 }
 
