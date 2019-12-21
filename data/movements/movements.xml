@@ -424,6 +424,12 @@
 	<movevent event="StepIn" movementid="17527" script="goroma/back_ferumbras_floor.lua" />
 	<movevent event="AddItem" movementid="17527" tileitem="1" script="goroma/back_ferumbras_floor.lua" />
 	
+	<!-- Calassa -->
+	<movevent event="StepIn" frommovementid="14429" tomovementid="14430" script="calassa/calassa_enter.lua" />
+	<movevent event="AddItem" frommovementid="14429" tomovementid="14430" tileitem="1" script="calassa/calassa_enter.lua" />
+	<movevent event="StepIn" movementid="14431" script="calassa/calassa_back.lua" />
+	<movevent event="AddItem" movementid="14431" tileitem="1" script="calassa/calassa_back.lua" />
+	
 	<!-- Liberty Bay -->
 	<movevent event="StepIn" movementid="33217" script="liberty_bay/back_cult_piano.lua" />
 	<movevent event="AddItem" movementid="33217" tileitem="1" script="liberty_bay/back_cult_piano.lua" />

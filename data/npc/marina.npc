@@ -16,6 +16,8 @@ VANISH,!           -> "How rude."
 
 "bye"          -> "Good bye, %N.", Idle
 
+"comb" -> "Sorry, I don't have a spare comb. I lost my favourite one when diving around in Calassa."
+
 # The Mermaid Marina Quest
 "silk","yarn",QuestValue(17504)=0 -> "Um. You mean, you really want me to touch that gooey spider silk just because you need yarn? Well... do you think that I'm pretty?", Topic=1
 Topic=1,"yes"                   -> "Well, everyone would say that in your position. Do you think that I'm really, absolutely the most stunning being that you have ever seen?", Topic=2
