@@ -124,6 +124,7 @@ Topic=4 -> "Maybe another time."
 "mission",QuestValue(17555)=1,male -> *
 "task",QuestValue(17555)=1,male -> *
 Topic=5,"yes",Count(Type)>=Amount -> "Yeah! That's it! I can't wait to give it to her! Oh - but first, I'll fulfil my promise: Here is your scimitar! Thanks again!", Delete(Type), SetQuestValue(17555,2), AddOutfitAddon(146,1), AddOutfitAddon(150,1), EffectOpp(13)
+Topic=5,"yes" -> "You don't have it."
 Topic=5 -> "Maybe another time."
 
 "mission",QuestValue(17555)=2 -> "Sorry but I don't have any tasks for you."

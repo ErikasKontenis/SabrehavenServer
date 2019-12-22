@@ -2,7 +2,7 @@
 # miraia.npc: Datenbank für die Wirtin Miraia
 
 Name = "Miraia"
-Outfit = (136,95-0-7-115)
+Outfit = (150,95-0-7-115-3)
 Home = [33238,32483,7]
 Radius = 1
 
@@ -60,4 +60,55 @@ VANISH,!                   -> "Daraman's blessings. Come back soon."
 Topic=1,"yes",CountMoney>=Price -> "Here it is.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "I am sorry, but you do not have enough gold."
 Topic=1                         -> "Maybe later."
+
+"addon",QuestValue(17557)=5,female -> "Hehe, I like your pretty veil!"
+"outfit",QuestValue(17557)=5,female -> *
+"addon" -> "Hehe, would you like to wear a pretty veil like I do? Well... I could help you, but you would have to complete a task first."
+"outfit" -> *
+
+"mission",male -> "I don't have any tasks available for you handsome."
+"task",male -> *
+
+"mission",QuestValue(17557)=0,female -> "You mean, you would like to prove that you deserve to wear such a veil?", Topic=5
+"task",QuestValue(17557)=0,female -> *
+Topic=5,"yes" -> "Alright, then listen to the following requirements. We are currently in dire need of ape fur since the Caliph has requested a new bathroom carpet. ...",
+				"Thus, please bring me 100 pieces of ape fur. Secondly, it came to our ears that the explorer society has discovered a new undersea race of fishmen. ...",
+				"Their fins are said to allow humans to walk on water! Please bring us 100 of these fish fin. ...",
+				"Third, if the plan of walking on water should fail, we need enchanted chicken wings to prevent the testers from drowning. Please bring me two. ...",
+				"Last but not least, just drop by with 100 pieces of blue cloth and I will happily show you how to create this veil. ...",
+				"Did you understand everything I told you and are willing to handle this task?", Topic=6
+Topic=5 -> "Maybe next time."
+Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 pieces of ape fur.", SetQuestValue(17557,1)
+Topic=6 -> "Maybe next time."
+
+"ape","fur",QuestValue(17557)=1,female -> Type=5883, Amount=100, "Have you really managed to fulfil the task and brought me 100 pieces of ape fur?", Topic=7
+"mission",QuestValue(17557)=1,female -> *
+"task",QuestValue(17557)=1,female -> *
+Topic=7,"yes",Count(Type)>=Amount -> "Ahhh, this softness! I'm impressed, %N. You're on the best way to earn that veil. Now, please retrieve 100 fish fins.", Delete(Type), SetQuestValue(17557,2)
+Topic=7,"yes" -> "You don't have that many."
+Topic=7 -> "Maybe next time."
+
+"fish","fin",QuestValue(17557)=2,female -> Type=5895, Amount=100, "Were you able to discover the undersea race and retrieved 100 fish fins?", Topic=8
+"mission",QuestValue(17557)=2,female -> *
+"task",QuestValue(17557)=2,female -> *
+Topic=8,"yes",Count(Type)>=Amount -> "I never thought you'd make it, %N. Now we only need two enchanted chicken wings to start our waterwalking test!", Delete(Type), SetQuestValue(17557,3)
+Topic=8,"yes" -> "You don't have that many."
+Topic=8 -> "Maybe next time."
+
+"enchanted","chicken","wing",QuestValue(17557)=3,female -> Type=5891, Amount=2, "Were you able to get hold of two enchanted chicken wings?", Topic=9
+"mission",QuestValue(17557)=3,female -> *
+"task",QuestValue(17557)=3,female -> *
+Topic=9,"yes",Count(Type)>=Amount -> "Great, thank you very much. Just bring me 100 pieces of blue cloth now and I will happily show you how to make a veil.", Delete(Type), SetQuestValue(17557,4)
+Topic=9,"yes" -> "You don't have that many."
+Topic=9 -> "Maybe next time."
+
+"blue","cloth",QuestValue(17557)=4,female -> Type=5912, Amount=100, "Ah, have you brought the 100 pieces of blue cloth?", Topic=10
+"mission",QuestValue(17557)=4,female -> *
+"task",QuestValue(17557)=4,female -> *
+Topic=10,"yes",Count(Type)>=Amount -> "Ah! Congratulations - I hope this veil will turn out as beautiful as you are. Here, I'll do it for you.", Delete(Type), SetQuestValue(17557,5), AddOutfitAddon(146,2), AddOutfitAddon(150,2), EffectOpp(13)
+Topic=10,"yes" -> "You don't have that many."
+Topic=10 -> "Maybe next time."
+
+"mission",QuestValue(17557)=5 -> "Sorry but I don't have any tasks for you."
+"task",QuestValue(17557)=5 -> *
 }

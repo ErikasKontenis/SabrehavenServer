@@ -2,7 +2,7 @@
 # razan.npc: Datenbank fuer den Waffenmeister Razan
 
 Name = "Razan"
-Outfit = (129,95-19-10-58)
+Outfit = (146,95-19-10-58-3)
 Home = [33239,32409,7]
 Radius = 2
 
@@ -112,4 +112,55 @@ Topic=4,"yes",Level<SpellLevel(String)    -> Amount=SpellLevel(String), "You hav
 Topic=4,"yes",CountMoney<Price            -> "Return when you have enough gold."
 Topic=4,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=4                                   -> "Maybe next time."
+
+"addon",QuestValue(17557)=5,male -> "Only oriental weaponmasters may wear it. Just like you."
+"outfit",QuestValue(17557)=5,male -> *
+"addon" -> "My turban? Eh no, you can't have it. Only oriental weaponmasters may wear it after having completed a difficult task."
+"outfit" -> *
+
+"mission",female -> "I don't have any tasks available for you my lady."
+"task",female -> *
+
+"mission",QuestValue(17557)=0,male -> "You mean, you would like to prove that you deserve to wear such a turban?", Topic=5
+"task",QuestValue(17557)=0,male -> *
+Topic=5,"yes" -> "Alright, then listen to the following requirements. We are currently in dire need of ape fur since the Caliph has requested a new bathroom carpet. ...",
+				"Thus, please bring me 100 pieces of ape fur. Secondly, it came to our ears that the explorer society has discovered a new undersea race of fishmen. ...",
+				"Their fins are said to allow humans to walk on water! Please bring us 100 of these fish fin. ...",
+				"Third, if the plan of walking on water should fail, we need enchanted chicken wings to prevent the testers from drowning. Please bring me two. ...",
+				"Last but not least, just drop by with 100 pieces of blue cloth and I will happily show you how to make a turban. ...",
+				"Did you understand everything I told you and are willing to handle this task?", Topic=6
+Topic=5 -> "Maybe next time."
+Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 pieces of ape fur.", SetQuestValue(17557,1)
+Topic=6 -> "Maybe next time."
+
+"ape","fur",QuestValue(17557)=1,male -> Type=5883, Amount=100, "Have you really managed to fulfil the task and brought me 100 pieces of ape fur?", Topic=7
+"mission",QuestValue(17557)=1,male -> *
+"task",QuestValue(17557)=1,male -> *
+Topic=7,"yes",Count(Type)>=Amount -> "Ahhh, this softness! I'm impressed, %N. You're on the best way to earn that turban. Now, please retrieve 100 fish fins.", Delete(Type), SetQuestValue(17557,2)
+Topic=7,"yes" -> "You don't have that many."
+Topic=7 -> "Maybe next time."
+
+"fish","fin",QuestValue(17557)=2,male -> Type=5895, Amount=100, "Were you able to discover the undersea race and retrieved 100 fish fins?", Topic=8
+"mission",QuestValue(17557)=2,male -> *
+"task",QuestValue(17557)=2,male -> *
+Topic=8,"yes",Count(Type)>=Amount -> "I never thought you'd make it, %N. Now we only need two enchanted chicken wings to start our waterwalking test!", Delete(Type), SetQuestValue(17557,3)
+Topic=8,"yes" -> "You don't have that many."
+Topic=8 -> "Maybe next time."
+
+"enchanted","chicken","wing",QuestValue(17557)=3,male -> Type=5891, Amount=2, "Were you able to get hold of two enchanted chicken wings?", Topic=9
+"mission",QuestValue(17557)=3,male -> *
+"task",QuestValue(17557)=3,male -> *
+Topic=9,"yes",Count(Type)>=Amount -> "Great, thank you very much. Just bring me 100 pieces of blue cloth now and I will happily show you how to make a turban.", Delete(Type), SetQuestValue(17557,4)
+Topic=9,"yes" -> "You don't have that many."
+Topic=9 -> "Maybe next time."
+
+"blue","cloth",QuestValue(17557)=4,male -> Type=5912, Amount=100, "Ah, have you brought the 100 pieces of blue cloth?", Topic=10
+"mission",QuestValue(17557)=4,male -> *
+"task",QuestValue(17557)=4,male -> *
+Topic=10,"yes",Count(Type)>=Amount -> "Ah! Congratulations - even if you are not a true weaponmaster, you surely deserve to wear this turban. Here, I'll tie it for you.", Delete(Type), SetQuestValue(17557,5), AddOutfitAddon(146,2), AddOutfitAddon(150,2), EffectOpp(13)
+Topic=10,"yes" -> "You don't have that many."
+Topic=10 -> "Maybe next time."
+
+"mission",QuestValue(17557)=5 -> "Sorry but I don't have any tasks for you."
+"task",QuestValue(17557)=5 -> *
 }
