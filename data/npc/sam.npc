@@ -184,13 +184,13 @@ Topic=5,"yes",Count(Type)>=Amount -> "Thank you verry much! This brings back goo
 Topic=5,"yes",Count(Type)<Amount -> "No, you don't have my old backpack. What a pity."
 Topic=5,"no"                             -> "What a pity."
 
-"addon",ExpiringQuestValue(17544)>0         -> "Oh, Gregor sent you? I see. It will be my pleasure to adorn your helmet. Please give me some time to finish it."
-"adorned","helmet",ExpiringQuestValue(17544)>0      -> *
+"addon",ExpiringQuestValue(17544)>0 -> "Oh, Gregor sent you? I see. It will be my pleasure to adorn your helmet. Please give me some time to finish it."
+"adorned","helmet",ExpiringQuestValue(17544)>0 -> *
 
-"addon",ExpiringQuestValue(17544)<0,QuestValue(17542)=5         -> "Just in time, %N. Your helmet is finished, I hope you like it.", SetQuestValue(17542,6), AddOutfitAddon(139,2), AddOutfitAddon(131,2), EffectOpp(13)
-"adorned","helmet",ExpiringQuestValue(17544)<0,QuestValue(17542)=5      -> *
+"addon",ExpiringQuestValue(17544)<0,QuestValue(17542)=5 -> "Just in time, %N. Your helmet is finished, I hope you like it.", SetQuestValue(17542,6), AddOutfitAddon(139,2), AddOutfitAddon(131,2), EffectOpp(13)
+"adorned","helmet",ExpiringQuestValue(17544)<0,QuestValue(17542)=5 -> *
 
-"addon",QuestValue(17542)=6         -> "Sorry, Gregor told me to adorn only one helmet for you and you have already received one."
-"adorned","helmet",QuestValue(17542)=6      -> *
+"addon",QuestValue(17542)=6 -> "Sorry, Gregor told me to adorn only one helmet for you and you have already received one."
+"adorned","helmet",QuestValue(17542)=6 -> *
 
 }

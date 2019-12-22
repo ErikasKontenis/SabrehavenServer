@@ -2,7 +2,7 @@
 # trisha.npc: Datenbank fuer die Ritterin Trisha
 
 Name = "Trisha"
-Outfit = (139,94-67-38-95)
+Outfit = (142,94-67-38-95-1)
 Home = [32348,31748,7]
 Radius = 3
 
@@ -56,4 +56,61 @@ Topic=3,"yes",Level<SpellLevel(String)    -> Amount=SpellLevel(String), "You hav
 Topic=3,"yes",CountMoney<Price            -> "Return when you have enough gold."
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=3                                   -> "Maybe next time."
+
+"addon",QuestValue(17558)=7 -> "You are the true hero to wear the same spiky shoulder pad like I do."
+"outfit",QuestValue(17558)=7 -> *
+"addon" -> "Are you talking about my spiky shoulder pad? You can't buy one of these. They have to be earned."
+"outfit" -> *
+
+"mission",QuestValue(17558)=0 -> "I'm not sure if you are enough of a hero to earn them. You could try, though. What do you think?", Topic=5
+"task",QuestValue(17558)=0 -> *
+"earn",QuestValue(17558)=0 -> *
+Topic=5,"yes" -> "Okay, who knows, maybe you have a chance. A really small one though. Listen up: ...",
+				"First, you have to prove your guts by bringing me 100 hardened bones. ...",
+				"Next, if you actually managed to collect that many, please complete a small task for our guild and bring us 100 turtle shells. ...",
+				"It is said that excellent shields can be created from these. ...",
+				"Alright, um, afterwards show me that you have fighting spirit. Any true hero needs plenty of that. ...",
+				"The last task is the hardest. You will need to bring me a claw from a mighty dragon king. ...",
+				"Did you understand everything I told you and are willing to handle this task?", Topic=6
+Topic=5 -> "Maybe next time."
+Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 hardened bones.", SetQuestValue(17558,1)
+Topic=6 -> "Maybe next time."
+
+"hardened","bone",QuestValue(17558)=1 -> Type=5925, Amount=100, "How are you faring with your mission? Have you collected all 100 hardened bones?", Topic=7
+"mission",QuestValue(17558)=1 -> *
+"task",QuestValue(17558)=1 -> *
+Topic=7,"yes",Count(Type)>=Amount -> "I'm surprised. That's pretty good for a man. Now, bring us the 100 turtle shells.", Delete(Type), SetQuestValue(17558,2)
+Topic=7,"yes" -> "You don't have that many."
+Topic=7 -> "Maybe next time."
+
+"turtle","shell",QuestValue(17558)=2 -> Type=5899, Amount=100, "Did you get us 100 turtle shells so we can make new shields?", Topic=8
+"mission",QuestValue(17558)=2 -> *
+"task",QuestValue(17558)=2 -> *
+Topic=8,"yes",Count(Type)>=Amount,male -> "Well done - for a man. These shells are enough to build many strong new shields. Thank you! Now - show me fighting spirit.", Delete(Type), SetQuestValue(17558,3)
+Topic=8,"yes",Count(Type)>=Amount,female -> "Well done, sister. These shells are enough to build many strong new shields. Thank you! Now - show me fighting spirit.", Delete(Type), SetQuestValue(17558,3)
+Topic=8,"yes" -> "You don't have that many."
+Topic=8 -> "Maybe next time."
+
+"fighting","spirit",QuestValue(17558)=3 -> Type=5884, Amount=1, "So, can you show me your fighting spirit?", Topic=9
+"mission",QuestValue(17558)=3 -> *
+"task",QuestValue(17558)=3 -> *
+Topic=9,"yes",Count(Type)>=Amount,male -> "Correct - pretty smart for a man. But the hardest task is yet to come: the claw from a lord among the dragon lords.", Delete(Type), SetQuestValue(17558,4)
+Topic=9,"yes",Count(Type)>=Amount,female -> "Correct - you are smart sister. But the hardest task is yet to come: the claw from a lord among the dragon lords.", Delete(Type), SetQuestValue(17558,4)
+Topic=9,"yes" -> "You don't have it."
+Topic=9 -> "Maybe next time."
+
+"dragon","claw",QuestValue(17558)=4 -> Type=5919, Amount=1, "Have you actually managed to obtain the dragon claw I asked for?", Topic=10
+"mission",QuestValue(17558)=4 -> *
+"task",QuestValue(17558)=4 -> *
+Topic=10,"yes",Count(Type)>=Amount,male -> "You did it! I have seldom seen a man as courageous as you. I really have to say that you deserve to wear a spike. Go ask Cornelia to adorn your armour.", Delete(Type), SetQuestValue(17558,5)
+Topic=10,"yes",Count(Type)>=Amount,female -> "You did it! I really have to say that you deserve to wear a spike. Go ask Cornelia to adorn your armour.", Delete(Type), SetQuestValue(17558,5)
+Topic=10,"yes" -> "You don't have it."
+Topic=10 -> "Maybe next time."
+
+"mission",QuestValue(17558)=5 -> "Go ask Cornelia to adorn your armour."
+"task",QuestValue(17558)=5 -> *
+"earn",QuestValue(17558)=5 -> *
+
+"mission",QuestValue(17558)=7 -> "Sorry but I don't have any tasks for you."
+"task",QuestValue(17558)=7 -> *
 }
