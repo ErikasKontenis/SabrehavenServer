@@ -1,6 +1,10 @@
 function onUse(player, item, fromPosition, target, toPosition)
 	local chestQuestNumber = item:getAttribute(ITEM_ATTRIBUTE_CHESTQUESTNUMBER)
 	
+	if chestQuestNumber == 0 then
+		return false
+	end
+	
 	if player:getStorageValue(chestQuestNumber) > 0 then
 		player:sendTextMessage(MESSAGE_INFO_DESCR, "The " .. item:getName() .. " is empty.")
 		return true
