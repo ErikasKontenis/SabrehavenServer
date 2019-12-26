@@ -19,8 +19,14 @@ VANISH,!           -> "Oh, two t-trolls. Hellooo, wittle twolls. <hicks>"
 "bye"            -> "T-time for another b-beer. <hicks>", Idle
 "farewell"       -> *
 
-"sober",QuestValue(17562)=0 -> "I wish there was like a potion which makes you sober in an instant. Dwarven rings wear off so fast. <hicks>", Topic=1
+"addon" -> "I can give you a <hicks> scar as an addon. Nyahahah."
+"booze" -> "Did I say booze? I meant, flamingo. <hicks> Pink birds are kinda cool, don't you think? Especially on a painting."
+"flamingo" -> "You have to enjoy the word. Like, flayyyminnngoooo. Say it with me. <hicks>"
+"flayyyminnngoooo" -> "Yes, you got it! Hahaha, we understand each other. Good job. <hicks>"
+"job" -> "I'm a killer! Yeshindeed! A masterful assassin. I prefer that too 'Peekay'. <hicks>"
+"outfit" -> "O-outfit? You already have a t-troll outfit. That's good enough for you. <hicks>"
 
+"sober",QuestValue(17562)=0 -> "I wish there was like a potion which makes you sober in an instant. Dwarven rings wear off so fast. <hicks>", Topic=1
 Topic=1,"potion" -> "It's so hard to know the exact time when to stop drinking.hicks; C-could you help me to brew such a potion?", Topic=2
 Topic=1 -> "I don't think so. <hicks>"
 Topic=2,"yes" -> "You're a true buddy. I promise I will t-try to avoid killing you even if someone asks me to. hicks ...",
@@ -82,6 +88,10 @@ Topic=10,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think 
 Topic=10 -> "Then not. <hicks>"
 
 "secret",QuestValue(17562)=8 -> "Right. <hicks> Since you helped me to b-brew that potion and thus ensured the high quality of my work <hicks>, I'll give you my old assassin costume. It lacks the head part, but it's almost like new. Don't pretend to be me though, 'kay? <hicks>", AddOutfit(152), AddOutfit(156), EffectOpp(13), SetQuestValue(17562,9)
+"mission",QuestValue(17562)=8 -> *
+"task",QuestValue(17562)=8 -> *
 
 "secret",QuestValue(17562)>8 -> "What secret? <hicks>"
+"mission",QuestValue(17562)>8 -> "Sorry. <hicks> I have to start working soon."
+"task",QuestValue(17562)>8 -> *
 }

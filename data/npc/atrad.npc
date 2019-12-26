@@ -6,8 +6,10 @@ Home = [32077,32533,9]
 Radius = 5
 
 Behaviour = {
-ADDRESS,"hello$",Burning>0 -> "Hehe. That\'s a good show, %N, with all the pyro effects. You got my attention. For a minute or so."
+ADDRESS,"hello$",Burning>0 -> "Hehe. That's a good show, %N, with all the pyro effects. You got my attention. For a minute or so."
 ADDRESS,"hi$",Burning>0    -> *
+ADDRESS,"hello$",Burning=0 -> "What the hell are you doing here? Get out, you're not hot enough for my taste.", Idle
+ADDRESS,"hi$",Burning=0    -> *
 ADDRESS,!          -> Idle
 BUSY,"hello$",!    -> "Wait, %N.", Queue
 BUSY,"hi$",!       -> *
@@ -17,5 +19,24 @@ VANISH,!           -> NOP
 "bye"            -> "Bye, %N!", Idle
 "farewell"       -> *
 
+"addon",QuestValue(17562)<16 -> "You don't look like the one for who I should answer about my assassin katana."
+"outfit",QuestValue(17562)<16 -> *
 
+"addon",QuestValue(17562)=17 -> "You managed to deceive Erayo? Impressive. Well, I guess, since you have come that far, I might as well give you a task, too, eh?", Topic=1
+"outfit",QuestValue(17562)=17 -> *
+Topic=1,"yes" -> "Okay, listen. I don't have a list of stupid objects, I just want two things. A behemoth claw and a nose ring. Got that?", Topic=2
+Topic=1 -> "Maybe another time."
+Topic=2,"yes" -> "Good. Come back when you have BOTH. Should be clear where to get a behemoth claw from. There's a horned fox who wears a nose ring. Good luck.", SetQuestValue(17562,18)
+Topic=2 -> "Maybe another time."
+
+"ring",QuestValue(17562)=18,Count(5930)>=1,Count(5804)>=1 -> "I see you brought my stuff. Good. I'll keep my promise: Here's a katana in return.", DeleteAmount(5930, 1), DeleteAmount(5804, 1), SetQuestValue(17562,19), AddOutfitAddon(152,2), AddOutfitAddon(156,2), EffectOpp(13)
+"mission",QuestValue(17562)=18,Count(5930)>=1,Count(5804)>=1 -> *
+"task",QuestValue(17562)=18,Count(5930)>=1,Count(5804)>=1 -> *
+
+"ring",QuestValue(17562)=18 -> "I told you to come back when you have BOTH. A behemoth claw and a nose ring."
+"mission",QuestValue(17562)=18 -> *
+"task",QuestValue(17562)=18 -> *
+
+"mission",QuestValue(17562)=19 -> "I don't have any taks for you right now."
+"task",QuestValue(17562)=19 -> *
 }
