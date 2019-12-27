@@ -77,4 +77,6 @@ Topic=1,"mermaid"                   -> "The mermaid is the most beautiful creatu
 "mission"             -> "Sorry, I don't have any missions for you."
 
 "outfit",QuestValue(17520)=11 -> "Ah, right! The pirate outfit! Here you go, now you are truly one of us.", AddOutfit(155), AddOutfit(151), SetQuestValue(17520,12), EffectOpp(13)
+"outfit",QuestValue(17520)=12 -> "The pirate of the first choice!"
+"addon",QuestValue(17520)=12 -> * 
 }

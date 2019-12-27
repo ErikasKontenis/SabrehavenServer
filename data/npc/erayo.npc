@@ -18,8 +18,8 @@ VANISH,!           -> "Good bye, %N."
 
 "bye"               -> "Good bye, %N.", Idle
 
-"addon",QuestValue(17562)<8 -> "You don't look like the one for who I should answer about my assassin head piece."
-"outfit",QuestValue(17562)<8 -> *
+"addon",QuestValue(17562)<9 -> "You don't look like the one for who I should answer about my assassin head piece."
+"outfit",QuestValue(17562)<9 -> *
 
 "addon",QuestValue(17562)=9 -> "Vescu gave you an assassin outfit? Haha. Noticed it lacks the head piece? You look a bit silly. Want my old head piece?", Topic=1
 "outfit",QuestValue(17562)=9 -> *

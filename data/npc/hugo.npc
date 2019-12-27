@@ -49,4 +49,55 @@ VANISH,!           -> "Good bye, %N."
 "tax"               -> "I don't care about such mundane things like 'taxes'."
 "privilege"         -> "The city was granted a few privileges by the king. I can't even tell which. They don't affect me that much."
 "gambling"          -> "I too love to gamble now and then in the Hard Rock tavern."
+
+"addon",QuestValue(17563)=0 -> "I think I'm having an innovative vision! I feel that people are getting tired of attempting to look wealthy and of displaying their treasures. ...",
+							"A really new and innovative look would be - the 'poor man's look'! I can already see it in front of me... yes... a little ragged... but not too shabby! ...",
+							"I need material right now! Argh - the vision starts to fade... please hurry, can you bring me some stuff?", Topic=1
+"outfit",QuestValue(17563)=0 -> *
+Topic=1,"yes" -> "Good! Listen, I need the following material - first, 20 pieces of brown cloth, like the worn and ragged ghoul clothing. ...",
+				"Secondly, 50 pieces of minotaur leather. Third, I need bat wings, maybe 10. And 30 heaven blossoms, the flowers elves cultivate. ...",
+				"Have you noted down everything and will help me gather the material?", Topic=2
+Topic=1 -> "Maybe another time."
+Topic=2,"yes" -> "Terrific! What are you waiting for?! Start right away to gather 20 pieces of brown cloth and come back once you have them!", SetQuestValue(17563,1)
+Topic=2 -> "Maybe another time."
+
+"brown","cloth",QuestValue(17563)=1 -> Type=5913, Amount=20, "Ah! Have you brought 20 pieces of brown cloth?", Topic=3
+"mission",QuestValue(17563)=1 -> *
+"task",QuestValue(17563)=1 -> *
+Topic=3,"yes",Count(Type)>=Amount -> "Yes, yes, that's it! Very well, now I need 50 pieces of minotaur leather to continue.", Delete(Type), SetQuestValue(17563,2)
+Topic=3,"yes" -> "You don't have that many."
+Topic=3 -> "Maybe another time."
+
+"minotaur","leather",QuestValue(17563)=2 -> Type=5878, Amount=50, "Were you able to obtain 50 pieces of minotaur leather?", Topic=4
+"mission",QuestValue(17563)=2 -> *
+"task",QuestValue(17563)=2 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "Great! This leather will suffice. Now, please, the 10 bat wings.", Delete(Type), SetQuestValue(17563,3)
+Topic=4,"yes" -> "You don't have that many."
+Topic=4 -> "Maybe another time."
+
+"bat","wing",QuestValue(17563)=3 -> Type=5894, Amount=10, "Did you get me the 10 bat wings?", Topic=5
+"mission",QuestValue(17563)=3 -> *
+"task",QuestValue(17563)=3 -> *
+Topic=5,"yes",Count(Type)>=Amount -> "Hooray! These bat wings are ugly enough. Now the last thing: Please bring me 30 heaven blossoms to neutralise the ghoulish stench.", Delete(Type), SetQuestValue(17563,4)
+Topic=5,"yes" -> "You don't have that many."
+Topic=5 -> "Maybe another time."
+
+"heaven","blossom",QuestValue(17563)=4 -> Type=5921, Amount=30, "Is this the lovely smell of 30 heaven blossoms?", Topic=6
+"mission",QuestValue(17563)=4 -> *
+"task",QuestValue(17563)=4 -> *
+Topic=6,"yes",Count(Type)>=Amount -> "This is it! I will immediately start to work on this outfit. Come back in a day or something... then my new creation will be born!", Delete(Type), SetQuestValue(17563,5), SetExpiringQuestValue(17564, 86400000)
+Topic=6,"yes" -> "You don't have that many."
+Topic=6 -> "Maybe another time."
+
+"addon",ExpiringQuestValue(17564)>0 -> "Please be patient! I am still working on this outfit details. Come back later, okey?"
+"outfit",ExpiringQuestValue(17564)>0 -> *
+
+"outfit",ExpiringQuestValue(17564)<0,QuestValue(17563)=5 -> "Eureka! Alas, the poor man's outfit is finished, but... to be honest... it turned out much less appealing than I expected. However, you can have it if you want, okay?", Topic=7
+"mission",ExpiringQuestValue(17564)<0,QuestValue(17563)=5 -> *
+"task",ExpiringQuestValue(17564)<0,QuestValue(17563)=5 -> *
+Topic=7,"yes" -> "Here you go. Maybe you enjoy it after all.", AddOutfit(157), AddOutfit(153), SetQuestValue(17563,6), EffectOpp(13)
+Topic=7 -> "If you change your mind I will keep this outfit for you later."
+
+"mission",QuestValue(17563)>5 -> "I don't have any taks for you right now."
+"task",QuestValue(17563)>5 -> *
 }

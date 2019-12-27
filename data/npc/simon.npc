@@ -2,7 +2,7 @@
 # simon.npc: Datenbank für den Bettler Simon auf der Insel Fibula
 
 Name = "Simon the Beggar"
-Outfit = (128,116-123-32-40)
+Outfit = (153,116-123-32-40-3)
 Home = [32186,32468,7]
 Radius = 4
 
@@ -56,4 +56,77 @@ Topic=3                         -> "Ok. No problem. I'll find another buyer."
 Topic=4,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=4,"yes"                   -> "Come back, when you have enough money."
 Topic=4                         -> "Hmm, but next time."
+
+"addon",QuestValue(17563)<6 -> "My beard should not bother you my friend."
+"outfit",QuestValue(17563)<6 -> *
+"beard",QuestValue(17563)<6 -> *
+
+"addon",QuestValue(17563)=6 -> "Haha, that beard is - well, not fake, but there's a trick behind it. I noticed people tend to be more generous towards a poor gramps. Want to know my trick?", Topic=5
+"outfit",QuestValue(17563)=6 -> *
+"beard",QuestValue(17563)=6 -> *
+Topic=5,"yes",male -> "I can mix a secret potion which will increase your facial hair growth enormeously. I call it 'Instabeard'. However, it requires certain ingredients. ...",
+				"For the small fee of 20000 gold pieces I will help you mix this potion. Just bring me 100 pieces of ape fur, which are necessary to create this potion. ...",
+				"Do we have a deal?", Topic=6
+Topic=5,"yes",female -> "I can mix a secret potion which increases facial hair growth enormeously. I call it 'Instabeard'. However, I fear it works only for men. ...",
+				"Even if it worked on girls, I'd rather not be responsible for you ruining your pretty face. I have an idea though. If you help me brew one of these potions, I sell something nice to you. ...",
+				"I still have a pretty gypsy dress and a pearl necklace somewhere, which you could wear instead of this ragged skirt. For the small fee of 20000 gold pieces, it'd be yours. ...",
+				"You only have to bring me 100 pieces of ape fur, so I can brew the potion. Do we have a deal?", Topic=6
+Topic=5 -> "Maybe another time."
+Topic=6,"yes" -> "Great! Come back to me once you have the 100 pieces of ape fur and I'll do my part of the deal.", SetQuestValue(17563,7)
+Topic=6 -> "Maybe another time."
+
+"ape","fur",QuestValue(17563)=7 -> Type=5883, Amount=100, Price=20000, "Have you brought me the 100 pieces of ape fur and 20000 gold pieces?", Topic=7
+"20000",QuestValue(17563)=7 -> *
+"mission",QuestValue(17563)=7 -> *
+"task",QuestValue(17563)=7 -> *
+"outfit",QuestValue(17563)=7 -> *
+"addon",QuestValue(17563)=7 -> *
+Topic=7,"yes",Count(Type)>=Amount,CountMoney>=Price,male -> "Ahh! Very good. I will start mixing the potion immediately. Come back later. Bye bye.", Delete(Type), DeleteMoney, SetQuestValue(17563,8), Idle
+Topic=7,"yes",Count(Type)>=Amount,CountMoney>=Price,female -> "Ahh! Very good. I will start mixing the potion immediately and sell it to some poor foo- eh, man. Goodbye.", Delete(Type), DeleteMoney, SetQuestValue(17563,8), Idle
+Topic=7,"yes" -> "You do not have all the required items."
+Topic=7 -> "Maybe another time."
+
+"addon",QuestValue(17563)=8,male -> "Hmm, I'm not done yet with your potion. But here, let me sprinkle a few drops of my own potion on your face... there you go. Now you just have to wait.", SetQuestValue(17563,9), SetExpiringQuestValue(17565, 432000000), Idle
+"outfit",QuestValue(17563)=8,male -> *
+"beard",QuestValue(17563)=8,male -> *
+
+"addon",ExpiringQuestValue(17565)>0 -> "Hmm, hmmm, I think you already have a little more hair than the last time I saw you. Just be patient and don't shave. I'm gonna check the progress for you."
+"outfit",ExpiringQuestValue(17565)>0 -> *
+"beard",ExpiringQuestValue(17565)>0 -> *
+
+"outfit",ExpiringQuestValue(17565)<0,QuestValue(17563)=9 -> "Aha! I can see it! Now that you've waited patiently without shaving, your beard is perfect! All thanks to my, err, potion. Yes. Goodbye!", AddOutfitAddon(157,2), AddOutfitAddon(153,2), SetQuestValue(17563,10), EffectOpp(13), Idle
+
+"gypsy","dress",QuestValue(17563)=8,female -> "Oh, I'm sorry... I almost forgot! Okay, okay... here is your promised dress. I'm sure it will look so much better on you than on me- I mean, my, err, sister.", AddOutfitAddon(157,2), AddOutfitAddon(153,2), SetQuestValue(17563,10), EffectOpp(13), Idle
+"outfit",QuestValue(17563)=8,female -> *
+"addon",QuestValue(17563)=8,female -> *
+
+"staff",QuestValue(17563)<10 -> "No, no. It's mine, get your own one!"
+
+"outfit",QuestValue(17563)=10 -> "No, no. Our deal is finished, no complaining now, I don't have time all day. And no, you can't have my staff.", SetQuestValue(17563,11)
+"addon",QuestValue(17563)=10 -> *
+
+"staff",QuestValue(17563)=11 -> "I said, no! Or well - I have a suggestion to make. Will you listen?", Topic=8
+"addon",QuestValue(17563)=11 -> *
+"outfit",QuestValue(17563)=11 -> *
+"mission",QuestValue(17563)=11 -> *
+"task",QuestValue(17563)=11 -> *
+Topic=8,"yes" -> "When I was wandering around in Tibia, I lost my favourite staff somewhere in the northern ruins in Edron. ...",
+				"Uh, don't ask me what I was doing there... sort of a pilgrimage. Well anyway, if you could bring that staff back to me, I promise I'll give you my current one. ...",
+				"What do you say?", Topic=9
+Topic=8 -> "Maybe another time."
+Topic=9,"yes" -> "Good! Come back to me once you have retrieved my staff. Good luck.", SetQuestValue(17563,12), Idle
+Topic=9 -> "Maybe another time."
+
+"staff",QuestValue(17563)=12 -> Type=6107, Amount=1, "Did you bring my favourite staff??", Topic=10
+"mission",QuestValue(17563)=12 -> *
+"task",QuestValue(17563)=12 -> *
+"outfit",QuestValue(17563)=12 -> *
+"addon",QuestValue(17563)=12 -> *
+Topic=10,"yes",Count(Type)>=Amount -> "Yes!! That's it! I'm so glad! Here, you can have my other one. Thanks!", Delete(Type), AddOutfitAddon(157,1), AddOutfitAddon(153,1), SetQuestValue(17563,13), EffectOpp(13), Idle
+Topic=10,"yes" -> "You don't have it."
+Topic=10 -> "Maybe another time."
+
+"mission",QuestValue(17563)=13 -> "Nah, nothing new."
+"task",QuestValue(17563)=13 -> *
+
 }

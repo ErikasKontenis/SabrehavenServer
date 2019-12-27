@@ -198,6 +198,7 @@
 	<action itemid="2472" script="misc/chests.lua" />
 	<action itemid="2479" script="misc/chests.lua" />
 	<action itemid="2480" script="misc/chests.lua" />
+	<action itemid="2482" script="misc/chests.lua" />
 	<action itemid="2543" script="misc/chests.lua" />
 	<action itemid="2544" script="misc/chests.lua" />
 	<action itemid="2545" script="misc/chests.lua" />

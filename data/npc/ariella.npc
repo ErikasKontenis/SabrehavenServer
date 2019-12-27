@@ -28,7 +28,7 @@ VANISH,!           -> "Good bye."
 "blueberry"   -> Type=3588, Amount=1, Price=1, "Do you want to buy blueberry for %P gold?", Topic=1
 "cheese"     -> Type=3607, Amount=1, Price=6, "Do you want to buy cheese for %P gold?", Topic=1
 "ham"      -> Type=3582, Amount=1, Price=8, "Do you want to buy a ham for %P gold?", Topic=1
-"juice squeezer"      -> Type=5865, Amount=1, Price=100, "Do you want to buy a juice squeezer for %P gold?", Topic=1
+"juice","squeezer"      -> Type=5865, Amount=1, Price=100, "Do you want to buy a juice squeezer for %P gold?", Topic=1
 "mango"      -> Type=5096, Amount=1, Price=10, "Do you want to buy a mango for %P gold?", Topic=1
 "meat"      -> Type=3577, Amount=1, Price=5, "Do you want to buy a meat for %P gold?", Topic=1
 "melon"      -> Type=3593, Amount=1, Price=10, "Do you want to buy a melon for %P gold?", Topic=1
@@ -42,7 +42,7 @@ VANISH,!           -> "Good bye."
 %1,1<%1,"blueberr" -> Type=3588, Amount=%1, Price=1*%1, "Do you want to buy %A blueberries for %P gold?", Topic=1
 %1,1<%1,"cheese"   -> Type=3607, Amount=%1, Price=6*%1, "Do you want to buy %A cheese for %P gold?", Topic=1
 %1,1<%1,"ham"    -> Type=3582, Amount=%1, Price=8*%1, "Do you want to buy %A ham for %P gold?", Topic=1
-%1,1<%1,"juice squeezer"    -> Type=5865, Amount=%1, Price=100*%1, "Do you want to buy %A juice squeezers for %P gold?", Topic=1
+%1,1<%1,"juice","squeezer"    -> Type=5865, Amount=%1, Price=100*%1, "Do you want to buy %A juice squeezers for %P gold?", Topic=1
 %1,1<%1,"mango"    -> Type=5096, Amount=%1, Price=10*%1, "Do you want to buy %A mangos for %P gold?", Topic=1
 %1,1<%1,"meat"    -> Type=3577, Amount=%1, Price=5*%1, "Do you want to buy %A meats for %P gold?", Topic=1
 %1,1<%1,"melon"    -> Type=3593, Amount=%1, Price=10*%1, "Do you want to buy %A melons for %P gold?", Topic=1
@@ -56,22 +56,54 @@ Topic=1,"yes",CountMoney>=Price -> "Here it is.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "I am sorry, but you do not have enough gold."
 Topic=1                         -> "Maybe later."
 
+# Meriana_Quest
 "mission",QuestValue(17520)=1,QuestValue(17521)=0 -> "You know, we have plenty of rum here but we lack some basic food. Especially food that easily becomes mouldy is a problem. Bring me 100 breads and you will help me a lot.", SetQuestValue(17521,1)
+"task",QuestValue(17520)=1,QuestValue(17521)=0 -> *
 
 "mission",QuestValue(17521)=1 -> Type=3600, Amount=100, "Are you here to bring me the 100 pieces of bread that I requested?", Topic=2
+"task",QuestValue(17521)=1 -> *
 "bread",QuestValue(17521)=1 -> *
 Topic=2,"yes",Count(Type)>=Amount -> "What a joy. At least for a few days adequate supply is ensured.", Delete(Type), SetQuestValue(17521,2)
-Topic=2,"yes"                     -> "Sorry, you do not have so many."
-Topic=2                           -> "Maybe another time."
+Topic=2,"yes" -> "Sorry, you do not have so many."
+Topic=2 -> "Maybe another time."
 
 "mission",QuestValue(17521)=2 -> "The sailors always tell tales about the famous beer of Carlin. You must know, alcohol is forbidden in that city. ...",
 								 "The beer is served in a secret whisper bar anyway. Bring me a sample of the whisper beer, NOT the usual beer but whisper beer. I hope you are listening.", SetQuestValue(17521,3)
+"task",QuestValue(17521)=2 -> *
 
 "mission",QuestValue(17521)=3 -> Type=6106, Amount=1, "Did you get a sample of the whisper beer from Carlin?", Topic=3
-"bread",QuestValue(17521)=1 -> *
+"task",QuestValue(17521)=3 -> *
+"beer",QuestValue(17521)=3 -> *
 Topic=3,"yes",Count(Type)>=Amount -> "Thank you very much. I will test this beauty in privacy.", Delete(Type), SetQuestValue(17521,4)
-Topic=3,"yes"                     -> "Sorry, you do not have it."
-Topic=3                           -> "Maybe another time."
-								 
-"mission"             -> "Sorry, I don't have any missions for you."
+Topic=3,"yes" -> "Sorry, you do not have it."
+Topic=3 -> "Maybe another time."
+
+# Pirate_Outfit_Quest
+"addon",QuestValue(17520)<12 -> "You mean my hat? Well, first you have to earn our trust."
+"outfit",QuestValue(17520)<12 -> *
+"addon",QuestValue(17568)<2,QuestValue(17520)=12 -> "You mean my hat? Well, I might have another one just like that, but I won't simply give it away, even if you earned our trust. You'd have to fulfil a task first."
+"outfit",QuestValue(17568)<2,QuestValue(17520)=12 -> *
+"addon",QuestValue(17568)=2 -> "You have my respect. You more than deserve the hat."
+"outfit",QuestValue(17568)=2 -> *
+
+"task",QuestValue(17568)=0,QuestValue(17520)=12 -> "Are you up to the task which I'm going to give you and willing to prove you're worthy of wearing such a hat?", Topic=4
+"mission",QuestValue(17568)=0,QuestValue(17520)=12 -> *
+Topic=4,"yes" -> "Alright, listen closely. There are four pirate leaders who have been troubling us for a long time now. ...",
+				"They often lead raids on Liberty Bay and wreck havoc in the settlement - and afterwards, the blame is put on us. ...",
+				"Their names are 'Lethal Lissy', 'Ron the Ripper', 'Brutus Bloodbeard' and 'Deadeye Devious'. ...",
+				"If you can find and kill them all, be sure to retrieve an item from them as proof that you killed them. ...",
+				"Bring me the shirt of Lissy, the sabre of Ron, the hat of Brutus and the eye patch of Deadeye and you will be rewarded. ...",
+				"Have you understood everything I told you and are willing to handle this task?", Topic=5
+Topic=4 -> "Maybe another time."
+Topic=5,"yes" -> "Good! Come back to me once you have all four items and ask me about that task.", SetQuestValue(17568,1)
+Topic=5 -> "Maybe another time."
+
+"mission",QuestValue(17568)=1 -> "Your task is to bring me the shirt of the Lethal Lissy, the sabre of Ron the Ripper, the hat of Brutus Bloodbeard and the eye patch of Deadeye Devious. Did you succeed?", Topic=6
+"task",QuestValue(17568)=1 -> *
+Topic=6,"yes",Count(6100)>=1,Count(6102)>=1,Count(6101)>=1,Count(6099)>=1 -> "INCREDIBLE! You have found all four of them! %N, you have my respect. You more than deserve this hat. There you go.", DeleteAmount(6100,1), DeleteAmount(6102,1), DeleteAmount(6101,1), DeleteAmount(6099,1), SetQuestValue(17568,2), AddOutfitAddon(155,2), AddOutfitAddon(151,2), EffectOpp(13)
+Topic=6,"yes" -> "You don't have all four with you."
+Topic=6 -> "Maybe another time."
+
+"mission" -> "Sorry, I don't have any missions for you."
+"task" -> *
 }

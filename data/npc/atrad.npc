@@ -19,8 +19,8 @@ VANISH,!           -> NOP
 "bye"            -> "Bye, %N!", Idle
 "farewell"       -> *
 
-"addon",QuestValue(17562)<16 -> "You don't look like the one for who I should answer about my assassin katana."
-"outfit",QuestValue(17562)<16 -> *
+"addon",QuestValue(17562)<17 -> "You don't look like the one for who I should answer about my assassin katana."
+"outfit",QuestValue(17562)<17 -> *
 
 "addon",QuestValue(17562)=17 -> "You managed to deceive Erayo? Impressive. Well, I guess, since you have come that far, I might as well give you a task, too, eh?", Topic=1
 "outfit",QuestValue(17562)=17 -> *

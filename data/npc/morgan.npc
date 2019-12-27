@@ -42,4 +42,8 @@ Topic=2,"warrior",QuestValue(17560)=1,Count(5880)>=100,Count(5887)>=1 -> "Alrigh
 Topic=2,"warrior",QuestValue(17560)=1 -> "Great! Simply bring me 100 iron ore and one royal steel and I will happily forge it for you."
 Topic=2,"warrior",QuestValue(17560)=2 -> "Sorry since you already have one sword I will not forge more for you."
 Topic=2 -> "Maybe another time."
+
+"firebird",QuestValue(17567)=4 -> "Ahh. So Duncan sent you, eh? You must have done something really impressive. Okay, take this fine sabre from me, mate.", SetQuestValue(17567,5), AddOutfitAddon(155,1), AddOutfitAddon(151,1), EffectOpp(13)
+"firebird",QuestValue(17567)=5 -> "Shhh! Don't repeat the same like a parrot. That is a codeword!"
+
 }
