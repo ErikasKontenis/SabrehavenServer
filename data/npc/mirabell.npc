@@ -2,7 +2,7 @@
 # mirabell.npc: Datenbank für die Wirtin Mirabell
 
 Name = "Mirabell"
-Outfit = (136,96-12-87-77)
+Outfit = (136,96-12-87-77-0)
 Home = [33174,31801,6]
 Radius = 1
 

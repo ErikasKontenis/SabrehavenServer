@@ -2,7 +2,7 @@
 # chatterbone.npc: Datenbank für den Magiehändler Chatterbone
 
 Name = "Chatterbone"
-Outfit = (18,0-0-0-0)
+Outfit = (18,0-0-0-0-0)
 Home = [32981,32080,6]
 Radius = 2
 

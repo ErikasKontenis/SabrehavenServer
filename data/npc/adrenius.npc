@@ -2,7 +2,7 @@
 # adrenius.npc: Datenbank für den Wüstenpriester Adrenius (Desert)
 
 Name = "Adrenius"
-Outfit = (9,0-0-0-0)
+Outfit = (9,0-0-0-0-0)
 Home = [32660,32112,8]
 Radius = 2
 

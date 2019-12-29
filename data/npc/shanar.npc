@@ -2,7 +2,7 @@
 # shanar.npc: Datenbank für den Schmied Shanar (Elfenstadt)
 
 Name = "Shanar"
-Outfit = (144,0-93-105-76)
+Outfit = (144,0-93-105-76-0)
 Home = [32657,31655,8]
 Radius = 1
 

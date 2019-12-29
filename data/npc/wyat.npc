@@ -2,7 +2,7 @@
 # wyat.npc: Datenbank für den Sheriff von Thais Wyat
 
 Name = "Wyat"
-Outfit = (129,98-96-95-116)
+Outfit = (129,98-96-95-116-0)
 Home = [32325,32276,7]
 Radius = 2
 

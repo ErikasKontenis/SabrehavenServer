@@ -2,7 +2,7 @@
 # billy.npc: Datenbank fuer den Farmer Billy
 
 Name = "Billy"
-Outfit = (128,58-63-58-115)
+Outfit = (128,58-63-58-115-0)
 Home = [32037,32205,7]
 Radius = 3
 

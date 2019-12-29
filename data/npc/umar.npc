@@ -2,7 +2,7 @@
 # umar.npc: Datenbank für den Maridpförtner Umar
 
 Name = "Umar"
-Outfit = (80,0-0-0-0)
+Outfit = (80,0-0-0-0-0)
 Home = [33102,32531,6]
 Radius = 1
 

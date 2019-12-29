@@ -2,7 +2,7 @@
 # Xed.npc: Datenbank für den Bogner Xed
 
 Name = "Xed"
-Outfit = (129,78-36-57-97)
+Outfit = (129,78-36-57-97-0)
 Home = [32904,32117,6]
 Radius = 1
 

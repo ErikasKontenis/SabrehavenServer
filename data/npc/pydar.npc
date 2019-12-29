@@ -2,7 +2,7 @@
 # pydar.npc: Datenbank für den Pyromancer Pydar (Zwergenstadt)
 
 Name = "Pydar"
-Outfit = (160,95-94-132-118)
+Outfit = (160,95-94-132-118-0)
 Home = [32655,31893,11]
 Radius = 2
 

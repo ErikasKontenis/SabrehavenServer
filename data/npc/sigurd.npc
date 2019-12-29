@@ -2,7 +2,7 @@
 # sigurd.npc: Datenbank für den Händler Sigurd
 
 Name = "Sigurd"
-Outfit = (69,0-0-0-0)
+Outfit = (69,0-0-0-0-0)
 Home = [32626,31923,5]
 Radius = 8
 

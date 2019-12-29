@@ -2,7 +2,7 @@
 # bezil.npc: Datenbank für die Händlerin Bezil
 
 Name = "Bezil"
-Outfit = (160,116-79-117-57)
+Outfit = (160,116-79-117-57-0)
 Home = [32657,31909,9]
 Radius = 8
 

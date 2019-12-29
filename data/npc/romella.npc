@@ -2,7 +2,7 @@
 # romella.npc: Datenbank fuer die Waffenhändlerin Romella
 
 Name = "Romella"
-Outfit = (139,79-39-77-115)
+Outfit = (139,79-39-77-115-0)
 Home = [32913,32117,6]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # asima.npc: Datenbank fuer die Magiebedarfshändlerin Asima
 
 Name = "Asima"
-Outfit = (138,97-70-94-76)
+Outfit = (138,97-70-94-76-0)
 Home = [33220,32404,7]
 Radius = 2
 

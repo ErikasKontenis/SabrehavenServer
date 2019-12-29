@@ -2,7 +2,7 @@
 # crone.npc: Bansheevettel in Vashresamuns Grabmal
 
 Name = "The Crone"
-Outfit = (78,0-0-0-0)
+Outfit = (78,0-0-0-0-0)
 Home = [33229,32522,14]
 Radius = 3
 

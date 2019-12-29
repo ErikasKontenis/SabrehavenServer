@@ -2,7 +2,7 @@
 # olrik.npc: Datenbank für den Diener und Postillion Olrik (Elfenstadt)
 
 Name = "Olrik"
-Outfit = (128,115-79-117-76)
+Outfit = (128,115-79-117-76-0)
 Home = [32675,31698,7]
 Radius = 4
 

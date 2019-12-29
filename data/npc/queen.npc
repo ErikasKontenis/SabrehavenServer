@@ -2,7 +2,7 @@
 # queen.npc: Datenbank für die Königin von Carlin
 
 Name = "Queen Eloise"
-Outfit = (138,96-94-79-115)
+Outfit = (138,96-94-79-115-0)
 Home = [32315,31753,7]
 Radius = 2
 

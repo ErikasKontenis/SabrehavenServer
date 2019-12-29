@@ -2,7 +2,7 @@
 # Kasmir.npc: Datenbank für den Priester Kasmir
 
 Name = "Kasmir"
-Outfit = (130,76-0-38-95)
+Outfit = (130,76-0-38-95-0)
 Home = [33212,32452,1]
 Radius = 3
 

@@ -2,7 +2,7 @@
 # feizuhl.npc: Möbelverkäufer Feizuhl in Ankrahmun
 
 Name = "Feizuhl"
-Outfit = (133,98-116-43-95)
+Outfit = (133,98-116-43-95-0)
 Home = [33066,32886,7]
 Radius = 2
 

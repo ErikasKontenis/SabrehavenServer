@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Captain Waverider"
-Outfit = (96,0-0-0-0)
+Outfit = (96,0-0-0-0-0)
 Home = [32131,32914,7]
 Radius = 2
 
@@ -9,6 +9,8 @@ Behaviour = {
 ADDRESS,"hello$",!        -> "Greetings, daring adventurer. If you need a passage, let me know."
 ADDRESS,"hi$",!           -> *
 ADDRESS,!                 -> Idle
+BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32349,32856,7), EffectOpp(11)
+
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
 BUSY,!                    -> NOP
@@ -21,7 +23,7 @@ VANISH,!                  -> "Oh well."
 "sail"          -> "Where do you want to go? To Liberty bay?"
 "passage"          -> *
 
-"liberty bay"       -> Price=50, "Do you seek a passage to Liberty bay for %P?", Topic=1
+"liberty","bay" -> Price=50, "Do you seek a passage to Liberty bay for %P?", Topic=1
 "back" -> *
 "return" -> *
 

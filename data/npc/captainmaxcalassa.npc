@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Captain Max"
-Outfit = (134,95-10-56-77)
+Outfit = (134,95-10-56-77-0)
 Home = [31915,32710,6]
 Radius = 2
 

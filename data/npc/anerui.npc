@@ -2,7 +2,7 @@
 # anerui.npc: Datenbank für die Jägerin Anerui
 
 Name = "Anerui"
-Outfit = (63,0-0-0-0)
+Outfit = (63,0-0-0-0-0)
 Home = [32669,31659,7]
 Radius = 2
 

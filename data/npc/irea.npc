@@ -2,7 +2,7 @@
 # irea.npc: Datenbank für die Bognerin Irea (Elfenstadt)
 
 Name = "Irea"
-Outfit = (64,0-0-0-0)
+Outfit = (64,0-0-0-0-0)
 Home = [32688,31610,7]
 Radius = 3
 

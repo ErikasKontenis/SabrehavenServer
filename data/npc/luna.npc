@@ -2,7 +2,7 @@
 # luna.npc: Datenbank für die Kräuterhändlerin Luna
 
 Name = "Luna"
-Outfit = (137,0-118-100-115)
+Outfit = (137,0-118-100-115-0)
 Home = [33254,31840,5]
 Radius = 2
 

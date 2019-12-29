@@ -2,7 +2,7 @@
 # lily.npc: Datenbank fuer die Druidin Lily
 
 Name = "Lily"
-Outfit = (138,78-101-86-115)
+Outfit = (138,78-101-86-115-0)
 Home = [32068,32225,7]
 Radius = 2
 

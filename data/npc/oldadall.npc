@@ -2,7 +2,7 @@
 # oldadall.npc: Datenbank für den Fährman old adall
 
 Name = "Old Adall"
-Outfit = (130,95-26-115-76)
+Outfit = (130,95-26-115-76-0)
 Home = [32628,32772,7]
 Radius = 2
 

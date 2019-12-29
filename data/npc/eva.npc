@@ -2,7 +2,7 @@
 # eva.npc: Datenbank für die Bankangestellte Eva (Carlin)
 
 Name = "Eva"
-Outfit = (136,96-60-95-0)
+Outfit = (136,96-60-95-0-0)
 Home = [32325,31780,7]
 Radius = 1
 

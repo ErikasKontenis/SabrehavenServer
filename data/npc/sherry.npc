@@ -2,7 +2,7 @@
 # sherry.npc: Datenbank für die Bäuerin Sherry McRonald
 
 Name = "Sherry McRonald"
-Outfit = (136,78-94-38-58)
+Outfit = (136,78-94-38-58-0)
 Home = [32390,32241,7]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # aldee.npc: Datenbank für den Händler Al Dee (Newbie)
 
 Name = "Al Dee"
-Outfit = (128,97-77-87-115)
+Outfit = (128,97-77-87-115-0)
 Home = [32063,32180,7]
 Radius = 1
 

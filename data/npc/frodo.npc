@@ -2,7 +2,7 @@
 # frodo.npc: Datenbank fuer den Wirt Frodo
 
 Name = "Frodo"
-Outfit = (128,58-68-109-131)
+Outfit = (128,58-68-109-131-0)
 Home = [32356,32209,7]
 Radius = 3
 

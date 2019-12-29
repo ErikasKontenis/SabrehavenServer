@@ -2,7 +2,7 @@
 # shalmar.npc: Datenbank fuer den Magier Shalmar
 
 Name = "Shalmar"
-Outfit = (130,95-8-65-0)
+Outfit = (130,95-8-65-0-0)
 Home = [33221,32408,7]
 Radius = 2
 

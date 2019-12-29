@@ -2,7 +2,7 @@
 # Talesia.npc: Datenbank für die Besitzerin des Grünzeugmarktes Talesia
 
 Name = "Talesia"
-Outfit = (138,114-78-77-116)
+Outfit = (138,114-78-77-116-0)
 Home = [32979,32035,5]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # malor.npc: Datenbank für den Efreetkönig Malor
 
 Name = "Malor"
-Outfit = (51,0-0-0-0)
+Outfit = (51,0-0-0-0-0)
 Home = [33044,32621,1]
 Radius = 1
 

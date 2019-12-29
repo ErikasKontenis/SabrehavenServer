@@ -2,7 +2,7 @@
 # edvard.npc: Möbelverkäufer Edvard in Edron
 
 Name = "Edvard"
-Outfit = (128,59-115-96-95)
+Outfit = (128,59-115-96-95-0)
 Home = [33229,31831,7]
 Radius = 3
 

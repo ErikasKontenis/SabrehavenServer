@@ -2,7 +2,7 @@
 # hoggle.npc: Datenbank fuer den Fischer Hoggle
 
 Name = "Hoggle"
-Outfit = (128,20-46-88-94)
+Outfit = (128,20-46-88-94-0)
 Home = [32537,32143,6]
 Radius = 3
 

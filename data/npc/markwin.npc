@@ -2,7 +2,7 @@
 # markwin.npc: Datenbank für den Minokönig Markwin
 
 Name = "Markwin"
-Outfit = (23,0-0-0-0)
+Outfit = (23,0-0-0-0-0)
 Home = [32418,32147,15]
 Radius = 4
 

@@ -2,7 +2,7 @@
 # bozo.npc: Datenbank für den Hofnarren Bozo
 
 Name = "Bozo"
-Outfit = (128,86-93-82-79)
+Outfit = (128,86-93-82-79-0)
 Home = [32313,32183,7]
 Radius = 3
 

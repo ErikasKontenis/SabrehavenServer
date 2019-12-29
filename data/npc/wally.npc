@@ -2,7 +2,7 @@
 # wally.npc: Datenbank für Wally den Postbeamten in der Postlergilde
 
 Name = "Wally"
-Outfit = (129,96-113-95-115)
+Outfit = (129,96-113-95-115-0)
 Home = [32566,32019,7]
 Radius = 2
 

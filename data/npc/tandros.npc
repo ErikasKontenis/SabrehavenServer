@@ -2,7 +2,7 @@
 # tandros.npc: Datenbank für den magierhändler Tandros
 
 Name = "Tandros"
-Outfit = (132,78-79-113-95)
+Outfit = (132,78-79-113-95-0)
 Home = [32621,32739,5]
 Radius = 0
 

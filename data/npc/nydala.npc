@@ -2,7 +2,7 @@
 # nydala.npc: Möbelverkäuferin Nydala in Carlin
 
 Name = "Nydala"
-Outfit = (136,76-86-86-96)
+Outfit = (136,76-86-86-96-0)
 Home = [32327,31827,7]
 Radius = 1
 

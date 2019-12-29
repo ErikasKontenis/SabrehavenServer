@@ -2,7 +2,7 @@
 # chephan.npc: Datenbank für den Küchenbedarfshändler Chephan
 
 Name = "Chephan"
-Outfit = (128,2-26-115-76)
+Outfit = (128,2-26-115-76-0)
 Home = [32890,32077,6]
 Radius = 1
 

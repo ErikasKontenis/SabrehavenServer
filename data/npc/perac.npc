@@ -2,7 +2,7 @@
 # perac.npc: Datenbank für den Bogner Perac
 
 Name = "Perac"
-Outfit = (129,78-52-68-114)
+Outfit = (129,78-52-68-114-0)
 Home = [32295,31784,7]
 Radius = 1
 

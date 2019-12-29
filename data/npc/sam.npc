@@ -2,7 +2,7 @@
 # sam.npc: Datenbank fuer den Schmied Sam
 
 Name = "Sam"
-Outfit = (131,57-112-48-95)
+Outfit = (131,57-112-48-95-0)
 Home = [32360,32199,7]
 Radius = 4
 

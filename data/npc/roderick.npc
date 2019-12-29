@@ -2,7 +2,7 @@
 # roderick.npc: Datenbank für den thaischen Botschafter Roderick of Thais (Elfenstadt)
 
 Name = "Roderick"
-Outfit = (130,38-129-129-19)
+Outfit = (130,38-129-129-19-0)
 Home = [32672,31699,6]
 Radius = 4
 

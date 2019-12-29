@@ -2,7 +2,7 @@
 # lynda.npc: Datenbank für die Priesterin Lynda
 
 Name = "Lynda"
-Outfit = (138,79-83-86-114)
+Outfit = (138,79-83-86-114-0)
 Home = [32333,32200,7]
 Radius = 4
 

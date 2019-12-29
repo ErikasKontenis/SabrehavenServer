@@ -2,7 +2,7 @@
 # hl.npc: Datenbank für den Aufkäufer im Kriminellencamp
 
 Name = "H.L."
-Outfit = (131,12-76-0-95)
+Outfit = (131,12-76-0-95-0)
 Home = [32643,32212,7]
 Radius = 2
 

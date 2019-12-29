@@ -2,7 +2,7 @@
 # iwar.npc: Möbelverkäufer Iwar in Kazordoon
 
 Name = "Iwar"
-Outfit = (160,58-108-63-76)
+Outfit = (160,58-108-63-76-0)
 Home = [32618,31917,8]
 Radius = 3
 

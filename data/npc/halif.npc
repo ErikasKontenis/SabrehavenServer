@@ -2,7 +2,7 @@
 # Halif.npc: Datenbank für den Händler Halif
 
 Name = "Halif"
-Outfit = (128,95-2-10-131)
+Outfit = (128,95-2-10-131-0)
 Home = [33217,32423,7]
 Radius = 0
 

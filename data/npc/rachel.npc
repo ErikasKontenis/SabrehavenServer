@@ -2,7 +2,7 @@
 # rachel.npc: Datenbank für die Magierin Rachel
 
 Name = "Rachel"
-Outfit = (136,58-84-86-114)
+Outfit = (136,58-84-86-114-0)
 Home = [32343,31828,7]
 Radius = 1
 

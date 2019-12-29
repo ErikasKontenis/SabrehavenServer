@@ -2,7 +2,7 @@
 # faluae.npc: Datenbank für die Deraisim-Anführerin Faluae (Elfenstadt)
 
 Name = "Faluae"
-Outfit = (62,0-0-0-0)
+Outfit = (62,0-0-0-0-0)
 Home = [32660,31673,7]
 Radius = 5
 

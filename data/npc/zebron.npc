@@ -2,7 +2,7 @@
 # zebron.npc: Datenbank für den Spieler Zebron
 
 Name = "Zebron"
-Outfit = (128,95-15-109-76)
+Outfit = (128,95-15-109-76-0)
 Home = [32931,32071,9]
 Radius = 2
 

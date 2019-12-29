@@ -2,7 +2,7 @@
 # hofech.npc: Datenbank für den Möbelhändler Hofech in Darashia
 
 Name = "Hofech"
-Outfit = (128,95-2-2-57)
+Outfit = (128,95-2-2-57-0)
 Home = [33270,32441,7]
 Radius = 2
 

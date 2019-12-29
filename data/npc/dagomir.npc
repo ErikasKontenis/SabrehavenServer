@@ -2,7 +2,7 @@
 # dagomir.npc: Datenbank für den "Bankier" Dagomir
 
 Name = "Dagomir"
-Outfit = (130,0-2-41-76)
+Outfit = (130,0-2-41-76-0)
 Home = [33018,32047,5]
 Radius = 0
 

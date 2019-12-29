@@ -2,7 +2,7 @@
 # karl.npc: Datenbank fuer den Wirt der vebotenen Kneipe in Carlin
 
 Name = "Karl"
-Outfit = (128,58-68-109-131)
+Outfit = (128,58-68-109-131-0)
 Home = [32318,31797,8]
 Radius = 3
 

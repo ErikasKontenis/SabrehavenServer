@@ -2,7 +2,7 @@
 # humphrey.npc: Datenbank für den druiden humphrey
 
 Name = "Humphrey"
-Outfit = (133,0-96-101-76)
+Outfit = (133,0-96-101-76-0)
 Home = [32359,31683,6]
 Radius = 4
 

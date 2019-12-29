@@ -2,7 +2,7 @@
 # haroun.npc: Datenbank für den Maridhändler Haroun (Magische Gegenstände, Marid)
 
 Name = "Haroun"
-Outfit = (80,0-0-0-0)
+Outfit = (80,0-0-0-0-0)
 Home = [33108,32525,4]
 Radius = 1
 

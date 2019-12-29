@@ -2,7 +2,7 @@
 # thomas.npc: Datenbank für den Schreibwarenhändler Thomas
 
 Name = "Thomas"
-Outfit = (128,116-11-101-76)
+Outfit = (128,116-11-101-76-0)
 Home = [33256,31838,4]
 Radius = 2
 

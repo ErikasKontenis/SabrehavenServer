@@ -2,7 +2,7 @@
 # muzir.npc: Datenbank für den Wesir Muzir
 
 Name = "Muzir"
-Outfit = (128,95-4-11-76)
+Outfit = (128,95-4-11-76-0)
 Home = [33222,32390,7]
 Radius = 1
 

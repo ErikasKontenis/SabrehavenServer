@@ -2,7 +2,7 @@
 # nemal.npc: Datenbank für den Blinden Nemal (Desert)
 
 Name = "Nemal"
-Outfit = (129,57-97-45-115)
+Outfit = (129,57-97-45-115-0)
 Home = [32615,32108,10]
 Radius = 4
 

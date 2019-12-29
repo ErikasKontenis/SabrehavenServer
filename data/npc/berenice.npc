@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Berenice"
-Outfit = (140,5-87-104-106)
+Outfit = (140,5-87-104-106-0)
 Home = [32359,32812,7]
 Radius = 2
 

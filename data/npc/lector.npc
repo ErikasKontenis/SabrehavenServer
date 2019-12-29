@@ -2,7 +2,7 @@
 # lector.npc: Datenbank für den Metzger Lector
 
 Name = "Lector"
-Outfit = (128,79-38-0-124)
+Outfit = (128,79-38-0-124-0)
 Home = [32351,31795,7]
 Radius = 3
 

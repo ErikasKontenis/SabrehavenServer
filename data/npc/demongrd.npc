@@ -2,7 +2,7 @@
 # demongrd.npc: Datenbank für den Demonguard
 
 Name = "Demonguard"
-Outfit = (131,113-113-94-113)
+Outfit = (131,113-113-94-113-0)
 Home = [32854,32318,10]
 Radius = 0
 

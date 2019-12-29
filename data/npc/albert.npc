@@ -2,7 +2,7 @@
 # albert.npc: Datenbank für den Heiler Albert
 
 Name = "Albert"
-Outfit = (130,78-0-49-95)
+Outfit = (130,78-0-49-95-0)
 Home = [33312,31762,7]
 Radius = 3
 

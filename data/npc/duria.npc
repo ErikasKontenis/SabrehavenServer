@@ -2,7 +2,7 @@
 # duria.npc: Datenbank fuer die Ritterin Duria
 
 Name = "Duria"
-Outfit = (70,0-0-0-0)
+Outfit = (70,0-0-0-0-0)
 Home = [32617,31938,8]
 Radius = 3
 

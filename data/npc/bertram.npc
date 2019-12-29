@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Bertram"
-Outfit = (132,57-114-0-114)
+Outfit = (132,57-114-0-114-0)
 Home = [32355,32797,7]
 Radius = 3
 

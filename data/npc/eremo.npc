@@ -2,7 +2,7 @@
 # eremo.npc: Datenbank für den Weisen Eremo
 
 Name = "Eremo"
-Outfit = (130,0-109-128-95)
+Outfit = (130,0-109-128-95-0)
 Home = [33322,31883,7]
 Radius = 3
 

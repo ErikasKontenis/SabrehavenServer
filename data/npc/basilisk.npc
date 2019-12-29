@@ -2,7 +2,7 @@
 # basilisk.npc: Datenbank für den Basilisken
 
 Name = "Basilisk"
-Outfit = (28,0-0-0-0)
+Outfit = (28,0-0-0-0-0)
 Home = [32641,31943,15]
 Radius = 2
 

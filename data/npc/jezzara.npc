@@ -2,7 +2,7 @@
 # jezzara.npc: Datenbank für die pyramidenhändlerin Jezzara
 
 Name = "Jezzara"
-Outfit = (138,3-43-91-97)
+Outfit = (138,3-43-91-97-0)
 Home = [33126,32821,6]
 Radius = 2
 

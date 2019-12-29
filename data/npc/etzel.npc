@@ -2,7 +2,7 @@
 # etzel.npc: Datenbank für den Magier Etzel
 
 Name = "Etzel"
-Outfit = (66,0-0-0-0)
+Outfit = (66,0-0-0-0-0)
 Home = [32626,31917,5]
 Radius = 3
 

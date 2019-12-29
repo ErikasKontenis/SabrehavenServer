@@ -2,7 +2,7 @@
 # Nelliem.npc: Datenbank für den Gartenbedarfhändler Nelliem
 
 Name = "Nelliem"
-Outfit = (160,115-100-105-76)
+Outfit = (160,115-100-105-76-0)
 Home = [32883,32086,6]
 Radius = 2
 

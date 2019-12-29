@@ -2,7 +2,7 @@
 # king.npc: Datenbank für den König von Tibia
 
 Name = "King Tibianus"
-Outfit = (130,21-87-107-95)
+Outfit = (130,21-87-107-95-0)
 Home = [32311,32171,6]
 Radius = 1
 

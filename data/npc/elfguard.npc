@@ -2,7 +2,7 @@
 # elfguard.npc: Datenbank für die Elfenwache in Ab'Dendriel
 
 Name = "Elf Guard"
-Outfit = (63,0-0-0-0)
+Outfit = (63,0-0-0-0-0)
 Home = [32642,31709,6]
 Radius = 3
 

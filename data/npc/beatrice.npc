@@ -2,7 +2,7 @@
 # beatrice.npc: Datenbank fuer die Ausruestungshaendlerin Beatrice
 
 Name = "Beatrice"
-Outfit = (136,96-102-69-95)
+Outfit = (136,96-102-69-95-0)
 Home = [33214,31803,6]
 Radius = 3
 

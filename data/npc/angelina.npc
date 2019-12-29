@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 # angelina.npc: Datenbank für die gefangene der dunklen mönche Angelina
 Name = "Angelina"
-Outfit = (136,57-79-98-95)
+Outfit = (136,57-79-98-95-0)
 Home = [32635,32402,10]
 Radius = 1
 

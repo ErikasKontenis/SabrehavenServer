@@ -2,7 +2,7 @@
 # ormuhn.npc: Datenbank für die arenaleiter ormuhn
 
 Name = "Ormuhn"
-Outfit = (18,0-0-0-0)
+Outfit = (18,0-0-0-0-0)
 Home = [33160,32810,5]
 Radius = 2
 

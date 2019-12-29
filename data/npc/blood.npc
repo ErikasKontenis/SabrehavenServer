@@ -2,7 +2,7 @@
 # blood.npc: Datenbank für General Harkath Bloodblade
 
 Name = "Harkath Bloodblade"
-Outfit = (131,76-38-38-76)
+Outfit = (131,76-38-38-76-0)
 Home = [32342,32184,7]
 Radius = 2
 

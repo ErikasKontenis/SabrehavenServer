@@ -2,7 +2,7 @@
 # tesha.npc: Datenbank für die pyramidenhändlerin Tesha
 
 Name = "Tesha"
-Outfit = (140,77-32-81-93)
+Outfit = (140,77-32-81-93-0)
 Home = [33135,32821,6]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # memech.npc: Datenbank für den pyramidenhändler(waffen) Memech
 
 Name = "Memech"
-Outfit = (131,21-21-40-116)
+Outfit = (131,21-21-40-116-0)
 Home = [33135,32810,6]
 Radius = 2
 

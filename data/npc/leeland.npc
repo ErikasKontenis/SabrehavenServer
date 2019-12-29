@@ -2,7 +2,7 @@
 # leeland.npc: Datenbank für den Besitzer des allgemeinen Markts Leeland Slim
 
 Name = "Leeland"
-Outfit = (130,19-36-96-76)
+Outfit = (130,19-36-96-76-0)
 Home = [32883,32082,5]
 Radius = 1
 

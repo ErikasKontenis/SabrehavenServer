@@ -2,7 +2,7 @@
 # apparition.npc: Datenbank für einen Geist
 
 Name = "An Apparition"
-Outfit = (48,0-0-0-0)
+Outfit = (48,0-0-0-0-0)
 Home = [32204,31788,5]
 Radius = 7
 

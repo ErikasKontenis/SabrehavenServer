@@ -2,7 +2,7 @@
 # mehkesh.npc: Datenbank für den pyramidenhändler mehkesh
 
 Name = "Mehkesh"
-Outfit = (130,19-92-113-40)
+Outfit = (130,19-92-113-40-0)
 Home = [33130,32811,5]
 Radius = 2
 

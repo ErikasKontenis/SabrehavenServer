@@ -2,7 +2,7 @@
 # lea.npc: Datenbank für die Magierin Lea
 
 Name = "Lea"
-Outfit = (138,59-95-94-113)
+Outfit = (138,59-95-94-113-0)
 Home = [32348,31828,6]
 Radius = 3
 

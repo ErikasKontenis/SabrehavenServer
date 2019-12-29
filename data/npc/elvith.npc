@@ -2,7 +2,7 @@
 # elvith.npc: Datenbank für den Musiker Elvith
 
 Name = "Elvith"
-Outfit = (144,76-3-0-76)
+Outfit = (144,76-3-0-76-0)
 Home = [32669,31607,7]
 Radius = 1
 

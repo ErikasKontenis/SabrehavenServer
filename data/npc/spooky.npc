@@ -2,7 +2,7 @@
 # sooky.npc: Datenbank für die Gespensterfrau
 
 Name = "A Ghostly Woman"
-Outfit = (136,0-0-0-0)
+Outfit = (136,0-0-0-0-0)
 Home = [32191,31811,5]
 Radius = 7
 

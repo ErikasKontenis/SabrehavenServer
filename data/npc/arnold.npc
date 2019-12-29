@@ -2,7 +2,7 @@
 # arnold.npc: Datenbank für eine Stadtwache in Venore
 
 Name = "Arnold"
-Outfit = (131,113-113-113-115)
+Outfit = (131,113-113-113-115-0)
 Home = [32945,32070,6]
 Radius = 6
 

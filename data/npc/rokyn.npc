@@ -2,7 +2,7 @@
 # rokyn.npc: Datenbank für den Bankangestellten Rokyn
 
 Name = "Rokyn"
-Outfit = (160,58-87-57-95)
+Outfit = (160,58-87-57-95-0)
 Home = [33021,32053,6]
 Radius = 2
 

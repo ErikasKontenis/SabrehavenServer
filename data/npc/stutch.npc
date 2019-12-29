@@ -2,7 +2,7 @@
 # stutch.npc: Datenbank für den Wachmann Stutch
 
 Name = "Stutch"
-Outfit = (131,79-79-79-79)
+Outfit = (131,79-79-79-79-0)
 Home = [32310,32170,6]
 Radius = 0
 

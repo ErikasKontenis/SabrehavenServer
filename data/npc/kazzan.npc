@@ -2,7 +2,7 @@
 # kazzan.npc: Datenbank für Kalif Kazzan
 
 Name = "Kazzan"
-Outfit = (130,95-13-15-76)
+Outfit = (130,95-13-15-76-0)
 Home = [33231,32389,6]
 Radius = 1
 

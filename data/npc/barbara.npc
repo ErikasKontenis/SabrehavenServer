@@ -2,7 +2,7 @@
 # barbara.npc: Datenbank für die Wachfrau Barbara
 
 Name = "Barbara"
-Outfit = (139,78-52-64-115)
+Outfit = (139,78-52-64-115-0)
 Home = [32320,31752,7]
 Radius = 0
 

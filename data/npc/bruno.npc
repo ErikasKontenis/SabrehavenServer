@@ -2,7 +2,7 @@
 # bruno.npc: Der Fischverkäufer Bruno (Fields)
 
 Name = "Bruno"
-Outfit = (128,113-10-95-95)
+Outfit = (128,113-10-95-95-0)
 Home = [32486,31604,7]
 Radius = 1
 

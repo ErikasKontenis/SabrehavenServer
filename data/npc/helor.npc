@@ -2,7 +2,7 @@
 # helor.npc: Datenbank für den Paladinlehrer Helor
 
 Name = "Helor"
-Outfit = (134,57-79-95-98)
+Outfit = (134,57-79-95-98-0)
 Home = [32572,32753,6]
 Radius = 1
 

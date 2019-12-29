@@ -5,7 +5,7 @@
 #WICHTIG: Riddler MUSSS bei rätseln nach EINEM GANZEN WORT fragen, sonst geht cheat
 
 Name = "Riddler"
-Outfit = (48,0-0-0-0)
+Outfit = (48,0-0-0-0-0)
 Home = [32479,31902,2]
 Radius = 5
 

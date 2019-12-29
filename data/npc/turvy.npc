@@ -2,7 +2,7 @@
 # Turvy.npc: Datenbank für shopkeeper Turvy (weaponry)
 
 Name = "Turvy"
-Outfit = (139,78-52-64-115)
+Outfit = (139,78-52-64-115-0)
 Home = [32414,32177,7]
 Radius = 2
 

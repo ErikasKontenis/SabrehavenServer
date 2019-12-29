@@ -2,7 +2,7 @@
 # sarina.npc: Datenbank für die Händlerin Sarina
 
 Name = "Sarina"
-Outfit = (136,41-72-95-96)
+Outfit = (136,41-72-95-96-0)
 Home = [32334,31808,7]
 Radius = 1
 

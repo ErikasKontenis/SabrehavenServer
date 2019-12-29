@@ -2,7 +2,7 @@
 # gabel.npc: Datenbank für den Djinnkönig Gabel
 
 Name = "Gabel"
-Outfit = (80,0-0-0-0)
+Outfit = (80,0-0-0-0-0)
 Home = [33102,32520,1]
 Radius = 1 
 

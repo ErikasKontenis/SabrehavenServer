@@ -2,7 +2,7 @@
 # dario.npc: Datenbank fuer den elfen dario in der arena (ankrahmun)
 
 Name = "Dario"
-Outfit = (144,3-58-41-115)
+Outfit = (144,3-58-41-115-0)
 Home = [33156,32810,4]
 Radius = 1
 

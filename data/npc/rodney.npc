@@ -2,7 +2,7 @@
 # rodney.npc: Datenbank für den Lebensmittelhändler Rodney
 
 Name = "Rodney"
-Outfit = (128,95-100-116-76)
+Outfit = (128,95-100-116-76-0)
 Home = [32971,32041,6]
 Radius = 1
 

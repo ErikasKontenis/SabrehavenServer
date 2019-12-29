@@ -2,7 +2,7 @@
 # hugo.npc: Datenbank für den Besitzer des Modehauses Hugo Chief
 
 Name = "Hugo"
-Outfit = (130,14-81-80-93)
+Outfit = (130,14-81-80-93-0)
 Home = [32951,32103,5]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # oswald.npc: Datenbank für Durin-Helfer Oswald
 
 Name = "Oswald"
-Outfit = (128,115-0-67-114)
+Outfit = (128,115-0-67-114-0)
 Home = [32381,32220,7]
 Radius = 2
 

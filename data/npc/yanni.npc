@@ -2,7 +2,7 @@
 # yanni.npc: Datenbank für den Waffenhändler Yanni
 
 Name = "Yanni"
-Outfit = (131,22-22-22-57)
+Outfit = (131,22-22-22-57-0)
 Home = [32909,32111,6]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # gail.npc: Datenbank für die edelsteinhändlerin gail
 
 Name = "Gail"
-Outfit = (140,77-64-52-95)
+Outfit = (140,77-64-52-95-0)
 Home = [32621,32738,6]
 Radius = 0
 

@@ -2,7 +2,7 @@
 # arito.npc: Datenbank fuer den Wirt Arito
 
 Name = "Arito"
-Outfit = (132,59-74-62-115)
+Outfit = (132,59-74-62-115-0)
 Home = [33069,32886,6]
 Radius = 3
 

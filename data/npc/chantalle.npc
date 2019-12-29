@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Chantalle"
-Outfit = (140,79-37-71-70)
+Outfit = (140,79-37-71-70-0)
 Home = [32363,32792,7]
 Radius = 1
 

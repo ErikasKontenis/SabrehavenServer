@@ -2,7 +2,7 @@
 # ashtamor.npc: Krematoriumsbesitzer Ashtamor
 
 Name = "Ashtamor"
-Outfit = (130,19-114-76-114)
+Outfit = (130,19-114-76-114-0)
 Home = [32958,32088,6]
 Radius = 1
 

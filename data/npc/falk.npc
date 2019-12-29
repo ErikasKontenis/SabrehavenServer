@@ -2,7 +2,7 @@
 # falk.npc: Datenbank für den Wachmann/Fremdenführer Falk
 
 Name = "Falk"
-Outfit = (131,76-11-11-76)
+Outfit = (131,76-11-11-76-0)
 Home = [33190,31777,7]
 Radius = 3
 

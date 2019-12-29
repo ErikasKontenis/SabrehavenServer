@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Admiral Wyrmslicer"
-Outfit = (132,19-113-112-114)
+Outfit = (132,19-113-112-114-0)
 Home = [32396,32821,3]
 Radius = 4
 

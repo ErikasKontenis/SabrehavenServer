@@ -2,7 +2,7 @@
 # kawill.npc: Datenbank für den Geomancer Kawill (Zwergenstadt)
 
 Name = "Kawill"
-Outfit = (66,0-0-0-0)
+Outfit = (66,0-0-0-0-0)
 Home = [32644,31969,12]
 Radius = 2
 

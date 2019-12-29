@@ -2,7 +2,7 @@
 # maealil.npc: Datenbank für die Mystikerin Maealil (Elfenstadt)
 
 Name = "Maealil"
-Outfit = (63,0-0-0-0)
+Outfit = (63,0-0-0-0-0)
 Home = [32732,31631,7]
 Radius = 3
 

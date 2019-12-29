@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Torence"
-Outfit = (128,79-37-116-76)
+Outfit = (128,79-37-116-76-0)
 Home = [32181,32829,7]
 Radius = 8
 

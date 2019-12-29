@@ -2,7 +2,7 @@
 # shirith.npc: Datenbank für den Minenleiter Shirith (Elfenstadt)
 
 Name = "Shirith"
-Outfit = (144,59-97-58-76)
+Outfit = (144,59-97-58-76-0)
 Home = [32646,31655,9]
 Radius = 3
 

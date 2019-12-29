@@ -2,7 +2,7 @@
 # hairycles.npc: Datenbank für den Affen Hairycles
 
 Name = "Hairycles"
-Outfit = (117,0-0-0-0)
+Outfit = (117,0-0-0-0-0)
 Home = [32826,32574,6]
 Radius = 1
 

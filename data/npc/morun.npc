@@ -2,7 +2,7 @@
 # morun.npc: Datenbank für die Stadtwache Morun in Darashia
 
 Name = "Morun"
-Outfit = (129,95-5-26-76)
+Outfit = (129,95-5-26-76-0)
 Home = [33240,32393,6]
 Radius = 2
 

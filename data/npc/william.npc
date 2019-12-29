@@ -2,7 +2,7 @@
 # william.npc: Datenbank für den carlin trunkenbold William
 
 Name = "William"
-Outfit = (128,115-0-67-114)
+Outfit = (128,115-0-67-114-0)
 Home = [32314,31802,8]
 Radius = 3
 

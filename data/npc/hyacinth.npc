@@ -2,7 +2,7 @@
 # hyacinth.npc: Datenbank fuer den Druiden Hyacinth
 
 Name = "Hyacinth"
-Outfit = (130,11-123-123-94)
+Outfit = (130,11-123-123-94-0)
 Home = [32137,32171,4]
 Radius = 1
 

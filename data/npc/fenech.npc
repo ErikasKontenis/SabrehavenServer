@@ -2,7 +2,7 @@
 # fenech.npc: Datenbank für den pyramidenhändler Fenech
 
 Name = "Fenech"
-Outfit = (132,76-40-49-117)
+Outfit = (132,76-40-49-117-0)
 Home = [33131,32820,5]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # jeanclaude.npc: Datenbank für eine Stadtwache in Venore
 
 Name = "Jean Claude"
-Outfit = (131,113-113-113-115)
+Outfit = (131,113-113-113-115-0)
 Home = [33006,32053,6]
 Radius = 5
 

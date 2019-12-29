@@ -2,7 +2,7 @@
 # trimegis.npc: Datenbank fuer den Hofmagier Trimegis in Thais
 
 Name = "Trimegis"
-Outfit = (130,57-109-94-0)
+Outfit = (130,57-109-94-0-0)
 Home = [32307,32185,5]
 Radius = 1
 

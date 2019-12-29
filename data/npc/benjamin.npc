@@ -2,7 +2,7 @@
 # benjamin.npc: Datenbank für den Postmann Benjamin
 
 Name = "Benjamin"
-Outfit = (128,116-79-117-76)
+Outfit = (128,116-79-117-76-0)
 Home = [32350,32219,7]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # aneus.npc: Datenbank für den Geschichtenerzähler Aneus (Fields)
 
 Name = "Aneus"
-Outfit = (129,0-50-58-116)
+Outfit = (129,0-50-58-116-0)
 Home = [32426,31666,7]
 Radius = 1
 

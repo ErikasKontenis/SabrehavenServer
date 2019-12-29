@@ -2,7 +2,7 @@
 # dabui.npc: Datenbank für die Stadtwache Dabui in Darashia
 
 Name = "Dabui"
-Outfit = (129,95-10-26-76)
+Outfit = (129,95-10-26-76-0)
 Home = [33229,32409,7]
 Radius = 1
 

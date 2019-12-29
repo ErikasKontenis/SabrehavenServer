@@ -2,7 +2,7 @@
 # ulrik.npc: Datenbank für den Schmied Ulrik in Greenshore
 
 Name = "Ulrik"
-Outfit = (131,60-70-97-95)
+Outfit = (131,60-70-97-95-0)
 Home = [32282,32056,7]
 Radius = 2
 

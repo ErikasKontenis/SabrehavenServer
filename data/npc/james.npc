@@ -2,7 +2,7 @@
 # james.npc: Datenbank für den Bauern James auf Edron
 
 Name = "James"
-Outfit = (128,115-41-45-118)
+Outfit = (128,115-41-45-118-0)
 Home = [33280,31771,7]
 Radius = 2
 

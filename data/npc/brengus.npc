@@ -2,7 +2,7 @@
 # Brengus.npc: Datenbank für den waffen und rüstungshändler Brengus
 
 Name = "Brengus"
-Outfit = (132,79-57-57-95)
+Outfit = (132,79-57-57-95-0)
 Home = [32634,32747,6]
 Radius = 0
 

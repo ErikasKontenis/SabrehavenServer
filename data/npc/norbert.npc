@@ -2,7 +2,7 @@
 # norbert.npc: Datenbank für den Schneider Norbert
 
 Name = "Norbert"
-Outfit = (128,6-79-93-14)
+Outfit = (128,6-79-93-14-0)
 Home = [32953,32103,6]
 Radius = 1
 

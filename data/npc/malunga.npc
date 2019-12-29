@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Malunga"
-Outfit = (149,95-78-3-2)
+Outfit = (149,95-78-3-2-0)
 Home = [32345,32809,5]
 Radius = 3
 

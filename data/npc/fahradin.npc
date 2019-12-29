@@ -2,7 +2,7 @@
 # fahradin.npc: Datenbank für den Maridzauberer Fa'hradin
 
 Name = "Fa'hradin"
-Outfit = (80,0-0-0-0)
+Outfit = (80,0-0-0-0-0)
 Home = [33106,32541,5]
 Radius = 1
 

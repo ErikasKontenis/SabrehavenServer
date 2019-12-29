@@ -2,7 +2,7 @@
 # ubaid.npc: Datenbank für den Efreetpförtner Ubaid
 
 Name = "Ubaid"
-Outfit = (51,0-0-0-0)
+Outfit = (51,0-0-0-0-0)
 Home = [33046,32622,6]
 Radius = 1
 

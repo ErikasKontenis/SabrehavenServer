@@ -2,7 +2,7 @@
 # cipfried.npc: Datenbank fuer den Moench Cipfried
 
 Name = "Cipfried"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32097,32217,7]
 Radius = 1
 

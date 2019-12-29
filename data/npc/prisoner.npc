@@ -2,7 +2,7 @@
 # prisoner.npc: Datenbank für den Prisoner alias Mad Mage
 
 Name = "A Prisoner"
-Outfit = (130,81-40-55-94)
+Outfit = (130,81-40-55-94-0)
 Home = [32393,32137,13] 
 Radius = 2
 

@@ -2,7 +2,7 @@
 # Azil.npc: Datenbank für den Rüstungshändler Azil
 
 Name = "Azil"
-Outfit = (129,95-10-12-119)
+Outfit = (129,95-10-12-119-0)
 Home = [33217,32431,7]
 Radius = 0
 

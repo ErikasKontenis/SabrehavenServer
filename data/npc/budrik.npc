@@ -2,7 +2,7 @@
 # budrik.npc: Datenbank für den Minenvorsteher Budrik 
 
 Name = "Budrik"
-Outfit = (160,94-76-58-95)
+Outfit = (160,94-76-58-95-0)
 Home = [32524,31906,8]
 Radius = 4
 

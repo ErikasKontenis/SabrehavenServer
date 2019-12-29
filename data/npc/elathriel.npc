@@ -2,7 +2,7 @@
 # erathriel.npc: Datenbank für den Kuridai-Anführer Elathriel (Elfenstadt)
 
 Name = "Elathriel"
-Outfit = (64,0-0-0-0)
+Outfit = (64,0-0-0-0-0)
 Home = [32684,31671,9]
 Radius = 4
 

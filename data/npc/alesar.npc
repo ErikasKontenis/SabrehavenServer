@@ -2,7 +2,7 @@
 # alesar.npc: Datenbank für den Djinnschmied Alesar (Waffen und Rüstungen, Efreet)
 
 Name = "Alesar"
-Outfit = (80,0-0-0-0)
+Outfit = (80,0-0-0-0-0)
 Home = [33048,32621,5]
 Radius = 1 
 

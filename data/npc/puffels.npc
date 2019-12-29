@@ -2,7 +2,7 @@
 # puffels.npc Datenbank fuer den Zauberlehrer Puffels
 
 Name = "Puffels"
-Outfit = (21,0-0-0-0)
+Outfit = (21,0-0-0-0-0)
 Home = [33269,31850,8]
 Radius = 4
 

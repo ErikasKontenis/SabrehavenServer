@@ -2,7 +2,7 @@
 # kevin.npc: Datenbank für Kevin Postner den Anführer der Postlergilde
 
 Name = "Kevin"
-Outfit = (128,76-43-38-76)
+Outfit = (128,76-43-38-76-0)
 Home = [32569,32018,6]
 Radius = 2
 

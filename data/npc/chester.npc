@@ -2,7 +2,7 @@
 # chester.npc: Datenbank für Chester, den Chef des TBI
 
 Name = "Chester Kahs"
-Outfit = (131,10-28-47-95)
+Outfit = (131,10-28-47-95-0)
 Home = [32348,32184,6]
 Radius =2
 

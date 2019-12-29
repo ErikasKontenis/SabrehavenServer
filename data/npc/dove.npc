@@ -2,7 +2,7 @@
 # dove.npc: Datenbank für die Postbeamtin Dove
 
 Name = "Dove"
-Outfit = (136,59-86-106-115)
+Outfit = (136,59-86-106-115-0)
 Home = [32919,32075,7]
 Radius = 1
 

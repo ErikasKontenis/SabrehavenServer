@@ -2,7 +2,7 @@
 # obi.npc: Datenbank für den Händler Obi
 
 Name = "Obi"
-Outfit = (128,39-63-96-38)
+Outfit = (128,39-63-96-38-0)
 Home = [32109,32204,7]
 Radius = 1
 

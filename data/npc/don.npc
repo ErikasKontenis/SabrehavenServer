@@ -2,7 +2,7 @@
 # don.npc: Datenbank fuer den Bauern Donald McRonald
 
 Name = "Donald McRonald"
-Outfit = (128,41-94-79-76)
+Outfit = (128,41-94-79-76-0)
 Home = [32391,32229,7]
 Radius = 3
 
