@@ -158,7 +158,7 @@ topic=2       -> "Uh?"
 "yes", topic=16               -> "Hairycles sure you will make it. Just use hammer on all that looks like snake or lizard. Tell Hairycles if you succeed with mission.", Create(4835), SetQuestValue(293,17)
 
 "mission",QuestValue(293)=17,QuestValue(299)=0 -> "Me know its much me asked for but go into the deepest catacombs under Banuta and destroy the monument of the serpent god."
-"mission",QuestValue(293)=17,QuestValue(299)=1 -> "Finally my people are safe! You have done incredible good for ape people and one day even me brethren will recognise that ...", "I wish I could speak for all when me call you true friend but my people need time to get accustomed to change ...", "Let us hope one day whole Banuta will greet you as a friend. Perhaps you want to check me offers for special friends.",SetQuestValue(293,18)
+"mission",QuestValue(293)=17,QuestValue(299)=1 -> "Finally my people are safe! You have done incredible good for ape people and one day even me brethren will recognise that ...", "I wish I could speak for all when me call you true friend but my people need time to get accustomed to change ...", "Let us hope one day whole Banuta will greet you as a friend. Perhaps you want to check me offers for special friends... or shamanic powers.",SetQuestValue(293,18)
 "mission",QuestValue(293)=18        -> "No more missions await you right now, friend. Perhaps you want to check me offers for special friends."
 
 ### ACHTUNG TOPIC 18 OBEN VERWENDET
@@ -181,5 +181,12 @@ Topic=81,"yes",CountMoney>=Price -> "Here is what you want.", DeleteMoney, Creat
 Topic=81,"yes"                           -> "Me sorry, you no money."
 Topic=81                                 -> "As you whish, but no better in whole jungle you will find."
 
+"outfit",QuestValue(293)>17,QuestValue(17570)=0 -> "Me truly proud of you, friend. You learn many about plants, charms and ape people. Me want grant you shamanic power now. You ready?", Topic=82
+"shamanic","powers",QuestValue(293)>17,QuestValue(17570)=0 -> *
+Topic=82,"yes" -> "Friend of the ape people! Take my gift and become me apprentice! Here is shaman clothing for you!", AddOutfit(158), AddOutfit(154), SetQuestValue(17570,1), EffectOpp(13)
+Topic=82 -> "Maybe next time."
+
+"outfit",QuestValue(17570)>0 -> "Be greeted, friend %N of the ape people!"
+"shamanic","powers",QuestValue(17570)>0 -> *
 
 }

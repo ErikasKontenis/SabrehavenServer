@@ -47,7 +47,8 @@ VANISH,!           -> "Good bye."
 "banana"         -> "A banana staff is the sign of a high ape magician."
 "pirates"         -> "You have to understand that there are two groups of people that are called pirates. One consists of evil thieves and murderers for whom the word pirate actually stands for. ...",
 					 "The others are resistance fighters for whom old ideals are hold true and that are the assertors of the native people."
-		
+
+# Goroma_Counter_Spell_Quest				 
 "spellbook",QuestValue(17509)=0,Count(6120)>=1 -> "Ah, thank you very much! I will honour his memory.", Amount=1, Delete(6120), SetQuestValue(17509,1)	
 "counterspell",QuestValue(17509)=0 -> "You should not talk about things you don't know anything about."
 "energy","field",QuestValue(17509)=0 -> *
@@ -81,17 +82,70 @@ Topic=5                           -> "Maybe another time."
 
 "counterspell",QuestValue(17509)>4 -> "Hm. I don't think you need another one of my counterspells to cross the barrier on Goroma."
 
-"mission",QuestValue(17520)=1,QuestValue(17524)=0 -> "The evil cult has placed a curse on one of the captains here. I need at least five of their pirate voodoo dolls to lift that curse.", SetQuestValue(17524,1)
+# Meriana_Quest
+"mission",QuestValue(17524)=0 -> "The evil cult has placed a curse on one of the captains here. I need at least five of their pirate voodoo dolls to lift that curse.", SetQuestValue(17524,1)
+"task",QuestValue(17524)=0 -> *
 
 "mission",QuestValue(17524)>0,QuestValue(17524)<5 -> Type=5810, Amount=1, "Did you bring one of the required pirate voodoo dolls?", Topic=6
+"task",QuestValue(17524)>0,QuestValue(17524)<5 -> *
 "doll",QuestValue(17524)>0,QuestValue(17524)<5 -> *
 
 "mission",QuestValue(17524)=5 -> Type=5810, Amount=1, "Did you bring the last of the required voodoo dolls?", Topic=6
-"doll",QuestValue(17524)=5, -> *
+"task",QuestValue(17524)=5 -> *
+"doll",QuestValue(17524)=5 -> *
 Topic=6,"yes",Count(Type)>=Amount -> "Now I can weaken that curse a bit. Thank you.", Delete(Type), SetQuestValue(17524,QuestValue(17524)+1)
 Topic=6,"yes",Count(Type)>=Amount,QuestValue(17524)=5 -> "Finally I can put an end to that curse. I thank you so much.", Delete(Type), SetQuestValue(17524,QuestValue(17524)+1)
 Topic=6,"yes"                     -> "Sorry, you do not have it."
 Topic=6                           -> "Maybe another time."
 
-"mission"             -> "Sorry, I don't have any missions for you."
+# Shaman_Outfit_Quest
+"outfit",QuestValue(17570)=0 -> "The Shaman outfit can wear only the one's with the great spiritual wisdom."
+"addon",QuestValue(17570)=0 -> *
+
+"outfit",QuestValue(17524)=6,QuestValue(17570)=1 -> "The time has come, my child. I sense great spiritual wisdom in you and I shall grant you a sign of your progress if you can fulfil my task."
+"addon",QuestValue(17524)=6,QuestValue(17570)=1 -> *
+
+"outfit",QuestValue(17570)=5 -> "Yours spiritual wisdom is outstanding %N."
+"addon",QuestValue(17570)=5 -> *
+
+"mission",QuestValue(17524)=6,QuestValue(17570)=1 -> "Deep in the Tiquandan jungle a monster lurks which is seldom seen. It is the revenge of the jungle against humankind. ...",
+													"This monster, if slain, carries a rare root called mandrake. If you find it, bring it to me. Also, gather 5 of the voodoo dolls used by the mysterious dworc voodoomasters. ...",
+													"If you manage to fulfil this task, I'll grant you your own staff. Have you understood everything and are you ready for this test?", Topic=7
+"task",QuestValue(17524)=6,QuestValue(17570)=1 -> *
+Topic=7,"yes" -> "Good! Come back once you've found a mandrake and collected 5 dworcish voodoo dolls.", SetQuestValue(17570,2)
+Topic=7 -> "Maybe another time."
+
+"mission",QuestValue(17570)=2 -> "Have you gathered the mandrake and the 5 voodoo dolls from the dworcs?", Topic=8
+"task",QuestValue(17570)=2 -> *
+"addon",QuestValue(17570)=2 -> *
+"outfit",QuestValue(17570)=2 -> *
+"mandrake",QuestValue(17570)=2 -> *
+"doll",QuestValue(17570)=2 -> *
+Topic=8,"yes",Count(3002)>=5,Count(5014)>=1 -> "I'm proud of you my child, excellent work. This staff shall be yours from now on!", DeleteAmount(3002,5), DeleteAmount(5014,1), SetQuestValue(17570,3), AddOutfitAddon(154,2), AddOutfitAddon(158,2), EffectOpp(13)
+Topic=8,"yes" -> "You don't have the required items with you."
+Topic=8 -> "Maybe another time."
+
+"mission",QuestValue(17570)=3 -> "You have successfully passed the first task. If you can fulfil my second task, I will grant you a mask like the one I wear. Will you listen to the requirements?", Topic=9
+"task",QuestValue(17570)=3 -> *
+"addon",QuestValue(17570)=3 -> *
+"outfit",QuestValue(17570)=3 -> *
+Topic=9,"yes" -> "The dworcs of Tiquanda like to wear certain tribal masks which I'd like to take a look at. Please bring me 5 of these masks. ...", 
+				"Secondly, the high ape magicians of Banuta use banana staffs. I'd love to learn more about theses staffs, so please bring me 5 of them, too. ...",
+				"If you manage to fulfil this task, I'll grant you your own mask. Have you understood everything and are you ready for this test?", Topic=10
+Topic=9 -> "Maybe another time."
+Topic=10,"yes" -> "Good! Come back once you have collected 5 tribal masks and 5 banana staffs.", SetQuestValue(17570,4)
+Topic=10 -> "Maybe another time."
+
+"mission",QuestValue(17570)=4 -> "Have you gathered the 5 tribal masks and the 5 banana staffs?", Topic=11
+"task",QuestValue(17570)=4 -> *
+"addon",QuestValue(17570)=4 -> *
+"outfit",QuestValue(17570)=4 -> *
+"mask",QuestValue(17570)=4 -> *
+"staff",QuestValue(17570)=4 -> *
+Topic=11,"yes",Count(3348)>=5,Count(3403)>=5 -> "Well done, my child! I hereby grant you the right to wear a shamanic mask. Do it proudly.", DeleteAmount(3348,5), DeleteAmount(3403,5), SetQuestValue(17570,5), AddOutfitAddon(154,1), AddOutfitAddon(158,1), EffectOpp(13)
+Topic=11,"yes" -> "You don't have the required items with you."
+Topic=11 -> "Maybe another time."
+
+"mission" -> "Sorry, I don't have any missions for you."
+"task" -> "Sorry, I don't have any missions for you."
 }

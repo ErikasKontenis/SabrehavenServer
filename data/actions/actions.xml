@@ -89,7 +89,10 @@
 	<action actionid="17525" script="meriana_quest/tortoise_egg.lua" />
 	<action fromaid="17528" toaid="17530" script="meriana_quest/pirate_map.lua" />
 	
-	<!-- Liberty Bay Misc -->
+	<!-- Port Hope -->
+	<action actionid="17569" script="port_hope/hydra_egg_quest.lua"/>
+	
+	<!-- Liberty Bay -->
 	<action fromid="6087" toid="6090" script="liberty_bay/cult_hymn.lua"/>
 	<action actionid="33216" script="liberty_bay/cult_piano_teleport.lua"/>
 	
