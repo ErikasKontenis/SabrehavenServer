@@ -43,7 +43,9 @@ VANISH,!           -> "Doh?"
 "rat"                 -> Type=3994, Amount=1, Price=2,  "I'll give you %P gold for a dead rat. Do you accept?", Topic=1
 "rabbit"              -> Type=4173, Amount=1, Price=2,  "I'll give you %P gold for a dead rabbit. Do you accept?", Topic=1
 "wolf"                -> Type=4007, Amount=1, Price=5,  "Do you want to sell a dead wolf for %P gold?", Topic=1
-"minotaur leather"    -> Type=5878, Amount=1, Price=12,  "Do you want to sell a minotaur leather for %P gold?", Topic=1
+"minotaur","leather"    -> Type=5878, Amount=1, Price=12,  "Do you want to sell a minotaur leather for %P gold?", Topic=1
+"wolf","paw"    -> Type=5897, Amount=1, Price=7,  "Do you want to sell a wolf paw for %P gold?", Topic=1
+"bear","paw"    -> Type=5896, Amount=1, Price=10,  "Do you want to sell a bear paw for %P gold?", Topic=1
 
 %1,1<%1,"rat",Questvalue(224)=0     -> Type=3994, Amount=%1, Price=2*%1,  "I'll give you %P gold for %A dead rats. Do you accept?", Topic=2
 %1,1<%1,"rabbit",Questvalue(224)=0  -> Type=4173, Amount=%1, Price=2*%1,  "I'll give you %P gold for %A dead rabbits. Do you accept?", Topic=2
@@ -51,7 +53,9 @@ VANISH,!           -> "Doh?"
 %1,1<%1,"rabbit"  -> Type=4173, Amount=%1, Price=2*%1,  "I'll give you %P gold for %A dead rabbits. Do you accept?", Topic=1
 %1,1<%1,"wolf"    -> Type=4007, Amount=%1, Price=5*%1,  "Do you want to sell %A dead wolves for %P gold?", Topic=1
 %1,1<%1,"wolves"    -> Type=4007, Amount=%1, Price=5*%1,  "Do you want to sell %A dead wolves for %P gold?", Topic=1
-%1,1<%1,"minotaur leather"    -> Type=5878, Amount=%1, Price=12*%1,  "Do you want to sell %A minotaur leathers for %P gold?", Topic=1
+%1,1<%1,"minotaur","leather"    -> Type=5878, Amount=%1, Price=12*%1,  "Do you want to sell %A minotaur leathers for %P gold?", Topic=1
+%1,1<%1,"wolf","paw"    -> Type=5897, Amount=%1, Price=7*%1,  "Do you want to sell %A wolf paws for %P gold?", Topic=1
+%1,1<%1,"bear","paw"    -> Type=5896, Amount=%1, Price=10*%1,  "Do you want to sell %A bear paws for %P gold?", Topic=1
 
 Topic=1,"yes",Count(Type)>=Amount -> "Ok. Corpse for me, gold for you.", Delete(Type), CreateMoney
 Topic=1,"yes"                             -> "Sorry, you do not have a fresh one."
@@ -73,7 +77,7 @@ Topic=2                                   -> "Maybe another time."
 
 "addon",QuestValue(18504)=1         -> "Have you brought 50 bear paws and 50 wolf paws?", Topic=3
 "paws",QuestValue(18504)=1      -> *
-Topic=3,"yes",Count(5897)>=50,Count(5896)>=50 -> "Excellent! Like promised, here are your bear paws.", DeleteAmount(5897,50), DeleteAmount(5896,50), SetQuestValue(18504,2), AddOutfitAddon(148,1), AddOutfitAddon(144,1)
+Topic=3,"yes",Count(5897)>=50,Count(5896)>=50 -> "Excellent! Like promised, here are your bear paws.", DeleteAmount(5897,50), DeleteAmount(5896,50), SetQuestValue(18504,2), AddOutfitAddon(148,1), AddOutfitAddon(144,1), EffectOpp(13)
 Topic=3,"yes"					           -> "You don't have required ingredients."
 Topic=3                                   -> "Maybe another time."
 

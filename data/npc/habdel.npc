@@ -2,7 +2,7 @@
 # Habdel.npc: Datenbank für den Waffenhändler Habdel
 
 Name = "Habdel"
-Outfit = (129,95-2-0-97)
+Outfit = (146,95-2-0-58-1)
 Home = [33225,32434,7]
 Radius = 0
 
@@ -106,4 +106,27 @@ Topic=2,"yes",Count(Type)>=Amount -> "Fine. Here is your money.", Delete(Type), 
 Topic=2,"yes"                             -> "Sorry, you do not have one."
 Topic=2,"yes",Amount>1					  -> "Sorry, you do not have that many."	
 Topic=2                                   -> "Maybe next time."
+
+"addon",female -> "My scimitar? Yes, that is a true masterpiece. Only a true man can wear it."
+"outfit",female -> *
+
+"addon",QuestValue(17555)=0,male -> "My scimitar? Yes, that is a true masterpiece. Of course I could make one for you, but I have a small request. Would you fulfill a task for me?", Topic=3
+"outfit",QuestValue(17555)=0,male -> *
+"mission",QuestValue(17555)=0,male -> *
+"task",QuestValue(17555)=0,male -> *
+Topic=3,"yes" -> "Listen, um... I know that Ishina has been wanting a comb for a long time... not just any comb, but a mermaid's comb. She said it prevents split ends... or something. ...",
+				"Do you think you could get one for me so I can give it to her? I really would appreciate it.", Topic=4
+Topic=3 -> "Maybe another time."
+Topic=4,"yes" -> "Brilliant! I will wait for you to return with a mermaid's comb then.", SetQuestValue(17555,1)
+Topic=4 -> "Maybe another time."
+
+"comb",QuestValue(17555)=1,male -> Type=5945, Amount=1, "Have you brought a mermaid's comb for Ishina?", Topic=5
+"mission",QuestValue(17555)=1,male -> *
+"task",QuestValue(17555)=1,male -> *
+Topic=5,"yes",Count(Type)>=Amount -> "Yeah! That's it! I can't wait to give it to her! Oh - but first, I'll fulfil my promise: Here is your scimitar! Thanks again!", Delete(Type), SetQuestValue(17555,2), AddOutfitAddon(146,1), AddOutfitAddon(150,1), EffectOpp(13)
+Topic=5,"yes" -> "You don't have it."
+Topic=5 -> "Maybe another time."
+
+"mission",QuestValue(17555)=2 -> "Sorry but I don't have any tasks for you."
+"task",QuestValue(17555)=2 -> *
 }

@@ -17,4 +17,70 @@ BUSY,!             -> NOP
 VANISH,!           -> "Good bye, %N."
 
 "bye"               -> "Good bye, %N.", Idle
+
+"addon",QuestValue(17562)<9 -> "You don't look like the one for who I should answer about my assassin head piece."
+"outfit",QuestValue(17562)<9 -> *
+
+"addon",QuestValue(17562)=9 -> "Vescu gave you an assassin outfit? Haha. Noticed it lacks the head piece? You look a bit silly. Want my old head piece?", Topic=1
+"outfit",QuestValue(17562)=9 -> *
+Topic=1,"yes" -> "Thought so. Could use some help anyway. Listen, I need stuff. Someone gave me a strange assignment - sneak into Thais castle at night and shroud it with cloth without anyone noticing it. ...",
+				"I wonder why anyone would want to shroud a castle, but as long as the guy pays, no problem, I'll do the sneaking part. Need a lot of cloth though. ...",
+				"Gonna make it colourful. Bring me 50 pieces of blue cloth, 50 pieces of green cloth, 50 pieces of red cloth, 50 pieces of brown cloth, 50 pieces of yellow cloth and 50 pieces of white cloth. ...",
+				"Besides, gonna need 10 spools of yarn. Understood?", Topic=2
+Topic=1 -> "Maybe another time."
+Topic=2,"yes" -> "Good. Start with the blue cloth. I'll wait.", SetQuestValue(17562,10)
+Topic=2 -> "Maybe another time."
+
+"blue","cloth",QuestValue(17562)=10 -> Type=5912, Amount=50, "Brought the 50 pieces of blue cloth?", Topic=3
+"mission",QuestValue(17562)=10 -> *
+"task",QuestValue(17562)=10 -> *
+Topic=3,"yes",Count(Type)>=Amount -> "Good. Get me 50 pieces of green cloth now.", Delete(Type), SetQuestValue(17562,11)
+Topic=3,"yes" -> "You don't have that many."
+Topic=3 -> "Maybe another time."
+
+"green","cloth",QuestValue(17562)=11 -> Type=5910, Amount=50, "Brought the 50 pieces of green cloth?", Topic=4
+"mission",QuestValue(17562)=11 -> *
+"task",QuestValue(17562)=11 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "Good. Get me 50 pieces of red cloth now.", Delete(Type), SetQuestValue(17562,12)
+Topic=4,"yes" -> "You don't have that many."
+Topic=4 -> "Maybe another time."
+
+"red","cloth",QuestValue(17562)=12 -> Type=5911, Amount=50, "Brought the 50 pieces of red cloth?", Topic=5
+"mission",QuestValue(17562)=12 -> *
+"task",QuestValue(17562)=12 -> *
+Topic=5,"yes",Count(Type)>=Amount -> "Good. Get me 50 pieces of brown cloth now.", Delete(Type), SetQuestValue(17562,13)
+Topic=5,"yes" -> "You don't have that many."
+Topic=5 -> "Maybe another time."
+
+"brown","cloth",QuestValue(17562)=13 -> Type=5913, Amount=50, "Brought the 50 pieces of brown cloth?", Topic=6
+"mission",QuestValue(17562)=13 -> *
+"task",QuestValue(17562)=13 -> *
+Topic=6,"yes",Count(Type)>=Amount -> "Good. Get me 50 pieces of yellow cloth now.", Delete(Type), SetQuestValue(17562,14)
+Topic=6,"yes" -> "You don't have that many."
+Topic=6 -> "Maybe another time."
+
+"yellow","cloth",QuestValue(17562)=14 -> Type=5914, Amount=50, "Brought the 50 pieces of yellow cloth?", Topic=7
+"mission",QuestValue(17562)=14 -> *
+"task",QuestValue(17562)=14 -> *
+Topic=7,"yes",Count(Type)>=Amount -> "Good. Get me 50 pieces of white cloth now.", Delete(Type), SetQuestValue(17562,15)
+Topic=7,"yes" -> "You don't have that many."
+Topic=7 -> "Maybe another time."
+
+"white","cloth",QuestValue(17562)=15 -> Type=5909, Amount=50, "Brought the 50 pieces of white cloth?", Topic=8
+"mission",QuestValue(17562)=15 -> *
+"task",QuestValue(17562)=15 -> *
+Topic=8,"yes",Count(Type)>=Amount -> "Good. Get me 10 spools of yarn now.", Delete(Type), SetQuestValue(17562,16)
+Topic=8,"yes" -> "You don't have that many."
+Topic=8 -> "Maybe another time."
+
+"yarn",QuestValue(17562)=16 -> Type=5886, Amount=10, "Brought the 10 spools of yarn?", Topic=9
+"mission",QuestValue(17562)=16 -> *
+"task",QuestValue(17562)=16 -> *
+Topic=9,"yes",Count(Type)>=Amount -> "Thanks. That's it, you're done. Good job, %N. I keep my promise. Here's my old assassin head piece.", Delete(Type), SetQuestValue(17562,17), AddOutfitAddon(152,1), AddOutfitAddon(156,1), EffectOpp(13)
+Topic=9,"yes" -> "You don't have that many."
+Topic=9 -> "Maybe another time."
+
+"mission",QuestValue(17562)>16 -> "Sorry, I don't have any tasks for you anymore."
+"task",QuestValue(17562)>16 -> *
+
 }

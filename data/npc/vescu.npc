@@ -19,5 +19,79 @@ VANISH,!           -> "Oh, two t-trolls. Hellooo, wittle twolls. <hicks>"
 "bye"            -> "T-time for another b-beer. <hicks>", Idle
 "farewell"       -> *
 
+"addon" -> "I can give you a <hicks> scar as an addon. Nyahahah."
+"booze" -> "Did I say booze? I meant, flamingo. <hicks> Pink birds are kinda cool, don't you think? Especially on a painting."
+"flamingo" -> "You have to enjoy the word. Like, flayyyminnngoooo. Say it with me. <hicks>"
+"flayyyminnngoooo" -> "Yes, you got it! Hahaha, we understand each other. Good job. <hicks>"
+"job" -> "I'm a killer! Yeshindeed! A masterful assassin. I prefer that too 'Peekay'. <hicks>"
+"outfit" -> "O-outfit? You already have a t-troll outfit. That's good enough for you. <hicks>"
 
+"sober",QuestValue(17562)=0 -> "I wish there was like a potion which makes you sober in an instant. Dwarven rings wear off so fast. <hicks>", Topic=1
+Topic=1,"potion" -> "It's so hard to know the exact time when to stop drinking.hicks; C-could you help me to brew such a potion?", Topic=2
+Topic=1 -> "I don't think so. <hicks>"
+Topic=2,"yes" -> "You're a true buddy. I promise I will t-try to avoid killing you even if someone asks me to. hicks ...",
+				"Listen, I have this old formula from my grandma. <hicks> It says... 30 beholder eyes... 10 red dragon scales. ...",
+				"Then 30 lizard scales... 20 fish fins - ew, this sounds disgusting, I wonder if this is really a potion or rather a cleaning agent. ...",
+				"Add 20 ounces of vampire dust, 10 ounces of demon dust and mix well with one flask of warrior's sweat. <hicks> ...",
+				"Okayyy, this is a lot... we'll take this step by step. <hicks> Will you help me gathering 30 beholder eyes?", Topic=3
+Topic=2 -> "Then not. <hicks>"
+Topic=3,"yes" -> "G-good. Go get them, I'll have a beer in the meantime.", SetQuestValue(17562,1)
+Topic=3 -> "Then not. <hicks>"
+
+"beholder","eye",QuestValue(17562)=1 -> Type=5898, Amount=30, "Have you really managed to bring me 30 beholder eyes? <hicks>", Topic=4
+"mission",QuestValue(17562)=1 -> *
+"task",QuestValue(17562)=1 -> *
+Topic=4,"yes",Count(Type)>=Amount -> "Aw-awsome! <hicks> Squishy! Now, please bring me 10 red dragon scales.", Delete(Type), SetQuestValue(17562,2)
+Topic=4,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=4 -> "Then not. <hicks>"
+
+"red","dragon","scale",QuestValue(17562)=2 -> Type=5882, Amount=10, "D-did you get all of the 10 red dragon scales? <hicks>", Topic=5
+"mission",QuestValue(17562)=2 -> *
+"task",QuestValue(17562)=2 -> *
+Topic=5,"yes",Count(Type)>=Amount -> "G-good work, ... wha-what's your name again? <hicks> Anyway... come back with 30 lizard scales.", Delete(Type), SetQuestValue(17562,3)
+Topic=5,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=5 -> "Then not. <hicks>"
+
+"lizard","scale",QuestValue(17562)=3 -> Type=5881, Amount=30, "Ah, are those - <hicks> - the 30 lizard scales?", Topic=6
+"mission",QuestValue(17562)=3 -> *
+"task",QuestValue(17562)=3 -> *
+Topic=6,"yes",Count(Type)>=Amount -> "This potion will become p-pretty scaly. I'm not sure yet if I want to d-drink that. I think the 20 fish fins which come next won't really improve it. <hicks>", Delete(Type), SetQuestValue(17562,4)
+Topic=6,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=6 -> "Then not. <hicks>"
+
+"fish","fin",QuestValue(17562)=4 -> Type=5895, Amount=20, "Eww, is that disgusting smell coming from the 20 fish fins? <burps>", Topic=7
+"mission",QuestValue(17562)=4 -> *
+"task",QuestValue(17562)=4 -> *
+Topic=7,"yes",Count(Type)>=Amount -> "Alrrrrrrright! Thanks for the f-fish. Get me the 20 ounces of vampire dust now. I'll have another b-beer.", Delete(Type), SetQuestValue(17562,5)
+Topic=7,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=7 -> "Then not. <hicks>"
+
+"vampire","dust",QuestValue(17562)=5 -> Type=5905, Amount=20, "Have you collected 20 ounces of vampire d-dust? <hicks>", Topic=8
+"mission",QuestValue(17562)=5 -> *
+"task",QuestValue(17562)=5 -> *
+Topic=8,"yes",Count(Type)>=Amount -> "Tha-thank you. Trolls are good for something a-after all. Bring me the 10 ounces of demon dust now. <hicks>", Delete(Type), SetQuestValue(17562,6)
+Topic=8,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=8 -> "Then not. <hicks>"
+
+"demon","dust",QuestValue(17562)=6 -> Type=5906, Amount=10, "Have you slain enough d-demons to gather 10 ounces of demon dust? <hicks>", Topic=9
+"mission",QuestValue(17562)=6 -> *
+"task",QuestValue(17562)=6 -> *
+Topic=9,"yes",Count(Type)>=Amount -> "G-great. You're a reeeal k-killer like me, eh? I think I'll g-give you something fun when the potion is complete. But first, b-bring me warrior's sweat.", Delete(Type), SetQuestValue(17562,7)
+Topic=9,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=9 -> "Then not. <hicks>"
+
+"warrior","sweat",QuestValue(17562)=7 -> Type=5885, Amount=1, "This s-smells even worse than the fish fins. Is that warrior's sweat?", Topic=10
+"mission",QuestValue(17562)=7 -> *
+"task",QuestValue(17562)=7 -> *
+Topic=10,"yes",Count(Type)>=Amount -> "Yahaha! Here we g-go. I'll just take a small sip - <gulp>. Okay, this is disgusting, but it seems to work. I'll teach you something fun, remind me to tell you a secret sometime.", Delete(Type), SetQuestValue(17562,8)
+Topic=10,"yes" -> "Next time you lie to me I'll k-kill you. <hicks> Don't think I can't aim well just because I'm d-drunk."
+Topic=10 -> "Then not. <hicks>"
+
+"secret",QuestValue(17562)=8 -> "Right. <hicks> Since you helped me to b-brew that potion and thus ensured the high quality of my work <hicks>, I'll give you my old assassin costume. It lacks the head part, but it's almost like new. Don't pretend to be me though, 'kay? <hicks>", AddOutfit(152), AddOutfit(156), EffectOpp(13), SetQuestValue(17562,9)
+"mission",QuestValue(17562)=8 -> *
+"task",QuestValue(17562)=8 -> *
+
+"secret",QuestValue(17562)>8 -> "What secret? <hicks>"
+"mission",QuestValue(17562)>8 -> "Sorry. <hicks> I have to start working soon."
+"task",QuestValue(17562)>8 -> *
 }

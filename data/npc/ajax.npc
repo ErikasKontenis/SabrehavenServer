@@ -6,6 +6,10 @@ Home = [32417,31583,7]
 Radius = 3
 
 Behaviour = {
+ADDRESS,"hello$",QuestValue(17532)=2,ExpiringQuestValue(17533)<0,! -> "You back. You know, you right. Brother is right. Fist not always good. Tell him that!", SetQuestValue(17532,3), Idle
+ADDRESS,"hi$",QuestValue(17532)=2,ExpiringQuestValue(17533)<0,!    -> *
+ADDRESS,"hello$",ExpiringQuestValue(17533)>0,! -> "Head aches. GO AWAY!", SetExpiringQuestValue(17533, 3600000), Idle
+ADDRESS,"hi$",ExpiringQuestValue(17533)>0,!    -> *
 ADDRESS,"hello$",! -> "Whatcha do in my place?"
 ADDRESS,"hi$",!    -> *
 ADDRESS,!          -> Idle
@@ -20,4 +24,57 @@ VANISH,!           -> NOP
 "fight"       -> "You. Weak."
 "job"       -> "No time for such a stupid thing."
 "name"       -> "Ajax."
+
+"MINE",QuestValue(17532)=1 -> "YOURS? WHAT IS YOURS! NOTHING IS YOURS! IS MINE! GO AWAY, YES?!", EffectOpp(16), Burning(50,10), Topic=1
+Topic=1,"no" -> "YOU STUPID! STUBBORN! I KILL YOU! WILL LEAVE NOW?!", Topic=2
+Topic=1 -> "BYE!!!", Idle
+Topic=2,"no" -> "ARRRRRRRRRR! YOU ME DRIVE MAD! HOW I MAKE YOU GO??", Topic=3
+Topic=2 -> "ARRRRRRRRRR!!!", Idle
+Topic=3,"no" -> "I GIVE YOU NO!", Topic=4
+Topic=3 -> "ARRRRRRRRRR!!!", Idle
+Topic=4,"say","please" -> "Please? What you mean please? Like I say please you say bye? Please?", Topic=5
+Topic=4 -> "ARRRRRRRRRR!!!", Idle
+Topic=5,"yes" -> "Oh. Easy. Okay. Please is good. Now don't say anything. Head aches.", SetQuestValue(17532,2), SetExpiringQuestValue(17533, 3600000), Idle
+Topic=5 -> "ARRRRRRRRRR!!!", Idle
+
+"Gelagos",QuestValue(17532)=5 -> "Annoying kid. Bro hates him, but talking no help. Bro needs fighting spirit!"
+"fighting","spirit",QuestValue(17532)=5 -> "If you want to help bro, bring him fighting spirit. Magic fighting spirit. Ask Djinn."
+
+"present",QuestValue(17532)=12 -> "Bron gave me present. Ugly, but nice from him. Me want to give present too. You help me?", Topic=6
+Topic=6,"yes" -> "Good! Me make shiny weapon. If you help me, I make one for you too. Like axe I wear. I need stuff. Listen. ...",
+				"Me need 100 iron ore. Then need crude iron. Then after that 50 behemoth fangs. And 50 lizard leather. You understand?",
+				"Help me yes or no?", Topic=7
+Topic=6 -> "Maybe later."
+Topic=7,"yes" -> "Good. You get 100 iron ore first. Come back.", SetQuestValue(17532,13)
+Topic=7 -> "Maybe later."
+
+"iron","ore",QuestValue(17532)=13 -> Type=5880, Amount=100, "You bring 100 iron ore?", Topic=8
+Topic=8,"yes",Count(Type)>=Amount -> "Good! Now bring crude iron.", Delete(Type), SetQuestValue(17532,14)
+Topic=8,"yes" -> "You do not have that many."
+Topic=8 -> "Maybe another time."
+
+"crude","iron",QuestValue(17532)=14 -> Type=5892, Amount=1, "You bring crude iron?", Topic=9
+Topic=9,"yes",Count(Type)>=Amount -> "Good! Now bring 50 behemoth fangs.", Delete(Type), SetQuestValue(17532,14)
+Topic=9,"yes" -> "You do not have it."
+Topic=9 -> "Maybe another time."
+
+"behemoth","fang",QuestValue(17532)=14 -> Type=5893, Amount=50, "You bring 50 behemoth fangs?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "Good! Now bring 50 lizard leather.", Delete(Type), SetQuestValue(17532,15)
+Topic=10,"yes" -> "You do not have that many."
+Topic=10 -> "Maybe another time."
+
+"lizard","leather",QuestValue(17532)=15 -> Type=5876, Amount=50, "You bring 50 lizard leather?", Topic=11
+Topic=11,"yes",Count(Type)>=Amount -> "Ah! All stuff there. I will start making axes now. Come later and ask me for axe.", Delete(Type), SetQuestValue(17532,16), SetExpiringQuestValue(17534, 7200000)
+Topic=11,"yes" -> "You do not have that many."
+Topic=11 -> "Maybe another time."
+
+"addon",ExpiringQuestValue(17534)>0 -> "Wait! I making axes now. Come later, okey?"
+"axe",ExpiringQuestValue(17534)>0 -> *
+
+"addon",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> "Axe is done! For you. Take. Wear like me.", SetQuestValue(17532,17), AddOutfitAddon(147,1), AddOutfitAddon(143,1), EffectOpp(13)
+"axe",ExpiringQuestValue(17534)<0,QuestValue(17532)=16 -> *
+
+"addon",QuestValue(17532)=17 -> "Nice axe. Nice axe."
+"axe",QuestValue(17532)=17 -> *
+
 }

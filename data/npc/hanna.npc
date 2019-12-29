@@ -2,7 +2,7 @@
 # hanna.npc: Datenbank für die Juwelierin Hanna
 
 Name = "Hanna"
-Outfit = (136,113-65-0-96)
+Outfit = (136,113-65-0-96-2)
 Home = [32407,32219,7]
 Radius = 2
 
@@ -76,4 +76,19 @@ Topic=2,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), Cr
 Topic=2,"yes"                             -> "Sorry, you do not have one."
 Topic=2,"yes",Amount>1                    -> "Sorry, you do not have that many."
 Topic=2                                   -> "Maybe next time."
+
+"addon",QuestValue(18501)=0         -> "Pretty, isn't it? My friend Amber taught me how to make it, but I could help you with one if you like. What do you say?", Topic=3
+"hat",QuestValue(18501)=0      -> *
+Topic=3,"yes" -> "Okay, here we go, listen closely! I need a few things... a basic hat of course, maybe a legion helmet would do. Then about 100 chicken feathers...",
+				 "and 50 honeycombs as glue. That's it, come back to me once you gathered it!", SetQuestValue(18501,1)
+Topic=3                                   -> "Maybe another time."
+
+"addon",QuestValue(18501)=1         -> "Oh, you're back already? Did you bring a legion helmet, 100 chicken feathers and 50 honeycombs?", Topic=4
+"hat",QuestValue(18501)=1      -> *
+Topic=4,"yes",Count(3374)>=1,Count(5890)>=100,Count(5902)>=50 -> "Great job! That must have taken a lot of work. Okay, you put it like this... then glue like this... here!", DeleteAmount(3374,1), DeleteAmount(5890,100), DeleteAmount(5902,50), SetQuestValue(18501,2), AddOutfitAddon(136,2), AddOutfitAddon(128,2), EffectOpp(13)
+Topic=4,"yes"					           -> "You don't have required ingredients."
+Topic=4                                   -> "Maybe another time."
+
+"addon",QuestValue(18501)>1         -> "I hope you enjoy the hat!"
+"hat",QuestValue(18501)>1      -> *
 }

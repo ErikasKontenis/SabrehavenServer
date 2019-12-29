@@ -7,6 +7,8 @@ Home = [32260,31863,14]
 Radius = 6
 
 Behaviour = {
+ADDRESS,"hello$",QuestValue(17561)>4,! -> "Be greeted, dear visitor. Ahhh... I can sense darkness inside your soul... are you a follower of Zathroth?"
+ADDRESS,"hi$",QuestValue(17561)>4,!    -> *
 ADDRESS,"hello$",! -> "Be greeted, dear visitor. Come and stay ... a while."
 ADDRESS,"hi$",!    -> *
 ADDRESS,!          -> Idle
@@ -72,4 +74,27 @@ VANISH,!           -> "Yes, flee from death. But know it shall be always one ste
 
 
 "spectral","dress"               -> "Your wish for a spectral dress is silly. Allthough I will grant you the permission to take one. My maidens left one in a box in a room, directly south of here.",SetQuestValue(327,1)
+
+"mission",QuestValue(17561)=5 -> "Say... I have been longing for something for an eternity now... if you help me retrieve it, I will reward you. Do you consent to this arrangement?", Topic=9
+"task",QuestValue(17561)=5 -> *
+"outfit",QuestValue(17561)=5 -> *
+"addon",QuestValue(17561)=5 -> *
+Topic=9,"yes" -> "Listen... there are no blooming flowers down here and the only smell present is that of death and decay. ...",
+				"I wish that I could breathe the lovely smell of beautiful flowers just one more time, especially those which elves cultivate. ...",
+				"Could you please bring me 50 holy orchids?", Topic=10
+Topic=9 -> "Maybe next time we meet."
+Topic=10,"yes" -> "Thank you. I will wait for your return.", SetQuestValue(17561,6)
+Topic=10 -> "Maybe next time we meet."
+
+"holy","orchid",QuestValue(17561)=6 -> Type=5922, Amount=50, "Have you really brought me 50 holy orchids?", Topic=11
+"mission",QuestValue(17561)=6 -> *
+"task",QuestValue(17561)=6 -> *
+Topic=11,"yes",Count(Type)>=Amount -> "Thank you! You have no idea what that means to me. As promised, here is your reward... as a follower of Zathroth, I hope that you will like this accessory.", Delete(Type), SetQuestValue(17561,7), AddOutfitAddon(149,1), AddOutfitAddon(145,1), EffectOpp(13)
+Topic=11,"yes" -> "You don't have it. Return when you are better prepared."
+Topic=11 -> "Maybe next time we meet."
+
+"mission",QuestValue(17561)=7 -> "%N follower of Zathroth I have no more rewards for you."
+"task",QuestValue(17561)=7 -> *
+"outfit",QuestValue(17561)=7 -> *
+"addon",QuestValue(17561)=7 -> *
 }

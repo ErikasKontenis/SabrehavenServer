@@ -85,8 +85,16 @@
 	<action actionid="82" script="nostalrius/82.lua" />
 	<action actionid="83" script="nostalrius/83.lua" />
 	
+	<!-- Meriana Quest -->
 	<action actionid="17525" script="meriana_quest/tortoise_egg.lua" />
 	<action fromaid="17528" toaid="17530" script="meriana_quest/pirate_map.lua" />
+	
+	<!-- Port Hope -->
+	<action actionid="17569" script="port_hope/hydra_egg_quest.lua"/>
+	
+	<!-- Liberty Bay -->
+	<action fromid="6087" toid="6090" script="liberty_bay/cult_hymn.lua"/>
+	<action actionid="33216" script="liberty_bay/cult_piano_teleport.lua"/>
 	
 	<!-- Nostalrius Default Actions -->
 	<!-- Furniture Parcels -->
@@ -151,6 +159,7 @@
 	<action itemid="3059" script="misc/spellbook.lua" />
 	<action fromid="5792" toid="5797" script="misc/dice.lua" />
 	<action itemid="3114" script="misc/skull_candle.lua" />
+	<action itemid="5957" script="misc/lottery_ticket.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />
@@ -186,9 +195,13 @@
 	<action itemid="4867" script="misc/botanist_container.lua" />
 	<action itemid="4863" script="misc/butterfly_conservation_kit.lua" />
 	<action itemid="5467" script="misc/fire_bug.lua" />
+	<action itemid="5938" script="misc/ceirons_waterskin.lua" />
 	
 	<!-- Chests -->
+	<action itemid="2472" script="misc/chests.lua" />
 	<action itemid="2479" script="misc/chests.lua" />
+	<action itemid="2480" script="misc/chests.lua" />
+	<action itemid="2482" script="misc/chests.lua" />
 	<action itemid="2543" script="misc/chests.lua" />
 	<action itemid="2544" script="misc/chests.lua" />
 	<action itemid="2545" script="misc/chests.lua" />

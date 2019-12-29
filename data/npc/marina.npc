@@ -16,8 +16,12 @@ VANISH,!           -> "How rude."
 
 "bye"          -> "Good bye, %N.", Idle
 
+"comb" -> "Sorry, I don't have a spare comb. I lost my favourite one when diving around in Calassa."
+
 # The Mermaid Marina Quest
 "silk","yarn",QuestValue(17504)=0 -> "Um. You mean, you really want me to touch that gooey spider silk just because you need yarn? Well... do you think that I'm pretty?", Topic=1
+"spool","of","yarn",QuestValue(17504)=0 -> *
+"spider","silk",QuestValue(17504)=0 -> *
 Topic=1,"yes"                   -> "Well, everyone would say that in your position. Do you think that I'm really, absolutely the most stunning being that you have ever seen?", Topic=2
 Topic=1							-> "Get out of there!"
 Topic=2,"yes"                   -> "<giggles> It's funny how easy it is to get humans to say what you want. Now, proving it will be even more fun! ...",
@@ -31,6 +35,8 @@ Topic=3,"yes"                     -> "Sorry, you do not have so many."
 Topic=3                           -> "Maybe another time."
 
 "silk","yarn",QuestValue(17504)=2 -> Type=5879, Amount=10, "Okay... a deal is a deal, would you like me to create a spool of yarn from 10 pieces of spider silk?", Topic=4
+"spool","of","yarn",QuestValue(17504)=2 -> *
+"spider","silk",QuestValue(17504)=2 -> *
 Topic=4,"yes",Count(Type)>=Amount -> "Ew... gooey... there you go.", Delete(Type), Amount=1, Create(5886)
 Topic=4,"yes"                     -> "Sorry, you do not have so many."
 Topic=4                           -> "Maybe another time."

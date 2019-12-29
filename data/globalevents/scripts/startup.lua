@@ -1,3 +1,12 @@
+local function setBloomingGriffinclaw()
+	local position = {x = 32024, y = 32830, z = 4}
+    if Game.isItemThere(position,5687) then
+		Game.removeItemOnMap(position, 5687)
+		Game.createItem(5658, 1, position)
+		Game.sendMagicEffect(position, 15)
+	end
+end
+
 function onStartup()
 	math.randomseed(os.mtime())
 	
@@ -46,5 +55,19 @@ function onStartup()
 			db.asyncQuery("DELETE FROM `player_murders` WHERE `player_id` = " .. playerId .. " AND `id` = " .. id)
 		until not result.next(resultId)
 		result.free(resultId)
+	end
+	
+	-- blooming griffinclaw
+	local dayNow = tonumber(os.date("%d", os.time()))
+	if (dayNow == 1) then
+		setGlobalStorageValue(1, 0)
+	end
+	
+	if getGlobalStorageValue(1) == 0 then
+		local randomDay = math.random(dayNow, 28)
+		if (randomDay == 28) then
+			setGlobalStorageValue(1, 1)
+			addEvent(setBloomingGriffinclaw, 10000)
+		end
 	end
 end

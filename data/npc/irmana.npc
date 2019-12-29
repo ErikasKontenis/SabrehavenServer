@@ -70,4 +70,53 @@ Topic=13,"yes"                             -> "You do not have one."
 Topic=13,"yes",Amount>1                    -> "You do not have that many."
 Topic=13                                   -> "Perhaps another time then."
 
+"addon" -> "Currently we are offering accessories for the nobleman - and, of course, noblewoman - outfit. Would you like to hear more about our offer?", Topic=2
+Topic=2,"yes",male -> "Especially for you, my lord, we are offering a fashionable top hat and a fancy coat like the one Kalvin wears. Which one are you interested in?", Topic=3
+Topic=2,"yes",female -> "Especially for you, my lady, we are offering a pretty hat and a beautiful dress like the ones I wear. Which one are you interested in?", Topic=3
+Topic=2 -> "As you wish."
+Topic=3,"hat",QuestValue(17551)=0 -> Amount=17552, "Great! Since our accessories are hand-tailored designer pieces, of course they are not made for citizens with an empty wallet. Should I inform you about our payment policy?", Topic=4
+Topic=3,"hat",QuestValue(17551)=1 -> Amount=17552, "Oh, I see you already have noble hat. Maybe take a look choosing another noble addon."
+Topic=3,"dress",QuestValue(17553)=0,female -> Amount=17554, "Great! Since our accessories are hand-tailored designer pieces, of course they are not made for citizens with an empty wallet. Should I inform you about our payment policy?", Topic=4
+Topic=3,"dress",QuestValue(17553)=1,female -> Amount=17554, "Oh, I see you already have noble dress. Maybe take a look choosing another noble addon."
+Topic=3,"coat",QuestValue(17553)=0,male -> Amount=17554, "Great! Since our accessories are hand-tailored designer pieces, of course they are not made for citizens with an empty wallet. Should I inform you about our payment policy?", Topic=4
+Topic=3,"coat",QuestValue(17553)=1,male -> Amount=17554, "Oh, I see you already have noble coat. Maybe take a look choosing another noble addon."
+Topic=3 -> "Perhaps another time then."
+Topic=4,"yes" -> "This accessory requires a small fee of 150000 gold pieces. Of course, we do not want to put you at any risk to be attacked while carrying this huge amount of money.",
+				"This is why we have established our brand-new installment sale. You can choose to either pay the price at once, or if you want to be safe, by installments of 10000 gold pieces.",
+				"I also have to inform you that once you started paying for one of the accessories, you have to finish the payment first before you can start paying for the other one, of course.",
+				"Are you interested in purchasing this accessory?", Topic=5
+Topic=4 -> "Perhaps another time then."
+Topic=5,"yes" -> "I'm very pleased to hear that, %N! Which do you prefer - paying 150000 at once or 10000 for 15 times?", Topic=6
+Topic=5 -> "Perhaps another time then."
+Topic=6,"once" -> "Good, I have noted down your order. Once you have the money, please come back to pick up your accessory.", SetQuestValue(Amount,1)
+Topic=6,"150000" -> *
+Topic=6,"15" -> "Good, I have noted down your order. Once you have the money, please come back to pick up your accessory.", SetQuestValue(Amount,2)
+Topic=6,"10000" -> *
+Topic=6 -> "Perhaps another time then."
+
+"addon",QuestValue(17552)=1, QuestValue(17551)=0 -> Price=150000, "Ah, are you here to pickup your accessory for 150000 gold pieces?", Topic=7
+"accessory",QuestValue(17552)=1, QuestValue(17551)=0 -> *
+Topic=7,"yes",CountMoney>=Price -> "Congratulations! Here is your brand-new accessory, I hope you like it. Please visit us again!", DeleteMoney, SetQuestValue(17551,1), AddOutfitAddon(140,2), AddOutfitAddon(132,2), EffectOpp(13)
+Topic=7,"yes" -> "I hate to disappoint you, but it seems you do not have enough gold."
+Topic=7 -> "Perhaps another time then."
+
+"addon",QuestValue(17552)>1, QuestValue(17551)=0 -> Price=10000, "Ah, are you here to pay your installment of 10000 gold pieces for your accessory?", Topic=8
+"accessory",QuestValue(17552)>1, QuestValue(17551)=0 -> *
+Topic=8,"yes",CountMoney>=Price -> "Good, I have noted down your installment. Please come back once you have the money.", DeleteMoney, SetQuestValue(17552, QuestValue(17552)+1)
+Topic=8,"yes",CountMoney>=Price,QuestValue(17552)>=16 -> "Congratulations! Here is your brand-new accessory, I hope you like it. Please visit us again!", DeleteMoney, SetQuestValue(17551,1), AddOutfitAddon(140,2), AddOutfitAddon(132,2), EffectOpp(13)
+Topic=8,"yes" -> "I hate to disappoint you, but it seems you do not have enough gold."
+Topic=8 -> "Perhaps another time then."
+
+"addon",QuestValue(17554)=1, QuestValue(17553)=0 -> Price=150000, "Ah, are you here to pickup your accessory for 150000 gold pieces?", Topic=9
+"accessory",QuestValue(17554)=1, QuestValue(17553)=0 -> *
+Topic=9,"yes",CountMoney>=Price -> "Congratulations! Here is your brand-new accessory, I hope you like it. Please visit us again!", DeleteMoney, SetQuestValue(17553,1), AddOutfitAddon(140,1), AddOutfitAddon(132,1), EffectOpp(13)
+Topic=9,"yes" -> "I hate to disappoint you, but it seems you do not have enough gold."
+Topic=9 -> "Perhaps another time then."
+
+"addon",QuestValue(17554)>1, QuestValue(17553)=0 -> Price=10000, "Ah, are you here to pay your installment of 10000 gold pieces for your accessory?", Topic=10
+"accessory",QuestValue(17554)>1, QuestValue(17553)=0 -> *
+Topic=10,"yes",CountMoney>=Price -> "Good, I have noted down your installment. Please come back once you have the money.", DeleteMoney, SetQuestValue(17554, QuestValue(17554)+1)
+Topic=10,"yes",CountMoney>=Price,QuestValue(17554)>=16 -> "Congratulations! Here is your brand-new accessory, I hope you like it. Please visit us again!", DeleteMoney, SetQuestValue(17553,1), AddOutfitAddon(140,1), AddOutfitAddon(132,1), EffectOpp(13)
+Topic=10,"yes" -> "I hate to disappoint you, but it seems you do not have enough gold."
+Topic=10 -> "Perhaps another time then."
 }

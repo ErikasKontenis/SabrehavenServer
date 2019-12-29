@@ -88,4 +88,54 @@ Topic=1                         -> "As you wish."
 
 "death","to","noodles" -> Type=3061, Amount=1, "So, I guess you bring me a magic crystal?", Topic=3
 Topic=3,"yes",Count(Type)>=Amount -> "Fine. Now you get what you deserve, you fool! DIE IN AGONY!", Burning(25,25), EffectOpp(6), EffectMe(14), Delete(Type), Idle
+
+"addon",QuestValue(17561)>4,male -> "This skull shows that you are a true follower of Zathroth and the glorious gods of darkness."
+"outfit",QuestValue(17561)>4,male -> *
+"addon",QuestValue(17561)>4,female -> "This tiara shows that you are a true follower of Zathroth and the glorious gods of darkness."
+"outfit",QuestValue(17561)>4,female -> *
+
+"mission",QuestValue(17561)=0,male -> "This skull shows that you are a true follower of Zathroth and the glorious gods of darkness. Are you willing to prove your loyalty?", Topic=5
+"task",QuestValue(17561)=0,male -> *
+"outfit",QuestValue(17561)=0,male -> *
+"addon",QuestValue(17561)=0,male -> *
+"mission",QuestValue(17561)=0,female -> "This tiara shows that you are a true follower of Zathroth and the glorious gods of darkness. Are you willing to prove your loyalty?", Topic=5
+"task",QuestValue(17561)=0,female -> *
+"outfit",QuestValue(17561)=0,female -> *
+"addon",QuestValue(17561)=0,female -> *
+
+Topic=5,"yes" -> "It will be a hard task which requires many sacrifices. Do you still want to proceed?", Topic=6
+Topic=5 -> "As you wish."
+Topic=6,"yes" -> "Good decision, %N. Your first sacrifice will be a medusa shield. Bring it to me and do give it happily.", SetQuestValue(17561,1)
+Topic=6 -> "As you wish."
+
+"medusa","shield",QuestValue(17561)=1 -> Type=3436, Amount=1, "Is it your true wish to sacrifice a medusa shield to Zathroth?", Topic=7
+"mission",QuestValue(17561)=1 -> *
+"task",QuestValue(17561)=1 -> *
+Topic=7,"yes",Count(Type)>=Amount -> "Good. I accept your sacrifice. The second sacrifice I require from you is a dragon scale mail. Bring it to me and do give it happily.", Delete(Type), SetQuestValue(17561,2)
+Topic=7,"yes" -> "Don't be ashamed but you don't have it."
+Topic=7 -> "As you wish."
+
+"dragon","scale","mail",QuestValue(17561)=2 -> Type=3386, Amount=1, "Is it your true wish to sacrifice a dragon scale mail to Zathroth?", Topic=8
+"mission",QuestValue(17561)=2 -> *
+"task",QuestValue(17561)=2 -> *
+Topic=8,"yes",Count(Type)>=Amount -> "Good. I accept your sacrifice. The third sacrifice I require from you are crown legs. Bring them to me and do give them happily.", Delete(Type), SetQuestValue(17561,3)
+Topic=8,"yes" -> "Don't be ashamed but you don't have it."
+Topic=8 -> "As you wish."
+
+"crown","legs",QuestValue(17561)=3 -> Type=3382, Amount=1, "Is it your true wish to sacrifice crown legs to Zathroth?", Topic=9
+"mission",QuestValue(17561)=3 -> *
+"task",QuestValue(17561)=3 -> *
+Topic=9,"yes",Count(Type)>=Amount -> "Good. I accept your sacrifice. The last sacrifice I require from you is a ring of the sky. Bring it to me and do give it happily.", Delete(Type), SetQuestValue(17561,4)
+Topic=9,"yes" -> "Don't be ashamed but you don't have it."
+Topic=9 -> "As you wish."
+
+"ring","of","the","sky",QuestValue(17561)=4 -> Type=3006, Amount=1, "Is it your true wish to sacrifice a ring of the sky to Zathroth?", Topic=10
+"mission",QuestValue(17561)=4 -> *
+"task",QuestValue(17561)=4 -> *
+Topic=10,"yes",Count(Type)>=Amount -> "Good. I accept your sacrifice. You have proven that you are a true follower of Zathroth and do not hesitate to sacrifice worldly goods. Thus, I will reward you with this headgear.", Delete(Type), SetQuestValue(17561,5), AddOutfitAddon(149,2), AddOutfitAddon(145,2), EffectOpp(13)
+Topic=10,"yes" -> "Don't be ashamed but you don't have it."
+Topic=10 -> "As you wish."
+
+"mission",QuestValue(17561)>4 -> "%N follower of Zathroth I have no more tasks for you."
+"task",QuestValue(17561)>4 -> *
 }

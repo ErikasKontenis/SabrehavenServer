@@ -3739,7 +3739,7 @@ void Game::addMonsterSayText(const Position& pos, const std::string& text)
 
 	for (Creature* spectator : list) {
 		if (Player* tmpPlayer = spectator->getPlayer()) {
-			tmpPlayer->sendCreatureSay(nullptr, TALKTYPE_MONSTER_SAY, text, &pos);
+			tmpPlayer->sendCreatureSay(tmpPlayer, TALKTYPE_MONSTER_SAY, text, &pos);
 		}
 	}
 }

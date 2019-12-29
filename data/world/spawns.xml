@@ -3153,15 +3153,24 @@
 		<monster name="hyaena" x="-3" y="1" z="6" spawntime="600" />
 		<monster name="hyaena" x="2" y="2" z="6" spawntime="600" />
 	</spawn>
+	<spawn centerx="33011" centery="32667" centerz="6" radius="3">
+		<monster name="hydra" x="0" y="-1" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="32121" centery="32677" centerz="6" radius="4">
 		<monster name="warlock" x="-2" y="-3" z="6" spawntime="59" />
 		<monster name="behemoth" x="1" y="2" z="6" spawntime="59" />
+	</spawn>
+	<spawn centerx="33026" centery="32677" centerz="6" radius="3">
+		<monster name="hydra" x="1" y="0" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="32113" centery="32679" centerz="6" radius="2">
 		<monster name="warlock" x="1" y="-1" z="6" spawntime="59" />
 	</spawn>
 	<spawn centerx="32129" centery="32679" centerz="6" radius="2">
 		<monster name="lich" x="1" y="2" z="6" spawntime="59" />
+	</spawn>
+	<spawn centerx="32996" centery="32680" centerz="6" radius="4">
+		<monster name="hydra" x="0" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="33069" centery="32681" centerz="6" radius="4">
 		<monster name="dragon" x="-2" y="-3" z="6" spawntime="900" />
@@ -3184,6 +3193,9 @@
 		<monster name="warlock" x="2" y="0" z="6" spawntime="59" />
 		<monster name="behemoth" x="3" y="2" z="6" spawntime="59" />
 		<monster name="behemoth" x="-2" y="3" z="6" spawntime="59" />
+	</spawn>
+	<spawn centerx="33015" centery="32689" centerz="6" radius="3">
+		<monster name="hydra" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="32112" centery="32695" centerz="6" radius="2">
 		<monster name="lich" x="-1" y="-2" z="6" spawntime="59" />

@@ -2,9 +2,9 @@
 # ustan.npc: Datenbank für den Druidenlehrer Ustan
 
 Name = "Ustan"
-Outfit = (132,0-24-13-76)
+Outfit = (144,0-24-13-76-1)
 Home = [32580,32757,6]
-Radius = 0
+Radius = 1
 
 Behaviour = {
 ADDRESS,"hello$",! -> "Crunor's blessing, traveller."
@@ -140,4 +140,31 @@ Topic=3,"yes",Level<SpellLevel(String) -> Amount=SpellLevel(String), "You have t
 Topic=3,"yes",CountMoney<Price            -> "Sorry, you do not have enough gold."
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=3                                   -> "Maybe next time."
+
+"wolf","tooth","chain"    -> Type=3012, Amount=1, Price=100,  "Do you want to sell a wolf tooth chain for %P gold?", Topic=4
+"wolf","paw"    -> Type=5897, Amount=1, Price=70,  "Do you want to sell a wolf paw for %P gold?", Topic=4
+"bear","paw"    -> Type=5896, Amount=1, Price=100,  "Do you want to sell a bear paw for %P gold?", Topic=4
+
+%1,1<%1,"wolf","tooth","chain"    -> Type=3012, Amount=%1, Price=100*%1,  "Do you want to sell %A wolf tooth chains for %P gold?", Topic=4
+%1,1<%1,"wolf","paw"    -> Type=5897, Amount=%1, Price=70*%1,  "Do you want to sell %A wolf paws for %P gold?", Topic=4
+%1,1<%1,"bear","paw"    -> Type=5896, Amount=%1, Price=100*%1,  "Do you want to sell %A bear paws for %P gold?", Topic=4
+
+Topic=4,"yes",Count(Type)>=Amount -> "Here you are.", Delete(Type), CreateMoney
+Topic=4,"yes"                             -> "Sorry, you do not have it."
+Topic=4,"yes",Amount>1                    -> "Sorry, you do not have so many."
+Topic=4                                   -> "Maybe another time."
+
+"addon",QuestValue(18504)=0,premium         -> "Would you like to wear bear paws like I do? No problem, just bring me 50 bear paws and 50 wolf paws and I'll fit them on.", SetQuestValue(18504,1)
+"paws",QuestValue(18504)=0,premium      -> *
+"addon",QuestValue(18504)=0         -> "Addons can be wear only by premium players."
+"paws",QuestValue(18504)=0      -> *
+
+"addon",QuestValue(18504)=1         -> "Have you brought 50 bear paws and 50 wolf paws?", Topic=5
+"paws",QuestValue(18504)=1      -> *
+Topic=5,"yes",Count(5897)>=50,Count(5896)>=50 -> "Excellent! Like promised, here are your bear paws.", DeleteAmount(5897,50), DeleteAmount(5896,50), SetQuestValue(18504,2), AddOutfitAddon(148,1), AddOutfitAddon(144,1), EffectOpp(13)
+Topic=5,"yes"					           -> "You don't have required ingredients."
+Topic=5                                   -> "Maybe another time."
+
+"addon",QuestValue(18504)=2         -> "I see that you like your new bear paws!"
+"paws",QuestValue(18504)=2      -> *
 }

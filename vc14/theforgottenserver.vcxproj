@@ -92,7 +92,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>_CONSOLE;$(PREPROCESSOR_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_CONSOLE;__EXCEPTION_TRACER__;$(PREPROCESSOR_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <AdditionalIncludeDirectories>
       </AdditionalIncludeDirectories>
@@ -124,7 +124,7 @@
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
-      <PreprocessorDefinitions>NDEBUG;_CONSOLE;$(PREPROCESSOR_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;__EXCEPTION_TRACER__;$(PREPROCESSOR_DEFS);%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
       <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
       <WarningLevel>Level4</WarningLevel>
@@ -160,7 +160,7 @@
     <ClCompile Include="..\src\databasemanager.cpp" />
     <ClCompile Include="..\src\databasetasks.cpp" />
     <ClCompile Include="..\src\depotlocker.cpp" />
-	<ClCompile Include="..\src\events.cpp" />
+    <ClCompile Include="..\src\events.cpp" />
     <ClCompile Include="..\src\fileloader.cpp" />
     <ClCompile Include="..\src\game.cpp" />
     <ClCompile Include="..\src\globalevent.cpp" />
@@ -190,7 +190,7 @@
       <PrecompiledHeaderFile>otpch.h</PrecompiledHeaderFile>
     </ClCompile>
     <ClCompile Include="..\src\otserv.cpp" />
-	<ClCompile Include="..\src\outfit.cpp" />
+    <ClCompile Include="..\src\outfit.cpp" />
     <ClCompile Include="..\src\outputmessage.cpp" />
     <ClCompile Include="..\src\party.cpp" />
     <ClCompile Include="..\src\player.cpp" />
@@ -216,7 +216,7 @@
     <ClCompile Include="..\src\vocation.cpp" />
     <ClCompile Include="..\src\waitlist.cpp" />
     <ClCompile Include="..\src\wildcardtree.cpp" />
-	<ClCompile Include="..\src\xtea.cpp" />
+    <ClCompile Include="..\src\xtea.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\account.h" />
@@ -240,7 +240,7 @@
     <ClInclude Include="..\src\databasetasks.h" />
     <ClInclude Include="..\src\definitions.h" />
     <ClInclude Include="..\src\depotlocker.h" />
-	<ClInclude Include="..\src\events.h" />
+    <ClInclude Include="..\src\events.h" />
     <ClInclude Include="..\src\enums.h" />
     <ClInclude Include="..\src\fileloader.h" />
     <ClInclude Include="..\src\game.h" />
@@ -265,7 +265,7 @@
     <ClInclude Include="..\src\networkmessage.h" />
     <ClInclude Include="..\src\npc.h" />
     <ClInclude Include="..\src\otpch.h" />
-	<ClInclude Include="..\src\outfit.h" />
+    <ClInclude Include="..\src\outfit.h" />
     <ClInclude Include="..\src\outputmessage.h" />
     <ClInclude Include="..\src\party.h" />
     <ClInclude Include="..\src\player.h" />
@@ -294,7 +294,7 @@
     <ClInclude Include="..\src\vocation.h" />
     <ClInclude Include="..\src\waitlist.h" />
     <ClInclude Include="..\src\wildcardtree.h" />
-	<ClInclude Include="..\src\xtea.h" />
+    <ClInclude Include="..\src\xtea.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

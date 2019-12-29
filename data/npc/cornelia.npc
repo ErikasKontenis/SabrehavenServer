@@ -108,4 +108,20 @@ Topic=2,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), Cr
 Topic=2,"yes"                             -> "Sorry, you do not have one."
 Topic=2,"yes",Amount>1                    -> "Sorry, you do not have so many."
 Topic=2                                   -> "Maybe next time."
+
+"addon",QuestValue(17558)=5,male -> "Ah, you must be the hero Trisha talked about. I'll prepare the shoulder spikes for you. Please give me some time to finish. <giggles>", SetQuestValue(17558,6), SetExpiringQuestValue(17559, 7200000)
+"armor",QuestValue(17558)=5,male -> *
+"addon",QuestValue(17558)=5,female -> "Ah, you must be the hero Trisha talked about. I'll prepare the shoulder spikes for you. Please give me some time to finish.", SetQuestValue(17558,6), SetExpiringQuestValue(17559, 7200000)
+"armor",QuestValue(17558)=5,female -> *
+
+"addon",ExpiringQuestValue(17559)>0 -> "Please give me some time to finish it."
+"armor",ExpiringQuestValue(17559)>0 -> *
+
+"addon",ExpiringQuestValue(17559)<0,QuestValue(17558)=6,male -> "Finished! Since you are a man, I thought you probably wanted two. Men always want that little extra status symbol. <giggles>", SetQuestValue(17558,7), AddOutfitAddon(142,1), AddOutfitAddon(134,1), EffectOpp(13)
+"armor",ExpiringQuestValue(17559)<0,QuestValue(17558)=6,male -> *
+"addon",ExpiringQuestValue(17559)<0,QuestValue(17558)=6,female -> "Finished! Wear it proudly sister like Trisha do.", SetQuestValue(17558,7), AddOutfitAddon(142,1), AddOutfitAddon(134,1), EffectOpp(13)
+"armor",ExpiringQuestValue(17559)<0,QuestValue(17558)=6,female -> *
+
+"addon",QuestValue(17558)=7 -> "Sorry, Trisha told me to adorn only one armor for you and you have already received one."
+"armor",QuestValue(17558)=7 -> *
 }

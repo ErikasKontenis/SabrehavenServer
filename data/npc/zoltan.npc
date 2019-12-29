@@ -81,5 +81,18 @@ Topic=2                           -> "Lost your heart?"
 
 "permission",QuestValue(17513)=2 -> "You already have the permission to enter the citadel."
 
+"myra",QuestValue(17547)=11,male -> "Bah, I know. I received some sort of 'nomination' from our outpost in Port Hope. ...",
+									"Usually it takes a little more than that for an award though. However, I honour Myra's word. ...",
+									"I hereby grant you the right to wear a special sign of honour, acknowledged by the academy of Edron. Since you are a man, I guess you don't want girlish stuff. There you go.", SetQuestValue(17547,12), AddOutfitAddon(138,2), AddOutfitAddon(133,2), EffectOpp(13)
+									
+"myra",QuestValue(17547)=11,female -> "Bah, I know. I received some sort of 'nomination' from our outpost in Port Hope. ...",
+									"Usually it takes a little more than that for an award though. However, I honour Myra's word.", SetQuestValue(17547,12), AddOutfitAddon(138,2), AddOutfitAddon(133,2), EffectOpp(13)
+									
+"myra" -> "She was sent to Port Hope by the academy of Edron to function as an adviser in magical matters and as a teacher for sorcerers in need of training."
 
+"proof",QuestValue(17548)=0,Count(5903)>=1 -> "... I cannot believe my eyes. You retrieved this hat from Ferumbras' remains? That is incredible. If you give it to me, I will grant you the right to wear this hat as addon. What do you say?", Topic=4
+Topic=4,"yes" -> "I bow to you, %N, and hereby grant you the right to wear Ferumbras' hat as accessory. Congratulations!", DeleteAmount(5903, 1), SetQuestValue(17548,1), AddOutfitAddon(130,2), AddOutfitAddon(141,2), EffectOpp(13)
+Topic=4 -> "Maybe another time."
+"proof",QuestValue(17548)=0 -> "If you should manage to defeat Ferumbras, bring a proof of his death here and you will be rewarded."
+"proof",QuestValue(17548)=1 -> "The Ferumbras death proof will remain for eternity to you."
 }

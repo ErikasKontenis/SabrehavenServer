@@ -155,4 +155,55 @@ Topic=8,"i$","will$"                     -> *
 Topic=9,"yes"                            -> "So by the powers of the gods your souls are now bound together for eternity. May the gods watch with grace over your further life as a married couple. Go now and celebrate your marriage!", EffectOpp(14), EffectMe(13), Idle
 Topic=9,"i$","will$"                     -> *
 Topic=9,"no"                             -> "Your neglection of love hurts my heart. Leave now!", Idle
+
+"angelina",QuestValue(17549)=1 -> "Angelina had been imprisoned? My, these are horrible news, but I am so glad to hear that she is safe now. ...",
+								"I will happily carry out her wish and reward you, but I fear I need some important ingredients for my blessing spell first....",
+								"Will you gather them for me?", Topic=10
+Topic=10,"yes" -> "Thank you, I promise that your efforts won't be in vain! Listen closely now: First, I need a sample of five druid rods and five sorcerer wands. ...",
+				"I need a snakebite rod, a moonlight rod, a volcanic rod, a quagmire rod and a hailstorm rod. Then, I need a wand of vortex, a wand of dragonbreath ...",
+				"a wand of plague, a wand of cosmic energy and a wand of inferno. Please bring them all at once so that their energy will be balanced. ...",
+				"Secondly, I need 10 ounces of magic sulphur. It can absorb the elemental energy of all the wands and rods and bind it to something else. ...",
+				"Next, I will need a soul stone. These can be used as a vessel for energy, evil as well as good. They are rarely used nowadays though. ...",
+				"Lastly, I need a lot of holy energy. I can extract it from ankhs, but only a small amount each time. I will need about 20 ankhs. ...",
+				"Did you understand everything I told you and will help me with my blessing?", Topic=11
+Topic=10 -> "As you wish."
+Topic=11,"yes" -> "Alright then. Come back to with a sample of those five wands and five rods I mentioned, please.", SetQuestValue(17549,2)
+Topic=11 -> "As you wish."
+
+"sample",QuestValue(17549)=2 -> "Did you bring a sample of the wands and rods with you?", Topic=12
+"wand",QuestValue(17549)=2 -> *
+"rod",QuestValue(17549)=2 -> *
+Topic=12,"yes",Count(3074)>=1,Count(3075)>=1,Count(3072)>=1,Count(3073)>=1,Count(3071)>=1,Count(3066)>=1,Count(3070)>=1,Count(3069)>=1,Count(3065)>=1,Count(3067)>=1 -> "Thank you, that must have been a lot to carry. Now, please bring me 10 ounces of magic sulphur.", DeleteAmount(3074, 1), DeleteAmount(3075, 1), DeleteAmount(3072, 1), DeleteAmount(3073, 1), DeleteAmount(3071, 1), DeleteAmount(3066, 1), DeleteAmount(3070, 1), DeleteAmount(3065, 1), DeleteAmount(3067, 1), DeleteAmount(3069, 1), SetQuestValue(17549,3)
+Topic=12,"yes" -> "You don't have that many."
+Topic=12 -> "Maybe another time."
+
+"magic","sulphur",QuestValue(17549)=3 -> Type=5904, Amount=10, "Did you obtain 10 ounces of magic sulphur?", Topic=13
+"mission",QuestValue(17549)=3 -> *
+"task",QuestValue(17549)=3 -> *
+Topic=13,"yes",Count(Type)>=Amount -> "Very good. I will immediately start to prepare the ritual and extract the elemental energy from the wands and rods. Please bring me the Necromancer's soul stone now.", Delete(Type), SetQuestValue(17549,4)
+Topic=13,"yes" -> "You don't have that many."
+Topic=13 -> "Maybe another time."
+
+"soul","stone",QuestValue(17549)=4 -> Type=5809, Amount=1, "Were you actually able to retrieve the Necromancer's soul stone?", Topic=14
+"mission",QuestValue(17549)=4 -> *
+"task",QuestValue(17549)=4 -> *
+Topic=14,"yes",Count(Type)>=Amount -> "You have found a rarity there, %N. This will become the tip of your blessed wand. Please bring me 20 ankhs now to complete the ritual.", Delete(Type), SetQuestValue(17549,5)
+Topic=14,"yes" -> "You don't have it."
+Topic=14 -> "Maybe another time."
+
+"ankh",QuestValue(17549)=5 -> Type=3077, Amount=20, "Am I sensing enough holy energy from ankhs here?", Topic=15
+"mission",QuestValue(17549)=5 -> *
+"task",QuestValue(17549)=5 -> *
+Topic=15,"yes",Count(Type)>=Amount -> "The ingredients for the ritual are complete! I will start to prepare your blessed wand, but I have to medidate first. Please come back later to hear how the ritual went.", Delete(Type), SetQuestValue(17549,6),SetExpiringQuestValue(17550, 10800000)
+Topic=15,"yes" -> "You don't have 20 of them."
+Topic=15 -> "Maybe another time."
+
+"addon",ExpiringQuestValue(17550)>0 -> "Please let me focus for a while, %N."
+"ritual",ExpiringQuestValue(17550)>0 -> *
+
+"addon",ExpiringQuestValue(17550)<0,QuestValue(17549)=6 -> "I'm glad to tell you that I have finished the ritual, %N. Here is your new wand. I hope you carry it proudly for everyone to see.", SetQuestValue(17549,7), AddOutfitAddon(141,1), AddOutfitAddon(130,1), EffectOpp(13)
+"ritual",ExpiringQuestValue(17550)<0,QuestValue(17549)=6 -> *
+
+"addon",QuestValue(17549)=7 -> "Wear your wand proudly for everyone to see!"
+"ritual",QuestValue(17549)=7 -> *
 }

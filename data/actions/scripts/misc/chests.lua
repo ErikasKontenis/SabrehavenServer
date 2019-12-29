@@ -1,6 +1,10 @@
 function onUse(player, item, fromPosition, target, toPosition)
 	local chestQuestNumber = item:getAttribute(ITEM_ATTRIBUTE_CHESTQUESTNUMBER)
 	
+	if chestQuestNumber == 0 then
+		return false
+	end
+	
 	if player:getStorageValue(chestQuestNumber) > 0 then
 		player:sendTextMessage(MESSAGE_INFO_DESCR, "The " .. item:getName() .. " is empty.")
 		return true
@@ -42,8 +46,6 @@ function onUse(player, item, fromPosition, target, toPosition)
 	
 	player:sendTextMessage(MESSAGE_INFO_DESCR, "You have found " .. rewardName .. ".")
 	player:addItemEx(reward:clone(), true)
-	if not getPlayerFlagValue(player, PlayerFlag_HasInfiniteCapacity) then
-		player:setStorageValue(chestQuestNumber, 1)
-	end
+	player:setStorageValue(chestQuestNumber, 1)
 	return true
 end

@@ -4,7 +4,7 @@
 Name = "Helor"
 Outfit = (134,57-79-95-98)
 Home = [32572,32753,6]
-Radius = 0
+Radius = 1
 
 Behaviour = {
 ADDRESS,"hello$",! -> "Be greeted in the name of the gods, traveller."
