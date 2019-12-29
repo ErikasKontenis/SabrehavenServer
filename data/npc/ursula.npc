@@ -2,7 +2,7 @@
 # ursula.npc: Datenbank für die Zauberlehrerin Ursula
 
 Name = "Ursula"
-Outfit = (54,0-0-0-0)
+Outfit = (54,0-0-0-0-0)
 Home = [33268,31849,7]
 Radius = 3
 

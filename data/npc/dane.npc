@@ -2,7 +2,7 @@
 # dane.npc: Datenbank für die Wirtin Dane
 
 Name = "Dane"
-Outfit = (136,79-58-86-96)
+Outfit = (136,79-58-86-96-0)
 Home = [32308,31838,8]
 Radius = 3
 

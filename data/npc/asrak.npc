@@ -2,7 +2,7 @@
 # asrak.npc: Datenbank für den Minotaurenklingenmeister Asrak
 
 Name = "Asrak"
-Outfit = (29,0-0-0-0)
+Outfit = (29,0-0-0-0-0)
 Home = [32932,32074,11]
 Radius = 2
 

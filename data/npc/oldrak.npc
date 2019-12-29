@@ -2,7 +2,7 @@
 # oldrak.npc: Datenbank fuer den Moench Oldrak
 
 Name = "Oldrak"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32816,32260,6]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # pemaret.npc: Fischer Pemaret auf Cormaya
 
 Name = "Pemaret"
-Outfit = (128,79-10-127-127)
+Outfit = (128,79-10-127-127-0)
 Home = [33287,31956,6]
 Radius = 1
 

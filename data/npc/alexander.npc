@@ -2,7 +2,7 @@
 # alexander.npc: Datenbank fuer den Magiehaendler Alexander
 
 Name = "Alexander"
-Outfit = (130,96-63-71-97)
+Outfit = (130,96-63-71-97-0)
 Home = [33256,31839,3]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # edowir.npc: Datenbank fuer den Weisen Edowir
 
 Name = "Edowir"
-Outfit = (130,0-58-96-95)
+Outfit = (130,0-58-96-95-0)
 Home = [32343,32363,7]
 Radius = 5
 

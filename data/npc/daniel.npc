@@ -2,7 +2,7 @@
 # daniel.npc: Datenbank für Gouverneur Daniel Steelsoul
 
 Name = "Daniel Steelsoul"
-Outfit = (73,0-0-0-0)
+Outfit = (73,0-0-0-0-0)
 Home = [33191,31795,7]
 Radius = 2
 

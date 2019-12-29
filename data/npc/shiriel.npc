@@ -2,7 +2,7 @@
 # shiriel.npc: Datenbank für die Magiehändlerin Shiriel (Elfenstadt)
 
 Name = "Shiriel"
-Outfit = (144,2-103-0-95)
+Outfit = (144,2-103-0-95-0)
 Home = [32670,31657,6]
 Radius = 1
 

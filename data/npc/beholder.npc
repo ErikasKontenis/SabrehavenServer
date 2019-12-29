@@ -2,7 +2,7 @@
 # beholder.npc: Datenbank für den Bibliotheksbeholder (Elfenstadt)
 
 Name = "A Wrinkled Beholder"
-Outfit = (17,0-0-0-0)
+Outfit = (17,0-0-0-0-0)
 Home = [32788,31690,13]
 Radius = 10
 

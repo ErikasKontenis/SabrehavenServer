@@ -2,7 +2,7 @@
 # quentin.npc: Datenbank für den Mönch Quentin
 
 Name = "Quentin"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32369,32239,7]
 Radius = 4
 

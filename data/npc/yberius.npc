@@ -2,7 +2,7 @@
 # yberius.npc: Datenbank für den Mönch Yberius
 
 Name = "Yberius"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32961,32076,7]
 Radius = 2
 

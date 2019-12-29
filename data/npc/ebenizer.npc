@@ -2,7 +2,7 @@
 # ebenizer.npc: Datenbank für den Bankier Ebenizer
 
 Name = "Ebenizer"
-Outfit = (128,59-95-87-76)
+Outfit = (128,59-95-87-76-0)
 Home = [33175,31801,7]
 Radius = 1
 

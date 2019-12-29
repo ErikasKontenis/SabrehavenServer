@@ -2,7 +2,7 @@
 # tibra.npc: Datenbank für die Priesterin Tibra
 
 Name = "Tibra"
-Outfit = (138,60-92-90-95)
+Outfit = (138,60-92-90-95-0)
 Home = [32318,31783,7]
 Radius = 3
 

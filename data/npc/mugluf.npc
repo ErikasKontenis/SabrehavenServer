@@ -2,7 +2,7 @@
 # mugluf.npc: Datenbank für den Fleischhändler Mugluf
 
 Name = "Mugluf"
-Outfit = (128,95-0-0-96)
+Outfit = (128,95-0-0-96-0)
 Home = [33220,32416,7]
 Radius = 0
 

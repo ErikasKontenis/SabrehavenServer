@@ -2,7 +2,7 @@
 # todd.npc: Datenbank für den betrügerischen schmuggler todd
 
 Name = "Todd"
-Outfit = (128,115-0-67-114)
+Outfit = (128,115-0-67-114-0)
 Home = [32363,32210,6]
 Radius = 7
 

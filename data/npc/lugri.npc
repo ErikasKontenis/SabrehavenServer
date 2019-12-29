@@ -2,7 +2,7 @@
 # lugri.npc: Datenbank fuer den Zathrothpriester Lugri
 
 Name = "Lugri"
-Outfit = (9,0-0-0-0)
+Outfit = (9,0-0-0-0-0)
 Home = [32389,32118,8]
 Radius = 4
 

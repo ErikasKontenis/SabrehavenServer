@@ -2,7 +2,7 @@
 # liane.npc: Datenbank für die Postfrau Liane
 
 Name = "Liane"
-Outfit = (136,77-60-79-114)
+Outfit = (136,77-60-79-114-0)
 Home = [32332,31784,7]
 Radius = 1
 

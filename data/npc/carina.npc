@@ -2,7 +2,7 @@
 # carina.npc: Datenbank für die Juwelierin Carina
 
 Name = "Carina"
-Outfit = (138,97-70-94-76)
+Outfit = (138,97-70-94-76-0)
 Home = [33015,32048,6]
 Radius = 1
 

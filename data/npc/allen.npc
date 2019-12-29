@@ -2,7 +2,7 @@
 # allen.npc: Möbelverkäufer Allen in Venore
 
 Name = "Allen"
-Outfit = (128,76-43-38-76)
+Outfit = (128,76-43-38-76-0)
 Home = [32991,32062,6]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # ratamari.npc: Datenbank für den Djinnspion Rata'mari
 
 Name = "Rata'mari"
-Outfit = (21,0-0-0-0)
+Outfit = (21,0-0-0-0-0)
 Home = [33036,32625,7]
 Radius = 1
 

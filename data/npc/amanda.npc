@@ -2,7 +2,7 @@
 # amanda.npc: Datenbank für die Nonne Amanda
 
 Name = "Amanda"
-Outfit = (138,96-95-0-95)
+Outfit = (138,96-95-0-95-0)
 Home = [33222,31814,8]
 Radius = 5
 

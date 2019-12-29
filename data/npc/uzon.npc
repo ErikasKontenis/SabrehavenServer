@@ -2,7 +2,7 @@
 # uzon: Datenbank für den Teppichpiloten Uzon auf den Femor Hills
 
 Name = "Uzon"
-Outfit = (130,95-5-18-76)
+Outfit = (130,95-5-18-76-0)
 Home = [32537,31836,4]
 Radius = 1
 

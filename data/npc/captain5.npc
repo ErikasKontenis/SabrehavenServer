@@ -2,7 +2,7 @@
 # captain5.npc: Kapitän Fearless in Venore
 
 Name = "Captain Fearless"
-Outfit = (129,19-113-95-115)
+Outfit = (129,19-113-95-115-0)
 Home = [32955,32022,6]
 Radius = 2
 

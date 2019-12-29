@@ -2,7 +2,7 @@
 # willie.npc: Datenbank fuer den Farmer Willie
 
 Name = "Willie"
-Outfit = (128,58-63-58-115)
+Outfit = (128,58-63-58-115-0)
 Home = [32047,32204,7]
 Radius = 2
 

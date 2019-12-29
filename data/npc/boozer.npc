@@ -2,7 +2,7 @@
 # boozer.npc: Datenbank für den Wirt Boozer
 
 Name = "Boozer"
-Outfit = (128,76-20-116-76)
+Outfit = (128,76-20-116-76-0)
 Home = [32921,32068,5]
 Radius = 1
 

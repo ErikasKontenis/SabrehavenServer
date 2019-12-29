@@ -2,7 +2,7 @@
 # blossom.npc: Datenbank für die Wächterin Blossom Bonecrusher
 
 Name = "Blossom Bonecrusher"
-Outfit = (139,96-19-63-95)
+Outfit = (139,96-19-63-95-0)
 Home = [32390,31787,7]
 Radius = 3
 

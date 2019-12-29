@@ -2,7 +2,7 @@
 # angus: Datenbank für den Teamassitstenten der explorers society Angus 
 
 Name = "Angus" 
-Outfit = (133,57-113-95-113) 
+Outfit = (133,57-113-95-113-0)
 Home = [32670,32730,7] 
 Radius = 1 
 

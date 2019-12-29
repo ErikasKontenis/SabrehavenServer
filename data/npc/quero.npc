@@ -2,7 +2,7 @@
 # quero.npc: Datenbank für den Barden Quero
 
 Name = "Quero"
-Outfit = (128,55-30-23-115)
+Outfit = (128,55-30-23-115-0)
 Home = [32390,32220,7]
 Radius = 1
 

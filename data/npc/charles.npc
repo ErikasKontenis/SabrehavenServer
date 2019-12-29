@@ -2,7 +2,7 @@
 # charles.npc: Datenbank für den Kapitän Charles
 
 Name = "Charles"
-Outfit = (134,57-29-95-98)
+Outfit = (134,57-29-95-98-0)
 Home = [32529,32785,6]
 Radius = 2
 

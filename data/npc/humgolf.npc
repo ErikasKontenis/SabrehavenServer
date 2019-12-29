@@ -2,7 +2,7 @@
 # humgolf.npc: Datenbank für den Rotwormzähmer Humgolf (Zwergenstadt)
 
 Name = "Humgolf"
-Outfit = (69,0-0-0-0)
+Outfit = (69,0-0-0-0-0)
 Home = [32598,31880,9]
 Radius = 2
 

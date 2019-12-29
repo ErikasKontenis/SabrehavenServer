@@ -2,7 +2,7 @@
 # tezila.npc: Datenbank für die Juwelierin Tezila
 
 Name = "Tezila"
-Outfit = (160,3-92-110-115)
+Outfit = (160,3-92-110-115-0)
 Home = [32657,31922,9]
 Radius = 2
 

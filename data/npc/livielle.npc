@@ -2,7 +2,7 @@
 # Livielle.npc: Datenbank für die Nahrungsmittelhändlerin Livielle
 
 Name = "Livielle"
-Outfit = (138,114-94-132-132)
+Outfit = (138,114-94-132-132-0)
 Home = [32982,32036,6]
 Radius = 2
 

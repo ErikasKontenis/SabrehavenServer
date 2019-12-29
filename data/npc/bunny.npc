@@ -2,7 +2,7 @@
 # bunny.npc: Datenbank für die Generalin Bunny Bonecrusher
 
 Name = "Bunny Bonecrusher"
-Outfit = (139,96-3-79-115)
+Outfit = (139,96-3-79-115-0)
 Home = [32315,31756,6]
 Radius = 2
 

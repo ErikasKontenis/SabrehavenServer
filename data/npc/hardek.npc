@@ -2,7 +2,7 @@
 # Hardek.npc: Datenbank für den Aufkäufer Hardek
 
 Name = "Hardek"
-Outfit = (129,96-86-63-115)
+Outfit = (129,96-86-63-115-0)
 Home = [32272,32339,7]
 Radius = 20
 

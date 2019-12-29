@@ -2,7 +2,7 @@
 # uzgod.npc: Datenbank fuer den Waffenhaendler Uzgod
 
 Name = "Uzgod"
-Outfit = (160,77-79-56-115)
+Outfit = (160,77-79-56-115-0)
 Home = [32664,31894,9]
 Radius = 1 
 

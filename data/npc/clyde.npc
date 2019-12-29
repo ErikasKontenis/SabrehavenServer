@@ -2,7 +2,7 @@
 # clyde.npc: Datenbank für den Tavernenbesitzer Clyde
 
 Name = "Clyde"
-Outfit = (128,98-40-48-95)
+Outfit = (128,98-40-48-95-0)
 Home = [32573,32753,7]
 Radius = 2
 

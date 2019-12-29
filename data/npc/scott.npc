@@ -2,7 +2,7 @@
 # scott.npc: Datenbank für den Wirt Scott auf Senja
 
 Name = "Scott"
-Outfit = (131,75-38-77-96)
+Outfit = (131,75-38-77-96-0)
 Home = [32138,31659,7]
 Radius = 1
 

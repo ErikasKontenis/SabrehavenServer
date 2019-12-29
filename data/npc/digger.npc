@@ -2,7 +2,7 @@
 # digger.npc: Datenbank für den Magieladen-Verkäufer Digger
 
 Name = "Digger"
-Outfit = (9,0-0-0-0)
+Outfit = (9,0-0-0-0-0)
 Home = [32970,32087,6]
 Radius = 1
 

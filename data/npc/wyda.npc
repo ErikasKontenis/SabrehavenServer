@@ -2,7 +2,7 @@
 # wyda.npc: Datenbank für die Hexe Wyda (Swamp)
 
 Name = "Wyda"
-Outfit = (54,0-0-0-0)
+Outfit = (54,0-0-0-0-0)
 Home = [32726,31980,6]
 Radius = 5
 

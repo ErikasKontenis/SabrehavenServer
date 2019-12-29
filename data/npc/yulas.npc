@@ -2,7 +2,7 @@
 # yulas.npc: Möbelverkäufer Yulas in Venore
 
 Name = "Yulas"
-Outfit = (128,58-43-38-76)
+Outfit = (128,58-43-38-76-0)
 Home = [33000,32065,6]
 Radius = 1
 

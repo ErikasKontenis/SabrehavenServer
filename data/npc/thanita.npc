@@ -2,7 +2,7 @@
 # Thanita.npc: Datenbank für die Amazonenwächterin des Turms
 
 Name = "Thanita"
-Outfit = (139,78-52-64-52)
+Outfit = (139,78-52-64-52-0)
 Home = [32535,31773,1]
 Radius = 2
 

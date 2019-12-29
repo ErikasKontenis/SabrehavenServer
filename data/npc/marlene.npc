@@ -2,7 +2,7 @@
 # marlene.npc: Die Tratschtante Marlene (Fields)
 
 Name = "Marlene"
-Outfit = (136,96-111-16-96)
+Outfit = (136,96-111-16-96-0)
 Home = [32483,31624,7]
 Radius = 3
 

@@ -2,7 +2,7 @@
 # ishebad.npc: Datenbank für den großwesir ankrahmuns
 
 Name = "Ishebad"
-Outfit = (65,0-0-0-0)
+Outfit = (65,0-0-0-0-0)
 Home = [33158,32848,7]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # stranger.npc: Datenbank für den säumigen schuldner david brassacres
 
 Name = "A Strange Fellow"
-Outfit = (128,76-43-38-76)
+Outfit = (128,76-43-38-76-0)
 Home = [32910,32077,9]
 Radius = 3
 

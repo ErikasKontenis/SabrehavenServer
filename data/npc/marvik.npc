@@ -2,7 +2,7 @@
 # marvik.npc: Datenbank fuer den Druiden Marvik
 
 Name = "Marvik"
-Outfit = (130,0-101-121-95)
+Outfit = (130,0-101-121-95-0)
 Home = [32444,32213,8]
 Radius = 4
 

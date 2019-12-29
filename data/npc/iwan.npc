@@ -2,7 +2,7 @@
 # iwan.npc: Datenbank für den Edelsteinhändler Iwan
 
 Name = "Iwan"
-Outfit = (128,0-112-88-113)
+Outfit = (128,0-112-88-113-0)
 Home = [33217,31833,7]
 Radius = 1
 

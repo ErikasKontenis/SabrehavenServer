@@ -2,7 +2,7 @@
 # Loui.npc: Datenbank für Loui den ängstlichen Mönch
 
 Name = "Loui"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32014,32190,7]
 Radius = 2
 

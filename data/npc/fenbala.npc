@@ -2,7 +2,7 @@
 # fenbala.npc: Datenbank für die Wachfrau Fenbala
 
 Name = "Fenbala"
-Outfit = (139,77-52-64-115)
+Outfit = (139,77-52-64-115-0)
 Home = [32320,31755,7]
 Radius = 0
 

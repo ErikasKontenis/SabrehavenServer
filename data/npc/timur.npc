@@ -2,7 +2,7 @@
 # timur.npc: Datenbank für den Händler Timur auf der Insel Fibula
 
 Name = "Timur"
-Outfit = (128,0-116-102-95)
+Outfit = (128,0-116-102-95-0)
 Home = [32191,32443,7]
 Radius = 2
 

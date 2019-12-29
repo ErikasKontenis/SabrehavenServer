@@ -2,7 +2,7 @@
 # Imbul.npc: Datenbank für den Fährman Imbul
 
 Name = "Imbul"
-Outfit = (128,95-2-63-115)
+Outfit = (128,95-2-63-115-0)
 Home = [32558,32781,7]
 Radius = 0
 

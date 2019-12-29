@@ -2,7 +2,7 @@
 # skjaar.npc: Datenbank für Skjaar, Wächter der Krypta im Berg und Meistermagier
 
 Name = "Skjaar"
-Outfit = (9,0-0-0-0)
+Outfit = (9,0-0-0-0-0)
 Home = [32450,32038,8]
 Radius = 2
 

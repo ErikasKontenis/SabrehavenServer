@@ -2,7 +2,7 @@
 # captain3.npc: Kapitän Seagull in Ab'Dendriel
 
 Name = "Captain Seagull"
-Outfit = (129,60-113-95-115)
+Outfit = (129,60-113-95-115-0)
 Home = [32735,31668,6]
 Radius = 2
 

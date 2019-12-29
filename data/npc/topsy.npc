@@ -2,7 +2,7 @@
 # topsy.npc: Datenbank für shopkeeper Topsy (magic)
 
 Name = "Topsy"
-Outfit = (139,78-52-64-115)
+Outfit = (139,78-52-64-115-0)
 Home = [32415,32170,7]
 Radius = 2
 

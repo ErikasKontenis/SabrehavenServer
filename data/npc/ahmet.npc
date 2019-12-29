@@ -2,7 +2,7 @@
 # ahmet.npc: Datenbank für den pyramidenhändler Ahmet
 
 Name = "Ahmet"
-Outfit = (130,38-40-39-114)
+Outfit = (130,38-40-39-114-0)
 Home = [33126,32810,6]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # legola.npc: Datenbank für die Paladinin Legola
 
 Name = "Legola"
-Outfit = (137,72-105-105-95)
+Outfit = (137,72-105-105-95-0)
 Home = [32298,31784,7]
 Radius = 2
 

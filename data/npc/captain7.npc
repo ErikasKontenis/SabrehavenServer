@@ -2,7 +2,7 @@
 # sinbeard.npc: Kapitän Sinbeard in Ankrahmun
 
 Name = "Captain Sinbeard"
-Outfit = (134,95-10-56-77)
+Outfit = (134,95-10-56-77-0)
 Home = [33094,32884,6]
 Radius = 2
 

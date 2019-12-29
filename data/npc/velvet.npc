@@ -2,7 +2,7 @@
 # velvet.npc: Möbelverkäuferin Velvet in Venore
 
 Name = "Velvet"
-Outfit = (136,59-96-115-95)
+Outfit = (136,59-96-115-95-0)
 Home = [32943,32104,6]
 Radius = 1
 

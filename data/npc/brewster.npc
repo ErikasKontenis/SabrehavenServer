@@ -2,7 +2,7 @@
 # brewster.npc: Datenbank für den priester brewster
 
 Name = "Brewster"
-Outfit = (133,57-115-115-95)
+Outfit = (133,57-115-115-95-0)
 Home = [32595,32744,7]
 Radius = 2
 

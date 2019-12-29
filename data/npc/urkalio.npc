@@ -2,7 +2,7 @@
 # urkalio.npc: Datenbank für den Wirt Urkalio
 
 Name = "Urkalio"
-Outfit = (128,39-40-118-76)
+Outfit = (128,39-40-118-76-0)
 Home = [32913,32081,10]
 Radius = 1
 

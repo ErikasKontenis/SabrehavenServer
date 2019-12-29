@@ -2,7 +2,7 @@
 # aldo.npc: Datenbank für den Schuhverkäufer Aldo
 
 Name = "Aldo"
-Outfit = (128,40-37-116-76)
+Outfit = (128,40-37-116-76-0)
 Home = [32953,32110,6]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # Vladruc.npc: Datenbank für Vladruc Urghain, den Besitzer des magischen Markts
 
 Name = "Vladruc"
-Outfit = (68,0-0-0-0)
+Outfit = (68,0-0-0-0-0)
 Home = [32976,32079,5]
 Radius = 2
 

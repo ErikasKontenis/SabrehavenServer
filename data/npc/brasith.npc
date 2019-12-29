@@ -2,7 +2,7 @@
 # brasith.npc: Datenbank für den Obsthändler Brasith
 
 Name = "Brasith"
-Outfit = (144,60-94-58-76)
+Outfit = (144,60-94-58-76-0)
 Home = [32692,31589,7]
 Radius = 1
 

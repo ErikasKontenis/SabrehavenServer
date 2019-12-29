@@ -2,7 +2,7 @@
 # bonifacius.npc: Datenbank für den Lebensmittelhändler Bonifacius
 
 Name = "Bonifacius"
-Outfit = (128,59-82-58-95)
+Outfit = (128,59-82-58-95-0)
 Home = [33165,31801,7]
 Radius = 1
 

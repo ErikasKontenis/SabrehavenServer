@@ -2,7 +2,7 @@
 # shiantis.npc: Datenbank für die Händlerin Shiantis in Venore
 
 Name = "Shiantis"
-Outfit = (136,0-36-13-76)
+Outfit = (136,0-36-13-76-0)
 Home = [32890,32086,6]
 Radius = 2
 

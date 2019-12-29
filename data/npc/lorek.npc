@@ -2,7 +2,7 @@
 # Lorek.npc: Datenbank für den Fährman Lorek
 
 Name = "Lorek"
-Outfit = (132,19-10-38-95)
+Outfit = (132,19-10-38-95-0)
 Home = [32679,32775,7]
 Radius = 0
 

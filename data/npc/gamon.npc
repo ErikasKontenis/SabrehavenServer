@@ -2,7 +2,7 @@
 # gamon.npc: Möbelverkäufer Gamon in Thais
 
 Name = "Gamon"
-Outfit = (128,97-58-105-120)
+Outfit = (128,97-58-105-120-0)
 Home = [32408,32170,7]
 Radius = 1
 

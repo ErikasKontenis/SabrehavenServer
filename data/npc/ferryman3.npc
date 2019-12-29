@@ -2,7 +2,7 @@
 # ferryman3.npc: Fährmann Svenson auf Folda (Ice)
 
 Name = "Svenson"
-Outfit = (129,77-113-68-67)
+Outfit = (129,77-113-68-67-0)
 Home = [32044,31582,7]
 Radius = 2
 

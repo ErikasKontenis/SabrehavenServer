@@ -2,7 +2,7 @@
 # pino: Datenbank für den Teppichpiloten Pino in Edron
 
 Name = "Pino"
-Outfit = (128,115-0-67-114)
+Outfit = (128,115-0-67-114-0)
 Home = [33192,31783,3]
 Radius = 1
 

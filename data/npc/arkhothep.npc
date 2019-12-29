@@ -2,7 +2,7 @@
 # Arkhothep.npc: Datenbank für den Pharao von Ankrahmun
 
 Name = "Arkhothep"
-Outfit = (91,0-0-0-0)
+Outfit = (91,0-0-0-0-0)
 Home = [33150,32842,4]
 Radius = 2
 

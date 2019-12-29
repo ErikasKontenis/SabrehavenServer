@@ -2,7 +2,7 @@
 # demonskeleton.npc: Datenbank fuer ein NPC-Daemonenskelett
 
 Name = "Demon Skeleton"
-Outfit = (37,0-0-0-0)
+Outfit = (37,0-0-0-0-0)
 Home = [32666,31676,15]
 Radius = 0
 

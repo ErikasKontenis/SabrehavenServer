@@ -2,7 +2,7 @@
 # odemara.npc: Datenbank für die Edelsteinhändlerin Odemara
 
 Name = "Odemara"
-Outfit = (138,22-99-5-76)
+Outfit = (138,22-99-5-76-0)
 Home = [33015,32058,6]
 Radius = 1
 

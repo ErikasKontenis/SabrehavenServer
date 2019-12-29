@@ -2,7 +2,7 @@
 # ferryman2.npc: Fährmann Anderson auf Senja (Ice)
 
 Name = "Anderson"
-Outfit = (129,79-113-68-67)
+Outfit = (129,79-113-68-67-0)
 Home = [32127,31660,7]
 Radius = 1
 

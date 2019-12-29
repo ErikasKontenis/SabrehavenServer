@@ -2,7 +2,7 @@
 # galuna.npc: Datenbank für die Bogenmacherin Galuna
 
 Name = "Galuna"
-Outfit = (137,40-96-95-96)
+Outfit = (137,40-96-95-96-0)
 Home = [32342,32246,6]
 Radius = 2
 

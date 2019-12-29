@@ -2,7 +2,7 @@
 # zoltan.npc Datenbank fuer den Zauberlehrer Zoltan
 
 Name = "Zoltan"
-Outfit = (130,95-94-95-57)
+Outfit = (130,95-94-95-57-0)
 Home = [33268,31849,4]
 Radius = 3
 

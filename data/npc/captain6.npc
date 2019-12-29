@@ -2,7 +2,7 @@
 # petros.npc: Fährmann Petros bei Darashia
 
 Name = "Petros"
-Outfit = (128,79-10-127-127)
+Outfit = (128,79-10-127-127-0)
 Home = [33289,32481,6]
 Radius = 2
 

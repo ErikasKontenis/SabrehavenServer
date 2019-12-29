@@ -2,7 +2,7 @@
 # blindprophet.npc: Datenbank für den blinden affenpropheten
 
 Name = "The Blind Prophet"
-Outfit = (117,0-0-0-0)
+Outfit = (117,0-0-0-0-0)
 Home = [33022,32604,7]
 Radius = 4
 

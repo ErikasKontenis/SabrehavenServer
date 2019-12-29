@@ -2,7 +2,7 @@
 # costello.npc: Datenbank für den Abt Costello
 
 Name = "Costello"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32180,31936,7]
 Radius = 3
 

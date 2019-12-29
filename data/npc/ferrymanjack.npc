@@ -2,7 +2,7 @@
 # ferrymanJack.npc: Fährmann Jack auf der Mönchsinsel
 
 Name = "Captain Jack"
-Outfit = (132,19-70-95-115)
+Outfit = (132,19-70-95-115-0)
 Home = [32189,31957,6]
 Radius = 2
 

@@ -2,7 +2,7 @@
 # alwin.npc: Datenbank für eine Stadtwache in Venore
 
 Name = "Alwin"
-Outfit = (131,113-113-113-115)
+Outfit = (131,113-113-113-115-0)
 Home = [32875,32125,6]
 Radius = 10
 

@@ -2,7 +2,7 @@
 # tothdral.npc: Datenbank für den pyramidenmagier tothdral
 
 Name = "Tothdral"
-Outfit = (65,0-0-0-0)
+Outfit = (65,0-0-0-0-0)
 Home = [33148,32867,6]
 Radius = 2
 

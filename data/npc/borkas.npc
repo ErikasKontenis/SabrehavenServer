@@ -2,7 +2,7 @@
 # borkas.npc: Möbelverkäufer Borkas in Venore
 
 Name = "Borkas"
-Outfit = (128,77-43-38-76)
+Outfit = (128,77-43-38-76-0)
 Home = [32992,32068,6]
 Radius = 2
 

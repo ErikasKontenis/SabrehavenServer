@@ -2,7 +2,7 @@
 # ferks.npc: Datenbank für den Bankier Ferks
 
 Name = "Ferks"
-Outfit = (128,78-52-118-115)
+Outfit = (128,78-52-118-115-0)
 Home = [32634,32738,6]
 Radius = 0
 

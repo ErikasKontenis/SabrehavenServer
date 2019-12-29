@@ -2,7 +2,7 @@
 # julian.npc: Datenbank für den Musikhändler Julian
 
 Name = "Julian"
-Outfit = (128,55-30-23-115)
+Outfit = (128,55-30-23-115-0)
 Home = [32883,32076,6]
 Radius = 1
 

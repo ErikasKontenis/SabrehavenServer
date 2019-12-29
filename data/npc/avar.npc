@@ -2,7 +2,7 @@
 # avar.npc: Datenbank für den Abenteurer Avar Tar
 
 Name = "Avar Tar"
-Outfit = (73,0-0-0-0)
+Outfit = (73,0-0-0-0-0)
 Home = [33250,31764,7]
 Radius = 4
 

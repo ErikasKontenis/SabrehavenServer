@@ -2,7 +2,7 @@
 # gundralph.npc: Datenbank für den Zauberlehrer Gundralph
 
 Name = "Gundralph"
-Outfit = (9,0-0-0-0)
+Outfit = (9,0-0-0-0-0)
 Home = [33268,31849,5]
 Radius = 3
 

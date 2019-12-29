@@ -2,7 +2,7 @@
 # captain1.npc: Kapitän Blaubaer in Thais
 
 Name = "Captain Bluebear"
-Outfit = (129,19-69-107-50)
+Outfit = (129,19-69-107-50-0)
 Home = [32310,32210,6]
 Radius = 2
 

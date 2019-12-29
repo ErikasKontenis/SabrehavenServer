@@ -2,7 +2,7 @@
 # baxter.npc: Datenbank für den Burgwächter Baxter
 
 Name = "Baxter"
-Outfit = (131,96-29-29-115)
+Outfit = (131,96-29-29-115-0)
 Home = [32322,32188,7]
 Radius = 3
 

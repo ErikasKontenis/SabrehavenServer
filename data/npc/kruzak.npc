@@ -2,7 +2,7 @@
 # kruzak.npc: Datenbank für den Zwergenkönig
 
 Name = "Emperor Kruzak"
-Outfit = (66,0-0-0-0)
+Outfit = (66,0-0-0-0-0)
 Home = [32627,31923,3]
 Radius = 1
 

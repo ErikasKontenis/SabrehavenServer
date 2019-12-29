@@ -2,7 +2,7 @@
 # norf.npc: Datenbank für den Mönch Norf
 
 Name = "Norf"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32346,32363,6]
 Radius = 4
 

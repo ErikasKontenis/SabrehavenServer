@@ -2,7 +2,7 @@
 # christoph.npc: Datenbank für eine Stadtwache in Venore
 
 Name = "Christoph"
-Outfit = (131,113-113-113-115)
+Outfit = (131,113-113-113-115-0)
 Home = [32885,32031,6]
 Radius = 10
 

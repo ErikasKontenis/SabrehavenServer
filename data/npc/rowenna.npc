@@ -2,7 +2,7 @@
 # rowenna.npc: Datenbank für die Waffenhändlerin Rowenna
 
 Name = "Rowenna"
-Outfit = (139,132-38-76-38)
+Outfit = (139,132-38-76-38-0)
 Home = [32324,31794,7]
 Radius = 3
 

@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Tyrias"
-Outfit = (133,57-113-95-113)
+Outfit = (133,57-113-95-113-0)
 Home = [32316,32823,7]
 Radius = 3
 

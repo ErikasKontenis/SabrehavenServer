@@ -2,7 +2,7 @@
 # Kulag.npc: Datenbank für die Stadtwache am Westtor
 
 Name = "Kulag, the guard"
-Outfit = (131,19-19-19-19)
+Outfit = (131,19-19-19-19-0)
 Home = [32287,32264,07]
 Radius = 2
 

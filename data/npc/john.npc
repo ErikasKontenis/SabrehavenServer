@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "John"
-Outfit = (128,58-68-12-114)
+Outfit = (128,58-68-12-114-0)
 Home = [32138,32904,7]
 Radius = 1
 

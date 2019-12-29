@@ -2,7 +2,7 @@
 # eroth.npc: Datenbank für den Cenath-Anführer Eroth (Elfenstadt)
 
 Name = "Eroth"
-Outfit = (63,0-0-0-0)
+Outfit = (63,0-0-0-0-0)
 Home = [32661,31685,6]
 Radius = 4
 

@@ -2,7 +2,7 @@
 # bambi.npc: Datenbank für die Wächterin Bambi Bonecrusher (Carlin)
 
 Name = "Bambi Bonecrusher"
-Outfit = (139,96-19-68-95)
+Outfit = (139,96-19-68-95-0)
 Home = [32341,31749,7]
 Radius = 2
 

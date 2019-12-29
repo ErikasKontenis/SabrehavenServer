@@ -2,7 +2,7 @@
 # yaman.npc: Datenbank für den Efreethändler Yaman (Magische Gegenstände, Efreet)
 
 Name = "Yaman"
-Outfit = (51,0-0-0-0)
+Outfit = (51,0-0-0-0-0)
 Home = [33045,32620,2]
 Radius = 1
 

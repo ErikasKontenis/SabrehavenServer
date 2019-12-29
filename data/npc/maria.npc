@@ -2,7 +2,7 @@
 # maria.npc: Datenbank für die Wirtin Maria
 
 Name = "Maria"
-Outfit = (136,77-79-61-131)
+Outfit = (136,77-79-61-131-0)
 Home = [32912,32082,9]
 Radius = 1
 

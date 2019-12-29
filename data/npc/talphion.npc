@@ -2,7 +2,7 @@
 # talphion.npc: Datenbank fuer den Technomancer Talphion (Zwergenstadt)
 
 Name = "Talphion"
-Outfit = (160,11-86-87-106)
+Outfit = (160,11-86-87-106-0)
 Home = [32563,31894,12]
 Radius = 2
 

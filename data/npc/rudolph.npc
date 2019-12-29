@@ -2,7 +2,7 @@
 # rudolph.npc: Datenbank für den Schneider Rudolph
 
 Name = "Rudolph"
-Outfit = (128,41-29-78-76)
+Outfit = (128,41-29-78-76-0)
 Home = [33212,31812,6]
 Radius = 1
 

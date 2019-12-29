@@ -2,7 +2,7 @@
 # blindorc.npc: Datenbank fuer den blinden Orkschmied
 
 Name = "Blind Orc"
-Outfit = (5,0-0-0-0)
+Outfit = (5,0-0-0-0-0)
 Home = [32102,32130,4]
 Radius = 1
 

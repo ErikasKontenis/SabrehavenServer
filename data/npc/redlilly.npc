@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Red Lilly"
-Outfit = (136,77-21-27-30)
+Outfit = (136,77-21-27-30-0)
 Home = [32283,32821,7]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # bigben.npc: Datenbank für den Zyklopenschmied Ben (Elfenstadt)
 
 Name = "A Sweaty Cyclops"
-Outfit = (22,0-0-0-0)
+Outfit = (22,0-0-0-0-0)
 Home = [32697,31674,3]
 Radius = 2
 

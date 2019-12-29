@@ -2,7 +2,7 @@
 # leedelle.npc: Datenbank für die Händlerin Le'Delle (Newbie)
 
 Name = "Lee'Delle"
-Outfit = (136,78-76-72-96)
+Outfit = (136,78-76-72-96-0)
 Home = [32024,32196,7]
 Radius = 2
 

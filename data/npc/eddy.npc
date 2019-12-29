@@ -2,7 +2,7 @@
 # eddy.npc: Möbelverkäufer Eddy auf Fibula
 
 Name = "Eddy"
-Outfit = (128,60-64-0-95)
+Outfit = (128,60-64-0-95-0)
 Home = [32168,32431,7]
 Radius = 3
 

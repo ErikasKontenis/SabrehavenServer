@@ -2,7 +2,7 @@
 # bashira.npc: Datenbank fuer die Haendlerin Bashira (Elfenstadt)
 
 Name = "Bashira"
-Outfit = (144,78-62-97-76)
+Outfit = (144,78-62-97-76-0)
 Home = [32669,31655,8]
 Radius = 1
 

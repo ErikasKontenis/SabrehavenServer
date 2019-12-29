@@ -2,7 +2,7 @@
 # tokel.npc: Datenbank für den Bauern Tokel in Greenshore
 
 Name = "Tokel"
-Outfit = (128,78-96-30-114)
+Outfit = (128,78-96-30-114-0)
 Home = [32256,32056,7]
 Radius = 3
 

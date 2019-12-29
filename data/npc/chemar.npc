@@ -2,7 +2,7 @@
 # chemar.npc: Datenbank für den Teppichpiloten Chemar in Darashia
 
 Name = "Chemar"
-Outfit = (130,95-3-14-76)
+Outfit = (130,95-3-14-76-0)
 Home = [33270,32439,6]
 Radius = 2
 

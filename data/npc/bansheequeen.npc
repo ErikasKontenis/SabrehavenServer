@@ -2,7 +2,7 @@
 # bansheequeen.npc: Datenbank für die Bansheequeen
 
 Name = "The Queen of the Banshee"
-Outfit = (78,0-0-0-0)
+Outfit = (78,0-0-0-0-0)
 Home = [32260,31863,14] 
 Radius = 6
 

@@ -2,7 +2,7 @@
 # lorbas.npc: Datenbank für den falschen mönch lorbas
 
 Name = "Lorbas"
-Outfit = (57,0-0-0-0)
+Outfit = (57,0-0-0-0-0)
 Home = [32695,32310,7]
 Radius = 2
 

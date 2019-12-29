@@ -2,7 +2,7 @@
 # cornelia.npc: Datenbank für die Rüstungshändlerin Cornelia
 
 Name = "Cornelia"
-Outfit = (139,95-57-102-115)
+Outfit = (139,95-57-102-115-0)
 Home = [32334,31796,7]
 Radius = 3
 

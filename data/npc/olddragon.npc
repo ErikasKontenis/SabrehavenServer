@@ -2,7 +2,7 @@
 # olddragon.npc: Datenbank für den alten Drachenlord
 
 Name = "An Old Dragonlord"
-Outfit = (39,0-0-0-0)
+Outfit = (39,0-0-0-0-0)
 Home = [32796,31557,2]
 Radius = 3
 

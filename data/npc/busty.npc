@@ -2,7 +2,7 @@
 # busty.npc: Datenbank für die Wächterin Busty Bonecrusher
 
 Name = "Busty Bonecrusher"
-Outfit = (139,96-19-66-95)
+Outfit = (139,96-19-66-95-0)
 Home = [32294,31791,7]
 Radius = 3
 

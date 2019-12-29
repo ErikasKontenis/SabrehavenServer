@@ -2,7 +2,7 @@
 # dallheim.npc: Datenbank für den Dorfwächter Dallheim (Rookgaard)
 
 Name = "Dallheim"
-Outfit = (131,76-38-76-95)
+Outfit = (131,76-38-76-95-0)
 Home = [32093,32180,6]
 Radius = 1
 

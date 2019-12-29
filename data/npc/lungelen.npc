@@ -2,7 +2,7 @@
 # lungelen.npc: Datenbank für die Erzmagierin Lungelen
 
 Name = "Lungelen"
-Outfit = (138,77-19-95-115)
+Outfit = (138,77-19-95-115-0)
 Home = [32303,32267,6]
 Radius = 2
 

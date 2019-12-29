@@ -2,7 +2,7 @@
 # rahkem.npc: Datenbank für den pyramidenpriester rahkem
 
 Name = "Rahkem"
-Outfit = (130,0-77-87-116)
+Outfit = (130,0-77-87-116-0)
 Home = [33194,32848,7]
 Radius = 2
 

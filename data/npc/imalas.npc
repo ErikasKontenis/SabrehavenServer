@@ -2,7 +2,7 @@
 # imalas.npc: Datenbank für den Nahrungsmittelhändler Imalas
 
 Name = "Imalas"
-Outfit = (128,115-10-39-114)
+Outfit = (128,115-10-39-114-0)
 Home = [32334,31801,7]
 Radius = 1
 

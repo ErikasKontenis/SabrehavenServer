@@ -1,7 +1,7 @@
 # GIMUD - Graphical Interface Multi User Dungeon
 
 Name = "Captain Waverider"
-Outfit = (96,0-0-0-0)
+Outfit = (96,0-0-0-0-0)
 Home = [32346,32859,7]
 Radius = 2
 

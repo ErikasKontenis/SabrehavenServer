@@ -2,7 +2,7 @@
 # zaildal.npc: Datenbank für den Bambusmöbelhändler Zaidal
 
 Name = "Zaidal"
-Outfit = (128,76-43-77-76)
+Outfit = (128,76-43-77-76-0)
 Home = [32621,32747,5]
 Radius = 0
 

@@ -2,7 +2,7 @@
 # baaleal.npc: Datenbank für den Efreetgeneral Baa'leal
 
 Name = "Baa'leal"
-Outfit = (51,0-0-0-0)
+Outfit = (51,0-0-0-0-0)
 Home = [33048,32620,4]
 Radius = 2 
 

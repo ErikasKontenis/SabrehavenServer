@@ -2,7 +2,7 @@
 # isimov.npc: Datenbank für den Zwergenmönch Isimov (Zwergenstadt)
 
 Name = "Isimov"
-Outfit = (160,115-0-19-95)
+Outfit = (160,115-0-19-95-0)
 Home = [32653,31925,11]
 Radius = 2
 

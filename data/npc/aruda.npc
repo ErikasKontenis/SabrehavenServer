@@ -2,7 +2,7 @@
 # aruda.npc: Datenbank fuer die Diebin Aruda
 
 Name = "Aruda"
-Outfit = (140,77-83-79-95)
+Outfit = (140,77-83-79-95-0)
 Home = [32368,32215,7]
 Radius = 99
 

@@ -2,7 +2,7 @@
 # boques.npc: Datenbank für den Djinnkoch Bo'ques
 
 Name = "Bo'ques"
-Outfit = (80,0-0-0-0)
+Outfit = (80,0-0-0-0-0)
 Home = [33101,32520,5]
 Radius = 2 
 

@@ -2,7 +2,7 @@
 # ironeye.npc: Datenbank für den Waffen und Rüstungshandelsfürsten Abran Ironeye
 
 Name = "Abran Ironeye"
-Outfit = (73,0-0-0-0)
+Outfit = (73,0-0-0-0-0)
 Home = [32907,32116,5]
 Radius = 2
 

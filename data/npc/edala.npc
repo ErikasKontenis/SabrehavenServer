@@ -2,7 +2,7 @@
 # edala.npc: Datenbank für die heilerin edala (nahe Elfenstadt)
 
 Name = "Edala"
-Outfit = (63,0-0-0-0)
+Outfit = (63,0-0-0-0-0)
 Home = [32698,31718,2]
 Radius = 3
 

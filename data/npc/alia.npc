@@ -2,7 +2,7 @@
 # alia.npc: Datenbank für die Priesterin Alia
 
 Name = "Alia"
-Outfit = (138,96-95-0-95)
+Outfit = (138,96-95-0-95-0)
 Home = [32360,31785,7]
 Radius = 2
 

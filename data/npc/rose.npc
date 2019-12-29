@@ -2,7 +2,7 @@
 # rose.npc: Blumenverkäuferin Rose in Venore
 
 Name = "Rose"
-Outfit = (136,79-77-112-116)
+Outfit = (136,79-77-112-116-0)
 Home = [32971,32034,6]
 Radius = 2
 

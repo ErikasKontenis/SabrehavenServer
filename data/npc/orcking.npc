@@ -2,7 +2,7 @@
 # orcking.npc: Datenbank für den Orckönig
 
 Name = "The Orc King"
-Outfit = (19,0-0-0-0)
+Outfit = (19,0-0-0-0-0)
 Home = [32983,31728,9]
 Radius = 3
 

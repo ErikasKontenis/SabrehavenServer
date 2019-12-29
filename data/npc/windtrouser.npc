@@ -2,7 +2,7 @@
 # windtrouser.npc: Fischer Dalbrect Windtrouser nahe Mönchsinsel
 
 Name = "Dalbrect"
-Outfit = (129,76-97-105-76)
+Outfit = (129,76-97-105-76-0)
 Home = [32211,31756,7]
 Radius = 5
 

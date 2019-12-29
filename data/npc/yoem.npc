@@ -2,7 +2,7 @@
 # yoem.npc: Möbelverkäufer Yoem auf Cormaya
 
 Name = "Yoem"
-Outfit = (128,41-112-105-96)
+Outfit = (128,41-112-105-96-0)
 Home = [33305,31966,7]
 Radius = 2
 

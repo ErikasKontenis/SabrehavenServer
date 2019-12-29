@@ -2,7 +2,7 @@
 # gurbasch.npc: Datenbank für den Kapitän Gurbasch
 
 Name = "Gurbasch"
-Outfit = (66,0-0-0-0)
+Outfit = (66,0-0-0-0-0)
 Home = [33313,31989,15]
 Radius = 2
 

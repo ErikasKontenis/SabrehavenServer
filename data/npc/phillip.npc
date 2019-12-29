@@ -2,7 +2,7 @@
 # phillip.npc: Datenbank für den Lehrer Phillip
 
 Name = "Phillip"
-Outfit = (128,116-54-68-76)
+Outfit = (128,116-54-68-76-0)
 Home = [32369,31764,7]
 Radius = 4
 

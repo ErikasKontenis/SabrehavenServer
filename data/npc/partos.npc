@@ -2,7 +2,7 @@
 # partos.npc: Datenbank für den Sträfling Partos
 
 Name = "Partos"
-Outfit = (128,116-56-95-122)
+Outfit = (128,116-56-95-122-0)
 Home = [32323,32280,8]
 Radius = 1
 

@@ -2,7 +2,7 @@
 # hagor.npc: Datenbank für den alten Abenteurer Hagor (Desert)
 
 Name = "Hagor"
-Outfit = (129,19-58-105-94)
+Outfit = (129,19-58-105-94-0)
 Home = [32654,32151,10]
 Radius = 4
 

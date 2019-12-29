@@ -2,7 +2,7 @@
 # ferryman4.npc: Fährmann Carlson in Vega (Ice)
 
 Name = "Carlson"
-Outfit = (129,19-113-68-67)
+Outfit = (129,19-113-68-67-0)
 Home = [32029,31692,7]
 Radius = 2
 

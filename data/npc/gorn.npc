@@ -2,7 +2,7 @@
 # gorn.npc: Datenbank für den Händler Gorn
 
 Name = "Gorn"
-Outfit = (129,58-68-101-95)
+Outfit = (129,58-68-101-95-0)
 Home = [32377,32200,7]
 Radius = 3
 

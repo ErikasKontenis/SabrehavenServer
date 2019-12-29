@@ -2,7 +2,7 @@
 # djema.npc: Datenbank für die Bibliothekarin Djema
 
 Name = "Djema"
-Outfit = (136,77-9-86-131)
+Outfit = (136,77-9-86-131-0)
 Home = [33101,32520,3]
 Radius = 2 
 

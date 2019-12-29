@@ -2,7 +2,7 @@
 # muriel.npc: Datenbank für den Magier Muriel
 
 Name = "Muriel"
-Outfit = (130,115-94-97-57)
+Outfit = (130,115-94-97-57-0)
 Home = [32296,32263,7]
 Radius = 2
 

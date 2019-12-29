@@ -2,7 +2,7 @@
 # noodles.npc: Datenbank für den Pudel Noodles
 
 Name = "Noodles"
-Outfit = (32,0-0-0-0)
+Outfit = (32,0-0-0-0-0)
 Home = [32315,32178,6]
 Radius = 2
 

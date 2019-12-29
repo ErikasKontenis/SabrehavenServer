@@ -2,7 +2,7 @@
 # ferryman1.npc: Fährmann Nielson am Festland (Ice)
 
 Name = "Nielson"
-Outfit = (129,114-113-68-67)
+Outfit = (129,114-113-68-67-0)
 Home = [32232,31677,7]
 Radius = 2
 

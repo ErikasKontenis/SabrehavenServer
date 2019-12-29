@@ -2,7 +2,7 @@
 # ukea.npc: Möbelverkäuferin Ukea in Ab'Dendriel
 
 Name = "Ukea"
-Outfit = (144,78-58-64-58)
+Outfit = (144,78-58-64-58-0)
 Home = [32651,31665,6]
 Radius = 2
 
