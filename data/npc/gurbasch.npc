@@ -11,6 +11,8 @@ ADDRESS,"hello$",! -> "Welcome, %N!"
 ADDRESS,"hi$",!    -> *
 ADDRESS,"hiho$",!  -> *      
 ADDRESS,!          -> Idle
+BUSY,"please","bring","me","to","kazordoon",PZFree,Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
+BUSY,"please","bring","me","to","kazordoon",PZFree,Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
 BUSY,"hello$",!    -> "Don't hurry.", Queue
 BUSY,"hi$",!       -> *
 BUSY,"hiho$",!     -> *

@@ -11,6 +11,8 @@ ADDRESS,"hi$",male,!      -> *
 ADDRESS,"hello$",female,! -> "Welcome on board, Madam %N."
 ADDRESS,"hi$",female,!    -> *
 ADDRESS,!                 -> Idle
+BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
+BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
 BUSY,!                    -> NOP
@@ -45,7 +47,8 @@ VANISH,!                  -> "Good bye. Recommend us, if you were satisfied with
 "sail",QuestValue(17501)=1         -> *
 "go",QuestValue(17501)=1           -> *
 "back",QuestValue(17501)=1           -> *
-"liberty","bay",QuestValue(17501)=1           -> *
+"liberty","bay",QuestValue(17501)=1 -> *
+"wood",QuestValue(17501)=1 -> *
 
 "trip",QuestValue(17501)>1         -> "Do you want to travel back to Liberty Bay?", Topic=4
 "passage",QuestValue(17501)>1      -> *

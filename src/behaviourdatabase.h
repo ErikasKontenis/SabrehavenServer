@@ -91,6 +91,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_DELETEAMOUNT, // deletes an item according specified amount
 	BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE, // get/set expiring quest value
 	BEHAVIOUR_TYPE_SLOTITEM, // get slot item
+	BEHAVIOUR_TYPE_PZFREE, // is player pz not locked
 };
 
 enum NpcBehaviourOperator_t

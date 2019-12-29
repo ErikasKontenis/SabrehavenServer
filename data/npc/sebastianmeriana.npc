@@ -9,6 +9,9 @@ Behaviour = {
 ADDRESS,"hello$",!        -> "Ho, %N."
 ADDRESS,"hi$",!           -> *
 ADDRESS,!                 -> Idle
+BUSY,"please","bring","me","to","nargor",PZFree,Premium,QuestValue(17520)>3,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32025,32812,7), EffectOpp(11)
+BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32316,32702,7), EffectOpp(11)
+
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
 BUSY,!                    -> NOP
@@ -22,7 +25,7 @@ VANISH,!                  -> "Hm."
 "passage"          -> *
 "meriana"          -> "Yes. We are in Meriana."
 
-"liberty bay"       -> Price=50, "Do you seek a passage to Liberty Bay for %P?", Topic=1
+"liberty","bay"       -> Price=50, "Do you seek a passage to Liberty Bay for %P?", Topic=1
 "nargor",QuestValue(17520)<4       -> "Sorry, but you have to get permission from the Raymond Striker if you wan't to sail to Nargor."
 "nargor"       -> Price=50, "Do you seek a passage to Nargor for %P?", Topic=2
 

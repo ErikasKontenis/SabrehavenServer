@@ -151,6 +151,9 @@ bool BehaviourDatabase::loadConditions(ScriptReader& script, NpcBehaviour* behav
 			} else if (identifier == "pzblock") {
 				condition->type = BEHAVIOUR_TYPE_PZLOCKED;
 				searchTerm = true;
+			} else if (identifier == "pzfree") {
+				condition->type = BEHAVIOUR_TYPE_PZFREE;
+				searchTerm = true;
 			} else if (identifier == "promoted") {
 				condition->type = BEHAVIOUR_TYPE_PROMOTED;
 				searchTerm = true;
@@ -753,6 +756,11 @@ bool BehaviourDatabase::checkCondition(const NpcBehaviourCondition* condition, P
 		break;
 	case BEHAVIOUR_TYPE_PZLOCKED:
 		if (!player->isPzLocked()) {
+			return false;
+		}
+		break;
+	case BEHAVIOUR_TYPE_PZFREE:
+		if (player->isPzLocked()) {
 			return false;
 		}
 		break;

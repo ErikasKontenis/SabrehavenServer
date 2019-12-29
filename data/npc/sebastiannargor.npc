@@ -9,6 +9,8 @@ Behaviour = {
 ADDRESS,"hello$",!        -> "Ho, %N."
 ADDRESS,"hi$",!           -> *
 ADDRESS,!                 -> Idle
+BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32316,32702,7), EffectOpp(11)
+BUSY,"please","bring","me","to","meriana",PZFree,Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32346,32625,7), EffectOpp(11)
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
 BUSY,!                    -> NOP
@@ -22,7 +24,7 @@ VANISH,!                  -> "Hm."
 "passage"          -> *
 "nargor"          -> "Yes. We are in Nargor."
 
-"liberty bay"       -> Price=100, "Do you seek a passage to Liberty Bay for %P?", Topic=1
+"liberty","bay"       -> Price=100, "Do you seek a passage to Liberty Bay for %P?", Topic=1
 "meriana"       -> Price=50, "Do you seek a passage to Meriana for %P?", Topic=2
 
 Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"

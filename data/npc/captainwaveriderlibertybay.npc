@@ -9,6 +9,9 @@ Behaviour = {
 ADDRESS,"hello$",!        -> "Greetings, daring adventurer. If you need a passage, let me know."
 ADDRESS,"hi$",!           -> *
 ADDRESS,!                 -> Idle
+BUSY,"please","bring","me","to","peg","leg",PZFree,Premium,QuestValue(17502)>5,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32348,32625,7), EffectOpp(11)
+BUSY,"please","bring","me","to","treasure","island",PZFree,Premium,CountMoney>=200,! -> Price=200, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32132,32913,7), EffectOpp(11)
+
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
 BUSY,!                    -> NOP

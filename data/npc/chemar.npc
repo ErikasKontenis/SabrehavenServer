@@ -10,6 +10,12 @@ Behaviour = {
 ADDRESS,"hello$",!         -> "Ah, the wind brings in another visitor. Feel welcome %N."
 ADDRESS,"hi$",!            -> *
 ADDRESS,!                  -> Idle
+BUSY,"please","bring","me","to","edron",PZFree,Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+BUSY,"please","bring","me","to","edron",PZFree,Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+
+BUSY,"please","bring","me","to","femor",PZFree,Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+BUSY,"please","bring","me","to","femor",PZFree,Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+
 BUSY,"hello$",!            -> "%N! Be calm as the eye of the storm, and your patience will be rewarded.", Queue
 BUSY,"hi$",!               -> *
 BUSY,!                     -> NOP
