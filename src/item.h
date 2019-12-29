@@ -32,6 +32,7 @@ class Container;
 class Depot;
 class Teleport;
 class Mailbox;
+class DepotLocker;
 class Door;
 class MagicField;
 class BedItem;
@@ -374,6 +375,12 @@ class Item : virtual public Thing
 			return nullptr;
 		}
 		virtual const Mailbox* getMailbox() const {
+			return nullptr;
+		}
+		virtual DepotLocker* getDepotLocker() {
+			return nullptr;
+		}
+		virtual const DepotLocker* getDepotLocker() const {
 			return nullptr;
 		}
 		virtual Door* getDoor() {

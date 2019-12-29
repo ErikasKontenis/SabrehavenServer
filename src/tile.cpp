@@ -212,6 +212,27 @@ Mailbox* Tile::getMailbox() const
 	return nullptr;
 }
 
+DepotLocker* Tile::getDepotLocker() const
+{
+	if (!hasFlag(TILESTATE_DEPOT)) {
+		return nullptr;
+	}
+
+	if (ground && ground->getDepotLocker()) {
+		return ground->getDepotLocker();
+	}
+
+	if (const TileItemVector* items = getItemList()) {
+		for (auto it = items->rbegin(), end = items->rend(); it != end; ++it) {
+			if ((*it)->getDepotLocker()) {
+				return (*it)->getDepotLocker();
+			}
+		}
+	}
+	return nullptr;
+}
+
+
 BedItem* Tile::getBedItem() const
 {
 	if (!hasFlag(TILESTATE_BED)) {

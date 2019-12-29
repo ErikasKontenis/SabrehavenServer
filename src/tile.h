@@ -29,6 +29,7 @@
 class Creature;
 class Teleport;
 class Mailbox;
+class DepotLocker;
 class MagicField;
 class QTreeLeafNode;
 class BedItem;
@@ -169,6 +170,7 @@ class Tile : public Cylinder
 		MagicField* getFieldItem() const;
 		Teleport* getTeleportItem() const;
 		Mailbox* getMailbox() const;
+		DepotLocker* getDepotLocker() const;
 		BedItem* getBedItem() const;
 
 		Creature* getTopCreature() const;

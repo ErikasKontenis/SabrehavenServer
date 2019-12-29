@@ -65,10 +65,10 @@ class Container : public Item, public Cylinder
 			return this;
 		}
 
-		virtual DepotLocker* getDepotLocker() {
+		virtual DepotLocker* getDepotLocker() override {
 			return nullptr;
 		}
-		virtual const DepotLocker* getDepotLocker() const {
+		virtual const DepotLocker* getDepotLocker() const override {
 			return nullptr;
 		}
 

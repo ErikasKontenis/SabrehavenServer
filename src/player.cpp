@@ -567,14 +567,14 @@ bool Player::canSeeCreature(const Creature* creature) const
 	return true;
 }
 
-void Player::onReceiveMail() const
+void Player::onReceiveMail(uint32_t townId) const
 {
-	if (isNearDepotBox()) {
+	if (isNearDepotBox(townId)) {
 		sendTextMessage(MESSAGE_EVENT_ADVANCE, "New mail has arrived.");
 	}
 }
 
-bool Player::isNearDepotBox() const
+bool Player::isNearDepotBox(uint32_t townId) const
 {
 	const Position& pos = getPosition();
 	for (int32_t cx = -1; cx <= 1; ++cx) {
@@ -584,8 +584,10 @@ bool Player::isNearDepotBox() const
 				continue;
 			}
 
-			if (tile->hasFlag(TILESTATE_DEPOT)) {
-				return true;
+			if (DepotLocker* depotLocker = tile->getDepotLocker()) {
+				if (depotLocker->getDepotId() == townId) {
+					return true;
+				}
 			}
 		}
 	}

@@ -114,7 +114,7 @@ bool Mailbox::sendItem(Item* item) const
 			if (g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER,
 				item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
 				g_game.transformItem(item, item->getID() + 1);
-				player->onReceiveMail();
+				player->onReceiveMail(town->getID());
 				return true;
 			}
 		}
