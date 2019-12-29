@@ -46,8 +46,6 @@ function onUse(player, item, fromPosition, target, toPosition)
 	
 	player:sendTextMessage(MESSAGE_INFO_DESCR, "You have found " .. rewardName .. ".")
 	player:addItemEx(reward:clone(), true)
-	if not getPlayerFlagValue(player, PlayerFlag_HasInfiniteCapacity) then
-		player:setStorageValue(chestQuestNumber, 1)
-	end
+	player:setStorageValue(chestQuestNumber, 1)
 	return true
 end
