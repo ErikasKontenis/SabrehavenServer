@@ -89,9 +89,6 @@
 	<action actionid="17525" script="meriana_quest/tortoise_egg.lua" />
 	<action fromaid="17528" toaid="17530" script="meriana_quest/pirate_map.lua" />
 	
-	<!-- Port Hope -->
-	<action actionid="17569" script="port_hope/hydra_egg_quest.lua"/>
-	
 	<!-- Liberty Bay -->
 	<action fromid="6087" toid="6090" script="liberty_bay/cult_hymn.lua"/>
 	<action actionid="33216" script="liberty_bay/cult_piano_teleport.lua"/>
@@ -130,6 +127,7 @@
 	<action itemid="3702" script="misc/special_rights.lua" />
 	
 	<!-- Fun -->
+	<action actionid="17572" script="misc/rookgard_skip.lua" />
 	<action itemid="611" script="misc/snowheap.lua" />
 	<action itemid="2974" script="misc/water_pipe.lua" />
 	<action itemid="2976" script="misc/birdcage.lua" />
@@ -198,10 +196,7 @@
 	<action itemid="5938" script="misc/ceirons_waterskin.lua" />
 	
 	<!-- Chests -->
-	<action itemid="2472" script="misc/chests.lua" />
 	<action itemid="2479" script="misc/chests.lua" />
-	<action itemid="2480" script="misc/chests.lua" />
-	<action itemid="2482" script="misc/chests.lua" />
 	<action itemid="2543" script="misc/chests.lua" />
 	<action itemid="2544" script="misc/chests.lua" />
 	<action itemid="2545" script="misc/chests.lua" />
@@ -227,6 +222,8 @@
 	<action itemid="4830" script="misc/chests.lua" />
 	<action itemid="4833" script="misc/chests.lua" />
 	<action itemid="4873" script="misc/chests.lua" />
+	<action itemid="5730" script="misc/chests.lua" />
+	<action itemid="5742" script="misc/chests.lua" />
 	
 	<!-- Fluids -->
 	<action itemid="2524" script="misc/fluids.lua" />

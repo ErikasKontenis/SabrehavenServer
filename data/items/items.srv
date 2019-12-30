@@ -13896,7 +13896,8 @@ Attributes  = {Weight=80,SlotType=RING,HealthTicks=2000,HealthGain=1,ManaTicks=2
 
 TypeID      = 3101
 Name        = "a spellbook"
-Flags       = {Text,Take}
+Description = "To humble, or not to humble, that is the question"
+Flags       = {Unmove,Unlay,Unthrow,Unpass,UseEvent}
 Attributes  = {Weight=5800}
 
 TypeID      = 3102
@@ -22212,7 +22213,8 @@ Attributes  = {Weight=7000}
 
 TypeID      = 4873
 Name        = "a hydra's nest"
-Flags       = {Bottom,Chest,Unpass,Unmove,Unlay}
+Flags       = {Bottom,Chest,Unpass,Unmove,Unlay,Disguise}
+Attributes  = {DisguiseTarget=5676}
 
 TypeID      = 4874
 Name        = "swamp"
@@ -25868,7 +25870,9 @@ Flags       = {Take,Corpse,Expire}
 Attributes  = {Weight=500,ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 5730
-Name        = "" # this is nothing in client
+Name        = "a chest"
+Flags       = {Chest,Unpass,Unmove,Height,Disguise}
+Attributes  = {DisguiseTarget=2480}
 
 TypeID      = 5731
 Name        = "a hole"
@@ -25921,7 +25925,9 @@ Flags       = {Take,Armor}
 Attributes  = {Weight=4200,SlotType=HEAD,ArmorValue=9}
 
 TypeID      = 5742
-Name        = "" # this is nothing in client
+Name        = "a chest"
+Flags       = {Chest,Unpass,Unmove,Height,Disguise}
+Attributes  = {DisguiseTarget=2482}
 
 TypeID      = 5743
 Name        = "wooden floor"
@@ -26067,7 +26073,9 @@ Name        = "metal fittings"
 Flags       = {Clip,Unmove}
 
 TypeID      = 5775
-Name        = "" # this is nothing in client
+Name        = "a chest"
+Flags       = {Chest,Unpass,Unmove,Height,Disguise}
+Attributes  = {DisguiseTarget=2481}
 
 TypeID      = 5776
 Name        = "" # this is nothing in client
