@@ -1,5 +1,7 @@
 function onLogin(player)
-	if player:getLastLoginSaved() <= 0 then
+	if player:getStorageValue(17571) ~= 1 then
+		player:setStorageValue(17571, 1)
+		
 		-- Items
 		if player:getSex() == PLAYERSEX_FEMALE then
 			player:addItem(3562, 1, true, -1, CONST_SLOT_ARMOR)
