@@ -873,6 +873,10 @@ bool ConditionDamage::startCondition(Creature* creature)
 bool ConditionDamage::executeCondition(Creature* creature, int32_t)
 {
 	if (conditionType == CONDITION_FIRE) {
+		if (creature->isImmune(CONDITION_FIRE)) {
+			return false;
+		}
+
 		const int32_t r_cycle = cycle;
 		if (r_cycle) {
 			if (count <= 0) {
@@ -886,6 +890,10 @@ bool ConditionDamage::executeCondition(Creature* creature, int32_t)
 			return false;
 		}
 	} else if (conditionType == CONDITION_POISON) {
+		if (creature->isImmune(CONDITION_POISON)) {
+			return false;
+		}
+
 		const int32_t r_cycle = cycle;
 		if (r_cycle) {
 			if (count <= 0) {
@@ -904,6 +912,10 @@ bool ConditionDamage::executeCondition(Creature* creature, int32_t)
 			return false;
 		}
 	} else if (conditionType == CONDITION_ENERGY) {
+		if (creature->isImmune(CONDITION_ENERGY)) {
+			return false;
+		}
+
 		const int32_t r_cycle = cycle;
 		if (r_cycle) {
 			if (count <= 0) {

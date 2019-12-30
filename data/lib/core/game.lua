@@ -55,6 +55,17 @@ function Game.isPlayerThere(position)
 	return false
 end
 
+function Game.isMonsterThere(position, monsterName)
+	local tile = Tile(position)
+	local creatures = tile:getCreatures()
+	for _, creature in ipairs(creatures) do
+		if creature:isMonster() and creature:getName():lower() == monsterName:lower() then
+			return creature
+		end
+	end
+	return nil
+end
+
 function Game.broadcastMessage(message, messageType)
 	if messageType == nil then
 		messageType = MESSAGE_STATUS_WARNING

@@ -433,8 +433,8 @@ class Player final : public Creature, public Cylinder
 		void removeConditionSuppressions(uint32_t conditions);
 
 		DepotLocker* getDepotLocker(uint32_t depotId, bool autoCreate);
-		void onReceiveMail() const;
-		bool isNearDepotBox() const;
+		void onReceiveMail(uint32_t townId) const;
+		bool isNearDepotBox(uint32_t townId) const;
 
 		bool canSee(const Position& pos) const final;
 		bool canSeeCreature(const Creature* creature) const final;
