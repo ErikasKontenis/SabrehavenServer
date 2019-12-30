@@ -1732,6 +1732,7 @@ void Player::death(Creature* lastHitCreature)
 					magLevel = 0;
 					magLevelPercent = 0;
 					manaSpent = 0;
+					staminaMinutes = 3360;
 					setVocation(0);
 
 					// Restart skills
@@ -1749,6 +1750,9 @@ void Player::death(Creature* lastHitCreature)
 					lastLoginSaved = 0;
 					lastLogout = 0;
 
+					// Restart storages
+					storageMap.clear();
+					outfits.clear();
 
 					// Restart items
 					for (int32_t slot = CONST_SLOT_FIRST; slot <= CONST_SLOT_LAST; slot++)
