@@ -188,6 +188,8 @@
 	<action itemid="5710" script="misc/shovel.lua" />
 	<action itemid="3483" allowfaruse="1" script="misc/fishing_rod.lua" />
 	<action itemid="5865" script="misc/juice_squeezer.lua" />
+	<action itemid="5908" script="misc/skinning_dusting.lua"/>
+	<action itemid="5942" script="misc/skinning_dusting.lua"/>
 	
 	<!-- Miscellaneous -->
 	<action itemid="4867" script="misc/botanist_container.lua" />
