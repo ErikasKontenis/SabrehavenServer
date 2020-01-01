@@ -210,4 +210,13 @@ Topic=3,"yes",CountMoney<Price            -> "Sorry, you do not have enough gold
 Topic=3,"yes"                             -> "Here you are. Look in your spellbook for the pronunciation of this spell.", DeleteMoney, EffectOpp(13), TeachSpell(String)
 Topic=3                                   -> "Maybe next time."
 
+"stake",QuestValue(17576)=8,Count(5941)<=0 -> "I think you have forgotten to bring your stake, pilgrim."
+"stake",QuestValue(17576)=8 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Let there be power and compassion'. Now, bring your stake to Brewster in Port Hope for the next line of the prayer. I will inform him what to do.", SetQuestValue(17576,9)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake, pilgrim."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=9 -> "You should visit Brewster in Port Hope now."
+"stake",QuestValue(17576)>9 -> "You already received my line of the prayer."
+"stake" -> "A blessed stake? That is a strange request. Maybe Quentin knows more, he is one of the oldest monks after all."
+
 }

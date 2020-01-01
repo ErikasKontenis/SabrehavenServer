@@ -135,4 +135,13 @@ Topic=8,"i$","will$"                     -> *
 Topic=9,"yes"                            -> "So by the powers of the gods your souls are now bound together for eternity. May the gods watch with grace over your further live as a married couple. Go now and celebrate your marriage!", EffectOpp(14), EffectMe(13), Idle
 Topic=9,"i$","will$"                     -> *
 Topic=9,"no"                             -> "Your neglection of love hurts my heart. Leave now!", Idle
+
+"stake",QuestValue(17576)=7,Count(5941)<=0 -> "I think you have forgotten to bring your stake, pilgrim."
+"stake",QuestValue(17576)=7 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Let there be honour and humility'. Now, bring your stake to Rahkem in Ankrahmun for the next line of the prayer. I will inform him what to do.", SetQuestValue(17576,8)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake, pilgrim."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=8 -> "You should visit Rahkem in Ankrahmun now, pilgrim."
+"stake",QuestValue(17576)>8 -> "You already received my line of the prayer."
+"stake" -> "A blessed stake? That is a strange request. Maybe Quentin knows more, he is one of the oldest monks after all."
 }

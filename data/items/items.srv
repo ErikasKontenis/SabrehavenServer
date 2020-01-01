@@ -19675,8 +19675,8 @@ Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4322,TotalExpireTime=12
 
 TypeID      = 4322
 Name        = "a dead lizard templar"
-Flags       = {Corpse,Expire}
-Attributes  = {ExpireTarget=4323,TotalExpireTime=1200}
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4323,TotalExpireTime=1200}
 
 TypeID      = 4323
 Name        = "a dead lizard templar"
@@ -19690,8 +19690,8 @@ Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4325,TotalExpireTime=12
 
 TypeID      = 4325
 Name        = "a dead lizard sentinel"
-Flags       = {Corpse,Expire}
-Attributes  = {ExpireTarget=4326,TotalExpireTime=1200}
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4326,TotalExpireTime=1200}
 
 TypeID      = 4326
 Name        = "a dead lizard sentinel"
@@ -19705,8 +19705,8 @@ Attributes  = {Capacity=7,FluidSource=BLOOD,ExpireTarget=4328,TotalExpireTime=12
 
 TypeID      = 4328
 Name        = "a dead lizard snakecharmer"
-Flags       = {Corpse,Expire}
-Attributes  = {ExpireTarget=4329,TotalExpireTime=1200}
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=7,ExpireTarget=4329,TotalExpireTime=1200}
 
 TypeID      = 4329
 Name        = "a dead lizard snakecharmer"

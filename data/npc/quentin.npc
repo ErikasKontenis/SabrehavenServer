@@ -120,4 +120,20 @@ VANISH,!                -> "Remember: If you are heavily wounded or poisoned, I 
 
 
 "time"           -> "Now, it is %T. Ask Gorn for a watch, if you need one."
+
+"stake",QuestValue(17576)=0 -> "A blessed stake to defeat evil spirits? I do know an old prayer which is said to grant sacred power and to be able to bind this power to someone, or something. ...",
+							"However, this prayer needs the combined energy of ten priests. Each of them has to say one line of the prayer. ...",
+							"I could start with the prayer, but since the next priest has to be in a different location, you probably will have to travel a lot. ...",
+							"Is this stake really important enough to you so that you are willing to take this burden?", Topic=1
+Topic=1,"yes" -> "Alright, I guess you need a stake first. Maybe Gamon can help you, the leg of a chair or something could just do. Try asking him for a stake, and if you have one, bring it back to me.", SetQuestValue(17576,1)
+Topic=1 -> "Fine. You are free to decline my offer."
+
+"stake",QuestValue(17576)=1,Count(5941)<=0 -> "I guess you couldn't convince Gamon to give you a stake, eh?"
+"stake",QuestValue(17576)=1 -> Type=5941, Amount=1, "Ah, I see you brought a stake with you. Are you ready to receive my line of the prayer then?", Topic=2
+Topic=2,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Light shall be near - and darkness afar'. Now, bring your stake to Tibra in the Carlin church for the next line of the prayer. I will inform her what to do.", SetQuestValue(17576,2)
+Topic=2,"yes" -> "Where did you lost that stake?"
+Topic=2 -> "I will wait for you."
+"stake",QuestValue(17576)=2 -> "You should visit Tibra in the Carlin church now."
+"stake",QuestValue(17576)>2 -> "You already received my line of the prayer."
+
 }

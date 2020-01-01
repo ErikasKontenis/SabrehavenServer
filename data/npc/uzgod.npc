@@ -31,6 +31,7 @@ VANISH,!           -> "Guut bye. Coming back soon."
 "excalibug"     -> "You want sell me excalibug for 1000 platinum coins and an enchanted armor?", Topic=3
 "thanks"        -> "Me enjoy doing that."
 "thank","you"   -> *
+"obsidian","knife"         -> "Me remembering... but long time since seeing such a knife. Maybe can make one from obsidian lance. But only if you paying one draconian steel. Cyclops friend maybe can refine."
 
 "spear"                -> Type=3277, Amount=1, Price=10,  "You will buy a spear for %P gold?", Topic=1
 "rapier"               -> Type=3272, Amount=1, Price=15,  "You will buy a rapier for %P gold?", Topic=1
@@ -146,5 +147,13 @@ topic=7,"yes"   -> "Here you have it.", Create(Type),SetQuestValue(325,4)
 topic=7,"no"    -> "Stop make fun of old dwarf." 
 topic=7         -> "You joke with me!"
 
+"draconian","steel",ExpiringQuestValue(17575)>0 -> "I am still busy with your draconian steel which you gave me moments ago. Maybe come back later when I will need another one."
+"obsidian","lance",ExpiringQuestValue(17575)>0 -> *
+
+"draconian","steel",ExpiringQuestValue(17575)<0 -> "You bringing me draconian steel and obsidian lance in exchange for obsidian knife?", Topic=8
+"obsidian","lance",ExpiringQuestValue(17575)<0 -> *
+Topic=8,"yes",Count(5889)>=1,Count(3313)>=1 -> "Here you have it.", DeleteAmount(5889,1), DeleteAmount(3313,1), Create(5908), SetExpiringQuestValue(17575, 72000000)
+Topic=8,"yes" -> "No obsidian lance, no draconian steel."
+Topic=8 -> "Stop make fun of old dwarf."
 
 }

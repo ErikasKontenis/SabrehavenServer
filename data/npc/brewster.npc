@@ -107,4 +107,13 @@ VANISH,!           -> "Bye ... and now I'll have a quick drink."
 "solitude", QuestValue(101) > 0 -> *
 "wisdom" -> "Talk to the hermit Eremo on the isle of Cormaya about this blessing." 
 "solitude" -> *
+
+"stake",QuestValue(17576)=9,Count(5941)<=0 -> "I think you have forgotten to bring your stake, pilgrim."
+"stake",QuestValue(17576)=9 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to <hicks> receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Your hand shall be guided - your feet shall walk in <hicks> harmony'. Now, bring your stake to Tyrias in <hicks> Liberty Bay for the next line of the prayer. I will inform him what to do.", SetQuestValue(17576,10)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake, pilgrim."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=10 -> "You should visit Tyrias in Liberty Bay now."
+"stake",QuestValue(17576)>10 -> "You have already received my line of the prayer. Don't make me do more work than necessary!"
+"stake" -> "A blessed stake? That's a <hicks> strange request. Maybe Quentin knows more, he is one of the oldest monks after all."
 }

@@ -75,4 +75,12 @@ VANISH,!                -> "Remember: If you are heavily wounded or poisoned, I 
 
 
 "time"           -> "Now, it is %T."
+
+"stake",QuestValue(17576)=10,Count(5941)<=0 -> "You don't even have that strange stake with you."
+"stake",QuestValue(17576)=10 -> Type=5941, Amount=1, "Brewster sent me a strange message about some strange hocus-pocus. I think it's nonsense, but since you have come that far, I'll play along. Are you ready?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Your mind shall be a vessel for joy, light and wisdom' - uh, wow, something happened. Well, I guess that's it, but next time if you need some mumbo jumbo rather go to Chondur.", SetQuestValue(17576,11), Delete(Type), Create(5942)
+Topic=10,"yes" -> "You don't even have that strange stake with you."
+Topic=10 -> "No problem, I have other things to do."
+"stake",QuestValue(17576)>10 -> "I won't do that rubbish again. Go pester Chondur with your hocus-pocus."
+"stake" -> "A blessed stake? I don't believe in things like that. If anyone does, it's probably old Quentin."
 }

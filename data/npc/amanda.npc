@@ -85,4 +85,13 @@ VANISH,!                -> "If you are heavily wounded or poisoned, feel free to
 "wisdom" -> "Talk to the hermit Eremo on the isle of Cormaya about this blessing." 
 "solitude" -> *
 
+"stake",QuestValue(17576)=6,Count(5941)<=0 -> "I think you have forgotten to bring your stake, my child."
+"stake",QuestValue(17576)=6 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Wicked curses shall be broken'. Now, bring your stake to Kasmir in Darashia for the next line of the prayer. I will inform him what to do.", SetQuestValue(17576,7)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake, my child."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=7 -> "You should visit Kasmir in Darashia now, my child."
+"stake",QuestValue(17576)>7 -> "You already received my line of the prayer."
+"stake" -> "A blessed stake? That's a strange request. Maybe Quentin knows more, he is one of the oldest monks after all."
+
 }
