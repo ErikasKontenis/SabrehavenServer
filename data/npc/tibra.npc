@@ -109,4 +109,14 @@ Topic=1,"yes",CountMoney<Price  -> "Don't be ashamed, but you lack the gold."
 Topic=3,"yes"    -> "So tell me, what shadows your soul, my child.", Topic=4
 Topic=3          -> "As you wish."
 Topic=4          -> "Meditate on that and pray for your soul."
+
+"stake",QuestValue(17576)=2,Count(5941)<=0 -> "I think you have forgotten to bring your stake, my child."
+"stake",QuestValue(17576)=2 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Hope may fill your heart - doubt shall be banned'. Now, bring your stake to Maealil in the elven settlement for the next line of the prayer. I will inform him what to do.", SetQuestValue(17576,3)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake, my child."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=3 -> "You should visit Maealil in the elven settlement now, my child."
+"stake",QuestValue(17576)>3 -> "You already received my line of the prayer."
+"stake" -> "A blessed stake? That is a strange request, my child. Maybe Quentin knows more, he is one of the oldest monks after all."
+
 }

@@ -66,6 +66,11 @@ VANISH,!                  -> "Lady? Lady?? Hm. How strange..."
 "equipment"       -> *
 "special"         -> "My offers are permanently extraordinarily cheap."
 
+"stake" -> Type=5941, Amount=1, Price=5000, "Making a stake from a chair? Are you insane??! I won't waste my chairs on you for free! You will have to pay for it, but since I consider your plan a blasphemy, it will cost 5000 gold pieces. Okay?", Topic=142
+Topic=142,"yes",CountMoney>=Price -> "Argh... my heart aches! Alright... a promise is a promise. Here - take this wooden stake, and now get lost.", DeleteMoney, Create(Type), Idle
+Topic=142,"yes"                   -> "You can't even pay for that."
+Topic=142,"no"                    -> "Phew. No chair-killing."
+
 @"gen-t-furniture-statues-s.ndb"
 @"gen-t-furniture-tables-s.ndb"
 @"gen-t-furniture-chairs-s.ndb"

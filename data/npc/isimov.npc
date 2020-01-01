@@ -71,4 +71,13 @@ VANISH,!           -> "No patience, no manners."
 "heal$",HP<40     -> "Let me see what I can do, kid.", HP=40, EffectOpp(13)
 "heal$"           -> "Stop the whining, kid, that are only some scratches. Dwarfenheart knows no pain."
 "time"           -> "I think it's the fourth age of the yellow flame, isn't it?"
+
+"stake",QuestValue(17576)=5,Count(5941)<=0 -> "I think you have forgotten to bring your stake, kid."
+"stake",QuestValue(17576)=5 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Unclean spirits shall be repelled'. Now, bring your stake to Amanda in Edron for the next line of the prayer. I will inform her what to do.", SetQuestValue(17576,6)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake, kid."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=6 -> "You should visit Amanda in Edron now, kid."
+"stake",QuestValue(17576)>6 -> "You already received my line of the prayer."
+"stake" -> "A blessed stake? That's a strange request. Maybe Quentin knows more, he is one of the oldest monks after all."
 }

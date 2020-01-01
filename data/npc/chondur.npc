@@ -148,4 +148,12 @@ Topic=11 -> "Maybe another time."
 
 "mission" -> "Sorry, I don't have any missions for you."
 "task" -> "Sorry, I don't have any missions for you."
+
+# Wooden_Stake_Quest
+"stake",ExpiringQuestValue(17577)>0 -> "Sorry, but I'm still exhausted from the last ritual. Please come back later."
+"stake",QuestValue(17576)=11 -> "Ten prayers for a blessed stake? Don't tell me they made you travel whole Tibia for it! Listen, child, if you bring me a wooden stake, I'll bless it for you. <chuckles>", SetQuestValue(17576,12)
+"stake",QuestValue(17576)=12,ExpiringQuestValue(17577)<0 -> Type=5941, Amount=1, "Would you like to receive a spiritual prayer to bless your stake?", Topic=12
+Topic=12,"yes",Count(Type)>=Amount -> "<mumbles> Sha Kesh Mar!", Delete(Type), Create(5942), SetExpiringQuestValue(17577, 604800000)
+Topic=12,"yes" -> "You don't have a wooden stake."
+Topic=12 -> "Maybe another time."
 }

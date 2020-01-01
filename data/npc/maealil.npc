@@ -130,5 +130,13 @@ Topic=3                                   -> "As you wish."
 "wisdom" -> "Talk to the hermit Eremo on the isle of Cormaya about this blessing." 
 "solitude" -> *
 
+"stake",QuestValue(17576)=3,Count(5941)<=0 -> "I think you have forgotten to bring your stake."
+"stake",QuestValue(17576)=3 -> Type=5941, Amount=1, "Yes, I was informed what to do. Are you prepared to receive my line of the prayer?", Topic=10
+Topic=10,"yes",Count(Type)>=Amount -> "So receive my prayer: 'Peace may fill your soul - evil shall be cleansed'. Now, bring your stake to Yberius in the Venore temple for the next line of the prayer. I will inform him what to do.", SetQuestValue(17576,4)
+Topic=10,"yes" -> "I think you have forgotten to bring your stake."
+Topic=10 -> "I will wait for you."
+"stake",QuestValue(17576)=4 -> "You should visit Yberius in the Venore temple now."
+"stake",QuestValue(17576)>4 -> "You already received my line of the prayer."
+"stake" -> "A blessed stake? That is a strange request. Maybe Quentin knows more, he is one of the oldest monks after all."
 
 }
