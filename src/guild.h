@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -55,14 +55,26 @@ class Guild
 			memberCount = count;
 		}
 
-		GuildRank* getRankById(uint32_t id);
+		const std::vector<GuildRank>& getRanks() const {
+			return ranks;
+		}
+		GuildRank* getRankById(uint32_t rankId);
+		const GuildRank* getRankByName(const std::string& name) const;
 		const GuildRank* getRankByLevel(uint8_t level) const;
-		void addRank(uint32_t id, const std::string& name, uint8_t level);
+		void addRank(uint32_t rankId, const std::string& rankName, uint8_t level);
+
+		const std::string& getMotd() const {
+			return motd;
+		}
+		void setMotd(const std::string& motd) {
+			this->motd = motd;
+		}
 
 	private:
 		std::list<Player*> membersOnline;
 		std::vector<GuildRank> ranks;
 		std::string name;
+		std::string motd;
 		uint32_t id;
 		uint32_t memberCount = 0;
 };

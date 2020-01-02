@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -33,7 +33,7 @@ enum OTBM_AttrTypes_t {
 	OTBM_ATTR_EXT_FILE = 2,
 	OTBM_ATTR_TILE_FLAGS = 3,
 	OTBM_ATTR_ACTION_ID = 4,
-	OTBM_ATTR_MOVEMENT_ID = 5,
+	OTBM_ATTR_UNIQUE_ID = 5,
 	OTBM_ATTR_TEXT = 6,
 	OTBM_ATTR_DESC = 7,
 	OTBM_ATTR_TELE_DEST = 8,
@@ -51,12 +51,6 @@ enum OTBM_AttrTypes_t {
 	OTBM_ATTR_SLEEPERGUID = 20,
 	OTBM_ATTR_SLEEPSTART = 21,
 	OTBM_ATTR_CHARGES = 22,
-	OTBM_ATTR_KEYNUMBER = 23,
-	OTBM_ATTR_KEYHOLENUMBER = 24,
-	OTBM_ATTR_DOORQUESTNUMBER = 25,
-	OTBM_ATTR_DOORQUESTVALUE = 26,
-	OTBM_ATTR_DOORLEVEL = 27,
-	OTBM_ATTR_CHESTQUESTNUMBER = 28,
 };
 
 enum OTBM_NodeTypes_t {
@@ -82,8 +76,7 @@ enum OTBM_TileFlag_t : uint32_t {
 	OTBM_TILEFLAG_PROTECTIONZONE = 1 << 0,
 	OTBM_TILEFLAG_NOPVPZONE = 1 << 2,
 	OTBM_TILEFLAG_NOLOGOUT = 1 << 3,
-	OTBM_TILEFLAG_PVPZONE = 1 << 4,
-	OTBM_TILEFLAG_REFRESH = 1 << 5,
+	OTBM_TILEFLAG_PVPZONE = 1 << 4
 };
 
 #pragma pack(1)
@@ -114,7 +107,7 @@ class IOMap
 	static Tile* createTile(Item*& ground, Item* item, uint16_t x, uint16_t y, uint8_t z);
 
 	public:
-		bool loadMap(Map* map, const std::string& identifier);
+		bool loadMap(Map* map, const std::string& fileName);
 
 		/* Load the spawns
 		 * \param map pointer to the Map class
@@ -154,7 +147,11 @@ class IOMap
 			errorString = error;
 		}
 
-	protected:
+	private:
+		bool parseMapDataAttributes(OTB::Loader& loader, const OTB::Node& mapNode, Map& map, const std::string& fileName);
+		bool parseWaypoints(OTB::Loader& loader, const OTB::Node& waypointsNode, Map& map);
+		bool parseTowns(OTB::Loader& loader, const OTB::Node& townsNode, Map& map);
+		bool parseTileArea(OTB::Loader& loader, const OTB::Node& tileAreaNode, Map& map);
 		std::string errorString;
 };
 

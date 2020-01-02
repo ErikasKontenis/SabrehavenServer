@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,13 +20,10 @@
 #ifndef FS_CONFIGMANAGER_H_6BDD23BD0B8344F4B7C40E8BE6AF6F39
 #define FS_CONFIGMANAGER_H_6BDD23BD0B8344F4B7C40E8BE6AF6F39
 
-#include <luajit/lua.hpp>
-
 class ConfigManager
 {
 	public:
 		enum boolean_config_t {
-			SHOW_MONSTER_LOOT,
 			ALLOW_CHANGEOUTFIT,
 			ONE_PLAYER_ON_ACCOUNT,
 			AIMBOT_HOTKEY_ENABLED,
@@ -37,19 +34,24 @@ class ConfigManager
 			ALLOW_CLONES,
 			BIND_ONLY_GLOBAL_ADDRESS,
 			OPTIMIZE_DATABASE,
+			MARKET_PREMIUM,
+			EMOTE_SPELLS,
 			STAMINA_SYSTEM,
 			WARN_UNSAFE_SCRIPTS,
 			CONVERT_UNSAFE_SCRIPTS,
-			TELEPORT_NEWBIES,
-			STACK_CUMULATIVES,
-			BLOCK_HEIGHT,
-			DROP_ITEMS,
+			CLASSIC_EQUIPMENT_SLOTS,
+			CLASSIC_ATTACK_SPEED,
+			SCRIPTS_CONSOLE_LOGS,
+			SERVER_SAVE_NOTIFY_MESSAGE,
+			SERVER_SAVE_CLEAN_MAP,
+			SERVER_SAVE_CLOSE,
+			SERVER_SAVE_SHUTDOWN,
+			ONLINE_OFFLINE_CHARLIST,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
 		};
 
 		enum string_config_t {
-			DUMMY_STR,
 			MAP_NAME,
 			HOUSE_RENT_PERIOD,
 			SERVER_NAME,
@@ -82,7 +84,9 @@ class ConfigManager
 			RATE_LOOT,
 			RATE_MAGIC,
 			RATE_SPAWN,
-			BAN_LENGTH,
+			HOUSE_PRICE,
+			KILLS_TO_RED,
+			KILLS_TO_BLACK,
 			MAX_MESSAGEBUFFER,
 			ACTIONS_DELAY_INTERVAL,
 			EX_ACTIONS_DELAY_INTERVAL,
@@ -90,23 +94,18 @@ class ConfigManager
 			PROTECTION_LEVEL,
 			DEATH_LOSE_PERCENT,
 			STATUSQUERY_TIMEOUT,
+			FRAG_TIME,
 			WHITE_SKULL_TIME,
-			RED_SKULL_TIME,
-			KILLS_DAY_RED_SKULL,
-			KILLS_WEEK_RED_SKULL,
-			KILLS_MONTH_RED_SKULL,
-			KILLS_DAY_BANISHMENT,
-			KILLS_WEEK_BANISHMENT,
-			KILLS_MONTH_BANISHMENT,
 			GAME_PORT,
 			LOGIN_PORT,
 			STATUS_PORT,
 			STAIRHOP_DELAY,
+			MARKET_OFFER_DURATION,
+			CHECK_EXPIRED_MARKET_OFFERS_EACH_MINUTES,
+			MAX_MARKET_OFFERS_AT_A_TIME_PER_PLAYER,
 			EXP_FROM_PLAYERS_LEVEL_RANGE,
 			MAX_PACKETS_PER_SECOND,
-			NEWBIE_TOWN,
-			NEWBIE_LEVEL_THRESHOLD,
-			MONEY_RATE,
+			SERVER_SAVE_NOTIFY_DURATION,
 
 			LAST_INTEGER_CONFIG /* this must be the last one */
 		};
@@ -119,10 +118,6 @@ class ConfigManager
 		bool getBoolean(boolean_config_t what) const;
 
 	private:
-		static std::string getGlobalString(lua_State* L, const char* identifier, const char* defaultValue);
-		static int32_t getGlobalNumber(lua_State* L, const char* identifier, const int32_t defaultValue = 0);
-		static bool getGlobalBoolean(lua_State* L, const char* identifier, const bool defaultValue);
-
 		std::string string[LAST_STRING_CONFIG] = {};
 		int32_t integer[LAST_INTEGER_CONFIG] = {};
 		bool boolean[LAST_BOOLEAN_CONFIG] = {};

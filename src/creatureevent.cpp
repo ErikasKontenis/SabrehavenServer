@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -29,22 +29,15 @@ CreatureEvents::CreatureEvents() :
 	scriptInterface.initState();
 }
 
-CreatureEvents::~CreatureEvents()
+void CreatureEvents::clear(bool fromLua)
 {
-	for (const auto& it : creatureEvents) {
-		delete it.second;
-	}
-}
-
-void CreatureEvents::clear()
-{
-	//clear creature events
-	for (const auto& it : creatureEvents) {
-		it.second->clearEvent();
+	for (auto it = creatureEvents.begin(); it != creatureEvents.end(); ++it) {
+		if (fromLua == it->second.fromLua) {
+			it->second.clearEvent();
+		}
 	}
 
-	//clear lua state
-	scriptInterface.reInitState();
+	reInitState(fromLua);
 }
 
 LuaScriptInterface& CreatureEvents::getScriptInterface()
@@ -57,17 +50,17 @@ std::string CreatureEvents::getScriptBaseName() const
 	return "creaturescripts";
 }
 
-Event* CreatureEvents::getEvent(const std::string& nodeName)
+Event_ptr CreatureEvents::getEvent(const std::string& nodeName)
 {
 	if (strcasecmp(nodeName.c_str(), "event") != 0) {
 		return nullptr;
 	}
-	return new CreatureEvent(&scriptInterface);
+	return Event_ptr(new CreatureEvent(&scriptInterface));
 }
 
-bool CreatureEvents::registerEvent(Event* event, const pugi::xml_node&)
+bool CreatureEvents::registerEvent(Event_ptr event, const pugi::xml_node&)
 {
-	CreatureEvent* creatureEvent = static_cast<CreatureEvent*>(event); //event is guaranteed to be a CreatureEvent
+	CreatureEvent_ptr creatureEvent{static_cast<CreatureEvent*>(event.release())}; //event is guaranteed to be a CreatureEvent
 	if (creatureEvent->getEventType() == CREATURE_EVENT_NONE) {
 		std::cout << "Error: [CreatureEvents::registerEvent] Trying to register event without type!" << std::endl;
 		return false;
@@ -78,13 +71,37 @@ bool CreatureEvents::registerEvent(Event* event, const pugi::xml_node&)
 		//if there was an event with the same that is not loaded
 		//(happens when realoading), it is reused
 		if (!oldEvent->isLoaded() && oldEvent->getEventType() == creatureEvent->getEventType()) {
-			oldEvent->copyEvent(creatureEvent);
+			oldEvent->copyEvent(creatureEvent.get());
 		}
 
 		return false;
 	} else {
 		//if not, register it normally
-		creatureEvents[creatureEvent->getName()] = creatureEvent;
+		creatureEvents.emplace(creatureEvent->getName(), std::move(*creatureEvent));
+		return true;
+	}
+}
+
+bool CreatureEvents::registerLuaEvent(CreatureEvent* event)
+{
+	CreatureEvent_ptr creatureEvent{ event };
+	if (creatureEvent->getEventType() == CREATURE_EVENT_NONE) {
+		std::cout << "Error: [CreatureEvents::registerLuaEvent] Trying to register event without type!" << std::endl;
+		return false;
+	}
+
+	CreatureEvent* oldEvent = getEventByName(creatureEvent->getName(), false);
+	if (oldEvent) {
+		//if there was an event with the same that is not loaded
+		//(happens when realoading), it is reused
+		if (!oldEvent->isLoaded() && oldEvent->getEventType() == creatureEvent->getEventType()) {
+			oldEvent->copyEvent(creatureEvent.get());
+		}
+
+		return false;
+	} else {
+		//if not, register it normally
+		creatureEvents.emplace(creatureEvent->getName(), std::move(*creatureEvent));
 		return true;
 	}
 }
@@ -93,8 +110,8 @@ CreatureEvent* CreatureEvents::getEventByName(const std::string& name, bool forc
 {
 	auto it = creatureEvents.find(name);
 	if (it != creatureEvents.end()) {
-		if (!forceLoaded || it->second->isLoaded()) {
-			return it->second;
+		if (!forceLoaded || it->second.isLoaded()) {
+			return &it->second;
 		}
 	}
 	return nullptr;
@@ -104,8 +121,8 @@ bool CreatureEvents::playerLogin(Player* player) const
 {
 	//fire global event if is registered
 	for (const auto& it : creatureEvents) {
-		if (it.second->getEventType() == CREATURE_EVENT_LOGIN) {
-			if (!it.second->executeOnLogin(player)) {
+		if (it.second.getEventType() == CREATURE_EVENT_LOGIN) {
+			if (!it.second.executeOnLogin(player)) {
 				return false;
 			}
 		}
@@ -117,8 +134,8 @@ bool CreatureEvents::playerLogout(Player* player) const
 {
 	//fire global event if is registered
 	for (const auto& it : creatureEvents) {
-		if (it.second->getEventType() == CREATURE_EVENT_LOGOUT) {
-			if (!it.second->executeOnLogout(player)) {
+		if (it.second.getEventType() == CREATURE_EVENT_LOGOUT) {
+			if (!it.second.executeOnLogout(player)) {
 				return false;
 			}
 		}
@@ -129,9 +146,9 @@ bool CreatureEvents::playerLogout(Player* player) const
 bool CreatureEvents::playerAdvance(Player* player, skills_t skill, uint32_t oldLevel,
                                        uint32_t newLevel)
 {
-	for (const auto& it : creatureEvents) {
-		if (it.second->getEventType() == CREATURE_EVENT_ADVANCE) {
-			if (!it.second->executeAdvance(player, skill, oldLevel, newLevel)) {
+	for (auto& it : creatureEvents) {
+		if (it.second.getEventType() == CREATURE_EVENT_ADVANCE) {
+			if (!it.second.executeAdvance(player, skill, oldLevel, newLevel)) {
 				return false;
 			}
 		}
@@ -177,6 +194,10 @@ bool CreatureEvent::configureEvent(const pugi::xml_node& node)
 		type = CREATURE_EVENT_KILL;
 	} else if (tmpStr == "advance") {
 		type = CREATURE_EVENT_ADVANCE;
+	} else if (tmpStr == "modalwindow") {
+		type = CREATURE_EVENT_MODALWINDOW;
+	} else if (tmpStr == "textedit") {
+		type = CREATURE_EVENT_TEXTEDIT;
 	} else if (tmpStr == "healthchange") {
 		type = CREATURE_EVENT_HEALTHCHANGE;
 	} else if (tmpStr == "manachange") {
@@ -217,6 +238,12 @@ std::string CreatureEvent::getScriptEventName() const
 		case CREATURE_EVENT_ADVANCE:
 			return "onAdvance";
 
+		case CREATURE_EVENT_MODALWINDOW:
+			return "onModalWindow";
+
+		case CREATURE_EVENT_TEXTEDIT:
+			return "onTextEdit";
+
 		case CREATURE_EVENT_HEALTHCHANGE:
 			return "onHealthChange";
 
@@ -248,7 +275,7 @@ void CreatureEvent::clearEvent()
 	loaded = false;
 }
 
-bool CreatureEvent::executeOnLogin(Player* player)
+bool CreatureEvent::executeOnLogin(Player* player) const
 {
 	//onLogin(player)
 	if (!scriptInterface->reserveScriptEnv()) {
@@ -267,7 +294,7 @@ bool CreatureEvent::executeOnLogin(Player* player)
 	return scriptInterface->callFunction(1);
 }
 
-bool CreatureEvent::executeOnLogout(Player* player)
+bool CreatureEvent::executeOnLogout(Player* player) const
 {
 	//onLogout(player)
 	if (!scriptInterface->reserveScriptEnv()) {
@@ -419,9 +446,56 @@ void CreatureEvent::executeOnKill(Creature* creature, Creature* target)
 	scriptInterface->callVoidFunction(2);
 }
 
+void CreatureEvent::executeModalWindow(Player* player, uint32_t modalWindowId, uint8_t buttonId, uint8_t choiceId)
+{
+	//onModalWindow(player, modalWindowId, buttonId, choiceId)
+	if (!scriptInterface->reserveScriptEnv()) {
+		std::cout << "[Error - CreatureEvent::executeModalWindow] Call stack overflow" << std::endl;
+		return;
+	}
+
+	ScriptEnvironment* env = scriptInterface->getScriptEnv();
+	env->setScriptId(scriptId, scriptInterface);
+
+	lua_State* L = scriptInterface->getLuaState();
+	scriptInterface->pushFunction(scriptId);
+
+	LuaScriptInterface::pushUserdata(L, player);
+	LuaScriptInterface::setMetatable(L, -1, "Player");
+
+	lua_pushnumber(L, modalWindowId);
+	lua_pushnumber(L, buttonId);
+	lua_pushnumber(L, choiceId);
+
+	scriptInterface->callVoidFunction(4);
+}
+
+bool CreatureEvent::executeTextEdit(Player* player, Item* item, const std::string& text)
+{
+	//onTextEdit(player, item, text)
+	if (!scriptInterface->reserveScriptEnv()) {
+		std::cout << "[Error - CreatureEvent::executeTextEdit] Call stack overflow" << std::endl;
+		return false;
+	}
+
+	ScriptEnvironment* env = scriptInterface->getScriptEnv();
+	env->setScriptId(scriptId, scriptInterface);
+
+	lua_State* L = scriptInterface->getLuaState();
+	scriptInterface->pushFunction(scriptId);
+
+	LuaScriptInterface::pushUserdata(L, player);
+	LuaScriptInterface::setMetatable(L, -1, "Player");
+
+	LuaScriptInterface::pushThing(L, item);
+	LuaScriptInterface::pushString(L, text);
+
+	return scriptInterface->callFunction(3);
+}
+
 void CreatureEvent::executeHealthChange(Creature* creature, Creature* attacker, CombatDamage& damage)
 {
-	//onHealthChange(creature, attacker, value, type, min, max, origin)
+	//onHealthChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
 	if (!scriptInterface->reserveScriptEnv()) {
 		std::cout << "[Error - CreatureEvent::executeHealthChange] Call stack overflow" << std::endl;
 		return;
@@ -438,8 +512,7 @@ void CreatureEvent::executeHealthChange(Creature* creature, Creature* attacker, 
 	if (attacker) {
 		LuaScriptInterface::pushUserdata(L, attacker);
 		LuaScriptInterface::setCreatureMetatable(L, -1, attacker);
-	}
-	else {
+	} else {
 		lua_pushnil(L);
 	}
 
@@ -447,16 +520,16 @@ void CreatureEvent::executeHealthChange(Creature* creature, Creature* attacker, 
 
 	if (scriptInterface->protectedCall(L, 7, 4) != 0) {
 		LuaScriptInterface::reportError(nullptr, LuaScriptInterface::popString(L));
-	}
-	else {
-		damage.value = std::abs(LuaScriptInterface::getNumber<int32_t>(L, -4));
-		damage.type = LuaScriptInterface::getNumber<CombatType_t>(L, -3);
-		damage.min = std::abs(LuaScriptInterface::getNumber<int32_t>(L, -2));
-		damage.max = LuaScriptInterface::getNumber<CombatType_t>(L, -1);
+	} else {
+		damage.primary.value = std::abs(LuaScriptInterface::getNumber<int32_t>(L, -4));
+		damage.primary.type = LuaScriptInterface::getNumber<CombatType_t>(L, -3);
+		damage.secondary.value = std::abs(LuaScriptInterface::getNumber<int32_t>(L, -2));
+		damage.secondary.type = LuaScriptInterface::getNumber<CombatType_t>(L, -1);
 
 		lua_pop(L, 4);
-		if (damage.type != COMBAT_HEALING) {
-			damage.value = -damage.value;
+		if (damage.primary.type != COMBAT_HEALING) {
+			damage.primary.value = -damage.primary.value;
+			damage.secondary.value = -damage.secondary.value;
 		}
 	}
 
@@ -464,7 +537,7 @@ void CreatureEvent::executeHealthChange(Creature* creature, Creature* attacker, 
 }
 
 void CreatureEvent::executeManaChange(Creature* creature, Creature* attacker, CombatDamage& damage) {
-	//onManaChange(creature, attacker, value, type, min, max, origin)
+	//onManaChange(creature, attacker, primaryDamage, primaryType, secondaryDamage, secondaryType, origin)
 	if (!scriptInterface->reserveScriptEnv()) {
 		std::cout << "[Error - CreatureEvent::executeManaChange] Call stack overflow" << std::endl;
 		return;
@@ -481,8 +554,7 @@ void CreatureEvent::executeManaChange(Creature* creature, Creature* attacker, Co
 	if (attacker) {
 		LuaScriptInterface::pushUserdata(L, attacker);
 		LuaScriptInterface::setCreatureMetatable(L, -1, attacker);
-	}
-	else {
+	} else {
 		lua_pushnil(L);
 	}
 
@@ -490,9 +562,12 @@ void CreatureEvent::executeManaChange(Creature* creature, Creature* attacker, Co
 
 	if (scriptInterface->protectedCall(L, 7, 4) != 0) {
 		LuaScriptInterface::reportError(nullptr, LuaScriptInterface::popString(L));
-	}
-	else {
-		damage = LuaScriptInterface::getCombatDamage(L);
+	} else {
+		damage.primary.value = LuaScriptInterface::getNumber<int32_t>(L, -4);
+		damage.primary.type = LuaScriptInterface::getNumber<CombatType_t>(L, -3);
+		damage.secondary.value = LuaScriptInterface::getNumber<int32_t>(L, -2);
+		damage.secondary.type = LuaScriptInterface::getNumber<CombatType_t>(L, -1);
+		lua_pop(L, 4);
 	}
 
 	scriptInterface->resetScriptEnv();

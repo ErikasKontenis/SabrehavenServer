@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -99,16 +99,18 @@ void NetworkMessage::addItem(uint16_t id, uint8_t count)
 {
 	const ItemType& it = Item::items[id];
 
-	if (it.disguise) {
-		add<uint16_t>(it.disguiseId);
-	} else {
-		add<uint16_t>(it.id);
-	}
+	add<uint16_t>(it.clientId);
+
+	addByte(0xFF); // MARK_UNMARKED
 
 	if (it.stackable) {
 		addByte(count);
 	} else if (it.isSplash() || it.isFluidContainer()) {
-		addByte(getLiquidColor(count));
+		addByte(fluidMap[count & 7]);
+	}
+
+	if (it.isAnimation) {
+		addByte(0xFE); // random phase (0xFF for async)
 	}
 }
 
@@ -116,20 +118,21 @@ void NetworkMessage::addItem(const Item* item)
 {
 	const ItemType& it = Item::items[item->getID()];
 
-	if (it.disguise) {
-		add<uint16_t>(it.disguiseId);
-	} else {
-		add<uint16_t>(it.id);
-	}
+	add<uint16_t>(it.clientId);
+	addByte(0xFF); // MARK_UNMARKED
 
 	if (it.stackable) {
 		addByte(std::min<uint16_t>(0xFF, item->getItemCount()));
 	} else if (it.isSplash() || it.isFluidContainer()) {
-		addByte(getLiquidColor(item->getFluidType()));
+		addByte(fluidMap[item->getFluidType() & 7]);
+	}
+
+	if (it.isAnimation) {
+		addByte(0xFE); // random phase (0xFF for async)
 	}
 }
 
 void NetworkMessage::addItemId(uint16_t itemId)
 {
-	add<uint16_t>(itemId);
+	add<uint16_t>(Item::items[itemId].clientId);
 }

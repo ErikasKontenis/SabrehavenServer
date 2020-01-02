@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -37,7 +37,6 @@ enum cylinderflags_t {
 	FLAG_IGNOREFIELDDAMAGE = 1 << 5, //Bypass field damage checks
 	FLAG_IGNORENOTMOVEABLE = 1 << 6, //Bypass check for mobility
 	FLAG_IGNOREAUTOSTACK = 1 << 7, //queryDestination will not try to stack items together
-	FLAG_PLACECHECK = 1 << 8, //Special check for placing the monster
 };
 
 enum cylinderlink_t {

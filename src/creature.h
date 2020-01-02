@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,8 +28,8 @@
 #include "enums.h"
 #include "creatureevent.h"
 
-typedef std::list<Condition*> ConditionList;
-typedef std::list<CreatureEvent*> CreatureEventList;
+using ConditionList = std::list<Condition*>;
+using CreatureEventList = std::list<CreatureEvent*>;
 
 enum slots_t : uint8_t {
 	CONST_SLOT_WHEREEVER = 0,
@@ -66,7 +66,6 @@ class Monster;
 class Npc;
 class Item;
 class Tile;
-class Combat;
 
 static constexpr int32_t EVENT_CREATURECOUNT = 10;
 static constexpr int32_t EVENT_CREATURE_THINK_INTERVAL = 1000;
@@ -83,7 +82,7 @@ class FrozenPathingConditionCall
 		bool isInRange(const Position& startPos, const Position& testPos,
 		               const FindPathParams& fpp) const;
 
-	protected:
+	private:
 		Position targetPos;
 };
 
@@ -97,16 +96,18 @@ class Creature : virtual public Thing
 		Creature();
 
 	public:
+		static double speedA, speedB, speedC;
+
 		virtual ~Creature();
 
 		// non-copyable
 		Creature(const Creature&) = delete;
 		Creature& operator=(const Creature&) = delete;
 
-		Creature* getCreature() final {
+		Creature* getCreature() override final {
 			return this;
 		}
-		const Creature* getCreature() const final {
+		const Creature* getCreature() const override final {
 			return this;
 		}
 		virtual Player* getPlayer() {
@@ -130,6 +131,8 @@ class Creature : virtual public Thing
 
 		virtual const std::string& getName() const = 0;
 		virtual const std::string& getNameDescription() const = 0;
+
+		virtual CreatureType_t getType() const = 0;
 
 		virtual void setID() = 0;
 		void setRemoved() {
@@ -169,13 +172,13 @@ class Creature : virtual public Thing
 			hiddenHealth = b;
 		}
 
-		int32_t getThrowRange() const final {
+		int32_t getThrowRange() const override final {
 			return 1;
 		}
 		bool isPushable() const override {
 			return getWalkDelay() <= 0;
 		}
-		bool isRemoved() const final {
+		bool isRemoved() const override final {
 			return isInternalRemoved;
 		}
 		virtual bool canSeeInvisibility() const {
@@ -196,15 +199,11 @@ class Creature : virtual public Thing
 			return getSpeed();
 		}
 		int32_t getSpeed() const {
-			if (baseSpeed == 0) {
-				return 0;
-			}
-
-			return (2 * (varSpeed + baseSpeed)) + 80;
+			return baseSpeed + varSpeed;
 		}
 		void setSpeed(int32_t varSpeedDelta) {
 			int32_t oldSpeed = getSpeed();
-			varSpeed += varSpeedDelta;
+			varSpeed = varSpeedDelta;
 
 			if (getSpeed() <= 0) {
 				stopEventWalk();
@@ -271,9 +270,15 @@ class Creature : virtual public Thing
 		virtual BlockType_t blockHit(Creature* attacker, CombatType_t combatType, int32_t& damage,
 		                             bool checkDefense = false, bool checkArmor = false, bool field = false);
 
-		void setMaster(Creature* creature) {
-			master = creature;
+		bool setMaster(Creature* newMaster);
+
+		void removeMaster() {
+			if (master) {
+				master = nullptr;
+				decrementReferenceCounter();
+			}
 		}
+
 		bool isSummon() const {
 			return master != nullptr;
 		}
@@ -281,8 +286,6 @@ class Creature : virtual public Thing
 			return master;
 		}
 
-		void addSummon(Creature* creature);
-		void removeSummon(Creature* creature);
 		const std::list<Creature*>& getSummons() const {
 			return summons;
 		}
@@ -290,8 +293,18 @@ class Creature : virtual public Thing
 		virtual int32_t getArmor() const {
 			return 0;
 		}
-		virtual int32_t getDefense() {
+		virtual int32_t getDefense() const {
 			return 0;
+		}
+		virtual float getAttackFactor() const {
+			return 1.0f;
+		}
+		virtual float getDefenseFactor() const {
+			return 1.0f;
+		}
+
+		virtual uint8_t getSpeechBubble() const {
+			return SPEECHBUBBLE_NONE;
 		}
 
 		bool addCondition(Condition* condition, bool force = false);
@@ -322,13 +335,10 @@ class Creature : virtual public Thing
 
 		virtual void changeHealth(int32_t healthChange, bool sendHealthChange = true);
 
-		void gainHealth(Creature* attacker, int32_t healthGain);
+		void gainHealth(Creature* healer, int32_t healthGain);
 		virtual void drainHealth(Creature* attacker, int32_t damage);
 
 		virtual bool challengeCreature(Creature*) {
-			return false;
-		}
-		virtual bool convinceCreature(Creature*) {
 			return false;
 		}
 
@@ -355,11 +365,9 @@ class Creature : virtual public Thing
 		virtual void onAttackedCreatureChangeZone(ZoneType_t zone);
 		virtual void onIdleStatus();
 
-		virtual void getCreatureLight(LightInfo& light) const;
+		virtual LightInfo getCreatureLight() const;
 		virtual void setNormalCreatureLight();
-		void setCreatureLight(LightInfo light) {
-			internalLight = light;
-		}
+		void setCreatureLight(LightInfo lightInfo);
 
 		virtual void onThink(uint32_t interval);
 		void onAttacking(uint32_t interval);
@@ -382,7 +390,6 @@ class Creature : virtual public Thing
 
 		virtual void onCreatureSay(Creature*, SpeakClasses, const std::string&) {}
 
-		virtual void onCreatureConvinced(const Creature*, const Creature*) {}
 		virtual void onPlacedCreature() {}
 
 		virtual bool getCombatValues(int32_t&, int32_t&) {
@@ -395,30 +402,33 @@ class Creature : virtual public Thing
 		void setDropLoot(bool lootDrop) {
 			this->lootDrop = lootDrop;
 		}
-		void setLossSkill(bool skillLoss) {
+		void setSkillLoss(bool skillLoss) {
 			this->skillLoss = skillLoss;
+		}
+		void setUseDefense(bool useDefense) {
+			canUseDefense = useDefense;
 		}
 
 		//creature script events
 		bool registerCreatureEvent(const std::string& name);
 		bool unregisterCreatureEvent(const std::string& name);
 
-		Cylinder* getParent() const final {
+		Cylinder* getParent() const override final {
 			return tile;
 		}
-		void setParent(Cylinder* cylinder) final {
+		void setParent(Cylinder* cylinder) override final {
 			tile = static_cast<Tile*>(cylinder);
 			position = tile->getPosition();
 		}
 
-		inline const Position& getPosition() const final {
+		const Position& getPosition() const override final {
 			return position;
 		}
 
-		Tile* getTile() final {
+		Tile* getTile() override final {
 			return tile;
 		}
-		const Tile* getTile() const final {
+		const Tile* getTile() const override final {
 			return tile;
 		}
 
@@ -464,7 +474,7 @@ class Creature : virtual public Thing
 
 		Position position;
 
-		typedef std::map<uint32_t, CountBlock_t> CountMap;
+		using CountMap = std::map<uint32_t, CountBlock_t>;
 		CountMap damageMap;
 
 		std::list<Creature*> summons;
@@ -478,10 +488,6 @@ class Creature : virtual public Thing
 		Creature* master = nullptr;
 		Creature* followCreature = nullptr;
 
-		int64_t earliestDefendTime = 0;
-		int64_t lastDefendTime = 0;
-
-		uint64_t lastWalkUpdate = 0;
 		uint64_t lastStep = 0;
 		uint32_t referenceCounter = 0;
 		uint32_t id = 0;
@@ -492,8 +498,7 @@ class Creature : virtual public Thing
 		uint32_t blockCount = 0;
 		uint32_t blockTicks = 0;
 		uint32_t lastStepCost = 1;
-		uint32_t baseSpeed = 70;
-		uint32_t latestKillEvent = 0;
+		uint32_t baseSpeed = 220;
 		int32_t varSpeed = 0;
 		int32_t health = 1000;
 		int32_t healthMax = 1000;
@@ -519,6 +524,7 @@ class Creature : virtual public Thing
 		bool hasFollowPath = false;
 		bool forceUpdateFollowPath = false;
 		bool hiddenHealth = false;
+		bool canUseDefense = true;
 
 		//creature script events
 		bool hasEventRegistered(CreatureEventType_t event) const {
@@ -550,7 +556,6 @@ class Creature : virtual public Thing
 		friend class Game;
 		friend class Map;
 		friend class LuaScriptInterface;
-		friend class Combat;
 };
 
 #endif

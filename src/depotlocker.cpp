@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,12 +20,9 @@
 #include "otpch.h"
 
 #include "depotlocker.h"
-#include "creature.h"
-#include "player.h"
-#include "tools.h"
 
 DepotLocker::DepotLocker(uint16_t type) :
-	Container(type, 30), depotId(0) {}
+	Container(type, 3), depotId(0) {}
 
 Attr_ReadValue DepotLocker::readAttr(AttrTypes_t attr, PropStream& propStream)
 {
@@ -38,40 +35,9 @@ Attr_ReadValue DepotLocker::readAttr(AttrTypes_t attr, PropStream& propStream)
 	return Item::readAttr(attr, propStream);
 }
 
-ReturnValue DepotLocker::queryAdd(int32_t index, const Thing& thing, uint32_t count, uint32_t flags, Creature* actor) const
+ReturnValue DepotLocker::queryAdd(int32_t, const Thing&, uint32_t, uint32_t, Creature*) const
 {
-	const Item* item = thing.getItem();
-	if (item == nullptr) {
-		return RETURNVALUE_NOTPOSSIBLE;
-	}
-
-	bool skipLimit = hasBitSet(FLAG_NOLIMIT, flags);
-	if (!skipLimit) {
-		int32_t addCount = 0;
-
-		if ((item->isStackable() && item->getItemCount() != count)) {
-			addCount = 1;
-		}
-
-		if (item->getTopParent() != this) {
-			if (const Container* container = item->getContainer()) {
-				addCount = container->getItemHoldingCount() + 1;
-			} else {
-				addCount = 1;
-			}
-		}
-
-		if (actor) {
-			Player* player = actor->getPlayer();
-			if (player) {
-				if (getItemHoldingCount() + addCount > player->getMaxDepotItems()) {
-					return RETURNVALUE_DEPOTISFULL;
-				}
-			}
-		}
-	}
-
-	return Container::queryAdd(index, thing, count, flags, actor);
+	return RETURNVALUE_NOTENOUGHROOM;
 }
 
 void DepotLocker::postAddNotification(Thing* thing, const Cylinder* oldParent, int32_t index, cylinderlink_t)
@@ -86,4 +52,13 @@ void DepotLocker::postRemoveNotification(Thing* thing, const Cylinder* newParent
 	if (parent != nullptr) {
 		parent->postRemoveNotification(thing, newParent, index, LINK_PARENT);
 	}
+}
+
+void DepotLocker::removeInbox(Inbox* inbox)
+{
+	auto cit = std::find(itemlist.begin(), itemlist.end(), inbox);
+	if (cit == itemlist.end()) {
+		return;
+	}
+	itemlist.erase(cit);
 }

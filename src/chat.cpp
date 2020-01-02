@@ -1,6 +1,6 @@
 /**
- * Tibia GIMUD Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
+ * The Forgotten Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -54,6 +54,10 @@ void PrivateChatChannel::invitePlayer(const Player& player, Player& invitePlayer
 	ss.str(std::string());
 	ss << invitePlayer.getName() << " has been invited.";
 	player.sendTextMessage(MESSAGE_INFO_DESCR, ss.str());
+
+	for (const auto& it : users) {
+		it.second->sendChannelEvent(id, invitePlayer.getName(), CHANNELEVENT_INVITE);
+	}
 }
 
 void PrivateChatChannel::excludePlayer(const Player& player, Player& excludePlayer)
@@ -69,6 +73,10 @@ void PrivateChatChannel::excludePlayer(const Player& player, Player& excludePlay
 	player.sendTextMessage(MESSAGE_INFO_DESCR, ss.str());
 
 	excludePlayer.sendClosePrivate(id);
+
+	for (const auto& it : users) {
+		it.second->sendChannelEvent(id, excludePlayer.getName(), CHANNELEVENT_EXCLUDE);
+	}
 }
 
 void PrivateChatChannel::closeChannel() const
@@ -88,6 +96,20 @@ bool ChatChannel::addUser(Player& player)
 		return false;
 	}
 
+	// TODO: Move to script when guild channels can be scripted
+	if (id == CHANNEL_GUILD) {
+		Guild* guild = player.getGuild();
+		if (guild && !guild->getMotd().empty()) {
+			g_scheduler.addEvent(createSchedulerTask(150, std::bind(&Game::sendGuildMotd, &g_game, player.getID())));
+		}
+	}
+
+	if (!publicChannel) {
+		for (const auto& it : users) {
+			it.second->sendChannelEvent(id, player.getName(), CHANNELEVENT_JOIN);
+		}
+	}
+
 	users[player.getID()] = &player;
 	return true;
 }
@@ -101,8 +123,25 @@ bool ChatChannel::removeUser(const Player& player)
 
 	users.erase(iter);
 
+	if (!publicChannel) {
+		for (const auto& it : users) {
+			it.second->sendChannelEvent(id, player.getName(), CHANNELEVENT_LEAVE);
+		}
+	}
+
 	executeOnLeaveEvent(player);
 	return true;
+}
+
+bool ChatChannel::hasUser(const Player& player) {
+	return users.find(player.getID()) != users.end();
+}
+
+void ChatChannel::sendToAll(const std::string& message, SpeakClasses type) const
+{
+	for (const auto& it : users) {
+		it.second->sendChannelMessage("", message, type, id);
+	}
 }
 
 bool ChatChannel::talk(const Player& fromPlayer, SpeakClasses type, const std::string& text)
@@ -255,21 +294,39 @@ bool Chat::load()
 		return false;
 	}
 
-	std::forward_list<uint16_t> removedChannels;
-	for (auto& channelEntry : normalChannels) {
-		ChatChannel& channel = channelEntry.second;
-		channel.onSpeakEvent = -1;
-		channel.canJoinEvent = -1;
-		channel.onJoinEvent = -1;
-		channel.onLeaveEvent = -1;
-		removedChannels.push_front(channelEntry.first);
-	}
-
 	for (auto channelNode : doc.child("channels").children()) {
-		ChatChannel channel(pugi::cast<uint16_t>(channelNode.attribute("id").value()), channelNode.attribute("name").as_string());
-		channel.publicChannel = channelNode.attribute("public").as_bool();
-
+		uint16_t channelId = pugi::cast<uint16_t>(channelNode.attribute("id").value());
+		std::string channelName = channelNode.attribute("name").as_string();
+		bool isPublic = channelNode.attribute("public").as_bool();
 		pugi::xml_attribute scriptAttribute = channelNode.attribute("script");
+
+		auto it = normalChannels.find(channelId);
+		if (it != normalChannels.end()) {
+			ChatChannel& channel = it->second;
+			channel.publicChannel = isPublic;
+			channel.name = channelName;
+
+			if (scriptAttribute) {
+				if (scriptInterface.loadFile("data/chatchannels/scripts/" + std::string(scriptAttribute.as_string())) == 0) {
+					channel.onSpeakEvent = scriptInterface.getEvent("onSpeak");
+					channel.canJoinEvent = scriptInterface.getEvent("canJoin");
+					channel.onJoinEvent = scriptInterface.getEvent("onJoin");
+					channel.onLeaveEvent = scriptInterface.getEvent("onLeave");
+				} else {
+					std::cout << "[Warning - Chat::load] Can not load script: " << scriptAttribute.as_string() << std::endl;
+				}
+			}
+
+			UsersMap tempUserMap = std::move(channel.users);
+			for (const auto& pair : tempUserMap) {
+				channel.addUser(*pair.second);
+			}
+			continue;
+		}
+
+		ChatChannel channel(channelId, channelName);
+		channel.publicChannel = isPublic;
+
 		if (scriptAttribute) {
 			if (scriptInterface.loadFile("data/chatchannels/scripts/" + std::string(scriptAttribute.as_string())) == 0) {
 				channel.onSpeakEvent = scriptInterface.getEvent("onSpeak");
@@ -281,12 +338,7 @@ bool Chat::load()
 			}
 		}
 
-		removedChannels.remove(channel.id);
 		normalChannels[channel.id] = channel;
-	}
-
-	for (uint16_t channelId : removedChannels) {
-		normalChannels.erase(channelId);
 	}
 	return true;
 }
