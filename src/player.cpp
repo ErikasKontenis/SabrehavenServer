@@ -1768,7 +1768,7 @@ void Player::death(Creature* lastHitCreature)
 			}
 		}
 	} else {
-		setLossSkill(true);
+		setSkillLoss(true);
 
 		auto it = conditions.begin(), end = conditions.end();
 		while (it != end) {
@@ -2911,13 +2911,12 @@ void Player::stopWalk()
 	cancelNextWalk = true;
 }
 
-void Player::getCreatureLight(LightInfo& light) const
+LightInfo Player::getCreatureLight() const
 {
 	if (internalLight.level > itemsLight.level) {
-		light = internalLight;
-	} else {
-		light = itemsLight;
+		return internalLight;
 	}
+	return itemsLight;
 }
 
 void Player::updateItemsLight(bool internal /*=false*/)
@@ -3140,7 +3139,7 @@ bool Player::onKilledCreature(Creature* target, bool lastHit/* = true*/)
 	if (Player* targetPlayer = target->getPlayer()) {
 		if (targetPlayer && targetPlayer->getZone() == ZONE_PVP) {
 			targetPlayer->setDropLoot(false);
-			targetPlayer->setLossSkill(false);
+			targetPlayer->setSkillLoss(false);
 		} else if (!hasFlag(PlayerFlag_NotGainInFight) && !isPartner(targetPlayer)) {
 			if (!Combat::isInPvpZone(this, targetPlayer) && hasAttacked(targetPlayer) && !targetPlayer->hasAttacked(this) && targetPlayer != this) {
 				if (targetPlayer->getSkull() == SKULL_NONE && !isInWar(targetPlayer)) {
@@ -3392,25 +3391,28 @@ Skulls_t Player::getSkullClient(const Creature* creature) const
 	}
 
 	const Player* player = creature->getPlayer();
-	if (player && player->getSkull() == SKULL_NONE) {
-		if (isInWar(player)) {
-			return SKULL_GREEN;
-		}
+	if (!player || player->getSkull() != SKULL_NONE) {
+		return Creature::getSkullClient(creature);
+	}
 
-		if (!player->getGuildWarList().empty() && guild == player->getGuild()) {
-			return SKULL_GREEN;
-		}
+	if (isInWar(player)) {
+		return SKULL_GREEN;
+	}
 
-		if (player->hasAttacked(this)) {
-			return SKULL_YELLOW;
-		}
+	if (!player->getGuildWarList().empty() && guild == player->getGuild()) {
+		return SKULL_GREEN;
+	}
 
-		if (isPartner(player)) {
-			return SKULL_GREEN;
-		}
+	if (player->hasAttacked(this)) {
+		return SKULL_YELLOW;
+	}
+
+	if (isPartner(player)) {
+		return SKULL_GREEN;
 	}
 	return Creature::getSkullClient(creature);
 }
+
 
 bool Player::hasAttacked(const Player* attacked) const
 {
@@ -3634,7 +3636,7 @@ bool Player::isInviting(const Player* player) const
 
 bool Player::isPartner(const Player* player) const
 {
-	if (!player || !party) {
+	if (!player || !party || player == this) {
 		return false;
 	}
 	return party == player->party;

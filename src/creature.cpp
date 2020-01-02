@@ -1085,7 +1085,7 @@ void Creature::onGainExperience(uint64_t gainExp, Creature* target)
 void Creature::addSummon(Creature* creature)
 {
 	creature->setDropLoot(false);
-	creature->setLossSkill(false);
+	creature->setSkillLoss(false);
 	creature->setMaster(this);
 	creature->incrementReferenceCounter();
 	summons.push_back(creature);
@@ -1096,7 +1096,7 @@ void Creature::removeSummon(Creature* creature)
 	auto cit = std::find(summons.begin(), summons.end(), creature);
 	if (cit != summons.end()) {
 		creature->setDropLoot(true);
-		creature->setLossSkill(true);
+		creature->setSkillLoss(true);
 		creature->setMaster(nullptr);
 		creature->decrementReferenceCounter();
 		summons.erase(cit);
@@ -1364,9 +1364,9 @@ int64_t Creature::getEventStepTicks(bool onlyDelay) const
 	return ret;
 }
 
-void Creature::getCreatureLight(LightInfo& light) const
+LightInfo Creature::getCreatureLight() const
 {
-	light = internalLight;
+	return internalLight;
 }
 
 void Creature::setNormalCreatureLight()

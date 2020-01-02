@@ -31,13 +31,14 @@ Account IOLoginData::loadAccount(uint32_t accno)
 	Account account;
 
 	std::ostringstream query;
-	query << "SELECT `id`, `password`, `type`, `premdays`, `lastday` FROM `accounts` WHERE `id` = " << accno;
+	query << "SELECT `id`, `name`, `password`, `type`, `premdays`, `lastday` FROM `accounts` WHERE `id` = " << accno;
 	DBResult_ptr result = Database::getInstance()->storeQuery(query.str());
 	if (!result) {
 		return account;
 	}
 
 	account.id = result->getNumber<uint32_t>("id");
+	account.name = result->getNumber<uint32_t>("name");
 	account.accountType = static_cast<AccountType_t>(result->getNumber<int32_t>("type"));
 	account.premiumDays = result->getNumber<uint16_t>("premdays");
 	account.lastDay = result->getNumber<time_t>("lastday");
@@ -51,12 +52,12 @@ bool IOLoginData::saveAccount(const Account& acc)
 	return Database::getInstance()->executeQuery(query.str());
 }
 
-bool IOLoginData::loginserverAuthentication(uint32_t accountNumber, const std::string& password, Account& account)
+bool IOLoginData::loginserverAuthentication(uint32_t accountName, const std::string& password, Account& account)
 {
 	Database* db = Database::getInstance();
 
 	std::ostringstream query;
-	query << "SELECT `id`, `password`, `type`, `premdays`, `lastday` FROM `accounts` WHERE `id` = " << accountNumber;
+	query << "SELECT `id`, `name`, `password`, `type`, `premdays`, `lastday` FROM `accounts` WHERE `name` = " << accountName;
 	DBResult_ptr result = db->storeQuery(query.str());
 	if (!result) {
 		return false;
@@ -67,6 +68,7 @@ bool IOLoginData::loginserverAuthentication(uint32_t accountNumber, const std::s
 	}
 
 	account.id = result->getNumber<uint32_t>("id");
+	account.name = result->getNumber<uint32_t>("name");
 	account.accountType = static_cast<AccountType_t>(result->getNumber<int32_t>("type"));
 	account.premiumDays = result->getNumber<uint16_t>("premdays");
 	account.lastDay = result->getNumber<time_t>("lastday");
@@ -85,12 +87,12 @@ bool IOLoginData::loginserverAuthentication(uint32_t accountNumber, const std::s
 	return true;
 }
 
-uint32_t IOLoginData::gameworldAuthentication(uint32_t accountNumber, const std::string& password, std::string& characterName)
+uint32_t IOLoginData::gameworldAuthentication(uint32_t accountName, const std::string& password, std::string& characterName)
 {
 	Database* db = Database::getInstance();
 
 	std::ostringstream query;
-	query << "SELECT `id`, `password` FROM `accounts` WHERE `id` = " << accountNumber;
+	query << "SELECT `id`, `password` FROM `accounts` WHERE `name` = " << accountName;
 	DBResult_ptr result = db->storeQuery(query.str());
 	if (!result) {
 		return 0;

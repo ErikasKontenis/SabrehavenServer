@@ -559,7 +559,7 @@ class Player final : public Creature, public Cylinder
 		void onIdleStatus() final;
 		void onPlacedCreature() final;
 
-		void getCreatureLight(LightInfo& light) const final;
+		LightInfo getCreatureLight() const override;
 
 		Skulls_t getSkull() const final;
 		Skulls_t getSkullClient(const Creature* creature) const final;

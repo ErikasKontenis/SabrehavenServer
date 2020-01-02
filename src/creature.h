@@ -355,7 +355,7 @@ class Creature : virtual public Thing
 		virtual void onAttackedCreatureChangeZone(ZoneType_t zone);
 		virtual void onIdleStatus();
 
-		virtual void getCreatureLight(LightInfo& light) const;
+		virtual LightInfo getCreatureLight() const;
 		virtual void setNormalCreatureLight();
 		void setCreatureLight(LightInfo light) {
 			internalLight = light;
@@ -395,7 +395,7 @@ class Creature : virtual public Thing
 		void setDropLoot(bool lootDrop) {
 			this->lootDrop = lootDrop;
 		}
-		void setLossSkill(bool skillLoss) {
+		void setSkillLoss(bool skillLoss) {
 			this->skillLoss = skillLoss;
 		}
 
