@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -73,7 +73,7 @@ class AStarNodes
 		int_fast32_t closedNodes;
 };
 
-using SpectatorCache = std::map<Position, SpectatorVec>;
+typedef std::map<Position, SpectatorVec> SpectatorCache;
 
 static constexpr int32_t FLOOR_BITS = 3;
 static constexpr int32_t FLOOR_SIZE = (1 << FLOOR_BITS);
@@ -110,7 +110,7 @@ class QTreeNode
 		QTreeLeafNode* getLeaf(uint32_t x, uint32_t y);
 
 		template<typename Leaf, typename Node>
-		static Leaf getLeafStatic(Node node, uint32_t x, uint32_t y)
+		inline static Leaf getLeafStatic(Node node, uint32_t x, uint32_t y)
 		{
 			do {
 				node = node->child[((x & 0x8000) >> 15) | ((y & 0x8000) >> 14)];
@@ -127,10 +127,9 @@ class QTreeNode
 		QTreeLeafNode* createLeaf(uint32_t x, uint32_t y, uint32_t level);
 
 	protected:
-		bool leaf = false;
-
-	private:
 		QTreeNode* child[4] = {};
+
+		bool leaf = false;
 
 		friend class Map;
 };
@@ -153,7 +152,7 @@ class QTreeLeafNode final : public QTreeNode
 		void addCreature(Creature* c);
 		void removeCreature(Creature* c);
 
-	private:
+	protected:
 		static bool newLeaf;
 		QTreeLeafNode* leafS = nullptr;
 		QTreeLeafNode* leafE = nullptr;
@@ -197,7 +196,7 @@ class Map
 		  * \returns A pointer to that tile.
 		  */
 		Tile* getTile(uint16_t x, uint16_t y, uint8_t z) const;
-		Tile* getTile(const Position& pos) const {
+		inline Tile* getTile(const Position& pos) const {
 			return getTile(pos.x, pos.y, pos.z);
 		}
 
@@ -220,12 +219,11 @@ class Map
 
 		void moveCreature(Creature& creature, Tile& newTile, bool forceTeleport = false);
 
-		void getSpectators(SpectatorVec& spectators, const Position& centerPos, bool multifloor = false, bool onlyPlayers = false,
+		void getSpectators(SpectatorVec& list, const Position& centerPos, bool multifloor = false, bool onlyPlayers = false,
 		                   int32_t minRangeX = 0, int32_t maxRangeX = 0,
 		                   int32_t minRangeY = 0, int32_t maxRangeY = 0);
 
 		void clearSpectatorCache();
-		void clearPlayersSpectatorCache();
 
 		/**
 		  * Checks if you can throw an object to that position
@@ -264,8 +262,7 @@ class Map
 		Spawns spawns;
 		Towns towns;
 		Houses houses;
-
-	private:
+	protected:
 		SpectatorCache spectatorCache;
 		SpectatorCache playersSpectatorCache;
 
@@ -278,7 +275,7 @@ class Map
 		uint32_t height = 0;
 
 		// Actually scans the map for spectators
-		void getSpectatorsInternal(SpectatorVec& spectators, const Position& centerPos,
+		void getSpectatorsInternal(SpectatorVec& list, const Position& centerPos,
 		                           int32_t minRangeX, int32_t maxRangeX,
 		                           int32_t minRangeY, int32_t maxRangeY,
 		                           int32_t minRangeZ, int32_t maxRangeZ, bool onlyPlayers) const;

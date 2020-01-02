@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -182,23 +182,9 @@ void Connection::parsePacket(const boost::system::error_code& error)
 	if (error) {
 		close(FORCE_CLOSE);
 		return;
-	} else if (connectionState != CONNECTION_STATE_OPEN) {
+	}
+	else if (connectionState != CONNECTION_STATE_OPEN) {
 		return;
-	}
-
-	//Check packet checksum
-	uint32_t checksum;
-	int32_t len = msg.getLength() - msg.getBufferPosition() - NetworkMessage::CHECKSUM_LENGTH;
-	if (len > 0) {
-		checksum = adlerChecksum(msg.getBuffer() + msg.getBufferPosition() + NetworkMessage::CHECKSUM_LENGTH, len);
-	} else {
-		checksum = 0;
-	}
-
-	uint32_t recvChecksum = msg.get<uint32_t>();
-	if (recvChecksum != checksum) {
-		// it might not have been the checksum, step back
-		msg.skipBytes(-NetworkMessage::CHECKSUM_LENGTH);
 	}
 
 	if (!receivedFirst) {
@@ -207,34 +193,39 @@ void Connection::parsePacket(const boost::system::error_code& error)
 
 		if (!protocol) {
 			// Game protocol has already been created at this point
-			protocol = service_port->make_protocol(recvChecksum == checksum, msg, shared_from_this());
+			protocol = service_port->make_protocol(msg, shared_from_this());
 			if (!protocol) {
 				close(FORCE_CLOSE);
 				return;
 			}
-		} else {
+		}
+		else {
 			msg.skipBytes(1);    // Skip protocol ID
 		}
 
 		protocol->onRecvFirstMessage(msg);
-	} else {
+	}
+	else {
 		protocol->onRecvMessage(msg);    // Send the packet to the current protocol
 	}
 
 	try {
 		readTimer.expires_from_now(boost::posix_time::seconds(CONNECTION_READ_TIMEOUT));
 		readTimer.async_wait(std::bind(&Connection::handleTimeout, std::weak_ptr<Connection>(shared_from_this()),
-		                                    std::placeholders::_1));
+			std::placeholders::_1));
 
 		// Wait to the next packet
 		boost::asio::async_read(socket,
-		                        boost::asio::buffer(msg.getBuffer(), NetworkMessage::HEADER_LENGTH),
-		                        std::bind(&Connection::parseHeader, shared_from_this(), std::placeholders::_1));
-	} catch (boost::system::system_error& e) {
+			boost::asio::buffer(msg.getBuffer(), NetworkMessage::HEADER_LENGTH),
+			std::bind(&Connection::parseHeader, shared_from_this(), std::placeholders::_1));
+	}
+	catch (boost::system::system_error& e) {
 		std::cout << "[Network error - Connection::parsePacket] " << e.what() << std::endl;
 		close(FORCE_CLOSE);
 	}
 }
+
+
 
 void Connection::send(const OutputMessage_ptr& msg)
 {

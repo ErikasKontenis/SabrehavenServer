@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -28,17 +28,17 @@ static constexpr int32_t CONNECTION_WRITE_TIMEOUT = 30;
 static constexpr int32_t CONNECTION_READ_TIMEOUT = 30;
 
 class Protocol;
-using Protocol_ptr = std::shared_ptr<Protocol>;
+typedef std::shared_ptr<Protocol> Protocol_ptr;
 class OutputMessage;
-using OutputMessage_ptr = std::shared_ptr<OutputMessage>;
+typedef std::shared_ptr<OutputMessage> OutputMessage_ptr;
 class Connection;
-using Connection_ptr = std::shared_ptr<Connection> ;
-using ConnectionWeak_ptr = std::weak_ptr<Connection>;
+typedef std::shared_ptr<Connection> Connection_ptr;
+typedef std::weak_ptr<Connection> ConnectionWeak_ptr;
 class ServiceBase;
-using Service_ptr = std::shared_ptr<ServiceBase>;
+typedef std::shared_ptr<ServiceBase> Service_ptr;
 class ServicePort;
-using ServicePort_ptr = std::shared_ptr<ServicePort>;
-using ConstServicePort_ptr = std::shared_ptr<const ServicePort>;
+typedef std::shared_ptr<ServicePort> ServicePort_ptr;
+typedef std::shared_ptr<const ServicePort> ConstServicePort_ptr;
 
 class ConnectionManager
 {
@@ -52,7 +52,7 @@ class ConnectionManager
 		void releaseConnection(const Connection_ptr& connection);
 		void closeAll();
 
-	private:
+	protected:
 		ConnectionManager() = default;
 
 		std::unordered_set<Connection_ptr> connections;
@@ -78,8 +78,12 @@ class Connection : public std::enable_shared_from_this<Connection>
 			readTimer(io_service),
 			writeTimer(io_service),
 			service_port(std::move(service_port)),
-			socket(io_service),
-			timeConnected(time(nullptr)) {}
+			socket(io_service) {
+			connectionState = CONNECTION_STATE_OPEN;
+			receivedFirst = false;
+			packetsSent = 0;
+			timeConnected = time(nullptr);
+		}
 		~Connection();
 
 		friend class ConnectionManager;
@@ -124,10 +128,10 @@ class Connection : public std::enable_shared_from_this<Connection>
 		boost::asio::ip::tcp::socket socket;
 
 		time_t timeConnected;
-		uint32_t packetsSent = 0;
+		uint32_t packetsSent;
 
-		bool connectionState = CONNECTION_STATE_OPEN;
-		bool receivedFirst = false;
+		bool connectionState;
+		bool receivedFirst;
 };
 
 #endif

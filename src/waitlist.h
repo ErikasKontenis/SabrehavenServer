@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -22,21 +22,36 @@
 
 #include "player.h"
 
-struct WaitListInfo;
+struct Wait {
+	constexpr Wait(int64_t timeout, uint32_t playerGUID) :
+		timeout(timeout), playerGUID(playerGUID) {}
+
+	int64_t timeout;
+	uint32_t playerGUID;
+};
+
+typedef std::list<Wait> WaitList;
+typedef WaitList::iterator WaitListIterator;
 
 class WaitingList
 {
 	public:
-		static WaitingList& getInstance();
+		static WaitingList* getInstance() {
+			static WaitingList waitingList;
+			return &waitingList;
+		}
 
 		bool clientLogin(const Player* player);
-		std::size_t getClientSlot(const Player* player);
-		static std::size_t getTime(std::size_t slot);
+		uint32_t getClientSlot(const Player* player);
+		static uint32_t getTime(uint32_t slot);
 
-	private:
-		WaitingList();
+	protected:
+		WaitList priorityWaitList;
+		WaitList waitList;
 
-		std::unique_ptr<WaitListInfo> info;
+		static uint32_t getTimeout(uint32_t slot);
+		WaitListIterator findClient(const Player* player, uint32_t& slot);
+		static void cleanupList(WaitList& list);
 };
 
 #endif

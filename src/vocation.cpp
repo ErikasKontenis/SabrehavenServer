@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -46,12 +46,15 @@ bool Vocations::loadFromXml()
 				std::forward_as_tuple(id), std::forward_as_tuple(id));
 		Vocation& voc = res.first->second;
 
-		if ((attr = vocationNode.attribute("name"))) {
-			voc.name = attr.as_string();
+		if (!(attr = vocationNode.attribute("flagid"))) {
+			std::cout << "[Warning - Vocations::loadFromXml] Missing vocation flag id" << std::endl;
+			continue;
 		}
 
-		if ((attr = vocationNode.attribute("clientid"))) {
-			voc.clientId = pugi::cast<uint16_t>(attr.value());
+		voc.flagid = pugi::cast<uint16_t>(attr.value());
+
+		if ((attr = vocationNode.attribute("name"))) {
+			voc.name = attr.as_string();
 		}
 
 		if ((attr = vocationNode.attribute("description"))) {
@@ -123,26 +126,6 @@ bool Vocations::loadFromXml()
 				} else {
 					std::cout << "[Notice - Vocations::loadFromXml] Missing skill id for vocation: " << voc.id << std::endl;
 				}
-			} else if (strcasecmp(childNode.name(), "formula") == 0) {
-				pugi::xml_attribute meleeDamageAttribute = childNode.attribute("meleeDamage");
-				if (meleeDamageAttribute) {
-					voc.meleeDamageMultiplier = pugi::cast<float>(meleeDamageAttribute.value());
-				}
-
-				pugi::xml_attribute distDamageAttribute = childNode.attribute("distDamage");
-				if (distDamageAttribute) {
-					voc.distDamageMultiplier = pugi::cast<float>(distDamageAttribute.value());
-				}
-
-				pugi::xml_attribute defenseAttribute = childNode.attribute("defense");
-				if (defenseAttribute) {
-					voc.defenseMultiplier = pugi::cast<float>(defenseAttribute.value());
-				}
-
-				pugi::xml_attribute armorAttribute = childNode.attribute("armor");
-				if (armorAttribute) {
-					voc.armorMultiplier = pugi::cast<float>(armorAttribute.value());
-				}
 			}
 		}
 	}
@@ -204,7 +187,7 @@ uint64_t Vocation::getReqMana(uint32_t magLevel)
 		return it->second;
 	}
 
-	uint64_t reqMana = static_cast<uint64_t>(1600 * std::pow<double>(manaMultiplier, static_cast<int32_t>(magLevel) - 1));
+	uint64_t reqMana = static_cast<uint64_t>(400 * std::pow<double>(manaMultiplier, static_cast<int32_t>(magLevel) - 1));
 	uint32_t modResult = reqMana % 20;
 	if (modResult < 10) {
 		reqMana -= modResult;

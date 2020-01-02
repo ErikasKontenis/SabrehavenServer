@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,7 +24,7 @@
 #include "player.h"
 #include "database.h"
 
-using ItemBlockList = std::list<std::pair<int32_t, Item*>>;
+typedef std::list<std::pair<int32_t, Item*>> ItemBlockList;
 
 class IOLoginData
 {
@@ -32,8 +32,8 @@ class IOLoginData
 		static Account loadAccount(uint32_t accno);
 		static bool saveAccount(const Account& acc);
 
-		static bool loginserverAuthentication(const std::string& name, const std::string& password, Account& account);
-		static uint32_t gameworldAuthentication(const std::string& accountName, const std::string& password, std::string& characterName, std::string& token, uint32_t tokenTime);
+		static bool loginserverAuthentication(uint32_t accountNumber, const std::string& password, Account& account);
+		static uint32_t gameworldAuthentication(uint32_t accountNumber, const std::string& password, std::string& characterName);
 
 		static AccountType_t getAccountType(uint32_t accountId);
 		static void setAccountType(uint32_t accountId, AccountType_t accountType);
@@ -52,18 +52,17 @@ class IOLoginData
 		static bool hasBiddedOnHouse(uint32_t guid);
 
 		static std::forward_list<VIPEntry> getVIPEntries(uint32_t accountId);
-		static void addVIPEntry(uint32_t accountId, uint32_t guid, const std::string& description, uint32_t icon, bool notify);
-		static void editVIPEntry(uint32_t accountId, uint32_t guid, const std::string& description, uint32_t icon, bool notify);
+		static void addVIPEntry(uint32_t accountId, uint32_t guid);
 		static void removeVIPEntry(uint32_t accountId, uint32_t guid);
 
 		static void addPremiumDays(uint32_t accountId, int32_t addDays);
 		static void removePremiumDays(uint32_t accountId, int32_t removeDays);
 
-	private:
-		using ItemMap = std::map<uint32_t, std::pair<Item*, uint32_t>>;
+	protected:
+		typedef std::map<uint32_t, std::pair<Item*, uint32_t>> ItemMap;
 
 		static void loadItems(ItemMap& itemMap, DBResult_ptr result);
-		static bool saveItems(const Player* player, const ItemBlockList& itemList, DBInsert& query_insert, PropWriteStream& propWriteStream);
+		static bool saveItems(const Player* player, const ItemBlockList& itemList, DBInsert& query_insert, PropWriteStream& stream);
 };
 
 #endif

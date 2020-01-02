@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,16 +23,6 @@
 #include "game.h"
 
 extern Game g_game;
-
-Task* createTask(std::function<void (void)> f)
-{
-	return new Task(std::move(f));
-}
-
-Task* createTask(uint32_t expiration, std::function<void (void)> f)
-{
-	return new Task(expiration, std::move(f));
-}
 
 void Dispatcher::threadMain()
 {
@@ -58,6 +48,8 @@ void Dispatcher::threadMain()
 				++dispatcherCycle;
 				// execute it
 				(*task)();
+
+				g_game.map.clearSpectatorCache();
 			}
 			delete task;
 		} else {

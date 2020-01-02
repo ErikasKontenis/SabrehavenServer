@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -24,13 +24,12 @@
 class DatabaseManager
 {
 	public:
-		static bool tableExists(const std::string& tableName);
+		static bool tableExists(const std::string& table);
 
 		static int32_t getDatabaseVersion();
 		static bool isDatabaseSetup();
 
 		static bool optimizeTables();
-		static void updateDatabase();
 
 		static bool getDatabaseConfig(const std::string& config, int32_t& value);
 		static void registerDatabaseConfig(const std::string& config, int32_t value);

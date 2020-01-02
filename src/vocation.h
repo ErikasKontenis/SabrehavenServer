@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -40,9 +40,8 @@ class Vocation
 		uint16_t getId() const {
 			return id;
 		}
-
-		uint8_t getClientId() const {
-			return clientId;
+		uint16_t getFlagId() const {
+			return flagid;
 		}
 
 		uint32_t getHPGain() const {
@@ -86,12 +85,7 @@ class Vocation
 			return fromVocation;
 		}
 
-		float meleeDamageMultiplier = 1.0f;
-		float distDamageMultiplier = 1.0f;
-		float defenseMultiplier = 1.0f;
-		float armorMultiplier = 1.0f;
-
-	private:
+	protected:
 		friend class Vocations;
 
 		std::map<uint32_t, uint64_t> cacheMana;
@@ -112,13 +106,13 @@ class Vocation
 		uint32_t gainHP = 5;
 		uint32_t fromVocation = VOCATION_NONE;
 		uint32_t attackSpeed = 1500;
-		uint32_t baseSpeed = 220;
+		uint32_t baseSpeed = 70;
 		uint16_t id;
+		uint16_t flagid;
 
 		uint16_t gainSoulTicks = 120;
 
 		uint8_t soulMax = 100;
-		uint8_t clientId = 0;
 
 		static uint32_t skillBase[SKILL_LAST + 1];
 };

@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,13 +31,13 @@ class HouseTile final : public DynamicTile
 
 		//cylinder implementations
 		ReturnValue queryAdd(int32_t index, const Thing& thing, uint32_t count,
-				uint32_t flags, Creature* actor = nullptr) const override;
+				uint32_t flags, Creature* actor = nullptr) const final;
 
 		Tile* queryDestination(int32_t& index, const Thing& thing, Item** destItem,
-				uint32_t& flags) override;
+				uint32_t& flags) final;
 
-		void addThing(int32_t index, Thing* thing) override;
-		void internalAddThing(uint32_t index, Thing* thing) override;
+		void addThing(int32_t index, Thing* thing) final;
+		void internalAddThing(uint32_t index, Thing* thing) final;
 
 		House* getHouse() {
 			return house;

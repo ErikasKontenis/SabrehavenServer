@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -23,6 +23,7 @@
 #include "iomapserialize.h"
 #include "combat.h"
 #include "creature.h"
+#include "monster.h"
 #include "game.h"
 
 extern Game g_game;
@@ -35,6 +36,7 @@ bool Map::loadMap(const std::string& identifier, bool loadHouses)
 		return false;
 	}
 
+	Npcs::loadNpcs();
 	if (!IOMap::loadSpawns(this)) {
 		std::cout << "[Warning - Map::loadMap] Failed to load spawn data." << std::endl;
 	}
@@ -161,7 +163,14 @@ bool Map::placeCreature(const Position& centerPos, Creature* creature, bool exte
 	Tile* tile = getTile(centerPos.x, centerPos.y, centerPos.z);
 	if (tile) {
 		placeInPZ = tile->hasFlag(TILESTATE_PROTECTIONZONE);
-		ReturnValue ret = tile->queryAdd(0, *creature, 1, FLAG_IGNOREBLOCKITEM);
+
+		ReturnValue ret;
+		if (creature->getPlayer()) {
+			ret = tile->queryAdd(0, *creature, 1, 0);
+		} else {
+			ret = tile->queryAdd(0, *creature, 1, (creature->getMonster() ? FLAG_PLACECHECK : FLAG_IGNOREBLOCKITEM));
+		}
+
 		foundTile = forceLogin || ret == RETURNVALUE_NOERROR || ret == RETURNVALUE_PLAYERISNOTINVITED;
 	} else {
 		placeInPZ = false;
@@ -200,7 +209,7 @@ bool Map::placeCreature(const Position& centerPos, Creature* creature, bool exte
 				continue;
 			}
 
-			if (tile->queryAdd(0, *creature, 1, 0) == RETURNVALUE_NOERROR) {
+			if (tile->queryAdd(0, *creature, 1, (creature->getMonster() ? FLAG_PLACECHECK : 0)) == RETURNVALUE_NOERROR) {
 				if (!extendedPos || isSightClear(centerPos, tryPos, false)) {
 					foundTile = true;
 					break;
@@ -234,13 +243,12 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 
 	bool teleport = forceTeleport || !newTile.getGround() || !Position::areInRange<1, 1, 0>(oldPos, newPos);
 
-	SpectatorVec spectators, newPosSpectators;
-	getSpectators(spectators, oldPos, true);
-	getSpectators(newPosSpectators, newPos, true);
-	spectators.addSpectators(newPosSpectators);
+	SpectatorVec list;
+	getSpectators(list, oldPos, true);
+	getSpectators(list, newPos, true);
 
 	std::vector<int32_t> oldStackPosVector;
-	for (Creature* spectator : spectators) {
+	for (Creature* spectator : list) {
 		if (Player* tmpPlayer = spectator->getPlayer()) {
 			if (tmpPlayer->canSeeCreature(&creature)) {
 				oldStackPosVector.push_back(oldTile.getClientIndexOfCreature(tmpPlayer, &creature));
@@ -281,7 +289,7 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 
 	//send to client
 	size_t i = 0;
-	for (Creature* spectator : spectators) {
+	for (Creature* spectator : list) {
 		if (Player* tmpPlayer = spectator->getPlayer()) {
 			//Use the correct stackpos
 			int32_t stackpos = oldStackPosVector[i++];
@@ -292,7 +300,7 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 	}
 
 	//event method
-	for (Creature* spectator : spectators) {
+	for (Creature* spectator : list) {
 		spectator->onCreatureMove(&creature, &newTile, newPos, &oldTile, oldPos, teleport);
 	}
 
@@ -300,7 +308,7 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 	newTile.postAddNotification(&creature, &oldTile, 0);
 }
 
-void Map::getSpectatorsInternal(SpectatorVec& spectators, const Position& centerPos, int32_t minRangeX, int32_t maxRangeX, int32_t minRangeY, int32_t maxRangeY, int32_t minRangeZ, int32_t maxRangeZ, bool onlyPlayers) const
+void Map::getSpectatorsInternal(SpectatorVec& list, const Position& centerPos, int32_t minRangeX, int32_t maxRangeX, int32_t minRangeY, int32_t maxRangeY, int32_t minRangeZ, int32_t maxRangeZ, bool onlyPlayers) const
 {
 	int_fast16_t min_y = centerPos.y + minRangeY;
 	int_fast16_t min_x = centerPos.x + minRangeX;
@@ -340,7 +348,7 @@ void Map::getSpectatorsInternal(SpectatorVec& spectators, const Position& center
 						continue;
 					}
 
-					spectators.emplace_back(creature);
+					list.insert(creature);
 				}
 				leafE = leafE->leafE;
 			} else {
@@ -356,7 +364,7 @@ void Map::getSpectatorsInternal(SpectatorVec& spectators, const Position& center
 	}
 }
 
-void Map::getSpectators(SpectatorVec& spectators, const Position& centerPos, bool multifloor /*= false*/, bool onlyPlayers /*= false*/, int32_t minRangeX /*= 0*/, int32_t maxRangeX /*= 0*/, int32_t minRangeY /*= 0*/, int32_t maxRangeY /*= 0*/)
+void Map::getSpectators(SpectatorVec& list, const Position& centerPos, bool multifloor /*= false*/, bool onlyPlayers /*= false*/, int32_t minRangeX /*= 0*/, int32_t maxRangeX /*= 0*/, int32_t minRangeY /*= 0*/, int32_t maxRangeY /*= 0*/)
 {
 	if (centerPos.z >= MAP_MAX_LAYERS) {
 		return;
@@ -374,11 +382,11 @@ void Map::getSpectators(SpectatorVec& spectators, const Position& centerPos, boo
 		if (onlyPlayers) {
 			auto it = playersSpectatorCache.find(centerPos);
 			if (it != playersSpectatorCache.end()) {
-				if (!spectators.empty()) {
-					const SpectatorVec& cachedSpectators = it->second;
-					spectators.insert(spectators.end(), cachedSpectators.begin(), cachedSpectators.end());
+				if (!list.empty()) {
+					const SpectatorVec& cachedList = it->second;
+					list.insert(cachedList.begin(), cachedList.end());
 				} else {
-					spectators = it->second;
+					list = it->second;
 				}
 
 				foundCache = true;
@@ -389,17 +397,17 @@ void Map::getSpectators(SpectatorVec& spectators, const Position& centerPos, boo
 			auto it = spectatorCache.find(centerPos);
 			if (it != spectatorCache.end()) {
 				if (!onlyPlayers) {
-					if (!spectators.empty()) {
-						const SpectatorVec& cachedSpectators = it->second;
-						spectators.insert(spectators.end(), cachedSpectators.begin(), cachedSpectators.end());
+					if (!list.empty()) {
+						const SpectatorVec& cachedList = it->second;
+						list.insert(cachedList.begin(), cachedList.end());
 					} else {
-						spectators = it->second;
+						list = it->second;
 					}
 				} else {
-					const SpectatorVec& cachedSpectators = it->second;
-					for (Creature* spectator : cachedSpectators) {
+					const SpectatorVec& cachedList = it->second;
+					for (Creature* spectator : cachedList) {
 						if (spectator->getPlayer()) {
-							spectators.emplace_back(spectator);
+							list.insert(spectator);
 						}
 					}
 				}
@@ -437,13 +445,13 @@ void Map::getSpectators(SpectatorVec& spectators, const Position& centerPos, boo
 			maxRangeZ = centerPos.z;
 		}
 
-		getSpectatorsInternal(spectators, centerPos, minRangeX, maxRangeX, minRangeY, maxRangeY, minRangeZ, maxRangeZ, onlyPlayers);
+		getSpectatorsInternal(list, centerPos, minRangeX, maxRangeX, minRangeY, maxRangeY, minRangeZ, maxRangeZ, onlyPlayers);
 
 		if (cacheResult) {
 			if (onlyPlayers) {
-				playersSpectatorCache[centerPos] = spectators;
+				playersSpectatorCache[centerPos] = list;
 			} else {
-				spectatorCache[centerPos] = spectators;
+				spectatorCache[centerPos] = list;
 			}
 		}
 	}
@@ -452,10 +460,6 @@ void Map::getSpectators(SpectatorVec& spectators, const Position& centerPos, boo
 void Map::clearSpectatorCache()
 {
 	spectatorCache.clear();
-}
-
-void Map::clearPlayersSpectatorCache()
-{
 	playersSpectatorCache.clear();
 }
 
@@ -559,7 +563,7 @@ const Tile* Map::canWalkTo(const Creature& creature, const Position& pos) const
 	//used for non-cached tiles
 	Tile* tile = getTile(pos.x, pos.y, pos.z);
 	if (creature.getTile() != tile) {
-		if (!tile || tile->queryAdd(0, creature, 1, FLAG_PATHFINDING | FLAG_IGNOREFIELDDAMAGE) != RETURNVALUE_NOERROR) {
+		if (!tile || tile->queryAdd(0, creature, 1, FLAG_PATHFINDING) != RETURNVALUE_NOERROR) {
 			return nullptr;
 		}
 	}
@@ -842,16 +846,25 @@ int_fast32_t AStarNodes::getTileWalkCost(const Creature& creature, const Tile* t
 {
 	int_fast32_t cost = 0;
 	if (tile->getTopVisibleCreature(&creature) != nullptr) {
+		if (const Monster* monster = creature.getMonster()) {
+			if (monster->canPushCreatures()) {
+				return cost;
+			}
+		}
+
 		//destroy creature cost
 		cost += MAP_NORMALWALKCOST * 3;
 	}
 
 	if (const MagicField* field = tile->getFieldItem()) {
 		CombatType_t combatType = field->getCombatType();
-		if (!creature.isImmune(combatType) && !creature.hasCondition(Combat::DamageToConditionType(combatType))) {
-			cost += MAP_NORMALWALKCOST * 18;
+		if (combatType != COMBAT_NONE) {
+			if (!creature.isImmune(combatType) && !creature.hasCondition(Combat::DamageToConditionType(combatType))) {
+				cost += MAP_NORMALWALKCOST * 18;
+			}
 		}
 	}
+
 	return cost;
 }
 

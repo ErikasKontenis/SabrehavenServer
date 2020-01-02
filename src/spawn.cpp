@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -64,9 +64,6 @@ bool Spawns::loadFromXml(const std::string& filename)
 			radius = -1;
 		}
 
-		spawnList.emplace_front(centerPos, radius);
-		Spawn& spawn = spawnList.front();
-
 		for (auto childNode : spawnNode.children()) {
 			if (strcasecmp(childNode.name(), "monster") == 0) {
 				pugi::xml_attribute nameAttribute = childNode.attribute("name");
@@ -88,9 +85,18 @@ bool Spawns::loadFromXml(const std::string& filename)
 					centerPos.y + pugi::cast<uint16_t>(childNode.attribute("y").value()),
 					centerPos.z
 				);
+
+				spawnList.emplace_front(pos, radius);
+				Spawn& spawn = spawnList.front();
+
 				uint32_t interval = pugi::cast<uint32_t>(childNode.attribute("spawntime").value()) * 1000;
 				if (interval > MINSPAWN_INTERVAL) {
-					spawn.addMonster(nameAttribute.as_string(), pos, dir, interval);
+					uint32_t exInterval = g_config.getNumber(ConfigManager::RATE_SPAWN);
+					if (exInterval) {
+						spawn.addMonster(nameAttribute.as_string(), pos, dir, exInterval * 1000);
+					} else {
+						spawn.addMonster(nameAttribute.as_string(), pos, dir, interval);
+					}
 				} else {
 					std::cout << "[Warning - Spawns::loadFromXml] " << nameAttribute.as_string() << ' ' << pos << " spawntime can not be less than " << MINSPAWN_INTERVAL / 1000 << " seconds." << std::endl;
 				}
@@ -180,9 +186,9 @@ Spawn::~Spawn()
 
 bool Spawn::findPlayer(const Position& pos)
 {
-	SpectatorVec spectators;
-	g_game.map.getSpectators(spectators, pos, false, true);
-	for (Creature* spectator : spectators) {
+	SpectatorVec list;
+	g_game.map.getSpectators(list, pos, false, true);
+	for (Creature* spectator : list) {
 		if (!spectator->getPlayer()->hasFlag(PlayerFlag_IgnoredByMonsters)) {
 			return true;
 		}
@@ -220,6 +226,26 @@ bool Spawn::spawnMonster(uint32_t spawnId, MonsterType* mType, const Position& p
 	return true;
 }
 
+uint32_t Spawn::getInterval() const
+{
+	uint32_t newInterval = interval;
+	
+	if (newInterval > 500000) {
+		size_t playersOnline = g_game.getPlayersOnline();
+		if (playersOnline <= 800) {
+			if (playersOnline > 200) {
+				newInterval = 200 * interval / (playersOnline / 2 + 100);
+			}
+		} else {
+			newInterval = 2 * interval / 5;
+		}
+	
+		return normal_random(newInterval / 2, newInterval);
+	}
+
+	return newInterval;
+}
+
 void Spawn::startup()
 {
 	for (const auto& it : spawnMap) {
@@ -235,8 +261,6 @@ void Spawn::checkSpawn()
 
 	cleanup();
 
-	uint32_t spawnCount = 0;
-
 	for (auto& it : spawnMap) {
 		uint32_t spawnId = it.first;
 		if (spawnedMap.find(spawnId) != spawnedMap.end()) {
@@ -251,9 +275,6 @@ void Spawn::checkSpawn()
 			}
 
 			spawnMonster(spawnId, sb.mType, sb.pos, sb.direction);
-			if (++spawnCount >= static_cast<uint32_t>(g_config.getNumber(ConfigManager::RATE_SPAWN))) {
-				break;
-			}
 		}
 	}
 
@@ -274,9 +295,6 @@ void Spawn::cleanup()
 			}
 
 			monster->decrementReferenceCounter();
-			it = spawnedMap.erase(it);
-		} else if (!isInSpawnZone(monster->getPosition()) && spawnId != 0) {
-			spawnedMap.insert(spawned_pair(0, monster));
 			it = spawnedMap.erase(it);
 		} else {
 			++it;

@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -41,11 +41,11 @@ void House::addTile(HouseTile* tile)
 void House::setOwner(uint32_t guid, bool updateDatabase/* = true*/, Player* player/* = nullptr*/)
 {
 	if (updateDatabase && owner != guid) {
-		Database& db = Database::getInstance();
+		Database* db = Database::getInstance();
 
 		std::ostringstream query;
 		query << "UPDATE `houses` SET `owner` = " << guid << ", `bid` = 0, `bid_end` = 0, `last_bid` = 0, `highest_bidder` = 0  WHERE `id` = " << id;
-		db.executeQuery(query.str());
+		db->executeQuery(query.str());
 	}
 
 	if (isLoaded && owner == guid) {
@@ -85,25 +85,11 @@ void House::setOwner(uint32_t guid, bool updateDatabase/* = true*/, Player* play
 		for (Door* door : doorSet) {
 			door->setAccessList("");
 		}
-	} else {
-		std::string strRentPeriod = asLowerCaseString(g_config.getString(ConfigManager::HOUSE_RENT_PERIOD));
-		time_t currentTime = time(nullptr);
-		if (strRentPeriod == "yearly") {
-		    currentTime += 24 * 60 * 60 * 365;
-		} else if (strRentPeriod == "monthly") {
-		    currentTime += 24 * 60 * 60 * 30;
-		} else if (strRentPeriod == "weekly") {
-		    currentTime += 24 * 60 * 60 * 7;
-		} else if (strRentPeriod == "daily") {
-		    currentTime += 24 * 60 * 60;
-		} else {
-		    currentTime = 0;
-		}
 
-		paidUntil = currentTime;
+		//reset paid date
+		paidUntil = 0;
+		rentWarnings = 0;
 	}
-
-	rentWarnings = 0;
 
 	if (guid != 0) {
 		std::string name = IOLoginData::getNameByGuid(guid);
@@ -124,9 +110,9 @@ void House::updateDoorDescription() const
 	} else {
 		ss << "It belongs to house '" << houseName << "'. Nobody owns this house.";
 
-		const int32_t housePrice = g_config.getNumber(ConfigManager::HOUSE_PRICE);
+		const int32_t housePrice = getRent();
 		if (housePrice != -1) {
-			ss << " It costs " << (houseTiles.size() * housePrice) << " gold coins.";
+			ss << " It costs " << housePrice * 5 << " gold coins.";
 		}
 	}
 
@@ -230,6 +216,7 @@ bool House::transferToDepot() const
 		transferToDepot(&tmpPlayer);
 		IOLoginData::savePlayer(&tmpPlayer);
 	}
+
 	return true;
 }
 
@@ -258,8 +245,9 @@ bool House::transferToDepot(Player* player) const
 	}
 
 	for (Item* item : moveItemList) {
-		g_game.internalMoveItem(item->getParent(), player->getInbox(), INDEX_WHEREEVER, item, item->getItemCount(), nullptr, FLAG_NOLIMIT);
+		g_game.internalMoveItem(item->getParent(), player->getDepotLocker(getTownId(), true), INDEX_WHEREEVER, item, item->getItemCount(), nullptr, FLAG_NOLIMIT);
 	}
+
 	return true;
 }
 
@@ -408,7 +396,7 @@ bool House::executeTransfer(HouseTransferItem* item, Player* newOwner)
 void AccessList::parseList(const std::string& list)
 {
 	playerList.clear();
-	guildRankList.clear();
+	guildList.clear();
 	expressionList.clear();
 	regExList.clear();
 	this->list = list;
@@ -433,11 +421,7 @@ void AccessList::parseList(const std::string& list)
 
 		std::string::size_type at_pos = line.find("@");
 		if (at_pos != std::string::npos) {
-			if (at_pos == 0) {
-				addGuild(line.substr(1));
-			} else {
-				addGuildRank(line.substr(0, at_pos - 1), line.substr(at_pos + 1));
-			}
+			addGuild(line.substr(at_pos + 1));
 		} else if (line.find("!") != std::string::npos || line.find("*") != std::string::npos || line.find("?") != std::string::npos) {
 			addExpression(line);
 		} else {
@@ -459,43 +443,11 @@ void AccessList::addPlayer(const std::string& name)
 	}
 }
 
-namespace {
-
-const Guild* getGuildByName(const std::string& name)
-{
-	uint32_t guildId = IOGuild::getGuildIdByName(name);
-	if (guildId == 0) {
-		return nullptr;
-	}
-
-	const Guild* guild = g_game.getGuild(guildId);
-	if (guild) {
-		return guild;
-	}
-
-	return IOGuild::loadGuild(guildId);
-}
-
-}
-
 void AccessList::addGuild(const std::string& name)
 {
-	const Guild* guild = getGuildByName(name);
-	if (guild) {
-		for (const auto& rank : guild->getRanks()) {
-			guildRankList.insert(rank.id);
-		}
-	}
-}
-
-void AccessList::addGuildRank(const std::string& name, const std::string& rankName)
-{
-	const Guild* guild = getGuildByName(name);
-	if (guild) {
-		const GuildRank* rank = guild->getRankByName(rankName);
-		if (rank) {
-			guildRankList.insert(rank->id);
-		}
+	uint32_t guildId = IOGuild::getGuildIdByName(name);
+	if (guildId != 0) {
+		guildList.insert(guildId);
 	}
 }
 
@@ -550,8 +502,8 @@ bool AccessList::isInList(const Player* player)
 		return true;
 	}
 
-	const GuildRank* rank = player->getGuildRank();
-	return rank && guildRankList.find(rank->id) != guildRankList.end();
+	const Guild* guild = player->getGuild();
+	return guild && guildList.find(guild->getId()) != guildList.end();
 }
 
 void AccessList::getList(std::string& list) const
@@ -715,9 +667,7 @@ void Houses::payHouses(RentPeriod_t rentPeriod) const
 			continue;
 		}
 
-		if (player.getBankBalance() >= rent) {
-			player.setBankBalance(player.getBankBalance() - rent);
-
+		if (g_game.removeMoney(player.getDepotLocker(house->getTownId(), true), house->getRent(), FLAG_NOLIMIT)) {
 			time_t paidUntil = currentTime;
 			switch (rentPeriod) {
 				case RENTPERIOD_DAILY:
@@ -768,7 +718,7 @@ void Houses::payHouses(RentPeriod_t rentPeriod) const
 				std::ostringstream ss;
 				ss << "Warning! \nThe " << period << " rent of " << house->getRent() << " gold for your house \"" << house->getName() << "\" is payable. Have it within " << daysLeft << " days or you will lose this house.";
 				letter->setText(ss.str());
-				g_game.internalAddItem(player.getInbox(), letter, INDEX_WHEREEVER, FLAG_NOLIMIT);
+				g_game.internalAddItem(player.getDepotLocker(house->getTownId(), true), letter, INDEX_WHEREEVER, FLAG_NOLIMIT);
 				house->setPayRentWarnings(house->getPayRentWarnings() + 1);
 			} else {
 				house->setOwner(0, true, &player);

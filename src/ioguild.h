@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -20,15 +20,13 @@
 #ifndef FS_IOGUILD_H_EF9ACEBA0B844C388B70FF52E69F1AFF
 #define FS_IOGUILD_H_EF9ACEBA0B844C388B70FF52E69F1AFF
 
-class Guild;
-using GuildWarVector = std::vector<uint32_t>;
+typedef std::vector<uint32_t> GuildWarList;
 
 class IOGuild
 {
 	public:
-		static Guild* loadGuild(uint32_t guildId);
 		static uint32_t getGuildIdByName(const std::string& name);
-		static void getWarList(uint32_t guildId, GuildWarVector& guildWarVector);
+		static void getWarList(uint32_t guildId, GuildWarList& guildWarList);
 };
 
 #endif

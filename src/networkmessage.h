@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,16 +31,14 @@ class RSA;
 class NetworkMessage
 {
 	public:
-		using MsgSize_t = uint16_t;
+		typedef uint16_t MsgSize_t;
 		// Headers:
 		// 2 bytes for unencrypted message size
-		// 4 bytes for checksum
 		// 2 bytes for encrypted message size
-		static constexpr MsgSize_t INITIAL_BUFFER_POSITION = 8;
+		static constexpr MsgSize_t INITIAL_BUFFER_POSITION = 4;
 		enum { HEADER_LENGTH = 2 };
-		enum { CHECKSUM_LENGTH = 4 };
 		enum { XTEA_MULTIPLE = 8 };
-		enum { MAX_BODY_LENGTH = NETWORKMESSAGE_MAXSIZE - HEADER_LENGTH - CHECKSUM_LENGTH - XTEA_MULTIPLE };
+		enum { MAX_BODY_LENGTH = NETWORKMESSAGE_MAXSIZE - HEADER_LENGTH - XTEA_MULTIPLE };
 		enum { MAX_PROTOCOL_BODY_LENGTH = MAX_BODY_LENGTH - 10 };
 
 		NetworkMessage() = default;
@@ -150,6 +148,18 @@ class NetworkMessage
 		}
 
 	protected:
+		inline bool canAdd(size_t size) const {
+			return (size + info.position) < MAX_BODY_LENGTH;
+		}
+
+		inline bool canRead(int32_t size) {
+			if ((info.position + size) > (info.length + 8) || size >= (NETWORKMESSAGE_MAXSIZE - info.position)) {
+				info.overrun = true;
+				return false;
+			}
+			return true;
+		}
+
 		struct NetworkMessageInfo {
 			MsgSize_t length = 0;
 			MsgSize_t position = INITIAL_BUFFER_POSITION;
@@ -158,19 +168,6 @@ class NetworkMessage
 
 		NetworkMessageInfo info;
 		uint8_t buffer[NETWORKMESSAGE_MAXSIZE];
-
-	private:
-		bool canAdd(size_t size) const {
-			return (size + info.position) < MAX_BODY_LENGTH;
-		}
-
-		bool canRead(int32_t size) {
-			if ((info.position + size) > (info.length + 8) || size >= (NETWORKMESSAGE_MAXSIZE - info.position)) {
-				info.overrun = true;
-				return false;
-			}
-			return true;
-		}
 };
 
 #endif // #ifndef __NETWORK_MESSAGE_H__

@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -35,7 +35,7 @@ void Scheduler::threadMain()
 		}
 
 		// the mutex is locked again now...
-		if (ret == std::cv_status::timeout && !eventList.empty()) {
+		if (ret == std::cv_status::timeout) {
 			// ok we had a timeout, so there has to be an event we have to execute...
 			SchedulerTask* task = eventList.top();
 			eventList.pop();
@@ -60,34 +60,34 @@ void Scheduler::threadMain()
 
 uint32_t Scheduler::addEvent(SchedulerTask* task)
 {
+	bool do_signal = false;
 	eventLock.lock();
 
-	if (getState() != THREAD_STATE_RUNNING) {
+	if (getState() == THREAD_STATE_RUNNING) {
+		// check if the event has a valid id
+		if (task->getEventId() == 0) {
+			// if not generate one
+			if (++lastEventId == 0) {
+				lastEventId = 1;
+			}
+
+			task->setEventId(lastEventId);
+		}
+
+		// insert the event id in the list of active events
+		eventIds.insert(task->getEventId());
+
+		// add the event to the queue
+		eventList.push(task);
+
+		// if the list was empty or this event is the top in the list
+		// we have to signal it
+		do_signal = (task == eventList.top());
+	} else {
 		eventLock.unlock();
 		delete task;
 		return 0;
 	}
-
-	// check if the event has a valid id
-	if (task->getEventId() == 0) {
-		// if not generate one
-		if (++lastEventId == 0) {
-			lastEventId = 1;
-		}
-
-		task->setEventId(lastEventId);
-	}
-
-	// insert the event id in the list of active events
-	uint32_t eventId = task->getEventId();
-	eventIds.insert(eventId);
-
-	// add the event to the queue
-	eventList.push(task);
-
-	// if the list was empty or this event is the top in the list
-	// we have to signal it
-	bool do_signal = (task == eventList.top());
 
 	eventLock.unlock();
 
@@ -95,19 +95,19 @@ uint32_t Scheduler::addEvent(SchedulerTask* task)
 		eventSignal.notify_one();
 	}
 
-	return eventId;
+	return task->getEventId();
 }
 
-bool Scheduler::stopEvent(uint32_t eventId)
+bool Scheduler::stopEvent(uint32_t eventid)
 {
-	if (eventId == 0) {
+	if (eventid == 0) {
 		return false;
 	}
 
 	std::lock_guard<std::mutex> lockClass(eventLock);
 
 	// search the event id..
-	auto it = eventIds.find(eventId);
+	auto it = eventIds.find(eventid);
 	if (it == eventIds.end()) {
 		return false;
 	}
@@ -132,7 +132,3 @@ void Scheduler::shutdown()
 	eventSignal.notify_one();
 }
 
-SchedulerTask* createSchedulerTask(uint32_t delay, std::function<void (void)> f)
-{
-	return new SchedulerTask(delay, std::move(f));
-}

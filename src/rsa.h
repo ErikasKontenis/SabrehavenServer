@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -26,18 +26,18 @@
 
 class RSA
 {
-	public:
-		RSA() = default;
+public:
+	RSA() = default;
 
-		// non-copyable
-		RSA(const RSA&) = delete;
-		RSA& operator=(const RSA&) = delete;
+	// non-copyable
+	RSA(const RSA&) = delete;
+	RSA& operator=(const RSA&) = delete;
 
-		void loadPEM(const std::string& filename);
-		void decrypt(char* msg) const;
+	void loadPEM(const std::string& filename);
+	void decrypt(char* msg) const;
 
-	private:
-		CryptoPP::RSA::PrivateKey pk;
+private:
+	CryptoPP::RSA::PrivateKey pk;
 };
 
 #endif

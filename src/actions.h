@@ -1,6 +1,6 @@
 /**
- * The Forgotten Server - a free and open-source MMORPG server emulator
- * Copyright (C) 2019  Mark Samman <mark.samman@gmail.com>
+ * Tibia GIMUD Server - a free and open-source MMORPG server emulator
+ * Copyright (C) 2019 Sabrehaven and Mark Samman <mark.samman@gmail.com>
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
@@ -31,14 +31,15 @@ using ActionFunction = std::function<bool(Player* player, Item* item, const Posi
 class Action : public Event
 {
 	public:
+		explicit Action(const Action* copy);
 		explicit Action(LuaScriptInterface* interface);
 
 		bool configureEvent(const pugi::xml_node& node) override;
-		bool loadFunction(const pugi::xml_attribute& attr, bool isScripted) override;
 
 		//scripting
 		virtual bool executeUse(Player* player, Item* item, const Position& fromPosition,
 			Thing* target, const Position& toPosition, bool isHotkey);
+		//
 
 		bool getAllowFarUse() const {
 			return allowFarUse;
@@ -118,25 +119,22 @@ class Actions final : public BaseEvents
 		ReturnValue canUse(const Player* player, const Position& pos, const Item* item);
 		ReturnValue canUseFar(const Creature* creature, const Position& toPos, bool checkLineOfSight, bool checkFloor);
 
-		bool registerLuaEvent(Action* event);
-		void clear(bool fromLua) override final;
-
 	private:
 		ReturnValue internalUseItem(Player* player, const Position& pos, uint8_t index, Item* item, bool isHotkey);
 		static void showUseHotkeyMessage(Player* player, const Item* item, uint32_t count);
 
-		LuaScriptInterface& getScriptInterface() override;
-		std::string getScriptBaseName() const override;
-		Event_ptr getEvent(const std::string& nodeName) override;
-		bool registerEvent(Event_ptr event, const pugi::xml_node& node) override;
+		void clear() final;
+		LuaScriptInterface& getScriptInterface() final;
+		std::string getScriptBaseName() const final;
+		Event* getEvent(const std::string& nodeName) final;
+		bool registerEvent(Event* event, const pugi::xml_node& node) final;
 
-		using ActionUseMap = std::map<uint16_t, Action>;
+		typedef std::map<uint16_t, Action*> ActionUseMap;
 		ActionUseMap useItemMap;
-		ActionUseMap uniqueItemMap;
 		ActionUseMap actionItemMap;
 
 		Action* getAction(const Item* item);
-		void clearMap(ActionUseMap& map, bool fromLua);
+		void clearMap(ActionUseMap& map);
 
 		LuaScriptInterface scriptInterface;
 };
