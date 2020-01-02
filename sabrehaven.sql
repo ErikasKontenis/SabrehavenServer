@@ -30,6 +30,7 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `accounts` (
   `id` int(11) NOT NULL,
+  `name` int(11) NOT NULL,
   `password` char(40) NOT NULL,
   `type` int(11) NOT NULL DEFAULT '1',
   `premdays` int(11) NOT NULL DEFAULT '0',
@@ -40,8 +41,8 @@ CREATE TABLE `accounts` (
 -- Dumping data for table `accounts`
 --
 
-INSERT INTO `accounts` (`id`, `password`, `type`, `premdays`, `lastday`) VALUES
-(1234567, '41da8bef22aaef9d7c5821fa0f0de7cccc4dda4d', 5, 497, 1547320555);
+INSERT INTO `accounts` (`id`, `name`, `password`, `type`, `premdays`, `lastday`) VALUES
+(1, 1234567, '41da8bef22aaef9d7c5821fa0f0de7cccc4dda4d', 5, 497, 1547320555);
 
 -- --------------------------------------------------------
 
@@ -7638,7 +7639,8 @@ INSERT INTO `tile_store` (`house_id`, `data`) VALUES
 -- Indexes for table `accounts`
 --
 ALTER TABLE `accounts`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`)
+  ADD UNIQUE KEY `name` (`name`);
 
 --
 -- Indexes for table `account_bans`

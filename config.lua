@@ -1,6 +1,7 @@
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
 worldType = "pvp"
+hotkeyAimbotEnabled = true
 protectionLevel = 1
 pzLocked = 60000
 removeChargesFromRunes = true
@@ -65,7 +66,7 @@ mysqlSock = ""
 
 -- Misc.
 allowChangeOutfit = true
-freePremium = false
+freePremium = true
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 4
 showMonsterLoot = false

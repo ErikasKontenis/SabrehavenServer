@@ -129,6 +129,19 @@ enum FluidTypes_t : uint8_t
 	FLUID_FRUITJUICE,
 };
 
+const uint8_t reverseFluidMap[] = {
+	FLUID_NONE,
+	FLUID_WATER,
+	FLUID_MANAFLUID,
+	FLUID_BEER,
+	FLUID_NONE,
+	FLUID_LIFEFLUID,
+	FLUID_SLIME,
+	FLUID_NONE,
+	FLUID_LEMONADE,
+	FLUID_MILK,
+};
+
 enum FluidColor_t : uint8_t
 {
 	FLUID_COLOR_NONE = 0,
