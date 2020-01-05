@@ -46,4 +46,7 @@
   <raid name="thaisorcinvasion" repeat="false" margin="0" interval2="15552000" file="thaisorcinvasion.xml"/>
   <raid name="venoreelfinvasion" repeat="false" margin="0" interval2="15552000" file="venoreelfinvasion.xml"/>
   <raid name="venoreswampelves" repeat="true" margin="0" interval2="1209600" file="venoreswampelves.xml"/>
+  <raid name="ferumbras" repeat="false" margin="0" interval2="15552000" file="ferumbras.xml"/>
+  <raid name="morgaroth" repeat="false" margin="0" interval2="31104000" file="morgaroth.xml"/>
+  <raid name="libertybaypirates" repeat="true" margin="0" interval2="2592000" file="libertybaypirates.xml"/>
 </raids>
