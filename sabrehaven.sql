@@ -1499,6 +1499,12 @@ ALTER TABLE `tile_store`
 --
 
 --
+-- AUTO_INCREMENT for table `accounts`
+--
+ALTER TABLE `accounts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `account_ban_history`
 --
 ALTER TABLE `account_ban_history`
