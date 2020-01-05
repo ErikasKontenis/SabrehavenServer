@@ -22,7 +22,7 @@ killsMonthBanishment = 20
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "127.0.0.1"
+ip = "149.202.64.104"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
@@ -58,9 +58,9 @@ mapAuthor = "CipSoft"
 
 -- MySQL
 mysqlHost = "127.0.0.1"
-mysqlUser = "root"
-mysqlPass = ""
-mysqlDatabase = "sabrehaven"
+mysqlUser = "forgottenserver"
+mysqlPass = "bMM0cQcFETKHc3CNY7ULrlBN"
+mysqlDatabase = "forgottenserver"
 mysqlPort = 3306
 mysqlSock = ""
 
