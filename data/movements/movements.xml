@@ -398,6 +398,16 @@
 	<!-- Laguna Islands -->
 	<movevent event="StepIn" frommovementid="17563" tomovementid="17564" script="laguna_islands/erayo_hut_stairs.lua" />
 	
+	<!-- Raid Sacrifices -->
+	<movevent event="StepIn" movementid="17578" script="misc/raid_sacrifice.lua" />
+	<movevent event="AddItem" movementid="17578" tileitem="1" script="misc/raid_sacrifice.lua" />
+	<movevent event="StepIn" movementid="17579" script="misc/raid_sacrifice.lua" />
+	<movevent event="AddItem" movementid="17579" tileitem="1" script="misc/raid_sacrifice.lua" />
+	<movevent event="StepIn" movementid="17580" script="misc/raid_sacrifice.lua" />
+	<movevent event="AddItem" movementid="17580" tileitem="1" script="misc/raid_sacrifice.lua" />
+	<movevent event="StepIn" movementid="17581" script="misc/raid_sacrifice.lua" />
+	<movevent event="AddItem" movementid="17581" tileitem="1" script="misc/raid_sacrifice.lua" />
+	
 	<!-- Goroma -->
 	<movevent event="StepIn" frommovementid="17506" tomovementid="17508" script="goroma/energy_barrier.lua" />
 	<movevent event="StepIn" movementid="17510" script="goroma/to_ramoa.lua" />
