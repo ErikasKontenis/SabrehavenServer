@@ -13,12 +13,12 @@ expFromPlayersLevelRange = 75
 banLength = 30 * 24 * 60 * 60
 whiteSkullTime = 15 * 60
 redSkullTime = 30 * 24 * 60 * 60
-killsDayRedSkull = 3
-killsWeekRedSkull = 5
-killsMonthRedSkull = 10
-killsDayBanishment = 6
-killsWeekBanishment = 10
-killsMonthBanishment = 20
+killsDayRedSkull = 999
+killsWeekRedSkull = 999
+killsMonthRedSkull = 999
+killsDayBanishment = 999
+killsWeekBanishment = 999
+killsMonthBanishment = 999
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
@@ -83,9 +83,9 @@ newbieLevelThreshold = 5
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 1
-rateSkill = 1
-rateLoot = 1
-rateMagic = 1
+rateSkill = 25
+rateLoot = 5
+rateMagic = 15
 rateSpawn = 0
 
 -- Monsters
@@ -103,7 +103,7 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = ""
-ownerEmail = ""
-url = "https://otland.net/"
-location = "Sweden"
+ownerName = "Erikas"
+ownerEmail = "e.kontenis@gmail.com"
+url = "https://sabrehaven.com"
+location = "France"
