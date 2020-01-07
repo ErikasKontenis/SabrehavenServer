@@ -55,5 +55,9 @@ function onLogin(player)
 	-- Events
 	player:registerEvent("PlayerDeath")
 	player:registerEvent("kills")
+	player:registerEvent("PlayerLogout")
+	player:registerEvent("FirstItems")
+	player:registerEvent("RegenerateStamina")
+	
 	return true
 end
