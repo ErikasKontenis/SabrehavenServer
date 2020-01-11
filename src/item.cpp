@@ -823,7 +823,7 @@ bool Item::hasProperty(ITEMPROPERTY prop) const
 uint32_t Item::getWeight() const
 {
 	uint32_t weight = getBaseWeight();
-	if (isStackable()) {
+	if (isStackable() && !isRune()) {
 		return weight * std::max<uint32_t>(1, getItemCount());
 	}
 	return weight;
@@ -840,8 +840,6 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 	}
 
 	if (it.isRune()) {
-		uint32_t charges = std::max(static_cast<uint32_t>(1), static_cast<uint32_t>(item == nullptr ? it.charges : item->getCharges()));
-
 		if (it.runeLevel > 0) {
 			s << " for level " << it.runeLevel;
 		}
@@ -851,7 +849,7 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 		}
 
 		s << " for magic level " << it.runeMagLevel;
-		s << ". It's an \"" << it.runeSpellName << "\"-spell (" << charges << "x). ";
+		s << ". It's an \"" << it.runeSpellName << "\"-spell (" << subType << "x). ";
 	} else if (it.isDoor() && item) {
 		if (item->hasAttribute(ITEM_ATTRIBUTE_DOORLEVEL)) {
 			s << " for level " << item->getIntAttr(ITEM_ATTRIBUTE_DOORLEVEL);
@@ -1022,7 +1020,7 @@ std::string Item::getNameDescription(const ItemType& it, const Item* item /*= nu
 
 	const std::string& name = (item ? item->getName() : it.name);
 	if (!name.empty()) {
-		if (it.stackable && subType > 1) {
+		if (it.stackable && !it.isRune() && subType > 1) {
 			if (it.showCount) {
 				s << subType << ' ';
 			}

@@ -70,7 +70,4 @@ function onStartup()
 			addEvent(setBloomingGriffinclaw, 10000)
 		end
 	end
-	
-	-- temporary
-	Game.setGameState(GAME_STATE_CLOSED)
 end
