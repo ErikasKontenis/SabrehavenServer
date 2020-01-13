@@ -2138,7 +2138,7 @@ ReturnValue Player::queryAdd(int32_t index, const Thing& thing, uint32_t count, 
 	if (ret == RETURNVALUE_NOERROR || ret == RETURNVALUE_NOTENOUGHROOM) {
 		//need an exchange with source?
 		const Item* inventoryItem = getInventoryItem(static_cast<slots_t>(index));
-		if (inventoryItem && (!inventoryItem->isStackable() || inventoryItem->isRune() || inventoryItem->getID() != item->getID())) {
+		if (inventoryItem && (!inventoryItem->isStackable() || inventoryItem->getID() != item->getID())) {
 			return RETURNVALUE_NEEDEXCHANGE;
 		}
 
@@ -2207,7 +2207,7 @@ ReturnValue Player::queryMaxCount(int32_t index, const Thing& thing, uint32_t co
 		}
 
 		if (destItem) {
-			if (!destItem->isRune() && destItem->isStackable() && item->equals(destItem) && destItem->getItemCount() < 100) {
+			if (destItem->isStackable() && item->equals(destItem) && destItem->getItemCount() < 100) {
 				maxQueryCount = 100 - destItem->getItemCount();
 			}
 			else {

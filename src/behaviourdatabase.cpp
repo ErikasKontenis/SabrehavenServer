@@ -837,7 +837,7 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 		int32_t itemId = evaluate(action->expression, player, message);
 		const ItemType& it = Item::items[itemId];
 
-		if (it.stackable && !it.isRune()) {
+		if (it.stackable) {
 			do {
 				int32_t count = std::min<int32_t>(100, amount);
 				amount -= count;

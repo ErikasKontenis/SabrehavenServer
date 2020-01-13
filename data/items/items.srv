@@ -14129,282 +14129,282 @@ Attributes  = {Weight=120}
 
 TypeID      = 3148
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3149
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3150
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3151
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3152
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3153
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3154
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3155
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3156
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3157
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3158
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3159
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3160
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3161
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3162
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3163
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3164
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3165
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3166
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3167
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3168
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3169
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3170
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3171
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3172
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3173
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3174
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3175
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3176
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3177
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3178
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3179
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120}
 
 TypeID      = 3180
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3181
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3182
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3183
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3184
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3185
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3186
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3187
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=2,LightColor=215}
 
 TypeID      = 3188
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3189
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3190
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3191
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3192
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3193
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3194
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3195
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3196
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3197
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3198
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3199
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3200
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3201
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3202
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3203
 Name        = "a spell rune"
-Flags       = {MultiUse,DistUse,Rune,Take,Cumulative}
+Flags       = {MultiUse,DistUse,Rune,Take}
 Attributes  = {Weight=120,Brightness=1,LightColor=215}
 
 TypeID      = 3204
