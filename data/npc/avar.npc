@@ -30,4 +30,6 @@ VANISH,!           -> "See you later."
 "carlin"    -> "I saved the women there once or twice."
 "news"      -> "There is a great evil lurking beneath this isle ... and beneath the Plains of Havoc and in the ancient necropolis and beneath the Ghostlands ... well everywhere basically."
 "rumors"    -> *
+"sabrehaven","talon" -> "I have looted plenty of them. However, it looks like this is not yours level business."
+"sabrehaven","talon", level>100 -> "I think you already know about the demons. However I know what you didn't knew about them!"
 }

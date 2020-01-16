@@ -24,6 +24,7 @@ VANISH,!           -> "Farewell."
 "do","you","have" -> *
 "gem"             -> "We trade small diamonds, sapphires, rubies, emeralds, and amethysts."
 "pearl"           -> "We trade white and black pearls."
+"sabrehaven","talon"           -> "This is an extremely rare thing! Sadly, Liberty Bay can't afford any of that."
 
 "white","pearl"    -> Type=3026, Amount=1, Price=320,  "Do you want to buy a white pearl for %P gold?", Topic=1
 "black","pearl"    -> Type=3027, Amount=1, Price=560,  "Do you want to buy a black pearl for %P gold?", Topic=1
