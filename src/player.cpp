@@ -2540,6 +2540,31 @@ uint32_t Player::getItemTypeCount(uint16_t itemId, int32_t subType /*= -1*/) con
 	return count;
 }
 
+// 7.8 mechanics to count runes by charges requires different logic to be implemented
+uint32_t Player::getRuneCount(uint16_t itemId) const
+{
+	uint32_t count = 0;
+	for (int32_t i = CONST_SLOT_FIRST; i <= CONST_SLOT_LAST; i++) {
+		Item* item = inventory[i];
+		if (!item) {
+			continue;
+		}
+
+		if (item->getID() == itemId) {
+			count += item->getCharges();
+		}
+
+		if (Container* container = item->getContainer()) {
+			for (ContainerIterator it = container->iterator(); it.hasNext(); it.advance()) {
+				if ((*it)->getID() == itemId) {
+					count += (*it)->getCharges();
+				}
+			}
+		}
+	}
+	return count;
+}
+
 bool Player::removeItemOfType(uint16_t itemId, uint32_t amount, int32_t subType, bool ignoreEquipped/* = false*/) const
 {
 	if (amount == 0) {
