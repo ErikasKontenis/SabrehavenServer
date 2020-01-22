@@ -38,6 +38,8 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_NUMBER, // return a number
 	BEHAVIOUR_TYPE_OPERATION, // <, =, >, >=, <=, <>
 	BEHAVIOUR_TYPE_MESSAGE_COUNT, // get quantity in player message
+	BEHAVIOUR_TYPE_MESSAGE_COUNT_NO_LIMIT, // get quantity in player message without any max value restriction
+	BEHAVIOUR_TYPE_MESSAGE_TRANSFERTOPLAYERNAME_STATE, // set player name parsed fro message to string object and return state if it is possible to transfer
 	BEHAVIOUR_TYPE_IDLE, // idle npc
 	BEHAVIOUR_TYPE_QUEUE, // queue talking creature
 	BEHAVIOUR_TYPE_TOPIC, // get/set topic
@@ -269,6 +271,7 @@ class BehaviourDatabase
 
 		int32_t checkOperation(Player* player, NpcBehaviourNode* node, const std::string& message);
 		int32_t searchDigit(const std::string& message);
+		int32_t searchDigitNoLimit(const std::string& message);
 		bool searchWord(const std::string& pattern, const std::string& message);
 
 		std::string parseResponse(Player* player, const std::string& message);

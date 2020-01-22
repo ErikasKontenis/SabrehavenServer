@@ -19,6 +19,7 @@
 
 #include "otpch.h"
 
+#include "iologindata.h"
 #include "behaviourdatabase.h"
 #include "npc.h"
 #include "player.h"
@@ -174,6 +175,9 @@ bool BehaviourDatabase::loadConditions(ScriptReader& script, NpcBehaviour* behav
 			} else if (script.getSpecial() == '%') {
 				condition->setCondition(BEHAVIOUR_TYPE_MESSAGE_COUNT, script.readNumber(), "");
 				searchTerm = true;
+			} else if (script.getSpecial() == '$') {
+				condition->setCondition(BEHAVIOUR_TYPE_MESSAGE_COUNT_NO_LIMIT, script.readNumber(), "");
+				searchTerm = true;
 			} else if (script.getSpecial() == ',') {
 				script.nextToken();
 				continue;
@@ -290,6 +294,9 @@ bool BehaviourDatabase::loadActions(ScriptReader& script, NpcBehaviour* behaviou
 				searchType = BEHAVIOUR_PARAMETER_ONE;
 			} else if (identifier == "deposit") {
 				action->type = BEHAVIOUR_TYPE_DEPOSIT;
+				searchType = BEHAVIOUR_PARAMETER_ONE;
+			} else if (identifier == "transfer") {
+				action->type = BEHAVIOUR_TYPE_TRANSFER;
 				searchType = BEHAVIOUR_PARAMETER_ONE;
 			} else if (identifier == "bless") {
 				action->type = BEHAVIOUR_TYPE_BLESS;
@@ -471,16 +478,24 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 	}
 
 	if (script.Token == SPECIAL) {
-		if (script.getSpecial() != '%') {
-			script.error("illegal character");
-			return nullptr;
+		if (script.getSpecial() == '%') {
+			NpcBehaviourNode* node = new NpcBehaviourNode();
+			node->type = BEHAVIOUR_TYPE_MESSAGE_COUNT;
+			node->number = script.readNumber();
+			script.nextToken();
+			return node;
 		}
 
-		NpcBehaviourNode* node = new NpcBehaviourNode();
-		node->type = BEHAVIOUR_TYPE_MESSAGE_COUNT;
-		node->number = script.readNumber();
-		script.nextToken();
-		return node;
+		if (script.getSpecial() == '$') {
+			NpcBehaviourNode* node = new NpcBehaviourNode();
+			node->type = BEHAVIOUR_TYPE_MESSAGE_COUNT_NO_LIMIT;
+			node->number = script.readNumber();
+			script.nextToken();
+			return node;
+		}
+
+		script.error("illegal character");
+		return nullptr;
 	}
 
 	NpcBehaviourNode* node = nullptr;
@@ -526,6 +541,9 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 	} else if (identifier == "balance") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_BALANCE;
+	} else if (identifier == "transfertoplayernamestate") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_MESSAGE_TRANSFERTOPLAYERNAME_STATE;
 	} else if (identifier == "spellknown") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_SPELLKNOWN;
@@ -704,6 +722,13 @@ bool BehaviourDatabase::checkCondition(const NpcBehaviourCondition* condition, P
 	case BEHAVIOUR_TYPE_NOP: break;
 	case BEHAVIOUR_TYPE_MESSAGE_COUNT: {
 		int32_t value = searchDigit(message);
+		if (value < condition->number) {
+			return false;
+		}
+		break;
+	}
+	case BEHAVIOUR_TYPE_MESSAGE_COUNT_NO_LIMIT: {
+		int32_t value = searchDigitNoLimit(message);
 		if (value < condition->number) {
 			return false;
 		}
@@ -1011,6 +1036,32 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 		player->setBankBalance(player->getBankBalance() + money);
 		break;
 	}
+	case BEHAVIOUR_TYPE_TRANSFER: {
+		int32_t money = evaluate(action->expression, player, message);
+		uint16_t state = 0;
+		Player* transferToPlayer = g_game.getPlayerByName(string);
+		if (!transferToPlayer) {
+			state = IOLoginData::canTransferMoneyToByName(string);
+		}
+		else {
+			state = transferToPlayer->getVocationId() == 0 ? 1 : 2;
+		}
+
+		if (state != 2) {
+			break;
+		}
+
+		player->setBankBalance(player->getBankBalance() - money);
+
+		if (!transferToPlayer) {
+			IOLoginData::increaseBankBalance(string, money);
+		}
+		else {
+			transferToPlayer->setBankBalance(transferToPlayer->getBankBalance() + money);
+		}
+
+		break;
+	}
 	case BEHAVIOUR_TYPE_BLESS: {
 		uint8_t number = static_cast<uint8_t>(evaluate(action->expression, player, message)) - 1;
 
@@ -1159,10 +1210,33 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		}
 		return value;
 	}
+	case BEHAVIOUR_TYPE_MESSAGE_COUNT_NO_LIMIT: {
+		int32_t value = searchDigitNoLimit(message);
+		if (value < node->number) {
+			return false;
+		}
+		return value;
+	}
 	case BEHAVIOUR_TYPE_OPERATION:
 		return checkOperation(player, node, message);
 	case BEHAVIOUR_TYPE_BALANCE:
 		return player->getBankBalance();
+	case BEHAVIOUR_TYPE_MESSAGE_TRANSFERTOPLAYERNAME_STATE: {
+		std::string lowerMessage = asLowerCaseString(message);
+		if (lowerMessage.find("to ") != std::string::npos) {
+			string = asCamelCaseString(message.substr(lowerMessage.find("to ") + 3, message.size()));
+		}
+		else {
+			string = asCamelCaseString(message);
+		}
+
+		Player* transferToPlayer = g_game.getPlayerByName(string);
+		if (!transferToPlayer) {
+			return IOLoginData::canTransferMoneyToByName(string);
+		}
+
+		return transferToPlayer->getVocationId() == 0 ? 1 : 2;
+	}
 	case BEHAVIOUR_TYPE_SPELLKNOWN: {
 		if (player->hasLearnedInstantSpell(string)) {
 			return true;
@@ -1218,6 +1292,17 @@ int32_t BehaviourDatabase::checkOperation(Player* player, NpcBehaviourNode* node
 
 int32_t BehaviourDatabase::searchDigit(const std::string& message)
 {
+	int32_t value = searchDigitNoLimit(message);
+
+	if (value > 500) {
+		value = 500;
+	}
+
+	return value;
+}
+
+int32_t BehaviourDatabase::searchDigitNoLimit(const std::string& message)
+{
 	int32_t start = -1;
 	int32_t end = -1;
 	int32_t value = 0;
@@ -1242,10 +1327,6 @@ int32_t BehaviourDatabase::searchDigit(const std::string& message)
 	}
 	catch (std::out_of_range) {
 		return 0;
-	}
-
-	if (value > 500) {
-		value = 500;
 	}
 
 	return value;
@@ -1299,7 +1380,8 @@ std::string BehaviourDatabase::parseResponse(Player* player, const std::string& 
 	replaceString(response, "%D", std::to_string(data));
 	replaceString(response, "%N", player->getName());
 	replaceString(response, "%P", std::to_string(price));
-	
+	replaceString(response, "%S", string);
+
 	int32_t worldTime = g_game.getLightHour();
 	int32_t hours = std::floor<int32_t>(worldTime / 60);
 	int32_t minutes = worldTime % 60;

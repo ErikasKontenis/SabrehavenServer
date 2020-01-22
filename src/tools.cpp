@@ -360,6 +360,27 @@ std::string asUpperCaseString(std::string source)
 	return source;
 }
 
+std::string asCamelCaseString(std::string source) {
+	bool active = true;
+
+	for (int i = 0; source[i] != '\0'; i++) {
+		if (std::isalpha(source[i])) {
+			if (active) {
+				source[i] = std::toupper(source[i]);
+				active = false;
+			}
+			else {
+				source[i] = std::tolower(source[i]);
+			}
+		}
+		else if (source[i] == ' ') {
+			active = true;
+		}
+	}
+
+	return source;
+}
+
 StringVec explodeString(const std::string& inString, const std::string& separator, int32_t limit/* = -1*/)
 {
 	StringVec returnVector;
