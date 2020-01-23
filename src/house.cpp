@@ -109,11 +109,6 @@ void House::updateDoorDescription() const
 		ss << "It belongs to house '" << houseName << "'. " << ownerName << " owns this house.";
 	} else {
 		ss << "It belongs to house '" << houseName << "'. Nobody owns this house.";
-
-		const int32_t housePrice = getRent();
-		if (housePrice != -1) {
-			ss << " It costs " << housePrice * 5 << " gold coins.";
-		}
 	}
 
 	for (const auto& it : doorSet) {
@@ -667,7 +662,9 @@ void Houses::payHouses(RentPeriod_t rentPeriod) const
 			continue;
 		}
 
-		if (g_game.removeMoney(player.getDepotLocker(house->getTownId(), true), house->getRent(), FLAG_NOLIMIT)) {
+		if (player.getBankBalance() >= rent) {
+			player.setBankBalance(player.getBankBalance() - rent);
+
 			time_t paidUntil = currentTime;
 			switch (rentPeriod) {
 				case RENTPERIOD_DAILY:
