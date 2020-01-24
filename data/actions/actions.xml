@@ -227,6 +227,7 @@
 	<action itemid="4873" script="misc/chests.lua" />
 	<action itemid="5730" script="misc/chests.lua" />
 	<action itemid="5742" script="misc/chests.lua" />
+	<action itemid="5775" script="misc/chests.lua" />
 	
 	<!-- Fluids -->
 	<action itemid="2524" script="misc/fluids.lua" />

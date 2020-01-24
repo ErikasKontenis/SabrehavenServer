@@ -10,13 +10,13 @@ experienceByKillingPlayers = false
 expFromPlayersLevelRange = 75
 
 -- Skull System
-banLength = 30 * 24 * 60 * 60
+banLength = 1 * 24 * 60 * 60
 whiteSkullTime = 15 * 60
-redSkullTime = 30 * 24 * 60 * 60
-killsDayRedSkull = 999
+redSkullTime = 7 * 24 * 60 * 60
+killsDayRedSkull = 3
 killsWeekRedSkull = 999
 killsMonthRedSkull = 999
-killsDayBanishment = 999
+killsDayBanishment = 6
 killsWeekBanishment = 999
 killsMonthBanishment = 999
 
@@ -42,7 +42,7 @@ moneyRate = 1
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
 -- death penalty formula. For the old formula, set it to 10. For
 -- no skill/experience loss, set it to 0.
-deathLosePercent = -1
+deathLosePercent = 10
 
 -- Houses
 houseRentPeriod = "monthly"
@@ -83,9 +83,9 @@ newbieLevelThreshold = 5
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 1
-rateSkill = 25
-rateLoot = 5
-rateMagic = 15
+rateSkill = 5
+rateLoot = 1
+rateMagic = 2
 rateSpawn = 0
 
 -- Monsters
