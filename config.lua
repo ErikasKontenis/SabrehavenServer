@@ -84,7 +84,7 @@ newbieLevelThreshold = 5
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 1
 rateSkill = 5
-rateLoot = 1
+rateLoot = 2
 rateMagic = 2
 rateSpawn = 0
 
