@@ -3,4 +3,5 @@
 	<globalevent type="startup" name="ServerStartup" script="startup.lua"/>
 	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
 	<globalevent name="Server Save" time="08:55:00" script="serversave.lua" />
+	<globalevent name="Rookgaard Book" interval="5000" script="rookgaard_book.lua"/>
 </globalevents>
