@@ -7,6 +7,7 @@ Home = [32311,32171,6]
 Radius = 1
 
 Behaviour = {
+ADDRESS,"hail","sabrehaven",!  -> "Long live the Sabrehaven!"
 ADDRESS,"hello","king",!       -> "I greet thee, my loyal subject."
 ADDRESS,"hail","king",!        -> *
 ADDRESS,"salutations","king",! -> *
