@@ -4,7 +4,7 @@ combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_TELEPORT)
 combat:setArea(createCombatArea(AREA_SQUAREWAVE5))
 
 function onGetFormulaValues(player, level, maglevel)
-	local base = 150
+	local base = 250
 	local variation = 50
 	
 	local formula = 3 * maglevel + (2 * level)

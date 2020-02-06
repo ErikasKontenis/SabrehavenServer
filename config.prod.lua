@@ -10,19 +10,19 @@ experienceByKillingPlayers = false
 expFromPlayersLevelRange = 75
 
 -- Skull System
-banLength = 1 * 24 * 60 * 60
+banLength = 30 * 24 * 60 * 60
 whiteSkullTime = 15 * 60
-redSkullTime = 7 * 24 * 60 * 60
+redSkullTime = 30 * 24 * 60 * 60
 killsDayRedSkull = 3
-killsWeekRedSkull = 999
-killsMonthRedSkull = 999
+killsWeekRedSkull = 5
+killsMonthRedSkull = 10
 killsDayBanishment = 6
-killsWeekBanishment = 999
-killsMonthBanishment = 999
+killsWeekBanishment = 10
+killsMonthBanishment = 20
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
-ip = "149.202.64.104"
+ip = "31.220.54.20"
 bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
@@ -59,7 +59,7 @@ mapAuthor = "CipSoft"
 -- MySQL
 mysqlHost = "127.0.0.1"
 mysqlUser = "forgottenserver"
-mysqlPass = "bMM0cQcFETKHc3CNY7ULrlBN"
+mysqlPass = "DZpJ+UL+t5OgdC0LhxPaz4ae"
 mysqlDatabase = "forgottenserver"
 mysqlPort = 3306
 mysqlSock = ""
