@@ -37,6 +37,7 @@ void RSA::decrypt(char* msg) const
 		c.Encode(reinterpret_cast<uint8_t*>(msg), 128);
 	}
 	catch (const CryptoPP::Exception& e) {
+		std::cout << e.what() << '\n';
 	}
 }
 
