@@ -324,7 +324,14 @@ bool Actions::useItem(Player* player, const Position& pos, uint8_t index, Item* 
 	player->stopWalk();
 
 	if (isHotkey) {
-		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), -1));
+		uint32_t count = 0;
+		if (item->isRune()) {
+			count = player->getRuneCount(item->getID());
+		} else {
+			count = player->getItemTypeCount(item->getID(), (!item->getFluidType() ? -1 : item->getSubType()));
+		}
+
+		showUseHotkeyMessage(player, item, count);
 	}
 
 	ReturnValue ret = internalUseItem(player, pos, index, item, isHotkey);
@@ -354,7 +361,15 @@ bool Actions::useItemEx(Player* player, const Position& fromPos, const Position&
 	}
 
 	if (isHotkey) {
-		showUseHotkeyMessage(player, item, player->getItemTypeCount(item->getID(), -1));
+		uint32_t count = 0;
+		if (item->isRune()) {
+			count = player->getRuneCount(item->getID());
+		}
+		else {
+			count = player->getItemTypeCount(item->getID(), (!item->getFluidType() ? -1 : item->getSubType()));
+		}
+
+		showUseHotkeyMessage(player, item, count);
 	}
 
 	if (!action->executeUse(player, item, fromPos, action->getTarget(player, creature, toPos, toStackPos), toPos, isHotkey)) {

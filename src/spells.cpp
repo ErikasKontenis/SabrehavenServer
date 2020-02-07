@@ -1820,7 +1820,7 @@ bool RuneSpell::executeUse(Player* player, Item* item, const Position&, Thing* t
 		if (target == nullptr) {
 			Tile* toTile = g_game.map.getTile(toPosition);
 			if (toTile) {
-				const Creature* visibleCreature = toTile->getBottomVisibleCreature(player);
+				const Creature* visibleCreature = toTile->getTopCreature();
 				if (visibleCreature) {
 					var.number = visibleCreature->getID();
 				}
@@ -1841,7 +1841,7 @@ bool RuneSpell::executeUse(Player* player, Item* item, const Position&, Thing* t
 
 	postCastSpell(player);
 	if (hasCharges && item && g_config.getBoolean(ConfigManager::REMOVE_RUNE_CHARGES)) {
-		int32_t newCount = std::max<int32_t>(0, item->getItemCount() - 1);
+		int32_t newCount = std::max<int32_t>(0, item->getCharges() - 1);
 		g_game.transformItem(item, item->getID(), newCount);
 	}
 	return true;

@@ -82,3 +82,57 @@ Topic=99                            -> "Well, can I help you with something else
 #Topic=99,"yes",Count(3035)>=Price  -> "Here you are.", Create(3043), Amount=Price, Delete(3035)
 #Topic=99,"yes"                     -> "Sorry, you don't have so many platinum coins."
 #Topic=99                           -> "Well, can I help you with something else?"
+
+# Bank System
+"balance" -> Amount=Balance, "Your account balance is %A gold."
+"balance",balance>99999 -> Amount=Balance, "You certainly have made a pretty penny. Your account balance is %A gold."
+"balance",balance>999999 -> Amount=Balance, "You certainly have made a pretty penny. Your account balance is %A gold."
+"balance",balance>9999999 -> Amount=Balance, "You have made ten millions and it still grows! Your account balance is %A gold."
+"balance",balance>99999999 -> Amount=Balance, "I think you must be one of the richest inhabitants in the world! Your account balance is %A gold."
+
+"deposit" -> "You don't have any gold with you."
+"deposit",CountMoney>0 -> "Please tell me how much gold it is you would like to deposit.", Topic=81
+"deposit","all",CountMoney>0 -> Price=CountMoney, "Would you really like to deposit %P gold?", Topic=82
+"deposit",$1,0<$1,CountMoney>=$1 -> Price=$1, "Would you really like to deposit %P gold?", Topic=82
+"deposit","0" -> "You are joking, aren't you??"
+"deposit",$1,0<$1,CountMoney<$1 -> "You do not have enough gold."
+Topic=81,$1,0<$1,CountMoney>=$1 -> Price=$1, "Would you really like to deposit %P gold?", Topic=82
+Topic=81,"0" -> "You are joking, aren't you?"
+Topic=81,$1,0<$1,CountMoney<$1 -> "You do not have enough gold."
+Topic=81 -> "Please tell me how much gold it is you would like to deposit.", Topic=81
+Topic=82,"yes",CountMoney>=Price -> "Alright, we have added the amount of %P gold to your balance. You can withdraw your money anytime you want to.", DeleteMoney, Deposit(Price)
+Topic=82,"yes" -> "I am inconsolable, but it seems you have lost your gold. I hope you get it back."
+Topic=82 -> "As you wish. Is there something else I can do for you?"
+
+"withdraw" -> "Please tell me how much gold you would like to withdraw.", Topic=83
+"withdraw",$1,0<$1,Balance>=$1 -> Price=$1, "Are you sure you wish to withdraw %P gold from your bank account?", Topic=84
+"withdraw","0" -> "Sure, you want nothing you get nothing!"
+"withdraw",$1,0<$1,Balance<$1 -> "There is not enough gold on your account."
+Topic=83,$1,0<$1,Balance>=$1 -> Price=$1, "Are you sure you wish to withdraw %P gold from your bank account?", Topic=84
+Topic=83,"0" -> "Sure, you want nothing you get nothing!"
+Topic=83,$1,0<$1,Balance<$1 -> "There is not enough gold on your account."
+Topic=83 -> "Please tell me how much gold you would like to withdraw.", Topic=83
+Topic=84,"yes",Balance>=Price -> "Here you are, %P gold. Please let me know if there is something else I can do for you.", CreateMoney, Withdraw(Price)
+Topic=84,"yes" -> "I am inconsolable, but it seems you don't have that many gold in your bank account."
+Topic=84 -> "The customer is king! Come back anytime you want to if you wish to withdraw your money."
+
+"transfer" -> "Please tell me the amount of gold you would like to transfer.", Topic=85
+"transfer","0","to" -> "Please think about it. Okay?"
+"transfer",$1,0<$1,"to",Balance<$1 -> "There is not enough gold on your account."
+"transfer",$1,0<$1,"to",Balance>=$1,TransferToPlayerNameState=2 -> Price=$1, "Would you really like to transfer %P gold to %S?", Topic=88
+"transfer",$1,0<$1,"to",Balance>=$1,TransferToPlayerNameState=1 -> "I'm afraid this character only holds a junior account at our bank. Do not worry, though. Once he has chosen his vocation or is no longer on Rookgaard, his account will be upgraded."
+"transfer",$1,0<$1,"to",Balance>=$1,TransferToPlayerNameState=0 -> "This player does not exist."
+Topic=85,$1,0<$1,Balance>=$1 -> Price=$1, "Who would you like transfer %P gold to?", Topic=86
+Topic=85,"0" -> "Please think about it. Okay?"
+Topic=85,$1,0<$1,Balance<$1 -> "There is not enough gold on your account."
+Topic=86,Balance>=Price,TransferToPlayerNameState=2 -> "Would you really like to transfer %P gold to %S?", Topic=87
+Topic=86,Balance>=Price,TransferToPlayerNameState=1 -> "I'm afraid this character only holds a junior account at our bank. Do not worry, though. Once he has chosen his vocation or is no longer on Rookgaard, his account will be upgraded."
+Topic=86,Balance>=Price,TransferToPlayerNameState=0 -> "This player does not exist."
+Topic=87,"yes",Balance>=Price -> "You have transferred %P gold to %S.", Transfer(Price)
+Topic=87,"yes" -> "I am inconsolable, but it seems you don't have that many gold in your bank account."
+Topic=87 -> "Ok. What is next?"
+Topic=88,"yes",Balance>=Price -> "Very well. You have transferred %P gold to %S.", Transfer(Price)
+Topic=88,"yes" -> "I am inconsolable, but it seems you don't have that many gold in your bank account."
+Topic=88 -> "Alright, is there something else I can do for you?"
+
+

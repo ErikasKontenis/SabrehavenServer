@@ -852,17 +852,20 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 
 		s << " for magic level " << it.runeMagLevel;
 		s << ". It's an \"" << it.runeSpellName << "\"-spell (" << charges << "x). ";
-	} else if (it.isDoor() && item) {
+	}
+	else if (it.isDoor() && item) {
 		if (item->hasAttribute(ITEM_ATTRIBUTE_DOORLEVEL)) {
 			s << " for level " << item->getIntAttr(ITEM_ATTRIBUTE_DOORLEVEL);
 		}
 		s << ".";
-	} else if (it.weaponType != WEAPON_NONE) {
+	}
+	else if (it.weaponType != WEAPON_NONE) {
 		if (it.weaponType == WEAPON_DISTANCE && it.ammoType != AMMO_NONE) {
 			if (it.attack != 0) {
 				s << ", Atk" << std::showpos << it.attack << std::noshowpos;
 			}
-		} else if (it.weaponType != WEAPON_AMMO && it.weaponType != WEAPON_WAND && (it.attack != 0 || it.defense != 0)) {
+		}
+		else if (it.weaponType != WEAPON_AMMO && it.weaponType != WEAPON_WAND && (it.attack != 0 || it.defense != 0)) {
 			s << " (";
 			if (it.attack != 0) {
 				s << "Atk:" << static_cast<int>(it.attack);
@@ -878,39 +881,49 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 			s << ")";
 		}
 		s << ".";
-	} else if (it.armor != 0) {
+	}
+	else if (it.armor != 0) {
 		if (it.charges > 0) {
 			if (subType > 1) {
 				s << " that has " << static_cast<int32_t>(subType) << " charges left";
-			} else {
+			}
+			else {
 				s << " that has " << it.charges << " charge left";
 			}
 		}
 
 		s << " (Arm:" << it.armor << ").";
-	} else if (it.isFluidContainer()) {
+	}
+	else if (it.isFluidContainer()) {
 		if (item && item->getFluidType() != 0) {
 			s << " of " << items[item->getFluidType()].name << ".";
-		} else {
+		}
+		else {
 			s << ". It is empty.";
 		}
-	} else if (it.isSplash()) {
+	}
+	else if (it.isSplash()) {
 		s << " of ";
 		if (item && item->getFluidType() != 0) {
 			s << items[item->getFluidType()].name;
-		} else {
+		}
+		else {
 			s << items[1].name;
 		}
 		s << ".";
-	} else if (it.isContainer() && !it.isChest()) {
+	}
+	else if (it.isContainer() && !it.isChest()) {
 		s << " (Vol:" << static_cast<int>(it.maxItems) << ").";
-	} else if (it.isKey()) {
+	}
+	else if (it.isKey()) {
 		if (item) {
 			s << " (Key:" << static_cast<int>(item->getIntAttr(ITEM_ATTRIBUTE_KEYNUMBER)) << ").";
-		} else {
+		}
+		else {
 			s << " (Key:0).";
 		}
-	} else if (it.allowDistRead) {
+	}
+	else if (it.allowDistRead) {
 		s << ".";
 		s << std::endl;
 
@@ -924,39 +937,49 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 						s << " on " << formatDateShort(date);
 					}
 					s << ": ";
-				} else {
+				}
+				else {
 					s << "You read: ";
 				}
 				s << item->getText();
-			} else {
+			}
+			else {
 				s << "You are too far away to read it.";
 			}
-		} else {
+		}
+		else {
 			s << "Nothing is written on it.";
 		}
-	} else if (it.charges > 0) {
+	}
+	else if (it.charges > 0) {
 		uint32_t charges = (item == nullptr ? it.charges : item->getCharges());
 		if (charges > 1) {
 			s << " that has " << static_cast<int>(charges) << " charges left.";
-		} else {
+		}
+		else {
 			s << " that has 1 charge left.";
 		}
-	} else if (it.showDuration) {
+	}
+	else if (it.showDuration) {
 		if (item && item->hasAttribute(ITEM_ATTRIBUTE_DURATION)) {
 			int32_t duration = item->getDuration() / 1000;
 			s << " that has energy for ";
 
 			if (duration >= 120) {
 				s << duration / 60 << " minutes left.";
-			} else if (duration > 60) {
+			}
+			else if (duration > 60) {
 				s << "1 minute left.";
-			} else {
+			}
+			else {
 				s << "less than a minute left.";
 			}
-		} else {
+		}
+		else {
 			s << " that is brand-new.";
 		}
-	} else {
+	}
+	else {
 		s << ".";
 	}
 
@@ -969,7 +992,8 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 
 		if (it.wieldInfo & WIELDINFO_VOCREQ) {
 			s << it.vocationString;
-		} else {
+		}
+		else {
 			s << "players";
 		}
 
@@ -980,7 +1004,8 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 		if (it.wieldInfo & WIELDINFO_MAGLV) {
 			if (it.wieldInfo & WIELDINFO_LEVEL) {
 				s << " and";
-			} else {
+			}
+			else {
 				s << " of";
 			}
 
@@ -999,7 +1024,8 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 
 	if (item && item->getSpecialDescription() != "") {
 		s << std::endl << item->getSpecialDescription().c_str();
-	} else if (it.description.length() && lookDistance <= 1) {
+	}
+	else if (it.description.length() && lookDistance <= 1) {
 		s << std::endl << it.description << ".";
 	}
 
@@ -1028,7 +1054,8 @@ std::string Item::getNameDescription(const ItemType& it, const Item* item /*= nu
 			}
 
 			s << (item ? item->getPluralName() : it.getPluralName());
-		} else {
+		}
+		else {
 			if (addArticle) {
 				const std::string& article = (item ? item->getArticle() : it.article);
 				if (!article.empty()) {
@@ -1038,7 +1065,8 @@ std::string Item::getNameDescription(const ItemType& it, const Item* item /*= nu
 
 			s << name;
 		}
-	} else {
+	}
+	else {
 		s << "an item of type " << it.id;
 	}
 	return s.str();

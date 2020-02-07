@@ -115,7 +115,7 @@ Topic=3                                   -> "Ok. Then not."
 
 "sniper","gloves",Count(5875)<=0 -> "We are always looking for sniper gloves. They are supposed to raise accuracy. If you find a pair, bring them here. Maybe I can offer you a nice trade."
 "sniper","gloves",QuestValue(17538)=0 -> Type=5875, Amount=1, "You found sniper gloves?! Incredible! Listen, if you give them to me, I will grant you the right to wear the sniper gloves accessory. How about it?", Topic=4
-Topic=4,"yes",Count(Type)>=Amount -> "Great! I hereby grant you the right to wear the sniper gloves as accessory. Congratulations!", Delete(Type), SetQuestValue(17538,1), AddOutfitAddon(137,1), AddOutfitAddon(129,1), EffectOpp(13)
+Topic=4,"yes",Count(Type)>=Amount -> "Great! I hereby grant you the right to wear the sniper gloves as accessory. Congratulations!", Delete(Type), SetQuestValue(17538,1), AddOutfitAddon(137,2), AddOutfitAddon(129,2), EffectOpp(13)
 Topic=4,"yes"					           -> "You don't have it."
 Topic=4                                   -> "Maybe another time."
 
@@ -167,7 +167,7 @@ Topic=10 -> "Maybe another time."
 "steel",QuestValue(17539)=4 -> "Ah, have you brought one piece of royal steel, draconian steel and hell steel each?", Topic=11
 "mission",QuestValue(17539)=4 -> *
 "task",QuestValue(17539)=4 -> *
-Topic=11,"yes",Count(5888)>=1,Count(5889)>=1,Count(5887)>=1 -> "Wow, I'm impressed, %N. Your really are a valuable member of our paladin guild. I shall grant you your reward now. Wear it proudly!", DeleteAmount(5888,1), DeleteAmount(5889,1), DeleteAmount(5887,1), SetQuestValue(17539,5), AddOutfitAddon(137,2), AddOutfitAddon(129,2), EffectOpp(13)
+Topic=11,"yes",Count(5888)>=1,Count(5889)>=1,Count(5887)>=1 -> "Wow, I'm impressed, %N. Your really are a valuable member of our paladin guild. I shall grant you your reward now. Wear it proudly!", DeleteAmount(5888,1), DeleteAmount(5889,1), DeleteAmount(5887,1), SetQuestValue(17539,5), AddOutfitAddon(137,1), AddOutfitAddon(129,1), EffectOpp(13)
 Topic=11,"yes" -> "You don't have that many."
 Topic=11 -> "Maybe another time."
 

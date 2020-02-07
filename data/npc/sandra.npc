@@ -78,7 +78,7 @@ Topic=6,"yes" -> "Great! I've signed you up for our bonus system. From now on, y
 Topic=6,"no" -> "Alright. I removed your name from our list. If you want to join again and get the chance to win a potion belt addon, just ask me for the 'bonus'.", SetQuestValue(17545,1)
 Topic=6 -> "Maybe another time."
 
-"deposit",QuestValue(17545)=2 -> "Would you like to get a lottery ticket instead of the deposit for your vials?", Topic=7
+"deposit",QuestValue(17545)=2 -> "Would you like to get a lottery ticket instead of the deposit for your vials?", Data=0, Topic=7
 "vial",QuestValue(17545)=2 -> *
 "flask",QuestValue(17545)=2 -> *
 Topic=7,"yes",Count(2874)>=100 -> "Ok! Here take this lottery ticket.", DeleteAmount(2874, 100), Type=5957, Amount=1, Create(Type)

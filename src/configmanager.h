@@ -20,7 +20,11 @@
 #ifndef FS_CONFIGMANAGER_H_6BDD23BD0B8344F4B7C40E8BE6AF6F39
 #define FS_CONFIGMANAGER_H_6BDD23BD0B8344F4B7C40E8BE6AF6F39
 
+#if __has_include("luajit/lua.hpp")
 #include <luajit/lua.hpp>
+#else
+#include <lua.hpp>
+#endif
 
 class ConfigManager
 {

@@ -28,10 +28,10 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 1000
-motd = "Welcome to Nostalrius 4.5!"
+motd = "Welcome to Sabrehaven!"
 onePlayerOnlinePerAccount = true
 allowClones = false
-serverName = "RealOTS"
+serverName = "Sabrehaven"
 statusTimeout = 5000
 replaceKickOnLogin = true
 maxPacketsPerSecond = -1
@@ -42,7 +42,7 @@ moneyRate = 1
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
 -- death penalty formula. For the old formula, set it to 10. For
 -- no skill/experience loss, set it to 0.
-deathLosePercent = -1
+deathLosePercent = 10
 
 -- Houses
 houseRentPeriod = "monthly"
@@ -83,9 +83,9 @@ newbieLevelThreshold = 5
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 1
-rateSkill = 1
-rateLoot = 1
-rateMagic = 1
+rateSkill = 5
+rateLoot = 2
+rateMagic = 2
 rateSpawn = 0
 
 -- Monsters

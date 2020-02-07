@@ -446,6 +446,8 @@
 	<!-- Liberty Bay -->
 	<movevent event="StepIn" movementid="33217" script="liberty_bay/back_cult_piano.lua" />
 	<movevent event="AddItem" movementid="33217" tileitem="1" script="liberty_bay/back_cult_piano.lua" />
+	<movevent event="StepIn" movementid="17583" script="liberty_bay/citizenship.lua" />
+	<movevent event="AddItem" movementid="17583" tileitem="1" script="liberty_bay/citizenship.lua" />
 	
 	<!-- Floorchange -->
 	<movevent event="StepIn" itemid="293" script="misc/floorchange.lua" />

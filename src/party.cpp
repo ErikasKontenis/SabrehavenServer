@@ -270,7 +270,7 @@ bool Party::invitePlayer(Player& player)
 	ss << player.getName() << " has been invited.";
 
 	if (memberList.empty() && inviteList.empty()) {
-		ss << " Open the party channel to communicate with your members.";
+		ss << " Open the party channel to communicate with your members. Type !share to enable/disable party experience share.";
 		g_game.updatePlayerShield(leader);
 		leader->sendCreatureSkull(leader);
 	}

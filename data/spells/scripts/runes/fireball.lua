@@ -5,8 +5,8 @@ combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
 combat:setArea(createCombatArea(AREA_CIRCLE2X2))
 
 function onGetFormulaValues(player, level, maglevel)
-	local base = 20
-	local variation = 5
+	local base = 30
+	local variation = 10
 	
 	local formula = 3 * maglevel + (2 * level)
 	
