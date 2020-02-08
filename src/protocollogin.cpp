@@ -118,7 +118,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 
 	if (version <= 760) {
 		std::ostringstream ss;
-		ss << "Only clients with protocol " << CLIENT_VERSION_STR << " allowed!";
+		ss << "Only clients with protocol " << getClientVersionString(g_game.getClientVersion()) << " allowed!";
 		disconnectClient(ss.str(), version);
 		return;
 	}
@@ -136,9 +136,9 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	enableXTEAEncryption();
 	setXTEAKey(key);
 
-	if (version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX) {
+	if (!isProtocolAllowed(version)) {
 		std::ostringstream ss;
-		ss << "Only clients with protocol " << CLIENT_VERSION_STR << " allowed!";
+		ss << "Only clients with protocol " << getClientVersionString(g_game.getClientVersion()) << " allowed!";
 		disconnectClient(ss.str(), version);
 		return;
 	}
@@ -184,4 +184,20 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 
 	auto thisPtr = std::static_pointer_cast<ProtocolLogin>(shared_from_this());
 	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, accountNumber, password, version)));
+}
+
+
+bool ProtocolLogin::isProtocolAllowed(uint16_t version)
+{
+	ClientVersion_t allowedClientVersion = g_game.getClientVersion();
+
+	if (allowedClientVersion == version)
+	{
+		return true;
+	}
+	else if (version == 781 && allowedClientVersion == CLIENT_VERSION_780) {
+		return true;
+	}
+
+	return false;
 }

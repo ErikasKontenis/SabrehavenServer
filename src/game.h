@@ -127,6 +127,11 @@ class Game
 			return worldType;
 		}
 
+		void setClientVersion(ClientVersion_t version);
+		ClientVersion_t getClientVersion() const {
+			return clientVersion;
+		}
+
 		Cylinder* internalGetCylinder(Player* player, const Position& pos) const;
 		Thing* internalGetThing(Player* player, const Position& pos, int32_t index,
 		                        uint32_t spriteId, stackPosType_t type) const;
@@ -533,6 +538,7 @@ class Game
 
 		GameState_t gameState = GAME_STATE_NORMAL;
 		WorldType_t worldType = WORLD_TYPE_PVP;
+		ClientVersion_t clientVersion;
 
 		LightState_t lightState = LIGHT_STATE_DAY;
 		uint8_t lightLevel = LIGHT_LEVEL_DAY;

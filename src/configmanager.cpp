@@ -123,6 +123,7 @@ bool ConfigManager::load()
 	integer[NEWBIE_TOWN] = getGlobalNumber(L, "newbieTownId", 1);
 	integer[NEWBIE_LEVEL_THRESHOLD] = getGlobalNumber(L, "newbieLevelThreshold", 5);
 	integer[MONEY_RATE] = getGlobalNumber(L, "moneyRate", 1);
+	integer[CLIENT_VERSION] = getGlobalNumber(L, "clientVersion");
 
 	loaded = true;
 	lua_close(L);

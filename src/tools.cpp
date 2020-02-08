@@ -1230,3 +1230,33 @@ void getFilesInDirectory(const boost::filesystem::path& root, const std::string&
 		}
 	}
 }
+
+std::string getClientVersionString(uint32_t version)
+{
+	return getClientVersionString(static_cast<ClientVersion_t>(version));
+}
+
+std::string getClientVersionString(ClientVersion_t version)
+{
+	std::string result;
+	switch (version)
+	{
+	case CLIENT_VERSION_780:
+		result = "7.80";
+		break;
+	case CLIENT_VERSION_781:
+		result = "7.81";
+		break;
+	case CLIENT_VERSION_790:
+		result = "7.90";
+		break;
+	case CLIENT_VERSION_792:
+		result = "7.92";
+		break;
+	default:
+		result = "Unknown";
+		break;
+	}
+
+	return result;
+}

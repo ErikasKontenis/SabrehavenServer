@@ -76,6 +76,11 @@ void Game::setWorldType(WorldType_t type)
 	worldType = type;
 }
 
+void Game::setClientVersion(ClientVersion_t version)
+{
+	clientVersion = version;
+}
+
 void Game::setGameState(GameState_t newState)
 {
 	if (gameState == GAME_STATE_SHUTDOWN) {

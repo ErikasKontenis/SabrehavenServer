@@ -351,6 +351,13 @@ enum ReloadTypes_t : uint8_t {
 	RELOAD_TYPE_WEAPONS,
 };
 
+enum ClientVersion_t : uint16_t {
+	CLIENT_VERSION_780 = 780,
+	CLIENT_VERSION_781 = 781,
+	CLIENT_VERSION_790 = 790,
+	CLIENT_VERSION_792 = 792,
+};
+
 static constexpr int32_t CHANNEL_GUILD = 0x00;
 static constexpr int32_t CHANNEL_PARTY = 0x01;
 static constexpr int32_t CHANNEL_RULE_REP = 0x02;

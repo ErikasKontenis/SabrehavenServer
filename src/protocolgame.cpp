@@ -1775,6 +1775,7 @@ void ProtocolGame::sendOutfitWindow()
 	Outfit_t currentOutfit = player->getDefaultOutfit();
 	AddOutfit(msg, currentOutfit);
 
+	const ClientVersion_t clientVersion = g_game.getClientVersion();
 	std::vector<ProtocolOutfit> protocolOutfits;
 	if (player->isAccessPlayer()) {
 		static const std::string gamemasterOutfitName = "Gamemaster";
@@ -1790,14 +1791,19 @@ void ProtocolGame::sendOutfitWindow()
 		}
 
 		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
-		if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits
-			break;
+		if (CLIENT_VERSION_780 <= clientVersion && clientVersion <= CLIENT_VERSION_792) {
+			if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits in 780-792
+				break;
+			}
 		}
 	}
 
 	msg.addByte(protocolOutfits.size());
 	for (const ProtocolOutfit& outfit : protocolOutfits) {
 		msg.add<uint16_t>(outfit.lookType);
+		if (clientVersion > CLIENT_VERSION_781) {
+			msg.addString(outfit.name);
+		}
 		msg.addByte(outfit.addons);
 	}
 

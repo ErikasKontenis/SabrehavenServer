@@ -51,7 +51,9 @@ void Npcs::loadNpcs()
 			return;
 		}
 
-		g_game.placeCreature(npc, npc->getMasterPos(), false, true);
+		if (npc->getClientVersion() <= g_game.getClientVersion()) {
+			g_game.placeCreature(npc, npc->getMasterPos(), false, true);
+		}
 	}
 }
 
@@ -152,6 +154,8 @@ bool Npc::load()
 			script.readCoordinate(masterPos.x, masterPos.y, masterPos.z);
 		} else if (ident == "radius") {
 			masterRadius = script.readNumber();
+		} else if (ident == "clientversion") {
+			clientVersion = script.readNumber();
 		} else if (ident == "behaviour") {
 			if (behaviourDatabase) {
 				script.error("behaviour database already defined");

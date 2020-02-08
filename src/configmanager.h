@@ -111,6 +111,7 @@ class ConfigManager
 			NEWBIE_TOWN,
 			NEWBIE_LEVEL_THRESHOLD,
 			MONEY_RATE,
+			CLIENT_VERSION,
 
 			LAST_INTEGER_CONFIG /* this must be the last one */
 		};
