@@ -54,7 +54,7 @@ timeBetweenExActions = 1000
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
-mapName = "map"
+mapName = "mymap"
 mapAuthor = "CipSoft"
 
 -- MySQL

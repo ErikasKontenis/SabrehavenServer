@@ -277,6 +277,13 @@ void Creature::addEventWalk(bool firstStep)
 		g_game.checkCreatureWalk(getID());
 	}
 
+	if (const Monster* monster = getMonster()) {
+		Creature* creature = monster->getFollowCreature();
+		if (!creature) {
+			ticks = ticks * 1.25;
+		}
+	}
+
 	eventWalk = g_scheduler.addEvent(createSchedulerTask(ticks, std::bind(&Game::checkCreatureWalk, &g_game, getID())));
 }
 
