@@ -429,6 +429,8 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xE6: parseBugReport(msg); break;
 		case 0xE7: /* violation window */ break;
 		case 0xE8: parseDebugAssert(msg); break;
+		case 0xF0: addGameTaskTimed(DISPATCHER_TASK_EXPIRATION, &Game::playerShowQuestLog, player->getID()); break;
+		case 0xF1: parseQuestLine(msg); break;
 		default:
 		    std::cout << "Player: " << player->getName() << " sent an unknown packet header: 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << "!" << std::endl;
 			break;
@@ -963,6 +965,12 @@ void ProtocolGame::parsePassPartyLeadership(NetworkMessage& msg)
 	addGameTask(&Game::playerPassPartyLeadership, player->getID(), targetId);
 }
 
+void ProtocolGame::parseQuestLine(NetworkMessage& msg)
+{
+	uint16_t questId = msg.get<uint16_t>();
+	addGameTask(&Game::playerShowQuestLine, player->getID(), questId);
+}
+
 void ProtocolGame::parseSeekInContainer(NetworkMessage& msg)
 {
 	uint8_t containerId = msg.getByte();
@@ -1205,7 +1213,39 @@ void ProtocolGame::sendContainer(uint8_t cid, const Container* container, bool h
 	writeToOutputBuffer(msg);
 }
 
+void ProtocolGame::sendQuestLog()
+{
+	NetworkMessage msg;
+	msg.addByte(0xF0);
+	msg.add<uint16_t>(g_game.quests.getQuestsCount(player));
 
+	for (const Quest& quest : g_game.quests.getQuests()) {
+		if (quest.isStarted(player)) {
+			msg.add<uint16_t>(quest.getID());
+			msg.addString(quest.getName());
+			msg.addByte(quest.isCompleted(player));
+		}
+	}
+
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendQuestLine(const Quest* quest)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF1);
+	msg.add<uint16_t>(quest->getID());
+	msg.addByte(quest->getMissionsCount(player));
+
+	for (const Mission& mission : quest->getMissions()) {
+		if (mission.isStarted(player)) {
+			msg.addString(mission.getName(player));
+			msg.addString(mission.getDescription(player));
+		}
+	}
+
+	writeToOutputBuffer(msg);
+}
 
 void ProtocolGame::sendTradeItemRequest(const std::string& traderName, const Item* item, bool ack)
 {

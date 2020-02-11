@@ -495,7 +495,7 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 	query << "SELECT `key`, `value` FROM `player_storage` WHERE `player_id` = " << player->getGUID();
 	if ((result = db->storeQuery(query.str()))) {
 		do {
-			player->addStorageValue(result->getNumber<uint32_t>("key"), result->getNumber<int32_t>("value"));
+			player->addStorageValue(result->getNumber<uint32_t>("key"), result->getNumber<int32_t>("value"), true);
 		} while (result->next());
 	}
 

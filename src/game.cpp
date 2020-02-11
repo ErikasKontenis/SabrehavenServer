@@ -104,6 +104,8 @@ void Game::setGameState(GameState_t newState)
 			raids.loadFromXml();
 			raids.startup();
 
+			quests.loadFromXml();
+
 			loadMotdNum();
 			loadPlayersRecord();
 
@@ -2914,6 +2916,31 @@ void Game::playerChangeOutfit(uint32_t playerId, Outfit_t outfit)
 	}
 }
 
+void Game::playerShowQuestLog(uint32_t playerId)
+{
+	Player* player = getPlayerByID(playerId);
+	if (!player) {
+		return;
+	}
+
+	player->sendQuestLog();
+}
+
+void Game::playerShowQuestLine(uint32_t playerId, uint16_t questId)
+{
+	Player* player = getPlayerByID(playerId);
+	if (!player) {
+		return;
+	}
+
+	Quest* quest = quests.getQuestByID(questId);
+	if (!quest) {
+		return;
+	}
+
+	player->sendQuestLine(quest);
+}
+
 void Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type,
                      const std::string& receiver, const std::string& text)
 {
@@ -4599,6 +4626,8 @@ bool Game::reload(ReloadTypes_t reloadType)
 		Npcs::reload();
 		return true;
 	}
+
+	case RELOAD_TYPE_QUESTS: return quests.reload();
 	case RELOAD_TYPE_RAIDS: return raids.reload() && raids.startup();
 
 	case RELOAD_TYPE_SPELLS: {
@@ -4636,6 +4665,7 @@ bool Game::reload(ReloadTypes_t reloadType)
 		raids.reload() && raids.startup();
 		g_talkActions->reload();
 		Item::items.reload();
+		quests.reload();
 		g_globalEvents->reload();
 		g_events->load();
 		g_chat->load();

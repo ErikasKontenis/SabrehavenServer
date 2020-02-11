@@ -217,6 +217,7 @@
     <ClCompile Include="..\src\waitlist.cpp" />
     <ClCompile Include="..\src\wildcardtree.cpp" />
     <ClCompile Include="..\src\xtea.cpp" />
+    <ClCompile Include="..\src\quests.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\src\account.h" />
@@ -295,6 +296,7 @@
     <ClInclude Include="..\src\waitlist.h" />
     <ClInclude Include="..\src\wildcardtree.h" />
     <ClInclude Include="..\src\xtea.h" />
+    <ClInclude Include="..\src\quests.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
