@@ -1116,52 +1116,13 @@
 		<mission name="The Plague Seal" storageid="50019" startvalue="1" endvalue="1" description="You broke the second seal." />
 		<mission name="All Seals" storageid="50021" startvalue="1" endvalue="1" description="You broke all the seals." />
 	</quest>
-	<quest name="The White Raven Monastery" startstorageid="50200" startstoragevalue="1">
-		<mission name="Access to the Isle of Kings" storageid="50201" endvalue="1">
-			<missionstate id="1" description="You are a friend of Dalbrect. Since you returned his family brooch he will sail you to the Isle of Kings unless you do something stupid." />
+	<quest name="The White Raven Monastery" startstorageid="62" startstoragevalue="2">
+		<mission name="Access to the Isle of Kings" storageid="62" endvalue="2">
+			<missionstate id="2" description="You are a friend of Dalbrect. Since you returned his family brooch he will sail you to the Isle of Kings unless you do something stupid." />
 		</mission>
-		<mission name="The Investigation" storageid="50202" startvalue="1" endvalue="2">
+		<mission name="The Investigation" storageid="17584" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Investigate the catacombs. Abbot Costello should be interested in information about brother Fugio." />
 			<missionstate id="2" description="You returned Fugio's Diary. Costello was very thankful about your help and gave you a blessed ankh as reward." />
-		</mission>
-	</quest>
-	<quest name="Tibia Tales" startstorageid="12650" startstoragevalue="1">
-		<mission name="Against the Spider Cult" storageid="12652" startvalue="1" endvalue="6">
-			<missionstate id="1" description="Daniel Steelsoul in Edron wants you to infiltrate the Edron Orc Cave and destroy 4 Spider Eggs." />
-			<missionstate id="2" description="You destroyed 1 of 4 Spider Eggs in the Edron Orc Cave" />
-			<missionstate id="3" description="You destroyed 2 of 4 Spider Eggs in the Edron Orc Cave" />
-			<missionstate id="4" description="You destroyed 3 of 4 Spider Eggs in the Edron Orc Cave" />
-			<missionstate id="5" description="You destroyed all Spider Eggs in the Edron Orc Cave, report back to Daniel Steelsoul!" />
-			<missionstate id="6" description="You have completed the Quest!" />
-		</mission>
-		<mission name="An Interest In Botany" storageid="12653" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Rabaz in Farmine asked you to collect samples from rare plant specimen in Zao. Go to the storage room to the west and receive the Botany Almanach. Find then the Giant Dreadcoil and use your Obsidian Knife on it to obtain a sample." />
-			<missionstate id="2" description="Now you must find the second plant, a Giant Verminous and use your Obsidian Knife on it to obtain a sample." />
-			<missionstate id="3" description="You found the two samples, report back to Rabaz in Farmine!" />
-			<missionstate id="4" description="You have completed the Quest!" />
-		</mission>
-		<mission name="Graves Sanctified - In Progress" storageid="3941" startvalue="1" endvalue="15" description="You sanctified |STATE| of 15 graves." />
-		<mission name="Into the Bone Pit" storageid="3938" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Search the Cursed Bone Pit in the dungeon north of Thais and dig for a well-preserved human bone for Muriel." />
-			<missionstate id="2" description="You have found a desecrated bone for Muriel." />
-			<missionstate id="3" description="You helped Muriel to obtain a desecrated bone." />
-		</mission>
-		<mission name="Rest in Hallowed Ground" storageid="3940" startvalue="1" endvalue="5">
-			<missionstate id="1" description="Go to the white raven monastery and ask for some holy water for Amanda." />
-			<missionstate id="2" description="You got the holy water from the white raven monastery. Go back to Amanda and report about your mission." />
-			<missionstate id="3" description="Sanctify every single grave at the unholy graveyard north of Edron with the holy water." />
-			<missionstate id="4" description="You have sanctified all graves at the unholy graveyard of Edron. Report about your mission at Amanda." />
-			<missionstate id="5" description="You helped Amanda by sanctifying the cursed graveyard of Edron." />
-		</mission>
-		<mission name="The Exterminator" storageid="3939" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Padreia in Carlin asked you to exterminate the slimes in the sewers of Carlin by poisoning their spawn pool." />
-			<missionstate id="2" description="You poisoned the spawn pool of the slimes in the sewers of Carlin. Report to Padreia about your mission." />
-			<missionstate id="3" description="You successfully helped Padreia in saving Carlin from a slimy disease." />
-		</mission>
-		<mission name="The Ultimate Booze" storageid="12651" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Boozer in Vernore asked you to bring him some special dwarven brown ale. You may find some in the brewery in Kazordoon." />
-			<missionstate id="2" description="You found the special dwarven brown ale. Bring it to Boozer in Vernore." />
-			<missionstate id="3" description="You have completed The Ultimate Booze Quest!" />
 		</mission>
 	</quest>
 </quests>
