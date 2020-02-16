@@ -1599,6 +1599,15 @@ void Player::dropLoot(Container* corpse, Creature*)
 			}
 		}
 	}
+
+	if (g_game.getClientVersion() >= CLIENT_VERSION_790) {
+		if (!inventory[CONST_SLOT_BACKPACK]) {
+			Item* bagItem = Item::CreateItem(ITEM_BAG, 1);
+			if (bagItem) {
+				g_game.internalPlayerAddItem(this, bagItem, false, CONST_SLOT_BACKPACK);
+			}
+		}
+	}
 }
 
 void Player::death(Creature* lastHitCreature)

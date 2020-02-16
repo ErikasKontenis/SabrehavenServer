@@ -52,7 +52,7 @@ void MonsterType::createLoot(Container* corpse)
 		return;
 	}
 
-	Item* bagItem = Item::CreateItem(2853, 1);
+	Item* bagItem = Item::CreateItem(ITEM_BAG, 1);
 	if (!bagItem) {
 		return;
 	}
