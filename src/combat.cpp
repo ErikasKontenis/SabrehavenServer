@@ -1120,7 +1120,7 @@ bool Combat::rangeAttack(Creature* attacker, Creature* target, fightMode_t fight
 			g_game.addMagicEffect(destTile->getPosition(), CONST_ME_POFF);
 			g_game.addDistanceEffect(attackerPos, destTile->getPosition(), distanceEffect);
 
-			if (moveWeapon) {
+			if (moveWeapon && g_config.getBoolean(ConfigManager::DISTANCE_WEAPONS_DROP_ON_GROUND)) {
 				g_game.internalMoveItem(weapon->getParent(), destTile, INDEX_WHEREEVER, weapon, 1, nullptr, FLAG_NOLIMIT);
 			}
 
@@ -1130,7 +1130,7 @@ bool Combat::rangeAttack(Creature* attacker, Creature* target, fightMode_t fight
 		g_game.addDistanceEffect(attackerPos, targetPos, distanceEffect);
 		Combat::doCombatHealth(attacker, target, combatDamage, combatParams);
 
-		if (moveWeapon) {
+		if (moveWeapon && g_config.getBoolean(ConfigManager::DISTANCE_WEAPONS_DROP_ON_GROUND)) {
 			g_game.internalMoveItem(weapon->getParent(), target->getTile(), INDEX_WHEREEVER, weapon, 1, nullptr, FLAG_NOLIMIT);
 		}
 	} else if (weapon->getWeaponType() == WEAPON_WAND) {

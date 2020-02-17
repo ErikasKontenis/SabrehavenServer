@@ -8,6 +8,7 @@ removeChargesFromRunes = true
 stairJumpExhaustion = 0
 experienceByKillingPlayers = false
 expFromPlayersLevelRange = 75
+distanceWeaponsDropOnGround = false
 
 -- Skull System
 banLength = 30 * 24 * 60 * 60

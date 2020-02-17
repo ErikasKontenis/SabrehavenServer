@@ -48,6 +48,7 @@ class ConfigManager
 			STACK_CUMULATIVES,
 			BLOCK_HEIGHT,
 			DROP_ITEMS,
+			DISTANCE_WEAPONS_DROP_ON_GROUND,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
 		};
