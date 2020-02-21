@@ -1107,14 +1107,15 @@
 			<missionstate id="1" description="Rashid has declare you as one of his recognized traders, and now you are able to trade with him anytime.." />
 		</mission>
 	</quest>
-	<quest name="The Queen of the Banshees" startstorageid="50013" startstoragevalue="1">
-		<mission name="The Hidden Seal" storageid="50013" startvalue="1" endvalue="1" description="You broke the first seal." />
-		<mission name="The Seal of Logic" storageid="50014" startvalue="1" endvalue="1" description="You broke the sixth seal." />
-		<mission name="The Seal of True Path" storageid="50015" startvalue="1" endvalue="1" description="You broke the fifth seal." />
-		<mission name="The Seal of Sacrifice" storageid="50016" startvalue="1" endvalue="1" description="You broke the fourth seal." />
-		<mission name="The Seal of Demonrage" storageid="50018" startvalue="1" endvalue="1" description="You broke the third seal." />
-		<mission name="The Plague Seal" storageid="50019" startvalue="1" endvalue="1" description="You broke the second seal." />
-		<mission name="All Seals" storageid="50021" startvalue="1" endvalue="1" description="You broke all the seals." />
+	<!-- /\ -->
+	<quest name="The Queen of the Banshees" startstorageid="5" startstoragevalue="1">
+		<mission name="The Hidden Seal" storageid="5" startvalue="1" endvalue="1" description="You broke the first seal." />
+		<mission name="The Seal of Logic" storageid="10" startvalue="1" endvalue="1" description="You broke the sixth seal." />
+		<mission name="The Seal of True Path" storageid="9" startvalue="1" endvalue="1" description="You broke the fifth seal." />
+		<mission name="The Seal of Sacrifice" storageid="4" startvalue="1" endvalue="1" description="You broke the fourth seal." />
+		<mission name="The Seal of Demonrage" storageid="7" startvalue="1" endvalue="1" description="You broke the third seal." />
+		<mission name="The Plague Seal" storageid="6" startvalue="1" endvalue="1" description="You broke the second seal." />
+		<mission name="All Seals" storageid="11" startvalue="1" endvalue="1" description="You broke all the seals." />
 	</quest>
 	<quest name="The White Raven Monastery" startstorageid="62" startstoragevalue="2">
 		<mission name="Access to the Isle of Kings" storageid="62" endvalue="2">
