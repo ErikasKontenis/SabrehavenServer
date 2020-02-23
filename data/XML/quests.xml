@@ -995,119 +995,38 @@
 			<missionstate id="5" description="Arch Postman" />
 		</mission>
 	</quest>
-	<quest name="The Shattered Isles" startstorageid="12700" startstoragevalue="1">
-		<mission name="A Djinn in Love" storageid="12705" startvalue="1" endvalue="5">
-			<missionstate id="1" description="You need to return to Marina and ask her for a date with Ocelus." />
-			<missionstate id="2" description="You need to return to Ocelus with the bad news." />
-			<missionstate id="3" description="Ocelus told you to get a poem for him, if you didn't buy one already, head to Ab'Dendriel and buy a Love Poem from Elvith." />
-			<missionstate id="4" description="You need to go recite the poem to Marina and impress her with the Djinn's romantic and poetic abilities." />
-			<missionstate id="5" description="After reciting the poem to Marina, she decided to date Ocelus and release Ray Striker from her spell." />
-		</mission>
-		<mission name="A Poem for the Mermaid" storageid="12704" startvalue="1" endvalue="3">
-			<missionstate id="1" description="You need to find the man-stealing mermaid and try to break her spell over poor Raymond, the mermaid Marina is near the northern coast of the island." />
-			<missionstate id="2" description="You discovered that she does in fact have a spell on him, and will not release him unless someone better comes along." />
-			<missionstate id="3" description="You are a true master in reciting love poems now. No mermaid will be able to resist if you ask for a date!" />
-		</mission>
-		<mission name="Access to Goroma" storageid="12707" startvalue="1" endvalue="1" description="After helping Jack Fate to collect the 30 woodpieces, Jack Fate in Liberty Bay will bring you to Goroma." />
-		<mission name="Access to Laguna Island" storageid="12706" startvalue="1" endvalue="1" description="After arranging a date for Marina and Ocelus, you are allowed to use Marina's sea turtles. They will bring you to the idyllic Laguna Islands." />
-		<mission name="Access to Meriana" storageid="12703" startvalue="1" endvalue="1" description="After earning the trust of the governor's daughter Eleonore, Captain Waverider in Liberty Bay will bring you to Meriana if you tell him the secret codeword 'peg leg'." />
-		<mission name="The Counterspell" storageid="12710" startvalue="1" endvalue="4">
-			<missionstate id="1" description="You have begun Chondur's ritual. Bring him a fresh dead chicken so that he can begin to create a counterspell which will allow you to pass the magical barrier on Goroma." />
-			<missionstate id="2" description="You have begun Chondur's ritual. Bring him a fresh dead rat so that he can continue creating a counterspell which will allow you to pass the magical barrier on Goroma." />
-			<missionstate id="3" description="You have begun Chondur's ritual. Bring him a fresh dead black sheep so that he can complete his counterspell which will allow you to pass the magical barrier on Goroma." />
-			<missionstate id="4" description="You may pass the energy barrier on Goroma. The counterspell Chondur created for you with his ritual will allow you to withstand the evil magic of the cultist." />
-		</mission>
-		<mission name="The Errand" storageid="12702" startvalue="1" endvalue="2">
-			<missionstate id="1" description="You told Eleonore to run a small errand. Deliver the 200 gold pieces she gave to the herbalist Charlotta in the south-western part of Liberty Bay." />
-			<missionstate id="2" description="You delivered the gold to Charlotta. Return to Eleonore and tell her the secret password: peg leg" />
-		</mission>
-		<mission name="The Governor's Daughter" storageid="12701" startvalue="1" endvalue="3">
-			<missionstate id="1" description="You promised to find Eleonore's lost ring. She told you that a parrot stole it from her dressing table and flew to the nearby mountains. You might need a rake to retrieve the ring." />
-			<missionstate id="2" description="You found the ring. Return it to Eleonore." />
-			<missionstate id="3" description="You returned the ring to Eleonore." />
-		</mission>
-	</quest>
-	<quest name="The Thieves Guild" startstorageid="12501" startstoragevalue="1">
-		<mission name="Mission 1: Ivory Poaching" storageid="12502" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Dorian wants you to collect 10 elephant tusks and deliver them to him." />
-			<missionstate id="2" description="You delivered the ten tusks to Dorian." />
-		</mission>
-		<mission name="Mission 2: Burglary" storageid="12503" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Dorian wants you to steal a vase from Sarina, the owner of Carlin's general store." />
-			<missionstate id="2" description="You have stolen the vase, report back to Dorian!" />
-			<missionstate id="3" description="You have delivered the stolen vase to Dorian, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 3: Invitation" storageid="12504" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your task is to somehow convince Oswald to hand you an invitation to the king's ball." />
-			<missionstate id="2" description="You have received the invitation to the King's ball, report back to Dorian!" />
-			<missionstate id="3" description="You have delivered the invitation to Dorian, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 4: Bridge Robbery" storageid="12505" startvalue="1" endvalue="8">
-			<missionstate id="1" description="Dorian wants you to find a forger in the outlaw camp, go talk to Snake eye." />
-			<missionstate id="2" description="Snake Eye told you to visit Ahmet in Ankrahmun." />
-			<missionstate id="3" description="Ahmet told you that he will only help a friend and asked you to kill at least one Nomad." />
-			<missionstate id="4" description="You have killed a Nomad, go back to Ahmet!" />
-			<missionstate id="5" description="You have received the forged documents from Ahmet, next is to get a disguise from Percybald in Venore!" />
-			<missionstate id="6" description="You have received the dwarf disguise from Percybald. Now go do the deal with Nurik." />
-			<missionstate id="7" description="You have traded the forged documents for the painting, report back to Dorian." />
-			<missionstate id="8" description="You have delivered the painting to Dorian, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 5: Enforcing Debts" storageid="12506" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your mission is to travel to Tiquanda. Fina a hidden smuggler cave to the north of Port Hope and try to retrieve the valuable goblet which Dorian is looking for. Once you got it, bring it to him." />
-			<missionstate id="2" description="You have delivered the golden goblet to Dorian, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 6: Fishnapping" storageid="12507" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Dorian wants you to fishnap Theodore Loveless' fish, first you need to get the key to his room. Talk to Chantalle in Liberty Bay." />
-			<missionstate id="2" description="You have received the key for Theodore Loveless' room, time to fishnap his fish!" />
-			<missionstate id="3" description="You have fishnapped Theodore Loveless' fish, deliver it to Dorian." />
-			<missionstate id="4" description="You have delivered the fish to Dorian, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 7: Blackmail" storageid="12508" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your current task is to find compromising information about one of the Venore city guards, no matter how. A good starting point might be in their barracks." />
-			<missionstate id="2" description="You have delivered the compromising letter to Dorian, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 8: Message" storageid="12509" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Dorian wants you to deliver a message to his competitors in the dark cathedral." />
-			<missionstate id="2" description="You have put up the message, report back to Dorian." />
-			<missionstate id="3" description="You have reported back that you have completed the mission, Dorian now allows you to trade with Black Bert." />
-		</mission>
-	</quest>
-	<quest name="The Travelling Trader Quest" startstorageid="101" startstoragevalue="1">
-		<mission name="Mission 1: Trophy" storageid="101" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your first mission for becoming a recognized trader is to bring the traveling salesman Rashid a Deer Trophy." />
-			<missionstate id="2" description="You have completed this mission. Talk with Rashid to continue." />
-		</mission>
-		<mission name="Mission 2: Delivery" storageid="102" endvalue="5">
-			<missionstate id="1" description="Your mission is to get the package from Willard the weapon dealer at Edron." />
-			<missionstate id="2" description="Willard forgot to pick it up from Snake Eye at Outlaw Camp. So he wants you to go and pick it up from Snake Eye." />
-			<missionstate id="3" description="Take the package just next door." />
-			<missionstate id="4" description="Now bring back the package to Rashid." />
-			<missionstate id="5" description="You have completed this mission. Talk with Rashid to continue." />
-		</mission>
-		<mission name="Mission 3: Cheese" storageid="103" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Rashid wants you to pick his special order from Miraia in Darashia. But you have to be quick, Scarab cheese can rot really fast in high temperature." />
-			<missionstate id="2" description="Now quickly bring back the Scarab cheese to Rashid." />
-			<missionstate id="3" description="You have completed this mission. Talk with Rashid to continue." />
-		</mission>
-		<mission name="Mission 4: Vase" storageid="104" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Rashid have ordered a special elven vase from Briasol in Ab'Dendriel. He asks you to buy it from Briasol and bring it back.\nBut you should be carefully, since the vase is very fragile." />
-			<missionstate id="2" description="Now carefully bring the vase back to Rashid." />
-			<missionstate id="3" description="You have completed this mission. Talk with Rashid to continue." />
-		</mission>
-		<mission name="Mission 5: Make a deal" storageid="105" startvalue="1" endvalue="3">
-			<missionstate id="1" description="This time, Rashid is testing your trading skills to buy a Crimson Sword from Uzgod. But it have to be less than 400 gold coins and the quality has to be perfect." />
-			<missionstate id="2" description="Now bring the sword back to Rashid." />
-			<missionstate id="3" description="You have completed this mission. Talk with Rashid to continue." />
-		</mission>
-		<mission name="Mission 6: Goldfish" storageid="106" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Rashid wants you to bring him a Goldfish Bowl." />
-			<missionstate id="2" description="You have completed this mission. Talk with Rashid to continue." />
-		</mission>
-		<mission name="Mission 7: Declare" storageid="107" startvalue="1" endvalue="1">
-			<missionstate id="1" description="Rashid has declare you as one of his recognized traders, and now you are able to trade with him anytime.." />
-		</mission>
-	</quest>
 	<!-- /\ -->
+	<quest name="The Shattered Isles" startstorageid="17593" startstoragevalue="1">
+		<mission name="A Djinn in Love" storageid="17502" startvalue="9" endvalue="13" ignoreendvalue="true">
+			<missionstate id="9" description="You need to return to Marina and ask her for a date with Ocelus." />
+			<missionstate id="10" description="You need to return to Ocelus with the bad news." />
+			<missionstate id="11" description="Ocelus told you to get a poem for him, if you didn't buy one already, head to Ab'Dendriel and buy a Love Poem from Elvith." />
+			<missionstate id="12" description="You need to go recite the poem to Marina and impress her with the Djinn's romantic and poetic abilities." />
+			<missionstate id="13" description="After reciting the poem to Marina, she decided to date Ocelus and release Ray Striker from her spell." />
+		</mission>
+		<mission name="A Poem for the Mermaid" storageid="17502" startvalue="7" endvalue="9" ignoreendvalue="true">
+			<missionstate id="7" description="You need to find the man-stealing mermaid and try to break her spell over poor Raymond, the mermaid Marina is near the northern coast of the island." />
+			<missionstate id="8" description="You discovered that she does in fact have a spell on him, and will not release him unless someone better comes along." />
+			<missionstate id="9" description="You are a true master in reciting love poems now. No mermaid will be able to resist if you ask for a date!" />
+		</mission>
+		<mission name="Access to Goroma" storageid="17501" startvalue="2" endvalue="2" description="After helping Jack Fate to collect the 30 woodpieces, Jack Fate in Liberty Bay will bring you to Goroma." />
+		<mission name="Access to Laguna Island" storageid="17502" startvalue="13" endvalue="13" ignoreendvalue="true" description="After arranging a date for Marina and Ocelus, you are allowed to use Marina's sea turtles. They will bring you to the idyllic Laguna Islands." />
+		<mission name="Access to Meriana" storageid="17502" startvalue="6" endvalue="6" ignoreendvalue="true" description="After earning the trust of the governor's daughter Eleonore, Captain Waverider in Liberty Bay will bring you to Meriana if you tell him the secret codeword 'peg leg'." />
+		<mission name="The Counterspell" storageid="17509" startvalue="2" endvalue="5">
+			<missionstate id="2" description="You have begun Chondur's ritual. Bring him a fresh dead chicken so that he can begin to create a counterspell which will allow you to pass the magical barrier on Goroma." />
+			<missionstate id="3" description="You have begun Chondur's ritual. Bring him a fresh dead rat so that he can continue creating a counterspell which will allow you to pass the magical barrier on Goroma." />
+			<missionstate id="4" description="You have begun Chondur's ritual. Bring him a fresh dead black sheep so that he can complete his counterspell which will allow you to pass the magical barrier on Goroma." />
+			<missionstate id="5" description="You may pass the energy barrier on Goroma. The counterspell Chondur created for you with his ritual will allow you to withstand the evil magic of the cultist." />
+		</mission>
+		<mission name="The Errand" storageid="17502" startvalue="3" endvalue="4" ignoreendvalue="true">
+			<missionstate id="3" description="You told Eleonore to run a small errand. Deliver the 200 gold pieces she gave to the herbalist Charlotta in the south-western part of Liberty Bay." />
+			<missionstate id="4" description="You delivered the gold to Charlotta. Return to Eleonore and tell her the secret password: peg leg" />
+		</mission>
+		<mission name="The Governor's Daughter" storageid="17502" startvalue="1" endvalue="2" ignoreendvalue="true">
+			<missionstate id="1" description="You promised to find Eleonore's lost ring. She told you that a parrot stole it from her dressing table and flew to the nearby mountains. You might need a rake to retrieve the ring." />
+			<missionstate id="2" description="You returned the ring to Eleonore." />
+		</mission>
+	</quest>
 	<quest name="The Queen of the Banshees" startstorageid="5" startstoragevalue="1">
 		<mission name="The Hidden Seal" storageid="5" startvalue="1" endvalue="1" description="You broke the first seal." />
 		<mission name="The Seal of Logic" storageid="10" startvalue="1" endvalue="1" description="You broke the sixth seal." />
