@@ -191,6 +191,10 @@ function Player:onGainExperience(source, exp, rawExp)
 		end
 	end
 	
+	if getGlobalStorageValue(17589) > os.time() then
+		exp = exp * (1 + getGlobalStorageValue(17585) / 100) 
+	end
+	
 	return exp
 end
 
@@ -204,7 +208,20 @@ function Player:onGainSkillTries(skill, tries)
 	end
 
 	if skill == SKILL_MAGLEVEL then
-		return tries * configManager.getNumber(configKeys.RATE_MAGIC)
+		tries = tries * configManager.getNumber(configKeys.RATE_MAGIC)
+		
+		if getGlobalStorageValue(17591) > os.time() then
+			tries = tries * (1 + getGlobalStorageValue(17587) / 100) 
+		end
+		
+		return tries
 	end
-	return tries * configManager.getNumber(configKeys.RATE_SKILL)
+	
+	tries = tries * configManager.getNumber(configKeys.RATE_SKILL)
+	
+	if getGlobalStorageValue(17590) > os.time() then
+		tries = tries * (1 + getGlobalStorageValue(17586) / 100) 
+	end
+	
+	return tries
 end

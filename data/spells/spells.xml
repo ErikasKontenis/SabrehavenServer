@@ -207,6 +207,8 @@
 		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</instant>
 	
 	<!-- Attack Rune Spells -->
