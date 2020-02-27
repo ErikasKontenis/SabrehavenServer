@@ -1174,7 +1174,7 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 	case BEHAVIOUR_TYPE_RANDOM: {
 		int32_t min = evaluate(node->left, player, message);
 		int32_t max = evaluate(node->right, player, message);
-		return normal_random(min, max);
+		return uniform_random(min, max);
 	}
 	case BEHAVIOUR_TYPE_QUESTVALUE: {
 		int32_t questNumber = evaluate(node->left, player, message);

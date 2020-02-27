@@ -47,18 +47,18 @@ VANISH,!           -> "How rude!"
 "mission",QuestValue(248)=1  -> "You have mastered all our current missions. There's nothing left to be done ... for now."
 
 "mission",QuestValue(245)=1  -> "You are not done with your current mission. Deliver that letter to king Markwin. Please report back when you are ready."
-"mission",QuestValue(245)=2  -> "You have delivered that letter? You are a true postofficer. All over the land bards shall praise your name. There are no missions for you left right now.",SetQuestValue(248,1),SetQuestValue(249,5)
+"mission",QuestValue(245)=2  -> "You have delivered that letter? You are a true postofficer. All over the land bards shall praise your name. There are no missions for you left right now.",SetQuestValue(248,1),SetQuestValue(249,5),SetQuestValue(245,3)
 
 "mission",QuestValue(244)=1  -> "You are not done with your current mission. Deliver those letters to Santa. Please report back when you are ready."
 "mission",QuestValue(244)=2  -> "You did it? I hope you did not catch a flu in the cold! However theres another mission for you. Are you interested?",topic=21
-Topic=21,"yes"     -> "Excellent. Here is a letter for you to deliver. Well, to be honest, no one else volunteered. It's a letter from the mother of Markwin, the king of Mintwallin. Deliver that letter to him, but note that you will not be welcome there.",SetQuestValue(245,1), Amount=1, Create(3220)
+Topic=21,"yes"     -> "Excellent. Here is a letter for you to deliver. Well, to be honest, no one else volunteered. It's a letter from the mother of Markwin, the king of Mintwallin. Deliver that letter to him, but note that you will not be welcome there.",SetQuestValue(245,1),SetQuestValue(244,3), Amount=1, Create(3220)
 Topic=21           -> "Too bad, perhaps another time then."
 
 "mission",QuestValue(246)=1,QuestValue(244)=0  -> "So are you ready for another Mission?", Topic=20
 
 "mission",QuestValue(243)=0,QuestValue(242)=1  -> "You are not done with your current mission. Search for the whereabout of Postofficer Waldo. Please report back when you are ready."
 "mission",QuestValue(243)=1  -> "So Waldo is dead? This is grave news indeed. Did you recover his posthorn?",topic=19,Type=3219, Amount=1
-Topic=19,"yes",Count(Type)>=Amount     -> "Thank you. We will honour this. Your next mission will be a very special one. Good thing you are a special person as well. Are you ready?",Delete(Type),SetQuestValue(246,1),SetQuestValue(249,4),Topic=20
+Topic=19,"yes",Count(Type)>=Amount     -> "Thank you. We will honour this. Your next mission will be a very special one. Good thing you are a special person as well. Are you ready?",Delete(Type),SetQuestValue(246,1),SetQuestValue(249,4),SetQuestValue(242,2),Topic=20
 Topic=19,"yes"     -> "Hm, no, you don't have it. Too bad, go and look for it."
 Topic=19           -> "Too bad, go and look for it."
 
@@ -71,14 +71,14 @@ Topic=20           -> "Too bad, perhaps another time then."
 Topic=17,"yes"     -> "Ok but your next assignment might be dangerous. Our Courier Waldo has been missing for a while. I must assume he is dead. Can you follow me so far?", topic=18
 Topic=17           -> "Too bad, perhaps another time then."
 
-Topic=18,"yes"     -> "Find out about his whereabouts and retrieve him or at least his posthorn. He was looking for a new underground passage that is rumoured to be found underneath the troll-infested Mountain east of Thais.",SetQuestValue(242,1)
+Topic=18,"yes"     -> "Find out about his whereabouts and retrieve him or at least his posthorn. He was looking for a new underground passage that is rumoured to be found underneath the troll-infested Mountain east of Thais.",SetQuestValue(242,1),SetQuestValue(234,8)
 Topic=18           -> "Too bad, perhaps you will try some other time then."
 
 "mission",QuestValue(233)>0,QuestValue(233)<10  -> "You are not done with your current mission. Make sure Hugo chief is tailoring our new uniforms. Please report back when you are ready."
 "mission",QuestValue(233)=10  -> "Excellent! Another job well done! Would you accept another mission?",SetQuestValue(249,3),topic=16
 
 Topic=16,"yes",QuestValue(250)<QuestValue(249)    -> "Your eagerness is a virtue, young one, but first let's talk about advancement."
-Topic=16,"yes"     -> "Good, so listen. Hugo Chief informed me that he needs the measurements of our postofficers. Go and bring me the measurements of Ben, Lokur, Dove, Liane, Chrystal and Olrik.",SetQuestValue(234,1)
+Topic=16,"yes"     -> "Good, so listen. Hugo Chief informed me that he needs the measurements of our postofficers. Go and bring me the measurements of Ben, Lokur, Dove, Liane, Chrystal and Olrik.",SetQuestValue(234,1),SetQuestValue(233,11)
 Topic=16           -> "Too bad, perhaps another time then."
 
 "dress","pattern",QuestValue(233)=8  -> "Fine, fine. I think that should do it. Tell Hugo that we order those uniforms. The completed dress pattern will soon arrive in Venore. Report to me when you have talked to him.",SetQuestValue(233,9) 
@@ -94,7 +94,7 @@ Topic=15           -> "Too bad, perhaps you can try doing it some other time the
 
 "mission",QuestValue(231)=1  -> "You are not done with your current mission. Deliver that present to Fibula. Please report back when you are ready."
 "mission",QuestValue(231)=2  -> "Splendid, I knew we could trust you. I would like to ask for your help in another matter. Are you interested?",topic=14
-Topic=14,"yes"     -> "Ok. We need a new set of uniforms, and only the best will do for us. Please travel to Venore and negotiate with Hugo Chief a contract for new uniforms.",SetQuestValue(233,1)
+Topic=14,"yes"     -> "Ok. We need a new set of uniforms, and only the best will do for us. Please travel to Venore and negotiate with Hugo Chief a contract for new uniforms.",SetQuestValue(233,1),SetQuestValue(231,3)
 Topic=14           -> "Too bad, perhaps another time then."
 
 # BEFÖRDERUNG 2 
@@ -124,21 +124,22 @@ Topic=25           -> "You have not enough bones with you. Too bad, but you sure
 
 "mission",QuestValue(228)=1  -> "You are not done with your current mission. The mailbox is still not fixed. Report if you are ready."
 "mission",QuestValue(228)=2  -> "Excellent, you got it fixed! This will teach this mailbox a lesson indeed! Are you interested in another assignment?",Topic=9
+"mission",QuestValue(228)=3  -> "Are you interested in another assignment?",Topic=10
 
 "mission",QuestValue(227)<5  -> "You are not done with your current mission. Make sure all the passages are secure. Report if you are ready."
 "mission",QuestValue(227)=5  -> "So you have finally made it! I did not think that you would have it in you ... However: are you ready for another assignment?",Topic=8
 
-Topic=11,"yes"     -> "Ok, listen: we have some serious trouble with agressive dogs lately. We have accumulated some bones as a sort of pacifier but we need more. Collect 20 Bones like the one in my room to the left and report here.",SetQuestValue(230,1)
+Topic=11,"yes"     -> "Ok, listen: we have some serious trouble with agressive dogs lately. We have accumulated some bones as a sort of pacifier but we need more. Collect 20 Bones like the one in my room to the left and report here.",SetQuestValue(230,1),SetQuestValue(229,4)
 Topic=11           -> "Too bad, perhaps another time then."
 
-Topic=9,"yes"     -> "For your noble deeds I grant you the title Assistant Postofficer. All Postofficers will charge you less money from now on. After every second mission ask me for an ADVANCEMENT. Your next task will be a bit more challenging. Do you feel ready for it?",SetQuestValue(250,1),SetQuestValue(249,1),Topic=10
+Topic=9,"yes"     -> "For your noble deeds I grant you the title Assistant Postofficer. All Postofficers will charge you less money from now on. After every second mission ask me for an ADVANCEMENT. Your next task will be a bit more challenging. Do you feel ready for it?",SetQuestValue(250,1),SetQuestValue(249,1),SetQuestValue(228,3),Topic=10
 Topic=9           -> "Too bad, perhaps another time then."
 
 Topic=10,"yes"     -> "I need you to deliver a bill to the stage magician David Brassacres. He's hiding from his creditors somewhere in Venore. It's likely you will have to trick him somehow to reveal his identity. Report back when you delivered this bill.",Amount=1,Create(3216),SetQuestValue(229,1)
 Topic=10           -> "Too bad, perhaps another time then."
 
 # Topic=8,"yes"     -> "I am glad to hear that. One of our mailboxes was reported to be jammed. It is located on the so called 'mountain' on the isle Folda. Get a crowbar and fix the mailbox. Report about your mission when you have done so.",Topic=9,SetQuestValue(228,1)
-Topic=8,"yes"     -> "I am glad to hear that. One of our mailboxes was reported to be jammed. It is located on the so called 'mountain' on the isle Folda. Get a crowbar and fix the mailbox. Report about your mission when you have done so.",SetQuestValue(228,1)
+Topic=8,"yes"     -> "I am glad to hear that. One of our mailboxes was reported to be jammed. It is located on the so called 'mountain' on the isle Folda. Get a crowbar and fix the mailbox. Report about your mission when you have done so.",SetQuestValue(228,1), SetQuestValue(227,6)
 Topic=8           -> "I thought so. The mail service is not for just anyone."
 
 Topic=1,"yes"     -> "Hm, I might consider your proposal, but first you will have to prove your worth by doing some tasks for us. Are you willing to do that?",Topic=2
