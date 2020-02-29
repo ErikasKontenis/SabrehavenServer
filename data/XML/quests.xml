@@ -471,18 +471,18 @@
 			<missionstate id="4" description="Go to Morgan and tell him this codeword: 'firebird' to get the outfit addon!" />
 			<missionstate id="5" description="You got the Outfit Addon!" />
 		</mission>
-		<mission name="Oriental Addon: Hipwear" storageid="50137" startvalue="1" endvalue="2">
+		<!-- /\ -->
+		<mission name="Oriental Addon: Hipwear" storageid="17555" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Your current task is to find a mermaid's comb. If you have ever encountered a mermaid, you should ask her. Bring the comb to Habdel if you are male or to Ishina if you are female." />
 			<missionstate id="2" description="You have received the first oriental addon." />
 		</mission>
-		<mission name="Oriental Addon: Headgear" storageid="50138" startvalue="1" endvalue="5">
+		<mission name="Oriental Addon: Headgear" storageid="17557" startvalue="1" endvalue="5">
 			<missionstate id="1" description="Your current task is to bring 100 pieces of ape fur to Razan if you are male, or to Miraia if you are female." />
 			<missionstate id="2" description="Your current task is to bring 100 fish fins to Razan if you are male, or to Miraia if you are female." />
 			<missionstate id="3" description="Your current task is to bring 2 enchanted chicken wings to Razan if you are male, or to Miraia if you are female." />
 			<missionstate id="4" description="Your current task is to bring 100 pieces of blue cloth to Razan if you are male, or to Miraia if you are female." />
 			<missionstate id="5" description="You have received the second oriental addon." />
 		</mission>
-		<!-- /\ -->
 		<mission name="Shaman Addon: Staff" storageid="17570" startvalue="2" endvalue="3" ignoreendvalue="true">
 			<missionstate id="2" description="Try to find a monster which sometimes lurks in the Tiquandian jungle as the revenge of the jungle against mankind. Bring the rare root it carries to Chondur as well as 5 voodoo dolls." />
 			<missionstate id="3" description="You have received the first shaman addon." />

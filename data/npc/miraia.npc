@@ -78,7 +78,7 @@ Topic=5,"yes" -> "Alright, then listen to the following requirements. We are cur
 				"Last but not least, just drop by with 100 pieces of blue cloth and I will happily show you how to create this veil. ...",
 				"Did you understand everything I told you and are willing to handle this task?", Topic=6
 Topic=5 -> "Maybe next time."
-Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 pieces of ape fur.", SetQuestValue(17557,1)
+Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 pieces of ape fur.", SetQuestValue(17557,1), SetQuestValue(17594,1)
 Topic=6 -> "Maybe next time."
 
 "ape","fur",QuestValue(17557)=1,female -> Type=5883, Amount=100, "Have you really managed to fulfil the task and brought me 100 pieces of ape fur?", Topic=7
