@@ -95,7 +95,7 @@ Topic=9 -> "Maybe another time."
 
 "winning","lottery","ticket",QuestValue(17546)=0 -> Type=5958, Amount=1, "Are you here to claim a prize?", Topic=10
 "prize",QuestValue(17546)=0 -> *
-Topic=10,"yes",Count(Type)>=Amount -> "Congratulations! Here, from now on you can wear our lovely potion belt as accessory.", Delete(Type), SetQuestValue(17546,1), AddOutfitAddon(138,1), AddOutfitAddon(133,1), EffectOpp(13)
+Topic=10,"yes",Count(Type)>=Amount -> "Congratulations! Here, from now on you can wear our lovely potion belt as accessory.", Delete(Type), SetQuestValue(17546,1), SetQuestValue(17594,1), AddOutfitAddon(138,1), AddOutfitAddon(133,1), EffectOpp(13)
 Topic=10,"yes" -> "Where is yours winning lottery ticket then?"
 Topic=10 -> "Maybe another time."
 

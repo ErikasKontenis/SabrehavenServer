@@ -68,7 +68,7 @@ VANISH,!           -> "May the gods bless you."
 Topic=1,"yes" -> "So be it!", Idle, EffectOpp(11), Teleport(32626,32402,10), EffectOpp(11)
 Topic=1       -> "As you wish."
 
-Topic=2,"yes" -> "I will tell you a small secret now. My friend Lynda in Thais can create a blessed wand. Greet her from me, maybe shewill aid you.", SetQuestValue(17549,1)
+Topic=2,"yes" -> "I will tell you a small secret now. My friend Lynda in Thais can create a blessed wand. Greet her from me, maybe she will aid you.", SetQuestValue(17549,1), SetQuestValue(17594,1)
 Topic=2       -> "As you wish."
 
 }

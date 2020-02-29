@@ -153,7 +153,7 @@ Topic=4,"yes" -> "Okay, great! You see, I need a few magical ingredients which I
 				"That's it already! Easy task, isn't it? I'm sure you could get all of that within a short time. ...",
 				"Did you understand everything I told you and are willing to handle this task?", Topic=5
 Topic=4 -> "However."
-Topic=5,"yes" -> "Fine! Let's start with the 70 bat wings. I really feel uncomfortable out there in the jungle.", SetQuestValue(17547,1)
+Topic=5,"yes" -> "Fine! Let's start with the 70 bat wings. I really feel uncomfortable out there in the jungle.", SetQuestValue(17547,1), SetQuestValue(17594,1)
 Topic=5 -> "Maybe another time."
 
 "bat","wing",QuestValue(17547)=1 -> Type=5894, Amount=70, "Oh, did you bring the 70 bat wings for me?", Topic=6

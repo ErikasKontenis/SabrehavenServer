@@ -160,197 +160,6 @@
 			<missionstate id="16" description="You have completed all the dishes. You are now able to make all the dishes in any order you want." />
 		</mission>
 	</quest>
-	<quest name="In Service of Yalahar" startstorageid="12240" startstoragevalue="5">
-		<mission name="Mission 01: Something Rotten" storageid="12241" startvalue="1" endvalue="6">
-			<missionstate id="1" description="Palimuth asked you to help with some sewer malfunctions. You will need a Crowbar, there are 4 places where you need to go marked with an X on your map." />
-			<missionstate id="2" description="You cleaned 1 pipe of 4 from the garbage." />
-			<missionstate id="3" description="You cleaned 2 pipes of 4 from the garbage." />
-			<missionstate id="4" description="You cleaned 3 pipes of 4 from the garbage." />
-			<missionstate id="5" description="You cleaned 4 pipes of 4 from the garbage. Go back to Palimuth and report your mission" />
-			<missionstate id="6" description="You cleaned all pipes from the garbage! Go back to Palimuth and ask for mission." />
-		</mission>
-		<mission name="Mission 02: Watching the Watchmen" storageid="12242" startvalue="1" endvalue="8">
-			<missionstate id="1" description="You have to find all 7 guards and give a report to them." />
-			<missionstate id="2" description="You reported to 1 of 7 guards" />
-			<missionstate id="3" description="You reported to 2 of 7 guards" />
-			<missionstate id="4" description="You reported to 3 of 7 guards" />
-			<missionstate id="5" description="You reported to 4 of 7 guards" />
-			<missionstate id="6" description="You reported to 5 of 7 guards" />
-			<missionstate id="7" description="You reported to 6 of 7 guards" />
-			<missionstate id="8" description="You reported to 7 of 7 guards! Go back to Palimuth and ask for mission." />
-		</mission>
-		<mission name="Mission 03: Death to the Deathbringer" storageid="12243" startvalue="1" endvalue="6">
-			<missionstate id="1" description="Get the notes in Palimuths room and read them. Talk to Palimuth again when you've read the notes." />
-			<missionstate id="2" description="Talk to Azerus the Yalahari in the city centre to get your next mission." />
-			<missionstate id="3" description="Get the notes behind the Yalahari and read them. Talk to Azerus again and ask him for mission when you've read the notes." />
-			<missionstate id="4" description="Ask Palimuth for mission." />
-			<missionstate id="5" description="First you will need to kill the three plague bearers and then get The Alchemists' Formulas. When this have been done head back to either Palimuth (good side) or Yalahari (Azerus) (bad side)." />
-			<missionstate id="6" description="Ask Azerus the Yalahari for a mission." />
-		</mission>
-		<mission name="Mission 04: Good to be Kingpin" storageid="12244" startvalue="1" endvalue="6">
-			<missionstate id="1" description="Ask Palimuth for mission." />
-			<missionstate id="2" description="For this mission you are asked to go to the Trade Quarter and negotiate or threaten Mr. West. Once again you will gain access to the mechanism although if you choose to help Palimuth you should go through the sewers." />
-			<missionstate id="3" description="You decided to help Palimuth, report him your mission." />
-			<missionstate id="4" description="You decided to help Azerus, report him your mission. " />
-			<missionstate id="5" description="Get back to Azerus and report him your mission." />
-			<missionstate id="6" description="Ask Azerus for a mission." />
-		</mission>
-		<mission name="Mission 05: Food or Fight" storageid="12245" startvalue="1" endvalue="8">
-			<missionstate id="1" description="Ask Palimuth for mission." />
-			<missionstate id="2" description="On this mission you are asked to find a druid by the name of Tamerin, on the Arena Quarter. You now have permission to use the gates mechanism." />
-			<missionstate id="3" description="The first is to bring Tamerin a flask of Animal Cure, you can buy this from Siflind on Nibelor (northeast of Svargrond)." />
-			<missionstate id="4" description="now you have to kill Morik the Gladiator and bring his helmet to Tamerin as proof." />
-			<missionstate id="5" description="Report back to Tamerin as he will listen to your request and you can now make your choice: Cattle for Palimuth (good side), Warbeasts for Yalahari (Azerus) (bad side). Then report the one you decided your mission." />
-			<missionstate id="6" description="You decided to help Palimuth, report him your mission." />
-			<missionstate id="7" description="You decided to help Azerus, report him your mission." />
-			<missionstate id="8" description="Ask Azerus for a mission." />
-		</mission>
-		<mission name="Mission 06: Frightening Fuel" storageid="12246" startvalue="1" endvalue="5">
-			<missionstate id="1" description="Ask Palimuth for mission." />
-			<missionstate id="2" description="Yalahari (Azerus) orders you to travel to the Cemetery Quarter and find the Strange Carving. He gives you a Ghost Charm and tells you to charge it with the tormented souls of the ghosts there to be used as an energy source. Palimuth wants the Charged Ghost Charm in order to free those souls. You can new use the Cemetery Quarter mechanism now. Go to the big building in the Cemetery Quarter and use the Ghost Charm on the Strange Carving at the back of the room." />
-			<missionstate id="3" description="Good side: Go to Palimuth, ask him about your mission, and hand in the charm. Bad side: Ask about your mission to Yalahari (Azerus) and give it back." />
-			<missionstate id="4" description="Get back to Azerus and report him your mission." />
-			<missionstate id="5" description="Ask Azerus for a mission." />
-		</mission>
-		<mission name="Mission 07: A Fishy Mission" storageid="12247" startvalue="1" endvalue="5">
-			<missionstate id="1" description="Ask Palimuth for mission." />
-			<missionstate id="2" description="Bad side: Yalahari (Azerus) will send you for a new mission to go to the Sunken Quarter and kill the Quara Leaders, Inky, Splasher and Sharptooth. Good side: Rather than fighting any Quara leaders Palimuth will instead send you to find the cause for the Quaras aggressive behavior. Find Maritima and talk to her about the Quara and she will explain what their problem is." />
-			<missionstate id="3" description="Get back to Palimuth and report him your mission." />
-			<missionstate id="4" description="You killed the Quarabosses. Ask Azerus for a mission." />
-			<missionstate id="5" description="Ask Azerus for a mission." />
-		</mission>
-		<mission name="Mission 08: Dangerous Machinations" storageid="12248" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Ask Palimuth for mission." />
-			<missionstate id="2" description="Bad side: For this mission the Yalahari requests you go to the Factory Quarter and find a pattern crystal, which will be used to supply weapons to help take control of the city. Good side: Palimuth will send you there to use the crystal to supply food for the city." />
-			<missionstate id="3" description="Get back to Azerus and report him your mission." />
-			<missionstate id="4" description="Ask Azerus for a mission." />
-		</mission>
-		<mission name="Mission 09: Decision" storageid="12249" startvalue="1" endvalue="2">
-			<missionstate id="1" description="You now need to decide between supporting Palimuth or the Yalahari's goal. To choose Palimuth's good side go to him, and simply ask him for a mission mission. Likewise, to join the Yalahari (Azerus) (bad side) go to him and say the same." />
-			<missionstate id="2" description="you already decided!" />
-		</mission>
-		<mission name="Mission 10: The Final Battle" storageid="12250" startvalue="1" endvalue="5">
-			<missionstate id="1" description="Palimuth told you that a circle of Yalahari is planning some kind of ritual. They plan to create a portal for some powerful demons and to unleash them in the city to 'purge' it once and for all." />
-			<missionstate id="2" description="The entrance to their inner sanctum has been opened for you. Be prepared for a HARD battle! Better gather some friends to assist you." />
-			<missionstate id="3" description="Report back to whichever principal you have chosen to help and you will receive Yalaharian Outfits." />
-			<missionstate id="4" description="You got the access to the reward room. Choose carefully which reward you pick as you can only take one item." />
-			<missionstate id="5" description="You have completed the Quest!" />
-		</mission>
-	</quest>
-	<quest name="Killing in the Name of..." startstorageid="100157" startstoragevalue="1">
-
-	<!-- killing in the name of rank -->
-		<mission name="Paw and Fur: Member" storageid="2500" startvalue="0" endvalue="10" description="You are member of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
-		<mission name="Paw and Fur: Ranger" storageid="2500" startvalue="11" endvalue="20" description="You are Ranger of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
-		<mission name="Paw and Fur: Big Game Hunter" storageid="2500" startvalue="21" endvalue="40" description="You are Big Game Hunter in the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
-		<mission name="Paw and Fur: Trophy Hunter" storageid="2500" startvalue="41" endvalue="70" description="You are Trophy Hunter in the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points. Ask Grizzly Adams for 'special task' he might have something for you." />
-		<mission name="Paw and Fur: Elite Hunter" storageid="2500" startvalue="71" endvalue="100" description="You have obtained the highest possible rank in the Paw and Fur hunting elite, you are Elite Hunter. You currently have |STATE| Paw &amp; Fur points. Ask Grizzly Adams for 'special task' he might have something for you." />
-
-	<!-- special tasks for killing in the name of -->
-		<mission name="Paw and Fur: Tiquandas Revenge" storageid="22555" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Grizzly Adams told you that there is Tiquandas Revenge hiding somewhere in the jungle of Port Hope. Go find its hideout and kill it." />
-			<missionstate id="2" description="You have slained the Tiquandas Revenge." />
-		</mission>
-		<mission name="Paw and Fur: Demodras" storageid="22556" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Grizzly Adams wanted you to go look for Demodras'  hideout. He also mentioned that it might be somewhere under the Plains of Havoc." />
-			<missionstate id="2" description="You have slained the Demodras." />
-		</mission>
-
-	<!-- Short questlog for bosses, when they have the correct storage. (atm disspears from questlog after jumping into tp)-->
-		<mission name="Paw and Fur: The Snapper" storageid="35000" startvalue="1" endvalue="2" description="Grizzly told you about the Snapper, a crocodile that already killed many citizens of Port Hope. Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Hide" storageid="35001" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Deathbine" storageid="35002" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: The Bloodtusk" storageid="35003" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Shardhead" storageid="35004" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Esmerelda" storageid="35005" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Fleshcrawler" storageid="35006" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Ribstride" storageid="35007" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Bloodweb" storageid="35008" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Thul" storageid="35009" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: The Old Widow" storageid="35010" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Hemming" storageid="35011" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Tormentor" storageid="35012" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Flameborn" storageid="35013" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Fazzrah" storageid="35014" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Tromphonyte" storageid="35015" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Sulphur Scuttler" storageid="35016" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-	<!--missing 	<mission name="Paw and Fur: Sulphur Scuttler" storageid="35017" startvalue="1" endvalue="2" description="Try find its hideout and kill it." /> -->
-		<mission name="Paw and Fur: The Many" storageid="35018" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: The Noxious Spawn" storageid="35019" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Gorgo" storageid="35020" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Stonecracker" storageid="35021" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Leviathan" storageid="35022" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Kerberos" storageid="35023" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Ethershreck" storageid="35024" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Paiz the Pauperizer" storageid="35025" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Bretzecutioner" storageid="35026" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-		<mission name="Paw and Fur: Zanakeph" storageid="35027" startvalue="1" endvalue="2" description="Try find its hideout and kill it." />
-
-
-
-		<!--s for level 6 to 49 -->
-		<mission name="Edron City - Elite Hunting: Trolls" storageid="1501" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 trolls." />
-		<mission name="Edron City - Elite Hunting: Goblins" storageid="1502" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 goblins." />
-		<mission name="Paw and Fur: Trolls" storageid="65001" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 trolls." />
-		<mission name="Paw and Fur: Globins" storageid="65002" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 globins." />
-		<mission name="Paw and Fur: Crocodiles" storageid="65003" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 crocodiles." />
-		<mission name="Paw and Fur: Badgers" storageid="65004" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 badgers." />
-		<mission name="Paw and Fur: Tarantulas" storageid="65005" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 tarantulas." />
-		<mission name="Paw and Fur: Carniphilas" storageid="65006" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 carniphilas." />
-		<mission name="Paw and Fur: Stone Golems" storageid="65007" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 stone golems." />
-		<mission name="Paw and Fur: Mammoths" storageid="65008" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 mammoths." />
-		<mission name="Paw and Fur: Gnarlhounds" storageid="65009" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 gnarlhounds." />
-		<mission name="Paw and Fur: Terramites" storageid="65010" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 terramites." />
-		<mission name="Paw and Fur: Apes" storageid="65011" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 apes." />
-		<mission name="Paw and Fur: Thornback Tortoises" storageid="65012" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 thornback tortoises." />
-		<mission name="Paw and Fur: Gargoyles" storageid="65013" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 gargoyles." />
-
-		<!--Tasks for level 50 to 79 -->
-		<mission name="Paw and Fur: Ice Golems" storageid="65014" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 ice golems." />
-		<mission name="Paw and Fur: Quara Scouts" storageid="65015" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 quara scouts." />
-		<mission name="Paw and Fur: Mutated Rats" storageid="65016" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 mutated rats." />
-		<mission name="Paw and Fur: Ancient Scarabs" storageid="65017" startvalue="0" endvalue="250" description="You already hunted |STATE|/250 ancient scarabs." />
-		<mission name="Paw and Fur: Wyverns" storageid="65018" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 wyverns." />
-		<mission name="Paw and Fur: Lancer Beetles" storageid="65019" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 lancer beetles." />
-		<mission name="Paw and Fur: Wailing Widows" storageid="65020" startvalue="0" endvalue="400" description="You already hunted |STATE|/300 wailing widows." />
-		<mission name="Paw and Fur: Killer Caimans" storageid="65021" startvalue="0" endvalue="250" description="You already hunted |STATE|/300 killer caimans." />
-		<mission name="Paw and Fur: Bonebeasts" storageid="65022" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 bonebeasts." />
-		<mission name="Paw and Fur: Crystal Spiders" storageid="65023" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 crystal spiders." />
-		<mission name="Paw and Fur: Mutated Tigers" storageid="65024" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 mutated tigers." />
-
-		<!--s for level 80 to 129 -->
-		<mission name="Paw and Fur: Underwater Quara" storageid="65025" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 underwater quara." />
-		<mission name="Paw and Fur: Giant Spiders" storageid="65026" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 giant spiders." />
-		<mission name="Paw and Fur: Werewolves" storageid="65027" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 werewolves." />
-		<mission name="Paw and Fur: Nightmares" storageid="65028" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 nightmares." />
-		<mission name="Paw and Fur: Hellspawns" storageid="65029" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 hellspawns." />
-		<mission name="Paw and Fur: High Class Lizards" storageid="65030" startvalue="0" endvalue="800" description="You already hunted |STATE|/800 high class lizards." />
-		<mission name="Paw and Fur: Stampors" storageid="65031" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 stampors." />
-		<mission name="Paw and Fur: Brimstone Bugs" storageid="65032" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 brimstone bugs." />
-		<mission name="Paw and Fur: Mutated Bats" storageid="65033" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 mutated bats." />
-
-		<!--s for level 130+ -->
-		<mission name="Paw and Fur: Hydras" storageid="65034" startvalue="0" endvalue="650" description="You already hunted |STATE|/650 hydras." />
-		<mission name="Paw and Fur: Serpent Spawns" storageid="65035" startvalue="0" endvalue="800" description="You already hunted |STATE|/800 serpent spawns." />
-		<mission name="Paw and Fur: Medusas" storageid="65036" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 medusas." />
-		<mission name="Paw and Fur: Behemoths" storageid="65037" startvalue="0" endvalue="700" description="You already hunted |STATE|/700 behemoths." />
-		<mission name="Paw and Fur: Sea Serpents and Young Sea Serpents" storageid="65038" startvalue="0" endvalue="900" description="You already hunted |STATE|/900 sea serpents and young sea serpents." />
-		<mission name="Paw and Fur: Hellhounds" storageid="65039" startvalue="0" endvalue="250" description="You already hunted |STATE|/250 hellhounds." />
-		<mission name="Paw and Fur: Ghastly Dragons" storageid="65040" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 ghastly dragons." />
-		<mission name="Paw and Fur: Drakens" storageid="65041" startvalue="0" endvalue="900" description="You already hunted |STATE|/900 drakens." />
-		<mission name="Paw and Fur: Destroyers" storageid="65042" startvalue="0" endvalue="650" description="You already hunted |STATE|/650 destroyers." />
-		<mission name="Paw and Fur: Undead Dragons" storageid="65043" startvalue="0" endvalue="400" description="You already hunted |STATE|/400 undead dragons." />
-
-		<!-- Specials -->
-		<mission name="Paw and Fur: Demons" storageid="65044" startvalue="0" endvalue="6666" description="You already hunted |STATE|/6666 demons." />
-		<mission name="Paw and Fur: Green Djinns or Efreets" storageid="65045" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 green djinns or efreets." />
-		<mission name="Paw and Fur: Blue Djinns or Marids" storageid="65046" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 blue djinns or marids." />
-		<mission name="Paw and Fur: Pirates" storageid="65047" startvalue="0" endvalue="3000" description="You already hunted |STATE|/3000 pirates." />
-		<mission name="Paw and Fur: Pirates Second" storageid="65048" startvalue="0" endvalue="3000" description="You already hunted |STATE|/3000 pirates." />
-		<mission name="Paw and Fur: Minotaurs" storageid="65049" startvalue="0" endvalue="5000" description="You already hunted |STATE|/5000 minotaurs." />
-		<mission name="Paw and Fur: Necromancers and Priestess" storageid="65050" startvalue="0" endvalue="4000" description="You already hunted |STATE|/4000 necromancers and priestess." />
-		<mission name="Paw and Fur: Necromancers and Priestess Second" storageid="65050" startvalue="0" endvalue="1000" description="You already hunted |STATE|/1000 necromancers and priestess." />
-	</quest>
 	<quest name="Outfit and Addon Quests" startstorageid="17594" startstoragevalue="1">
 		<mission name="Assassin Addon: The Red Death" storageid="50082" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Atrad wants only two items from you for his old katana: a behemoth claw and a nose ring, both at the same time. He also told you about a &quot;horned fox&quot; who wears such as nose ring" />
@@ -417,19 +226,20 @@
 			<missionstate id="5" description="You have delivered all items required for the helmet addon. Go talk to Sam and tell him Gregor sent you. He will be glad to refine your helmet." />
 			<missionstate id="6" description="Sam is currently creating the helmet for you. Be patient and don't forget to check on it later!" />
 		</mission>
-		<mission name="Mage &amp; Summoner Outfit Quest (Wand)" storageid="12061" startvalue="1" endvalue="6">
+		<!-- /\ -->
+		<mission name="Mage &amp; Summoner Addon: Wand" storageid="17549" startvalue="1" endvalue="7">
 			<missionstate id="1" description="You found Angelina in a Prison. She told you a secret: Lynda in Thais can create a blessed wand. Greet her from Angelina, maybe she will aid you." />
-			<missionstate id="2" description="Lynda send you to bring her a sample of all five wands and five rods (Snakebite, Moonlight, Necrotic, Terra, Hailstorm, Vortex, Dragonbreath, Decay, Cosmic Energy and Inferno)" />
+			<missionstate id="2" description="Lynda send you to bring her a sample of all five wands and five rods (Snakebite, Moonlight, Volcanic, Quagmire, Tempest, Vortex, Dragonbreath, Plague, Cosmic Energy and Inferno)" />
 			<missionstate id="3" description="Bring Lynda 10 ounces of magic sulphur" />
 			<missionstate id="4" description="Bring Lynda the Necromancer's soul stone" />
 			<missionstate id="5" description="Bring Lynda 20 ankhs now to complete the ritual." />
-			<missionstate id="6" description="You got the Outfit!" />
+			<missionstate id="6" description="Lynda is currently preparing a ritual for you. Be patient and don't forget to check on it later!" />
+			<missionstate id="7" description="You got the Outfit!" />
 		</mission>
-		<mission name="Mage &amp; Summoner Outfit Quest (Fluid Belt)" storageid="12062" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Now you can get a lottery ticket at Sandra for 100 empty vials." />
-			<missionstate id="2" description="You got the Outfit! Now you can get for a lottery prize 50000 gold!" />
+		<mission name="Mage &amp; Summoner Addon: Fluid Belt" storageid="17546" startvalue="1" endvalue="1">
+			<missionstate id="1" description="You got the Outfit!" />
 		</mission>
-		<mission name="Female Mage and Male Summoner Addon: Headgear" storageid="12063" startvalue="1" endvalue="11">
+		<mission name="Mage Tiara and Summoner Cloak" storageid="17547" startvalue="1" endvalue="12">
 			<missionstate id="1" description="Your current task is to bring 70 bat wings to Myra in Port Hope." />
 			<missionstate id="2" description="Your current task is to bring 20 pieces of red cloth to Myra in Port Hope. These are said to make an excellent material for a cape." />
 			<missionstate id="3" description="Your current task is to bring 40 pieces of ape fur to Myra in Port Hope." />
@@ -439,13 +249,11 @@
 			<missionstate id="7" description="Your current task is to bring 40 red dragon scales to Myra in Port Hope." />
 			<missionstate id="8" description="Your current task is to bring 15 ounces of magic sulphur to Myra in Port Hope. Djinns are said to be good at extracting magic sulphur." />
 			<missionstate id="9" description="Your current task is to bring 30 ounces of vampire dusts to Myra in Port Hope. You might need to ask a priest for a special blessed stake to turn vampires into dust." />
-			<missionstate id="10" description="You finally collected all of the items which Myra asked for. Go talk to Zoltan in Edron and tell him that Myra nominated you for an award." />
+			<missionstate id="10" description="You finally collected all of the items which Myra asked for. You should ask about reward from her." />
+			<missionstate id="11" description="Go talk to Zoltan in Edron and tell him that Myra nominated you for an award." />
+			<missionstate id="12" description="You got the Outfit!" />
 		</mission>
-		<mission name="Norseman Outfit Quest" storageid="12065" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Bring Hjaern 5 frostheart shards to get the first Addon. Ask him for shard!" />
-			<missionstate id="2" description="Bring Hjaern 10 frostheart shards to get the second Addon. Ask him for shard!" />
-			<missionstate id="3" description="You got the Outfit Addons! You can trade the rest shards to Hjaern for 2000 gold each!" />
-		</mission>
+		<!-- Todo missing other parts -->
 		<mission name="Warrior Addon: Shoulder Spike" storageid="12067" startvalue="1" endvalue="7">
 			<missionstate id="1" description="Your current task is to bring 100 hardened bones to Trisha in Carlin. They can sometimes be extracted from creatures that consist only of - you guessed it, bones. You need an obsidian knife though." />
 			<missionstate id="2" description="Your current task is to bring 100 turtle shells to Trisha in Carlin. Turtles can be found on some idyllic islands which have recently been discovered." />
@@ -455,7 +263,7 @@
 			<missionstate id="6" description="Cornelia is currently creating the should spikes for you. Be patient and don't forget to check on it later!" />
 			<missionstate id="7" description="You have obtained the shoulder spike addon." />
 		</mission>
-		<mission name="Wizard Outfits Quest" storageid="12066" startvalue="1" endvalue="7">
+		<mission name="Wizard Outfits Quest" storageid="17561" startvalue="1" endvalue="7">
 			<missionstate id="1" description="Bring Lugri the Medusa shield!" />
 			<missionstate id="2" description="Bring Lugri the Dragon Scale Mail!" />
 			<missionstate id="3" description="Bring Lugri the Crown Legs!" />
@@ -464,6 +272,7 @@
 			<missionstate id="6" description="Bring The Queen Of The Banshees 50 Holy Orchids and she will reward you with the second addon." />
 			<missionstate id="7" description="You got the second Outfit Addon!" />
 		</mission>
+		<!-- Todo missing other parts -->
 		<mission name="Pirate Outfit Quest (Sabre)" storageid="50002" startvalue="1" endvalue="5">
 			<missionstate id="1" description="Bring Duncan 100 Eye Patches from pirates!" />
 			<missionstate id="2" description="Bring Duncan 100 peg legs from pirates!" />
@@ -471,7 +280,6 @@
 			<missionstate id="4" description="Go to Morgan and tell him this codeword: 'firebird' to get the outfit addon!" />
 			<missionstate id="5" description="You got the Outfit Addon!" />
 		</mission>
-		<!-- /\ -->
 		<mission name="Oriental Addon: Hipwear" storageid="17555" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Your current task is to find a mermaid's comb. If you have ever encountered a mermaid, you should ask her. Bring the comb to Habdel if you are male or to Ishina if you are female." />
 			<missionstate id="2" description="You have received the first oriental addon." />
