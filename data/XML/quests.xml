@@ -489,132 +489,25 @@
 			<missionstate id="1" description="Your current task is to collect 5 tribal masks from the dworcs and 5 banana staves from the apes. Bring them to Chondur to earn your shamanic mask." />
 		</mission>
 	</quest>
-	<quest name="Sam's Old Backpack" startstorageid="330" startstoragevalue="1">
-		<mission name="Dwarven Armor Quest" storageid="330" startvalue="1" endvalue="3">
+	<!-- /\ -->
+	<quest name="Sam's Old Backpack" startstorageid="289" startstoragevalue="1">
+		<mission name="Old And Used Backpack Quest" storageid="289" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Sam sends you to see Kroox in Kazordoon to get a special dwarven armor. Just tell him, his old buddy Sam is sending you." />
 			<missionstate id="2" description="You have the permission to retrive a dwarven armor from the mines. The problem is, some giant spiders made the tunnels where the storage is their new home." />
-			<missionstate id="3" description="You have completed Dwarven Armor Quest!" />
 		</mission>
+		<mission name="Dwarven Armor Quest" storageid="290" startvalue="1" endvalue="1" description="You have completed Dwarven Armor Quest!" />
 	</quest>
-	<quest name="Sea of Light" startstorageid="50250" startstoragevalue="1">
-		<mission name="Mission 1: The Plans" storageid="50251" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Spectulus in Edron has sent you on a mission to find out the whereabouts of a certain inventor. A beggar in Edron seems to know more about this topic than he wants to tell." />
-			<missionstate id="2" description="The beggar turned out to be the inventor himself. You successfully convinced him to give you the only remaining plans of his creation. You should return to Spectulus in Edron to tell him the news." />
-			<missionstate id="3" description="You gave the plans to the astronomer. He began reconstructing the invention as soon as he got ahold of them. It will take a while for him to work out the problem which caused the initial failure." />
-			<missionstate id="4" description="You returned to Speculus who finally worked out the failure of the initial construction. He recapitulated the plans and needs only one item before he can start building the magic device." />
-		</mission>
-		<mission name="Mission 2: The Collector" storageid="50252" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Spectulus asked you to enter the Lost Mines beneath Edron and recover a rare crystal. In exchange for it you will gain access to the lair of the Collector who guards a vital component of the device." />
-			<missionstate id="2" description="Luckily, you survived the horrors of the Lost Mines and recovered a rare crystal. You should visit Spectulus in Edron to seek counsel on what to do next." />
-			<missionstate id="3" description="You returned to astronomer Spectulus and gave him the rare crystal." />
-		</mission>
-		<mission name="Mission 3: The Mirror Crystal" storageid="50253" startvalue="1" endvalue="4">
-			<missionstate id="1" description="In order to access the lair of the Collector, you will need to find the creature's well on an ice isle near Carlin. To donate the rare crystal overcome your greed and use it at the well's pedestal." />
-			<missionstate id="2" description="You offered the rare crystal to the creature and can now enter the Collector's lair. Its crystal chamber cannot be accessed by outsiders. You need to find a way to snatch the Mirror Crystal." />
-			<missionstate id="3" description="The Collector has been defeated. You packed the fragile Mirror Crystal into the device Spectulus gave you. All yo have to do now is to return to the astronomer and to present him your acquisition." />
-			<missionstate id="4" description="It may have been the excitement or simple nervousness but as soon as Spectulus removed the crystal, it somehow slipped. Unfinishable for all eternity, the device left yet another scholar in despair." />
-		</mission>
+	<quest name="The Ancient Tombs" startstorageid="267" startstoragevalue="1">
+		<mission name="Omruc's Treasure" storageid="267" startvalue="1" endvalue="1" description="You defeated Omruc and received a helmet adornment" />
+		<mission name="Thalas' Treasure" storageid="262" startvalue="1" endvalue="1" description="You defeated Thalas and received a Gem Holder" />
+		<mission name="Diphtrah's Treasure" storageid="265" startvalue="1" endvalue="1" description="You defeated Dipthrah and received a Damaged Helmet" />
+		<mission name="Mahrdis' Treasure" storageid="261" startvalue="1" endvalue="1" description="You defeated Mahrdis and received a Helmet Ornament" />
+		<mission name="Vashresamun's Treasure" storageid="264" startvalue="1" endvalue="1" description="You solved the musical riddles of Vashresamun's Tomb and received a left horn." />
+		<mission name="Morguthis' Treasure" storageid="263" startvalue="1" endvalue="1" description="You defeated Morguthis and received a Right Horn" />
+		<mission name="Rahemos' Treasure" storageid="266" startvalue="1" endvalue="1" description="You defeated Rahemos and received a Helmet Piece" />
 	</quest>
-	<quest name="Secret Service" startstorageid="12550" startstoragevalue="1">
-		<mission name="Mission 1: From Thais with Love" storageid="12551" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your first mission is to deliver a warning to the Venoreans. Get a fire bug from Liberty Bay and set their shipyard on fire." />
-			<missionstate id="2" description="You have set the Venoreans shipyard on fire, report back to Chester!" />
-			<missionstate id="3" description="You have reported back that you have completed your mission, ask Chester for a new mission!" />
-		</mission>
-		<mission name="Mission 1: For Your Eyes Only" storageid="12552" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Your first task is to deliver a letter to Gamel in thais, If he is a bit reluctant, be persuasive." />
-			<missionstate id="2" description="Gamel sent his thugs on you, defeat them and deliver the letter to Gamel!" />
-			<missionstate id="3" description="After defeating Gamel's thugs, he found you to be persuasive enough to accept the letter. Report back to Uncle!" />
-			<missionstate id="4" description="You have reported back that you have completed your task. Ask Uncle for a new mission!" />
-		</mission>
-		<mission name="Mission 1: Borrowed Knowledge" storageid="12553" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Emma has requested that you steal a Nature Magic Spellbook in the Edron academy." />
-			<missionstate id="2" description="You have delivered the Nature Magic Spellbook to Emma, ask her for a new mission!" />
-		</mission>
-		<mission name="Mission 2: Operation Green Claw" storageid="12554" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your next mission is to find some information about one of their missing agents in The Green Claw Swamp." />
-			<missionstate id="2" description="You have delivered the Black Knight's notes to Chester, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 2: A File Between Friends" storageid="12555" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your next task is to retrieve a file named AH-X17L89." />
-			<missionstate id="2" description="You have delivered the file named AH-X17L89 to Uncle, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 2: Codename:Lumberjack" storageid="12556" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Emma has requested that you retrieve a Rotten Heart of a Tree from the Black Knight Villa in Greenclaw swamp north-west of Venore." />
-			<missionstate id="2" description="You have delivered the Rotten Heart of a Tree to Emma, ask her for a new mission!" />
-		</mission>
-		<mission name="Mission 3: Treachery in Port Hope" storageid="12557" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your next mission is to retrieve some evidence that the traders in Port Hope are up to no good!" />
-			<missionstate id="2" description="You have found the evidence, report back to Chester!" />
-			<missionstate id="3" description="You have reported back that you have completed your mission, ask Chester for a new mission!" />
-		</mission>
-		<mission name="Mission 3: What Men are Made of" storageid="12558" startvalue="1" endvalue="4">
-			<missionstate id="1" description="Your next task is to bring a barrel of beer to the Secret Tavern in the sewers of Carlin." />
-			<missionstate id="2" description="On your way to the Secret Tavern in the sewers you were attacked by amazons trying to stop you! Deliver the barrel of beer to Karl." />
-			<missionstate id="3" description="You have delivered the barrel of beer to Karl, report back to Uncle!" />
-			<missionstate id="4" description="You have reported back that you have completed your task, ask Uncle for a new mission!" />
-		</mission>
-		<mission name="Mission 3: Rust in Peace" storageid="12559" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Emma has requested that you damage the Ironhouse of Venore, use the Case of Rust Bugs on the keyhole in the cellar of the ironhouse." />
-			<missionstate id="2" description="The bugs are at work! Report back to Emma." />
-			<missionstate id="3" description="You have reported back that you have completed your mission, ask her for a new mission!" />
-		</mission>
-		<mission name="Mission 4: Objective Hellgate" storageid="12560" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your next mission is to investigate for some documents in Hellgate." />
-			<missionstate id="2" description="You have delivered the documents to Chester, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 4: Pawn Captures Knight" storageid="12561" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your next task is to travel to the Black Knight's Villa and kill the Black Knight!" />
-			<missionstate id="2" description="You have killed the Black Knight, report back to Uncle!" />
-			<missionstate id="3" description="You have reported back that you have completed your task, ask Uncle for a new mission!" />
-		</mission>
-		<mission name="Mission 4: Plot for A Plan" storageid="12562" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Emma has requested that you retrieve the Building Plans for a ship from the Venore shipyard." />
-			<missionstate id="2" description="You have delivered the Building Plans to Emma, ask her for a new mission!" />
-		</mission>
-		<mission name="Mission 5: Coldfinger" storageid="12563" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your next mission is to travel to the southern barbarians camp and place false evidence!" />
-			<missionstate id="2" description="You have placed the false evidence! Report back to Chester." />
-			<missionstate id="3" description="You have reported back that you have completed your mission, ask Chester for a new mission!" />
-		</mission>
-		<mission name="Mission 5: A Cryptic Mission" storageid="12564" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your next task is to travel to the Isle of the Kings and find a ring." />
-			<missionstate id="2" description="You have delivered the ring to Uncle, ask him for a new mission!" />
-		</mission>
-		<mission name="Mission 5: No Admittance" storageid="12565" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Emma has requested that you find some hints in the ruins of Dark Cathedral." />
-			<missionstate id="2" description="You have delivered the Suspicious Documents to Emma, ask her for a new mission!" />
-		</mission>
-		<mission name="Mission 6: The Weakest Spot" storageid="12566" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your next mission is to disguise yourself as an amazon and destroy a beer casket in the north-east corner in the cellar of Svargrond's Tavern." />
-			<missionstate id="2" description="You have succesfully destroyed the beer casket disguised as an amazon, report back to Chester!" />
-			<missionstate id="3" description="You have reported back that you have completed your mission, ask Chester for a new mission!" />
-		</mission>
-		<mission name="Mission 6: A Little Bribe Won't Hurt" storageid="12567" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your next task is to bribe a barbarian in the large barbarian camp with a weapons crate." />
-			<missionstate id="2" description="You have bribed Freezhild with the weapons create! Report back to Uncle." />
-			<missionstate id="3" description="You have reported back that you have completed your task, ask Uncle for a new mission!" />
-		</mission>
-		<mission name="Mission 6: News From the Past" storageid="12568" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Emma has requested that you go to the Isle of the Kings and retrieve a book." />
-			<missionstate id="2" description="You have delivered the book to Emma, ask her for a new mission!" />
-		</mission>
-		<mission name="Mission 7: Licence to Kill" storageid="12569" startvalue="1" endvalue="2">
-			<missionstate id="1" description="A Mad Technomancer in Kazordoon is trying to blackmail the city! Kill him and bring back his beard as proof." />
-			<missionstate id="2" description="You have reported back that you have completed your mission, you are now a Special Agent!" />
-		</mission>
-	</quest>
-	<quest name="The Ancient Tombs" startstorageid="12100" startstoragevalue="1">
-		<mission name="Omruc's Treasure" storageid="12101" startvalue="1" endvalue="1" description="You defeated Omruc and received a helmet adornment" />
-		<mission name="Thalas' Treasure" storageid="12102" startvalue="1" endvalue="1" description="You defeated Thalas and received a Gem Holder" />
-		<mission name="Diphtrah's Treasure" storageid="12103" startvalue="1" endvalue="1" description="You defeated Dipthrah and received a Damaged Helmet" />
-		<mission name="Mahrdis' Treasure" storageid="12104" startvalue="1" endvalue="1" description="You defeated Mahrdis and received a Helmet Ornament" />
-		<mission name="Vashresamun's Treasure" storageid="12105" startvalue="1" endvalue="1" description="You solved the musical riddles of Vashresamun's Tomb and received a left horn." />
-		<mission name="Morguthis' Treasure" storageid="12106" startvalue="1" endvalue="1" description="You defeated Morguthis and received a Right Horn" />
-		<mission name="Rahemos' Treasure" storageid="12107" startvalue="1" endvalue="1" description="You defeated Rahemos and received a Helmet Piece" />
-	</quest>
-	<quest name="The Ape City" startstorageid="12120" startstoragevalue="1">
-		<mission name="Hairycles' Missions" storageid="12121" startvalue="1" endvalue="18">
+	<quest name="The Ape City" startstorageid="293" startstoragevalue="1">
+		<mission name="Hairycles' Missions" storageid="293" startvalue="1" endvalue="18">
 			<missionstate id="1" description="Find whisper moss in the dworc settlement south of Port Hope and bring it back to Hairycles." />
 			<missionstate id="2" description="You have completed the first mission. Hairycles was happy about the whisper moss you gave to him. He might have another mission for you." />
 			<missionstate id="3" description="Hairycles asked you to bring him cough syrup from a human settlement. A healer might know more about this medicine." />
@@ -635,7 +528,6 @@
 			<missionstate id="18" description="You successfully destroyed the monument of the snake god. As reward, you can buy sacred statues from Hairycles. If you haven't done so yet, you should also ask him for a shaman outfit." />
 		</mission>
 	</quest>
-	<!-- /\ -->
 	<quest name="The Djinn War - Efreet Faction" startstorageid="286" startstoragevalue="1">
 		<mission name="Efreet Mission 1: The Supply Thief" storageid="286" startvalue="1" endvalue="3">
 			<missionstate id="1" description="Travel to Thais and keep your eyes open for something that might give you a clue on the supply thief." />
