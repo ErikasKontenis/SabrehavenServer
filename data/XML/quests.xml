@@ -272,8 +272,7 @@
 			<missionstate id="6" description="Bring The Queen Of The Banshees 50 Holy Orchids and she will reward you with the second addon." />
 			<missionstate id="7" description="You got the second Outfit Addon!" />
 		</mission>
-		<!-- Todo missing other parts -->
-		<mission name="Pirate Outfit Quest (Sabre)" storageid="50002" startvalue="1" endvalue="5">
+		<mission name="Pirate Outfit Quest (Sabre)" storageid="17567" startvalue="1" endvalue="5">
 			<missionstate id="1" description="Bring Duncan 100 Eye Patches from pirates!" />
 			<missionstate id="2" description="Bring Duncan 100 peg legs from pirates!" />
 			<missionstate id="3" description="Bring Duncan 100 pirate hooks from pirates!" />
