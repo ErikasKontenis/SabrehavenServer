@@ -351,7 +351,7 @@
 		<mission name="Paw and Fur: Necromancers and Priestess" storageid="65050" startvalue="0" endvalue="4000" description="You already hunted |STATE|/4000 necromancers and priestess." />
 		<mission name="Paw and Fur: Necromancers and Priestess Second" storageid="65050" startvalue="0" endvalue="1000" description="You already hunted |STATE|/1000 necromancers and priestess." />
 	</quest>
-	<quest name="Outfit and Addon Quests" startstorageid="12010" startstoragevalue="1">
+	<quest name="Outfit and Addon Quests" startstorageid="17594" startstoragevalue="1">
 		<mission name="Assassin Addon: The Red Death" storageid="50082" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Atrad wants only two items from you for his old katana: a behemoth claw and a nose ring, both at the same time. He also told you about a &quot;horned fox&quot; who wears such as nose ring" />
 			<missionstate id="2" description="You have received the second assassin addon." />
@@ -482,14 +482,16 @@
 			<missionstate id="4" description="Your current task is to bring 100 pieces of blue cloth to Razan if you are male, or to Miraia if you are female." />
 			<missionstate id="5" description="You have received the second oriental addon." />
 		</mission>
-		<mission name="Shaman Addon: Staff" storageid="15001" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Try to find a monster which sometimes lurks in the Tiquandian jungle as the revenge of the jungle against mankind. Bring the rare root it carries to Chondur as well as 5 voodoo dolls." />
+		<!-- /\ -->
+		<mission name="Shaman Addon: Staff" storageid="17570" startvalue="2" endvalue="3" ignoreendvalue="true">
+			<missionstate id="2" description="Try to find a monster which sometimes lurks in the Tiquandian jungle as the revenge of the jungle against mankind. Bring the rare root it carries to Chondur as well as 5 voodoo dolls." />
+			<missionstate id="3" description="You have received the first shaman addon." />
 		</mission>
-		<mission name="Shaman Addon: Mask" storageid="15002" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your current task is to collect 5 tribal masks from the dworcs and 5 banana staves from the apes. Bring them to Chondur to earn your shamanic mask." />
+		<mission name="Shaman Addon: Mask" storageid="17570" startvalue="4" endvalue="5" ignoreendvalue="true">
+			<missionstate id="4" description="Your current task is to collect 5 tribal masks from the dworcs and 5 banana staves from the apes. Bring them to Chondur to earn your shamanic mask." />
+			<missionstate id="5" description="You have received the second shaman addon." />
 		</mission>
 	</quest>
-	<!-- /\ -->
 	<quest name="Sam's Old Backpack" startstorageid="289" startstoragevalue="1">
 		<mission name="Old And Used Backpack Quest" storageid="289" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Sam sends you to see Kroox in Kazordoon to get a special dwarven armor. Just tell him, his old buddy Sam is sending you." />
