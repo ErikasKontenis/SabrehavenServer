@@ -218,15 +218,15 @@
 			<missionstate id="4" description="Bring Elane one piece of royal steel, draconian steel and hell steel each." />
 			<missionstate id="5" description="You got the Outfit!" />
 		</mission>
-		<mission name="Knight Addon: Helmet" storageid="12154" startvalue="1" endvalue="6">
+		<!-- /\ -->
+		<mission name="Knight Addon: Helmet" storageid="17542" startvalue="1" endvalue="6">
 			<missionstate id="1" description="Your current task is to bring 100 perfect behemoth fangs to Gregor in Thais." />
 			<missionstate id="2" description="Your current task is to retrieve the helmet of Ramsay the Reckless from Banuta. These pesky apes steal everything they can get their dirty hands on." />
 			<missionstate id="3" description="Your current task is to obtain a flask of warrior's sweat, which can be magicially extracted from headgear worn by a true warrior, but only in small amounts. Djinns are said to be good at this." />
 			<missionstate id="4" description="Your current task is to bring royal steel to Gregor in Thais. Royal steel can only be refined by very skilled smiths." />
 			<missionstate id="5" description="You have delivered all items required for the helmet addon. Go talk to Sam and tell him Gregor sent you. He will be glad to refine your helmet." />
-			<missionstate id="6" description="Sam is currently creating the helmet for you. Be patient and don't forget to check on it later!" />
+			<missionstate id="6" description="You got the Outfit!" />
 		</mission>
-		<!-- /\ -->
 		<mission name="Mage &amp; Summoner Addon: Wand" storageid="17549" startvalue="1" endvalue="7">
 			<missionstate id="1" description="You found Angelina in a Prison. She told you a secret: Lynda in Thais can create a blessed wand. Greet her from Angelina, maybe she will aid you." />
 			<missionstate id="2" description="Lynda send you to bring her a sample of all five wands and five rods (Snakebite, Moonlight, Volcanic, Quagmire, Tempest, Vortex, Dragonbreath, Plague, Cosmic Energy and Inferno)" />
@@ -253,8 +253,7 @@
 			<missionstate id="11" description="Go talk to Zoltan in Edron and tell him that Myra nominated you for an award." />
 			<missionstate id="12" description="You got the Outfit!" />
 		</mission>
-		<!-- Todo missing other parts -->
-		<mission name="Warrior Addon: Shoulder Spike" storageid="12067" startvalue="1" endvalue="7">
+		<mission name="Warrior Addon: Shoulder Spike" storageid="17558" startvalue="1" endvalue="7">
 			<missionstate id="1" description="Your current task is to bring 100 hardened bones to Trisha in Carlin. They can sometimes be extracted from creatures that consist only of - you guessed it, bones. You need an obsidian knife though." />
 			<missionstate id="2" description="Your current task is to bring 100 turtle shells to Trisha in Carlin. Turtles can be found on some idyllic islands which have recently been discovered." />
 			<missionstate id="3" description="Your current task is to show that you have fighting spirit. Maybe someone grants you a wish...?" />
