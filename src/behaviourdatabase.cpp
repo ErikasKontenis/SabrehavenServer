@@ -973,7 +973,7 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 	case BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE: {
 		int32_t questNumber = evaluate(action->expression, player, message);
 		int32_t ticks = evaluate(action->expression2, player, message);
-		player->addStorageValue(questNumber, OTSYS_TIME() + ticks);
+		player->addStorageValue(questNumber, OTSYS_TIME_MINUTES() + (ticks / 60 / 1000));
 		break;
 	}
 	case BEHAVIOUR_TYPE_ADDOUTFITADDON: {
@@ -1201,7 +1201,7 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		int32_t questNumber = evaluate(node->left, player, message);
 		int32_t questValue;
 		player->getStorageValue(questNumber, questValue);
-		return questValue - OTSYS_TIME();
+		return questValue - OTSYS_TIME_MINUTES();
 	}
 	case BEHAVIOUR_TYPE_MESSAGE_COUNT: {
 		int32_t value = searchDigit(message);

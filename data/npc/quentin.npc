@@ -125,7 +125,7 @@ VANISH,!                -> "Remember: If you are heavily wounded or poisoned, I 
 							"However, this prayer needs the combined energy of ten priests. Each of them has to say one line of the prayer. ...",
 							"I could start with the prayer, but since the next priest has to be in a different location, you probably will have to travel a lot. ...",
 							"Is this stake really important enough to you so that you are willing to take this burden?", Topic=1
-Topic=1,"yes" -> "Alright, I guess you need a stake first. Maybe Gamon can help you, the leg of a chair or something could just do. Try asking him for a stake, and if you have one, bring it back to me.", SetQuestValue(17576,1)
+Topic=1,"yes" -> "Alright, I guess you need a stake first. Maybe Gamon can help you, the leg of a chair or something could just do. Try asking him for a stake, and if you have one, bring it back to me.", SetQuestValue(17576,1), SetQuestValue(17595,1)
 Topic=1 -> "Fine. You are free to decline my offer."
 
 "stake",QuestValue(17576)=1,Count(5941)<=0 -> "I guess you couldn't convince Gamon to give you a stake, eh?"

@@ -82,7 +82,7 @@ Topic=2                                   -> "Maybe next time."
 "addon",QuestValue(18501)=0         -> "Pretty, isn't it? My friend Amber taught me how to make it, but I could help you with one if you like. What do you say?", Topic=3
 "hat",QuestValue(18501)=0      -> *
 Topic=3,"yes" -> "Okay, here we go, listen closely! I need a few things... a basic hat of course, maybe a legion helmet would do. Then about 100 chicken feathers...",
-				 "and 50 honeycombs as glue. That's it, come back to me once you gathered it!", SetQuestValue(18501,1)
+				 "and 50 honeycombs as glue. That's it, come back to me once you gathered it!", SetQuestValue(18501,1), SetQuestValue(17594,1)
 Topic=3                                   -> "Maybe another time."
 
 "addon",QuestValue(18501)=1         -> "Oh, you're back already? Did you bring a legion helmet, 100 chicken feathers and 50 honeycombs?", Topic=4

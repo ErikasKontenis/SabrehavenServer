@@ -74,7 +74,7 @@ Topic=6,"yes",Count(Type)>=Amount -> "Cling clang!", Delete(Type), Type=5892, Am
 Topic=6,"yes"                             -> "You not have stuff me want for."
 Topic=6                                   -> "Silly lil' one you are."
 
-Topic=2,"yes"                 -> "Me need gift for woman. We dance, so me want to give her bast skirt. But she big is. So I need many to make big one. Bring three okay? Me wait.", SetQuestValue(17500,1)
+Topic=2,"yes"                 -> "Me need gift for woman. We dance, so me want to give her bast skirt. But she big is. So I need many to make big one. Bring three okay? Me wait.", SetQuestValue(17500,1), SetQuestValue(17595,1)
 
 "bast skirt",QuestValue(17500)=1         -> Type=3560, Amount=3,  "Lil' one bring three bast skirts?", Topic=3
 Topic=3,"yes",Count(Type)>=Amount -> "Good good! Woman happy will be. Now me happy too and help you.", Delete(Type), SetQuestValue(17500,2)

@@ -28,7 +28,7 @@ Topic=1,"yes" -> "Really! That is such an incredibly nice offer! I already have 
 				"This way he might learn that violence doesn't always help, but that a friendly word might just do the trick. ...",
 				"Have you understood everything I told you and are really willing to take this risk?", Topic=2
 Topic=1 -> "Maybe another time."
-Topic=2,"yes" -> "You are indeed not only well educated, but also very courageous. I wish you good luck, you are my last hope.", SetQuestValue(17532,1)
+Topic=2,"yes" -> "You are indeed not only well educated, but also very courageous. I wish you good luck, you are my last hope.", SetQuestValue(17532,1), SetQuestValue(17594,1)
 Topic=2 -> "Maybe another time."
 
 "Brother","is","right","Fist","not","always","good",QuestValue(17532)=3 -> "Oh! He really said that? I am so proud of you, %N. These are really good news. Everything would be great... if only there wasn't this person near my house.", SetQuestValue(17532,4)

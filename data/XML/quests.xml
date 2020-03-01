@@ -1,131 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <quests>
-	<quest name="A Father's Burden" startstorageid="50203" startstoragevalue="1">
-		<mission name="The Birthday Presents" storageid="50205" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Gather the material Tereban listed. Talk to him about your mission when you have given him everything he was looking for." />
-			<missionstate id="2" description="You brought all the required materials to Tereban and guaranteed his sons a great birthday party." />
-		</mission>
-		<mission name="The Magic Bow - Sinew" storageid="50206" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find the wyvern Heoni in the Edron mountains and take his sinew to Tereban." />
-			<missionstate id="2" description="You delivered Heoni's sinew to Tereban." />
-		</mission>
-		<mission name="The Magic Bow - Wood" storageid="50207" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find the special wood in the barbarian camps of Hrodmir and bring it to Tereban. It might be a good idea to start looking in the northernmost camp." />
-			<missionstate id="2" description="You delivered the Wood to Tereban." />
-		</mission>
-		<mission name="The Magic Robe - Cloth" storageid="50208" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find the spectral cloth hidden deep in the crypts of the isle of the kings and bring it to Tereban. You might have to look for a secret entrance." />
-			<missionstate id="2" description="You delivered the spectral cloth to Tereban." />
-		</mission>
-		<mission name="The Magic Robe - Silk" storageid="50209" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find exquisite silk in the spider caves of southern Zao and deliver it to Tereban." />
-			<missionstate id="2" description="You brought Tereban the required silk." />
-		</mission>
-		<mission name="The Magic Rod - Crystal" storageid="50210" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find a magic crystal in the tomb buried under the sand east of Ankrahmun and bring it to Tereban." />
-			<missionstate id="2" description="Tereban received the magic crystal he was looking for." />
-		</mission>
-		<mission name="The Magic Rod - Root" storageid="50211" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find the mystic root under the city of Banuta and bring it to Tereban." />
-			<missionstate id="2" description="The magic root was delievered to Tereban." />
-		</mission>
-		<mission name="The Magic Shield - Iron" storageid="50212" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find some old iron in the mines of Kazordoon for Tereban. Don't get lost - start searching close to the city." />
-			<missionstate id="2" description="Tereban got the old iron he required." />
-		</mission>
-		<mission name="The Magic Shield - Scale" storageid="50213" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Find the dragon Glitterscale in the caves north of Thais and take its scale to Tereban." />
-			<missionstate id="2" description="You handed the looted scale to Tereban." />
-		</mission>
-	</quest>
-	<quest name="Bigfoot's Burden" startstorageid="900" startstoragevalue="1">
-		<mission name="Daily Minor: Crystal Keeper" storageid="932" startvalue="0" endvalue="5" description="Use the repair crystal to repair five damaged blue crystal in the crystal caves. Damaged crystals will not glow. |STATE| / 5" />
-		<mission name="Daily Minor: Raiders of the lost Spark" storageid="934" startvalue="0" endvalue="7" description="Kill crystal crushers and use discharger item on the corpse to collect their charges. Gather 7 charges and report back. |STATE| / 7" />
-		<mission name="Daily Minor Plus: Exterminators" storageid="937" startvalue="0" endvalue="10" description="Kill 10 of the wigglers for the gnomes. Then report back to the gnomes. |STATE| / 10" />
-		<mission name="Daily Minor Plus: Mushroom Digger" storageid="940" startvalue="0" endvalue="3" description="Find a truffle sniffing pig and lure it around. Occasionally it will unearth some truffles. Use the baby pig on the truffles to feed it 3 times. Then report back to the gnomes. |STATE| / 3" />
-		<mission name="Daily Major: Matchmaker" storageid="943" startvalue="0" endvalue="1">
-			<missionstate id="0" description="You have to enter the crystal caves and find a crystal that is fitting the crystal you got from the gnomes. Use the crystal on one of the bigger red crystal in the caves to bond them." />
-			<missionstate id="1" description="You have finished this quest for now." />
-		</mission>
-		<mission name="Daily Major: The Tinker's Bell" storageid="946" startvalue="0" endvalue="4" description="Use the harmonic bell on the mad golems in the golem workshop so that they will automatically be teleported to the gnomish workshops. Then report back to the gnomes. |STATE| / 4" />
-	</quest>
-	<quest name="Barbarian Test Quest" startstorageid="12190" startstoragevalue="1">
-		<mission name="Barbarian Test 1: Barbarian Booze" storageid="12191" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Talk to Sven about mead and give him a honeycomb. For each honeycomb you will be allowed 20 sips." />
-			<missionstate id="2" description="Now drink from the bucket until you drink 10 sips in a row without passing out" />
-			<missionstate id="3" description="You have completed this Test! Talk to Sven about the mead." />
-		</mission>
-		<mission name="Barbarian Test 2: The Bear Hugging" storageid="12192" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Sven gave you a Mead Horn. Fill it with mead from the bucket behind Sven (brown contents) and then proceed to the sleeping bear. The bear is inside a small ice cave in the north. Use the full mead horn on the bear so it becomes unconscious, then use the bear to hug it." />
-			<missionstate id="2" description="You hugging the bear! Go tell Sven that you hugged the bear!" />
-			<missionstate id="3" description="You have completed this Test!" />
-		</mission>
-		<mission name="Barbarian Test 3: The Mammoth Pushing" storageid="12193" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Go to the north-west of Svargrond and find the Mammoth. Drink your three mugs of mead, stand in front of the Mammoth and push it. Just use it..." />
-			<missionstate id="2" description="You pushed the Mammoth! Go tell Sven that you pushed the Mammoth!" />
-			<missionstate id="3" description="You have completed this Test! You can now be a citizen of Svargrond!" />
-		</mission>
-	</quest>
-	<quest name="Children of the Revolution" startstorageid="12300" startstoragevalue="1">
-		<mission name="Prove Your Worzz!" storageid="12301" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Your Mission is to go to a little camp of lizards at north-east of the Dragonblaze Peaks. You have to find and deliver the Tactical map complete the mission." />
-			<missionstate id="2" description="You delivered the Tactical map to Zalamon." />
-		</mission>
-		<mission name="Mission 1: Corruption" storageid="12302" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Go to the Temple of Equilibrium (it's marked on your map) and find out what happened there." />
-			<missionstate id="2" description="The temple has been corrupted and is lost. Zalamon should be informed about this as soon as possible." />
-			<missionstate id="3" description="You already reported Zalamon about the Temple! Ask him for new mission!" />
-		</mission>
-		<mission name="Mission 2: Imperial Zzecret Weaponzz" storageid="12303" startvalue="1" endvalue="5">
-			<missionstate id="1" description="Go into the small camp Chaochai to the north of the Dragonblaze Peaks (Zalamon marks the entrance on your map). There are 3 buildings which you have to spy" />
-			<missionstate id="2" description="You spied 1 of 3 buildings of the camp." />
-			<missionstate id="3" description="You spied 2 of 3 buildings of the camp." />
-			<missionstate id="4" description="You spied 3 of 3 buildings of the camp. Zalamon should be informed about this as soon as possible." />
-			<missionstate id="5" description="You already reported Zalamon about the camp! Ask him for new mission!" />
-		</mission>
-		<mission name="Mission 3: Zee Killing Fieldzz" storageid="12304" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Get the poison from Zalamon's storage room. Then go to the teleporter to the Muggy Plains and head east from there to the rice fields. Go to the very top rice field and use the poison anywhere on the water." />
-			<missionstate id="2" description="The rice has been poisoned. This will weaken the Emperor's army significantly. Return and tell Zalamon about your success." />
-			<missionstate id="3" description="You already reported Zalamon about your success! Ask him for new mission!" />
-		</mission>
-		<mission name="Mission 4: Zze Way of Zztonezz" storageid="12305" startvalue="1" endvalue="6">
-			<missionstate id="1" description="Your mission is to find a way to enter the north of the valley and find a passage to the great gate itself. Search any temples or settlements you come across for hidden passages." />
-			<missionstate id="2" description="Report Zalamon about the strange symbols that you found." />
-			<missionstate id="3" description="Get the greasy oil from Zalamon's storage room and put them on the levers that you found." />
-			<missionstate id="4" description="Due to being extra greasy, the leavers can now be moved." />
-			<missionstate id="5" description="You found the right combination for the puzzle in the mountains and triggered some kind of mechanism. You should head back to Zalamon to report your success." />
-			<missionstate id="6" description="You already reported Zalamon about your success! You got a Tome of Knowledge as reward! Ask him for new mission!" />
-		</mission>
-		<mission name="Mission 5: Phantom Army" storageid="12306" startvalue="1" endvalue="3">
-			<missionstate id="1" description="Your mission is to use the portal in the chamber beyond the mechanism. It will lead you to the great gate." />
-			<missionstate id="2" description="Eternal guardians and lizard chosen has been awaken. Survive them and report it to Zalamon!" />
-			<missionstate id="3" description="You Survived the Waves and reported Zalamon about your success! You got a Serpent Crest as reward!" />
-		</mission>
-	</quest>
-	<quest name="Factions" startstorageid="50716" startstoragevalue="1">
-		<mission name="The Marid and the Efreet - Djinn Greeting" storageid="50717" startvalue="1" endvalue="2">
+	<quest name="Factions" startstorageid="278" startstoragevalue="1">
+		<mission name="The Marid and the Efreet - Djinn Greeting" storageid="278" startvalue="1" endvalue="1" ignoreendvalue="true">
 			<missionstate id="1" description="Melchior told you the word &quot;Djanni'hah&quot; which can be used to talk to Djinns. Be aware that once you become an ally of one Djinn race, you cannot switch sides anymore." />
-			<missionstate id="2" description="" />
 		</mission>
-		<mission name="The Marid and the Efreet - Marid Faction" storageid="50718" startvalue="1" endvalue="2">
-			<missionstate id="1" description="You have joined the Marid. These friendly, blue Djinns are honest and fair allies. You have pledged eternal loyalty to King Gabel and may enter Asha'daramai freely. Djanni'hah!" />
-			<missionstate id="2" description="" />
+		<mission name="The Marid and the Efreet - Marid Faction" storageid="278" startvalue="2" endvalue="2">
+			<missionstate id="2" description="You have joined the Marid. These friendly, blue Djinns are honest and fair allies. You have pledged eternal loyalty to King Gabel and may enter Asha'daramai freely. Djanni'hah!" />
 		</mission>
-		<mission name="The Efreet and the Efreet - Efreet Faction" storageid="50719" startvalue="1" endvalue="2">
-			<missionstate id="1" description="You have joined the Efreet. These evil, green Djinns are always up to mischievous pranks. You have pledged eternal loyalty to King Malor and may enter Mal'ouquah freely. Djanni'hah!" />
-			<missionstate id="2" description="" />
+		<mission name="The Marid and the Efreet - Efreet Faction" storageid="278" startvalue="3" endvalue="3">
+			<missionstate id="3" description="You have joined the Efreet. These evil, green Djinns are always up to mischievous pranks. You have pledged eternal loyalty to King Malor and may enter Mal'ouquah freely. Djanni'hah!" />
 		</mission>
 	</quest>
-	<quest name="Friends and Traders" startstorageid="12400" startstoragevalue="1">
-		<mission name="The Sweaty Cyclops" storageid="12401" startvalue="1" endvalue="2">
+	<quest name="Friends and Traders" startstorageid="17595" startstoragevalue="1">
+		<mission name="The Sweaty Cyclops" storageid="17500" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Big Ben, the cyclops in Ab'Dendriel sends you to bring him 3 bast skirts for his woman. After this he will help you to forge different steel." />
 			<missionstate id="2" description="Big Ben, the cyclops in Ab'Dendriel will help you to forge different steel now. Just ask him if you need something." />
 		</mission>
-		<mission name="The Mermaid Marina" storageid="12402" startvalue="1" endvalue="2">
+		<mission name="The Mermaid Marina" storageid="17504" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Marina, the mermaid north of Sabrehaven sends you to bring her 50 honeycombs. After this she will help you create spool of yarn." />
 			<missionstate id="2" description="Marina, the mermaid north of Sabrehaven will help you to create a spool of yarn from 10 pieces of spider silk. Just ask her if you need something." />
 		</mission>
-		<mission name="The Blessed Stake" storageid="12403" startvalue="1" endvalue="12">
+		<mission name="The Blessed Stake" storageid="17576" startvalue="1" endvalue="12">
 			<missionstate id="1" description="Quentin told you about an old prayer which can bind holy energy to an object. Each of its ten lines has to be recited by a different priest though. Bring Quentin a wooden stake from Gamon to start." />
 			<missionstate id="2" description="You received Quentin's prayer: &quot;Light shall be near - and darkness afar&quot;. Now, bring your stake to Tibra in the Carlin church for the next line of the prayer." />
 			<missionstate id="3" description="You received Tibra's prayer: &quot;Hope may fill your heart - doubt shall be banned&quot;. Now, bring your stake to Maealil in the Elven settlement for the next line of the prayer." />
@@ -140,39 +35,21 @@
 			<missionstate id="12" description="Chondur was surprised to hear that you had to travel through all of Tibia to have your wooden stake blessed. He offered you help with the blessing if you should need one again in the future." />
 		</mission>
 	</quest>
-	<quest name="Hot Cuisine" startstorageid="50022" startstoragevalue="1">
-		<mission name="Hot Cuisine" storageid="50024" startvalue="1" endvalue="16">
-			<missionstate id="1" description="You've become the apprentice of Maltre Jean Pierre. The first dish he will teach you to prepare is Rotworm Stew. Bring him the ingredients he told you." />
-			<missionstate id="2" description="You have completed the first dish, the second dish he will teach you to prepare is Hydra Tongue Salad. Bring him the ingredients he told you." />
-			<missionstate id="3" description="You have completed the second dish, the third dish he will teach you to prepare is Roasted Dragon Wings. Bring him the ingredients he told you." />
-			<missionstate id="4" description="You have completed the third dish, the fourth dish he will teach you to prepare is Tropical Fried Terrorbird. Bring him the ingredients he told you." />
-			<missionstate id="5" description="You have completed the fourth dish, the fifth dish he will teach you to prepare is Banana Chocolate Shake. Bring him the ingredients he told you." />
-			<missionstate id="6" description="You have completed the fifth dish, the sixth dish he will teach you to prepare is Veggie Casserole. Bring him the ingredients he told you." />
-			<missionstate id="7" description="You have completed the sixth dish, the seventh dish he will teach you to prepare is Filled Jalapeno Peppers. Bring him the ingredients he told you." />
-			<missionstate id="8" description="You have completed the seventh dish, the eight dish he will teach you to prepare is Blessed Steak. Bring him the ingredients he told you." />
-			<missionstate id="9" description="You have completed the eight dish, the ninth dish he will teach you to prepare is Northern Fishburger. Bring him the ingredients he told you." />
-			<missionstate id="10" description="You have completed the ninth dish, the tenth dish he will teach you to prepare is Carrot Cake. Bring him the ingredients he told you." />
-			<missionstate id="11" description="You have completed the tenth dish. You are now able to obtain the cookbook from Jean Pierre's room upstairs." />
-			<missionstate id="12" description="The eleventh dish he will teach you to prepare is Coconut Shrimp Bake. Bring him the ingredients he told you." />
-			<missionstate id="13" description="You have completed the eleventh dish, the twelfth dish he will teach you to prepare is Blackjack. Bring him the ingredients he told you." />
-			<missionstate id="14" description="You have completed the twelfth dish, the thirteenth dish he will teach you to prepare is Demonic Candy Balls. Bring him the ingredients he told you." />
-			<missionstate id="15" description="You have completed the thirteenth dish, the fourteenth dish he will teach you to prepare is Sweet Mangonaise Elixir. Bring him the ingredients he told you." />
-			<missionstate id="16" description="You have completed all the dishes. You are now able to make all the dishes in any order you want." />
-		</mission>
-	</quest>
 	<quest name="Outfit and Addon Quests" startstorageid="17594" startstoragevalue="1">
-		<mission name="Assassin Addon: The Red Death" storageid="50082" startvalue="1" endvalue="2">
-			<missionstate id="1" description="Atrad wants only two items from you for his old katana: a behemoth claw and a nose ring, both at the same time. He also told you about a &quot;horned fox&quot; who wears such as nose ring" />
-			<missionstate id="2" description="You have received the second assassin addon." />
+		<mission name="Assassin Addon: The Red Death" storageid="17562" startvalue="18" endvalue="19" ignoreendvalue="true">
+			<missionstate id="18" description="Atrad wants only two items from you for his old katana: a behemoth claw and a nose ring, both at the same time. He also told you about a &quot;horned fox&quot; who wears such as nose ring" />
+			<missionstate id="19" description="You have received the second assassin addon." />
 		</mission>
-		<mission name="Citizen Addon: Backpack" storageid="12008" startvalue="1" endvalue="2">
+		<mission name="Citizen Addon: Backpack" storageid="18502" startvalue="1" endvalue="3">
 			<missionstate id="1" description="Collect 100 pieces of minotaur leather and bring it to either Amber or Lubo to have them make a backpack addon for you." />
 			<missionstate id="2" description="You delivered 100 pieces of minotaur leather. Some time is needed to make the backpack for you though. You should check back later and ask either Amber or Lubo for your backpack." />
+			<missionstate id="3" description="You got the outfit!" />
 		</mission>
-		<mission name="Citizen Addon: Feather Hat" storageid="12009" startvalue="1" endvalue="1">
+		<mission name="Citizen Addon: Feather Hat" storageid="18501" startvalue="1" endvalue="2">
 			<missionstate id="1" description="Collect a legion helmet, 100 chicken feathers and 50 honeycombs and bring them to either Hanna or Norma to have them make a feather hat addon for you." />
+			<missionstate id="2" description="You got the outfit!" />
 		</mission>
-		<mission name="Barbarian Outfit Quest" storageid="12015" startvalue="1" endvalue="17">
+		<mission name="Barbarian Outfit Quest" storageid="17532" startvalue="1" endvalue="17">
 			<missionstate id="1" description="Bron told you that his brother Ajax in Northport needs to learn that violence is not always the answer. He told you to make his brother angry, then show him that all he needed to do was say 'please' to fix the situation." />
 			<missionstate id="2" description="You will need to leave Ajax alone for an hour, then return to him." />
 			<missionstate id="3" description="Ajax told you that he has thought about it, and that violence is not always good. Return to Bron now, and tell him that Ajax said fist not always good" />
@@ -191,7 +68,7 @@
 			<missionstate id="16" description="Come later in 2 hours and ask Ajax for the axe." />
 			<missionstate id="17" description="You got the Axe Addon!" />
 		</mission>
-		<mission name="Beggar Outfit: The Newest Fashion" storageid="12018" startvalue="1" endvalue="6">
+		<mission name="Beggar Outfit: The Newest Fashion" storageid="17563" startvalue="1" endvalue="6">
 			<missionstate id="1" description="Your current task is to bring Hugo 20 pieces of brown cloth, like the worn and ragged ghoul clothing." />
 			<missionstate id="2" description="Your current task is to bring 50 pieces of minotaur leather to Hugo. If you don't know how to get leather, you should ask Kalvin." />
 			<missionstate id="3" description="Your current task is to bring 10 bat wings to Hugo." />
@@ -199,10 +76,10 @@
 			<missionstate id="5" description="You brought all items required for the &quot;poor man's look&quot; to Hugo. He told you to come back to him after a whole day has passed, then the outfit should be finished." />
 			<missionstate id="6" description="You got the outfit!" />
 		</mission>
-		<mission name="Druid Outfit Quest" storageid="12013" startvalue="1" endvalue="10">
+		<mission name="Druid Outfit Quest" storageid="17535" startvalue="1" endvalue="10">
 			<missionstate id="1" description="Ceiron sends you to collect a sample of the blooming Griffinclaw." />
 			<missionstate id="2" description="Ask Ceiron for task." />
-			<missionstate id="3" description="take Ceirons waterskin and try to fill it with water from this special trickle. In the mountains between Ankrahmun and Tiquanda are two hydra lairs. It is important that you take the water directly from the trickle, not from the pond" />
+			<missionstate id="3" description="Take Ceirons waterskin and try to fill it with water from this special trickle. In the mountains between Ankrahmun and Tiquanda are two hydra lairs." />
 			<missionstate id="4" description="Ask Ceiron for task." />
 			<missionstate id="5" description="Bring Ceiron 100 ounces of demon dust." />
 			<missionstate id="6" description="Ask Ceiron for task." />
@@ -211,14 +88,13 @@
 			<missionstate id="9" description="Head over to Cormaya, find A Majestic Warwolf's Cave and ask her about an addon." />
 			<missionstate id="10" description="You got the Outfit!" />
 		</mission>
-		<mission name="Hunter Outfit Quest" storageid="12055" startvalue="1" endvalue="5">
+		<mission name="Hunter Outfit Quest" storageid="17539" startvalue="1" endvalue="5">
 			<missionstate id="1" description="Elane sends you to Liberty Bay to bring her the Crossbow from the Cult." />
 			<missionstate id="2" description="Bring Elane 100 pieces of lizard leather and 100 pieces of red dragon leather." />
 			<missionstate id="3" description="Bring Elane 5 enchanted chicken wings." />
 			<missionstate id="4" description="Bring Elane one piece of royal steel, draconian steel and hell steel each." />
 			<missionstate id="5" description="You got the Outfit!" />
 		</mission>
-		<!-- /\ -->
 		<mission name="Knight Addon: Helmet" storageid="17542" startvalue="1" endvalue="6">
 			<missionstate id="1" description="Your current task is to bring 100 perfect behemoth fangs to Gregor in Thais." />
 			<missionstate id="2" description="Your current task is to retrieve the helmet of Ramsay the Reckless from Banuta. These pesky apes steal everything they can get their dirty hands on." />
