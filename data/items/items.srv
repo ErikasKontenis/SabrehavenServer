@@ -27852,3 +27852,184 @@ TypeID      = 6131
 Name        = "a tortoise shield"
 Flags       = {Take,Shield}
 Attributes  = {Weight=5200,Defense=26}
+
+# 7.92 ITEMS
+
+TypeID      = 6132
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6133
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6134
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6135
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6136
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6137
+Name        = "a grass roof"
+Flags       = {Unmove}
+
+TypeID      = 6138
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6139
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6140
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6141
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6142
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6143
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6144
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6145
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6146
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6147
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6148
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6149
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6150
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6151
+Name        = "a tree wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+
+TypeID      = 6152
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6153
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6154
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6155
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6156
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6157
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6158
+Name        = "a tree wall"
+Flags       = {Clip,Unmove}
+
+TypeID      = 6159
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6160
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6161
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6162
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6163
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6164
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6165
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6166
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6167
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6168
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6169
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6170
+Name        = "a grass roof"
+Flags       = {Unpass,Unmove,Unlay}
+
+TypeID      = 6171
+Name        = "a grass roof"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=160}
+
+TypeID      = 6172
+Name        = "a trapdoor"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=160}
+
+TypeID      = 6173
+Name        = "a trapdoor"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=160}
+
+TypeID      = 6174
+Name        = "a tree archway"
+Flags       = {Top,Unmove}
+
+TypeID      = 6175
+Name        = "a tree archway"
+Flags       = {Top,Unmove}

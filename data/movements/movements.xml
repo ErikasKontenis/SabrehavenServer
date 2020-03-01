@@ -606,6 +606,10 @@
 	<movevent event="AddItem" itemid="5731" tileitem="1" script="misc/floorchange.lua" />
 	<movevent event="StepIn" itemid="5763" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="5763" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6172" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6172" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6173" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6173" tileitem="1" script="misc/floorchange.lua" />
 	
 	<!-- Damage -->
 	<movevent event="StepIn" itemid="2145" script="misc/damage.lua" />
