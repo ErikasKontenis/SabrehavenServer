@@ -26816,7 +26816,7 @@ Flags       = {Container,Take}
 Attributes  = {Capacity=8,Weight=800,SlotType=BACKPACK}
 
 TypeID      = 5928
-Name        = "an empty goldfish bowl" # TODO: implement functionality like in tibia wiki
+Name        = "an empty goldfish bowl"
 Flags       = {Take}
 Attributes  = {Weight=3200}
 
@@ -26971,7 +26971,7 @@ Attributes  = {Weight=200}
 
 TypeID      = 5957
 Name        = "a lottery ticket"
-Description = "It has not been used yet" # TODO: Implement like in tibia wiki
+Description = "It has not been used yet"
 Flags       = {Take}
 Attributes  = {Weight=120}
 
@@ -27649,7 +27649,7 @@ Attributes  = {Weight=50}
 TypeID      = 6092
 Name        = "a very noble-looking watch"
 Flags       = {Take,Expire}
-Attributes  = {Weight=50,ExpireTarget=6091,TotalExpireTime=259200} # TODO: Implement functionality like in tibia wiki
+Attributes  = {Weight=50,ExpireTarget=6091,TotalExpireTime=259200}
 
 TypeID      = 6093
 Name        = "a crystal ring"
@@ -27762,13 +27762,13 @@ Attributes  = {Weight=50}
 
 TypeID      = 6114
 Name        = "an armor rack kit"
-Description = "Use it in your house to construct an armor rack" # TODO: Implement like in tibia wiki
+Description = "Use it in your house to construct an armor rack"
 Flags       = {Take,Unpass}
 Attributes  = {Weight=3500}
 
 TypeID      = 6115
 Name        = "a weapon rack kit"
-Description = "Use it in your house to construct a weapon rack" # TODO: Implement like in tibia wiki
+Description = "Use it in your house to construct a weapon rack"
 Flags       = {Take,Unpass}
 Attributes  = {Weight=3500}
 
@@ -28030,30 +28030,29 @@ TypeID      = 6174
 Name        = "a tree archway"
 Flags       = {Top,Unmove}
 
-# TODO: nuo cia reikia pradeti tikrinti 
 TypeID      = 6175
 Name        = "a tree archway"
 Flags       = {Top,Unmove}
 
 TypeID      = 6176
 Name        = "a branch"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6177
 Name        = "a tree hole"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6178
 Name        = "a tree hole"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6179
 Name        = "a tree"
-Flags       = {Unpass,Unmove}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 6180
 Name        = "a tree"
-Flags       = {Unpass,Unmove}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 6181
 Name        = "a large branch"
@@ -28089,83 +28088,89 @@ Flags       = {Top,Unmove}
 
 TypeID      = 6189
 Name        = "a branch"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6190
 Name        = "a branch"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6191
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "It is locked"
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6192
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6193
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6194
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "It is locked"
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6195
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6196
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6197
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6198
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6199
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6200
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6201
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6202
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,SeparationEvent,Door,Unmove}
 
 TypeID      = 6203
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6204
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,SeparationEvent,Door,Unmove}
 
 TypeID      = 6205
 Name        = "a gate of expertise"
-Flags       = {Unpass,Unmove}
+Description = "Only the worthy may pass"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6206
 Name        = "a gate of expertise"
-Flags       = {Top,Unmove}
+Flags       = {Door,Top,SeparationEvent,Unmove}
 
 TypeID      = 6207
 Name        = "a gate of expertise"
-Flags       = {Unpass,Unmove}
+Description = "Only the worthy may pass"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6208
 Name        = "a gate of expertise"
-Flags       = {Top,Unmove}
+Flags       = {Door,Top,SeparationEvent,Unmove}
 
 TypeID      = 6209
 Name        = "a rope bridge"
@@ -28174,11 +28179,11 @@ Attributes  = {Waypoints=100}
 
 TypeID      = 6210
 Name        = "a rope bridge"
-Flags       = {Clip,Unpass,Unmove}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 6211
 Name        = "a rope bridge"
-Flags       = {Clip,Unpass,Unmove}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 6212
 Name        = "a rope bridge"
@@ -28187,11 +28192,11 @@ Attributes  = {Waypoints=100}
 
 TypeID      = 6213
 Name        = "a rope bridge"
-Flags       = {Clip,Unpass,Unmove}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 6214
 Name        = "a rope bridge"
-Flags       = {Clip,Unpass,Unmove}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 6215
 Name        = "grass"
@@ -28327,75 +28332,81 @@ Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6248
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "It is locked"
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6249
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6250
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6251
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "It is locked"
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6252
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6253
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6254
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6255
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6256
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6257
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6258
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6259
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,SeparationEvent,Door,Unmove}
 
 TypeID      = 6260
 Name        = "a closed door"
-Flags       = {Unpass,Unmove}
+Description = "The door seems to be sealed against unwanted intruders"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6261
 Name        = "an open door"
-Flags       = {Top,Unmove}
+Flags       = {Top,SeparationEvent,Door,Unmove}
 
 TypeID      = 6262
 Name        = "a gate of expertise"
-Flags       = {Unpass,Unmove}
+Description = "Only the worthy may pass"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6263
 Name        = "a gate of expertise"
-Flags       = {Top,Unmove}
+Flags       = {Door,Top,SeparationEvent,Unmove}
 
 TypeID      = 6264
 Name        = "a gate of expertise"
-Flags       = {Unpass,Unmove}
+Description = "Only the worthy may pass"
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6265
 Name        = "a gate of expertise"
-Flags       = {Top,Unmove}
+Flags       = {Door,Top,SeparationEvent,Unmove}
 
 TypeID      = 6266
 Name        = "metal trash"
@@ -28436,6 +28447,8 @@ Flags       = {Top,Unmove}
 TypeID      = 6275
 Name        = "an archway"
 Flags       = {Top,Unmove}
+
+# TODO: pradeti nuo cia
 
 TypeID      = 6276
 Name        = "a lump of cake dough"

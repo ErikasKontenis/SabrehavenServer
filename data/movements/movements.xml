@@ -676,6 +676,14 @@
 	<movevent event="StepOut" itemid="5294" script="misc/doors.lua" />
 	<movevent event="StepOut" itemid="5746" script="misc/doors.lua" />
 	<movevent event="StepOut" itemid="5748" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6202" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6204" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6206" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6208" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6259" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6261" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6263" script="misc/doors.lua" />
+	<movevent event="StepOut" itemid="6265" script="misc/doors.lua" />
 	
 	<!-- Magic Fields -->
 	<movevent event="StepIn" itemid="1998"  function="onStepInField" />

@@ -26816,7 +26816,7 @@ Flags       = {Container,Take}
 Attributes  = {Capacity=8,Weight=800,SlotType=BACKPACK}
 
 TypeID      = 5928
-Name        = "an empty goldfish bowl" # TODO: implement functionality like in tibia wiki
+Name        = "an empty goldfish bowl"
 Flags       = {Take}
 Attributes  = {Weight=3200}
 
@@ -26971,7 +26971,7 @@ Attributes  = {Weight=200}
 
 TypeID      = 5957
 Name        = "a lottery ticket"
-Description = "It has not been used yet" # TODO: Implement like in tibia wiki
+Description = "It has not been used yet"
 Flags       = {Take}
 Attributes  = {Weight=120}
 
@@ -27649,7 +27649,7 @@ Attributes  = {Weight=50}
 TypeID      = 6092
 Name        = "a very noble-looking watch"
 Flags       = {Take,Expire}
-Attributes  = {Weight=50,ExpireTarget=6091,TotalExpireTime=259200} # TODO: Implement functionality like in tibia wiki
+Attributes  = {Weight=50,ExpireTarget=6091,TotalExpireTime=259200}
 
 TypeID      = 6093
 Name        = "a crystal ring"
@@ -27762,13 +27762,13 @@ Attributes  = {Weight=50}
 
 TypeID      = 6114
 Name        = "an armor rack kit"
-Description = "Use it in your house to construct an armor rack" # TODO: Implement like in tibia wiki
+Description = "Use it in your house to construct an armor rack"
 Flags       = {Take,Unpass}
 Attributes  = {Weight=3500}
 
 TypeID      = 6115
 Name        = "a weapon rack kit"
-Description = "Use it in your house to construct a weapon rack" # TODO: Implement like in tibia wiki
+Description = "Use it in your house to construct a weapon rack"
 Flags       = {Take,Unpass}
 Attributes  = {Weight=3500}
 
