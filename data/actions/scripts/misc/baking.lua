@@ -29,6 +29,12 @@ function onUse(player, item, fromPosition, target, toPosition)
 			item:remove(1)
 			return true
 		end
+	elseif item:getId() == 6276 then
+		if table.contains(ovens, target:getId()) then
+			Game.createItem(6277, 1, target:getPosition()) 
+			item:remove(1)
+			return true
+		end
 	elseif item:getId() == 3605 then
 		if table.contains(milestone, target:getId()) then
 			local parent = item:getParent()

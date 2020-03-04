@@ -28448,8 +28448,6 @@ TypeID      = 6275
 Name        = "an archway"
 Flags       = {Top,Unmove}
 
-# TODO: pradeti nuo cia
-
 TypeID      = 6276
 Name        = "a lump of cake dough"
 Flags       = {Cumulative,Take}
@@ -28457,18 +28455,22 @@ Attributes  = {Weight=100}
 
 TypeID      = 6277
 Name        = "a cake"
-Flags       = {Take}
-Attributes  = {Weight=500}
+Flags       = {UseEvent,Take}
+Attributes  = {Nutrition=10,Weight=500}
 
 TypeID      = 6278
 Name        = "a cake"
-Flags       = {Take}
-Attributes  = {Weight=500}
+Description = "It is nicely decorated with fruits and icing"
+Flags       = {UseEvent,CollisionEvent,Take}
+Attributes  = {Nutrition=10,Weight=500}
 
 TypeID      = 6279
 Name        = "a party cake"
-Flags       = {Take}
+Description = "It is nicely decorated with fruits, icing and a candle. Someone is caring about you"
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=500}
+
+# TODO: pradeti nuo cia
 
 TypeID      = 6280
 Name        = "a broken brick wall"
@@ -28551,6 +28553,7 @@ Attributes  = {Weight=80}
 
 TypeID      = 6300
 Name        = "a death ring"
+Description = "Wearing it makes you feel a little weaker than usual"
 Flags       = {Take,Expire}
 Attributes  = {Weight=80,ExpireTarget=0,TotalExpireTime=480}
 
@@ -28888,11 +28891,13 @@ Attributes  = {Capacity=6}
 
 TypeID      = 6371
 Name        = "an oven kit"
+Description = "Use it in your house to construct an oven"
 Flags       = {Take}
 Attributes  = {Weight=2500}
 
 TypeID      = 6372
 Name        = "a bookcase kit"
+Description = "Use it in your house to construct a bookcase"
 Flags       = {Take}
 Attributes  = {Weight=2500}
 
@@ -28970,6 +28975,7 @@ Attributes  = {FluidSource=WATER}
 
 TypeID      = 6390
 Name        = "a nightmare shield"
+Description = "It was crafted by the ancient order of the nightmare knights"
 Flags       = {Take}
 Attributes  = {Weight=3200}
 
@@ -29141,6 +29147,7 @@ Flags       = {Bottom,Unpass,Unmove}
 
 TypeID      = 6432
 Name        = "a necromancer shield"
+Description = "It is enchanted with unholy, necromantic powers"
 Flags       = {Take}
 Attributes  = {Weight=3200}
 
@@ -29404,6 +29411,7 @@ Flags       = {Unmove}
 
 TypeID      = 6496
 Name        = "a christmas present bag"
+Description = "It contains presents which were stolen from Santa. Bring them back to Ruprecht on Vega"
 Flags       = {Take}
 Attributes  = {Weight=8000}
 
@@ -29413,11 +29421,13 @@ Flags       = {Top,Unmove}
 
 TypeID      = 6498
 Name        = "a certificate"
+Description = "You have mastered the Dream Challenge and may apply for joining the order of the Nightmare Knights"
 Flags       = {Take}
 Attributes  = {Weight=150}
 
 TypeID      = 6499
 Name        = "a demonic essence"
+Description = "Someone might be interested in trading this"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=100}
 
@@ -29453,16 +29463,19 @@ Attributes  = {Capacity=5,Weight=600}
 
 TypeID      = 6506
 Name        = "a red christmas bundle"
+Description = "It contains random christmas decoration"
 Flags       = {Take}
 Attributes  = {Weight=2500}
 
 TypeID      = 6507
 Name        = "a blue christmas bundle"
+Description = "It contains random christmas decoration"
 Flags       = {Take}
 Attributes  = {Weight=2500}
 
 TypeID      = 6508
 Name        = "a green christmas bundle"
+Description = "It contains random christmas decoration"
 Flags       = {Take}
 Attributes  = {Weight=2500}
 
@@ -29540,11 +29553,13 @@ Attributes  = {Weight=1000}
 
 TypeID      = 6526
 Name        = "a christmas token"
+Description = "Collect enough of these to trade them for valuable prizes"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=5}
 
 TypeID      = 6527
 Name        = "the avenger"
+Description = "This holy blade was forged of shattered dreams"
 Flags       = {Take}
 Attributes  = {Weight=6400}
 
@@ -29655,11 +29670,13 @@ Attributes  = {Weight=750}
 
 TypeID      = 6550
 Name        = "a red powder"
+Description = "It reeks of hatred and malice"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=100}
 
 TypeID      = 6551
 Name        = "a blue powder"
+Description = "Sun can be a merciless killer, but so can you"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=100}
 
@@ -29681,16 +29698,19 @@ Name        = ""
 
 TypeID      = 6556
 Name        = "a tic-tac-toe token"
+Description = "It seems to be rather fragile"
 Flags       = {Take}
 Attributes  = {Weight=500}
 
 TypeID      = 6557
 Name        = "a tic-tac-toe token"
+Description = "It seems to be rather fragile"
 Flags       = {Take}
 Attributes  = {Weight=500}
 
 TypeID      = 6558
 Name        = "concentrated demonic blood"
+Description = "Shake it to create a potion"
 Flags       = {Take}
 Attributes  = {Weight=200}
 
@@ -29758,6 +29778,11 @@ Name        = "a party trumpet"
 Flags       = {Take}
 Attributes  = {Weight=50}
 
+TypeID      = 6572
+Name        = "a party trumpet"
+Flags       = {Take,Expire}
+Attributes  = {Weight=50,ExpireTarget=6572,TotalExpireTime=4}
+
 TypeID      = 6574
 Name        = "a bar of chocolate"
 Flags       = {Take}
@@ -29770,6 +29795,7 @@ Attributes  = {Weight=10}
 
 TypeID      = 6576
 Name        = "a fireworks rocket"
+Description = "Do not use in your backpack or while asleep. Keep away from animals or children"
 Flags       = {Take}
 Attributes  = {Weight=100}
 

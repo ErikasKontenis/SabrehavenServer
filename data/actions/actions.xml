@@ -146,6 +146,7 @@
 	<action itemid="4852" script="misc/ectoplasm_container.lua" />
 	<action itemid="3217" script="misc/letter_bag.lua" />
 	<action fromid="3603" toid="3605" script="misc/baking.lua" />
+	<action itemid="6276" script="misc/baking.lua" />
 	<action itemid="5466" script="misc/distilling_rum.lua" />
 	<action fromid="3264" toid="3276" script="misc/weapons.lua" />
 	<action fromid="3278" toid="3286" script="misc/weapons.lua" />
@@ -161,6 +162,7 @@
 	<action itemid="5957" script="misc/lottery_ticket.lua" />
 	<action itemid="5776" script="misc/sabrehaven_talon.lua" />
 	<action itemid="5928" script="misc/catch_fish.lua" />
+	<action itemid="6279" script="misc/party_cake.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />
@@ -301,6 +303,8 @@
 	<action itemid="5096" script="misc/food.lua" />
 	<action itemid="5678" script="misc/food.lua" />
 	<action itemid="6125" script="misc/food.lua" />
+	<action itemid="6277" script="misc/food.lua" />
+	<action itemid="6278" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />
