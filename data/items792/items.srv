@@ -27763,13 +27763,13 @@ Attributes  = {Weight=50}
 TypeID      = 6114
 Name        = "an armor rack kit"
 Description = "Use it in your house to construct an armor rack"
-Flags       = {Take,Unpass}
+Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=3500}
 
 TypeID      = 6115
 Name        = "a weapon rack kit"
 Description = "Use it in your house to construct a weapon rack"
-Flags       = {Take,Unpass}
+Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=3500}
 
 TypeID      = 6116
@@ -28906,13 +28906,13 @@ Attributes  = {Capacity=6,RotateTarget=6367}
 TypeID      = 6371
 Name        = "an oven kit"
 Description = "Use it in your house to construct an oven"
-Flags       = {Take,Height}
+Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=2500}
 
 TypeID      = 6372
 Name        = "a bookcase kit"
 Description = "Use it in your house to construct a bookcase"
-Flags       = {Take,Height}
+Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=2500}
 
 # TODO: pradeti nuo cia

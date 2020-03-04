@@ -27763,13 +27763,13 @@ Attributes  = {Weight=50}
 TypeID      = 6114
 Name        = "an armor rack kit"
 Description = "Use it in your house to construct an armor rack"
-Flags       = {Take,Unpass}
+Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=3500}
 
 TypeID      = 6115
 Name        = "a weapon rack kit"
 Description = "Use it in your house to construct a weapon rack"
-Flags       = {Take,Unpass}
+Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=3500}
 
 TypeID      = 6116
