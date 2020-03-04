@@ -572,6 +572,9 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_SLOTITEM;
 		searchType = BEHAVIOUR_PARAMETER_ONE;
+	} else if (identifier == "clientversion") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_CLIENTVERSION;
 	}
 
 	if (searchType == BEHAVIOUR_PARAMETER_ONE) {
@@ -1221,6 +1224,8 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		return checkOperation(player, node, message);
 	case BEHAVIOUR_TYPE_BALANCE:
 		return player->getBankBalance();
+	case BEHAVIOUR_TYPE_CLIENTVERSION:
+		return g_game.getClientVersion();
 	case BEHAVIOUR_TYPE_MESSAGE_TRANSFERTOPLAYERNAME_STATE: {
 		std::string lowerMessage = asLowerCaseString(message);
 		if (lowerMessage.find("to ") != std::string::npos) {
