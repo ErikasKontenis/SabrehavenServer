@@ -28470,8 +28470,6 @@ Description = "It is nicely decorated with fruits, icing and a candle. Someone i
 Flags       = {UseEvent,Take}
 Attributes  = {Weight=500}
 
-# TODO: pradeti nuo cia
-
 TypeID      = 6280
 Name        = "a broken brick wall"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
@@ -28497,10 +28495,10 @@ Name        = "some cracks"
 Flags       = {Clip,Unmove}
 
 TypeID      = 6286
-Name        = ""
+Name        = "" # this is nothing in client
 
 TypeID      = 6287
-Name        = ""
+Name        = "" # this is nothing in client
 
 TypeID      = 6288
 Name        = "a burning wall"
@@ -28548,14 +28546,14 @@ Flags       = {Clip,Unmove}
 
 TypeID      = 6299
 Name        = "a death ring"
-Flags       = {Take}
-Attributes  = {Weight=80}
+Flags       = {Take,ExpireStop,ShowDetail}
+Attributes  = {Weight=80,SlotType=RING,EquipTarget=6300}
 
 TypeID      = 6300
 Name        = "a death ring"
 Description = "Wearing it makes you feel a little weaker than usual"
-Flags       = {Take,Expire}
-Attributes  = {Weight=80,ExpireTarget=0,TotalExpireTime=480}
+Flags       = {Take,Expire,ShowDetail}
+Attributes  = {Weight=80,SlotType=RING,ShieldBoost=-10,ExpireTarget=0,TotalExpireTime=480,DeEquipTarget=6299}
 
 TypeID      = 6301
 Name        = "a dead wyvern"
@@ -28808,7 +28806,7 @@ Flags       = {Take,Corpse,Expire}
 Attributes  = {Weight=1000,ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 6351
-Name        = ""
+Name        = "" # this is nothing in client
 
 TypeID      = 6352
 Name        = "swamp"
@@ -28827,27 +28825,43 @@ Attributes  = {Weight=10000,ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 6355
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6356,RotateTarget=6357,Brightness=3,LightColor=199}
 
 TypeID      = 6356
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6355,RotateTarget=6358}
 
 TypeID      = 6357
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6358,RotateTarget=6359,Brightness=3,LightColor=193}
 
 TypeID      = 6358
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6357,RotateTarget=6360}
 
 TypeID      = 6359
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6360,RotateTarget=6361,Brightness=3,LightColor=193}
 
 TypeID      = 6360
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6359,RotateTarget=6362}
 
 TypeID      = 6361
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6362,RotateTarget=6355,Brightness=3,LightColor=193}
 
 TypeID      = 6362
 Name        = "an oven"
+Flags       = {ChangeUse,Rotate,Height}
+Attributes  = {ChangeTarget=6361,RotateTarget=6356}
 
 TypeID      = 6363
 Name        = "a dead diabolic imp"
@@ -28871,35 +28885,37 @@ Attributes  = {ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 6367
 Name        = "a bookcase"
-Flags       = {Container,Unpass}
-Attributes  = {Capacity=6}
+Flags       = {Container,Unpass,Rotate}
+Attributes  = {Capacity=6,RotateTarget=6368}
 
 TypeID      = 6368
 Name        = "a bookcase"
-Flags       = {Container,Unpass}
-Attributes  = {Capacity=6}
+Flags       = {Container,Unpass,Rotate}
+Attributes  = {Capacity=6,RotateTarget=6369}
 
 TypeID      = 6369
 Name        = "a bookcase"
-Flags       = {Container,Unpass}
-Attributes  = {Capacity=6}
+Flags       = {Container,Unpass,Rotate}
+Attributes  = {Capacity=6,RotateTarget=6370}
 
 TypeID      = 6370
 Name        = "a bookcase"
-Flags       = {Container,Unpass}
-Attributes  = {Capacity=6}
+Flags       = {Container,Unpass,Rotate}
+Attributes  = {Capacity=6,RotateTarget=6367}
 
 TypeID      = 6371
 Name        = "an oven kit"
 Description = "Use it in your house to construct an oven"
-Flags       = {Take}
+Flags       = {Take,Height}
 Attributes  = {Weight=2500}
 
 TypeID      = 6372
 Name        = "a bookcase kit"
 Description = "Use it in your house to construct a bookcase"
-Flags       = {Take}
+Flags       = {Take,Height}
 Attributes  = {Weight=2500}
+
+# TODO: pradeti nuo cia
 
 TypeID      = 6373
 Name        = "debris"
@@ -29777,11 +29793,6 @@ TypeID      = 6572
 Name        = "a party trumpet"
 Flags       = {Take}
 Attributes  = {Weight=50}
-
-TypeID      = 6572
-Name        = "a party trumpet"
-Flags       = {Take,Expire}
-Attributes  = {Weight=50,ExpireTarget=6572,TotalExpireTime=4}
 
 TypeID      = 6574
 Name        = "a bar of chocolate"

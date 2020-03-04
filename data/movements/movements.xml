@@ -800,4 +800,8 @@
 	<movevent event="Equip" itemid="3098" slot="ring" function="onEquipItem" />
 	<movevent event="Equip" itemid="3100" slot="ring" function="onEquipItem" />
 	<movevent event="DeEquip" itemid="3100" slot="ring" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="6299" slot="ring" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="6299" slot="ring" function="onDeEquipItem" />
+	<movevent event="Equip" itemid="6300" slot="ring" function="onEquipItem" />
+	<movevent event="DeEquip" itemid="6300" slot="ring" function="onDeEquipItem" />
 </movements>

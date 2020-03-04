@@ -93,11 +93,12 @@
 	<action fromid="6087" toid="6090" script="liberty_bay/cult_hymn.lua"/>
 	<action actionid="33216" script="liberty_bay/cult_piano_teleport.lua"/>
 	
-	<!-- Nostalrius Default Actions -->
+	<!-- Sabrehaven Default Actions -->
 	<!-- Furniture Parcels -->
 	<action fromid="2775" toid="2812" script="misc/furniture_parcels.lua" />
 	<action fromid="5086" toid="5088" script="misc/furniture_parcels.lua" />
 	<action fromid="6114" toid="6115" script="misc/furniture_parcels.lua" />
+	<action fromid="6371" toid="6372" script="misc/furniture_parcels.lua" />
 	
 	<!-- Instruments -->
 	<action fromid="2948" toid="2950" script="misc/instruments.lua" />
