@@ -60,4 +60,11 @@ VANISH,!           -> "Yeah, get lost."
 Topic=1,"yes",CountMoney>=Price -> "Here. I hope that's it now.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "At last, someone poorer than me."
 Topic=1,"no"                    -> "Good decision!"
+
+"soft","boots",ClientVersion>=790 -> Type=6530, Amount=1, Price=10000, "You want me to repair your soft boots? I'm not sure if I want to touch this stinking mess. 10000 gold, deal?", Topic=2
+"repair",ClientVersion>=790 -> * 
+Topic=2,"yes",CountMoney>=Price,Count(Type)>=Amount -> "Here. I hope that's it now.", DeleteMoney, Delete(Type), Create(6529)
+Topic=2,"yes"                   -> "At last, someone poorer than me."
+Topic=2,"no"                    -> "Good decision!"
+
 }

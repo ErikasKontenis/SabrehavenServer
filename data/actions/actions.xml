@@ -164,6 +164,7 @@
 	<action itemid="5776" script="misc/sabrehaven_talon.lua" />
 	<action itemid="5928" script="misc/catch_fish.lua" />
 	<action itemid="6279" script="misc/party_cake.lua" />
+	<action itemid="6387" script="misc/christmas_card.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />
@@ -306,6 +307,9 @@
 	<action itemid="6125" script="misc/food.lua" />
 	<action itemid="6277" script="misc/food.lua" />
 	<action itemid="6278" script="misc/food.lua" />
+	<action itemid="6392" script="misc/food.lua" />
+	<action itemid="6393" script="misc/food.lua" />
+	<action itemid="6500" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />

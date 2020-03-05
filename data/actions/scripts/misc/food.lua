@@ -42,7 +42,10 @@ local foods = {
 	[5678] = "Gulp.", -- tortoise egg
 	[6125] = "Gulp.", -- tortoise egg from Nargor
 	[6277] = "Mmmm.", -- cake
-	[6278] = "Mmmm." -- cake
+	[6278] = "Mmmm.", -- cake
+	[6392] = "Mmmm.", -- valentine's cake
+	[6393] = "Mmmm.", -- cream cake
+	[6500] = "Mmmm.", -- gingerbreadman
 }
 
 function onUse(player, item, fromPosition, target, toPosition)

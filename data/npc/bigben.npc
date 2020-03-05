@@ -74,6 +74,12 @@ Topic=6,"yes",Count(Type)>=Amount -> "Cling clang!", Delete(Type), Type=5892, Am
 Topic=6,"yes"                             -> "You not have stuff me want for."
 Topic=6                                   -> "Silly lil' one you are."
 
+"soul","orb",ClientVersion>=790 -> "Uh. Me can make some nasty lil' bolt from soul orbs. Lil' one want to trade all?", Topic=7
+Topic=7,"yes",QuestValue(17500)<2,!     -> "Wait. Me work no cheap is. Do favour for me first, yes?", Topic=2
+Topic=7,"yes",Count(5944)>=1 -> "Cling clang!", Amount=Count(5944)*3, DeleteAmount(5944, Count(5944)), Type=6528, Create(Type)
+Topic=7,"yes"                             -> "You not have stuff me want for."
+Topic=7                                   -> "Silly lil' one you are."
+
 Topic=2,"yes"                 -> "Me need gift for woman. We dance, so me want to give her bast skirt. But she big is. So I need many to make big one. Bring three okay? Me wait.", SetQuestValue(17500,1), SetQuestValue(17595,1)
 
 "bast skirt",QuestValue(17500)=1         -> Type=3560, Amount=3,  "Lil' one bring three bast skirts?", Topic=3

@@ -56,6 +56,7 @@ VANISH,!           -> "Good bye."
 "small","book"  -> Type=2839, Amount=1,  Price=15,   "Do you want to buy a small book for %P gold?", Topic=1
 "watch"         -> Type=2906, Amount=1,  Price=20,   "Do you want to buy one of my high quality watches for %P gold?", Topic=1
 "football"      -> Type=2990, Amount=1,  Price=111,  "Do you want to buy a football for %P gold?", Topic=1
+"greeting","card",ClientVersion>=790 -> Type=6386, Amount=1,  Price=30,  "Do you want to buy a greeting card for %P gold?", Topic=1
 
 %1,1<%1,"torch"         -> Type=2920, Amount=%1,  Price=2*%1,    "Do you wanna buy %A torches for %P gold?", Topic=1
 %1,1<%1,"candelabr"     -> Type=2911, Amount=%1,  Price=8*%1,    "Do you wanna buy %A candelabra for %P gold?", Topic=1
@@ -73,6 +74,7 @@ VANISH,!           -> "Good bye."
 %1,1<%1,"small","book"  -> Type=2839, Amount=%1,  Price=15*%1,   "Do you want to buy %A small books for %P gold?", Topic=1
 %1,1<%1,"watch"         -> Type=2906, Amount=%1,  Price=20*%1,   "Do you want to buy %A of my high quality watches for %P gold?", Topic=1
 %1,1<%1,"football"      -> Type=2990, Amount=%1,  Price=111*%1,  "Do you want to buy %A footballs for %P gold?", Topic=1
+%1,1<%1,"greeting","card",ClientVersion>=790           -> Type=6386, Amount=%1,  Price=30*%1,  "Do you want to buy %A greeting cards for %P gold?", Topic=1
 
 Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back, when you have enough money."

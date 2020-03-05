@@ -16168,7 +16168,7 @@ Attributes  = {Weight=500}
 TypeID      = 3549
 Name        = "soft boots"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=800,SlotType=FEET,ExpireTarget=0,TotalExpireTime=14400,HealthGain=1,HealthTicks=2000,ManaGain=2,ManaTicks=1000}
+Attributes  = {Weight=800,DeEquipTarget=6529,SlotType=FEET,ExpireTarget=6530,TotalExpireTime=14400,HealthGain=1,HealthTicks=2000,ManaGain=2,ManaTicks=1000}
 
 TypeID      = 3550
 Name        = "patched boots"
@@ -26205,7 +26205,7 @@ TypeID      = 5803
 Name        = "an arbalest"
 Description = "It is a bit heavy due to the iron mounting, but very precise"
 Flags       = {Take,Distance}
-Attributes  = {Weight=9500,SlotType=TWOHANDED,Range=6,AmmoType=BOLT}
+Attributes  = {Weight=9500,SlotType=TWOHANDED,Range=7,AmmoType=BOLT}
 
 TypeID      = 5804
 Name        = "a nose ring"
@@ -26904,7 +26904,7 @@ Attributes  = {Weight=3500}
 TypeID      = 5944
 Name        = "a soul orb"
 Description = "This strange object seems to be made of half spirit, half metal. It is unknown to most smiths"
-Flags       = {Take}
+Flags       = {Cumulative,Take}
 Attributes  = {Weight=20}
 
 TypeID      = 5945
@@ -28915,8 +28915,6 @@ Description = "Use it in your house to construct a bookcase"
 Flags       = {UseEvent,Avoid,Take,Height}
 Attributes  = {Weight=2500}
 
-# TODO: pradeti nuo cia
-
 TypeID      = 6373
 Name        = "debris"
 Flags       = {Clip,Unmove}
@@ -28971,12 +28969,12 @@ Flags       = {Clip,Unmove}
 
 TypeID      = 6386
 Name        = "a greeting card"
-Flags       = {Take}
-Attributes  = {Weight=100}
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {maxLength=1024,Weight=100}
 
 TypeID      = 6387
 Name        = "a christmas card"
-Flags       = {Take}
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=100}
 
 TypeID      = 6388
@@ -28986,14 +28984,14 @@ Attributes  = {Waypoints=100}
 
 TypeID      = 6389
 Name        = "an ornamented fountain"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 Attributes  = {FluidSource=WATER}
 
 TypeID      = 6390
 Name        = "a nightmare shield"
 Description = "It was crafted by the ancient order of the nightmare knights"
-Flags       = {Take}
-Attributes  = {Weight=3200}
+Flags       = {Take,Shield}
+Attributes  = {Weight=3200,Defense=37,Brightness=4,LightColor=186}
 
 TypeID      = 6391
 Name        = "a hawser"
@@ -29002,12 +29000,12 @@ Flags       = {Unmove}
 TypeID      = 6392
 Name        = "a valentine's cake"
 Flags       = {Take}
-Attributes  = {Weight=500}
+Attributes  = {Nutrition=15,Weight=500}
 
 TypeID      = 6393
 Name        = "a cream cake"
 Flags       = {Take}
-Attributes  = {Weight=500}
+Attributes  = {Nutrition=15,Weight=500}
 
 TypeID      = 6394
 Name        = "bones"
@@ -29155,17 +29153,17 @@ Flags       = {Top,Unmove}
 
 TypeID      = 6430
 Name        = "a branch"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6431
 Name        = "a branch"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6432
 Name        = "a necromancer shield"
 Description = "It is enchanted with unholy, necromantic powers"
-Flags       = {Take}
-Attributes  = {Weight=3200}
+Flags       = {Take,Shield}
+Attributes  = {Weight=3200,Defense=37,Brightness=4,LightColor=103}
 
 TypeID      = 6433
 Name        = "a blue tapestry"
@@ -29177,155 +29175,191 @@ Flags       = {Unmove}
 
 TypeID      = 6435
 Name        = "a framework window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6437}
 
 TypeID      = 6436
 Name        = "a framework window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6438}
 
 TypeID      = 6437
 Name        = "a framework window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6435}
 
 TypeID      = 6438
 Name        = "a framework window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6436}
 
 TypeID      = 6439
 Name        = "a brick window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6441}
 
 TypeID      = 6440
 Name        = "a brick window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6442}
 
 TypeID      = 6441
 Name        = "a brick window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6439}
 
 TypeID      = 6442
 Name        = "a brick window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6440}
 
 TypeID      = 6443
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6445}
 
 TypeID      = 6444
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6446}
 
 TypeID      = 6445
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6443}
 
 TypeID      = 6446
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6444}
 
 TypeID      = 6447
 Name        = "a marble window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6448
 Name        = "a marble window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,Unpass,Unmove,Unlay}
 
 TypeID      = 6449
 Name        = "a tree window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6451}
 
 TypeID      = 6450
 Name        = "a tree window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6452}
 
 TypeID      = 6451
 Name        = "a tree window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6449}
 
 TypeID      = 6452
 Name        = "a tree window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6450}
 
 TypeID      = 6453
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6455}
 
 TypeID      = 6454
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6456}
 
 TypeID      = 6455
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6453}
 
 TypeID      = 6456
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6454}
 
 TypeID      = 6457
 Name        = "a bamboo window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6459}
 
 TypeID      = 6458
 Name        = "a bamboo window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6460}
 
 TypeID      = 6459
 Name        = "a bamboo window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6457}
 
 TypeID      = 6460
 Name        = "a bamboo window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6458}
 
 TypeID      = 6461
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6463}
 
 TypeID      = 6462
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6464}
 
 TypeID      = 6463
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6461}
 
 TypeID      = 6464
 Name        = "a sandstone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6462}
 
 TypeID      = 6465
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6467}
 
 TypeID      = 6466
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6468}
 
 TypeID      = 6467
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6465}
 
 TypeID      = 6468
 Name        = "a stone window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6466}
 
 TypeID      = 6469
 Name        = "a wooden window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6471}
 
 TypeID      = 6470
 Name        = "a wooden window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {ChangeTarget=6472}
 
 TypeID      = 6471
 Name        = "a wooden window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6469}
 
 TypeID      = 6472
 Name        = "a wooden window"
-Flags       = {Bottom,Unpass,Unmove}
+Flags       = {Bottom,ChangeUse,Unpass,Unmove,Unlay}
+Attributes  = {ChangeTarget=6470}
 
 TypeID      = 6473
 Name        = "wooden planks"
@@ -29389,13 +29423,13 @@ Flags       = {Clip,Unmove}
 
 TypeID      = 6488
 Name        = "a christmas branch"
-Flags       = {Take}
-Attributes  = {Weight=1800}
+Flags       = {ChangeUse,Take}
+Attributes  = {ChangeTarget=6489,Weight=1800,Brightness=2,LightColor=206}
 
 TypeID      = 6489
 Name        = "a christmas branch"
-Flags       = {Take}
-Attributes  = {Weight=1800}
+Flags       = {ChangeUse,Take}
+Attributes  = {ChangeTarget=6488,Weight=1800,Brightness=0,LightColor=0}
 
 TypeID      = 6490
 Name        = "a firefly"
@@ -29404,7 +29438,7 @@ Attributes  = {ExpireTarget=6493,TotalExpireTime=8}
 
 TypeID      = 6491
 Name        = "a bat decoration"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=200}
 
 TypeID      = 6492
@@ -29438,7 +29472,7 @@ Flags       = {Top,Unmove}
 TypeID      = 6498
 Name        = "a certificate"
 Description = "You have mastered the Dream Challenge and may apply for joining the order of the Nightmare Knights"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=150}
 
 TypeID      = 6499
@@ -29450,26 +29484,26 @@ Attributes  = {Weight=100}
 TypeID      = 6500
 Name        = "a gingerbreadman"
 Flags       = {Take}
-Attributes  = {Weight=500}
+Attributes  = {Nutrition=20,Weight=500}
 
 TypeID      = 6501
 Name        = "a christmas wreath"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=1000}
 
 TypeID      = 6502
 Name        = "a christmas garland"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=500}
 
 TypeID      = 6503
 Name        = "a red christmas garland"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=500}
 
 TypeID      = 6504
 Name        = "a blue christmas garland"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=500}
 
 TypeID      = 6505
@@ -29554,6 +29588,11 @@ Name        = "a dead plaguesmith"
 Flags       = {Corpse,Expire}
 Attributes  = {ExpireTarget=0,TotalExpireTime=600}
 
+TypeID      = 6522
+Name        = "a parchment"
+Flags       = {Take}
+Attributes  = {Weight=200}
+
 TypeID      = 6523
 Name        = "a skeleton"
 Flags       = {Unmove}
@@ -29564,7 +29603,7 @@ Flags       = {Unmove}
 
 TypeID      = 6525
 Name        = "a skeleton decoration"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=1000}
 
 TypeID      = 6526
@@ -29576,23 +29615,31 @@ Attributes  = {Weight=5}
 TypeID      = 6527
 Name        = "the avenger"
 Description = "This holy blade was forged of shattered dreams"
-Flags       = {Take}
-Attributes  = {Weight=6400}
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=6400,SlotType=TWOHANDED,WeaponType=SWORD,Attack=38,Defense=50}
 
 TypeID      = 6528
 Name        = "an infernal bolt"
-Flags       = {Cumulative,Take}
-Attributes  = {Weight=90}
+Flags       = {Cumulative,Take,Ammo}
+Attributes  = {MinimumLevel=70,Weight=90,AmmoType=BOLT,Attack=43,MissileEffect=16,Fragility=100}
 
 TypeID      = 6529
 Name        = "pair of soft boots"
+Flags       = {Take,ExpireStop,ShowDetail}
+Attributes  = {Weight=800,EquipTarget=3549,SlotType=FEET}
+
+TypeID      = 6530
+Name        = "a worn soft boots"
+Description = "Someone specialised in shoes might be able to repair them for you"
 Flags       = {Take}
 Attributes  = {Weight=800}
 
 TypeID      = 6531
 Name        = "a santa hat"
-Flags       = {Take}
-Attributes  = {Weight=750}
+Flags       = {Take,Armor}
+Attributes  = {Weight=750,SlotType=HEAD,ArmorValue=1}
+
+# TODO: Pradeti nuo cia
 
 TypeID      = 6532
 Name        = "a dead defiler"
