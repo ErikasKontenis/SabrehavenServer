@@ -46,6 +46,13 @@ local foods = {
 	[6392] = "Mmmm.", -- valentine's cake
 	[6393] = "Mmmm.", -- cream cake
 	[6500] = "Mmmm.", -- gingerbreadman
+	[6541] = "Gulp.", -- coloured egg
+	[6542] = "Gulp.", -- coloured egg
+	[6543] = "Gulp.", -- coloured egg
+	[6544] = "Gulp.", -- coloured egg
+	[6545] = "Gulp.", -- coloured egg
+	[6569] = "Mmmm.", -- candy
+	[6574] = "Mmmm.", -- bar of chocolate
 }
 
 function onUse(player, item, fromPosition, target, toPosition)

@@ -29639,8 +29639,6 @@ Name        = "a santa hat"
 Flags       = {Take,Armor}
 Attributes  = {Weight=750,SlotType=HEAD,ArmorValue=1}
 
-# TODO: Pradeti nuo cia
-
 TypeID      = 6532
 Name        = "a dead defiler"
 Flags       = {Container,Unmove,Corpse,Expire}
@@ -29673,8 +29671,8 @@ Attributes  = {Weight=2500}
 
 TypeID      = 6538
 Name        = "a valentine's card"
-Flags       = {Take}
-Attributes  = {Weight=100}
+Flags       = {Text,WriteOnce,Take}
+Attributes  = {maxLength=1024,Weight=100}
 
 TypeID      = 6539
 Name        = "the Handmaiden's protector"
@@ -29689,27 +29687,27 @@ Attributes  = {Weight=6500}
 TypeID      = 6541
 Name        = "a coloured egg"
 Flags       = {Cumulative,Take}
-Attributes  = {Weight=30}
+Attributes  = {Nutrition=6,Weight=30}
 
 TypeID      = 6542
 Name        = "a coloured egg"
 Flags       = {Cumulative,Take}
-Attributes  = {Weight=30}
+Attributes  = {Nutrition=6,Weight=30}
 
 TypeID      = 6543
 Name        = "a coloured egg"
 Flags       = {Cumulative,Take}
-Attributes  = {Weight=30}
+Attributes  = {Nutrition=6,Weight=30}
 
 TypeID      = 6544
 Name        = "a coloured egg"
 Flags       = {Cumulative,Take}
-Attributes  = {Weight=30}
+Attributes  = {Nutrition=6,Weight=30}
 
 TypeID      = 6545
 Name        = "a coloured egg"
 Flags       = {Cumulative,Take}
-Attributes  = {Weight=30}
+Attributes  = {Nutrition=6,Weight=30}
 
 TypeID      = 6546
 Name        = "Dracola's eye"
@@ -29717,7 +29715,7 @@ Flags       = {Take}
 Attributes  = {Weight=1500}
 
 TypeID      = 6547
-Name        = "yellow powder"
+Name        = "a yellow powder"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=50}
 
@@ -29750,14 +29748,14 @@ Attributes  = {FluidSource=SLIME,ExpireTarget=0,TotalExpireTime=360}
 
 TypeID      = 6553
 Name        = "a ruthless axe"
-Flags       = {Take}
-Attributes  = {Weight=5800}
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=5800,SlotType=TWOHANDED,WeaponType=AXE,Attack=49,Defense=15}
 
 TypeID      = 6554
-Name        = ""
+Name        = "" # this is nothing in client
 
 TypeID      = 6555
-Name        = ""
+Name        = "" # this is nothing in client
 
 TypeID      = 6556
 Name        = "a tic-tac-toe token"
@@ -29778,7 +29776,7 @@ Flags       = {Take}
 Attributes  = {Weight=200}
 
 TypeID      = 6559
-Name        = ""
+Name        = "" # this is nothing in client
 
 TypeID      = 6560
 Name        = "a dead human"
@@ -29792,11 +29790,11 @@ Attributes  = {Weight=500}
 
 TypeID      = 6562
 Name        = "a flat roof"
-Flags       = {Clip,Unpass,Unmove}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 6563
 Name        = "a flat roof"
-Flags       = {Clip,Unpass,Unmove}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 6564
 Name        = "a flat roof"
@@ -29824,7 +29822,7 @@ Attributes  = {Weight=600,ExpireTarget=5080,TotalExpireTime=3}
 TypeID      = 6569
 Name        = "a candy"
 Flags       = {Cumulative,Take}
-Attributes  = {Weight=5}
+Attributes  = {Nutrition=1,Weight=5}
 
 TypeID      = 6570
 Name        = "a surprise bag"
@@ -29838,34 +29836,39 @@ Attributes  = {Weight=1000}
 
 TypeID      = 6572
 Name        = "a party trumpet"
-Flags       = {Take}
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=50}
+
+TypeID      = 6573
+Name        = "a party trumpet"
+Flags       = {Take,Expire}
+Attributes  = {Weight=50,ExpireTarget=6572,TotalExpireTime=3}
 
 TypeID      = 6574
 Name        = "a bar of chocolate"
 Flags       = {Take}
-Attributes  = {Weight=10}
+Attributes  = {Nutrition=5,Weight=10}
 
 TypeID      = 6575
 Name        = "red balloons"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=10}
 
 TypeID      = 6576
 Name        = "a fireworks rocket"
 Description = "Do not use in your backpack or while asleep. Keep away from animals or children"
-Flags       = {Take}
+Flags       = {UseEvent,Take}
 Attributes  = {Weight=100}
 
 TypeID      = 6577
 Name        = "green balloons"
-Flags       = {Take}
+Flags       = {Take,Hang}
 Attributes  = {Weight=10}
 
 TypeID      = 6578
 Name        = "a party hat"
-Flags       = {Take}
-Attributes  = {Weight=750}
+Flags       = {Take,Armor}
+Attributes  = {Weight=750,SlotType=HEAD,ArmorValue=1}
 
 TypeID      = 6579
 Name        = "a doll"

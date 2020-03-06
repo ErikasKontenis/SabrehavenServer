@@ -105,6 +105,7 @@
 	<action fromid="2952" toid="2965" script="misc/instruments.lua" />
 	<action itemid="3219" script="misc/instruments.lua" />
 	<action itemid="5786" script="misc/instruments.lua" />
+	<action itemid="6572" script="misc/instruments.lua" />
 	
 	<!-- Strange Levers -->
 	<action fromid="2566" toid="2567" script="misc/strange_lever.lua" />
@@ -157,6 +158,9 @@
 	<action fromid="3309" toid="3329" script="misc/weapons.lua" />
 	<action fromid="3331" toid="3348" script="misc/weapons.lua" />
 	<action itemid="3208" script="misc/weapons.lua" />
+	<action itemid="6101" script="misc/weapons.lua" />
+	<action itemid="6527" script="misc/weapons.lua" />
+	<action itemid="6553" script="misc/weapons.lua" />
 	<action itemid="3059" script="misc/spellbook.lua" />
 	<action fromid="5792" toid="5797" script="misc/dice.lua" />
 	<action itemid="3114" script="misc/skull_candle.lua" />
@@ -165,11 +169,16 @@
 	<action itemid="5928" script="misc/catch_fish.lua" />
 	<action itemid="6279" script="misc/party_cake.lua" />
 	<action itemid="6387" script="misc/christmas_card.lua" />
+	<action itemid="6558" script="misc/concentrated_demonic_blood.lua" />
+	<action itemid="6561" script="misc/ceremonial_ankh.lua" />
+	<action itemid="6576" script="misc/fireworks_rocket.lua" />
+	<action itemid="6578" script="misc/party_hat.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />
 	<action itemid="5668" script="misc/dolls.lua" />
 	<action itemid="5791" script="misc/dolls.lua" />
+	<action itemid="6511" script="misc/dolls.lua" />
 	
 	<!-- Keys -->
 	<action fromid="2967" toid="2973" script="misc/key.lua" />
@@ -310,6 +319,13 @@
 	<action itemid="6392" script="misc/food.lua" />
 	<action itemid="6393" script="misc/food.lua" />
 	<action itemid="6500" script="misc/food.lua" />
+	<action itemid="6541" script="misc/food.lua" />
+	<action itemid="6542" script="misc/food.lua" />
+	<action itemid="6543" script="misc/food.lua" />
+	<action itemid="6544" script="misc/food.lua" />
+	<action itemid="6545" script="misc/food.lua" />
+	<action itemid="6569" script="misc/food.lua" />
+	<action itemid="6574" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />

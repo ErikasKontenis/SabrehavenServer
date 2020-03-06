@@ -670,6 +670,10 @@ MagicEffectNames magicEffectNames[] = {
 	{"whitenote",		CONST_ME_SOUND_WHITE},
 	{"bubbles",		CONST_ME_BUBBLES},
 	{"dice",		CONST_ME_CRAPS},
+	{"giftwraps",		CONST_ME_GIFT_WRAPS},
+	{"yellowfirework",	CONST_ME_FIREWORK_YELLOW},
+	{"redfirework",		CONST_ME_FIREWORK_RED},
+	{"bluefirework",	CONST_ME_FIREWORK_BLUE},
 };
 
 ShootTypeNames shootTypeNames[] = {
@@ -688,6 +692,7 @@ ShootTypeNames shootTypeNames[] = {
 	{"snowball",		CONST_ANI_SNOWBALL},
 	{"powerbolt",		CONST_ANI_POWERBOLT},
 	{"poison",		CONST_ANI_POISON},
+	{"infernalbolt",	CONST_ANI_INFERNALBOLT},
 };
 
 CombatTypeNames combatTypeNames[] = {

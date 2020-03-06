@@ -52,6 +52,10 @@ enum MagicEffectClasses : uint8_t {
 	CONST_ME_SOUND_WHITE = 25,
 	CONST_ME_BUBBLES = 26,
 	CONST_ME_CRAPS = 27,
+	CONST_ME_GIFT_WRAPS = 28,
+	CONST_ME_FIREWORK_YELLOW = 29,
+	CONST_ME_FIREWORK_RED = 30,
+	CONST_ME_FIREWORK_BLUE = 31,
 };
 
 enum ShootType_t : uint8_t {
@@ -72,6 +76,7 @@ enum ShootType_t : uint8_t {
 	CONST_ANI_SNOWBALL = 13,
 	CONST_ANI_POWERBOLT = 14,
 	CONST_ANI_POISON = 15,
+	CONST_ANI_INFERNALBOLT = 16,
 };
 
 enum SpeakClasses : uint8_t {
