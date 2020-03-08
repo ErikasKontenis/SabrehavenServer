@@ -27853,8 +27853,6 @@ Name        = "a tortoise shield"
 Flags       = {Take,Shield}
 Attributes  = {Weight=5200,Defense=26}
 
-# 7.92 ITEMS
-
 TypeID      = 6132
 Name        = "a tree wall"
 Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}

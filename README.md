@@ -1,20 +1,13 @@
-# Nostalrius 7.7
-Nostalrius is a 7.7 clone project that has been in development for a long time, it is based on TheForgottenServer 1.2 fork.
+# Sabrehaven
+Sabrehaven is a 7.8-7.92 clone project that has been in development for a long time, it is based on TheForgottenServer 1.2 fork and Nostalrius 7.7.
 
-  - You can find here the most complete 7.72 Tibia replica that has ever been made
-  - Formulas, monsters behavior, the map, everything!
+# Sabrehaven Tools
 
+  - https://gitlab.com/ErikasKontenis/SabrehavenMapEditor
+  - https://gitlab.com/ErikasKontenis/sabrehavenitemeditor
+  - https://gitlab.com/ErikasKontenis/sabrehavenxmllooteditor
+  
 # Credits
 
-  - Alejandro Mujica (Ezzz in otland) - I'm the main developer and programmer of this game server
-  - Kevin Luiz (long time friendship, also helped get everything fixed and stable)
-  - Zakaria Ziady (compromised myself into getting the true formulas of the game server)
-
-# Map Editor
-
-  - https://github.com/TwistedScorpio/Map-Editor
-
-# Donations
-
-  - If you would like to support my work and also to continue to keep me motivated in updating missing details, please, consider donating
-  - kenshin2565@hotmail.com
+  - Erikas Kontenis for the Sabrehaven Platform
+  - Nostalrius and TheForgottenServer Team
