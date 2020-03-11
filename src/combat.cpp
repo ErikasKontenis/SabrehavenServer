@@ -886,26 +886,7 @@ bool Combat::closeAttack(Creature* attacker, Creature* target, fightMode_t fight
 	combatDamage.value = totalDamage;
 	combatDamage.origin = ORIGIN_MELEE;
 
-	bool hit = Combat::doCombatHealth(attacker, target, combatDamage, combatParams);
-
-	if (Monster* monster = attacker->getMonster()) {
-		int32_t poison = monster->mType->info.poison;
-		if (poison) {
-			int32_t randTest = rand();
-
-			if (hit || ((-totalDamage > defense) && (randTest == 5 * (randTest / 5)))) {
-				poison = normal_random(poison / 2, poison);
-				if (poison) {
-					ConditionDamage* condition = static_cast<ConditionDamage*>(Condition::createCondition(CONDITIONID_COMBAT, CONDITION_POISON, 0, 0));
-					condition->setParam(CONDITION_PARAM_OWNER, attacker->getID());
-					condition->setParam(CONDITION_PARAM_CYCLE, poison);
-					condition->setParam(CONDITION_PARAM_COUNT, 3);
-					condition->setParam(CONDITION_PARAM_MAX_COUNT, 3);
-					target->addCombatCondition(condition);
-				}
-			}
-		}
-	}
+	Combat::doCombatHealth(attacker, target, combatDamage, combatParams);
 
 	if (Player* player = attacker->getPlayer()) {
 		// skills advancing
@@ -1283,7 +1264,7 @@ void Combat::postWeaponEffects(Player* player, Item* weapon)
 	}
 }
 
-bool Combat::doCombatHealth(Creature* caster, Creature* target, CombatDamage& damage, const CombatParams& params)
+void Combat::doCombatHealth(Creature* caster, Creature* target, CombatDamage& damage, const CombatParams& params)
 {
 	bool canCombat = !params.aggressive || (caster != target && Combat::canDoCombat(caster, target) == RETURNVALUE_NOERROR);
 	if ((caster == target || canCombat) && params.impactEffect != CONST_ME_NONE) {
@@ -1300,8 +1281,6 @@ bool Combat::doCombatHealth(Creature* caster, Creature* target, CombatDamage& da
 			params.targetCallback->onTargetCombat(caster, target);
 		}
 	}
-
-	return canCombat;
 }
 
 void Combat::doCombatHealth(Creature* caster, const Position& position, const AreaCombat* area, CombatDamage& damage, const CombatParams& params)

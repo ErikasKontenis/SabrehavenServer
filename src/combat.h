@@ -293,7 +293,7 @@ class Combat
 
 		static void getAttackValue(Creature* creature, uint32_t& attackValue, uint32_t& skillValue, uint8_t& skill);
 
-		static bool doCombatHealth(Creature* caster, Creature* target, CombatDamage& damage, const CombatParams& params);
+		static void doCombatHealth(Creature* caster, Creature* target, CombatDamage& damage, const CombatParams& params);
 		static void doCombatHealth(Creature* caster, const Position& position, const AreaCombat* area, CombatDamage& damage, const CombatParams& params);
 
 		static void doCombatMana(Creature* caster, Creature* target, CombatDamage& damage, const CombatParams& params);
