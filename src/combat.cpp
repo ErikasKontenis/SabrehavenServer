@@ -869,12 +869,6 @@ bool Combat::closeAttack(Creature* attacker, Creature* target, fightMode_t fight
 
 	Combat::getAttackValue(attacker, attackValue, skillValue, skill);
 
-	int32_t defense = target->getDefense();
-
-	if (OTSYS_TIME() < target->earliestDefendTime) {
-		defense = 0;
-	}
-
 	CombatParams combatParams;
 	combatParams.blockedByArmor = true;
 	combatParams.blockedByShield = true;
