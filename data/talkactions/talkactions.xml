@@ -40,6 +40,7 @@
 	<talkaction words="/removehouse" separator=" " script="remove_house.lua" />
 	<talkaction words="/globalboost" separator=" " script="global_rate_boost.lua" />
 	<talkaction words="/loottest" script="loot_test.lua" />
+	<talkaction words="/event" script="serpentine_tower_event.lua" />
 	
 	<!-- player talkactions -->
 	<talkaction words="!buypremium" script="buyprem.lua"/>

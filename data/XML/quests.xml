@@ -390,4 +390,10 @@
 			<missionstate id="2" description="You returned Fugio's Diary. Costello was very thankful about your help and gave you a blessed ankh as reward." />
 		</mission>
 	</quest>
+	<quest name="The Serpentine Tower" startstorageid="17596" startstoragevalue="1">
+		<mission name="The Ankrahmun Academy of Magic Arts Disaster" storageid="17596" endvalue="999">
+			<missionstate id="1" description="The earthquake destroyed the Serpentine Tower. There must be a way to get in the undergrouds." />
+			<missionstate id="2" description="Everything makes sense. Until now..." />
+		</mission>
+	</quest>
 </quests>
