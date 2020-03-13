@@ -825,23 +825,6 @@ BlockType_t Creature::blockHit(Creature* attacker, CombatType_t combatType, int3
 	if (attacker) {
 		attacker->onAttackedCreature(this);
 		attacker->onAttackedCreatureBlockHit(blockType);
-
-		if (Monster* monster = attacker->getMonster()) {
-			int32_t poison = monster->mType->info.poison;
-			if (poison) {
-				if (blockType == BLOCK_NONE || blockType == BLOCK_ARMOR) {
-					poison = normal_random(poison / 2, poison);
-					if (poison) {
-						ConditionDamage* condition = static_cast<ConditionDamage*>(Condition::createCondition(CONDITIONID_COMBAT, CONDITION_POISON, 0, 0));
-						condition->setParam(CONDITION_PARAM_OWNER, attacker->getID());
-						condition->setParam(CONDITION_PARAM_CYCLE, poison);
-						condition->setParam(CONDITION_PARAM_COUNT, 3);
-						condition->setParam(CONDITION_PARAM_MAX_COUNT, 3);
-						addCombatCondition(condition);
-					}
-				}
-			}
-		}
 	}
 
 	onAttacked();
