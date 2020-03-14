@@ -63,6 +63,7 @@ function onSay(player, words, param)
 	end
 	
 	-- TODO: Implement that all people are teleported near serpentine tower and after event finish all teleported to temple and then server save
+	teleportPlayersToSerpentineTower()
 	addEvent(wave1, 10000)
 	addEvent(wave2, 30000)
 	addEvent(wave3, 90000)
@@ -70,8 +71,17 @@ function onSay(player, words, param)
 	addEvent(wave5, 160000)
 	addEvent(wave6, 165000)
 	addEvent(wave7, 170000)
+	addEvent(wave8, 175000)
 	
 	return false
+end
+
+function teleportPlayersToSerpentineTower()
+	for _, player in ipairs(Game.getPlayers()) do
+		local teleportPosition = availablePlayerTeleportPositions[math.random(#availablePlayerTeleportPositions)]
+		doRelocate(player:getPosition(), teleportPosition)
+		player:getPosition():sendMonsterSay("accersi " .. player:getName())
+	end
 end
 
 function wave1()
@@ -125,6 +135,43 @@ function wave7()
 	Position(33151, 32866, 7):sendMonsterSay("The Serpentine Tower Secret Is Real!")
 	Position(33147, 32866, 7):sendMonsterSay("The Serpentine Tower Secret Is Real!")
 	Position(33149, 32868, 7):sendMonsterSay("LET ME OUT!")
+end
+
+function wave8()
+	broadcastMessage("Ankrahmun: WE ARE LOST FOREVER!", MESSAGE_STATUS_WARNING)
+	for xx = area.fromPos.x, area.toPos.x do
+		for yy = area.fromPos.y, area.toPos.y do
+			local position = Position(xx, yy, 7)
+			local tile = Tile(position)
+			if tile then
+				local ground = tile:getGround()
+				if ground ~= nil and ground:getId() == 231 then
+					ground:transform(2144)
+				end
+			end
+		end
+	end
+	
+	Game.createItem(2199, 1, Position(33140, 32859, 7))
+	Position(33140, 32859, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33140, 32874, 7))
+	Position(33140, 32874, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33155, 32874, 7))
+	Position(33155, 32874, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33155, 32859, 7))
+	Position(33155, 32859, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33149, 32863, 7))
+	Position(33149, 32863, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33153, 32866, 7))
+	Position(33153, 32866, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33153, 32871, 7))
+	Position(33153, 32871, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33149, 32873, 7))
+	Position(33149, 32873, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33145, 32871, 7))
+	Position(33145, 32871, 7):sendMagicEffect(CONST_ME_TELEPORT)
+	Game.createItem(2199, 1, Position(33145, 32866, 7))
+	Position(33145, 32866, 7):sendMagicEffect(CONST_ME_TELEPORT)
 end
 
 function earthquakeTower(frompos, topos)
