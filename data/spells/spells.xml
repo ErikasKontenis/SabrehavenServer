@@ -285,12 +285,16 @@
 		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</conjure>
 	<conjure name="Heavy Magic Missile" words="adori gran" lvl="25" mana="280" soul="2" reagentId="3147" conjureId="3198" conjureCount="5" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</conjure>
 	<conjure name="Fire Field" words="adevo grav flam" lvl="15" mana="240" soul="1" reagentId="3147" conjureId="3188" conjureCount="3" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
@@ -301,6 +305,8 @@
 	<conjure name="Fireball" words="adori flam" lvl="17" mana="160" soul="2" prem="1" reagentId="3147" conjureId="3189" conjureCount="2" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</conjure>
 	<conjure name="Envenom" words="adevo res pox" lvl="21" mana="400" soul="2" reagentId="3147" conjureId="3179" conjureCount="1" needlearn="0" function="conjureRune">
 		<vocation name="Druid" />
