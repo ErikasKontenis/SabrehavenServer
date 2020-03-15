@@ -432,7 +432,7 @@ CallBack* Combat::getCallback(CallBackParam_t key)
 	return nullptr;
 }
 
-void Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)
+bool Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)
 {
 	assert(data);
 	CombatDamage damage = *data;
@@ -449,16 +449,18 @@ void Combat::CombatHealthFunc(Creature* caster, Creature* target, const CombatPa
 	}
 
 	if (g_game.combatBlockHit(damage, caster, target, params.blockedByShield, params.blockedByArmor, params.itemId != 0)) {
-		return;
+		return false;
 	}
 
 	if (g_game.combatChangeHealth(caster, target, damage)) {
 		CombatConditionFunc(caster, target, params, &damage);
 		CombatDispelFunc(caster, target, params, nullptr);
 	}
+
+	return true;
 }
 
-void Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)
+bool Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)
 {
 	assert(data);
 	CombatDamage damage = *data;
@@ -477,12 +479,14 @@ void Combat::CombatManaFunc(Creature* caster, Creature* target, const CombatPara
 		CombatConditionFunc(caster, target, params, nullptr);
 		CombatDispelFunc(caster, target, params, nullptr);
 	}
+
+	return true;
 }
 
-void Combat::CombatConditionFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)
+bool Combat::CombatConditionFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data)
 {
 	if (params.origin == ORIGIN_MELEE && data && data->value == 0) {
-		return;
+		return false;
 	}
 
 	for (const auto& condition : params.conditionList) {
@@ -496,17 +500,23 @@ void Combat::CombatConditionFunc(Creature* caster, Creature* target, const Comba
 			target->addCombatCondition(conditionCopy);
 		}
 	}
+
+	return true;
 }
 
-void Combat::CombatDispelFunc(Creature*, Creature* target, const CombatParams& params, CombatDamage*)
+bool Combat::CombatDispelFunc(Creature*, Creature* target, const CombatParams& params, CombatDamage*)
 {
 	target->removeCombatCondition(params.dispelType);
+
+	return true;
 }
 
-void Combat::CombatNullFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage*)
+bool Combat::CombatNullFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage*)
 {
 	CombatConditionFunc(caster, target, params, nullptr);
 	CombatDispelFunc(caster, target, params, nullptr);
+
+	return true;
 }
 
 void Combat::combatTileEffects(const SpectatorVec& list, Creature* caster, Tile* tile, const CombatParams& params)
@@ -1295,7 +1305,7 @@ bool Combat::doCombatHealth(Creature* caster, Creature* target, CombatDamage& da
 			addDistanceEffect(caster->getPosition(), target->getPosition(), params.distanceEffect);
 		}
 
-		CombatHealthFunc(caster, target, params, &damage);
+		canCombat = CombatHealthFunc(caster, target, params, &damage);
 		if (params.targetCallback) {
 			params.targetCallback->onTargetCombat(caster, target);
 		}
