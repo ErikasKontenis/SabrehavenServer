@@ -395,6 +395,11 @@
 	<movevent event="StepIn" itemid="5764" script="misc/drowning.lua" />
 	<movevent event="StepOut" itemid="5764" script="misc/drowning.lua"/>
 	
+	<!-- Serpentine Tower -->
+	<movevent event="StepIn" frommovementid="17602" tomovementid="17603" script="serpentine_tower/final_tile.lua" />
+	<movevent event="RemoveItem" movementid="17605" tileitem="1" script="serpentine_tower/take_waterwalking_boots.lua" />
+	<movevent event="StepIn" movementid="17606" script="serpentine_tower/humble_one_first.lua" />
+	
 	<!-- Laguna Islands -->
 	<movevent event="StepIn" frommovementid="17563" tomovementid="17564" script="laguna_islands/erayo_hut_stairs.lua" />
 	

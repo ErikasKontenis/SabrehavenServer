@@ -208,4 +208,37 @@
 	<monster name="toad" file="781/toad.xml" />
 	<monster name="tortoise" file="781/tortoise.xml" />
 	<monster name="magic pillar" file="781/magic pillar.xml" />
+	
+	<!-- 790 -->
+	<monster name="apprentice sheng" file="790/apprentice sheng.xml" />
+	<monster name="betrayed wraith" file="790/betrayed wraith.xml" />
+	<monster name="blightwalker" file="790/blightwalker.xml" />
+	<monster name="countess sorrow" file="790/countess sorrow.xml" />
+	<monster name="dark torturer" file="790/dark torturer.xml" />
+	<monster name="defiler" file="790/defiler.xml" />
+	<monster name="destroyer" file="790/destroyer.xml" />
+	<monster name="diabolic imp" file="790/diabolic imp.xml" />
+	<monster name="dracola" file="790/dracola.xml" />
+	<monster name="fury" file="790/fury.xml" />
+	<monster name="grynch clan goblin" file="790/grynch clan goblin.xml" />
+	<monster name="hand of cursed fate" file="790/hand of cursed fate.xml" />
+	<monster name="hellfire fighter" file="790/hellfire fighter.xml" />
+	<monster name="hellhound" file="790/hellhound.xml" />
+	<monster name="juggernaut" file="790/juggernaut.xml" />
+	<monster name="lost soul" file="790/lost soul.xml" />
+	<monster name="massacre" file="790/massacre.xml" />
+	<monster name="mr. punish" file="790/mr. punish.xml" />
+	<monster name="munster" file="790/munster.xml" />
+	<monster name="nightmare" file="790/nightmare.xml" />
+	<monster name="nomad" file="790/nomad.xml" />
+	<monster name="phantasm summon" file="790/phantasm summon.xml" />
+	<monster name="phantasm" file="790/phantasm.xml" />
+	<monster name="plaguesmith" file="790/plaguesmith.xml" />
+	<monster name="son of verminor" file="790/son of verminor.xml" />
+	<monster name="spectre" file="790/spectre.xml" />
+	<monster name="the handmaiden" file="790/the handmaiden.xml" />
+	<monster name="the imperor" file="790/the imperor.xml" />
+	<monster name="the plasmother" file="790/the plasmother.xml" />
+	<monster name="undead dragon" file="790/undead dragon.xml" />
+	<monster name="wyvern" file="790/wyvern.xml" />
 </monsters>

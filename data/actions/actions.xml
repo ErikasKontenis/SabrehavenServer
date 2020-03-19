@@ -85,6 +85,13 @@
 	<action actionid="82" script="nostalrius/82.lua" />
 	<action actionid="83" script="nostalrius/83.lua" />
 	
+	<!-- Serpentine Tower -->
+	<action actionid="17597" script="serpentine_tower/release_fire_elemental.lua" />
+	<action actionid="17598" script="serpentine_tower/release_vampire.lua" />
+	<action actionid="17599" script="serpentine_tower/release_behemoth.lua" />
+	<action actionid="17600" script="serpentine_tower/behemoth_lever.lua" />
+	<action actionid="17601" script="serpentine_tower/vampire_lever.lua" />
+	
 	<!-- Meriana Quest -->
 	<action actionid="17525" script="meriana_quest/tortoise_egg.lua" />
 	<action fromaid="17528" toaid="17530" script="meriana_quest/pirate_map.lua" />

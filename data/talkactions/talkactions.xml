@@ -55,6 +55,7 @@
 	<talkaction words="!serverinfo" script="serverinfo.lua"/>
 	<talkaction words="!share" script="experienceshare.lua"/>
 	<talkaction words="!shop" script="znoteshop.lua"/>
+	<talkaction words="469" script="469.lua"/>
 	
 	<!-- test talkactions -->
 	<talkaction words="!z" separator=" " script="magiceffect.lua"/>

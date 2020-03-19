@@ -62,24 +62,25 @@ function onSay(player, words, param)
 		return false
 	end
 	
-	-- TODO: Implement that all people are teleported near serpentine tower and after event finish all teleported to temple and then server save
 	teleportPlayersToSerpentineTower()
-	addEvent(wave1, 10000)
-	addEvent(wave2, 30000)
-	addEvent(wave3, 90000)
-	addEvent(wave4, 150000)
-	addEvent(wave5, 160000)
-	addEvent(wave6, 165000)
-	addEvent(wave7, 170000)
-	addEvent(wave8, 175000)
+	addEvent(wave1, 20000)
+	addEvent(wave2, 40000)
+	addEvent(wave3, 100000)
+	addEvent(wave4, 160000)
+	addEvent(wave5, 170000)
+	addEvent(wave6, 175000)
+	addEvent(wave7, 180000)
+	addEvent(wave8, 195000)
+	addEvent(wave9, 205000)
 	
 	return false
 end
 
 function teleportPlayersToSerpentineTower()
 	for _, player in ipairs(Game.getPlayers()) do
+		player:setStorageValue(17596, 1)
 		local teleportPosition = availablePlayerTeleportPositions[math.random(#availablePlayerTeleportPositions)]
-		doRelocate(player:getPosition(), teleportPosition)
+		player:teleportTo(teleportPosition)
 		player:getPosition():sendMonsterSay("accersi " .. player:getName())
 	end
 end
@@ -174,6 +175,14 @@ function wave8()
 	Position(33145, 32866, 7):sendMagicEffect(CONST_ME_TELEPORT)
 end
 
+function wave9()
+	broadcastMessage("Ankrahmun: PROTEGO MAXIMA!", MESSAGE_STATUS_WARNING)
+	
+	for _, player in ipairs(Game.getPlayers()) do
+		player:teleportTo(player:getTown():getTemplePosition())
+	end
+end
+
 function earthquakeTower(frompos, topos)
 	for zz = frompos.z, topos.z, -1 do
 		if zz == 6 then
@@ -203,12 +212,12 @@ function removeFloorItems(position)
 		local creature = tile:getTopCreature()
 		if creature then
 			local teleportPosition = availablePlayerTeleportPositions[math.random(#availablePlayerTeleportPositions)]
-			doRelocate(creature:getPosition(), teleportPosition)
+			creature:teleportTo(teleportPosition)
 			creature:getPosition():sendMonsterSay("The Gods Protecting You!")
 			Game.sendMagicEffect(teleportPosition, 11)
 			if creature:isPlayer() then
-				if creature:getStorageValue(17596) ~= 1 then
-					creature:setStorageValue(17596, 1)
+				if creature:getStorageValue(17596) ~= 2 then
+					creature:setStorageValue(17596, 2)
 				end
 			end
 		end
