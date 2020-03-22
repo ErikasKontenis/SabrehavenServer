@@ -1,5 +1,5 @@
 function onSay(player, words, param)
-	if not player:getGroup():getAccess() then
+	if player:getAccountType() == ACCOUNT_TYPE_NORMAL then
 		return true
 	end
 
@@ -8,7 +8,7 @@ function onSay(player, words, param)
 		player:sendCancelMessage("Player not found.")
 		return false
 	end
-
+	
 	if target:getAccountType() > player:getAccountType() then
 		player:sendCancelMessage("You can not get info about this player.")
 		return false
@@ -17,10 +17,12 @@ function onSay(player, words, param)
 	local targetIp = target:getIp()
 	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Name: " .. target:getName())
 	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Access: " .. (target:getGroup():getAccess() and "1" or "0"))
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Level: " .. target:getLevel())
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Magic Level: " .. target:getMagicLevel())
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Speed: " .. target:getSpeed())
-	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Position: " .. string.format("(%0.5d / %0.5d / %0.3d)", target:getPosition().x, target:getPosition().y, target:getPosition().z))
+	if player:getGroup():getAccess() then
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Level: " .. target:getLevel())
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Magic Level: " .. target:getMagicLevel())
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Speed: " .. target:getSpeed())
+		player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Position: " .. string.format("(%0.5d / %0.5d / %0.3d)", target:getPosition().x, target:getPosition().y, target:getPosition().z))
+	end
 	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "IP: " .. Game.convertIpToString(targetIp))
 
 	local players = {}
