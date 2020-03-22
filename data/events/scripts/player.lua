@@ -1,6 +1,6 @@
 function Player:onLook(thing, position, distance)
 	local description = "You see " .. thing:getDescription(distance)
-	if self:getAccountType() ~= ACCOUNT_TYPE_NORMAL then
+	if self:getGroup():getAccess() then
 		if thing:isItem() then
 			description = string.format("%s\nItem ID: %d", description, thing:getId())
 
