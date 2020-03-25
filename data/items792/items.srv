@@ -13708,19 +13708,19 @@ TypeID      = 3065
 Name        = "a quagmire rod"
 Description = "It emits clouds of poisonous swamp gas"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=26,Weight=2650,Brightness=2,LightColor=67,Vocations=2,Range=2,ManaConsumption=8,AttackStrength=45,AttackVariation=8,DamageType=Poison,MissileEffect=15}
+Attributes  = {MinimumLevel=26,Weight=2650,Brightness=2,LightColor=67,Vocations=2,Range=3,ManaConsumption=8,AttackStrength=45,AttackVariation=8,DamageType=Poison,MissileEffect=15}
 
 TypeID      = 3066
 Name        = "a snakebite rod"
 Description = "It seems to twitch and quiver as if trying to escape your grip"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=7,Weight=4300,Vocations=2,Range=4,ManaConsumption=2,AttackStrength=13,AttackVariation=5,DamageType=Poison,MissileEffect=15}
+Attributes  = {MinimumLevel=7,Weight=4300,Vocations=2,Range=3,ManaConsumption=2,AttackStrength=13,AttackVariation=5,DamageType=Poison,MissileEffect=15}
 
 TypeID      = 3067
 Name        = "a tempest rod"
 Description = "It grants you the power of striking your foes with furious thunderstorms"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=33,Weight=2100,Brightness=3,LightColor=29,Vocations=2,ManaConsumption=13,AttackStrength=65,AttackVariation=9,DamageType=Energy,Range=1,MissileEffect=5}
+Attributes  = {MinimumLevel=33,Weight=2100,Brightness=3,LightColor=29,Vocations=2,ManaConsumption=13,AttackStrength=65,AttackVariation=9,DamageType=Energy,Range=3,MissileEffect=5}
 
 TypeID      = 3068
 Name        = "a crystal wand"
@@ -13737,25 +13737,25 @@ TypeID      = 3070
 Name        = "a moonlight rod"
 Description = "Shimmering rays of moonlight radiate from its tip"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=13,Weight=1950,Brightness=3,LightColor=143,Vocations=2,ManaConsumption=3,AttackStrength=19,AttackVariation=6,DamageType=Energy,Range=2,MissileEffect=5}
+Attributes  = {MinimumLevel=13,Weight=1950,Brightness=3,LightColor=143,Vocations=2,ManaConsumption=3,AttackStrength=19,AttackVariation=6,DamageType=Energy,Range=3,MissileEffect=5}
 
 TypeID      = 3071
 Name        = "a wand of inferno"
 Description = "It unleashes the very fires of hell"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=33,Weight=3050,Brightness=3,LightColor=205,Vocations=1,ManaConsumption=13,AttackStrength=65,AttackVariation=9,DamageType=Fire,Range=2,MissileEffect=4}
+Attributes  = {MinimumLevel=33,Weight=3050,Brightness=3,LightColor=205,Vocations=1,ManaConsumption=13,AttackStrength=65,AttackVariation=9,DamageType=Fire,Range=3,MissileEffect=4}
 
 TypeID      = 3072
 Name        = "a wand of plague"
 Description = "Infectious goo covers its tip"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=19,Weight=2300,Brightness=2,LightColor=67,Vocations=1,ManaConsumption=5,AttackStrength=30,AttackVariation=7,DamageType=Poison,Range=2,MissileEffect=15}
+Attributes  = {MinimumLevel=19,Weight=2300,Brightness=2,LightColor=67,Vocations=1,ManaConsumption=5,AttackStrength=30,AttackVariation=7,DamageType=Poison,Range=3,MissileEffect=15}
 
 TypeID      = 3073
 Name        = "a wand of cosmic energy"
 Description = "The energy of a radiant star is trapped inside its globe"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=26,Weight=2300,Brightness=2,LightColor=205,Vocations=1,ManaConsumption=8,AttackStrength=45,AttackVariation=8,DamageType=Energy,Range=1,MissileEffect=5}
+Attributes  = {MinimumLevel=26,Weight=2300,Brightness=2,LightColor=205,Vocations=1,ManaConsumption=8,AttackStrength=45,AttackVariation=8,DamageType=Energy,Range=3,MissileEffect=5}
 
 TypeID      = 3074
 Name        = "a wand of vortex"
