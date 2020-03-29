@@ -145,8 +145,10 @@
 	<instant name="Magic Shield" words="utamo vita" lvl="14" mana="50" aggressive="0" selftarget="1" needlearn="0" script="spells/magic shield.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Druid" />
+		<vocation name="Paladin" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
+		<vocation name="Royal Paladin" />
 	</instant>
 	<instant name="Flame Strike" words="exori flam" lvl="14" mana="20" prem="1" cooldown="1000" range="3" direction="1" blockwalls="1" needlearn="0" script="spells/flame strike.lua">
 		<vocation name="Sorcerer" />
