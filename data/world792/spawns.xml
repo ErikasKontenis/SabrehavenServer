@@ -7705,6 +7705,9 @@
 		<monster name="smuggler" x="0" y="0" z="7" spawntime="600" />
 		<monster name="smuggler" x="-3" y="1" z="7" spawntime="600" />
 	</spawn>
+	<spawn centerx="32769" centery="32289" centerz="7" radius="1">
+		<monster name="Wyvern" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="32822" centery="32289" centerz="7" radius="3" />
 	<spawn centerx="32634" centery="32290" centerz="7" radius="3">
 		<monster name="bandit" x="-2" y="-1" z="7" spawntime="600" />
@@ -7732,6 +7735,12 @@
 		<monster name="minotaur" x="1" y="-1" z="7" spawntime="600" />
 		<monster name="minotaur" x="0" y="0" z="7" spawntime="600" />
 		<monster name="minotaur" x="-1" y="4" z="7" spawntime="600" />
+	</spawn>
+	<spawn centerx="32773" centery="32292" centerz="7" radius="1">
+		<monster name="Wyvern" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
+	<spawn centerx="32780" centery="32292" centerz="7" radius="1">
+		<monster name="Wyvern" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="33277" centery="32292" centerz="7" radius="3">
 		<monster name="deer" x="0" y="-2" z="7" spawntime="600" />
@@ -7838,6 +7847,9 @@
 		<monster name="deer" x="0" y="0" z="7" spawntime="600" />
 		<monster name="deer" x="-2" y="3" z="7" spawntime="600" />
 	</spawn>
+	<spawn centerx="32827" centery="32319" centerz="7" radius="1">
+		<monster name="Wyvern" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="32343" centery="32320" centerz="7" radius="4">
 		<monster name="deer" x="-3" y="-2" z="7" spawntime="600" />
 		<monster name="wolf" x="-4" y="-1" z="7" spawntime="700" />
@@ -7852,6 +7864,9 @@
 		<monster name="snake" x="0" y="0" z="7" spawntime="600" />
 		<monster name="snake" x="2" y="2" z="7" spawntime="600" />
 		<monster name="snake" x="3" y="2" z="7" spawntime="600" />
+	</spawn>
+	<spawn centerx="32833" centery="32321" centerz="7" radius="1">
+		<monster name="Wyvern" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32394" centery="32322" centerz="7" radius="3">
 		<monster name="rabbit" x="0" y="0" z="7" spawntime="600" />
