@@ -639,9 +639,15 @@
 		<monster name="minotaur archer" x="-3" y="1" z="4" spawntime="600" />
 		<monster name="minotaur archer" x="0" y="1" z="4" spawntime="600" />
 	</spawn>
+	<spawn centerx="32575" centery="31961" centerz="4" radius="1">
+		<monster name="Wyvern" x="-1" y="-1" z="4" spawntime="60" />
+	</spawn>
 	<spawn centerx="32465" centery="31963" centerz="4" radius="3">
 		<monster name="minotaur mage" x="-2" y="-1" z="4" spawntime="600" />
 		<monster name="minotaur mage" x="0" y="0" z="4" spawntime="600" />
+	</spawn>
+	<spawn centerx="32571" centery="31964" centerz="4" radius="1">
+		<monster name="Wyvern" x="-1" y="1" z="4" spawntime="60" />
 	</spawn>
 	<spawn centerx="32466" centery="31968" centerz="4" radius="3">
 		<monster name="minotaur archer" x="-2" y="0" z="4" spawntime="600" />
@@ -1260,6 +1266,10 @@
 		<monster name="wolf" x="4" y="1" z="5" spawntime="500" />
 		<monster name="wolf" x="-1" y="2" z="5" spawntime="500" />
 	</spawn>
+	<spawn centerx="32780" centery="31823" centerz="5" radius="3">
+		<monster name="Wyvern" x="1" y="-1" z="5" spawntime="60" />
+		<monster name="Wyvern" x="-1" y="1" z="5" spawntime="60" />
+	</spawn>
 	<spawn centerx="32842" centery="31827" centerz="5" radius="4">
 		<monster name="wasp" x="1" y="-2" z="5" spawntime="600" />
 		<monster name="wasp" x="0" y="0" z="5" spawntime="600" />
@@ -1787,6 +1797,11 @@
 		<monster name="pirate marauder" x="2" y="-2" z="5" spawntime="59" />
 		<monster name="pirate marauder" x="-1" y="2" z="5" spawntime="59" />
 	</spawn>
+	<spawn centerx="33014" centery="32810" centerz="5" radius="4">
+		<monster name="Wyvern" x="1" y="-3" z="5" spawntime="60" />
+		<monster name="Wyvern" x="-3" y="1" z="5" spawntime="60" />
+		<monster name="Wyvern" x="3" y="4" z="5" spawntime="60" />
+	</spawn>
 	<spawn centerx="31959" centery="32815" centerz="5" radius="2">
 		<monster name="pirate marauder" x="1" y="-2" z="5" spawntime="59" />
 		<monster name="pirate marauder" x="0" y="2" z="5" spawntime="59" />
@@ -2063,8 +2078,14 @@
 	<spawn centerx="33100" centery="31696" centerz="6" radius="1">
 		<monster name="dragon" x="0" y="0" z="6" spawntime="600" />
 	</spawn>
+	<spawn centerx="33221" centery="31700" centerz="6" radius="1">
+		<monster name="Wyvern" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="33089" centery="31702" centerz="6" radius="1">
 		<monster name="dragon" x="0" y="0" z="6" spawntime="600" />
+	</spawn>
+	<spawn centerx="33286" centery="31707" centerz="6" radius="2">
+		<monster name="Wyvern" x="1" y="-1" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="31950" centery="31708" centerz="6" radius="4">
 		<monster name="deer" x="-1" y="-1" z="6" spawntime="600" />
@@ -2230,6 +2251,9 @@
 		<monster name="orc berserker" x="0" y="0" z="6" spawntime="600" />
 		<monster name="orc berserker" x="2" y="0" z="6" spawntime="600" />
 	</spawn>
+	<spawn centerx="32229" centery="31782" centerz="6" radius="2">
+		<monster name="Wyvern" x="-1" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="32806" centery="31782" centerz="6" radius="4">
 		<monster name="orc spearman" x="-1" y="0" z="6" spawntime="600" />
 		<monster name="orc spearman" x="0" y="0" z="6" spawntime="600" />
@@ -2313,6 +2337,13 @@
 		<monster name="wasp" x="0" y="-1" z="6" spawntime="600" />
 		<monster name="wasp" x="0" y="0" z="6" spawntime="600" />
 	</spawn>
+	<spawn centerx="32781" centery="31829" centerz="6" radius="7">
+		<monster name="Wyvern" x="-2" y="-7" z="6" spawntime="60" />
+		<monster name="Wyvern" x="6" y="-3" z="6" spawntime="60" />
+		<monster name="Wyvern" x="-4" y="0" z="6" spawntime="60" />
+		<monster name="Wyvern" x="0" y="4" z="6" spawntime="60" />
+		<monster name="Wyvern" x="5" y="4" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="32553" centery="31832" centerz="6" radius="5">
 		<monster name="goblin" x="-4" y="-4" z="6" spawntime="600" />
 		<monster name="goblin" x="0" y="0" z="6" spawntime="600" />
@@ -2340,6 +2371,11 @@
 		<monster name="bear" x="-1" y="-2" z="6" spawntime="700" />
 		<monster name="bear" x="0" y="0" z="6" spawntime="700" />
 		<monster name="bear" x="-3" y="2" z="6" spawntime="700" />
+	</spawn>
+	<spawn centerx="32661" centery="31883" centerz="6" radius="7">
+		<monster name="Wyvern" x="5" y="-5" z="6" spawntime="60" />
+		<monster name="Wyvern" x="-5" y="-4" z="6" spawntime="60" />
+		<monster name="Wyvern" x="0" y="2" z="6" spawntime="60" />
 	</spawn>
 	<spawn centerx="32846" centery="31917" centerz="6" radius="1">
 		<monster name="valkyrie" x="0" y="0" z="6" spawntime="600" />
@@ -3160,6 +3196,10 @@
 		<monster name="cobra" x="0" y="0" z="6" spawntime="600" />
 		<monster name="cobra" x="-3" y="1" z="6" spawntime="600" />
 	</spawn>
+	<spawn centerx="32836" centery="32622" centerz="6" radius="3">
+		<monster name="Wyvern" x="-2" y="-2" z="6" spawntime="60" />
+		<monster name="Wyvern" x="2" y="0" z="6" spawntime="60" />
+	</spawn>
 	<spawn centerx="32315" centery="32623" centerz="6" radius="2">
 		<monster name="spider" x="1" y="-1" z="6" spawntime="60" />
 		<monster name="spider" x="-2" y="2" z="6" spawntime="60" />
@@ -3970,6 +4010,7 @@
 		<monster name="deer" x="-3" y="-3" z="7" spawntime="600" />
 		<monster name="deer" x="0" y="0" z="7" spawntime="600" />
 		<monster name="deer" x="3" y="2" z="7" spawntime="600" />
+		<monster name="Wyvern" x="0" y="4" z="7" spawntime="60" />
 		<monster name="deer" x="3" y="5" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="32946" centery="31690" centerz="7" radius="1">
@@ -4023,6 +4064,9 @@
 		<monster name="bug" x="2" y="2" z="7" spawntime="777" />
 		<monster name="bug" x="-8" y="5" z="7" spawntime="777" />
 		<monster name="bug" x="0" y="10" z="7" spawntime="777" />
+	</spawn>
+	<spawn centerx="33115" centery="31697" centerz="7" radius="1">
+		<monster name="Wyvern" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32476" centery="31698" centerz="7" radius="3">
 		<monster name="rabbit" x="0" y="0" z="7" spawntime="600" />
@@ -4136,6 +4180,10 @@
 	</spawn>
 	<spawn centerx="32374" centery="31710" centerz="7" radius="1">
 		<monster name="purple butterfly" x="0" y="0" z="7" spawntime="1200" />
+	</spawn>
+	<spawn centerx="32806" centery="31710" centerz="7" radius="4">
+		<monster name="Wyvern" x="3" y="-2" z="7" spawntime="60" />
+		<monster name="Wyvern" x="-1" y="2" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32918" centery="31710" centerz="7" radius="7">
 		<monster name="orc" x="4" y="7" z="7" spawntime="600" />
