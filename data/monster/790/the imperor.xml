@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="The Imperor" nameDescription="The Imperor" race="fire" experience="8000" speed="330" manacost="0">
 	<health now="15000" max="15000" />
-	<look type="237" corpse="8635" />
+	<look type="237" corpse="6363" />
 	<targetchange interval="5000" chance="5" />
 	<flags>
 		<flag summonable="0" />
@@ -62,24 +61,20 @@
 		<voice sentence="He he he!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="79" chance="100000" /><!-- gold coin -->
-		<item id="2050" chance="15000" /><!-- torch -->
-		<item id="6558" chance="2222" /><!-- concentrated demonic blood -->
-		<item id="2260" chance="18000" /><!-- blank rune -->
-		<item id="6534" chance="100000" /><!-- the imperor's trident -->
-		<item id="6300" chance="999" /><!-- death ring -->
-		<item id="2465" chance="6577" /><!-- brass armor -->
-		<item id="2548" chance="20000" /><!-- pitchfork -->
-		<item id="6529" countmax="5" chance="5000" /><!-- infernal bolts -->
-		<item id="2465" chance="6577" /><!-- brass armor -->
-		<item id="2185" chance="833" /><!-- volcanic rod -->
-		<item id="2464" chance="7887" /><!-- chain armor -->
-		<item id="5944" chance="5666" /><!-- soul orb -->
-		<item id="7899" chance="2000" /><!-- magma coat -->
-		<item id="7900" chance="2000" /><!-- magma monocle -->
-		<item id="7891" chance="2000" /><!-- magma boots -->
-		<item id="6500" countmax="1" chance="7777" /><!-- demonic essence -->
-		<item id="2150" countmax="1" chance="8888" /><!-- small amethyst -->
-		<item id="2165" chance="4555" /><!-- stealth ring -->
+		<item id="3031" countmax="79" chance="1000" /><!-- gold coin -->
+		<item id="2920" chance="150" /><!-- torch -->
+		<item id="6558" chance="22" /><!-- concentrated demonic blood -->
+		<item id="3147" chance="180" /><!-- blank rune -->
+		<item id="6534" chance="1000" /><!-- the imperor's trident -->
+		<item id="6299" chance="9" /><!-- death ring -->
+		<item id="3359" chance="65" /><!-- brass armor -->
+		<item id="3451" chance="200" /><!-- pitchfork -->
+		<item id="6528" countmax="5" chance="50" /><!-- infernal bolts -->
+		<item id="3359" chance="65" /><!-- brass armor -->
+		<item id="3069" chance="8" /><!-- volcanic rod -->
+		<item id="3358" chance="78" /><!-- chain armor -->
+		<item id="5944" chance="56" /><!-- soul orb -->
+		<item id="3033" countmax="1" chance="88" /><!-- small amethyst -->
+		<item id="3049" chance="45" /><!-- stealth ring -->
 	</loot>
 </monster>

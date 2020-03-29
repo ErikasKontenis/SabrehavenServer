@@ -1,4 +1,3 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Apprentice Sheng" nameDescription="Apprentice Sheng" race="blood" experience="150" speed="170" manacost="0">
 	<health now="95" max="95" />
 	<look type="23" corpse="5981" />
@@ -49,12 +48,12 @@
 		<voice sentence="You already know too much." />
 	</voices>
 	<loot>
-		<item id="5878" chance="100000" />				<!-- minotaur leather -->
-		<item id="2162" chance="80000" />				<!-- magic lightwand -->
-		<item id="2148" countmax="10" chance="30000" />	<!-- gold coin -->
-		<item id="2050" countmax="2" chance="30000" />	<!-- torch -->
-		<item id="2649" chance="20000" />				<!-- leather legs -->
-		<item id="2403" chance="10000" />				<!-- knife -->
-		<item id="2461" chance="10000" />				<!-- leather helmet -->
+		<item id="5878" chance="1000" />				<!-- minotaur leather -->
+		<item id="3046" chance="800" />				<!-- magic lightwand -->
+		<item id="3031" countmax="10" chance="300" />	<!-- gold coin -->
+		<item id="2920" countmax="2" chance="300" />	<!-- torch -->
+		<item id="3559" chance="200" />				<!-- leather legs -->
+		<item id="3291" chance="100" />				<!-- knife -->
+		<item id="3355" chance="100" />				<!-- leather helmet -->
 	</loot>
 </monster>

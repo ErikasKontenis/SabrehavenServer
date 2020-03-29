@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="The Handmaiden" nameDescription="the Handmaiden" race="blood" experience="3850" speed="450" manacost="0">
 	<health now="14500" max="14500" />
-	<look type="230" corpse="6312" />
+	<look type="230" corpse="6311" />
 	<targetchange interval="5000" chance="8" />
 	<flags>
 		<flag summonable="0" />
@@ -47,6 +46,6 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="6539" chance="35000" /><!-- handmaiden's protector -->
+		<item id="6539" chance="350" /><!-- handmaiden's protector -->
 	</loot>
 </monster>

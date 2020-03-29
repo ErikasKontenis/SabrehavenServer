@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Dracola" nameDescription="Dracola" race="undead" experience="11000" speed="410" manacost="0">
 	<health now="16200" max="16200" />
-	<look type="231" corpse="6307" />
+	<look type="231" corpse="6305" />
 	<targetchange interval="2000" chance="5" />
 	<flags>
 		<flag summonable="0" />
@@ -55,8 +54,7 @@
 		<voice sentence="DEATH CAN'T STOP MY HUNGER!" yell="1" />
 	</voices>
 	<loot>
-		<item id="2152" countmax="8" chance="20000" /><!-- platinum coin -->
-		<item id="6500" countmax="4" chance="1000" /><!-- demonic essence -->
-		<item id="6546" chance="100000" /><!-- dracola's eye -->
+		<item id="3035" countmax="8" chance="200" /><!-- platinum coin -->
+		<item id="6546" chance="1000" /><!-- dracola's eye -->
 	</loot>
 </monster>

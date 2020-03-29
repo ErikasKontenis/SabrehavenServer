@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Countess Sorrow" nameDescription="Countess Sorrow" race="undead" experience="5150" speed="250" manacost="0">
 	<health now="7200" max="7200" />
-	<look type="241" head="20" corpse="6344" />
+	<look type="241" head="20" corpse="6343" />
 	<targetchange interval="60000" chance="0" />
 	<flags>
 		<flag summonable="0" />
@@ -43,6 +42,6 @@
 		<immunity invisible="1" />
 	</immunities>
 	<loot>
-		<item id="6536" chance="100000" /><!-- countess sorrow's frozen tear -->
+		<item id="6536" chance="1000" /><!-- countess sorrow's frozen tear -->
 	</loot>
 </monster>

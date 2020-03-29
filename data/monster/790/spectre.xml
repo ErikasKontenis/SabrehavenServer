@@ -1,7 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Spectre" nameDescription="a spectre" race="undead" experience="2100" speed="230" manacost="0">
 	<health now="1350" max="1350" />
-	<look type="235" head="20" corpse="6348" />
+	<look type="235" head="20" corpse="6347" />
 	<targetchange interval="4000" chance="10" />
 	<flags>
 		<flag summonable="0" />
@@ -57,23 +56,19 @@
 		<voice sentence="Life...force! Feed me your... lifeforce!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="100" chance="33000" /><!-- gold coin -->
-		<item id="2148" countmax="100" chance="33000" /><!-- gold coin -->
-		<item id="2148" countmax="97" chance="33000" /><!-- gold coin -->
-		<item id="2260" countmax="2" chance="30310" /><!-- blank rune -->
-		<item id="2152" countmax="7" chance="3850" /><!-- platinum coin -->
-		<item id="5944" chance="6005" /><!-- soul orb -->
-		<item id="2165" chance="190" /><!-- stealth ring -->
-		<item id="2189" chance="9800" /><!-- wand of cosmic energy -->
-		<item id="6500" chance="6270" /><!-- demonic essence -->
-		<item id="2071" chance="9620" /><!-- lyre -->
-		<item id="7383" chance="700" /><!-- relic sword -->
-		<item id="2134" chance="850" /><!-- silver brooch -->
-		<item id="5909" chance="3800" /><!-- white piece of cloth -->
-		<item id="6300" chance="280" /><!-- death ring -->
-		<item id="7590" chance="920" /><!-- great mana potion -->
-		<item id="2134" chance="110" /><!-- shadow sceptre -->
-		<item id="2136" chance="110" /><!--demonbone amulet -->
-		<item id="11227" chance="1000" /><!-- shiny stone -->
+		<item id="3031" countmax="100" chance="330" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="330" /><!-- gold coin -->
+		<item id="3031" countmax="97" chance="330" /><!-- gold coin -->
+		<item id="3147" countmax="2" chance="303" /><!-- blank rune -->
+		<item id="3035" countmax="7" chance="38" /><!-- platinum coin -->
+		<item id="5944" chance="60" /><!-- soul orb -->
+		<item id="3049" chance="1" /><!-- stealth ring -->
+		<item id="3073" chance="98" /><!-- wand of cosmic energy -->
+		<item id="3260" chance="96" /><!-- lyre -->
+		<item id="3017" chance="8" /><!-- silver brooch -->
+		<item id="5909" chance="38" /><!-- white piece of cloth -->
+		<item id="6299" chance="2" /><!-- death ring -->
+		<item id="3017" chance="1" /><!-- shadow sceptre -->
+		<item id="3019" chance="1" /><!--demonbone amulet -->
 	</loot>
 </monster>
