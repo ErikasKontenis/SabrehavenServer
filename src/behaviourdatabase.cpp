@@ -883,7 +883,7 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 			} while (amount);
 		} else {
 			for (int32_t i = 0; i < std::max<int32_t>(1, amount); i++) {
-				Item* item = Item::CreateItem(itemId, data);
+				Item* item = Item::CreateItem(itemId, data == -1 ? 0 : data);
 				if (!item) {
 					break;
 				}
