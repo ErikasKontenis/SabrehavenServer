@@ -34,6 +34,7 @@
 	<immunities>
 		<immunity invisible="1" />
 		<immunity earth="1" />
+		<immunity drunk="1" />
 	</immunities>
 	<voices interval="2000" chance="7">
 		<voice sentence="Shriiiek" yell="1" />
