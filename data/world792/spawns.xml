@@ -12257,9 +12257,6 @@
 		<monster name="elephant" x="1" y="-1" z="7" spawntime="600" />
 		<monster name="elephant" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32699" centery="32764" centerz="7" radius="1">
-		<monster name="flamingo" x="0" y="0" z="7" spawntime="600" />
-	</spawn>
 	<spawn centerx="32756" centery="32764" centerz="7" radius="4">
 		<monster name="crocodile" x="0" y="0" z="7" spawntime="600" />
 		<monster name="crocodile" x="-2" y="1" z="7" spawntime="600" />
@@ -12401,12 +12398,6 @@
 		<monster name="lizard sentinel" x="0" y="0" z="7" spawntime="600" />
 		<monster name="flamingo" x="2" y="4" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="32696" centery="32776" centerz="7" radius="4">
-		<monster name="bug" x="1" y="-2" z="7" spawntime="600" />
-		<monster name="bug" x="2" y="-1" z="7" spawntime="600" />
-		<monster name="bug" x="0" y="0" z="7" spawntime="600" />
-		<monster name="snake" x="1" y="3" z="7" spawntime="600" />
-	</spawn>
 	<spawn centerx="32806" centery="32776" centerz="7" radius="1">
 		<monster name="tiger" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
@@ -12470,6 +12461,7 @@
 	</spawn>
 	<spawn centerx="32996" centery="32781" centerz="7" radius="1" />
 	<spawn centerx="32698" centery="32782" centerz="7" radius="5">
+		<monster name="snake" x="-1" y="-3" z="7" spawntime="600" />
 		<monster name="snake" x="0" y="0" z="7" spawntime="600" />
 		<monster name="snake" x="-3" y="3" z="7" spawntime="600" />
 		<monster name="snake" x="1" y="3" z="7" spawntime="600" />

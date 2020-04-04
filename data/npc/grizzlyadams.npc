@@ -1,0 +1,48 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# 17608 - any task in progress
+
+Name = "Grizzly Adams"
+Outfit = (144,97-97-94-97-3)
+Home = [32693,32767,6]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",QuestValue(17607)=1,! -> "Welcome to the 'Paw and Fur - Hunting Elite' %N. Feel free to do tasks for us."
+ADDRESS,"hi$",QuestValue(17607)=1,!    -> *
+ADDRESS,"hello$",! -> "Welcome %N. Would you like to join the 'Paw and Fur - Hunting Elite'?"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Wait a second, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Happy hunting, old chap!"
+
+"bye"             -> "Happy hunting, old chap!", Idle
+"farewell"        -> *
+
+"yes",QuestValue(17607)=0 -> "Great! A warm welcome to our newest member: %N! Ask me for a task if you want to go on a hunt.", SetQuestValue(17607,1)
+"join",QuestValue(17607)=0 -> *
+
+"task",QuestValue(17607)=0 -> "Firstly, you have to join us in our society %N. Would you like to join the 'Paw and Fur - Hunting Elite'?"
+"mission",QuestValue(17607)=0 -> *
+
+"task",QuestValue(17608)=0,level>5,level<50 -> "Alright, what would you like to hunt? Crocodiles, tarantulas, carniphilas, apes, thornback tortoises or gargoyles.", Topic=1
+Topic=1,"crocodile" -> Amount=17609, "They are a nuisance! You'll find them here in the jungle near the river. Hunt 300 crocodiles and you'll get a nice reward. Interested?", Topic=2
+Topic=1,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out 150 carniphilas for our society. Alright?", Topic=2
+Topic=1,"ape" -> Amount=17612, "You'll find the apes deeper in the jungle. Hunt 300 merlkins, kongras or sibangs to complete this task. Alright?", Topic=2
+Topic=1,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hunt 300 of them. Interested?", Topic=2
+Topic=1,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
+Topic=1 -> "Maybe next time."
+
+"task",QuestValue(17608)>0 -> "Your current task is in progress. Follow the status of your task in the quest log. If you wish to cancel your in-progress task then don't be afraid and feel free to cancel."
+
+Topic=2,"yes" -> "Happy hunting, old chap! Speak to me again when you are done hunting.", SetQuestValue(17608,Amount), SetQuestValue(Amount,0)
+Topic=2 -> "Maybe later."
+
+"cancel",QuestValue(17608)>0 -> "Are you sure you want to cancel your current task?", Topic=3
+Topic=3,"yes" -> "Alright! Feel free to do other tasks for us.", SetQuestValue(QuestValue(17608),99999), SetQuestValue(17608,0)
+Topic=3 -> "Good! Speak to me again when you are done hunting."
+
+"mission" -> "We prefer to call that 'task' in the society of the 'Paw and Fur - Hunting Elite'."
+
+}
