@@ -27,10 +27,6 @@
 	</instant>
 	
 	<!-- Druid Spells -->
-	<instant name="Food" words="exevo pan" lvl="14" mana="120" soul="1" aggressive="0" needlearn="0" script="spells/food.lua">
-		<vocation name="Druid" />
-		<vocation name="Elder Druid" />
-	</instant>
 	<instant name="Heal Friend" words="exura sio" lvl="18" mana="70" prem="1" aggressive="0" blockwalls="1" needtarget="1" playernameparam="1" params="1" needlearn="0" script="spells/heal friend.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
@@ -58,6 +54,12 @@
 	</instant>
 	
 	<!-- Other -->
+	<instant name="Food" words="exevo pan" lvl="14" mana="120" soul="1" aggressive="0" needlearn="0" script="spells/food.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
+	</instant>
 	<instant name="Find Person" words="exiva" lvl="8" mana="20" aggressive="0" playernameparam="1" params="1" needlearn="0" function="searchPlayer">
 		<vocation name="Sorcerer" />
 		<vocation name="Druid" />
