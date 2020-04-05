@@ -400,11 +400,19 @@
 		</mission>
 	</quest>
 	<quest name="Killing in the Name of..." startstorageid="17607" startstoragevalue="1">
-		<!--Grizzly Adams: level 6 to 49 -->
-		<mission name="Paw and Fur: Crocodiles" storageid="17609" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 crocodiles." />
-		<mission name="Paw and Fur: Carniphilas" storageid="17611" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 carniphilas." />
-		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 apes." />
-		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 thornback tortoises." />
-		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 gargoyles." />
+		<!-- Grizzly Adams: level 6 to 49 -->
+		<mission name="Paw and Fur: Crocodiles" storageid="17609" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 crocodiles." />
+		<mission name="Paw and Fur: Tarantulas" storageid="17610" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 tarantulas." />
+		<mission name="Paw and Fur: Carniphilas" storageid="17611" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 carniphilas." />
+		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 apes." />
+		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 thornback tortoises." />
+		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="0" endvalue="65" description="You already hunted |STATE|/65 gargoyles." />
+		
+		<!--Grizzly Adams: level 50 to 79 -->
+		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 quara scouts." />
+		<mission name="Paw and Fur: Ancient Scarabs" storageid="17617" startvalue="0" endvalue="125" description="You already hunted |STATE|/125 ancient scarabs." />
+		<mission name="Paw and Fur: Wyverns" storageid="17618" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wyverns." />
+		<mission name="Paw and Fur: Bonebeasts" storageid="17619" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 bonebeasts." />
+		<mission name="Paw and Fur: Dragons" storageid="17620" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 dragons." />
 	</quest>
 </quests>

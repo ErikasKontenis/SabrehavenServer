@@ -26,15 +26,43 @@ VANISH,!           -> "Happy hunting, old chap!"
 "task",QuestValue(17607)=0 -> "Firstly, you have to join us in our society %N. Would you like to join the 'Paw and Fur - Hunting Elite'?"
 "mission",QuestValue(17607)=0 -> *
 
+# Level 6-49
 "task",QuestValue(17608)=0,level>5,level<50 -> "Alright, what would you like to hunt? Crocodiles, tarantulas, carniphilas, apes, thornback tortoises or gargoyles.", Topic=1
-Topic=1,"crocodile" -> Amount=17609, "They are a nuisance! You'll find them here in the jungle near the river. Hunt 300 crocodiles and you'll get a nice reward. Interested?", Topic=2
-Topic=1,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out 150 carniphilas for our society. Alright?", Topic=2
-Topic=1,"ape" -> Amount=17612, "You'll find the apes deeper in the jungle. Hunt 300 merlkins, kongras or sibangs to complete this task. Alright?", Topic=2
-Topic=1,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hunt 300 of them. Interested?", Topic=2
-Topic=1,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
+Topic=1,"crocodile" -> Amount=17609, "They are a nuisance! You'll find them here in the jungle near the river. Hunt 100 crocodiles and you'll get a nice reward. Interested?", Topic=2
+Topic=1,"tarantula" -> Amount=17610, "There is a veritable plague of tarantulas living in the caves north of the river to the east. Can you squish 100 tarantulas for the Hunting Elite. What do you say?", Topic=2
+Topic=1,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out 50 carniphilas for our society. Alright?", Topic=2
+Topic=1,"ape" -> Amount=17612, "You'll find the apes deeper in the jungle. Hunt 100 merlkins, kongras or sibangs to complete this task. Alright?", Topic=2
+Topic=1,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 65 of them. Interested?", Topic=2
 Topic=1 -> "Maybe next time."
 
+"task",QuestValue(17609)=100 -> Data=1, Amount=2000, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17610)=100 -> Data=2, Amount=3000, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17611)=50 -> Data=2, Amount=3000, Price=1500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17612)=100 -> Data=1, Amount=3000, Price=1500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17613)=100 -> Data=2, Amount=2500, Price=2500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17614)=65 -> Data=3, Amount=5000, Price=2500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+
+# Level 50-79
+"task",QuestValue(17608)=0,level>49,level<80 -> "Alright, what would you like to hunt? Quara scouts, ancient scarabs, wyverns, bonebeasts, dragons.", Topic=5
+Topic=5,"quara" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
+Topic=5,"scarab" -> Amount=17617, "They can be found in tombs beneath the desert around Ankrahmun. Hunt 125 of them. Interested?", Topic=2
+Topic=5,"wyvern" -> Amount=17618, "They can be found all over Tibia. Hunt 100 wyverns. Interested?", Topic=2
+Topic=5,"bonebeast" -> Amount=17619, "They can be found all over Tibia. Hunt 100 bonebeasts. Interested?", Topic=2
+Topic=5,"dragon" -> Amount=17620, "They can be found all over Tibia. Hunt 200 dragons. Interested?", Topic=2
+
+"task",QuestValue(17616)=200 -> Data=2, Amount=10000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17617)=125 -> Data=2, Amount=11000, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17618)=100 -> Data=3, Amount=15000, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17619)=100 -> Data=3, Amount=9000, Price=9000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17620)=200 -> Data=2, Amount=10000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+
+# Speaks
 "task",QuestValue(17608)>0 -> "Your current task is in progress. Follow the status of your task in the quest log. If you wish to cancel your in-progress task then don't be afraid and feel free to cancel."
+
+Topic=4,"exp" -> "Very well! I grant you %A experience points.", SetQuestValue(QuestValue(17608),99999), SetQuestValue(17608,0), SetQuestValue(17615,Data), Experience(Amount)
+Topic=4,"gold" -> "Alright! Here is your %P gold chap.", SetQuestValue(QuestValue(17608),99999), SetQuestValue(17608,0), SetQuestValue(17615,Data), CreateMoney
+Topic=4 -> "When you know what you want let me know."
 
 Topic=2,"yes" -> "Happy hunting, old chap! Speak to me again when you are done hunting.", SetQuestValue(17608,Amount), SetQuestValue(Amount,0)
 Topic=2 -> "Maybe later."

@@ -58,6 +58,7 @@ function onLogin(player)
 	player:registerEvent("PlayerLogout")
 	player:registerEvent("FirstItems")
 	player:registerEvent("RegenerateStamina")
+	player:registerEvent("KillingInTheNameOfKills")
 	
 	return true
 end
