@@ -23,7 +23,7 @@ function onSay(player, words, param)
 					
 					if isFound then
 						local position = item:getPosition()
-						player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Your current position is: " .. position.x .. ", " .. position.y .. ", " .. position.z .. ".")
+						player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Item position is: " .. position.x .. ", " .. position.y .. ", " .. position.z .. ".")
 					end
 				end
 			end			

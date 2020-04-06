@@ -87,4 +87,32 @@ VANISH,!                 -> "PRAISE TO BANOR!"
 
 Topic=2,"yes"    -> "Take this!", Burning(10,1), EffectOpp(5), EffectMe(8)
 Topic=2          -> "Then be more careful with your words!"
+
+# Level 6-49
+"task",QuestValue(17632)=0,level>5,level<50 -> "I may have several tasks for you citizen. Edron needs a help in the hunting of: trolls, goblins, rotworms or cyclopes.", Topic=3
+Topic=3,"troll" -> Amount=17633, "The trolls living west of our city have become quite a nuisance lately. Not that they are really dangerous to us, but still, we must show them that there's a line they shouldn't cross. ...",
+					"I want you to kill 100 of them. If you succeed, I'll provide you some pretty coins and experience. Are you willing to take on this task?", Topic=4
+Topic=3,"goblin" -> Amount=17634, "It's not only the trolls invading from the west coast. <sighs> Goblins also have a lair there where they constantly prepare for their next attack. ...",
+					"If you could kill 150 goblins for us, that'd be a good start. Would you be willing to help us in this matter?", Topic=4
+Topic=3,"rotworm" -> Amount=17635, "Maybe you have noticed the numerous rotworms that burrowed under Edron. They're quite a pest. You look strong enough to be able to vanquish a few for us. Do you think you can kill 150 rotworms?", Topic=4
+Topic=3,"cyclop" -> Amount=17636, "We've successfully driven the minotaurs off this island, but the underground city of the cyclopes - Cyclopolis - is still standing. ...",
+					"We're always looking for adventurers who'd help us decimate the number of cyclopes. Will you assist the city of Edron by killing 500 of them?", Topic=4
+
+"task",QuestValue(17633)=100 -> Amount=1000, Price=1000, "Very nice, %N. That will push the trolls' forces back a little. Here is your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17634)=150 -> Amount=1500, Price=1000, "Congratulations, you've fought well against the goblin plague. Thank you! Here is your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17635)=150 -> Amount=1000, Price=1500, "Well done! Thanks to you the city is a bit safer. Here's your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17636)=500 -> Amount=15000, Price=5000, "Very good job, %N. You've been a great help. Here's your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+
+# Speaks
+"task",QuestValue(17632)>0 -> "Your current task is in progress. Follow the status of your task in the quest log. If you wish to cancel your in-progress task then don't be afraid and feel free to cancel."
+
+Topic=4,"yes" -> "I'm pleased with your eagerness. Good luck!", SetQuestValue(17632,Amount), SetQuestValue(Amount,0)
+Topic=4 -> "Maybe next time."
+
+"cancel",QuestValue(17632)>0 -> "Are you sure you want to cancel your current task?", Topic=6
+Topic=6,"yes" -> "Alright! Feel free to do other tasks for us.", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0)
+Topic=6 -> "Good! Speak to me again when you are done hunting."
+
+"task" -> "I don't have any tasks for your level."
+
 }
