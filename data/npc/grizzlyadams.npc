@@ -44,7 +44,7 @@ VANISH,!           -> "Happy hunting, old chap!"
 "sabrehaven","talon" -> "We as a hunting society know very interesting purposes of those magical talons. But only the loyal hunters of the 'Paw and Fur - Hunting Elite' are allowed to know."
 
 # Level 6-49
-"task",QuestValue(17608)=0,level>5,level<50 -> "Alright, what would you like to hunt? Crocodiles, tarantulas, carniphilas, apes, thornback tortoises or gargoyles.", Topic=1
+"task",QuestValue(17607)=1,QuestValue(17608)=0,level>5,level<50 -> "Alright, what would you like to hunt? Crocodiles, tarantulas, carniphilas, apes, thornback tortoises or gargoyles.", Topic=1
 Topic=1,"crocodile" -> Amount=17609, "They are a nuisance! You'll find them here in the jungle near the river. Hunt 100 crocodiles and you'll get a nice reward. Interested?", Topic=2
 Topic=1,"tarantula" -> Amount=17610, "There is a veritable plague of tarantulas living in the caves north of the river to the east. Can you squish 100 tarantulas for the Hunting Elite. What do you say?", Topic=2
 Topic=1,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out 50 carniphilas for our society. Alright?", Topic=2
@@ -61,7 +61,7 @@ Topic=1 -> "Maybe next time."
 "task",QuestValue(17614)=65 -> Data=3, Amount=5000, Price=2500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 50-79
-"task",QuestValue(17608)=0,level>49,level<80 -> "Alright, what would you like to hunt? Quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
+"task",QuestValue(17607)=1,QuestValue(17608)=0,level>49,level<80 -> "Alright, what would you like to hunt? Quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
 Topic=5,"quara" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
 Topic=5,"scarab" -> Amount=17617, "They can be found in tombs beneath the desert around Ankrahmun. Hunt 125 of them. Interested?", Topic=2
 Topic=5,"wyvern" -> Amount=17618, "They can be found all over Tibia. Hunt 100 wyverns. Interested?", Topic=2
@@ -75,7 +75,7 @@ Topic=5,"dragon" -> Amount=17620, "They can be found all over Tibia. Hunt 200 dr
 "task",QuestValue(17620)=200 -> Data=2, Amount=10000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 80-129
-"task",QuestValue(17608)=0,level>79,level<130 -> "Alright, what would you like to hunt? Underwater quara, giant spiders, banshees, lichs or cults.", Topic=6
+"task",QuestValue(17607)=1,QuestValue(17608)=0,level>79,level<130 -> "Alright, what would you like to hunt? Underwater quara, giant spiders, banshees, lichs or cults.", Topic=6
 Topic=6,"quara" -> Amount=17621, "As you wish. Seek out a quara settlement and hunt 600 quara, it doesn't matter which type you hunt except scouts. Alright?", Topic=2
 Topic=6,"spider" -> Amount=17622, "Never liked spiders. Simply too many legs. And I always find them in my bath! Those nasty creepy-crawlies are a threat to the hygiene of every living being in Tibia. Hunt 500 of them. Okay?", Topic=2
 Topic=6,"banshee" -> Amount=17623, "The Banshee is an undead creature of sheer terror. There is several places where you can hunt them. Hunt 300 of them. Okay?", Topic=2
@@ -89,7 +89,7 @@ Topic=6,"cult" -> Amount=17625, "I hate those strange cult fanatics. Hunt 500 of
 "task",QuestValue(17625)=500 -> Data=2, Amount=35000, Price=35000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 130+
-"task",QuestValue(17608)=0,level>129 -> "Alright, what would you like to hunt? Hydras, serpent spawns, behemoths, dragon lords, hand of cursed fates, juggernauts.", Topic=7
+"task",QuestValue(17607)=1,QuestValue(17608)=0,level>129 -> "Alright, what would you like to hunt? Hydras, serpent spawns, behemoths, dragon lords, hand of cursed fates, juggernauts.", Topic=7
 Topic=7,"hydra" -> Amount=17626, "The hydras are located in the eastern jungle of Tiquanda and there are several mountain caves that are inhabited by them. Your task is to hunt a mere 650 hydras. Are you willing to do that?", Topic=2
 Topic=7,"serpent" -> Amount=17627, "Very dangerous, nasty and slimy creatures. They live deep in the old ruins of Banuta. I think a mere 800 serpent spawns should do the trick. What do you say?", Topic=2
 Topic=7,"behemoth" -> Amount=17628, "Behemoths must be kept away from the settlements at all costs. You'll find them east of here in the taboo-area or under Cyclopolis in Edron. Go there and hunt a few of them - shall we say... 700? Are you up for that?", Topic=2

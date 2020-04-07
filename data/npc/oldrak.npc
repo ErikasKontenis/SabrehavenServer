@@ -44,4 +44,10 @@ VANISH,!           -> "Take care, it's dangerous out there."
 
 
 "yenny"               -> "Yenny, known as the Gentle, was one of most powerfull magicwielders in ancient times and known throughout the world for her mercy and kindness."
+
+"holy","tible",QuestValue(17638)=0 -> "The holy book is located south of the temple near the shore."
+"holy","tible",QuestValue(17638)=1 -> Price=1000, "If you lost your own one. Would you like me to grant you access to take another one?", Topic=1
+Topic=1,"yes",CountMoney>=Price -> "Thank you. Then go and take it.", DeleteMoney, SetQuestValue(17638,0)
+Topic=1,"yes"                   -> "Sorry, you do not have enough gold."
+Topic=1                         -> "Maybe you will need it another time."
 }
