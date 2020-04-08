@@ -85,6 +85,9 @@
 	<action actionid="82" script="nostalrius/82.lua" />
 	<action actionid="83" script="nostalrius/83.lua" />
 	
+	<!-- Pits of Inferno -->
+	<action actionid="17642" script="pits_of_inferno/oil.lua" />
+	
 	<!-- Serpentine Tower -->
 	<action actionid="17597" script="serpentine_tower/release_fire_elemental.lua" />
 	<action actionid="17598" script="serpentine_tower/release_vampire.lua" />

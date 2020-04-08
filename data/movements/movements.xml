@@ -395,6 +395,9 @@
 	<movevent event="StepIn" itemid="5764" script="misc/drowning.lua" />
 	<movevent event="StepOut" itemid="5764" script="misc/drowning.lua"/>
 	
+	<!-- Pits of Inferno -->
+	<movevent event="StepIn" frommovementid="17640" tomovementid="17641" script="pits_of_inferno/holy_tible_tile.lua" />
+	
 	<!-- Serpentine Tower -->
 	<movevent event="StepIn" frommovementid="17602" tomovementid="17603" script="serpentine_tower/final_tile.lua" />
 	<movevent event="RemoveItem" movementid="17605" tileitem="1" script="serpentine_tower/take_waterwalking_boots.lua" />
