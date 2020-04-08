@@ -53,12 +53,12 @@ Topic=1,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hun
 Topic=1,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 65 of them. Interested?", Topic=2
 Topic=1 -> "Maybe next time."
 
-"task",QuestValue(17609)=100 -> Data=1, Amount=2000, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17610)=100 -> Data=2, Amount=3000, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17611)=50 -> Data=2, Amount=3000, Price=1500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17612)=100 -> Data=1, Amount=3000, Price=1500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17613)=100 -> Data=2, Amount=2500, Price=2500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17614)=65 -> Data=3, Amount=5000, Price=2500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17609)=100 -> Data=1, Amount=5000, Price=3000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17610)=100 -> Data=2, Amount=5000, Price=3000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17611)=50 -> Data=2, Amount=5000, Price=3000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17612)=100 -> Data=1, Amount=5000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17613)=100 -> Data=2, Amount=6000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17614)=65 -> Data=3, Amount=5000, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 50-79
 "task",QuestValue(17607)=1,QuestValue(17608)=0,level>49,level<80 -> "Alright, what would you like to hunt? Quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
@@ -68,11 +68,11 @@ Topic=5,"wyvern" -> Amount=17618, "They can be found all over Tibia. Hunt 100 wy
 Topic=5,"bonebeast" -> Amount=17619, "They can be found all over Tibia. Hunt 100 bonebeasts. Interested?", Topic=2
 Topic=5,"dragon" -> Amount=17620, "They can be found all over Tibia. Hunt 200 dragons. Interested?", Topic=2
 
-"task",QuestValue(17616)=200 -> Data=2, Amount=10000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17617)=125 -> Data=2, Amount=11000, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17618)=100 -> Data=3, Amount=15000, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17619)=100 -> Data=3, Amount=9000, Price=9000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17620)=200 -> Data=2, Amount=10000, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17616)=200 -> Data=2, Amount=15000, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17617)=125 -> Data=2, Amount=18000, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17618)=100 -> Data=3, Amount=15000, Price=9000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17619)=100 -> Data=3, Amount=10000, Price=9000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17620)=200 -> Data=2, Amount=20000, Price=8000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 80-129
 "task",QuestValue(17607)=1,QuestValue(17608)=0,level>79,level<130 -> "Alright, what would you like to hunt? Underwater quara, giant spiders, banshees, lichs or cults.", Topic=6
@@ -83,10 +83,10 @@ Topic=6,"lich" -> Amount=17624, "Lich hell. Ugh, to become a Lich is the ultimat
 Topic=6,"cult" -> Amount=17625, "I hate those strange cult fanatics. Hunt 500 of any cult follower. Alright?", Topic=2
 
 "task",QuestValue(17621)=600 -> Data=4, Amount=80000, Price=25000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17622)=500 -> Data=3, Amount=70000, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17622)=500 -> Data=3, Amount=75000, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17623)=300 -> Data=5, Amount=100000, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17624)=500 -> Data=4, Amount=30000, Price=40000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17625)=500 -> Data=2, Amount=35000, Price=35000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17624)=500 -> Data=4, Amount=70000, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17625)=500 -> Data=2, Amount=50000, Price=25000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 130+
 "task",QuestValue(17607)=1,QuestValue(17608)=0,level>129 -> "Alright, what would you like to hunt? Hydras, serpent spawns, behemoths, dragon lords, hand of cursed fates, juggernauts.", Topic=7
