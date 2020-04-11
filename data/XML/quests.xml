@@ -443,4 +443,16 @@
 		<mission name="Paw and Fur: Hand of Cursed Fates" storageid="17630" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 hand of cursed fates." />
 		<mission name="Paw and Fur: Juggernauts" storageid="17631" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 juggernauts." />
 	</quest>
+	<quest name="Young Mage Tasks" startstorageid="17646" startstoragevalue="1">
+		<mission name="Proof of the trustworthy" storageid="17645" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 amazons." />
+		<mission name="Reward of the trustworthy" storageid="17646" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
+	</quest>
+	<quest name="Young Paladin Tasks" startstorageid="17647" startstoragevalue="1">
+		<mission name="Proof of the trustworthy" storageid="17648" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 orcs." />
+		<mission name="Reward of the trustworthy" storageid="17647" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
+	</quest>
+	<quest name="Young Knight Tasks" startstorageid="17650" startstoragevalue="1">
+		<mission name="Proof of the trustworthy" storageid="17651" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 minotaurs." />
+		<mission name="Reward of the trustworthy" storageid="17650" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
+	</quest>
 </quests>

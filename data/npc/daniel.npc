@@ -106,7 +106,7 @@ Topic=3,"cyclop" -> Amount=17636, "We've successfully driven the minotaurs off t
 # Speaks
 "task",QuestValue(17632)>0 -> "Your current task is in progress. Follow the status of your task in the quest log. If you wish to cancel your in-progress task then don't be afraid and feel free to cancel."
 
-Topic=4,"yes" -> "I'm pleased with your eagerness. Good luck!", SetQuestValue(17632,Amount), SetQuestValue(Amount,0)
+Topic=4,"yes" -> "I'm pleased with your eagerness. Good luck!", SetQuestValue(17632,Amount), SetQuestValue(Amount,0), SetQuestValue(17607,1)
 Topic=4 -> "Maybe next time."
 
 "cancel",QuestValue(17632)>0 -> "Are you sure you want to cancel your current task?", Topic=6

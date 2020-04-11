@@ -42,6 +42,11 @@ local tasks = {
 	['rotworm'] = {taskerStorage = 17632, progressStorage = 17635, killsRequired = 150},
 	['carrion worm'] = {taskerStorage = 17632, progressStorage = 17635, killsRequired = 150},
 	['cyclops'] = {taskerStorage = 17632, progressStorage = 17636, killsRequired = 500},
+	
+	-- Young Vocation Tasks
+	['amazon'] = {taskerStorage = 17644, progressStorage = 17645, killsRequired = 50},
+	['orc'] = {taskerStorage = 17649, progressStorage = 17648, killsRequired = 50},
+	['minotaur'] = {taskerStorage = 17652, progressStorage = 17651, killsRequired = 50},
 }
 
 function onKill(player, target)
