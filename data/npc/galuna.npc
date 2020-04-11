@@ -56,9 +56,9 @@ Topic=1,"yes"                   -> "Come back, when you have enough money."
 Topic=1                         -> "Hmm, but next time."
 
 "task",QuestValue(17647)=0,paladin -> Amount=17648, "Young paladin, I see you need ammunition but those are too expensive, right. Hmm... I can't give you for free. ...",
-									"However, if you could kill 50 orcs to prove your trustworthy willingness I will reward you the bow and 200 arrows. Deal?", Topic=120
+									"However, if you could kill 50 minotaurs to prove your trustworthy willingness I will reward you the crossbow and 300 bolts. Deal?", Topic=120
 									
-"task",QuestValue(17648)=50,QuestValue(17647)=1,paladin -> "Well done, %N. Here is your bow and arrows!", SetQuestValue(17647,2), SetQuestValue(17649,0), Type=3350, Amount=1, Create(Type), Type=3447, Amount=200, Create(Type)
+"task",QuestValue(17648)=50,QuestValue(17647)=1,paladin -> "Well done, %N. Here is your crossbow and bolts!", SetQuestValue(17647,2), SetQuestValue(17649,0), Type=3349, Amount=1, Create(Type), Type=3446, Amount=300, Create(Type)
 								
 "task",QuestValue(17649)>0 -> "I see you are still in progress with your task."
 									

@@ -45,8 +45,8 @@ local tasks = {
 	
 	-- Young Vocation Tasks
 	['amazon'] = {taskerStorage = 17644, progressStorage = 17645, killsRequired = 50},
-	['orc'] = {taskerStorage = 17649, progressStorage = 17648, killsRequired = 50},
-	['minotaur'] = {taskerStorage = 17652, progressStorage = 17651, killsRequired = 50},
+	['minotaur'] = {taskerStorage = 17649, progressStorage = 17648, killsRequired = 50},
+	['orc'] = {taskerStorage = 17652, progressStorage = 17651, killsRequired = 50},
 }
 
 function onKill(player, target)
