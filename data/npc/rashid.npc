@@ -1,0 +1,133 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "Rashid"
+Outfit = (146,100-100-119-115-2)
+Home = [32314,31933,8]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Ah, a customer! Be greeted, %N!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,"hiho$",!  -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please stand next in line %N!", Queue
+BUSY,"hi$",!       -> *
+BUSY,"hiho$",!     -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Good bye."
+
+"bye"           -> "Farewell, %N, may the winds guide your way.", Idle
+"farewell"      -> *
+
+"job"           -> "I am a travelling trader. I don't buy everything, though. And not from everyone, for that matter."
+"customer"          -> *
+"name"          -> "I am Rashid, son of the desert."
+"time"          -> "It's almost time to journey on."
+"ab'dendriel"          -> "Elves... I don't really trust them. All this talk about nature and flowers and treehugging... I'm sure there's some wicked scheme behind all this."
+"ankrahmun"          -> "My beloved hometown! Ah, the sweet scent of the desert sands, the perfect shape of the pyramids... stunningly beautiful."
+"carlin"          -> "I have to go to Carlin once in a while, since the queen wishes to see my exclusive wares in regular intervals."
+"cormaya"          -> "Cormaya? Not a good place to make business, it's way too far and small."
+"darashia"          -> "It's not the real thing, but almost as good. The merchants there claim ridiculous prices, which is fine for my own business."
+"edron"          -> "Ah yes, Edron! Such a lovely and quiet island! I usually make some nice business there."
+"fibula"          -> "Too few customers there, it's not worth the trip."
+"greenshore"          -> "Um... I don't think so."
+"kazordoon"          -> "I don't like being underground much. I also tend to get lost in these labyrinthine dwarven tunnels, so I rather avoid them."
+"liberty bay"          -> "When you avoid the slums, it's a really pretty city. Almost as pretty as the governor's daughter."
+"northport"          -> "Um... I don't think so."
+"port hope"          -> "I like the settlement itself, but I don't set my foot into the jungle. Have you seen the size of these centipedes??"
+"senja"          -> "Um... I don't think so."
+"svargrond"          -> "I haven't discovered this city yet. Maybe one day."
+"thais"          -> "I feel uncomfortable and rather unsafe in Thais, however the business is running very good in this city."
+"vega"          -> "Um... I don't think so."
+"venore"          -> "Although it's the flourishing trade centre of Tibia, I don't like going there. Too much competition for my taste."
+"king"          -> "Kings, queens, emperors and kaliphs... everyone claims to be different and unique, but actually it's the same thing everywhere."
+"sabrehaven","talon"          -> "This currency is very stable. However I prefer gold."
+
+"buy"             -> "I am sorry but I do not sell anything. However I am interested in buying several things."
+"do","you","sell" -> *
+"do","you","have" -> *
+"offer"           -> *
+"weapon"          -> "I buy many different weapons. What do you want to sell?"
+"helmet"          -> "I buy many different helmets. What do you want to sell?"
+"armor"           -> "I buy many different armors. What do you want to sell?"
+"shield"          -> "I buy many different shields. What do you want to sell?"
+"trousers"        -> "I buy many different legs. What do you want to sell?"
+"legs"            -> *
+"you","buy"       -> "I do buy. You want to sell anything?"
+
+"war","axe"    -> Type=3342, Amount=1, Price=9000,  "You want sell a war axe for %P gold?", Topic=2
+"beastslayer","axe"    -> Type=3344, Amount=1, Price=1500, "You want sell a beastslayer axe for %P gold?", Topic=2
+"daramanian","axe"    -> Type=3328, Amount=1, Price=1000, "You want sell a daramanian waraxe for %P gold?", Topic=2
+"heavy","machete"   -> Type=3330, Amount=1, Price=90, "You want sell a heavy machete for %P gold?", Topic=2
+"daramanian","mace"   -> Type=3327, Amount=1, Price=110,  "You want sell a daramanian mace for %P gold?", Topic=2
+
+"dragon","scale","mail"  -> Type=3386, Amount=1, Price=40000,  "You want sell a dragon scale mail for %P gold?", Topic=2
+"dwarven","armor"    -> Type=3397, Amount=1, Price=30000, "You want sell a dwarven armor for %P gold?", Topic=2
+"golden","armor"   -> Type=3360, Amount=1, Price=20000, "You want sell a golden armor for %P gold?", Topic=2
+"leopard","armor" -> Type=3404, Amount=1, Price=1000, "You want sell a leopard armor for %P gold?", Topic=2
+"pirate","shirt" -> Type=6095, Amount=1, Price=500, "You want sell a pirate shirt for %P gold?", Topic=2
+
+"skull","helmet"   -> Type=5741, Amount=1, Price=40000,  "You want sell a skull helmet for %P gold?", Topic=2
+"beholder","helmet"   -> Type=3408, Amount=1, Price=7500,  "You want sell a beholder helmet for %P gold?", Topic=2
+"devil","helmet"  -> Type=3356, Amount=1, Price=1000,   "You want sell a devil helmet for %P gold?", Topic=2
+"pirate","hat"  -> Type=6096, Amount=1, Price=1000,  "You want sell a pirate hat for %P gold?", Topic=2
+
+"steel","boots" -> Type=3554, Amount=1, Price=30000, "You want sell a steel boots for %P gold?", Topic=2
+"pirate","boots"   -> Type=5461, Amount=1, Price=3000,  "You want sell a pirate boots for %P gold?", Topic=2
+"crocodile","boots"   -> Type=3556, Amount=1, Price=1000,  "You want sell a crocodile boots for %P gold?", Topic=2
+"pirate","knee","breeches"  -> Type=5918, Amount=1, Price=200,   "You want sell a pirate knee breeches for %P gold?", Topic=2
+
+"demon","shield"  -> Type=3420, Amount=1, Price=30000,  "You want sell a demon shield for %P gold?", Topic=2
+"medusa","shield" -> Type=3436, Amount=1, Price=9000, "You want sell a medusa shield for %P gold?", Topic=2
+"castle","shield"   -> Type=3435, Amount=1, Price=5000,  "You want sell a castle shield for %P gold?", Topic=2
+"scarab","shield"   -> Type=3440, Amount=1, Price=2000,  "You want sell a scarab shield for %P gold?", Topic=2
+"dark","shield"  -> Type=3421, Amount=1, Price=400,   "You want sell a dark shield for %P gold?", Topic=2
+"tortoise","shield"  -> Type=6131, Amount=1, Price=150,  "You want sell a tortoise shield for %P gold?", Topic=2
+"bone","shield" -> Type=3441, Amount=1, Price=80, "You want sell a bone shield for %P gold?", Topic=2
+
+"ancient","amulet"   -> Type=3025, Amount=1, Price=200,  "You want sell an ancient amulet for %P gold?", Topic=2
+"scarab","amulet"   -> Type=3018, Amount=1, Price=200,  "You want sell a scarab amulet for %P gold?", Topic=2
+
+"light","shovel"  -> Type=5710, Amount=1, Price=300,   "You want sell a light shovel for %P gold?", Topic=2
+
+%1,1<%1,"war","axe"    -> Type=3342, Amount=%1, Price=9000*%1,  "You want sell %A war axes for %P gold?", Topic=2
+%1,1<%1,"beastslayer","axe"    -> Type=3344, Amount=%1, Price=1500*%1, "You want sell %A beastslayer axes for %P gold?", Topic=2
+%1,1<%1,"daramanian","axe"    -> Type=3328, Amount=%1, Price=1000*%1, "You want sell %A daramanian waraxes for %P gold?", Topic=2
+%1,1<%1,"heavy","machete"   -> Type=3330, Amount=%1, Price=90*%1, "You want sell %A heavy machetes for %P gold?", Topic=2
+%1,1<%1,"daramanian","mace"   -> Type=3327, Amount=%1, Price=110*%1,  "You want sell %A daramanian maces for %P gold?", Topic=2
+
+%1,1<%1,"dragon","scale","mail"  -> Type=3386, Amount=%1, Price=40000*%1,  "You want sell %A dragon scale mails for %P gold?", Topic=2
+%1,1<%1,"dwarven","armor"    -> Type=3397, Amount=%1, Price=30000*%1, "You want sell %A dwarven armors for %P gold?", Topic=2
+%1,1<%1,"golden","armor"   -> Type=3360, Amount=%1, Price=20000*%1, "You want sell %A golden armors for %P gold?", Topic=2
+%1,1<%1,"leopard","armor" -> Type=3404, Amount=%1, Price=1000*%1, "You want sell %A leopard armors for %P gold?", Topic=2
+%1,1<%1,"pirate","shirt" -> Type=6095, Amount=%1, Price=500*%1, "You want sell %A pirate shirts for %P gold?", Topic=2
+
+%1,1<%1,"skull","helmet"   -> Type=5741, Amount=%1, Price=40000*%1,  "You want sell %A skull helmets for %P gold?", Topic=2
+%1,1<%1,"beholder","helmet"   -> Type=3408, Amount=%1, Price=7500*%1,  "You want sell %A beholder helmets for %P gold?", Topic=2
+%1,1<%1,"devil","helmet"  -> Type=3356, Amount=%1, Price=1000*%1,   "You want sell %A devil helmets for %P gold?", Topic=2
+%1,1<%1,"pirate","hat"  -> Type=6096, Amount=%1, Price=1000*%1,  "You want sell %A pirate hats for %P gold?", Topic=2
+
+%1,1<%1,"steel","boots" -> Type=3554, Amount=%1, Price=30000*%1, "You want sell %A steel boots for %P gold?", Topic=2
+%1,1<%1,"pirate","boots"   -> Type=5461, Amount=%1, Price=3000*%1,  "You want sell %A pirate boots for %P gold?", Topic=2
+%1,1<%1,"crocodile","boots"   -> Type=3556, Amount=%1, Price=1000*%1,  "You want sell %A crocodile boots for %P gold?", Topic=2
+%1,1<%1,"pirate","knee","breeches"  -> Type=5918, Amount=%1, Price=200*%1,   "You want sell %A pirate knee breeches for %P gold?", Topic=2
+
+%1,1<%1,"demon","shield"  -> Type=3420, Amount=%1, Price=30000*%1,  "You want sell %A demon shields for %P gold?", Topic=2
+%1,1<%1,"medusa","shield" -> Type=3436, Amount=%1, Price=9000*%1, "You want sell %A medusa shields for %P gold?", Topic=2
+%1,1<%1,"castle","shield"   -> Type=3435, Amount=%1, Price=5000*%1,  "You want sell %A castle shields for %P gold?", Topic=2
+%1,1<%1,"scarab","shield"   -> Type=3440, Amount=%1, Price=2000*%1,  "You want sell %A scarab shields for %P gold?", Topic=2
+%1,1<%1,"dark","shield"  -> Type=3421, Amount=%1, Price=400*%1,   "You want sell %A dark shields for %P gold?", Topic=2
+%1,1<%1,"tortoise","shield"  -> Type=6131, Amount=%1, Price=150*%1,  "You want sell %A tortoise shields for %P gold?", Topic=2
+%1,1<%1,"bone","shield" -> Type=3441, Amount=%1, Price=80*%1, "You want sell %A bone shields for %P gold?", Topic=2
+
+%1,1<%1,"ancient","amulet"   -> Type=3025, Amount=%1, Price=200*%1,  "You want sell %A ancient amulets for %P gold?", Topic=2
+%1,1<%1,"scarab","amulet"   -> Type=3018, Amount=%1, Price=200*%1,  "You want sell %A scarab amulets for %P gold?", Topic=2
+
+%1,1<%1,"light","shovel"  -> Type=5710, Amount=%1, Price=300*%1,   "You want sell %A light shovels for %P gold?", Topic=2
+
+Topic=2,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=2,"yes"                             -> "You not have one."
+Topic=2,"yes",Amount>1					  -> "Sorry, you do not have that many."
+Topic=2                                   -> "Maybe you sell it next time."
+
+}
