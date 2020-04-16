@@ -1,3 +1,22 @@
+local function spawnRashid()
+	local rashidSpawns = {
+		['Monday'] = Position(32349, 32231, 6),
+		['Tuesday'] = Position(32306, 32835, 7),
+		['Wednesday'] = Position(32579, 32754, 7),
+		['Thursday'] = Position(33065, 32879, 6),
+		['Friday'] = Position(33233, 32484, 7),
+		['Saturday'] = Position(33168, 31810, 6),
+		['Sunday'] = Position(32328, 31782, 6),
+	}
+	
+	local position = rashidSpawns[os.date("%A")]
+	local rashid = Game.createNpc("Rashid", position)
+	if rashid ~= nil then
+		rashid:setMasterPos(position)
+		position:sendMagicEffect(CONST_ME_MAGIC_RED)
+	end
+end
+
 local function setBloomingGriffinclaw()
 	local position = {x = 32024, y = 32830, z = 4}
     if Game.isItemThere(position,5687) then
@@ -70,4 +89,6 @@ function onStartup()
 			addEvent(setBloomingGriffinclaw, 10000)
 		end
 	end
+	
+	spawnRashid()
 end
