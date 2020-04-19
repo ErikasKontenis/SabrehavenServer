@@ -10,7 +10,7 @@ local function spawnRashid()
 	}
 	
 	local position = rashidSpawns[os.date("%A")]
-	local rashid = Game.createNpc("Rashid", position)
+	local rashid = Game.createNpc("rashid", position)
 	if rashid ~= nil then
 		rashid:setMasterPos(position)
 		position:sendMagicEffect(CONST_ME_MAGIC_RED)

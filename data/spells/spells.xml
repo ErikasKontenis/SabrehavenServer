@@ -4,6 +4,8 @@
 	<instant name="Force Strike" words="exori mort" lvl="16" mana="20" prem="1" cooldown="1000" range="3" direction="1" blockwalls="1" needlearn="0" script="spells/force strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
 	</instant>
 	<instant name="Fire Wave" words="exevo flam hur" lvl="18" mana="80" direction="1" needlearn="0" script="spells/fire wave.lua">
 		<vocation name="Sorcerer" />
