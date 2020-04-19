@@ -87,6 +87,7 @@
 	
 	<!-- Pits of Inferno -->
 	<action actionid="17642" script="pits_of_inferno/oil.lua" />
+	<action fromaid="17653" toaid="17656" script="pits_of_inferno/hall_of_the_four_ways.lua" />
 	
 	<!-- Serpentine Tower -->
 	<action actionid="17597" script="serpentine_tower/release_fire_elemental.lua" />

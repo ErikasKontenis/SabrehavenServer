@@ -1,4 +1,4 @@
-<monster name="Countess Sorrow" nameDescription="Countess Sorrow" race="undead" experience="5150" speed="250" manacost="0">
+<monster name="Countess Sorrow" nameDescription="Countess Sorrow" race="undead" experience="5150" speed="125" manacost="0">
 	<health now="7200" max="7200" />
 	<look type="241" head="20" corpse="6343" />
 	<targetchange interval="60000" chance="0" />

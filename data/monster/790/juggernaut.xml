@@ -1,4 +1,4 @@
-<monster name="Juggernaut" nameDescription="a juggernaut" race="blood" experience="14000" speed="290" manacost="0">
+<monster name="Juggernaut" nameDescription="a juggernaut" race="blood" experience="14000" speed="145" manacost="0">
 	<health now="20000" max="20000" />
 	<look type="244" corpse="6335" />
 	<targetchange interval="4000" chance="10" />
@@ -22,7 +22,7 @@
 		</attack>
 	</attacks>
 	<defenses armor="60" defense="60">
-		<defense name="speed" interval="2000" chance="15" speedchange="520" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="72" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="healing" interval="2000" chance="15" min="400" max="900">

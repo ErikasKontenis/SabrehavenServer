@@ -209,7 +209,7 @@
 	<monster name="tortoise" file="781/tortoise.xml" />
 	<monster name="magic pillar" file="781/magic pillar.xml" />
 	
-	<!-- 790 
+	<!-- 790 -->
 	<monster name="apprentice sheng" file="790/apprentice sheng.xml" />
 	<monster name="betrayed wraith" file="790/betrayed wraith.xml" />
 	<monster name="blightwalker" file="790/blightwalker.xml" />
@@ -239,6 +239,6 @@
 	<monster name="the handmaiden" file="790/the handmaiden.xml" />
 	<monster name="the imperor" file="790/the imperor.xml" />
 	<monster name="the plasmother" file="790/the plasmother.xml" />
-	<monster name="undead dragon" file="790/undead dragon.xml" /> -->
+	<monster name="undead dragon" file="790/undead dragon.xml" />
 	<monster name="wyvern" file="790/wyvern.xml" />
 </monsters>

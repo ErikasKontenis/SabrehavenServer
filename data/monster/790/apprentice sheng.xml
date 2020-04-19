@@ -1,4 +1,4 @@
-<monster name="Apprentice Sheng" nameDescription="Apprentice Sheng" race="blood" experience="150" speed="170" manacost="0">
+<monster name="Apprentice Sheng" nameDescription="Apprentice Sheng" race="blood" experience="150" speed="45" manacost="0">
 	<health now="95" max="95" />
 	<look type="23" corpse="5981" />
 	<targetchange interval="5000" chance="8" />

@@ -1,4 +1,4 @@
-<monster name="Hand Of Cursed Fate" nameDescription="a hand of cursed fate" race="blood" experience="5000" speed="260" manacost="0">
+<monster name="Hand Of Cursed Fate" nameDescription="a hand of cursed fate" race="blood" experience="5000" speed="130" manacost="0">
 	<health now="7500" max="7500" />
 	<look type="230" corpse="6311" />
 	<targetchange interval="4000" chance="10" />
@@ -26,7 +26,7 @@
 		</attack>
 	</attacks>
 	<defenses armor="25" defense="25">
-		<defense name="speed" interval="2000" chance="15" speedchange="1000" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="70" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="invisible" interval="2000" chance="10" duration="8000">

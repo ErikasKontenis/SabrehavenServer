@@ -18,7 +18,7 @@
 	<attacks skill="30" attack="235">
 	</attacks>
 	<defenses armor="40" defense="45">
-		<defense name="speed" chance="15" speedchange="210">
+		<defense name="speed" chance="15" speedchange="75">
 			<attribute key="areaEffect" value="greenshimmer" />
 		</defense>
 		<defense name="healing" chance="12" min="200" max="240">

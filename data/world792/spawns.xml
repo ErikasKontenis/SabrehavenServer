@@ -30423,35 +30423,36 @@
 		<monster name="scorpion" x="0" y="0" z="10" spawntime="600" />
 		<monster name="scorpion" x="3" y="3" z="10" spawntime="600" />
 	</spawn>
-	<spawn centerx="32824" centery="32320" centerz="10" radius="4">
-		<monster name="demon skeleton" x="-3" y="0" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
-		<monster name="ghoul" x="3" y="1" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="1" y="2" z="10" spawntime="600" />
-		<monster name="ghoul" x="2" y="3" z="10" spawntime="600" />
+	<spawn centerx="32822" centery="32320" centerz="10" radius="1">
+		<monster name="diabolic imp" x="0" y="0" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="32826" centery="32323" centerz="10" radius="3" />
-	<spawn centerx="32843" centery="32326" centerz="10" radius="4">
-		<monster name="demon skeleton" x="-1" y="0" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="2" y="0" z="10" spawntime="600" />
-		<monster name="ghoul" x="1" y="1" z="10" spawntime="600" />
-		<monster name="ghoul" x="-1" y="3" z="10" spawntime="600" />
+	<spawn centerx="32828" centery="32320" centerz="10" radius="1">
+		<monster name="spectre" x="0" y="0" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="32842" centery="32329" centerz="10" radius="3" />
+	<spawn centerx="32821" centery="32322" centerz="10" radius="1">
+		<monster name="diabolic imp" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="32842" centery="32325" centerz="10" radius="1">
+		<monster name="spectre" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="32845" centery="32328" centerz="10" radius="1">
+		<monster name="diabolic imp" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="32841" centery="32329" centerz="10" radius="1">
+		<monster name="nightmare" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="32765" centery="32332" centerz="10" radius="4">
 		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
 		<monster name="demon skeleton" x="0" y="1" z="10" spawntime="600" />
 		<monster name="demon skeleton" x="3" y="3" z="10" spawntime="600" />
 	</spawn>
-	<spawn centerx="32843" centery="32338" centerz="10" radius="4">
-		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
-		<monster name="ghoul" x="-3" y="2" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="1" y="2" z="10" spawntime="600" />
-		<monster name="ghoul" x="-1" y="3" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="1" y="3" z="10" spawntime="600" />
+	<spawn centerx="32843" centery="32338" centerz="10" radius="1">
+		<monster name="nightmare" x="0" y="0" z="10" spawntime="60" />
 	</spawn>
-	<spawn centerx="32842" centery="32341" centerz="10" radius="3" />
+	<spawn centerx="32842" centery="32341" centerz="10" radius="1">
+		<monster name="nightmare" x="1" y="-1" z="10" spawntime="60" />
+		<monster name="spectre" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="32781" centery="32342" centerz="10" radius="4">
 		<monster name="demon skeleton" x="-2" y="-2" z="10" spawntime="600" />
 		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
@@ -30463,18 +30464,17 @@
 		<monster name="scorpion" x="0" y="0" z="10" spawntime="600" />
 		<monster name="scorpion" x="1" y="1" z="10" spawntime="600" />
 	</spawn>
-	<spawn centerx="32824" centery="32344" centerz="10" radius="4">
-		<monster name="demon skeleton" x="0" y="-1" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
-		<monster name="demon skeleton" x="-2" y="2" z="10" spawntime="600" />
-		<monster name="ghoul" x="1" y="2" z="10" spawntime="600" />
-		<monster name="ghoul" x="2" y="3" z="10" spawntime="600" />
-	</spawn>
 	<spawn centerx="32770" centery="32345" centerz="10" radius="3">
 		<monster name="demon skeleton" x="-1" y="0" z="10" spawntime="600" />
 		<monster name="demon skeleton" x="0" y="0" z="10" spawntime="600" />
 	</spawn>
-	<spawn centerx="32826" centery="32347" centerz="10" radius="3" />
+	<spawn centerx="32823" centery="32345" centerz="10" radius="1">
+		<monster name="nightmare" x="0" y="-1" z="10" spawntime="60" />
+		<monster name="nightmare" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
+	<spawn centerx="32823" centery="32347" centerz="10" radius="1">
+		<monster name="spectre" x="0" y="0" z="10" spawntime="60" />
+	</spawn>
 	<spawn centerx="32756" centery="32349" centerz="10" radius="5">
 		<monster name="demon skeleton" x="-1" y="-3" z="10" spawntime="600" />
 		<monster name="demon skeleton" x="1" y="-2" z="10" spawntime="600" />

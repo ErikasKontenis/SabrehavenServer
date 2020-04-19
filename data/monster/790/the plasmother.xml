@@ -1,4 +1,4 @@
-<monster name="The Plasmother" nameDescription="The Plasmother" race="venom" experience="8900" speed="310" manacost="0">
+<monster name="The Plasmother" nameDescription="The Plasmother" race="venom" experience="8900" speed="155" manacost="0">
 	<health now="7500" max="7500" />
 	<look type="238" corpse="6532" />
 	<targetchange interval="5500" chance="10" />
@@ -17,7 +17,7 @@
 	</flags>
 	<attacks>
 		<attack name="melee" interval="2000" skill="30" attack="50" />
-		<attack name="speed" interval="1000" chance="8" radius="6" target="0" speedchange="-800" duration="10000">
+		<attack name="speed" interval="1000" chance="8" radius="6" target="0" speedchange="-100" duration="10000">
 			<attribute key="areaEffect" value="poison" />
 		</attack>
 		<attack name="earth" interval="2000" chance="15" target="0" radius="4" min="-200" max="-350">

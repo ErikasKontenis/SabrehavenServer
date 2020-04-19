@@ -1,4 +1,4 @@
-<monster name="The Handmaiden" nameDescription="the Handmaiden" race="blood" experience="3850" speed="450" manacost="0">
+<monster name="The Handmaiden" nameDescription="the Handmaiden" race="blood" experience="3850" speed="225" manacost="0">
 	<health now="14500" max="14500" />
 	<look type="230" corpse="6311" />
 	<targetchange interval="5000" chance="8" />
@@ -23,7 +23,7 @@
 		<attack name="drunk" interval="1000" chance="12" range="1" target="1" />
 	</attacks>
 	<defenses armor="25" defense="35">
-		<defense name="speed" interval="3000" chance="12" speedchange="380" duration="8000">
+		<defense name="speed" interval="3000" chance="12" speedchange="100" duration="8000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="invisible" interval="4000" chance="50" duration="6000">
@@ -32,7 +32,7 @@
 		<defense name="healing" interval="2000" chance="50" min="100" max="250">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="speed" interval="1000" chance="35" speedchange="370" duration="30000">
+		<defense name="speed" interval="1000" chance="35" speedchange="100" duration="30000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>

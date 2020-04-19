@@ -1,4 +1,4 @@
-<monster name="Hellfire Fighter" nameDescription="a hellfire fighter" race="fire" experience="3900" speed="220" manacost="0">
+<monster name="Hellfire Fighter" nameDescription="a hellfire fighter" race="fire" experience="3900" speed="110" manacost="0">
 	<health now="3800" max="3800" />
 	<look type="243" corpse="6323" />
 	<targetchange interval="4000" chance="10" />

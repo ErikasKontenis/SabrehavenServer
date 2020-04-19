@@ -1,4 +1,4 @@
-<monster name="Mr. Punish" nameDescription="Mr. Punish" race="undead" experience="5500" speed="470" manacost="0">
+<monster name="Mr. Punish" nameDescription="Mr. Punish" race="undead" experience="5500" speed="235" manacost="0">
 	<health now="12000" max="12000" />
 	<look type="234" corpse="6330" />
 	<targetchange interval="2000" chance="5" />

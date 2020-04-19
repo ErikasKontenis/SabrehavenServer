@@ -1,4 +1,4 @@
-<monster name="Hellhound" nameDescription="a hellhound" race="blood" experience="6800" speed="280" manacost="0">
+<monster name="Hellhound" nameDescription="a hellhound" race="blood" experience="6800" speed="140" manacost="0">
 	<health now="7500" max="7500" />
 	<look type="240" corpse="6331" />
 	<targetchange interval="4000" chance="10" />
@@ -39,7 +39,7 @@
 		</attack>
 	</attacks>
 	<defenses armor="40" defense="40">
-		<defense name="speed" interval="2000" chance="15" speedchange="320" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="70" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="healing" interval="2000" chance="20" min="220" max="425">

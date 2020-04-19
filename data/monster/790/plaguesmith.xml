@@ -1,4 +1,4 @@
-<monster name="Plaguesmith" nameDescription="a plaguesmith" race="venom" experience="4500" speed="240" manacost="0">
+<monster name="Plaguesmith" nameDescription="a plaguesmith" race="venom" experience="4500" speed="120" manacost="0">
 	<health now="8250" max="8250" />
 	<look type="247" corpse="6515" />
 	<targetchange interval="4000" chance="10" />
@@ -23,7 +23,7 @@
 		<attack name="poison" interval="2000" chance="10" length="5" spread="3" min="-100" max="-350">
 			<attribute key="areaEffect" value="yellowbubble" />
 		</attack>
-		<attack name="speed" interval="2000" chance="15" radius="4" target="0" speedchange="-800" duration="30000">
+		<attack name="speed" interval="2000" chance="15" radius="4" target="0" speedchange="-100" duration="30000">
 			<attribute key="areaEffect" value="poison" />
 		</attack>
 	</attacks>
@@ -31,7 +31,7 @@
 		<defense name="healing" interval="2000" chance="10" min="200" max="280">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="speed" interval="2000" chance="15" speedchange="440" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="60" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>

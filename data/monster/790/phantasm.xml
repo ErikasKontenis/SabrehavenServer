@@ -1,4 +1,4 @@
-<monster name="Phantasm" nameDescription="a phantasm" race="undead" experience="4400" speed="240" manacost="0">
+<monster name="Phantasm" nameDescription="a phantasm" race="undead" experience="4400" speed="120" manacost="0">
 	<health now="3950" max="3950" />
 	<look type="241" head="20" corpse="6343" />
 	<targetchange interval="4000" chance="10" />

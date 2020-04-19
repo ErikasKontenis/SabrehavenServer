@@ -1,4 +1,4 @@
-<monster name="Destroyer" nameDescription="a destroyer" race="undead" experience="2500" speed="270" manacost="0">
+<monster name="Destroyer" nameDescription="a destroyer" race="undead" experience="2500" speed="135" manacost="0">
 	<health now="3700" max="3700" />
 	<look type="236" corpse="6319" />
 	<targetchange interval="4000" chance="10" />
@@ -22,7 +22,7 @@
 		</attack>
 	</attacks>
 	<defenses armor="30" defense="30">
-		<defense name="speed" interval="2000" chance="15" speedchange="420" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="70" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>

@@ -1,4 +1,4 @@
-<monster name="Diabolic Imp" nameDescription="a diabolic imp" race="fire" experience="1950" speed="220" manacost="0">
+<monster name="Diabolic Imp" nameDescription="a diabolic imp" race="fire" experience="1950" speed="110" manacost="0">
 	<health now="2900" max="2900" />
 	<look type="237" corpse="6363" />
 	<targetchange interval="4000" chance="10" />
@@ -31,7 +31,7 @@
 		<defense name="healing" interval="2000" chance="10" min="650" max="800">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="speed" interval="2000" chance="15" speedchange="800" duration="2000">
+		<defense name="speed" interval="2000" chance="15" speedchange="50" duration="2000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="invisible" interval="2000" chance="10" duration="1000">

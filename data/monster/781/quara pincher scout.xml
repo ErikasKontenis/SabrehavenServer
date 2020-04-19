@@ -16,7 +16,7 @@
 		<flag runonhealth="0" />
 	</flags>
 	<attacks skill="50" attack="80">
-		<attack name="speed" chance="10" range="1" speedchange="-600" duration="3000">
+		<attack name="speed" chance="10" range="1" speedchange="-100" duration="3000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 	</attacks>

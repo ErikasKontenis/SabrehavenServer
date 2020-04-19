@@ -1,4 +1,4 @@
-<monster name="Munster" nameDescription="Munster" race="blood" experience="35" speed="200" manacost="0">
+<monster name="Munster" nameDescription="Munster" race="blood" experience="35" speed="100" manacost="0">
 	<health now="58" max="58" />
 	<look type="56" corpse="5964" />
 	<targetchange interval="10000" chance="5" />

@@ -21,7 +21,7 @@
 		<defense name="invisible" chance="25" duration="2000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
-		<defense name="speed" chance="10" speedchange="800" duration="5000">
+		<defense name="speed" chance="10" speedchange="65" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>	
 	</defenses>
