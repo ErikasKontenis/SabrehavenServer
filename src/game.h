@@ -435,6 +435,7 @@ class Game
 		void checkCreatureWalk(uint32_t creatureId);
 		void updateCreatureWalk(uint32_t creatureId);
 		void checkCreatureAttack(uint32_t creatureId);
+		void checkMonsterExtraAttack(uint32_t creatureId);
 		void checkCreatures(size_t index);
 		void checkLight();
 

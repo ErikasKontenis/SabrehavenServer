@@ -126,6 +126,7 @@ class Monster final : public Creature
 		}
 
 		void onAttackedCreature(Creature* creature) final;
+		void onAttackedCreatureDisappear(bool isLogout) override;
 
 		void onCreatureAppear(Creature* creature, bool isLogin) final;
 		void onRemoveCreature(Creature* creature, bool isLogout) final;
@@ -146,7 +147,11 @@ class Monster final : public Creature
 		void setNormalCreatureLight() final;
 		bool getCombatValues(int32_t& min, int32_t& max) final;
 
+		void doExtraMeleeAttack();
 		void doAttacking(uint32_t interval) final;
+		bool hasExtraSwing() override {
+			return extraMeleeAttack;
+		}
 
 		bool searchTarget(TargetSearchType_t searchType);
 		bool selectTarget(Creature* creature);
@@ -197,6 +202,7 @@ class Monster final : public Creature
 		Position masterPos;
 
 		bool isIdle = true;
+		bool extraMeleeAttack = false;
 		bool isMasterInRange = false;
 		bool egibleToDance = true;
 

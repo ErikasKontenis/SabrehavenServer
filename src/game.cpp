@@ -3205,6 +3205,16 @@ void Game::checkCreatureAttack(uint32_t creatureId)
 	}
 }
 
+void Game::checkMonsterExtraAttack(uint32_t creatureId)
+{
+	Creature* creature = getCreatureByID(creatureId);
+	if (creature && creature->getHealth() > 0) {
+		if (Monster* monster = creature->getMonster()) {
+			monster->doExtraMeleeAttack();
+		}
+	}
+}
+
 void Game::addCreatureCheck(Creature* creature)
 {
 	creature->creatureCheck = true;
