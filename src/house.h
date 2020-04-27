@@ -20,7 +20,6 @@
 #ifndef FS_HOUSE_H_EB9732E7771A438F9CD0EFA8CB4C58C4
 #define FS_HOUSE_H_EB9732E7771A438F9CD0EFA8CB4C58C4
 
-#include <regex>
 #include <set>
 
 #include "container.h"
@@ -37,7 +36,6 @@ class AccessList
 		void parseList(const std::string& list);
 		void addPlayer(const std::string& name);
 		void addGuild(const std::string& name);
-		void addExpression(const std::string& expression);
 
 		bool isInList(const Player* player);
 
@@ -47,8 +45,7 @@ class AccessList
 		std::string list;
 		std::unordered_set<uint32_t> playerList;
 		std::unordered_set<uint32_t> guildList; // TODO: include ranks
-		std::list<std::string> expressionList;
-		std::list<std::pair<std::regex, bool>> regExList;
+		bool allowEveryone = false;
 };
 
 class Door final : public Item
