@@ -98,10 +98,10 @@ Topic=3,"rotworm" -> Amount=17635, "Maybe you have noticed the numerous rotworms
 Topic=3,"cyclop" -> Amount=17636, "We've successfully driven the minotaurs off this island, but the underground city of the cyclopes - Cyclopolis - is still standing. ...",
 					"We're always looking for adventurers who'd help us decimate the number of cyclopes. Will you assist the city of Edron by killing 500 of them?", Topic=4
 
-"task",QuestValue(17633)=100 -> Amount=4000, Price=2000, "Very nice, %N. That will push the trolls' forces back a little. Here is your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
-"task",QuestValue(17634)=150 -> Amount=5000, Price=2500, "Congratulations, you've fought well against the goblin plague. Thank you! Here is your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
-"task",QuestValue(17635)=150 -> Amount=4000, Price=3000, "Well done! Thanks to you the city is a bit safer. Here's your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
-"task",QuestValue(17636)=500 -> Amount=25000, Price=10000, "Very good job, %N. You've been a great help. Here's your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17633)=100 -> Amount=20*QuestValue(17633)*ExperienceStage(49)*5/100, Price=2000, "Very nice, %N. That will push the trolls' forces back a little. Here is your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17634)=150 -> Amount=25*QuestValue(17634)*ExperienceStage(49)*5/100, Price=2500, "Congratulations, you've fought well against the goblin plague. Thank you! Here is your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17635)=150 -> Amount=55*QuestValue(17635)*ExperienceStage(49)*5/100, Price=3000, "Well done! Thanks to you the city is a bit safer. Here's your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
+"task",QuestValue(17636)=500 -> Amount=150*QuestValue(17636)*ExperienceStage(49)*5/100, Price=10000, "Very good job, %N. You've been a great help. Here's your reward!", SetQuestValue(QuestValue(17632),99999), SetQuestValue(17632,0), Experience(Amount), CreateMoney
 
 # Speaks
 "task",QuestValue(17632)>0 -> "Your current task is in progress. Follow the status of your task in the quest log. If you wish to cancel your in-progress task then don't be afraid and feel free to cancel."

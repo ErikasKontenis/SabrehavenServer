@@ -564,6 +564,10 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_COUNT;
 		searchType = BEHAVIOUR_PARAMETER_ONE;
+	} else if (identifier == "experiencestage") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_EXPERIENCESTAGE;
+		searchType = BEHAVIOUR_PARAMETER_ONE;
 	} else if (identifier == "random") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_RANDOM;
@@ -627,6 +631,28 @@ NpcBehaviourNode* BehaviourDatabase::readFactor(ScriptReader& script, NpcBehavio
 		NpcBehaviourNode* headNode = new NpcBehaviourNode();
 		headNode->type = BEHAVIOUR_TYPE_OPERATION;
 		headNode->number = BEHAVIOUR_OPERATOR_MULTIPLY;
+		headNode->left = nextNode;
+
+		script.nextToken();
+		nextNode = readValue(script);
+
+		headNode->right = nextNode;
+		nextNode = headNode;
+	}
+
+	// / operator
+	while (true) {
+		if (script.Token != SPECIAL) {
+			break;
+		}
+
+		if (script.getSpecial() != '/') {
+			break;
+		}
+
+		NpcBehaviourNode* headNode = new NpcBehaviourNode();
+		headNode->type = BEHAVIOUR_TYPE_OPERATION;
+		headNode->number = BEHAVIOUR_OPERATOR_DIVIDE;
 		headNode->left = nextNode;
 
 		script.nextToken();
@@ -1136,6 +1162,10 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		}
 		return player->getItemTypeCount(itemId, data);
 	}
+	case BEHAVIOUR_TYPE_EXPERIENCESTAGE: {
+		int32_t level = evaluate(node->left, player, message);
+		return g_game.getExperienceStage(level);
+	}
 	case BEHAVIOUR_TYPE_COUNTMONEY:
 		return player->getMoney();
 	case BEHAVIOUR_TYPE_BURNING: {
@@ -1285,6 +1315,8 @@ int32_t BehaviourDatabase::checkOperation(Player* player, NpcBehaviourNode* node
 		return leftResult != rightResult;
 	case BEHAVIOUR_OPERATOR_MULTIPLY:
 		return leftResult * rightResult;
+	case BEHAVIOUR_OPERATOR_DIVIDE:
+		return leftResult / rightResult;
 	case BEHAVIOUR_OPERATOR_SUM:
 		return leftResult + rightResult;
 	case BEHAVIOUR_OPERATOR_RES:

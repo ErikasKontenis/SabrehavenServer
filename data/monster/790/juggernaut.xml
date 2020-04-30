@@ -1,4 +1,4 @@
-<monster name="Juggernaut" nameDescription="a juggernaut" race="blood" experience="14000" speed="145" manacost="0">
+<monster name="Juggernaut" nameDescription="a juggernaut" race="blood" experience="6500" speed="145" manacost="0">
 	<health now="20000" max="20000" />
 	<look type="244" corpse="6335" />
 	<targetchange interval="4000" chance="10" />
