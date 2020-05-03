@@ -18,7 +18,7 @@
 	<attacks skill="110" attack="110">
 		<attack name="fire" interval="1000" chance="13" range="1" target="1" min="-50" max="-800">
 			<attribute key="shootEffect" value="fire" />
-			<attribute key="areaEffect" value="fireattack" />
+			<attribute key="areaEffect" value="firearea" />
 		</attack>
 		<attack name="fire" interval="2000" chance="20" range="7" radius="6" target="1" min="-50" max="-800">
 			<attribute key="shootEffect" value="fire" />

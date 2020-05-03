@@ -17,7 +17,7 @@
 	</flags>
 	<attacks attack="80" skill="100">
 		<attack name="speed" interval="2000" chance="20" range="7" target="1" speedchange="-100" duration="3000">
-			<attribute key="shootEffect" value="suddendeath" />
+			<attribute key="shootEffect" value="death" />
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 	</attacks>
@@ -33,7 +33,6 @@
 		</defense>
 	</defenses>
 	<immunities>
-		<immunity death="1" />
 		<immunity fire="1" />
 		<immunity energy="1" />
 		<immunity earth="1" />

@@ -17,11 +17,11 @@
 	</flags>
 	<attacks skill="70" attack="130" poison="800">
 		<attack name="earth" interval="2000" chance="5" length="8" spread="3" min="-300" max="-700">
-			<attribute key="areaEffect" value="carniphila" />
+			<attribute key="areaEffect" value="poison" />
 		</attack>
-		<attack name="death" interval="2000" chance="10" range="7" min="-395" max="-498">
-			<attribute key="shootEffect" value="suddendeath" />
-			<attribute key="areaEffect" value="smallclouds" />
+		<attack name="physical" interval="2000" chance="10" range="7" min="-395" max="-498">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 		<attack name="fire" interval="2000" chance="10" length="8" spread="3" min="-350" max="-660">
 			<attribute key="areaEffect" value="firearea" />

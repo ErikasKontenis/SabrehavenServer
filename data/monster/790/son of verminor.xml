@@ -22,8 +22,8 @@
 		<attack name="earth" interval="2000" chance="15" radius="3" target="0" min="-350" max="-390">
 			<attribute key="areaEffect" value="poison" />
 		</attack>
-		<attack name="death" interval="2000" chance="15" radius="3" target="0" min="-220" max="-270">
-			<attribute key="areaEffect" value="smallclouds" />
+		<attack name="physical" interval="2000" chance="15" radius="3" target="0" min="-220" max="-270">
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 	</attacks>
 	<defenses armor="20" defense="20">

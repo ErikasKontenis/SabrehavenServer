@@ -16,7 +16,6 @@
 		<flag runonhealth="15" />
 	</flags>
 	<attacks attack="30" skill="40">
-		<attack name="melee" interval="2000" min="0" max="-80" />
 		<attack name="physical" interval="2000" chance="10" target="0" radius="1">
 			<attribute key="areaeffect" value="whitenote" />
 		</attack>

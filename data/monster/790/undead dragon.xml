@@ -19,9 +19,9 @@
 		<attack name="physical" interval="2000" chance="5" range="7" radius="4" target="1" min="-300" max="-400">
 			<attribute key="areaEffect" value="redspark" />
 		</attack>
-		<attack name="death" interval="2000" chance="10" range="7" min="-125" max="-600">
-			<attribute key="shootEffect" value="suddendeath" />
-			<attribute key="areaEffect" value="smallclouds" />
+		<attack name="physical" interval="2000" chance="10" range="7" min="-125" max="-600">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 		<attack name="earth" interval="2000" chance="5" range="7" radius="4" target="1" min="-100" max="-390">
 			<attribute key="shootEffect" value="poison" />
@@ -40,7 +40,6 @@
 		<attack name="lifedrain" interval="2000" chance="10" radius="3" min="-100" max="-200">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
-		<attack name="undead dragon curse" interval="2000" chance="10" />
 	</attacks>
 	<defenses armor="40" defense="40">
 		<defense name="healing" interval="2000" chance="15" min="200" max="250">
@@ -50,7 +49,6 @@
 	<immunities>
 		<immunity fire="1" />
 		<immunity earth="1" />
-		<immunity death="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 		<immunity drown="1" />

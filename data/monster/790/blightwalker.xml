@@ -25,7 +25,6 @@
 		<attack name="drunk" interval="2000" chance="10" target="0" radius="3" duration="5000">
 			<attribute key="areaEffect" value="greenspark" />
 		</attack>
-		<attack name="blightwalker curse" interval="2000" chance="15" />
 		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-100" duration="30000">
 			<attribute key="shootEffect" value="poison" />
 		</attack>
@@ -33,7 +32,6 @@
 	<defenses armor="50" defense="50" />
 	<immunities>
 		<immunity paralyze="1" />
-		<immunity death="1" />
 		<immunity earth="1" />
 		<immunity invisible="1" />
 	</immunities>

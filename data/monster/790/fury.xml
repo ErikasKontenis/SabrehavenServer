@@ -19,23 +19,22 @@
 		<attack name="fire" interval="2000" chance="10" length="8" spread="3" min="-200" max="-300">
 			<attribute key="areaEffect" value="explosionarea" />
 		</attack>
-		<attack name="death" interval="2000" chance="5" length="8" spread="0" min="-120" max="-700">
+		<attack name="physical" interval="2000" chance="5" length="8" spread="0" min="-120" max="-700">
 			<attribute key="areaEffect" value="redspark" />
 		</attack>
-		<attack name="death" interval="2000" chance="10" radius="4" target="0" min="-120" max="-300">
+		<attack name="physical" interval="2000" chance="10" radius="4" target="0" min="-120" max="-300">
 			<attribute key="areaEffect" value="redspark" />
 		</attack>
-		<attack name="fury skill reducer" interval="2000" chance="5" />
 		<attack name="lifedrain" interval="2000" chance="10" radius="3" target="0" min="-120" max="-300">
 			<attribute key="areaEffect" value="blackspark" />
 		</attack>
-		<attack name="death" interval="2000" chance="10" range="7" min="-125" max="-250">
-			<attribute key="shootEffect" value="suddendeath" />
-			<attribute key="areaEffect" value="smallclouds" />
+		<attack name="physical" interval="2000" chance="10" range="7" min="-125" max="-250">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-100" duration="30000">
-			<attribute key="shootEffect" value="suddendeath" />
-			<attribute key="areaEffect" value="smallclouds" />
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 	</attacks>
 	<defenses armor="20" defense="20">
