@@ -34,12 +34,6 @@
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
-	<elements>
-		<element firePercent="20" />
-		<element energyPercent="20" />
-		<element icePercent="10" />
-		<element holyPercent="-25" />
-	</elements>
 	<immunities>
 		<immunity invisible="1" />
 		<immunity death="1" />

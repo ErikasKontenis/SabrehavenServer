@@ -25,11 +25,6 @@
 		</attack>
 	</attacks>
 	<defenses armor="30" defense="30" />
-	<elements>
-		<element icePercent="50" />
-		<element energyPercent="10" />
-		<element holyPercent="-20" />
-	</elements>
 	<immunities>
 		<immunity fire="1" />
 		<immunity earth="1" />

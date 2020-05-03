@@ -27,12 +27,6 @@
 		<attack name="hellfire fighter soulfire" interval="2000" chance="15" />
 	</attacks>
 	<defenses armor="35" defense="35" />
-	<elements>
-		<element energyPercent="25" />
-		<element physicalPercent="50" />
-		<element deathPercent="20" />
-		<element icePercent="-25" />
-	</elements>
 	<immunities>
 		<immunity fire="1" />
 		<immunity paralyze="1" />

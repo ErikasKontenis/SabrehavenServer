@@ -32,13 +32,6 @@
 		</attack>
 	</attacks>
 	<defenses armor="50" defense="50" />
-	<elements>
-		<element firePercent="50" />
-		<element energyPercent="20" />
-		<element icePercent="50" />
-		<element physicalPercent="-10" />
-		<element holyPercent="-30" />
-	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity death="1" />

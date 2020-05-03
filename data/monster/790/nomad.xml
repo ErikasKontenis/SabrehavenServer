@@ -22,13 +22,6 @@
 		</attack>
 	</attacks>
 	<defenses armor="15" defense="15" />
-	<elements>
-		<element firePercent="20" />
-		<element holyPercent="20" />
-		<element physicalPercent="-10" />
-		<element icePercent="-10" />
-		<element deathPercent="-10" />
-	</elements>
 	<voices interval="2000" chance="7">
 		<voice sentence="We are the true sons of the desert!" />
 		<voice sentence="I will leave your remains to the vultures!" />

@@ -15,8 +15,7 @@
 		<flag staticattack="90" />
 		<flag runonhealth="20" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-10" />
+	<attacks attack="15" skill="18">
 		<attack name="energyfield" interval="1000" chance="8" range="7" radius="1" target="1">
 			<attribute key="shootEffect" value="energy" />
 		</attack>

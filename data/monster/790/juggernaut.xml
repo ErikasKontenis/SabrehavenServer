@@ -29,14 +29,6 @@
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
-	<elements>
-		<element physicalPercent="40" />
-		<element firePercent="30" />
-		<element icePercent="10" />
-		<element earthPercent="20" />
-		<element energyPercent="-10" />
-		<element holyPercent="-5" />
-	</elements>
 	<immunities>
 		<immunity paralyze="1" />
 		<immunity invisible="1" />

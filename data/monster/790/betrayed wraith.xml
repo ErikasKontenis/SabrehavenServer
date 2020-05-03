@@ -15,9 +15,7 @@
 		<flag staticattack="90" />
 		<flag runonhealth="300" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-455" />
-		<attack name="betrayed wraith skill reducer" chance="10" />
+	<attacks attack="80" skill="100">
 		<attack name="speed" interval="2000" chance="20" range="7" target="1" speedchange="-100" duration="3000">
 			<attribute key="shootEffect" value="suddendeath" />
 			<attribute key="areaEffect" value="mortarea" />
@@ -34,10 +32,6 @@
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
-	<elements>
-		<element icePercent="50" />
-		<element holyPercent="-20" />
-	</elements>
 	<immunities>
 		<immunity death="1" />
 		<immunity fire="1" />

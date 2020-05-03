@@ -38,12 +38,6 @@
 			<attribute key="areaEffect" value="teleport" />
 		</defense>
 	</defenses>
-	<elements>
-		<element deathPercent="10" />
-		<element earthPercent="50" />
-		<element icePercent="-10" />
-		<element holyPercent="-10" />
-	</elements>
 	<immunities>
 		<immunity fire="1" />
 		<immunity lifedrain="1" />
