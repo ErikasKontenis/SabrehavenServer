@@ -12,11 +12,9 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="90" />
 		<flag runonhealth="450" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-429" />
+	<attacks skill="80" attack="90">
 		<attack name="death" interval="2000" chance="10" length="3" spread="0" target="0" min="-40" max="-210">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>

@@ -10,14 +10,12 @@
 		<flag convinceable="0" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="50" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="1" />
 		<flag runonhealth="2000" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="-660" max="-1280" />
+	<attacks skill="170" attack="140">
 	</attacks>
 	<defenses armor="64" defense="72" />
 	<immunities>

@@ -12,11 +12,9 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="90" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-520" />
+	<attacks attack="80" skill="120">
 		<attack name="firefield" interval="2000" chance="10" range="7" radius="3" target="0" />
 		<attack name="fire" interval="2000" chance="10" target="0" length="8" spread="0" min="-392" max="-1500">
 			<attribute key="areaEffect" value="fireattack" />

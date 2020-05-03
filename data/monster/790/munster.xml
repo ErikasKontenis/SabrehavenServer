@@ -11,12 +11,10 @@
 		<flag pushable="1" />
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
-		<flag staticattack="80" />
 		<flag targetdistance="1" />
 		<flag runonhealth="10" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-15" />
+	<attacks attack="8" skill="18">
 	</attacks>
 	<defenses armor="2" defense="4" />
 	<voices interval="2000" chance="5">

@@ -12,11 +12,9 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="90" />
 		<flag runonhealth="250" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="50" />
+	<attacks skill="30" attack="50">
 		<attack name="speed" interval="1000" chance="8" radius="6" target="0" speedchange="-100" duration="10000">
 			<attribute key="areaEffect" value="poison" />
 		</attack>

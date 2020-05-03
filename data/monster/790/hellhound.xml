@@ -12,11 +12,9 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="70" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="70" attack="130" poison="800" />
+	<attacks skill="70" attack="130" poison="800">
 		<attack name="earth" interval="2000" chance="5" length="8" spread="3" min="-300" max="-700">
 			<attribute key="areaEffect" value="carniphila" />
 		</attack>
