@@ -1,7 +1,8 @@
 <monster name="The Imperor" nameDescription="The Imperor" race="fire" experience="8000" speed="165" manacost="0">
 	<health now="15000" max="15000" />
 	<look type="237" corpse="6363" />
-	<targetchange interval="5000" chance="5" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

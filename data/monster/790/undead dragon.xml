@@ -1,7 +1,8 @@
 <monster name="Undead Dragon" nameDescription="an undead dragon" race="undead" experience="7200" speed="125" manacost="0">
 	<health now="8350" max="8350" />
 	<look type="231" corpse="6305" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

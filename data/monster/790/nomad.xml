@@ -1,7 +1,8 @@
 <monster name="Nomad" nameDescription="a nomad" race="blood" experience="60" speed="100" manacost="420">
 	<health now="160" max="160" />
 	<look type="146" head="114" body="20" legs="22" feet="2" addons="2" corpse="6080" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
 		<flag summonable="1" />
 		<flag attackable="1" />

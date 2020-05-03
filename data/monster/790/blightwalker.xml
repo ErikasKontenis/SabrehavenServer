@@ -1,7 +1,8 @@
 <monster name="Blightwalker" nameDescription="a blightwalker" race="undead" experience="5850" speed="125" manacost="0">
 	<health now="8900" max="8900" />
 	<look type="246" corpse="6353" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,7 +13,6 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="90" />
 		<flag runonhealth="800" />
 	</flags>
 	<attacks attack="90" skill="100">

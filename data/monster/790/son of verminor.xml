@@ -1,7 +1,8 @@
 <monster name="Son Of Verminor" nameDescription="a son of verminor" race="venom" experience="5900" speed="120" manacost="0">
 	<health now="8500" max="8500" />
 	<look type="19" corpse="2121" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

@@ -1,7 +1,8 @@
 <monster name="Lost Soul" nameDescription="a lost soul" race="undead" experience="4000" speed="110" manacost="0">
 	<health now="5800" max="5800" />
 	<look type="232" corpse="6310" />
-	<targetchange interval="4000" chance="15" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

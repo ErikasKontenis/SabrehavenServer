@@ -1,7 +1,8 @@
 <monster name="Hellfire Fighter" nameDescription="a hellfire fighter" race="fire" experience="3900" speed="110" manacost="0">
 	<health now="3800" max="3800" />
 	<look type="243" corpse="6323" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

@@ -1,7 +1,8 @@
 <monster name="Destroyer" nameDescription="a destroyer" race="undead" experience="2500" speed="135" manacost="0">
 	<health now="3700" max="3700" />
 	<look type="236" corpse="6319" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

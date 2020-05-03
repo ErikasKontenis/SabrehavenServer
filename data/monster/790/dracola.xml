@@ -1,7 +1,8 @@
 <monster name="Dracola" nameDescription="Dracola" race="undead" experience="11000" speed="205" manacost="0">
 	<health now="16200" max="16200" />
 	<look type="231" corpse="6305" />
-	<targetchange interval="2000" chance="5" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

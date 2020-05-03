@@ -1,7 +1,8 @@
 <monster name="Juggernaut" nameDescription="a juggernaut" race="blood" experience="6500" speed="145" manacost="0">
 	<health now="20000" max="20000" />
 	<look type="244" corpse="6335" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

@@ -1,7 +1,8 @@
 <monster name="Hand Of Cursed Fate" nameDescription="a hand of cursed fate" race="blood" experience="5000" speed="130" manacost="0">
 	<health now="7500" max="7500" />
 	<look type="230" corpse="6311" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

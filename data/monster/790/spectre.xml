@@ -1,7 +1,8 @@
 <monster name="Spectre" nameDescription="a spectre" race="undead" experience="2100" speed="115" manacost="0">
 	<health now="1350" max="1350" />
 	<look type="235" head="20" corpse="6347" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

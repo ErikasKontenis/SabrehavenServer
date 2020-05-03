@@ -1,7 +1,8 @@
 <monster name="The Handmaiden" nameDescription="the Handmaiden" race="blood" experience="3850" speed="225" manacost="0">
 	<health now="14500" max="14500" />
 	<look type="230" corpse="6311" />
-	<targetchange interval="5000" chance="8" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

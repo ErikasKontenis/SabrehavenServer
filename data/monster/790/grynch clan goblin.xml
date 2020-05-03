@@ -1,7 +1,8 @@
 <monster name="Grynch Clan Goblin" nameDescription="a Grynch Clan Goblin" race="blood" experience="4" speed="435" manacost="0">
 	<health now="80" max="80" />
 	<look type="61" corpse="6002" />
-	<targetchange interval="5000" chance="0" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

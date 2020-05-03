@@ -1,7 +1,8 @@
 <monster name="Phantasm" nameDescription="a phantasm" race="undead" experience="4400" speed="120" manacost="0">
 	<health now="3950" max="3950" />
 	<look type="241" head="20" corpse="6343" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

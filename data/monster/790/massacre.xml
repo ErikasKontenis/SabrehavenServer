@@ -1,7 +1,8 @@
 <monster name="Massacre" nameDescription="Massacre" race="blood" experience="9800" speed="195" manacost="0">
 	<health now="30000" max="30000" />
 	<look type="244" corpse="6335" />
-	<targetchange interval="60000" chance="0" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

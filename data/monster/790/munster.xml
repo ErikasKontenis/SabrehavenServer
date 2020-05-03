@@ -1,7 +1,8 @@
 <monster name="Munster" nameDescription="Munster" race="blood" experience="35" speed="100" manacost="0">
 	<health now="58" max="58" />
 	<look type="56" corpse="5964" />
-	<targetchange interval="10000" chance="5" />
+	<targetchange interval="1000" chance="0" />
+	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
