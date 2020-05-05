@@ -91,4 +91,5 @@ function onStartup()
 	end
 	
 	spawnRashid()
+	setGlobalStorageValue(17657, 0) -- reset POI levers
 end

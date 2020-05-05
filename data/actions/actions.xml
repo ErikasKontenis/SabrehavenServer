@@ -88,6 +88,15 @@
 	<!-- Pits of Inferno -->
 	<action actionid="17642" script="pits_of_inferno/oil.lua" />
 	<action fromaid="17653" toaid="17656" script="pits_of_inferno/hall_of_the_four_ways.lua" />
+	<action fromaid="2050" toaid="2065" script="pits_of_inferno/levers.lua" />
+	<action fromaid="3301" toaid="3302" script="pits_of_inferno/ladderLevers.lua" />
+	<action actionid="50160" script="pits_of_inferno/mazeStone.lua" />
+	<action actionid="3300" script="pits_of_inferno/stoneLever.lua" />
+	<action actionid="3304" script="pits_of_inferno/trapLever.lua" />
+	<action actionid="50106" script="pits_of_inferno/fireThroneLever.lua" />
+	<action fromaid="50095" toaid="50104" script="pits_of_inferno/bazirWrongLevers.lua" />
+	<action actionid="50105" script="pits_of_inferno/bazirMazeLever.lua" />
+	<action fromaid="39511" toaid="39512" script="pits_of_inferno/bazirMirror.lua" />
 	
 	<!-- Serpentine Tower -->
 	<action actionid="17597" script="serpentine_tower/release_fire_elemental.lua" />

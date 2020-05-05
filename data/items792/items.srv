@@ -14689,8 +14689,8 @@ Attributes  = {Weight=2300}
 
 TypeID      = 3253
 Name        = "a backpack of holding"
-Flags       = {Take}
-Attributes  = {Weight=10}
+Flags       = {Container,Take}
+Attributes  = {Capacity=24,Weight=1500,SlotType=BACKPACK}
 
 TypeID      = 3254
 Name        = "a roc feather"
@@ -29614,7 +29614,7 @@ TypeID      = 6527
 Name        = "the avenger"
 Description = "This holy blade was forged of shattered dreams"
 Flags       = {MultiUse,Take,Weapon}
-Attributes  = {Weight=6400,SlotType=TWOHANDED,WeaponType=SWORD,Attack=38,Defense=50}
+Attributes  = {Weight=6400,SlotType=TWOHANDED,WeaponType=SWORD,Attack=50,Defense=38}
 
 TypeID      = 6528
 Name        = "an infernal bolt"

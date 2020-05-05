@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF - 8"?>
 <monster name="flamethrower" nameDescription="a flamethrower" race="undead" experience="18" speed="0" manacost="0">
 	<health now="100" max="100" />
-	<look typeex="0" />
+	<look typeex="2190" />
 	<targetchange interval="1000" chance="0" />
 	<targetstrategy nearest="100" weakest="0" mostdamage="0" random="0" />
 	<flags>

@@ -241,4 +241,5 @@
 	<monster name="the plasmother" file="790/the plasmother.xml" />
 	<monster name="undead dragon" file="790/undead dragon.xml" />
 	<monster name="wyvern" file="790/wyvern.xml" />
+	<monster name="Demon (Goblin)" file="790/demon (goblin).xml" />
 </monsters>

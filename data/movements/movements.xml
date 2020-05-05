@@ -397,6 +397,28 @@
 	
 	<!-- Pits of Inferno -->
 	<movevent event="StepIn" frommovementid="17640" tomovementid="17641" script="pits_of_inferno/holy_tible_tile.lua" />
+	<movevent event="StepIn" movementid="4002" script="pits_of_inferno/drawbridge.lua" />
+	<movevent event="StepOut" movementid="4002" script="pits_of_inferno/drawbridge.lua" />
+	<movevent event="StepIn" movementid="2002" script="pits_of_inferno/ladder.lua" />
+	<movevent event="StepOut" movementid="2002" script="pits_of_inferno/ladder.lua" />
+	<movevent event="StepIn" frommovementid="28810" tomovementid="28834" script="pits_of_inferno/tileTeleports.lua" />
+	<movevent event="StepIn" frommovementid="7799" tomovementid="7801" script="pits_of_inferno/trap.lua" />
+	<movevent event="StepIn" movementid="3303" script="pits_of_inferno/secondTrap.lua" />
+	<movevent event="StepIn" frommovementid="17660" tomovementid="17678" script="pits_of_inferno/final_room_teleports.lua" />
+	<movevent event="AddItem" frommovementid="17660" tomovementid="17678" tileitem="1" script="pits_of_inferno/final_room_teleports.lua" />
+	<movevent event="StepIn" frommovementid="2090" tomovementid="2096" script="pits_of_inferno/checkThrones.lua" />
+	<movevent event="StepIn" frommovementid="2080" tomovementid="2086" script="pits_of_inferno/thrones.lua" />
+	<movevent event="StepIn" movementid="17686" script="pits_of_inferno/bazir_maze_lever_teleport.lua" />
+	<movevent event="AddItem" movementid="17686" tileitem="1" script="pits_of_inferno/bazir_maze_lever_teleport.lua" />
+	<movevent event="StepIn" movementid="17687" script="pits_of_inferno/bazir_maze_lever_teleport_back.lua" />
+	<movevent event="AddItem" movementid="17687" tileitem="1" script="pits_of_inferno/bazir_maze_lever_teleport_back.lua" />
+	<movevent event="StepIn" frommovementid="16772" tomovementid="16774" script="pits_of_inferno/bazirTiles.lua" />
+	<movevent event="StepIn" frommovementid="50082" tomovementid="50083" script="pits_of_inferno/bazirTiles.lua" />
+	<movevent event="AddItem" movementid="17688" tileitem="1" script="pits_of_inferno/bazir_final_room_teleport.lua" />
+	<movevent event="StepIn" movementid="17688" script="pits_of_inferno/bazir_final_room_teleport.lua" />
+	<movevent event="StepIn" movementid="50087" script="pits_of_inferno/puminTeleport.lua" />
+	<movevent event="StepIn" movementid="17689" script="pits_of_inferno/pumin_throne_room_teleport_back.lua" />
+	<movevent event="AddItem" movementid="17689" tileitem="1" script="pits_of_inferno/pumin_throne_room_teleport_back.lua" />
 	
 	<!-- Serpentine Tower -->
 	<movevent event="StepIn" frommovementid="17602" tomovementid="17603" script="serpentine_tower/final_tile.lua" />
