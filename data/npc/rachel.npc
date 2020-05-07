@@ -46,9 +46,7 @@ VANISH,!                           -> "These impatient young brats!"
 %1,1<%1,"life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=60*%1,  "Do you want to buy %A potions of life fluid for %P gold?", Topic=3
 
 "sell","talon"          -> Type=3034, Amount=1, Price=320, "Do you want to sell one of the magic gems called talon for %P gold?", Topic=6
-"sell","sabrehaven","talon" -> Type=5776, Amount=1, Price=10500, "Oh my! I could counter offer Edron Academy for this rare! Do you want to sell one of the magic Sabrehaven gems for %P gold?", Topic=6
 "sell",%1,1<%1,"talon"  -> Type=3034, Amount=%1, Price=320*%1, "Do you want to sell %A magic gems called talon for %P gold?", Topic=6
-"sell",%1,1<%1,"sabrehaven","talon"  -> Type=5776, Amount=%1, Price=10500*%1, "Oh my! I could counter offer Edron Academy for this rare! Do you want to sell %A magic Sabrehaven gems for %P gold?", Topic=6
 
 Topic=1,"yes"                   -> "I thought so, what do you want?"
 Topic=1,"no"                    -> "First lesson: DON'T LIE TO RACHEL!", Burning(10,4), EffectMe(15), EffectOpp(16)

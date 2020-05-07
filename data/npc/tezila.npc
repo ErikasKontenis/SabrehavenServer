@@ -60,7 +60,6 @@ VANISH,!           -> "Good bye."
 "sell","small","ruby"     -> Type=3030, Amount=1, Price=250, "Do you want to sell a small ruby for %P gold?", Topic=2
 "sell","small","emerald"  -> Type=3032, Amount=1, Price=250, "Do you want to sell a small emerald for %P gold?", Topic=2
 "sell","small","amethyst" -> Type=3033, Amount=1, Price=200, "Do you want to sell a small amethyst for %P gold?", Topic=2
-"sell","sabrehaven","talon" -> Type=5776, Amount=1, Price=1000, "Oh, I have plenty of them in my warehouse. However, do you want to sell a Sabrehaven talon for %P gold?", Topic=2
 
 "sell",%1,1<%1,"white","pearl"    -> Type=3026, Amount=%1, Price=160*%1, "Do you want to sell %A white pearls for %P gold?", Topic=2
 "sell",%1,1<%1,"black","pearl"    -> Type=3027, Amount=%1, Price=280*%1, "Do you want to sell %A black pearls for %P gold?", Topic=2
@@ -69,7 +68,6 @@ VANISH,!           -> "Good bye."
 "sell",%1,1<%1,"small","rub"     -> Type=3030, Amount=%1, Price=250*%1, "Do you want to sell %A small rubies for %P gold?", Topic=2
 "sell",%1,1<%1,"small","emerald"  -> Type=3032, Amount=%1, Price=250*%1, "Do you want to sell %A small emeralds for %P gold?", Topic=2
 "sell",%1,1<%1,"small","amethyst" -> Type=3033, Amount=%1, Price=200*%1, "Do you want to sell %A small amethysts for %P gold?", Topic=2
-"sell",%1,1<%1,"sabrehaven","talon" -> Type=5776, Amount=%1, Price=1000*%1, "Oh, I have plenty of them in my warehouse. However, do you want to sell %A Sabrehaven talons for %P gold?", Topic=2
 
 Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back, when you have enough money."
