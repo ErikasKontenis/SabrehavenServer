@@ -13413,8 +13413,9 @@ Attributes  = {Weight=40,SlotType=RING}
 
 TypeID      = 3007
 Name        = "a crystal ring"
-Flags       = {Take}
-Attributes  = {Weight=90,SlotType=RING}
+Description = "The magical ring will convert the gold you touch"
+Flags       = {Take,ShowDetail}
+Attributes  = {Weight=90,SlotType=RING,TotalUses=100}
 
 TypeID      = 3008
 Name        = "a crystal necklace"
@@ -13712,9 +13713,9 @@ Attributes  = {MinimumLevel=26,Weight=2650,Brightness=2,LightColor=67,Vocations=
 
 TypeID      = 3066
 Name        = "a snakebite rod"
-Description = "It seems to twitch and quiver as if trying to escape your grip"
+Description = "It seems to twitch and quiver as if trying to escape your grip. The rod has magical powers inside and requires no mana consumption"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=7,Weight=4300,Vocations=2,Range=3,ManaConsumption=2,AttackStrength=13,AttackVariation=5,DamageType=Poison,MissileEffect=15}
+Attributes  = {MinimumLevel=7,Weight=4300,Vocations=2,Range=3,AttackStrength=13,AttackVariation=5,DamageType=Poison,MissileEffect=15}
 
 TypeID      = 3067
 Name        = "a tempest rod"
@@ -13759,9 +13760,9 @@ Attributes  = {MinimumLevel=26,Weight=2300,Brightness=2,LightColor=205,Vocations
 
 TypeID      = 3074
 Name        = "a wand of vortex"
-Description = "Surges of energy rush through the tip of this wand"
+Description = "Surges of energy rush through the tip of this wand. The wand has magical powers inside and requires no mana consumption"
 Flags       = {Take,Wand}
-Attributes  = {MinimumLevel=7,Weight=2300,Brightness=2,LightColor=23,Vocations=1,ManaConsumption=2,AttackStrength=13,AttackVariation=5,DamageType=Energy,Range=3,MissileEffect=5}
+Attributes  = {MinimumLevel=7,Weight=2300,Brightness=2,LightColor=23,Vocations=1,AttackStrength=13,AttackVariation=5,DamageType=Energy,Range=3,MissileEffect=5}
 
 TypeID      = 3075
 Name        = "a wand of dragonbreath"

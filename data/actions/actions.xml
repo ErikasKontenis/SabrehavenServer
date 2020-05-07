@@ -233,6 +233,9 @@
 	<action itemid="4863" script="misc/butterfly_conservation_kit.lua" />
 	<action itemid="5467" script="misc/fire_bug.lua" />
 	<action itemid="5938" script="misc/ceirons_waterskin.lua" />
+	<action itemid="3031" script="misc/changegold.lua" />
+	<action itemid="3035" script="misc/changegold.lua" />
+	<action itemid="3043" script="misc/changegold.lua" />
 	
 	<!-- Chests -->
 	<action itemid="2479" script="misc/chests.lua" />

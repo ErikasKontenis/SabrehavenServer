@@ -9,7 +9,7 @@
 "do","you","have" -> *
 "gem"             -> "You can buy and sell small diamonds, sapphires, rubies, emeralds, and amethysts."
 "pearl"           -> "There are white and black pearls you can buy or sell."
-"jewel"           -> "Currently you can purchase wedding rings, golden amulets, and ruby necklaces."
+"jewel"           -> "Currently you can purchase gold converting rings, wedding rings, golden amulets, and ruby necklaces."
 
 "wedding","ring"   -> Type=3004, Amount=1, Price=990,  "Do you want to buy a wedding ring for %P gold?", Topic=29
 "golden","amulet"  -> Type=3013, Amount=1, Price=6600, "Do you want to buy a golden amulet for %P gold?", Topic=29
@@ -21,6 +21,8 @@
 "small","ruby"     -> Type=3030, Amount=1, Price=500,  "Do you want to buy a small ruby for %P gold?", Topic=29
 "small","emerald"  -> Type=3032, Amount=1, Price=500,  "Do you want to buy a small emerald for %P gold?", Topic=29
 "small","amethyst" -> Type=3033, Amount=1, Price=400,  "Do you want to buy a small amethyst for %P gold?", Topic=29
+"crystal","ring" -> Type=3007, Amount=1, Price=250,  "Do you want to buy a crystal ring to convert gold for %P gold?", Topic=29
+"gold","convert" -> *
 
 Topic=29,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=29,"yes"                   -> "Come back, when you have enough money."
