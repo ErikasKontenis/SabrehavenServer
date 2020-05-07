@@ -183,10 +183,12 @@ function Player:onGainExperience(source, exp, rawExp)
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then
 		useStamina(self)
 
+		if self:getStorageValue(17582) > os.time() then
+			exp = exp * 1.1
+		end
+		
 		local staminaMinutes = self:getStamina()
-		if staminaMinutes > 2400 and self:getStorageValue(17582) > os.time() then
-			exp = exp * 1.5
-		elseif staminaMinutes <= 840 then
+		if staminaMinutes <= 840 then
 			exp = exp * 0.5
 		end
 	end
