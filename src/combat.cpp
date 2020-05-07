@@ -896,6 +896,15 @@ bool Combat::closeAttack(Creature* attacker, Creature* target, fightMode_t fight
 	combatDamage.value = totalDamage;
 	combatDamage.origin = ORIGIN_MELEE;
 
+	if (Player* player = attacker->getPlayer()) {
+		if (player->getVocationId() == 3 || player->getVocationId() == 7) {
+			combatDamage.value += combatDamage.value * 0.15;
+		}
+		else if (player->getVocationId() == 4 || player->getVocationId() == 8) {
+			combatDamage.value += combatDamage.value * 0.20;
+		}
+	}
+
 	bool hit = Combat::doCombatHealth(attacker, target, combatDamage, combatParams);
 
 	if (Monster* monster = attacker->getMonster()) {
