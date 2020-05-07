@@ -897,10 +897,7 @@ bool Combat::closeAttack(Creature* attacker, Creature* target, fightMode_t fight
 	combatDamage.origin = ORIGIN_MELEE;
 
 	if (Player* player = attacker->getPlayer()) {
-		if (player->getVocationId() == 3 || player->getVocationId() == 7) {
-			combatDamage.value += combatDamage.value * 0.15;
-		}
-		else if (player->getVocationId() == 4 || player->getVocationId() == 8) {
+		if (player->getVocationId() == 4 || player->getVocationId() == 8) {
 			combatDamage.value += combatDamage.value * 0.20;
 		}
 	}
@@ -1020,6 +1017,12 @@ bool Combat::rangeAttack(Creature* attacker, Creature* target, fightMode_t fight
 		combatDamage.type = combatParams.combatType;
 		combatDamage.value = Combat::getTotalDamage(skillValue, attackValue, fightMode);
 		combatDamage.origin = ORIGIN_RANGED;
+
+		if (Player* player = attacker->getPlayer()) {
+			if (player->getVocationId() == 3 || player->getVocationId() == 7) {
+				combatDamage.value += combatDamage.value * 0.15;
+			}
+		}
 
 		if (weapon) {
 			hitChance = 75; // throwables and such
