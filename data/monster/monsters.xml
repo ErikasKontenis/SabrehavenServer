@@ -3,6 +3,7 @@
 	<!-- event -->
 	<monster name="raid orc" file="raids/orc.xml" />
 	<monster name="raid orc warlord" file="raids/orcwarlord.xml" />
+	<monster name="Training Monk" file="Training Monk.xml"/>
 	
 	<!-- normal -->
 	<monster name="amazon" file="amazon.xml" />
