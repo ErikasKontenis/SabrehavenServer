@@ -35,13 +35,23 @@ local tasks = {
 	['dragon lord'] = {taskerStorage = 17608, progressStorage = 17629, killsRequired = 600},
 	['hand of cursed fate'] = {taskerStorage = 17608, progressStorage = 17630, killsRequired = 200},
 	['juggernaut'] = {taskerStorage = 17608, progressStorage = 17631, killsRequired = 200},
+	['frost troll'] = {taskerStorage = 17608, progressStorage = 17697, killsRequired = 100},
+	['swamp troll'] = {taskerStorage = 17608, progressStorage = 17698, killsRequired = 100},
+	['rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 100},
+	['cave rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 100},
+	['wolf'] = {taskerStorage = 17608, progressStorage = 17700, killsRequired = 100},
+	['wasp'] = {taskerStorage = 17608, progressStorage = 17701, killsRequired = 100},
+	['larva'] = {taskerStorage = 17608, progressStorage = 17702, killsRequired = 100},
+	['dwarf'] = {taskerStorage = 17608, progressStorage = 17703, killsRequired = 100},
+	['skeleton'] = {taskerStorage = 17608, progressStorage = 17704, killsRequired = 100},
+	['ghoul'] = {taskerStorage = 17608, progressStorage = 17704, killsRequired = 100},
 	
 	-- Daniel Steelsoul
 	['troll'] = {taskerStorage = 17632, progressStorage = 17633, killsRequired = 100},
 	['goblin'] = {taskerStorage = 17632, progressStorage = 17634, killsRequired = 150},
 	['rotworm'] = {taskerStorage = 17632, progressStorage = 17635, killsRequired = 150},
 	['carrion worm'] = {taskerStorage = 17632, progressStorage = 17635, killsRequired = 150},
-	['cyclops'] = {taskerStorage = 17632, progressStorage = 17636, killsRequired = 500},
+	['cyclops'] = {taskerStorage = 17632, progressStorage = 17636, killsRequired = 150},
 	
 	-- Young Vocation Tasks
 	['amazon'] = {taskerStorage = 17644, progressStorage = 17645, killsRequired = 50},

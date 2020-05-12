@@ -1,12 +1,3 @@
-# GIMUD - Graphical Interface Multi User Dungeon
-# 17608 - any task in progress
-
-Name = "Grizzly Adams"
-Outfit = (144,97-97-94-97-3)
-Home = [32693,32767,6]
-Radius = 3
-
-Behaviour = {
 ADDRESS,"hello$",QuestValue(17615)>99,! -> "Welcome back elite hunter %N of the 'Paw and Fur - Hunting Elite'. Feel free to do tasks for us."
 ADDRESS,"hi$",QuestValue(17615)>99,!    -> *
 ADDRESS,"hello$",QuestValue(17615)>69,! -> "Welcome back trophy hunter %N of the 'Paw and Fur - Hunting Elite'. Feel free to do tasks for us."
@@ -51,6 +42,14 @@ Topic=1,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find t
 Topic=1,"ape" -> Amount=17612, "You'll find the apes deeper in the jungle. Hunt 100 merlkins, kongras or sibangs to complete this task. Alright?", Topic=2
 Topic=1,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hunt 100 of them. Interested?", Topic=2
 Topic=1,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 65 of them. Interested?", Topic=2
+Topic=1,"frost","troll" -> Amount=17697, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"swamp","troll" -> Amount=17698, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"rat" -> Amount=17699, "They can be found all over Tibia. Hunt 25 of them. Interested?", Topic=2
+Topic=1,"wolves" -> Amount=17700, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"wasp" -> Amount=17701, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"larva" -> Amount=17702, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"dwarf" -> Amount=17703, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=1,"undead" -> Amount=17704, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
 Topic=1 -> "Maybe next time."
 
 "task",QuestValue(17609)=100 -> Data=1, Amount=40*QuestValue(17609)*ExperienceStage(49)*5/100, Price=3000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -59,6 +58,14 @@ Topic=1 -> "Maybe next time."
 "task",QuestValue(17612)=100 -> Data=1, Amount=115*QuestValue(17612)*ExperienceStage(49)*5/100, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17613)=100 -> Data=2, Amount=150*QuestValue(17613)*ExperienceStage(49)*5/100, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17614)=65 -> Data=3, Amount=150*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17697)=100 -> Data=2, Amount=23*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17698)=100 -> Data=2, Amount=25*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17699)=25 -> Data=1, Amount=7*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17700)=100 -> Data=2, Amount=18*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17701)=100 -> Data=2, Amount=24*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17702)=100 -> Data=2, Amount=44*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17703)=100 -> Data=2, Amount=45*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17704)=100 -> Data=2, Amount=60*QuestValue(17614)*ExperienceStage(49)*5/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 50-79
 "task",QuestValue(17607)=1,QuestValue(17608)=0,level>49,level<80 -> "Alright, what would you like to hunt? Quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
@@ -132,5 +139,3 @@ Topic=3 -> "Good! Speak to me again when you are done hunting."
 "point",QuestValue(17607)=1 -> *
 
 "mission" -> "We prefer to call that 'task' in the society of the 'Paw and Fur - Hunting Elite'."
-
-}

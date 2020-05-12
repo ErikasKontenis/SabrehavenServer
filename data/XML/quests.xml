@@ -404,7 +404,7 @@
 		<mission name="Daniel Steelsoul: Trolls" storageid="17633" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 trolls." />
 		<mission name="Daniel Steelsoul: Goblins" storageid="17634" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 goblins." />
 		<mission name="Daniel Steelsoul: Rotworms" storageid="17635" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 rotworms." />
-		<mission name="Daniel Steelsoul: Cyclopes" storageid="17636" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 cyclopes." />
+		<mission name="Daniel Steelsoul: Cyclopes" storageid="17636" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 cyclopes." />
 		
 		<!-- killing in the name of rank -->
 		<mission name="Paw and Fur: Member" storageid="17615" startvalue="0" endvalue="10" description="You are member of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
@@ -420,6 +420,14 @@
 		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 apes." />
 		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 thornback tortoises." />
 		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="0" endvalue="65" description="You already hunted |STATE|/65 gargoyles." />
+		<mission name="Paw and Fur: Frost Trolls" storageid="17697" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 frost trolls." />
+		<mission name="Paw and Fur: Swamp Trolls" storageid="17698" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 swamp trolls." />
+		<mission name="Paw and Fur: Rats" storageid="17699" startvalue="0" endvalue="25" description="You already hunted |STATE|/25 rats." />
+		<mission name="Paw and Fur: Wolves" storageid="17700" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wolves." />
+		<mission name="Paw and Fur: Wasps" storageid="17701" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wasps." />
+		<mission name="Paw and Fur: Larvas" storageid="17702" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 larvas." />
+		<mission name="Paw and Fur: Dwarfs" storageid="17703" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 dwarfs." />
+		<mission name="Paw and Fur: Low Undeads" storageid="17704" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 undeads." />
 		
 		<!--Grizzly Adams: level 50 to 79 -->
 		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 quara scouts." />
