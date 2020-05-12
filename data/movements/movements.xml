@@ -680,6 +680,8 @@
 	<movevent event="AddItem" movementid="17705" tileitem="1" script="misc/thais_trainers.lua" />
 	<movevent event="StepIn" movementid="17706" script="misc/thais_trainers_back.lua" />
 	<movevent event="AddItem" movementid="17706" tileitem="1" script="misc/thais_trainers_back.lua" />
+	<movevent event="StepIn" movementid="17708" script="misc/step_trainers.lua" />
+	
 	<!--Doors -->
 	<movevent event="StepOut" itemid="1643" script="misc/doors.lua" />
 	<movevent event="StepOut" itemid="1647" script="misc/doors.lua" />
