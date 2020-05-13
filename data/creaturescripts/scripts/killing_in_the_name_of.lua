@@ -92,12 +92,24 @@ function onKill(player, target)
 	local targetName = target:getName():lower()
 	local task = tasks[targetName]
 	if task ~= nil then
-		local inProgressQuest = player:getStorageValue(task.taskerStorage)
-		if inProgressQuest == task.progressStorage then
-			local playerQuestKills = player:getStorageValue(task.progressStorage)
-			if playerQuestKills < task.killsRequired then
-				player:setStorageValue(task.progressStorage, playerQuestKills + 1)
-				player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Tracker] You have killed " .. playerQuestKills + 1 .. "/" .. task.killsRequired .. " " .. targetName .. ".")
+	
+		local players
+		local party = player:getParty()
+		if party ~= nil then
+			players = party:getMembers() -- all members of the party
+			players[#players + 1] = party:getLeader() -- don't forget the leader
+		else
+			players = { player } -- no party? then just the player
+		end
+
+		for _, member in ipairs(players) do
+			local inProgressQuest = member:getStorageValue(task.taskerStorage)
+			if inProgressQuest == task.progressStorage then
+				local playerQuestKills = member:getStorageValue(task.progressStorage)
+				if playerQuestKills < task.killsRequired then
+					member:setStorageValue(task.progressStorage, playerQuestKills + 1)
+					member:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Tracker] You have killed " .. playerQuestKills + 1 .. "/" .. task.killsRequired .. " " .. targetName .. ".")
+				end
 			end
 		end
 	end
