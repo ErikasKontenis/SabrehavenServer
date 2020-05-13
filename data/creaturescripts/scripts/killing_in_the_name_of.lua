@@ -37,14 +37,39 @@ local tasks = {
 	['juggernaut'] = {taskerStorage = 17608, progressStorage = 17631, killsRequired = 200},
 	['frost troll'] = {taskerStorage = 17608, progressStorage = 17697, killsRequired = 100},
 	['swamp troll'] = {taskerStorage = 17608, progressStorage = 17698, killsRequired = 100},
-	['rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 100},
-	['cave rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 100},
+	['rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 25},
+	['cave rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 25},
 	['wolf'] = {taskerStorage = 17608, progressStorage = 17700, killsRequired = 100},
 	['wasp'] = {taskerStorage = 17608, progressStorage = 17701, killsRequired = 100},
 	['larva'] = {taskerStorage = 17608, progressStorage = 17702, killsRequired = 100},
 	['dwarf'] = {taskerStorage = 17608, progressStorage = 17703, killsRequired = 100},
 	['skeleton'] = {taskerStorage = 17608, progressStorage = 17704, killsRequired = 100},
 	['ghoul'] = {taskerStorage = 17608, progressStorage = 17704, killsRequired = 100},
+	['orc spearman'] = {taskerStorage = 17608, progressStorage = 17712, killsRequired = 300},
+	['orc shaman'] = {taskerStorage = 17608, progressStorage = 17712, killsRequired = 300},
+	['orc rider'] = {taskerStorage = 17608, progressStorage = 17712, killsRequired = 300},
+	['orc warrior'] = {taskerStorage = 17608, progressStorage = 17712, killsRequired = 300},
+	['orc berserker'] = {taskerStorage = 17608, progressStorage = 17712, killsRequired = 300},
+	['minotaur archer'] = {taskerStorage = 17608, progressStorage = 17713, killsRequired = 300},
+	['minotaur guard'] = {taskerStorage = 17608, progressStorage = 17713, killsRequired = 300},
+	['minotaur mage'] = {taskerStorage = 17608, progressStorage = 17713, killsRequired = 300},
+	['lizard templar'] = {taskerStorage = 17608, progressStorage = 17714, killsRequired = 300},
+	['lizard sentinel'] = {taskerStorage = 17608, progressStorage = 17714, killsRequired = 300},
+	['lizard snakecharmer'] = {taskerStorage = 17608, progressStorage = 17714, killsRequired = 300},
+	['dwarf soldier'] = {taskerStorage = 17608, progressStorage = 17715, killsRequired = 300},
+	['dwarf guard'] = {taskerStorage = 17608, progressStorage = 17715, killsRequired = 300},
+	['dwarf geomancer'] = {taskerStorage = 17608, progressStorage = 17715, killsRequired = 300},
+	['ghost'] = {taskerStorage = 17608, progressStorage = 17716, killsRequired = 200},
+	['demon skeleton'] = {taskerStorage = 17608, progressStorage = 17716, killsRequired = 200},
+	['vampire'] = {taskerStorage = 17608, progressStorage = 17716, killsRequired = 200},
+	['orc leader'] = {taskerStorage = 17608, progressStorage = 17717, killsRequired = 125},
+	['orc warlord'] = {taskerStorage = 17608, progressStorage = 17717, killsRequired = 125},
+	['hero'] = {taskerStorage = 17608, progressStorage = 17718, killsRequired = 150},
+	['necromancer'] = {taskerStorage = 17608, progressStorage = 17719, killsRequired = 300},
+	['priestess'] = {taskerStorage = 17608, progressStorage = 17719, killsRequired = 300},
+	['nightmare'] = {taskerStorage = 17608, progressStorage = 17720, killsRequired = 150},
+	['warlock'] = {taskerStorage = 17608, progressStorage = 17721, killsRequired = 300},
+	['demon'] = {taskerStorage = 17608, progressStorage = 17722, killsRequired = 6666},
 	
 	-- Daniel Steelsoul
 	['troll'] = {taskerStorage = 17632, progressStorage = 17633, killsRequired = 100},
@@ -63,14 +88,16 @@ function onKill(player, target)
 	if target:isPlayer() or target:getMaster() then
 		return true
 	end
-
-	local task = tasks[target:getName():lower()]
+	
+	local targetName = target:getName():lower()
+	local task = tasks[targetName]
 	if task ~= nil then
 		local inProgressQuest = player:getStorageValue(task.taskerStorage)
 		if inProgressQuest == task.progressStorage then
 			local playerQuestKills = player:getStorageValue(task.progressStorage)
 			if playerQuestKills < task.killsRequired then
 				player:setStorageValue(task.progressStorage, playerQuestKills + 1)
+				player:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Tracker] You have killed " .. playerQuestKills + 1 .. "/" .. task.killsRequired .. " " .. targetName .. ".")
 			end
 		end
 	end

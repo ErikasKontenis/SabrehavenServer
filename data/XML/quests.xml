@@ -402,9 +402,13 @@
 	<quest name="Killing in the Name of..." startstorageid="17607" startstoragevalue="1">
 		<!-- Daniel Steelsoul: level 6 to 49 -->
 		<mission name="Daniel Steelsoul: Trolls" storageid="17633" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 trolls." />
+		<mission name="Daniel Steelsoul: Trolls" storageid="17633" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Daniel Steelsoul: Goblins" storageid="17634" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 goblins." />
+		<mission name="Daniel Steelsoul: Goblins" storageid="17634" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Daniel Steelsoul: Rotworms" storageid="17635" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 rotworms." />
+		<mission name="Daniel Steelsoul: Rotworms" storageid="17635" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Daniel Steelsoul: Cyclopes" storageid="17636" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 cyclopes." />
+		<mission name="Daniel Steelsoul: Cyclopes" storageid="17636" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		
 		<!-- killing in the name of rank -->
 		<mission name="Paw and Fur: Member" storageid="17615" startvalue="0" endvalue="10" description="You are member of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
@@ -415,26 +419,50 @@
 	
 		<!-- Grizzly Adams: level 6 to 49 -->
 		<mission name="Paw and Fur: Crocodiles" storageid="17609" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 crocodiles." />
+		<mission name="Paw and Fur: Crocodiles" storageid="17609" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Tarantulas" storageid="17610" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 tarantulas." />
+		<mission name="Paw and Fur: Tarantulas" storageid="17610" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Carniphilas" storageid="17611" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 carniphilas." />
+		<mission name="Paw and Fur: Carniphilas" storageid="17611" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 apes." />
+		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 thornback tortoises." />
+		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="0" endvalue="65" description="You already hunted |STATE|/65 gargoyles." />
+		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Frost Trolls" storageid="17697" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 frost trolls." />
+		<mission name="Paw and Fur: Frost Trolls" storageid="17697" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Swamp Trolls" storageid="17698" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 swamp trolls." />
+		<mission name="Paw and Fur: Swamp Trolls" storageid="17698" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Rats" storageid="17699" startvalue="0" endvalue="25" description="You already hunted |STATE|/25 rats." />
+		<mission name="Paw and Fur: Rats" storageid="17699" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Wolves" storageid="17700" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wolves." />
+		<mission name="Paw and Fur: Wolves" storageid="17700" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Wasps" storageid="17701" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wasps." />
+		<mission name="Paw and Fur: Wasps" storageid="17701" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Larvas" storageid="17702" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 larvas." />
+		<mission name="Paw and Fur: Larvas" storageid="17702" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Dwarfs" storageid="17703" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 dwarfs." />
+		<mission name="Paw and Fur: Dwarfs" storageid="17703" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Low Undeads" storageid="17704" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 undeads." />
+		<mission name="Paw and Fur: Low Undeads" storageid="17704" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		
 		<!--Grizzly Adams: level 50 to 79 -->
 		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 quara scouts." />
+		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Ancient Scarabs" storageid="17617" startvalue="0" endvalue="125" description="You already hunted |STATE|/125 ancient scarabs." />
+		<mission name="Paw and Fur: Ancient Scarabs" storageid="17617" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Wyverns" storageid="17618" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wyverns." />
+		<mission name="Paw and Fur: Wyverns" storageid="17618" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Bonebeasts" storageid="17619" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 bonebeasts." />
+		<mission name="Paw and Fur: Bonebeasts" storageid="17619" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Dragons" storageid="17620" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 dragons." />
+		<mission name="Paw and Fur: Dragons" storageid="17620" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Medium Class Orcs" storageid="17712" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 orcs." />
+		<mission name="Paw and Fur: High Class Minotaurs" storageid="17713" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 minotaurs." />
+		<mission name="Paw and Fur: Lizards" storageid="17714" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 lizards." />
+		<mission name="Paw and Fur: High Class Dwarfs" storageid="17715" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 dwarfs." />
+		<mission name="Paw and Fur: Medium Undeads" storageid="17716" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 undeads." />
 		
 		<!--Grizzly Adams: level 80 to 129 -->
 		<mission name="Paw and Fur: Quara" storageid="17621" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 quara." />
@@ -442,14 +470,32 @@
 		<mission name="Paw and Fur: Banshees" storageid="17623" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 banshees." />
 		<mission name="Paw and Fur: Lichs" storageid="17624" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 lichs." />
 		<mission name="Paw and Fur: Cults" storageid="17625" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 cults." />
+		<mission name="Paw and Fur: High Class Orcs" storageid="17717" startvalue="0" endvalue="125" description="You already hunted |STATE|/125 orcs." />
+		<mission name="Paw and Fur: High Class Orcs" storageid="17717" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Heros" storageid="17718" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 heros." />
+		<mission name="Paw and Fur: Heros" storageid="17718" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Necromancers" storageid="17719" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 necromancers." />
+		<mission name="Paw and Fur: Necromancers" storageid="17719" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		
 		<!--Grizzly Adams: level 130+ -->
 		<mission name="Paw and Fur: Hydras" storageid="17626" startvalue="0" endvalue="650" description="You already hunted |STATE|/650 hydras." />
+		<mission name="Paw and Fur: Hydras" storageid="17626" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Serpent Spawns" storageid="17627" startvalue="0" endvalue="800" description="You already hunted |STATE|/800 serpent spawns." />
+		<mission name="Paw and Fur: Serpent Spawns" storageid="17627" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Behemoths" storageid="17628" startvalue="0" endvalue="700" description="You already hunted |STATE|/700 behemoths." />
+		<mission name="Paw and Fur: Behemoths" storageid="17628" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Dragon Lords" storageid="17629" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 dragon lords." />
+		<mission name="Paw and Fur: Dragon Lords" storageid="17629" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Hand of Cursed Fates" storageid="17630" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 hand of cursed fates." />
+		<mission name="Paw and Fur: Hand of Cursed Fates" storageid="17630" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Juggernauts" storageid="17631" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 juggernauts." />
+		<mission name="Paw and Fur: Juggernauts" storageid="17631" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Nightmares" storageid="17720" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 nightmares." />
+		<mission name="Paw and Fur: Nightmares" storageid="17720" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Warlocks" storageid="17721" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 warlocks." />
+		<mission name="Paw and Fur: Warlocks" storageid="17721" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Demons" storageid="17722" startvalue="0" endvalue="6666" description="You already hunted |STATE|/6666 demons." />
+		<mission name="Paw and Fur: Demons" storageid="17722" startvalue="99999" endvalue="99999" description="You have finished the task." />
 	</quest>
 	<quest name="Young Mage Tasks" startstorageid="17646" startstoragevalue="1">
 		<mission name="Proof of the trustworthy" storageid="17645" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 amazons." />
