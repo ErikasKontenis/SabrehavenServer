@@ -193,6 +193,9 @@
 	<action itemid="6561" script="misc/ceremonial_ankh.lua" />
 	<action itemid="6576" script="misc/fireworks_rocket.lua" />
 	<action itemid="6578" script="misc/party_hat.lua" />
+	<action itemid="6549" script="misc/djinn_quest_pass.lua" />
+	<action itemid="6551" script="misc/djinn_quest_pass.lua" />
+	<action itemid="3252" script="misc/postman_quest_pass.lua" />
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />

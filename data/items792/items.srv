@@ -14683,8 +14683,8 @@ Flags       = {Take}
 Attributes  = {Weight=70}
 
 TypeID      = 3252
-Name        = "the horn of sundering"
-Description = "(This items has 2 charges left)"
+Name        = "the horn of postman"
+Description = "The magical horn will grant you the trustworthy postman rank"
 Flags       = {Take}
 Attributes  = {Weight=2300}
 
@@ -29724,7 +29724,8 @@ Flags       = {Cumulative,Take}
 Attributes  = {Weight=750}
 
 TypeID      = 6549
-Name        = "a green powder"
+Name        = "a green djinn powder"
+Description = "The magical powder will bless you with the power to convince the green djinns"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=750}
 
@@ -29735,8 +29736,8 @@ Flags       = {Cumulative,Take}
 Attributes  = {Weight=100}
 
 TypeID      = 6551
-Name        = "a blue powder"
-Description = "Sun can be a merciless killer, but so can you"
+Name        = "a blue djinn powder"
+Description = "The magical powder will bless you with the power to convince the blue djinns"
 Flags       = {Cumulative,Take}
 Attributes  = {Weight=100}
 
