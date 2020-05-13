@@ -71,7 +71,7 @@ allowChangeOutfit = true
 freePremium = true
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 8
-showMonsterLoot = false
+showMonsterLoot = true
 blockHeight = false
 dropItems = false
 
