@@ -59,11 +59,24 @@ VANISH,!           -> "Farewell."
 "blank","rune" -> Type=3147, Amount=1, Price=10, "Do you want to buy a blank rune for %P gold?", Topic=1
 "spellbook"    -> Type=3059, Amount=1, Price=150, "Do you want to buy a spellbook for %P gold?", Topic=1
 
+"backpack","life","fluid" -> Type=2874, Data=11, Amount=1, Price=61*20, "Do you want to buy a backpack of life fluid for %P gold?", Topic=8
+"bp","life","fluid" -> *
+"backpack","mana","fluid" -> Type=2874, Data=10, Amount=1, Price=56*20, "Do you want to buy a backpack of mana fluid for %P gold?", Topic=8
+"bp","mana","fluid" -> *
+"backpack","blank","rune" -> Type=3147, Amount=1, Price=11*20, "Do you want to buy a backpack of blank rune for %P gold?", Topic=7
+"bp","blank","rune" -> *
 
 %1,1<%1,"life","fluid" -> Type=2874, Data=11, Amount=%1, Price=60*%1, "Do you want to buy %A potions of life fluid for %P gold?", Topic=2
 %1,1<%1,"mana","fluid" -> Type=2874, Data=10, Amount=%1, Price=55*%1, "Do you want to buy %A potions of mana fluid for %P gold?", Topic=2
 %1,1<%1,"blank","rune" -> Type=3147, Amount=%1, Price=10*%1,   "Do you want to buy %A blank runes for %P gold?", Topic=1
 %1,1<%1,"spellbook"    -> Type=3059, Amount=%1, Price=150*%1, "Do you want to buy %A spellbooks for %P gold?", Topic=1
+
+%1,1<%1,"backpack","life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=61*20*%1, "Do you want to buy %A backpacks of potions of life fluid for %P gold?", Topic=8 
+%1,1<%1,"bp","life","fluid"  -> *
+%1,1<%1,"backpack","mana","fluid"  -> Type=2874, Data=10, Amount=%1, Price=56*20*%1, "Do you want to buy %A backpacks of potions of mana fluid for %P gold?", Topic=8 
+%1,1<%1,"bp","mana","fluid"  -> *
+%1,1<%1,"backpack","blank","rune"  -> Type=3147, Amount=%1, Price=11*20*%1, "Do you want to buy %A backpacks of blank runes for %P gold?", Topic=7 
+%1,1<%1,"bp","blank","rune"  -> *
 
 "deposit"                   -> "I will pay you 5 gold for every empty vial. Ok?", Data=0, Topic=3
 "vial"                      -> *
@@ -81,6 +94,13 @@ Topic=3,"yes",Count(2874)>0 -> Amount=Count(2874), Price=Amount*5, "Here you are
 Topic=3,"yes"               -> "You don't have any empty vials."
 Topic=3                     -> "Hmm, but please keep Tibia litter free."
 
+Topic=7,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=7,"yes"                   -> "Come back, when you have enough money."
+Topic=7                         -> "Hmm, but next time."
+
+Topic=8,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold on the vial.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=8,"yes"                   -> "Come back, when you have enough money."
+Topic=8                         -> "Hmm, but next time."
 
 @"gen-t-runes-free-s.ndb"
 @"gen-t-wands-prem-s.ndb"

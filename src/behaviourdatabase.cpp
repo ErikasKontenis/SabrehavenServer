@@ -1113,7 +1113,7 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 
 			Container* realContainer = container->getContainer();
 			for (int32_t c = 0; c < std::max<int32_t>(1, realContainer->capacity()); c++) {
-				Item* item = Item::CreateItem(itemId, data);
+				Item* item = Item::CreateItem(itemId, data == -1 ? 0 : data);
 				if (!item) {
 					std::cout << "[Error - BehaviourDatabase::checkAction]: CreateContainer - failed to create item" << std::endl;
 					break;

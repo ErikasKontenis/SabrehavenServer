@@ -40,10 +40,24 @@ VANISH,!                           -> "These impatient young brats!"
 "mana","fluid"     -> Type=2874, Data=10, Amount=1,  Price=55,    "Do you want to buy mana fluid for %P gold?", Topic=3
 "life","fluid"     -> Type=2874, Data=11, Amount=1,  Price=60,     "Do you want to buy life fluid for %P gold?", Topic=3
 
+"backpack","life","fluid" -> Type=2874, Data=11, Amount=1, Price=61*20, "Do you want to buy a backpack of life fluid for %P gold?", Topic=8
+"bp","life","fluid" -> *
+"backpack","mana","fluid" -> Type=2874, Data=10, Amount=1, Price=56*20, "Do you want to buy a backpack of mana fluid for %P gold?", Topic=8
+"bp","mana","fluid" -> *
+"backpack","blank","rune" -> Type=3147, Amount=1, Price=11*20, "Do you want to buy a backpack of blank rune for %P gold?", Topic=7
+"bp","blank","rune" -> *
+
 %1,1<%1,"spellbook"     -> Type=3059, Amount=%1, Price=150*%1, "Do you want to buy %A spellbooks for %P gold?",Topic=2
 %1,1<%1,"blank","rune"  -> Type=3147, Amount=%1, Price=10*%1,  "Do you want to buy %A runes for %P gold?", Topic=2
 %1,1<%1,"mana","fluid"  -> Type=2874, Data=10, Amount=%1, Price=55*%1, "Do you want to buy %A potions of mana fluid for %P gold?", Topic=3
 %1,1<%1,"life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=60*%1,  "Do you want to buy %A potions of life fluid for %P gold?", Topic=3
+
+%1,1<%1,"backpack","life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=61*20*%1, "Do you want to buy %A backpacks of potions of life fluid for %P gold?", Topic=8 
+%1,1<%1,"bp","life","fluid"  -> *
+%1,1<%1,"backpack","mana","fluid"  -> Type=2874, Data=10, Amount=%1, Price=56*20*%1, "Do you want to buy %A backpacks of potions of mana fluid for %P gold?", Topic=8 
+%1,1<%1,"bp","mana","fluid"  -> *
+%1,1<%1,"backpack","blank","rune"  -> Type=3147, Amount=%1, Price=11*20*%1, "Do you want to buy %A backpacks of blank runes for %P gold?", Topic=7 
+%1,1<%1,"bp","blank","rune"  -> *
 
 "sell","talon"          -> Type=3034, Amount=1, Price=320, "Do you want to sell one of the magic gems called talon for %P gold?", Topic=6
 "sell",%1,1<%1,"talon"  -> Type=3034, Amount=%1, Price=320*%1, "Do you want to sell %A magic gems called talon for %P gold?", Topic=6
@@ -72,6 +86,14 @@ Topic=6,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), Cr
 Topic=6,"yes"                             -> "Sorry, you do not have one."
 Topic=6,"yes", Amount>1                   -> "Sorry, you do not have so many."
 Topic=6                                   -> "Maybe next time."
+
+Topic=7,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=7,"yes"                   -> "Come back, when you have enough money."
+Topic=7                         -> "Hmm, but next time."
+
+Topic=8,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold on the vial.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=8,"yes"                   -> "Come back, when you have enough money."
+Topic=8                         -> "Hmm, but next time."
 
 @"gen-t-runes-free-s.ndb"
 @"gen-t-wands-free-s.ndb"

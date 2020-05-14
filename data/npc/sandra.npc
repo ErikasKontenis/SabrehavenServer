@@ -48,6 +48,16 @@ VANISH,!           -> "Good bye and please come back soon."
 "oil"                  -> Type=2874, Data=7,  Amount=1,  Price=20,     "Do you want to buy a potion of oil for %P gold?", Topic=2
 "water"                -> Type=2874, Data=1,  Amount=1,  Price=8,      "Do you want to buy a potion of distilled water for %P gold?", Topic=2
 
+"backpack","life","fluid" -> Type=2874, Data=11, Amount=1, Price=61*20, "Do you want to buy a backpack of life fluid for %P gold?", Topic=11
+"bp","life","fluid" -> *
+"backpack","mana","fluid" -> Type=2874, Data=10, Amount=1, Price=56*20, "Do you want to buy a backpack of mana fluid for %P gold?", Topic=11
+"bp","mana","fluid" -> *
+
+%1,1<%1,"backpack","life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=61*20*%1, "Do you want to buy %A backpacks of potions of life fluid for %P gold?", Topic=11 
+%1,1<%1,"bp","life","fluid"  -> *
+%1,1<%1,"backpack","mana","fluid"  -> Type=2874, Data=10, Amount=%1, Price=56*20*%1, "Do you want to buy %A backpacks of potions of mana fluid for %P gold?", Topic=11 
+%1,1<%1,"bp","mana","fluid"  -> *
+
 "deposit",QuestValue(17545)=1                   -> "I will pay you 5 gold for every empty vial. Ok?", Data=0, Topic=3
 "vial",QuestValue(17545)=1                      -> *
 "flask",QuestValue(17545)=1                     -> *
@@ -101,4 +111,8 @@ Topic=10 -> "Maybe another time."
 
 "winning","lottery","ticket",QuestValue(17546)=1 -> "I am sorry, but since you already have our potion belt we have no further prizes left for you. Maybe try to gift the winning lottery ticket for someone who really want to claim the accessory."
 "prize",QuestValue(17546)=1 -> *
+
+Topic=11,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold on the vial.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=11,"yes"                   -> "Come back, when you have enough money."
+Topic=11                         -> "Hmm, but next time."
 }

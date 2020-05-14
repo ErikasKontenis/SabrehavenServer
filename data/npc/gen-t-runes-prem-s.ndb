@@ -13,6 +13,22 @@
 "animate","dead","rune"         -> Type=3203, Data=1, Amount=1,  Price=375,    "Do you want to buy an animate dead rune for %P gold?", Topic=99
 "paralyze","rune"           	-> Type=3165, Data=1, Amount=1,  Price=700,    "Do you want to buy a paralyze rune for %P gold?", Topic=99
 
+"backpack","envenom","rune"       			-> Type=3179, Data=3, Amount=1,  Price=131*20,    "Do you want to buy a backpack of envenom rune for %P gold?", Topic=100
+"bp","envenom","rune"       			-> *
+"backpack","desintegrate","rune"           -> Type=3197, Data=3, Amount=1,  Price=81*20,    "Do you want to buy a backpack of desintegrate rune for %P gold?", Topic=100
+"bp","desintegrate","rune"           -> *
+"backpack","poison","bomb","rune"          -> Type=3173, Data=2, Amount=1,  Price=171*20,    "Do you want to buy a backpack of poison bomb rune for %P gold?", Topic=100
+"bp","poison","bomb","rune"          -> *
+"backpack","soulfire","rune"           	-> Type=3195, Data=2, Amount=1,  Price=211*20,    "Do you want to buy a backpack of soulfire rune for %P gold?", Topic=100
+"bp","soulfire","rune"           	-> *
+"backpack","energy","bomb","rune"          -> Type=3149, Data=2, Amount=1,  Price=326*20,    "Do you want to buy a backpack of energybomb rune for %P gold?", Topic=100
+"bp","energy","bomb","rune"          -> *
+"backpack","magic","wall","rune"           -> Type=3180, Data=3, Amount=1,  Price=351*20,    "Do you want to buy a backpack of magic wall rune for %P gold?", Topic=100
+"bp","magic","wall","rune"           -> *
+"backpack","animate","dead","rune"         -> Type=3203, Data=1, Amount=1,  Price=376*20,    "Do you want to buy a backpack of animate dead rune for %P gold?", Topic=100
+"bp","animate","dead","rune"         -> *
+"backpack","paralyze","rune"           	-> Type=3165, Data=1, Amount=1,  Price=701*20,    "Do you want to buy a backpack of paralyze rune for %P gold?", Topic=100
+"bp","paralyze","rune"           	-> *
 
 %1,1<%1,"envenom","rune"           	    -> Type=3179, Data=3, Amount=%1,  Price=130*%1,    "Do you want to buy %A envenom runes for %P gold?", Topic=99
 %1,1<%1,"desintegrate","rune"           -> Type=3197, Data=3, Amount=%1,  Price=80*%1,    "Do you want to buy %A desintegrate runes for %P gold?", Topic=99
@@ -23,6 +39,22 @@
 %1,1<%1,"animate","dead","rune"         -> Type=3203, Data=1, Amount=%1,  Price=375*%1,    "Do you want to buy %A animate dead runes for %P gold?", Topic=99
 %1,1<%1,"paralyze","rune"           	-> Type=3165, Data=1, Amount=%1,  Price=700*%1,    "Do you want to buy %A paralyze runes for %P gold?", Topic=99
 
+%1,1<%1,"backpack","envenom","rune" -> Type=3179, Data=3, Amount=%1,  Price=131*20*%1,    "Do you want to buy %A backpacks of envenom runes for %P gold?", Topic=100
+%1,1<%1,"bp","envenom","rune" -> *
+%1,1<%1,"backpack","desintegrate","rune" -> Type=3197, Data=3, Amount=%1,  Price=81*20*%1,    "Do you want to buy %A backpacks of desintegrate runes for %P gold?", Topic=100
+%1,1<%1,"bp","desintegrate","rune" -> *
+%1,1<%1,"backpack","poison","bomb","rune" -> Type=3173, Data=2, Amount=%1,  Price=171*20*%1,    "Do you want to buy %A backpacks of poison bomb runes for %P gold?", Topic=100
+%1,1<%1,"bp","poison","bomb","rune" -> *
+%1,1<%1,"backpack","soulfire","rune" -> Type=3195, Data=2, Amount=%1,  Price=211*20*%1,    "Do you want to buy %A backpacks of soulfire runes for %P gold?", Topic=100
+%1,1<%1,"bp","soulfire","rune" -> *
+%1,1<%1,"backpack","energy","bomb","rune" -> Type=3149, Data=2, Amount=%1,  Price=326*20*%1,    "Do you want to buy %A backpacks of energybomb runes for %P gold?", Topic=100
+%1,1<%1,"bp","energy","bomb","rune" -> *
+%1,1<%1,"backpack","magic","wall","rune" -> Type=3180, Data=3, Amount=%1,  Price=351*20*%1,    "Do you want to buy %A backpacks of magic wall runes for %P gold?", Topic=100
+%1,1<%1,"bp","magic","wall","rune" -> *
+%1,1<%1,"backpack","animate","dead","rune" -> Type=3203, Data=1, Amount=%1,  Price=376*20*%1,    "Do you want to buy %A backpacks of animate dead runes for %P gold?", Topic=100
+%1,1<%1,"bp","animate","dead","rune" -> *
+%1,1<%1,"backpack","paralyze","rune" -> Type=3165, Data=1, Amount=%1,  Price=701*20*%1,    "Do you want to buy %A backpacks of paralyze runes for %P gold?", Topic=100
+%1,1<%1,"bp","paralyze","rune" -> *
 
 "light","magic","missile","rune"    -> "Sorry, but runes of this type can't be purchased here."
 "poison","field","rune"				-> *
@@ -48,3 +80,7 @@
 Topic=99,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=99,"yes"                   -> "Sorry, you don't have enough gold."
 Topic=99                         -> "As you wish."
+
+Topic=100,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=100,"yes"                   -> "Sorry, you don't have enough gold."
+Topic=100                         -> "As you wish."
