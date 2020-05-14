@@ -428,18 +428,6 @@ bool Party::canUseSharedExperience(const Player* player) const
 		return false;
 	}
 
-	if (!player->hasFlag(PlayerFlag_NotGainInFight)) {
-		//check if the player has healed/attacked anything recently
-		auto it = ticksMap.find(player->getID());
-		if (it == ticksMap.end()) {
-			return false;
-		}
-
-		uint64_t timeDiff = OTSYS_TIME() - it->second;
-		if (timeDiff > static_cast<uint64_t>(g_config.getNumber(ConfigManager::PZ_LOCKED))) {
-			return false;
-		}
-	}
 	return true;
 }
 

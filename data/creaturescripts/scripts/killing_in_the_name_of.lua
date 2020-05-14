@@ -95,7 +95,7 @@ function onKill(player, target)
 	
 		local players
 		local party = player:getParty()
-		if party ~= nil then
+		if party ~= nil and party:isSharedExperienceEnabled() then
 			players = party:getMembers() -- all members of the party
 			players[#players + 1] = party:getLeader() -- don't forget the leader
 		else
