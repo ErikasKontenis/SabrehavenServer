@@ -58,6 +58,7 @@ VANISH,!           -> "Farewell."
 "crossbow"        -> Type=3349, Amount=1,  Price=500,  "Do you want to buy a crossbow for %P gold?", Topic=1
 "arrow"           -> Type=3447, Amount=1, Price=2,   "Do you want to buy an arrow for %P gold?", Topic=1
 "bolt"            -> Type=3446, Amount=1, Price=3,   "Do you want to buy a bolt for %P gold?", Topic=1
+"power","bolt"            -> Type=3450, Amount=1, Price=6,   "Do you want to buy a power bolt for %P gold?", Topic=1
 "throwing","star" -> Type=3287, Amount=1,  Price=50,   "Do you want to buy a throwing star for %P gold?", Topic=1
 
 
@@ -76,6 +77,7 @@ VANISH,!           -> "Farewell."
 %1,1<%1,"crossbow"        -> Type=3349, Amount=%1,  Price=500*%1,  "Do you want to buy %A crossbows for %P gold?", Topic=1
 %1,1<%1,"arrow"           -> Type=3447, Amount=%1,  Price=2*%1,    "Do you want to buy %A arrows for %P gold?", Topic=1
 %1,1<%1,"bolt"            -> Type=3446, Amount=%1,  Price=3*%1,    "Do you want to buy %A bolts for %P gold?", Topic=1
+%1,1<%1,"power","bolt"         -> Type=3450, Amount=%1, Price=6*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=1
 %1,1<%1,"throwing","star" -> Type=3287, Amount=%1,  Price=50*%1,   "Do you want to buy %A throwing stars for %P gold?", Topic=1
 
 "chain","armor"    -> Type=3358, Amount=1, Price=200,  "Do you want to buy a chain armor for %P gold?", Topic=1

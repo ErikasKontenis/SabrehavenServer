@@ -60,11 +60,13 @@ Paladin,"explosive","arrow"  -> String="Explosive Arrow", Price=1000, "Do you wa
 "crossbow"           -> Type=3349, Amount=1,  Price=450,  "Do you want to buy a crossbow for %P gold?", Topic=1
 "arrow"              -> Type=3447, Amount=1, Price=2,   "Do you want to buy an arrow for %P gold?", Topic=1
 "bolt"               -> Type=3446, Amount=1, Price=3,   "Do you want to buy a bolt for %P gold?", Topic=1
+"power","bolt"            -> Type=3450, Amount=1, Price=6,   "Do you want to buy a power bolt for %P gold?", Topic=1
 
 %1,1<%1,"bow"                -> Type=3350, Amount=%1,  Price=350*%1,  "Do you want to buy %A bows for %P gold?", Topic=1
 %1,1<%1,"crossbow"           -> Type=3349, Amount=%1,  Price=450*%1,  "Do you want to buy %A crossbows for %P gold?", Topic=1
 %1,1<%1,"arrow"           -> Type=3447, Amount=%1, Price=2*%1, "Do you want to buy %A arrows for %P gold?", Topic=1
 %1,1<%1,"bolt"            -> Type=3446, Amount=%1, Price=3*%1, "Do you want to buy %A bolts for %P gold?", Topic=1
+%1,1<%1,"power","bolt"         -> Type=3450, Amount=%1, Price=6*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=1
 
 Topic=1,"yes",CountMoney>=Price -> "And here it is.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Hey, you do not have enough gold."

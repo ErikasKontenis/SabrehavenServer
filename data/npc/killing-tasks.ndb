@@ -68,13 +68,14 @@ Topic=1 -> "Maybe next time."
 "task",QuestValue(17704)=100 -> Data=2, Amount=60*QuestValue(17704)*ExperienceStage(49)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Level 50-79
-"task",QuestValue(17607)=1,QuestValue(17608)=0,level>49,level<80 -> "Alright, what would you like to hunt? Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
-Topic=5,"quara" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
+"available","task",QuestValue(17607)=1,QuestValue(17608)=0,level>49 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts or dragons. ...", "High class orcs, hero, necromancers, underwater quara, giant spiders, banshees, lichs or cults. ...", "Nightmare, hydras, serpent spawns, behemoths, dragon lords, warlocks, hand of cursed fates, juggernauts, demons."
+"task",QuestValue(17607)=1,QuestValue(17608)=0,level>49 -> "Alright, what would you like to hunt? If you have no idea yet I can tell you which available tasks are for you.", Topic=5
+Topic=5,"quara","scout" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
 Topic=5,"scarab" -> Amount=17617, "They can be found in tombs beneath the desert around Ankrahmun. Hunt 125 of them. Interested?", Topic=2
 Topic=5,"wyvern" -> Amount=17618, "They can be found all over Tibia. Hunt 100 wyverns. Interested?", Topic=2
 Topic=5,"bonebeast" -> Amount=17619, "They can be found all over Tibia. Hunt 100 bonebeasts. Interested?", Topic=2
 Topic=5,"dragon" -> Amount=17620, "They can be found all over Tibia. Hunt 200 dragons. Interested?", Topic=2
-Topic=5,"orc" -> Amount=17712, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
+Topic=5,"medium","orc" -> Amount=17712, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"minotaur" -> Amount=17713, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"lizard" -> Amount=17714, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"dwarf" -> Amount=17715, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
@@ -91,16 +92,14 @@ Topic=5,"undead" -> Amount=17716, "They can be found all over Tibia. Hunt 200 of
 "task",QuestValue(17715)=300 -> Data=2, Amount=166*QuestValue(17715)*ExperienceStage(79)*35/100, Price=21000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17716)=200 -> Data=2, Amount=221*QuestValue(17716)*ExperienceStage(79)*35/100, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
-# Level 80-129
-"task",QuestValue(17607)=1,QuestValue(17608)=0,level>79,level<130 -> "Alright, what would you like to hunt? High class orcs, hero, necromancers, underwater quara, giant spiders, banshees, lichs or cults.", Topic=6
-Topic=6,"quara" -> Amount=17621, "As you wish. Seek out a quara settlement and hunt 600 quara, it doesn't matter which type you hunt except scouts. Alright?", Topic=2
-Topic=6,"spider" -> Amount=17622, "Never liked spiders. Simply too many legs. And I always find them in my bath! Those nasty creepy-crawlies are a threat to the hygiene of every living being in Tibia. Hunt 500 of them. Okay?", Topic=2
-Topic=6,"banshee" -> Amount=17623, "The Banshee is an undead creature of sheer terror. There is several places where you can hunt them. Hunt 300 of them. Okay?", Topic=2
-Topic=6,"lich" -> Amount=17624, "Lich hell. Ugh, to become a Lich is the ultimate goal of all those who follow the dark path of necromancy. Hunt 500 of them. Alright?", Topic=2
-Topic=6,"cult" -> Amount=17625, "I hate those strange cult fanatics. Hunt 500 of any cult follower. Alright?", Topic=2
-Topic=6,"orc" -> Amount=17717, "They can be found all over Tibia. Hunt 125 of them. Interested?", Topic=2
-Topic=6,"hero" -> Amount=17718, "They can be found all over Tibia. Hunt 150 of them. Interested?", Topic=2
-Topic=6,"necromancer" -> Amount=17719, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
+Topic=5,"quara" -> Amount=17621, "As you wish. Seek out a quara settlement and hunt 600 quara, it doesn't matter which type you hunt except scouts. Alright?", Topic=2
+Topic=5,"spider" -> Amount=17622, "Never liked spiders. Simply too many legs. And I always find them in my bath! Those nasty creepy-crawlies are a threat to the hygiene of every living being in Tibia. Hunt 500 of them. Okay?", Topic=2
+Topic=5,"banshee" -> Amount=17623, "The Banshee is an undead creature of sheer terror. There is several places where you can hunt them. Hunt 300 of them. Okay?", Topic=2
+Topic=5,"lich" -> Amount=17624, "Lich hell. Ugh, to become a Lich is the ultimate goal of all those who follow the dark path of necromancy. Hunt 500 of them. Alright?", Topic=2
+Topic=5,"cult" -> Amount=17625, "I hate those strange cult fanatics. Hunt 500 of any cult follower. Alright?", Topic=2
+Topic=5,"high","orc" -> Amount=17717, "They can be found all over Tibia. Hunt 125 of them. Interested?", Topic=2
+Topic=5,"hero" -> Amount=17718, "They can be found all over Tibia. Hunt 150 of them. Interested?", Topic=2
+Topic=5,"necromancer" -> Amount=17719, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 
 "task",QuestValue(17621)=600 -> Data=4, Amount=850*QuestValue(17621)*ExperienceStage(129)*30/100, Price=50000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17622)=500 -> Data=3, Amount=900*QuestValue(17622)*ExperienceStage(129)*30/100, Price=60000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -111,18 +110,15 @@ Topic=6,"necromancer" -> Amount=17719, "They can be found all over Tibia. Hunt 3
 "task",QuestValue(17718)=150 -> Data=2, Amount=1200*QuestValue(17718)*ExperienceStage(129)*30/100, Price=35000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17719)=300 -> Data=2, Amount=500*QuestValue(17719)*ExperienceStage(129)*30/100, Price=35000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
-# Level 130+
-"task",QuestValue(17607)=1,QuestValue(17608)=0,level>129 -> "Alright, what would you like to hunt? Hydras, serpent spawns, behemoths, dragon lords, hand of cursed fates, juggernauts.", Topic=7
-Topic=7,"hydra" -> Amount=17626, "The hydras are located in the eastern jungle of Tiquanda and there are several mountain caves that are inhabited by them. Your task is to hunt a mere 650 hydras. Are you willing to do that?", Topic=2
-Topic=7,"serpent" -> Amount=17627, "Very dangerous, nasty and slimy creatures. They live deep in the old ruins of Banuta. I think a mere 800 serpent spawns should do the trick. What do you say?", Topic=2
-Topic=7,"behemoth" -> Amount=17628, "Behemoths must be kept away from the settlements at all costs. You'll find them east of here in the taboo-area or under Cyclopolis in Edron. Go there and hunt a few of them - shall we say... 700? Are you up for that?", Topic=2
-Topic=7,"dragon" -> Amount=17629, "They can be found all over Tibia. Hunt 600 dragon lords. Interested?", Topic=2
-Topic=7,"hand" -> Amount=17630, "Those creatures are annoying and obviously lacking a head. Hunt 200 of them. Interested?", Topic=2
-Topic=7,"juggernaut" -> Amount=17631, "Juggernauts are known to be able to slash the head of a dragon with one hit. Hunt 200 of them. Interested?", Topic=2
-
-Topic=7,"nightmare" -> Amount=17720, "They can be found all over Tibia. Hunt 150 nightmares. Interested?", Topic=2
-Topic=7,"warlock" -> Amount=17721, "They can be found all over Tibia. Hunt 300 warlocks. Interested?", Topic=2
-Topic=7,"demon" -> Amount=17722, "Oh, this one is crazy task. Hunt 6666 demons. Interested?", Topic=2
+Topic=5,"hydra" -> Amount=17626, "The hydras are located in the eastern jungle of Tiquanda and there are several mountain caves that are inhabited by them. Your task is to hunt a mere 650 hydras. Are you willing to do that?", Topic=2
+Topic=5,"serpent" -> Amount=17627, "Very dangerous, nasty and slimy creatures. They live deep in the old ruins of Banuta. I think a mere 800 serpent spawns should do the trick. What do you say?", Topic=2
+Topic=5,"behemoth" -> Amount=17628, "Behemoths must be kept away from the settlements at all costs. You'll find them east of here in the taboo-area or under Cyclopolis in Edron. Go there and hunt a few of them - shall we say... 700? Are you up for that?", Topic=2
+Topic=5,"dragon","lord" -> Amount=17629, "They can be found all over Tibia. Hunt 600 dragon lords. Interested?", Topic=2
+Topic=5,"hand" -> Amount=17630, "Those creatures are annoying and obviously lacking a head. Hunt 200 of them. Interested?", Topic=2
+Topic=5,"juggernaut" -> Amount=17631, "Juggernauts are known to be able to slash the head of a dragon with one hit. Hunt 200 of them. Interested?", Topic=2
+Topic=5,"nightmare" -> Amount=17720, "They can be found all over Tibia. Hunt 150 nightmares. Interested?", Topic=2
+Topic=5,"warlock" -> Amount=17721, "They can be found all over Tibia. Hunt 300 warlocks. Interested?", Topic=2
+Topic=5,"demon" -> Amount=17722, "Oh, this one is crazy task. Hunt 6666 demons. Interested?", Topic=2
 
 "task",QuestValue(17626)=650 -> Data=4, Amount=2100*QuestValue(17626)*ExperienceStage(130)*25/100, Price=100000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17627)=800 -> Data=5, Amount=2000*QuestValue(17627)*ExperienceStage(130)*25/100, Price=120000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
