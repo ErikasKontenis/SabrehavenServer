@@ -579,21 +579,6 @@ bool Player::canSeeCreature(const Creature* creature) const
 	return true;
 }
 
-bool Player::canWalkthroughEx(const Creature* creature) const
-{
-	if (group->access) {
-		return true;
-	}
-
-	const Player* player = creature->getPlayer();
-	if (!player) {
-		return false;
-	}
-
-	const Tile* playerTile = player->getTile();
-	return playerTile && (playerTile->hasFlag(TILESTATE_PROTECTIONZONE) || player->getLevel() <= static_cast<uint32_t>(g_config.getNumber(ConfigManager::PROTECTION_LEVEL)));
-}
-
 void Player::onReceiveMail(uint32_t townId) const
 {
 	if (isNearDepotBox(townId)) {

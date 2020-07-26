@@ -52,8 +52,7 @@ class ProtocolGame final : public Protocol
 		// static protocol information
 		enum { server_sends_first = true };
 		enum { protocol_identifier = 0 }; // Not required as we send first
-		enum { use_checksum = true };
-
+		
 		static const char* protocol_name() {
 			return "gameworld protocol";
 		}
@@ -170,7 +169,6 @@ class ProtocolGame final : public Protocol
 		void sendTextMessage(const TextMessage& message);
 		void sendAnimatedText(const Position& pos, uint8_t color, const std::string& text);
 
-		void sendCreatureWalkthrough(const Creature* creature, bool walkthrough);
 		void sendCreatureShield(const Creature* creature);
 		void sendCreatureSkull(const Creature* creature);
 

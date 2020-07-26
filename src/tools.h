@@ -103,8 +103,6 @@ void getFilesInDirectory(const boost::filesystem::path& root, const std::string&
 std::string getClientVersionString(uint32_t version);
 std::string getClientVersionString(ClientVersion_t version);
 
-uint32_t adlerChecksum(const uint8_t* data, size_t length);
-
 inline int64_t OTSYS_TIME()
 {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();

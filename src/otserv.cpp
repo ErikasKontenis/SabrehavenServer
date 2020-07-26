@@ -185,14 +185,11 @@ void mainLoader(int, char*[], ServiceManager* services)
 	else if (clientVersion == 792) {
 		g_game.setClientVersion(CLIENT_VERSION_792);
 	}
-	else if (clientVersion == 870) {
-		g_game.setClientVersion(CLIENT_VERSION_870);
-	}
 	else {
 		std::cout << std::endl;
 
 		std::ostringstream ss;
-		ss << "> ERROR: Unknown client version: " << g_config.getNumber(ConfigManager::CLIENT_VERSION) << ", valid client versions are: 780, 781, 790, 792, 870.";
+		ss << "> ERROR: Unknown client version: " << g_config.getNumber(ConfigManager::CLIENT_VERSION) << ", valid client versions are: 780, 781, 790, 792.";
 		startupErrorMessage(ss.str());
 		return;
 	}

@@ -25,7 +25,6 @@
 #include "cylinder.h"
 #include "item.h"
 #include "tools.h"
-#include "spectators.h"
 
 class Creature;
 class Teleport;
@@ -37,6 +36,7 @@ class BedItem;
 
 typedef std::vector<Creature*> CreatureVector;
 typedef std::vector<Item*> ItemVector;
+typedef std::unordered_set<Creature*> SpectatorVec;
 
 enum tileflags_t : uint32_t {
 	TILESTATE_NONE = 0,

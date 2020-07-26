@@ -3747,8 +3747,6 @@ void Game::addDistanceEffect(const Position& fromPos, const Position& toPos, uin
 	SpectatorVec spectators;
 	map.getSpectators(spectators, fromPos, false, true);
 	map.getSpectators(spectators, toPos, false, true);
-	spectators.addSpectators(spectators);
-
 	addDistanceEffect(spectators, fromPos, toPos, effect);
 }
 

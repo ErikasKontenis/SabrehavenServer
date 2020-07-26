@@ -297,7 +297,6 @@
     <ClInclude Include="..\src\wildcardtree.h" />
     <ClInclude Include="..\src\xtea.h" />
     <ClInclude Include="..\src\quests.h" />
-	<ClInclude Include="..\src\spectators.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

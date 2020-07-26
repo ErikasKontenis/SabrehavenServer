@@ -1258,39 +1258,10 @@ std::string getClientVersionString(ClientVersion_t version)
 	case CLIENT_VERSION_792:
 		result = "7.92";
 		break;
-	case CLIENT_VERSION_870:
-		result = "8.60";
-		break;
 	default:
 		result = "Unknown";
 		break;
 	}
 
 	return result;
-}
-
-uint32_t adlerChecksum(const uint8_t* data, size_t length)
-{
-	if (length > NETWORKMESSAGE_MAXSIZE) {
-		return 0;
-	}
-
-	const uint16_t adler = 65521;
-
-	uint32_t a = 1, b = 0;
-
-	while (length > 0) {
-		size_t tmp = length > 5552 ? 5552 : length;
-		length -= tmp;
-
-		do {
-			a += *data++;
-			b += a;
-		} while (--tmp);
-
-		a %= adler;
-		b %= adler;
-	}
-
-	return (b << 16) | a;
 }

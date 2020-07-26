@@ -439,8 +439,6 @@ class Player final : public Creature, public Cylinder
 		bool canSee(const Position& pos) const final;
 		bool canSeeCreature(const Creature* creature) const final;
 
-		bool canWalkthroughEx(const Creature* creature) const;
-
 		RaceType_t getRace() const final {
 			return RACE_BLOOD;
 		}
@@ -689,11 +687,6 @@ class Player final : public Creature, public Cylinder
 		void sendCreatureLight(const Creature* creature) {
 			if (client) {
 				client->sendCreatureLight(creature);
-			}
-		}
-		void sendCreatureWalkthrough(const Creature* creature, bool walkthrough) {
-			if (client) {
-				client->sendCreatureWalkthrough(creature, walkthrough);
 			}
 		}
 		void sendCreatureShield(const Creature* creature) {

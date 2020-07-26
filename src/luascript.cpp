@@ -4409,20 +4409,19 @@ int LuaScriptInterface::luaPositionIsSightClear(lua_State* L)
 int LuaScriptInterface::luaPositionSendMagicEffect(lua_State* L)
 {
 	// position:sendMagicEffect(magicEffect[, player = nullptr])
-	SpectatorVec spectators;
+	SpectatorVec list;
 	if (lua_gettop(L) >= 3) {
 		Player* player = getPlayer(L, 3);
 		if (player) {
-			spectators.emplace_back(player);
+			list.insert(player);
 		}
 	}
 
 	MagicEffectClasses magicEffect = getNumber<MagicEffectClasses>(L, 2);
 	const Position& position = getPosition(L, 1);
-	if (!spectators.empty()) {
-		Game::addMagicEffect(spectators, position, magicEffect);
-	}
-	else {
+	if (!list.empty()) {
+		Game::addMagicEffect(list, position, magicEffect);
+	} else {
 		g_game.addMagicEffect(position, magicEffect);
 	}
 
@@ -4433,21 +4432,20 @@ int LuaScriptInterface::luaPositionSendMagicEffect(lua_State* L)
 int LuaScriptInterface::luaPositionSendDistanceEffect(lua_State* L)
 {
 	// position:sendDistanceEffect(positionEx, distanceEffect[, player = nullptr])
-	SpectatorVec spectators;
+	SpectatorVec list;
 	if (lua_gettop(L) >= 4) {
 		Player* player = getPlayer(L, 4);
 		if (player) {
-			spectators.emplace_back(player);
+			list.insert(player);
 		}
 	}
 
 	ShootType_t distanceEffect = getNumber<ShootType_t>(L, 3);
 	const Position& positionEx = getPosition(L, 2);
 	const Position& position = getPosition(L, 1);
-	if (!spectators.empty()) {
-		Game::addDistanceEffect(spectators, position, positionEx, distanceEffect);
-	}
-	else {
+	if (!list.empty()) {
+		Game::addDistanceEffect(list, position, positionEx, distanceEffect);
+	} else {
 		g_game.addDistanceEffect(position, positionEx, distanceEffect);
 	}
 
@@ -6875,7 +6873,7 @@ int LuaScriptInterface::luaCreatureTeleportTo(lua_State* L)
 
 int LuaScriptInterface::luaCreatureSay(lua_State* L)
 {
-	// creature:say(text[, type = TALKTYPE_MONSTER_SAY[, ghost = false[, target = nullptr[, position]]]])
+	// creature:say(text, type[, ghost = false[, target = nullptr[, position]]])
 	int parameters = lua_gettop(L);
 
 	Position position;
@@ -6895,7 +6893,7 @@ int LuaScriptInterface::luaCreatureSay(lua_State* L)
 
 	bool ghost = getBoolean(L, 4, false);
 
-	SpeakClasses type = getNumber<SpeakClasses>(L, 3, TALKTYPE_MONSTER_SAY);
+	SpeakClasses type = getNumber<SpeakClasses>(L, 3);
 	const std::string& text = getString(L, 2);
 	Creature* creature = getUserdata<Creature>(L, 1);
 	if (!creature) {
@@ -6903,16 +6901,15 @@ int LuaScriptInterface::luaCreatureSay(lua_State* L)
 		return 1;
 	}
 
-	SpectatorVec spectators;
+	SpectatorVec list;
 	if (target) {
-		spectators.emplace_back(target);
+		list.insert(target);
 	}
 
 	if (position.x != 0) {
-		pushBoolean(L, g_game.internalCreatureSay(creature, type, text, ghost, &spectators, &position));
-	}
-	else {
-		pushBoolean(L, g_game.internalCreatureSay(creature, type, text, ghost, &spectators));
+		pushBoolean(L, g_game.internalCreatureSay(creature, type, text, ghost, &list, &position));
+	} else {
+		pushBoolean(L, g_game.internalCreatureSay(creature, type, text, ghost, &list));
 	}
 	return 1;
 }

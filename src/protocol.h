@@ -21,7 +21,6 @@
 #define FS_PROTOCOL_H_D71405071ACF4137A4B1203899DE80E1
 
 #include "connection.h"
-#include "xtea.h"
 
 class Protocol : public std::enable_shared_from_this<Protocol>
 {
@@ -72,11 +71,8 @@ protected:
 	void enableXTEAEncryption() {
 		encryptionEnabled = true;
 	}
-	void setXTEAKey(xtea::key key) {
-		this->key = std::move(key);
-	}
-	void disableChecksum() {
-		checksumEnabled = false;
+	void setXTEAKey(const uint32_t* key) {
+		memcpy(this->key, key, sizeof(*key) * 4);
 	}
 
 	void XTEA_encrypt(OutputMessage& msg) const;
@@ -93,9 +89,8 @@ protected:
 	OutputMessage_ptr outputBuffer;
 private:
 	const ConnectionWeak_ptr connection;
-	xtea::key key;
+	uint32_t key[4];
 	bool encryptionEnabled;
-	bool checksumEnabled = true;
 	bool rawMessages;
 };
 
