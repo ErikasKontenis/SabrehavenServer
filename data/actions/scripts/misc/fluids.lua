@@ -90,7 +90,11 @@ function onUse(player, item, fromPosition, target, toPosition)
 		elseif item:getFluidType() == FLUID_NONE then
 			player:sendTextMessage(MESSAGE_STATUS_SMALL, "It is empty.")
 		else
-
+			if item:getFluidType() == FLUID_BLOOD and target:getActionId() == 17639 then
+				doRelocate({x = 32791, y = 32334, z = 09}, {x = 32791, y = 32332, z = 10})
+				Position({x = 32791, y = 32332, z = 10}):sendMonsterSay("Muahahahaha...")
+			end
+			
 			Game.createItem(2886, item.type, toPosition):decay()
 			item:transform(item:getId(), 0)
 		end

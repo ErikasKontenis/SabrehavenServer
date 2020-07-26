@@ -38,8 +38,19 @@ VANISH,!           -> "Bye."
 
 "life","fluid" -> Type=2874, Data=11, Amount=1, Price=60, "Do you want to buy life fluid for %P gold?", Topic=2
 "mana","fluid" -> Type=2874, Data=10, Amount=1, Price=55, "Do you want to buy mana fluid for %P gold?", Topic=2
+
+"backpack","life","fluid" -> Type=2874, Data=11, Amount=1, Price=61*20, "Do you want to buy a backpack of life fluid for %P gold?", Topic=8
+"bp","life","fluid" -> *
+"backpack","mana","fluid" -> Type=2874, Data=10, Amount=1, Price=56*20, "Do you want to buy a backpack of mana fluid for %P gold?", Topic=8
+"bp","mana","fluid" -> *
+
 %1,1<%1,"life","fluid" -> Type=2874, Data=11, Amount=%1, Price=60*%1, "Do you want to buy %A potions of life fluid for %P gold?", Topic=2
 %1,1<%1,"mana","fluid" -> Type=2874, Data=10, Amount=%1, Price=55*%1, "Do you want to buy %A potions of mana fluid for %P gold?", Topic=2
+
+%1,1<%1,"backpack","life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=61*20*%1, "Do you want to buy %A backpacks of potions of life fluid for %P gold?", Topic=8 
+%1,1<%1,"bp","life","fluid"  -> *
+%1,1<%1,"backpack","mana","fluid"  -> Type=2874, Data=10, Amount=%1, Price=56*20*%1, "Do you want to buy %A backpacks of potions of mana fluid for %P gold?", Topic=8 
+%1,1<%1,"bp","mana","fluid"  -> *
 
 "deposit" -> "I will pay you 5 gold for every empty vial. Ok?", Data=0, Topic=3
 "vial"    -> *
@@ -50,4 +61,9 @@ Topic=2                         -> "Don't overestimate my patience."
 
 Topic=3,"yes",Count(2874)>0 -> Amount=Count(2874), Price=Amount*5, "Here you are ... %P gold.", Delete(2874), CreateMoney
 Topic=3                     -> "Don't overestimate my patience."
+
+Topic=8,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold on the vial.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=8,"yes"                   -> "Come back, when you have enough money."
+Topic=8                         -> "Hmm, but next time."
+
 }

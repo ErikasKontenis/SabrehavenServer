@@ -40,8 +40,9 @@ Topic=3,                  -> "Too bad."
 
 "mermaid",QuestValue(17502)=10 -> "Oh my. Its not easy to impress a mermaid I guess. Please get me a love poem. I think elves are the greatest poets so their city seems like a good place to look for one.", SetQuestValue(17502,11)
 "marina",QuestValue(17502)=10 -> *
+"date",QuestValue(17502)=10 -> *
 
-"love","poem",QuestValue(17502)=11 -> Type=5952, Amount=1, "Did you get a love poem from Ab'Dendriel?", Topic=4
+"poem",QuestValue(17502)=11 -> Type=5952, Amount=1, "Did you get a love poem from Ab'Dendriel?", Topic=4
 Topic=4,"yes",Count(Type)>=Amount -> "Excellent. Here, with this little spell I enable you to recite the poem like a true elven poet. Now go and ask her for a date again.", SetQuestValue(17502,12)
 Topic=4,"yes"                             -> "It looks like you forgot it somewhere."
 Topic=4                                   -> "Maybe another time."

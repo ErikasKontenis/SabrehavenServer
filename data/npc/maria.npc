@@ -54,6 +54,7 @@ VANISH,!           -> "Visit us again."
 "cookie"   -> Type=3598, Amount=1, Price=5, "Do you want to buy a cookie for %P gold?", Topic=1
 "egg"      -> Type=3606, Amount=1, Price=2, "Do you want to buy an egg for %P gold?", Topic=1
 "tomato"   -> Type=3596, Amount=1, Price=5,  "Do you want to buy a tomato for %P gold?", Topic=1
+"valentine",ClientVersion>=790 -> Type=6392, Amount=1,  Price=100,  "Do you want to buy a valentine's cake for %P gold?", Topic=1
 
 %1,1<%1,"bread"         -> Type=3600, Amount=%1, Price=4*%1, "Do you wanna buy %A breads for %P gold?", Topic=1
 %1,1<%1,"cheese"        -> Type=3607, Amount=%1, Price=6*%1, "Do you wanna buy %A cheese for %P gold?", Topic=1
@@ -62,7 +63,7 @@ VANISH,!           -> "Visit us again."
 %1,1<%1,"cookie"        -> Type=3598, Amount=%1, Price=5*%1, "Do you wanna buy %A cookies for %P gold?", Topic=1
 %1,1<%1,"egg"      -> Type=3606, Amount=%1, Price=2*%1, "Do you want to buy %A eggs for %P gold?", Topic=1
 %1,1<%1,"tomato"   -> Type=3596, Amount=%1, Price=5*%1, "Do you want to buy %A tomatoes for %P gold?", Topic=1
-
+%1,1<%1,"valentine",ClientVersion>=790 -> Type=6392, Amount=%1, Price=100*%1, "Do you want to buy %A valentine's cakes for %P gold?", Topic=1
 
 "lemonade" -> Type=2880, Data=12, Amount=1, Price=2, "Do you want to buy a mug of lemonade for %P gold?", Topic=1
 "beer"     -> Type=2880, Data=3,  Amount=1, Price=2, "Do you want to buy a mug of beer for %P gold?", Topic=1

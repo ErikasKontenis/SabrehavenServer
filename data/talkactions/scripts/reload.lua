@@ -32,7 +32,10 @@ local reloadTypes = {
 
 	["npc"] = { targetType = RELOAD_TYPE_NPCS, name = "npcs" },
 	["npcs"] = { targetType = RELOAD_TYPE_NPCS, name = "npcs" },
-
+	
+	["quest"] = { targetType = RELOAD_TYPE_QUESTS, name = "quests" },
+	["quests"] = { targetType = RELOAD_TYPE_QUESTS, name = "quests" },
+	
 	["raid"] = { targetType = RELOAD_TYPE_RAIDS, name = "raids" },
 	["raids"] = { targetType = RELOAD_TYPE_RAIDS, name = "raids" },
 

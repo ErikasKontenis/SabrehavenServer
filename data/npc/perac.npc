@@ -28,11 +28,13 @@ VANISH,!           -> "Good bye."
 "crossbow"        -> Type=3349, Amount=1,  Price=500,  "Do you want to buy a crossbow for %P gold?", Topic=1
 "arrow"           -> Type=3447, Amount=1, Price=2,   "Do you want to buy an arrow for %P gold?", Topic=1
 "bolt"            -> Type=3446, Amount=1, Price=3,   "Do you want to buy a bolt for %P gold?", Topic=1
+"power","bolt"            -> Type=3450, Amount=1, Price=6,   "Do you want to buy a power bolt for %P gold?", Topic=1
 
 %1,1<%1,"bow"             -> Type=3350, Amount=%1,  Price=400*%1,  "Do you want to buy %A bows for %P gold?", Topic=1
 %1,1<%1,"crossbow"        -> Type=3349, Amount=%1,  Price=500*%1,  "Do you want to buy %A crossbows for %P gold?", Topic=1
 %1,1<%1,"arrow"           -> Type=3447, Amount=%1, Price=2*%1,   "Do you want to buy %A arrows for %P gold?", Topic=1
 %1,1<%1,"bolt"            -> Type=3446, Amount=%1, Price=3*%1,   "Do you want to buy %A bolts for %P gold?", Topic=1
+%1,1<%1,"power","bolt"         -> Type=3450, Amount=%1, Price=6*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=1
 
 "buy"             -> "I am selling bows, crossbows, and ammunition. Do you need anything?"
 "do","you","sell" -> *
@@ -45,4 +47,17 @@ VANISH,!           -> "Good bye."
 Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back, when you have enough money."
 Topic=1                         -> "Hmm, but next time."
+
+"task",QuestValue(17647)=0,paladin -> Amount=17648, "Young paladin, I see you need ammunition but those are too expensive, right. Hmm... I can't give you for free. ...",
+									"However, if you could kill 50 minotaurs to prove your trustworthy willingness I will reward you the bow and 300 arrows. Deal?", Topic=120
+									
+"task",QuestValue(17648)=50,QuestValue(17647)=1,paladin -> "Well done, %N. Here is your bow and arrows!", SetQuestValue(17647,2), SetQuestValue(17649,0), Type=3350, Amount=1, Create(Type), Type=3447, Amount=300, Create(Type)
+								
+"task",QuestValue(17649)>0 -> "I see you are still in progress with your task."
+									
+Topic=120,"yes" -> "Very well young paladin. Come back once you are done.", SetQuestValue(17649,Amount), SetQuestValue(Amount,0), SetQuestValue(17647,1)
+Topic=120 -> "As you wish."
+
+"task" -> "I don't have any tasks for you right now."
+
 }

@@ -18,7 +18,7 @@ VANISH,!           -> "Oh well."
 "farewell"       -> *
 
 "ring",QuestValue(17502)=0         -> "My ring was stolen by a parrot, directly from my dressing table near the window. It flew to the nearby mountains and I fear my ring will be lost forever. Whoever returns it to me will be rewarded generously. ...",
-									  "I guess that evil parrot hid the ring somewhere on a high tree or a rock so that you might need a rake to get it.", SetQuestValue(17502,1)
+									  "I guess that evil parrot hid the ring somewhere on a high tree or a rock so that you might need a rake to get it.", SetQuestValue(17502,1), SetQuestValue(17593,1)
 "mission",QuestValue(17502)=0      -> *
 
 "ring",QuestValue(17502)=1         -> Type=6093, Amount=1, Price=150, "Oh, my beloved ring! Have you found it and want to return it to me?", Topic=1
@@ -50,7 +50,7 @@ Topic=4,"yes" -> "I am glad to hear that. So please listen: Due to circumstances
 				 "Contact Captain Waverider, the old fisherman, and tell him the secret word 'peg leg'. He will make sure that you arrive safely ...",
 				 "Please look for Ray and find out what happened to him and why he was not able to answer. Return to me as soon as you have found something out. I wish you a good journey.", SetQuestValue(17502,6)
 Topic=4                         -> "Too bad."
-
+"mission",QuestValue(17502)>5,QuestValue(17502)<13      -> "Return to me as soon as you have found something out about Ray."
 "ray","striker",QuestValue(17502)=13      -> "<blushes> Oh, he is so wonderful. A very special man with a special place in my heart.", Topic=5
 Topic=5,"mermaid"                         -> "I can't thank you enough for freeing my beloved Ray from that evil spell. I am still shocked that a mermaid could steal his love that easily.", SetQuestValue(17502,14)
 

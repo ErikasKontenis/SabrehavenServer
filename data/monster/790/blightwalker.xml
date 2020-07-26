@@ -1,0 +1,69 @@
+<monster name="Blightwalker" nameDescription="a blightwalker" race="undead" experience="5850" speed="125" manacost="0">
+	<health now="8900" max="8900" />
+	<look type="246" corpse="6353" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="800" />
+	</flags>
+	<attacks attack="90" skill="100">
+		<attack name="earth" interval="2000" chance="20" range="7" target="1" min="-220" max="-405">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="15" target="0" radius="4" min="-65" max="-135">
+			<attribute key="areaEffect" value="greenshimmer" />
+		</attack>
+		<attack name="drunk" interval="2000" chance="10" target="0" radius="3" duration="5000">
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-100" duration="30000">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+	</attacks>
+	<defenses armor="50" defense="50" />
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity earth="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="I can see you decaying!" />
+		<voice sentence="Let me taste your mortality!" />
+		<voice sentence="Your lifeforce is waning!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="197" chance="1000" />	<!-- gold coin -->
+		<item id="3035" countmax="5" chance="1000" />		<!-- platinum coin -->
+		<item id="3605" chance="500" />					<!-- bunch of wheat -->
+				<!-- great mana potion -->
+							<!-- demonic essence -->
+		<item id="3147" countmax="2" chance="262" />		<!-- blank rune -->
+		<item id="5944" chance="237" />					<!-- soul orb -->
+							<!-- bundle of cursed straw -->
+				<!-- ultimate health potion -->
+		<item id="3067" chance="100" />					<!-- hailstorm rod -->
+				<!-- assassin star -->
+								<!-- gold ingot -->
+								<!-- giant shimmering pearl -->
+								<!-- giant shimmering pearl -->
+								<!-- seeds -->
+		<item id="3453" chance="30" />						<!-- scythe -->
+								<!-- terra legs -->
+		<item id="3083" chance="20" />						<!-- garlic necklace -->
+		<item id="3063" chance="18" />						<!-- gold ring -->
+		<item id="3324" chance="15" />						<!-- skull staff -->
+		<item id="6299" chance="14" />						<!-- death ring -->
+								<!-- terra mantle -->
+		<item id="3306" chance="3" />						<!-- golden sickle -->
+		<item id="3057" chance="1" />						<!-- amulet of loss -->
+	</loot>
+</monster>

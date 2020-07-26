@@ -54,13 +54,22 @@ VANISH,!           -> "May enlightenment be your path."
 "blank","rune" -> Type=3147, Amount=1, Price=10,  "Do you want to buy a blank rune for %P gold?", Topic=1
 "spellbook"    -> Type=3059, Amount=1, Price=150, "Do you want to buy a spellbook for %P gold?", Topic=1
 
+"backpack","blank","rune" -> Type=3147, Amount=1, Price=11*20, "Do you want to buy a backpack of blank rune for %P gold?", Topic=2
+"bp","blank","rune" -> *
 
 %1,1<%1,"blank","rune" -> Type=3147, Amount=%1, Price=10*%1,  "Do you want to buy %A blank runes for %P gold?", Topic=1
 %1,1<%1,"spellbook"    -> Type=3059, Amount=%1, Price=150*%1, "Do you want to buy %A spellbooks for %P gold?", Topic=1
 
+%1,1<%1,"backpack","blank","rune"  -> Type=3147, Amount=%1, Price=11*20*%1, "Do you want to buy %A backpacks of blank runes for %P gold?", Topic=2 
+%1,1<%1,"bp","blank","rune"  -> *
+
 Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back, when you have enough money."
 Topic=1                         -> "Maybe next time."
+
+Topic=2,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=2,"yes"                   -> "Come back, when you have enough money."
+Topic=2                         -> "Hmm, but next time."
 
 @"gen-t-runes-free-s.ndb"
 @"gen-t-wands-prem-s.ndb"

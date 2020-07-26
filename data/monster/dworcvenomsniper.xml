@@ -32,7 +32,7 @@
 		<voice sentence="Prek tars, dekklep zurk." />
 	</voices>
 	<loot>
-		<item id="3560" countmax="1" chance="1" /> <!-- a bast skirt -->
+		<item id="3560" countmax="1" chance="2" /> <!-- a bast skirt -->
 		<item id="3056" countmax="1" chance="1" /> <!-- a bronze amulet -->
 		<item id="3031" countmax="10" chance="800" /> <!-- a gold coin -->
 		<item id="3361" countmax="1" chance="100" /> <!-- a leather armor -->

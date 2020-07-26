@@ -40,6 +40,10 @@ local parcels = {
 	[5086] = 5046,
 	[5087] = 5055,
 	[5088] = 5056,
+	[6114] = 6111,
+	[6115] = 6109,
+	[6371] = 6355,
+	[6372] = 6367,
 }
 
 function onUse(player, item, fromPosition, target, toPosition)

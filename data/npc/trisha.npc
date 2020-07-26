@@ -73,7 +73,7 @@ Topic=5,"yes" -> "Okay, who knows, maybe you have a chance. A really small one t
 				"The last task is the hardest. You will need to bring me a claw from a mighty dragon king. ...",
 				"Did you understand everything I told you and are willing to handle this task?", Topic=6
 Topic=5 -> "Maybe next time."
-Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 hardened bones.", SetQuestValue(17558,1)
+Topic=6,"yes" -> "Excellent! Come back to me once you have collected 100 hardened bones.", SetQuestValue(17558,1), SetQuestValue(17594,1)
 Topic=6 -> "Maybe next time."
 
 "hardened","bone",QuestValue(17558)=1 -> Type=5925, Amount=100, "How are you faring with your mission? Have you collected all 100 hardened bones?", Topic=7

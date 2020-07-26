@@ -30,7 +30,7 @@ VANISH,!           -> "Daraman's blessings and good bye."
 "do","you","have" -> *
 "gem"             -> "You can buy and sell small diamonds, sapphires, rubies, emeralds, and amethysts."
 "pearl"           -> "There are white and black pearls you can buy or sell."
-"jewel"           -> "Currently you can purchase wedding rings, golden amulets, and ruby necklaces."
+"jewel"           -> "Currently you can purchase gold converting rings, wedding rings, golden amulets, and ruby necklaces."
 "talon"           -> "I don't trade or work with these magic gems. It's better you ask a mage about this."
 
 "wedding","ring"   -> Type=3004, Amount=1, Price=990,  "Do you want to buy a wedding ring for %P gold?", Topic=1
@@ -43,6 +43,8 @@ VANISH,!           -> "Daraman's blessings and good bye."
 "small","ruby"     -> Type=3030, Amount=1, Price=500,  "Do you want to buy a small ruby for %P gold?", Topic=1
 "small","emerald"  -> Type=3032, Amount=1, Price=500,  "Do you want to buy a small emerald for %P gold?", Topic=1
 "small","amethyst" -> Type=3033, Amount=1, Price=400,  "Do you want to buy a small amethyst for %P gold?", Topic=1
+"crystal","ring"  -> Type=3007, Amount=1, Price=250,  "Do you want to buy a crystal ring to convert gold for %P gold?", Topic=1
+"gold","convert"  -> *
 
 %1,1<%1,"wedding","ring"   -> Type=3004, Amount=%1, Price=990*%1,  "Do you want to buy %A wedding rings for %P gold?", Topic=1
 %1,1<%1,"golden","amulet"  -> Type=3013, Amount=%1, Price=6600*%1, "Do you want to buy %A golden amulets for %P gold?", Topic=1
@@ -54,6 +56,8 @@ VANISH,!           -> "Daraman's blessings and good bye."
 %1,1<%1,"small","rub"     -> Type=3030, Amount=%1, Price=500*%1,  "Do you want to buy %A small rubies for %P gold?", Topic=1
 %1,1<%1,"small","emerald"  -> Type=3032, Amount=%1, Price=500*%1,  "Do you want to buy %A small emeralds for %P gold?", Topic=1
 %1,1<%1,"small","amethyst" -> Type=3033, Amount=%1, Price=400*%1,  "Do you want to buy %A small amethysts for %P gold?", Topic=1
+%1,1<%1,"crystal","ring" -> Type=3007, Amount=%1, Price=250*%1, "Do you want to buy %A crystal rings to convert gold for %P gold?", Topic=1
+%1,1<%1,"gold","convert" -> *
 
 "sell","white","pearl"    -> Type=3026, Amount=1, Price=160, "Do you want to sell a white pearl for %P gold?", Topic=2
 "sell","black","pearl"    -> Type=3027, Amount=1, Price=280, "Do you want to sell a black pearl for %P gold?", Topic=2
@@ -90,7 +94,7 @@ Topic=2                                   -> "Maybe next time."
 Topic=3,"yes" -> "Listen, um... I was wanting a comb for a long time... not just any comb, but a mermaid's comb. ...",
 				"Do you think you could get one for me? I really would appreciate it.", Topic=4
 Topic=3 -> "Hmm, but next time."
-Topic=4,"yes" -> "Brilliant! I will wait for you to return with a mermaid's comb then.", SetQuestValue(17555,1)
+Topic=4,"yes" -> "Brilliant! I will wait for you to return with a mermaid's comb then.", SetQuestValue(17555,1), SetQuestValue(17594,1)
 Topic=4 -> "Hmm, but next time."
 
 "comb",QuestValue(17555)=1,female -> Type=5945, Amount=1, "Have you brought a mermaid's comb?", Topic=5

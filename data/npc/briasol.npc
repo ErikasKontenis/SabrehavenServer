@@ -51,7 +51,7 @@ VANISH,!                 -> "Asha Thrazi."
 "do","you","have" -> *
 "gem"             -> "You can buy and sell small diamonds, sapphires, rubies, emeralds, and amethysts."
 "pearl"           -> "I have white and black pearls for sale, but you also can sell me some."
-"jewel"           -> "You can purchase our fine dwarfish wares like wedding rings, golden amulets, and ruby necklaces."
+"jewel"           -> "You can purchase our fine dwarfish wares like gold converting rings, wedding rings, golden amulets, and ruby necklaces."
 "talon"           -> "We don't trade with them."
 
 "wedding","ring"   -> Type=3004, Amount=1, Price=990, "Do you want to buy a wedding ring for %P gold?", Topic=5
@@ -64,6 +64,8 @@ VANISH,!                 -> "Asha Thrazi."
 "small","ruby"     -> Type=3030, Amount=1, Price=500, "Do you want to buy a small ruby for %P gold?", Topic=5
 "small","emerald"  -> Type=3032, Amount=1, Price=500, "Do you want to buy a small emerald for %P gold?", Topic=5
 "small","amethyst" -> Type=3033, Amount=1, Price=400, "Do you want to buy a small amethyst for %P gold?", Topic=5
+"crystal","ring"  -> Type=3007, Amount=1, Price=250,  "Do you want to buy a crystal ring to convert gold for %P gold?", Topic=5
+"gold","convert"  -> *
 
 %1,1<%1,"wedding","ring"   -> Type=3004, Amount=%1, Price=990*%1, "Do you want to buy %A wedding rings for %P gold?", Topic=5
 %1,1<%1,"golden","amulet"  -> Type=3013, Amount=%1, Price=6600*%1, "Do you want to buy %A golden amulets for %P gold?", Topic=5
@@ -75,6 +77,8 @@ VANISH,!                 -> "Asha Thrazi."
 %1,1<%1,"small","rub"     -> Type=3030, Amount=%1, Price=500*%1, "Do you want to buy %A small rubies for %P gold?", Topic=5
 %1,1<%1,"small","emerald"  -> Type=3032, Amount=%1, Price=500*%1, "Do you want to buy %A small emeralds for %P gold?", Topic=5
 %1,1<%1,"small","amethyst" -> Type=3033, Amount=%1, Price=400*%1, "Do you want to buy %A small amethysts for %P gold?", Topic=5
+%1,1<%1,"crystal","ring" -> Type=3007, Amount=%1, Price=250*%1, "Do you want to buy %A crystal rings to convert gold for %P gold?", Topic=5
+%1,1<%1,"gold","convert" -> *
 
 "sell","white","pearl"    -> Type=3026, Amount=1, Price=160, "Do you want to sell a white pearl for %P gold?", Topic=6
 "sell","black","pearl"    -> Type=3027, Amount=1, Price=280, "Do you want to sell a black pearl for %P gold?", Topic=6
@@ -83,7 +87,6 @@ VANISH,!                 -> "Asha Thrazi."
 "sell","small","ruby"     -> Type=3030, Amount=1, Price=250, "Do you want to sell a small ruby for %P gold?", Topic=6
 "sell","small","emerald"  -> Type=3032, Amount=1, Price=250, "Do you want to sell a small emerald for %P gold?", Topic=6
 "sell","small","amethyst" -> Type=3033, Amount=1, Price=200, "Do you want to sell a small amethyst for %P gold?", Topic=6
-"sell","sabrehaven","talon" -> Type=5776, Amount=1, Price=8500, "Interesting item. Do you want to sell a Sabrehaven talon for %P gold?", Topic=6
 
 "sell",%1,1<%1,"white","pearl"    -> Type=3026, Amount=%1, Price=160*%1, "Do you want to sell %A white pearls for %P gold?", Topic=6
 "sell",%1,1<%1,"black","pearl"    -> Type=3027, Amount=%1, Price=280*%1, "Do you want to sell %A black pearls for %P gold?", Topic=6
@@ -92,7 +95,6 @@ VANISH,!                 -> "Asha Thrazi."
 "sell",%1,1<%1,"small","rub"     -> Type=3030, Amount=%1, Price=250*%1, "Do you want to sell %A small rubies for %P gold?", Topic=6
 "sell",%1,1<%1,"small","emerald"  -> Type=3032, Amount=%1, Price=250*%1, "Do you want to sell %A small emeralds for %P gold?", Topic=6
 "sell",%1,1<%1,"small","amethyst" -> Type=3033, Amount=%1, Price=200*%1, "Do you want to sell %A small amethysts for %P gold?", Topic=6
-"sell",%1,1<%1,"sabrehaven","talon" -> Type=5776, Amount=%1, Price=8500*%1, "Interesting items. Do you want to sell %A Sabrehaven talons for %P gold?", Topic=6
 
 Topic=5,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=5,"yes"                   -> "Come back, when you have enough money."

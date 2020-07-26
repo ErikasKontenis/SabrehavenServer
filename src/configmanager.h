@@ -48,6 +48,7 @@ class ConfigManager
 			STACK_CUMULATIVES,
 			BLOCK_HEIGHT,
 			DROP_ITEMS,
+			DISTANCE_WEAPONS_DROP_ON_GROUND,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
 		};
@@ -111,6 +112,7 @@ class ConfigManager
 			NEWBIE_TOWN,
 			NEWBIE_LEVEL_THRESHOLD,
 			MONEY_RATE,
+			CLIENT_VERSION,
 
 			LAST_INTEGER_CONFIG /* this must be the last one */
 		};

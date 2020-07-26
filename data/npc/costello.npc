@@ -70,7 +70,7 @@ Topic=4,!                             -> "Then be gone!", Idle
 
 "fugio",QuestValue(63)<1          -> "To be honest, I fear the omen in my dreams may be true. Perhaps Fugio is unable to see the danger down there. Perhaps ... you are willing to investigate this matter?", topic=1
 "alright",QuestValue(63)<1        -> *
-Topic=1,"yes"    -> "Thank you very much! From now on you may open the warded doors to the catacombs", SetQuestValue(63,1), SetQuestValue(64,1)
+Topic=1,"yes"    -> "Thank you very much! From now on you may open the warded doors to the catacombs", SetQuestValue(63,1), SetQuestValue(64,1), SetQuestValue(17584,1)
 
 # 63=forschen 64=questtür wg. eingang von unten
 
@@ -81,7 +81,7 @@ Topic=1          -> *
 "diary",QuestValue(219)=0       -> "Do you want me to inspect a diary?",Type=3212, Amount=1,topic=2
 "diary",QuestValue(219)>0       -> "Thank you again for handing me that diary."
 
-Topic=2,"yes",Count(Type)>=Amount  -> "By the gods! This is brother Fugio's handwriting and what I read is horrible indeed! You have done our order a great favour by giving this diary to me! Take this blessed Ankh. May it protect you in even your darkest hours.", Delete(Type), Create(3214),SetQuestValue(219,2)
+Topic=2,"yes",Count(Type)>=Amount  -> "By the gods! This is brother Fugio's handwriting and what I read is horrible indeed! You have done our order a great favour by giving this diary to me! Take this blessed Ankh. May it protect you in even your darkest hours.", Delete(Type), Create(3214),SetQuestValue(219,2),SetQuestValue(17584,2)
 Topic=2,"no"     -> "Uhm, as you wish."
 Topic=2          -> *
 

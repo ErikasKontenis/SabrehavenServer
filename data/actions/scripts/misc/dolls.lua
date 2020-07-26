@@ -18,6 +18,14 @@ local dolls = {
 		"Grooaaaaar*cough*",
 		"Aaa... CHOO!",
 		"You... will.... burn!!"
+	},
+	[6511] = {
+		"Ho ho ho",
+		"Jingle bells, jingle bells...",
+		"Have you been naughty?",
+		"Have you been nice?",
+		"Merry Christmas!",
+		"Can you stop squeezing me now... I'm starting to feel a little sick."
 	}
 }
 
@@ -41,9 +49,22 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		elseif random == 5 then
 			doTargetCombatHealth(0, player, COMBAT_PHYSICALDAMAGE, -1, -1, CONST_ME_EXPLOSIONHIT)
 		end
+		
+		if configManager.getNumber(configKeys.CLIENT_VERSION) >= 790 then
+			item:transform(6566)
+			item:decay()
+		end
 	elseif item.itemid == 5668 then
 		fromPosition:sendMagicEffect(CONST_ME_MAGIC_RED)
 		item:transform(item.itemid + 1)
+		item:decay()
+	elseif item.itemid == 5080 then
+		if configManager.getNumber(configKeys.CLIENT_VERSION) >= 790 then
+			item:transform(6568)
+			item:decay()
+		end
+	elseif item.itemid == 6511 then
+		item:transform(6567)
 		item:decay()
 	end
 

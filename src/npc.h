@@ -85,6 +85,9 @@ class Npc final : public Creature
 		int32_t getMasterRadius() const {
 			return masterRadius;
 		}
+		int32_t getClientVersion() const {
+			return clientVersion;
+		}
 		const Position& getMasterPos() const {
 			return masterPos;
 		}
@@ -141,6 +144,7 @@ class Npc final : public Creature
 		uint32_t lastTalkCreature;
 		uint32_t focusCreature;
 		uint32_t masterRadius;
+		uint16_t clientVersion = 0;
 
 		int64_t conversationStartTime;
 		int64_t conversationEndTime;

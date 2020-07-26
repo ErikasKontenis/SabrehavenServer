@@ -31,6 +31,7 @@
 #include "raids.h"
 #include "npc.h"
 #include "wildcardtree.h"
+#include "quests.h"
 
 class ServiceManager;
 class Creature;
@@ -125,6 +126,11 @@ class Game
 		void setWorldType(WorldType_t type);
 		WorldType_t getWorldType() const {
 			return worldType;
+		}
+
+		void setClientVersion(ClientVersion_t version);
+		ClientVersion_t getClientVersion() const {
+			return clientVersion;
 		}
 
 		Cylinder* internalGetCylinder(Player* player, const Position& pos) const;
@@ -382,6 +388,8 @@ class Game
 		void playerRequestRemoveVip(uint32_t playerId, uint32_t guid);
 		void playerTurn(uint32_t playerId, Direction dir);
 		void playerRequestOutfit(uint32_t playerId);
+		void playerShowQuestLog(uint32_t playerId);
+		void playerShowQuestLine(uint32_t playerId, uint16_t questId);
 		void playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type,
 		               const std::string& receiver, const std::string& text);
 		void playerChangeOutfit(uint32_t playerId, Outfit_t outfit);
@@ -427,6 +435,7 @@ class Game
 		void checkCreatureWalk(uint32_t creatureId);
 		void updateCreatureWalk(uint32_t creatureId);
 		void checkCreatureAttack(uint32_t creatureId);
+		void checkMonsterExtraAttack(uint32_t creatureId);
 		void checkCreatures(size_t index);
 		void checkLight();
 
@@ -488,6 +497,7 @@ class Game
 		Groups groups;
 		Map map;
 		Raids raids;
+		Quests quests;
 
 	protected:
 		bool playerSaySpell(Player* player, SpeakClasses type, const std::string& text);
@@ -533,6 +543,7 @@ class Game
 
 		GameState_t gameState = GAME_STATE_NORMAL;
 		WorldType_t worldType = WORLD_TYPE_PVP;
+		ClientVersion_t clientVersion;
 
 		LightState_t lightState = LIGHT_STATE_DAY;
 		uint8_t lightLevel = LIGHT_LEVEL_DAY;

@@ -1,0 +1,65 @@
+<monster name="Spectre" nameDescription="a spectre" race="undead" experience="2100" speed="115" manacost="0">
+	<health now="1350" max="1350" />
+	<look type="235" head="20" corpse="6347" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="65" attack="82" poison="300">
+		<attack name="drunk" interval="2000" chance="15" radius="4" target="0" duration="6000">
+			<attribute key="areaEffect" value="purplenote" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="15" range="7" min="-100" max="-400" />
+		<attack name="lifedrain" interval="2000" chance="20" range="7" min="-300" max="-550">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="35">
+		<defense name="healing" interval="2000" chance="25" min="100" max="250">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="healing" interval="2000" chance="10" min="370" max="700">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="60" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity drown="1" />
+		<immunity lifedrain="1" />
+		<immunity earth="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Revenge ... is so ... sweet!" />
+		<voice sentence="Life...force! Feed me your... lifeforce!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="330" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="330" /><!-- gold coin -->
+		<item id="3031" countmax="97" chance="330" /><!-- gold coin -->
+		<item id="3147" countmax="2" chance="303" /><!-- blank rune -->
+		<item id="3035" countmax="7" chance="38" /><!-- platinum coin -->
+		<item id="5944" chance="60" /><!-- soul orb -->
+		<item id="3049" chance="1" /><!-- stealth ring -->
+		<item id="3073" chance="98" /><!-- wand of cosmic energy -->
+		<item id="3260" chance="96" /><!-- lyre -->
+		<item id="3017" chance="8" /><!-- silver brooch -->
+		<item id="5909" chance="38" /><!-- white piece of cloth -->
+		<item id="6299" chance="2" /><!-- death ring -->
+		<item id="3017" chance="1" /><!-- shadow sceptre -->
+		<item id="3019" chance="1" /><!--demonbone amulet -->
+	</loot>
+</monster>

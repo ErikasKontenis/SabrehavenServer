@@ -24,10 +24,6 @@ static constexpr auto STATUS_SERVER_NAME = "Sabrehaven";
 static constexpr auto STATUS_SERVER_VERSION = "1.0";
 static constexpr auto STATUS_SERVER_DEVELOPERS = "OTLand community & Sabrehaven Developers Team";
 
-static constexpr auto CLIENT_VERSION_MIN = 780;
-static constexpr auto CLIENT_VERSION_MAX = 781;
-static constexpr auto CLIENT_VERSION_STR = "7.81";
-
 static constexpr auto AUTHENTICATOR_DIGITS = 6U;
 static constexpr auto AUTHENTICATOR_PERIOD = 30U;
 

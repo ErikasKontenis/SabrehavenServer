@@ -67,7 +67,7 @@ Topic=5,"yes" -> "Listen, the task is not that hard. Simply prove that you are w
 				"Bring me 100 of their eye patches, 100 of their peg legs and 100 of their hooks, in that order. ...",
 				"Have you understood everything I told you and are willing to handle this task?", Topic=6
 Topic=5 -> "Maybe another time."
-Topic=6,"yes" -> "Good! Come back to me once you have gathered 100 eye patches.", SetQuestValue(17567,1)
+Topic=6,"yes" -> "Good! Come back to me once you have gathered 100 eye patches.", SetQuestValue(17567,1), SetQuestValue(17594,1)
 Topic=6 -> "Maybe another time."
 
 "patch",QuestValue(17567)=1 -> Type=6098, Amount=100, "Have you gathered 100 eye patches?", Topic=7

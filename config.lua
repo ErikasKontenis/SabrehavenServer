@@ -8,6 +8,7 @@ removeChargesFromRunes = true
 stairJumpExhaustion = 0
 experienceByKillingPlayers = false
 expFromPlayersLevelRange = 75
+distanceWeaponsDropOnGround = false
 
 -- Skull System
 banLength = 30 * 24 * 60 * 60
@@ -37,6 +38,7 @@ replaceKickOnLogin = true
 maxPacketsPerSecond = -1
 autoStackCumulatives = false
 moneyRate = 1
+clientVersion = 792
 
 -- Deaths
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
@@ -68,8 +70,8 @@ mysqlSock = ""
 allowChangeOutfit = true
 freePremium = true
 kickIdlePlayerAfterMinutes = 15
-maxMessageBuffer = 4
-showMonsterLoot = false
+maxMessageBuffer = 8
+showMonsterLoot = true
 blockHeight = false
 dropItems = false
 

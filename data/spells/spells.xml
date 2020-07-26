@@ -4,6 +4,8 @@
 	<instant name="Force Strike" words="exori mort" lvl="16" mana="20" prem="1" cooldown="1000" range="3" direction="1" blockwalls="1" needlearn="0" script="spells/force strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
 	</instant>
 	<instant name="Fire Wave" words="exevo flam hur" lvl="18" mana="80" direction="1" needlearn="0" script="spells/fire wave.lua">
 		<vocation name="Sorcerer" />
@@ -27,10 +29,6 @@
 	</instant>
 	
 	<!-- Druid Spells -->
-	<instant name="Food" words="exevo pan" lvl="14" mana="120" soul="1" aggressive="0" needlearn="0" script="spells/food.lua">
-		<vocation name="Druid" />
-		<vocation name="Elder Druid" />
-	</instant>
 	<instant name="Heal Friend" words="exura sio" lvl="18" mana="70" prem="1" aggressive="0" blockwalls="1" needtarget="1" playernameparam="1" params="1" needlearn="0" script="spells/heal friend.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
@@ -58,6 +56,12 @@
 	</instant>
 	
 	<!-- Other -->
+	<instant name="Food" words="exevo pan" lvl="14" mana="120" soul="1" aggressive="0" needlearn="0" script="spells/food.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
+	</instant>
 	<instant name="Find Person" words="exiva" lvl="8" mana="20" aggressive="0" playernameparam="1" params="1" needlearn="0" function="searchPlayer">
 		<vocation name="Sorcerer" />
 		<vocation name="Druid" />
@@ -145,8 +149,10 @@
 	<instant name="Magic Shield" words="utamo vita" lvl="14" mana="50" aggressive="0" selftarget="1" needlearn="0" script="spells/magic shield.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Druid" />
+		<vocation name="Paladin" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
+		<vocation name="Royal Paladin" />
 	</instant>
 	<instant name="Flame Strike" words="exori flam" lvl="14" mana="20" prem="1" cooldown="1000" range="3" direction="1" blockwalls="1" needlearn="0" script="spells/flame strike.lua">
 		<vocation name="Sorcerer" />
@@ -207,6 +213,8 @@
 		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</instant>
 	
 	<!-- Attack Rune Spells -->
@@ -283,12 +291,16 @@
 		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</conjure>
 	<conjure name="Heavy Magic Missile" words="adori gran" lvl="25" mana="280" soul="2" reagentId="3147" conjureId="3198" conjureCount="5" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
 	</conjure>
 	<conjure name="Fire Field" words="adevo grav flam" lvl="15" mana="240" soul="1" reagentId="3147" conjureId="3188" conjureCount="3" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
@@ -299,6 +311,10 @@
 	<conjure name="Fireball" words="adori flam" lvl="17" mana="160" soul="2" prem="1" reagentId="3147" conjureId="3189" conjureCount="2" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
 	</conjure>
 	<conjure name="Envenom" words="adevo res pox" lvl="21" mana="400" soul="2" reagentId="3147" conjureId="3179" conjureCount="1" needlearn="0" function="conjureRune">
 		<vocation name="Druid" />
@@ -312,7 +328,9 @@
 	</conjure>
 	<conjure name="Great Fireball" words="adori gran flam" lvl="23" mana="480" soul="3" reagentId="3147" conjureId="3191" conjureCount="2" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
+		<vocation name="Elder Druid" />
 	</conjure>
 	<conjure name="Poison Bomb" words="adevo mas pox" lvl="25" mana="520" soul="2" prem="1" reagentId="3147" conjureId="3173" conjureCount="2" needlearn="0" function="conjureRune">
 		<vocation name="Druid" />

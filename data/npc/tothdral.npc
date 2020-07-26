@@ -7,9 +7,9 @@ Home = [33148,32867,6]
 Radius = 2
 
 Behaviour = {
-ADDRESS,"hello$",! -> "Be mourned, pilgrim in flesh."
-ADDRESS,"hi$",!    -> "Be mourned, pilgrim in flesh."
-ADDRESS,"be","mourned","pilgrim","flesh",!    -> "Be mourned pilgrim in flesh."
+ADDRESS,"hello$",! -> "I knew this day will come. True Gods are here soon!",Idle
+ADDRESS,"hi$",!    -> "I knew this day will come. True Gods are here soon!",Idle
+ADDRESS,"be","mourned","pilgrim","flesh",!    -> "Piligrim in flesh. False Gods were nothing but minor servants!",Idle
 ADDRESS,!          -> Idle
 
 BUSY,"hello$",!    -> "Mourned %N, know that I am busy.", Queue

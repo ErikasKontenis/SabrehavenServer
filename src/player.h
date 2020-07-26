@@ -273,7 +273,7 @@ class Player final : public Creature, public Cylinder
 
 		bool canOpenCorpse(uint32_t ownerId) const;
 
-		void addStorageValue(const uint32_t key, const int32_t value);
+		void addStorageValue(const uint32_t key, const int32_t value, const bool isLogin = false);
 		bool getStorageValue(const uint32_t key, int32_t& value) const;
 		void genReservedStorageRange();
 
@@ -854,6 +854,16 @@ class Player final : public Creature, public Cylinder
 				client->sendOpenPrivateChannel(receiver);
 			}
 		}
+		void sendQuestLog() {
+			if (client) {
+				client->sendQuestLog();
+			}
+		}
+		void sendQuestLine(const Quest* quest) {
+			if (client) {
+				client->sendQuestLine(quest);
+			}
+		}
 		void sendOutfitWindow() {
 			if (client) {
 				client->sendOutfitWindow();
@@ -1012,6 +1022,7 @@ class Player final : public Creature, public Cylinder
 		uint64_t experience = 0;
 		uint64_t manaSpent = 0;
 		uint64_t bankBalance = 0;
+		uint64_t lastQuestlogUpdate = 0;
 		int64_t lastAttack = 0;
 		int64_t lastFailedFollow = 0;
 		int64_t lastPing;

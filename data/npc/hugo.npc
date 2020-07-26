@@ -58,7 +58,7 @@ Topic=1,"yes" -> "Good! Listen, I need the following material - first, 20 pieces
 				"Secondly, 50 pieces of minotaur leather. Third, I need bat wings, maybe 10. And 30 heaven blossoms, the flowers elves cultivate. ...",
 				"Have you noted down everything and will help me gather the material?", Topic=2
 Topic=1 -> "Maybe another time."
-Topic=2,"yes" -> "Terrific! What are you waiting for?! Start right away to gather 20 pieces of brown cloth and come back once you have them!", SetQuestValue(17563,1)
+Topic=2,"yes" -> "Terrific! What are you waiting for?! Start right away to gather 20 pieces of brown cloth and come back once you have them!", SetQuestValue(17563,1), SetQuestValue(17594,1)
 Topic=2 -> "Maybe another time."
 
 "brown","cloth",QuestValue(17563)=1 -> Type=5913, Amount=20, "Ah! Have you brought 20 pieces of brown cloth?", Topic=3

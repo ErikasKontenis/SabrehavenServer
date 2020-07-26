@@ -9,11 +9,7 @@ function onGetFormulaValues(player, level, maglevel)
 	local variation = 40
 	
 	local formula = 3 * maglevel + (2 * level)
-	
-	if formula >= 101 then
-		formula = 100
-	end
-	
+
 	local min = (formula * (base - variation)) / 100
 	local max = (formula * (base + variation)) / 100
 	return min, max

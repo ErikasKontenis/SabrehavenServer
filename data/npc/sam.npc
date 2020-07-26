@@ -193,4 +193,20 @@ Topic=5,"no"                             -> "What a pity."
 "addon",QuestValue(17542)=6 -> "Sorry, Gregor told me to adorn only one helmet for you and you have already received one."
 "adorned","helmet",QuestValue(17542)=6 -> *
 
+"task",QuestValue(17650)=0,knight -> Amount=17651, "Young knight, I see you need decent weapon but those are too expensive, right. Hmm... I can't give you for free. ...",
+									"However, if you could kill 50 orcs to prove your trustworthy willingness I will reward you the weapon of your choose. Deal?", Topic=120
+									
+"task",QuestValue(17651)=50,QuestValue(17650)=1,knight -> "Well done, %N. Which type of weapon do you use the most: axe, sword or club?", Topic=121
+Topic=121,"axe" -> "Very well. I have some spare barbarian axe for you!", SetQuestValue(17650,2), SetQuestValue(17652,0), Type=3317, Amount=1, Create(Type)
+Topic=121,"sword" -> "Very well. I have some spare serpent sword for you!", SetQuestValue(17650,2), SetQuestValue(17652,0), Type=3297, Amount=1, Create(Type)
+Topic=121,"club" -> "Very well. I have some spare clerical mace for you!", SetQuestValue(17650,2), SetQuestValue(17652,0), Type=3311, Amount=1, Create(Type)
+Topic=121 -> "If you can't decide right now you can come later."
+							
+"task",QuestValue(17652)>0 -> "I see you are still in progress with your task."
+									
+Topic=120,"yes" -> "Very well young knight. Come back once you are done.", SetQuestValue(17652,Amount), SetQuestValue(Amount,0), SetQuestValue(17650,1)
+Topic=120 -> "As you wish."
+
+"task" -> "I don't have any tasks for you right now."
+
 }

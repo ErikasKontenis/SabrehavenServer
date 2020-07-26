@@ -93,7 +93,7 @@ Topic=4,"yes" -> "Well then, listen closely. First, you will have to prove that 
 				"Lastly, I will have our smith refine your helmet if you bring me royal steel, an especially noble metal. ...",
 				"Did you understand everything I told you and are willing to handle this task?", Topic=5
 Topic=4 -> "However."
-Topic=5,"yes" -> "Alright then. Come back to me once you have collected 100 perfect behemoth fangs.", SetQuestValue(17542,1)
+Topic=5,"yes" -> "Alright then. Come back to me once you have collected 100 perfect behemoth fangs.", SetQuestValue(17542,1), SetQuestValue(17594,1)
 Topic=5 -> "Maybe another time."
 
 "behemoth","fang",QuestValue(17542)=1 -> Type=5893, Amount=100, "Have you really managed to fulfill the task and brought me 100 perfect behemoth fangs?", Topic=6

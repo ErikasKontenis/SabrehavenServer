@@ -171,6 +171,30 @@ void mainLoader(int, char*[], ServiceManager* services)
 		return;
 	}
 
+	std::cout << ">> Checking client version... " << std::flush;
+	int32_t clientVersion = g_config.getNumber(ConfigManager::CLIENT_VERSION);
+	if (clientVersion == 780) {
+		g_game.setClientVersion(CLIENT_VERSION_780);
+	}
+	else if (clientVersion == 781) {
+		g_game.setClientVersion(CLIENT_VERSION_781);
+	}
+	else if (clientVersion == 790) {
+		g_game.setClientVersion(CLIENT_VERSION_790);
+	}
+	else if (clientVersion == 792) {
+		g_game.setClientVersion(CLIENT_VERSION_792);
+	}
+	else {
+		std::cout << std::endl;
+
+		std::ostringstream ss;
+		ss << "> ERROR: Unknown client version: " << g_config.getNumber(ConfigManager::CLIENT_VERSION) << ", valid client versions are: 780, 781, 790, 792.";
+		startupErrorMessage(ss.str());
+		return;
+	}
+	std::cout << clientVersion << std::endl;
+
 	std::cout << ">> Establishing database connection..." << std::flush;
 
 	Database* db = Database::getInstance();

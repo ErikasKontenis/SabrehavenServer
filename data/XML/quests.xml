@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<quests>
+	<quest name="Factions" startstorageid="278" startstoragevalue="1">
+		<mission name="The Marid and the Efreet - Djinn Greeting" storageid="278" startvalue="1" endvalue="1" ignoreendvalue="true">
+			<missionstate id="1" description="Melchior told you the word &quot;Djanni'hah&quot; which can be used to talk to Djinns. Be aware that once you become an ally of one Djinn race, you cannot switch sides anymore." />
+		</mission>
+		<mission name="The Marid and the Efreet - Marid Faction" storageid="278" startvalue="2" endvalue="2">
+			<missionstate id="2" description="You have joined the Marid. These friendly, blue Djinns are honest and fair allies. You have pledged eternal loyalty to King Gabel and may enter Asha'daramai freely. Djanni'hah!" />
+		</mission>
+		<mission name="The Marid and the Efreet - Efreet Faction" storageid="278" startvalue="3" endvalue="3">
+			<missionstate id="3" description="You have joined the Efreet. These evil, green Djinns are always up to mischievous pranks. You have pledged eternal loyalty to King Malor and may enter Mal'ouquah freely. Djanni'hah!" />
+		</mission>
+	</quest>
+	<quest name="Friends and Traders" startstorageid="17595" startstoragevalue="1">
+		<mission name="The Sweaty Cyclops" storageid="17500" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Big Ben, the cyclops in Ab'Dendriel sends you to bring him 3 bast skirts for his woman. After this he will help you to forge different steel." />
+			<missionstate id="2" description="Big Ben, the cyclops in Ab'Dendriel will help you to forge different steel now. Just ask him if you need something." />
+		</mission>
+		<mission name="The Mermaid Marina" storageid="17504" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Marina, the mermaid north of Sabrehaven sends you to bring her 50 honeycombs. After this she will help you create spool of yarn." />
+			<missionstate id="2" description="Marina, the mermaid north of Sabrehaven will help you to create a spool of yarn from 10 pieces of spider silk. Just ask her if you need something." />
+		</mission>
+		<mission name="The Blessed Stake" storageid="17576" startvalue="1" endvalue="12">
+			<missionstate id="1" description="Quentin told you about an old prayer which can bind holy energy to an object. Each of its ten lines has to be recited by a different priest though. Bring Quentin a wooden stake from Gamon to start." />
+			<missionstate id="2" description="You received Quentin's prayer: &quot;Light shall be near - and darkness afar&quot;. Now, bring your stake to Tibra in the Carlin church for the next line of the prayer." />
+			<missionstate id="3" description="You received Tibra's prayer: &quot;Hope may fill your heart - doubt shall be banned&quot;. Now, bring your stake to Maealil in the Elven settlement for the next line of the prayer." />
+			<missionstate id="4" description="You received Maealil's prayer: &quot;Peace may fill your soul - evil shall be cleansed&quot;. Now, bring your stake to Yberius in the Venore temple for the next line of the prayer." />
+			<missionstate id="5" description="You received Yberius' prayer: &quot;Protection will be granted - from dangers at hand&quot;. Now, bring your stake to Isimov in the dwarven settlement for the next line of the prayer." />
+			<missionstate id="6" description="You received Isimov's prayer: &quot;Unclean spirits shall be repelled&quot;. Now, bring your stake to Amanda in Edron for the next line of the prayer." />
+			<missionstate id="7" description="You received Amanda's prayer: &quot;Wicked curses shall be broken&quot;. Now, bring your stake to Kasmir in Darashia for the next line of the prayer." />
+			<missionstate id="8" description="You received Kasmir's prayer: &quot;Let there be honour and humility&quot;. Now, bring your stake to Rahkem in Ankrahmun for the next line of the prayer." />
+			<missionstate id="9" description="You received Rahkem's prayer: &quot;Let there be power and compassion&quot;. Now, bring your stake to Brewster in Port Hope for the next line of the prayer." />
+			<missionstate id="10" description="You received Brewster's prayer: &quot;Your hand shall be guided - your feet shall walk in harmony&quot;. Now, bring your stake to Tyrias in Liberty Bay for the next line of the prayer." />
+			<missionstate id="11" description="You received Tyrias' prayer: &quot;Your mind shall be a vessel for joy, light and wisdom&quot;. He wasn't exactly happy though and said that if you need some mumbo jumbo again, you should rather go to Chondur." />
+			<missionstate id="12" description="Chondur was surprised to hear that you had to travel through all of Tibia to have your wooden stake blessed. He offered you help with the blessing if you should need one again in the future." />
+		</mission>
+	</quest>
+	<quest name="Outfit and Addon Quests" startstorageid="17594" startstoragevalue="1">
+		<mission name="Assassin Addon: The Red Death" storageid="17562" startvalue="18" endvalue="19" ignoreendvalue="true">
+			<missionstate id="18" description="Atrad wants only two items from you for his old katana: a behemoth claw and a nose ring, both at the same time. He also told you about a &quot;horned fox&quot; who wears such as nose ring" />
+			<missionstate id="19" description="You have received the second assassin addon." />
+		</mission>
+		<mission name="Citizen Addon: Backpack" storageid="18502" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Collect 100 pieces of minotaur leather and bring it to either Amber or Lubo to have them make a backpack addon for you." />
+			<missionstate id="2" description="You delivered 100 pieces of minotaur leather. Some time is needed to make the backpack for you though. You should check back later and ask either Amber or Lubo for your backpack." />
+			<missionstate id="3" description="You got the outfit!" />
+		</mission>
+		<mission name="Citizen Addon: Feather Hat" storageid="18501" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Collect a legion helmet, 100 chicken feathers and 50 honeycombs and bring them to either Hanna or Norma to have them make a feather hat addon for you." />
+			<missionstate id="2" description="You got the outfit!" />
+		</mission>
+		<mission name="Barbarian Outfit Quest" storageid="17532" startvalue="1" endvalue="17">
+			<missionstate id="1" description="Bron told you that his brother Ajax in Northport needs to learn that violence is not always the answer. He told you to make his brother angry, then show him that all he needed to do was say 'please' to fix the situation." />
+			<missionstate id="2" description="You will need to leave Ajax alone for an hour, then return to him." />
+			<missionstate id="3" description="Ajax told you that he has thought about it, and that violence is not always good. Return to Bron now, and tell him that Ajax said fist not always good" />
+			<missionstate id="4" description="Bron mentioned that he has someone in his house that he doesn't like, and he wants you to get advice from Ajax about how to handle the situation. Go back to Ajax and ask him about Gelagos" />
+			<missionstate id="5" description="Ajax told you his brother needs Fighting Spirit, and that you should get some from a Djinn and give it to him." />
+			<missionstate id="6" description="You brought Bron the Fighting Spirit. He acted a little strange." />
+			<missionstate id="7" description="In order to make a shirt as a present for Ajax, Bron wants you to bring him 50 Pieces of Red Cloth and 50 Pieces of Green Cloth." />
+			<missionstate id="8" description="Bron wants you to bring him 10 Spider Silk Yarn." />
+			<missionstate id="9" description="Bron wants you to bring him the Warrior's Sweat." />
+			<missionstate id="10" description="You brought him all required items! accept it!" />
+			<missionstate id="11" description="You got the Barbarian Wig Addon! Bring now the present from Bron to Ajax!" />
+			<missionstate id="12" description="Bring Ajax in Northport 100 Iron Ore." />
+			<missionstate id="13" description="Bring Ajax 1 Huge Chunk of Crude Iron." />
+			<missionstate id="14" description="Bring Ajax 50 Perfect Behemoth Fang" />
+			<missionstate id="15" description="Bring Ajax 50 Lizard Leather" />
+			<missionstate id="16" description="Come later in 2 hours and ask Ajax for the axe." />
+			<missionstate id="17" description="You got the Axe Addon!" />
+		</mission>
+		<mission name="Beggar Outfit: The Newest Fashion" storageid="17563" startvalue="1" endvalue="6">
+			<missionstate id="1" description="Your current task is to bring Hugo 20 pieces of brown cloth, like the worn and ragged ghoul clothing." />
+			<missionstate id="2" description="Your current task is to bring 50 pieces of minotaur leather to Hugo. If you don't know how to get leather, you should ask Kalvin." />
+			<missionstate id="3" description="Your current task is to bring 10 bat wings to Hugo." />
+			<missionstate id="4" description="Your current task is to bring 30 heaven blossoms to Hugo. Elves are said to cultivate these flowers." />
+			<missionstate id="5" description="You brought all items required for the &quot;poor man's look&quot; to Hugo. He told you to come back to him after a whole day has passed, then the outfit should be finished." />
+			<missionstate id="6" description="You got the outfit!" />
+		</mission>
+		<mission name="Druid Outfit Quest" storageid="17535" startvalue="1" endvalue="10">
+			<missionstate id="1" description="Ceiron sends you to collect a sample of the blooming Griffinclaw." />
+			<missionstate id="2" description="Ask Ceiron for task." />
+			<missionstate id="3" description="Take Ceirons waterskin and try to fill it with water from this special trickle. In the mountains between Ankrahmun and Tiquanda are two hydra lairs." />
+			<missionstate id="4" description="Ask Ceiron for task." />
+			<missionstate id="5" description="Bring Ceiron 100 ounces of demon dust." />
+			<missionstate id="6" description="Ask Ceiron for task." />
+			<missionstate id="7" description="The last mission is to find and retrieve Ceiron's Wolf Tooth Chain lost inside the Orc Fortress." />
+			<missionstate id="8" description="Ask Ceiron for Faolan." />
+			<missionstate id="9" description="Head over to Cormaya, find A Majestic Warwolf's Cave and ask her about an addon." />
+			<missionstate id="10" description="You got the Outfit!" />
+		</mission>
+		<mission name="Hunter Outfit Quest" storageid="17539" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Elane sends you to Liberty Bay to bring her the Crossbow from the Cult." />
+			<missionstate id="2" description="Bring Elane 100 pieces of lizard leather and 100 pieces of red dragon leather." />
+			<missionstate id="3" description="Bring Elane 5 enchanted chicken wings." />
+			<missionstate id="4" description="Bring Elane one piece of royal steel, draconian steel and hell steel each." />
+			<missionstate id="5" description="You got the Outfit!" />
+		</mission>
+		<mission name="Knight Addon: Helmet" storageid="17542" startvalue="1" endvalue="6">
+			<missionstate id="1" description="Your current task is to bring 100 perfect behemoth fangs to Gregor in Thais." />
+			<missionstate id="2" description="Your current task is to retrieve the helmet of Ramsay the Reckless from Banuta. These pesky apes steal everything they can get their dirty hands on." />
+			<missionstate id="3" description="Your current task is to obtain a flask of warrior's sweat, which can be magicially extracted from headgear worn by a true warrior, but only in small amounts. Djinns are said to be good at this." />
+			<missionstate id="4" description="Your current task is to bring royal steel to Gregor in Thais. Royal steel can only be refined by very skilled smiths." />
+			<missionstate id="5" description="You have delivered all items required for the helmet addon. Go talk to Sam and tell him Gregor sent you. He will be glad to refine your helmet." />
+			<missionstate id="6" description="You got the Outfit!" />
+		</mission>
+		<mission name="Mage &amp; Summoner Addon: Wand" storageid="17549" startvalue="1" endvalue="7">
+			<missionstate id="1" description="You found Angelina in a Prison. She told you a secret: Lynda in Thais can create a blessed wand. Greet her from Angelina, maybe she will aid you." />
+			<missionstate id="2" description="Lynda send you to bring her a sample of all five wands and five rods (Snakebite, Moonlight, Volcanic, Quagmire, Tempest, Vortex, Dragonbreath, Plague, Cosmic Energy and Inferno)" />
+			<missionstate id="3" description="Bring Lynda 10 ounces of magic sulphur" />
+			<missionstate id="4" description="Bring Lynda the Necromancer's soul stone" />
+			<missionstate id="5" description="Bring Lynda 20 ankhs now to complete the ritual." />
+			<missionstate id="6" description="Lynda is currently preparing a ritual for you. Be patient and don't forget to check on it later!" />
+			<missionstate id="7" description="You got the Outfit!" />
+		</mission>
+		<mission name="Mage &amp; Summoner Addon: Fluid Belt" storageid="17546" startvalue="1" endvalue="1">
+			<missionstate id="1" description="You got the Outfit!" />
+		</mission>
+		<mission name="Mage Tiara and Summoner Cloak" storageid="17547" startvalue="1" endvalue="12">
+			<missionstate id="1" description="Your current task is to bring 70 bat wings to Myra in Port Hope." />
+			<missionstate id="2" description="Your current task is to bring 20 pieces of red cloth to Myra in Port Hope. These are said to make an excellent material for a cape." />
+			<missionstate id="3" description="Your current task is to bring 40 pieces of ape fur to Myra in Port Hope." />
+			<missionstate id="4" description="Your current task is to bring 35 holy orchids to Myra in Port Hope. Elves are said to cultivate these." />
+			<missionstate id="5" description="Your current task is to bring 10 spools of spider silk yarn to Myra in Port Hope. Only very large spiders produce silk which is strong enough to be yarned by mermaids." />
+			<missionstate id="6" description="Your current task is to bring 60 lizard scales to Myra in Port Hope. Lizard scales are great for all sort of magical potions." />
+			<missionstate id="7" description="Your current task is to bring 40 red dragon scales to Myra in Port Hope." />
+			<missionstate id="8" description="Your current task is to bring 15 ounces of magic sulphur to Myra in Port Hope. Djinns are said to be good at extracting magic sulphur." />
+			<missionstate id="9" description="Your current task is to bring 30 ounces of vampire dusts to Myra in Port Hope. You might need to ask a priest for a special blessed stake to turn vampires into dust." />
+			<missionstate id="10" description="You finally collected all of the items which Myra asked for. You should ask about reward from her." />
+			<missionstate id="11" description="Go talk to Zoltan in Edron and tell him that Myra nominated you for an award." />
+			<missionstate id="12" description="You got the Outfit!" />
+		</mission>
+		<mission name="Warrior Addon: Shoulder Spike" storageid="17558" startvalue="1" endvalue="7">
+			<missionstate id="1" description="Your current task is to bring 100 hardened bones to Trisha in Carlin. They can sometimes be extracted from creatures that consist only of - you guessed it, bones. You need an obsidian knife though." />
+			<missionstate id="2" description="Your current task is to bring 100 turtle shells to Trisha in Carlin. Turtles can be found on some idyllic islands which have recently been discovered." />
+			<missionstate id="3" description="Your current task is to show that you have fighting spirit. Maybe someone grants you a wish...?" />
+			<missionstate id="4" description="Your current task is to obtain a dragon claw. You cannot get this special claw from any common dragons in Tibia. It requires a special one, a lord among the lords." />
+			<missionstate id="5" description="You have delivered all items requried for the shoulder spike addon. Go talk to Cornelia and tell her Trisha sent you. She will be glad to create the should spikes." />
+			<missionstate id="6" description="Cornelia is currently creating the should spikes for you. Be patient and don't forget to check on it later!" />
+			<missionstate id="7" description="You have obtained the shoulder spike addon." />
+		</mission>
+		<mission name="Wizard Outfits Quest" storageid="17561" startvalue="1" endvalue="7">
+			<missionstate id="1" description="Bring Lugri the Medusa shield!" />
+			<missionstate id="2" description="Bring Lugri the Dragon Scale Mail!" />
+			<missionstate id="3" description="Bring Lugri the Crown Legs!" />
+			<missionstate id="4" description="Bring Lugri the Ring of the Sky!" />
+			<missionstate id="5" description="You got the first Outfit Addon!" />
+			<missionstate id="6" description="Bring The Queen Of The Banshees 50 Holy Orchids and she will reward you with the second addon." />
+			<missionstate id="7" description="You got the second Outfit Addon!" />
+		</mission>
+		<mission name="Pirate Outfit Quest (Sabre)" storageid="17567" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Bring Duncan 100 Eye Patches from pirates!" />
+			<missionstate id="2" description="Bring Duncan 100 peg legs from pirates!" />
+			<missionstate id="3" description="Bring Duncan 100 pirate hooks from pirates!" />
+			<missionstate id="4" description="Go to Morgan and tell him this codeword: 'firebird' to get the outfit addon!" />
+			<missionstate id="5" description="You got the Outfit Addon!" />
+		</mission>
+		<mission name="Oriental Addon: Hipwear" storageid="17555" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Your current task is to find a mermaid's comb. If you have ever encountered a mermaid, you should ask her. Bring the comb to Habdel if you are male or to Ishina if you are female." />
+			<missionstate id="2" description="You have received the first oriental addon." />
+		</mission>
+		<mission name="Oriental Addon: Headgear" storageid="17557" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Your current task is to bring 100 pieces of ape fur to Razan if you are male, or to Miraia if you are female." />
+			<missionstate id="2" description="Your current task is to bring 100 fish fins to Razan if you are male, or to Miraia if you are female." />
+			<missionstate id="3" description="Your current task is to bring 2 enchanted chicken wings to Razan if you are male, or to Miraia if you are female." />
+			<missionstate id="4" description="Your current task is to bring 100 pieces of blue cloth to Razan if you are male, or to Miraia if you are female." />
+			<missionstate id="5" description="You have received the second oriental addon." />
+		</mission>
+		<mission name="Shaman Addon: Staff" storageid="17570" startvalue="2" endvalue="3" ignoreendvalue="true">
+			<missionstate id="2" description="Try to find a monster which sometimes lurks in the Tiquandian jungle as the revenge of the jungle against mankind. Bring the rare root it carries to Chondur as well as 5 voodoo dolls." />
+			<missionstate id="3" description="You have received the first shaman addon." />
+		</mission>
+		<mission name="Shaman Addon: Mask" storageid="17570" startvalue="4" endvalue="5" ignoreendvalue="true">
+			<missionstate id="4" description="Your current task is to collect 5 tribal masks from the dworcs and 5 banana staves from the apes. Bring them to Chondur to earn your shamanic mask." />
+			<missionstate id="5" description="You have received the second shaman addon." />
+		</mission>
+	</quest>
+	<quest name="Sam's Old Backpack" startstorageid="289" startstoragevalue="1">
+		<mission name="Old And Used Backpack Quest" storageid="289" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Sam sends you to see Kroox in Kazordoon to get a special dwarven armor. Just tell him, his old buddy Sam is sending you." />
+			<missionstate id="2" description="You have the permission to retrive a dwarven armor from the mines. The problem is, some giant spiders made the tunnels where the storage is their new home." />
+		</mission>
+		<mission name="Dwarven Armor Quest" storageid="290" startvalue="1" endvalue="1" description="You have completed Dwarven Armor Quest!" />
+	</quest>
+	<quest name="The Ancient Tombs" startstorageid="267" startstoragevalue="1">
+		<mission name="Omruc's Treasure" storageid="267" startvalue="1" endvalue="1" description="You defeated Omruc and received a helmet adornment" />
+		<mission name="Thalas' Treasure" storageid="262" startvalue="1" endvalue="1" description="You defeated Thalas and received a Gem Holder" />
+		<mission name="Diphtrah's Treasure" storageid="265" startvalue="1" endvalue="1" description="You defeated Dipthrah and received a Damaged Helmet" />
+		<mission name="Mahrdis' Treasure" storageid="261" startvalue="1" endvalue="1" description="You defeated Mahrdis and received a Helmet Ornament" />
+		<mission name="Vashresamun's Treasure" storageid="264" startvalue="1" endvalue="1" description="You solved the musical riddles of Vashresamun's Tomb and received a left horn." />
+		<mission name="Morguthis' Treasure" storageid="263" startvalue="1" endvalue="1" description="You defeated Morguthis and received a Right Horn" />
+		<mission name="Rahemos' Treasure" storageid="266" startvalue="1" endvalue="1" description="You defeated Rahemos and received a Helmet Piece" />
+	</quest>
+	<quest name="The Ape City" startstorageid="293" startstoragevalue="1">
+		<mission name="Hairycles' Missions" storageid="293" startvalue="1" endvalue="18">
+			<missionstate id="1" description="Find whisper moss in the dworc settlement south of Port Hope and bring it back to Hairycles." />
+			<missionstate id="2" description="You have completed the first mission. Hairycles was happy about the whisper moss you gave to him. He might have another mission for you." />
+			<missionstate id="3" description="Hairycles asked you to bring him cough syrup from a human settlement. A healer might know more about this medicine." />
+			<missionstate id="4" description="You have completed the second mission. Hairycles was happy about the cough syrup you gave to him. He might have another mission for you." />
+			<missionstate id="5" description="Hairycles asked you to bring him a magical scroll from the lizard settlement Chor." />
+			<missionstate id="6" description="You have completed the third mission. Hairycles appreciated that you brought the scroll to him and will try to read it. Maybe he has another mission for you later." />
+			<missionstate id="7" description="Since Hairycles was not able to read the scroll you brought him, he asked you dig for a tomb in the desert to the east. Proceed in this tomb until you find an obelisk between red stones and read it." />
+			<missionstate id="8" description="You have completed the fourth mission. Hairycles read your mind and can now translate the lizard scroll. He might have another mission for you." />
+			<missionstate id="9" description="Hairycles wants to create a life charm for the ape people. He needs a hydra egg since it has strong regenerating powers." />
+			<missionstate id="10" description="You have completed the fifth mission. Hairycles attempts to create a might charm for the protection of the ape people. He might have another mission for you later." />
+			<missionstate id="11" description="Hairycles need a witches' cap mushroom which is supposed to be hidden in a dungeon deep under Fibula." />
+			<missionstate id="12" description="You have completed the sixth mission. You brought the witches' cap mushroom back to Hairycles. He might have another mission for you." />
+			<missionstate id="13" description="Hairycles is worried about an ape cult which drinks some strange fluid that the lizards left behind. Go to the old lizard temple under Banuta and destroy three of the casks there with a crowbar." />
+			<missionstate id="14" description="You have completed the seventh mission. You found the old lizard ruins under Banuta and destroyed three of the casks with snake blood. Hairycles might have another mission for you." />
+			<missionstate id="15" description="The apes now need a symbol of their faith. Speak with the blind prophet in a cave to the northeast and go to the Forbidden Land. Find a hair of the giant, holy ape Bong and bring it back." />
+			<missionstate id="16" description="You completed the eighth mission. Hairycles gladly accepted the hair of the ape god which you brought him. He told you to have one final mission for you." />
+			<missionstate id="17" description="Go into the deepest catacombs under Banuta and destroy the monument of the snake god with the hammer that Hairycles gave to you." />
+			<missionstate id="18" description="You successfully destroyed the monument of the snake god. As reward, you can buy sacred statues from Hairycles. If you haven't done so yet, you should also ask him for a shaman outfit." />
+		</mission>
+	</quest>
+	<quest name="The Djinn War - Efreet Faction" startstorageid="286" startstoragevalue="1">
+		<mission name="Efreet Mission 1: The Supply Thief" storageid="286" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Travel to Thais and keep your eyes open for something that might give you a clue on the supply thief." />
+			<missionstate id="2" description="You have found the potential supply thief - Partos in Thais seemed very suspicious. Baa'leal might be interested in this matter." />
+			<missionstate id="3" description="You have reported the case to Baa'leal. He seemed very satisfied and told you that Alesar might have another mission for you." />
+		</mission>
+		<mission name="Efreet Mission 2: The Tear of Daraman" storageid="287" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Sneak into Ashta'daramai and steal a &quot;Tear of Daraman&quot;. For more information about these gems visit the Efreet library." />
+			<missionstate id="2" description="You have successfully managed to steal a Tear of Daraman from Ashta'daramai. Bring it to Alesar." />
+			<missionstate id="3" description="You have delivered Daraman's Tear. Alesar seemed very satisfied and told you that Malor himself might have another mission for you." />
+		</mission>
+		<mission name="Efreet Mission 3: The Sleeping Lamp" storageid="288" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Malor asked you to find Fa'hradin's sleeping lamp in the orc fortress at Ulderek's Rock. Then, sneak into Ashta'daramai and exchange Gabel's sleeping lamp with Fa'hradin's lamp." />
+			<missionstate id="2" description="You successfully exchanged the lamps. Malor will be happy to hear about this." />
+			<missionstate id="3" description="The Efreet are very satisfied with your help. King Malor allowed you to trade with Yaman and Alesar." />
+		</mission>
+	</quest>
+	<quest name="The Djinn War - Marid Faction" startstorageid="280" startstoragevalue="1">
+		<mission name="Marid Mission 1: The Dwarven Kitchen" storageid="280" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Bring a cookbook of the dwarven kitchen to Bo'ques." />
+			<missionstate id="2" description="You have delivered the cookbook. Bo'ques seemed very satisfied and told you that Fa'hradin might have another mission for you." />
+		</mission>
+		<mission name="Marid Mission 2: The Spyreport" storageid="281" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Fa'hradin asked you to sneak into the Efreet fortress Mal'ouqhah and find their undercover spy. The codeword is PIEDPIPER." />
+			<missionstate id="2" description="You have delivered the spyreport. Fa'hradin seemed impressed and told you that Gabel himself might have another mission for you." />
+		</mission>
+		<mission name="Rata'Mari and the Cheese" storageid="282" startvalue="1" endvalue="2">
+			<missionstate id="1" description="You have promised Rata'Mari cheese. Once you deliver some to him, he will hand over his spyreport." />
+			<missionstate id="2" description="You got Rata'Mari's spyreport. He seems to be quite happy with the cheese you brought him." />
+		</mission>
+		<mission name="Marid Mission 3: The Sleeping Lamp" storageid="283" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Gabel asked you to find Fa'hradin's sleeping lamp in the orc fortress at Ulderek's Rock. Then, sneak into Mal'ouqhah and exchange Malor's sleeping lamp with Fa'hradin's lamp." />
+			<missionstate id="2" description="You successfully exchanged the lamps. Gabel will be happy to hear about this." />
+			<missionstate id="3" description="The Marid deeply appreciate your help. King Gabel allowed you to trade with Haroun and Nah'bob." />
+		</mission>
+	</quest>
+	<quest name="The Postman Missions" startstorageid="227" startstoragevalue="1">
+		<mission name="Mission 1 - Check Postal Routes" storageid="227" startvalue="1" endvalue="6">
+			<missionstate id="1" description="Kevin wants you to travel with Captain Bluebear to Carlin." />
+			<missionstate id="2" description="Kevin wants you to travel with Uzon in Femor Hills to Edron." />
+			<missionstate id="3" description="Kevin wants you to travel with Captain Seahorse to Venore." />
+			<missionstate id="4" description="Kevin wants you to travel with Brodrosch to Cormaya" />
+			<missionstate id="5" description="You have checked the Postal Routes, report back to Kevin!" />
+			<missionstate id="6" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 2 - Fix Mailbox" storageid="228" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to fix one of their Mailboxes located on Folda with a crowbar." />
+			<missionstate id="2" description="You have fixed the mailbox, report back to Kevin!" />
+			<missionstate id="3" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 3 - Bill Delivery" storageid="229" startvalue="1" endvalue="4">
+			<missionstate id="1" description="Kevin wants you to deliver a bill to the stage magician David Brassacres. He's hiding from his creditors somewhere in Venore." />
+			<missionstate id="2" description="You have found the David Brassacres, deliver him the bill!" />
+			<missionstate id="3" description="You have delivered the bill to the stage magician David Brassacres, report back to Kevin!" />
+			<missionstate id="4" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 4 - Aggressive Dogs" storageid="230" startvalue="1" endvalue="21">
+			<missionstate id="1" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="2" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="3" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="4" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="5" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="6" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="7" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="8" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="9" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="10" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="11" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="12" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="13" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="14" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="15" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="16" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="17" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="18" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="19" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="20" description="Kevin has asked you to deliver 20 Bones to him." />
+			<missionstate id="21" description="You have delivered 20 Bones to Kevin." />
+		</mission>
+		<mission name="Mission 5 - Present Delivery" storageid="231" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin has asked you to retrieve the present behind the door on the lower right side of his room and deliver it to Dermot in Fibula." />
+			<missionstate id="2" description="You have delivered the present to Dermot, report back to Kevin!" />
+			<missionstate id="3" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 6 - New Uniforms" storageid="233" startvalue="1" endvalue="11">
+			<missionstate id="1" description="Kevin has asked you to travel to Venore and negotiate with Hugo for new uniforms." />
+			<missionstate id="2" description="Hugo said that his dog ate the last dress pattern they used and he has no clue where Kevin Postner got it from, go ask Kevin." />
+			<missionstate id="3" description="Kevin wants you to ask the great Technomancer Talphion in Kazordoon for the technical details." />
+			<missionstate id="4" description="Talphion will send a copy to Kevin, report back to Kevin." />
+			<missionstate id="5" description="Kevin wants you tk ask Queen Eloise of Carlin for the perfect colours." />
+			<missionstate id="6" description="Queen Eloise said she will send some color samples via mail to Kevin, report back to Kevin." />
+			<missionstate id="7" description="Kevin has asked you to go to Noodles and find out what he dislikes the most: mouldy cheese, a piece of fur or a banana skin." />
+			<missionstate id="8" description="You have found out what Noodles dislike! Report back to Kevin." />
+			<missionstate id="9" description="Kevin wants you to tell Hugo that they order those uniforms." />
+			<missionstate id="10" description="Hugo has agreed to make the uniforms, report back to Kevin!" />
+			<missionstate id="11" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 7 - Measurements" storageid="234" startvalue="1" endvalue="8">
+			<missionstate id="1" description="Kevin wants you to bring him the measurements of Ben, Lokur, Dove, Liane, Chrystal and Olrik." />
+			<missionstate id="2" description="You have received the measurements from 1 of 6 postofficers." />
+			<missionstate id="3" description="You have received the measurements from 2 of 6 postofficers." />
+			<missionstate id="4" description="You have received the measurements from 3 of 6 postofficers." />
+			<missionstate id="5" description="You have received the measurements from 4 of 6 postofficers." />
+			<missionstate id="6" description="You have received the measurements from 5 of 6 postofficers." />
+			<missionstate id="7" description="You have received all measurements, report back to Kevin!" />
+			<missionstate id="8" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 8 - Missing Courier" storageid="242" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Kevin wants you to find the missing courier Waldo or at least his posthorn." />
+			<missionstate id="2" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 9 - Dear Santa" storageid="244" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to deliver som letters to Santa Claus on Vega." />
+			<missionstate id="2" description="You have delivered the letters to Santa Claus on Vega." />
+			<missionstate id="3" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Mission 10 - Mintwallin" storageid="245" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Kevin wants you to deliver a letter  to Markwin, king of Mintwallin from his mother." />
+			<missionstate id="2" description="You have delivered the letter to Markwin." />
+			<missionstate id="3" description="You have reported back that you have completed the mission." />
+		</mission>
+		<mission name="Postman Rank" storageid="250" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Assistant Postman" />
+			<missionstate id="2" description="Postman" />
+			<missionstate id="3" description="Grand Postman" />
+			<missionstate id="4" description="Grand Postman for Special Operations" />
+			<missionstate id="5" description="Arch Postman" />
+		</mission>
+	</quest>
+	<quest name="The Shattered Isles" startstorageid="17593" startstoragevalue="1">
+		<mission name="A Djinn in Love" storageid="17502" startvalue="9" endvalue="13" ignoreendvalue="true">
+			<missionstate id="9" description="You need to return to Marina and ask her for a date with Ocelus." />
+			<missionstate id="10" description="You need to return to Ocelus with the bad news." />
+			<missionstate id="11" description="Ocelus told you to get a poem for him, if you didn't buy one already, head to Ab'Dendriel and buy a Love Poem from Elvith." />
+			<missionstate id="12" description="You need to go recite the poem to Marina and impress her with the Djinn's romantic and poetic abilities." />
+			<missionstate id="13" description="After reciting the poem to Marina, she decided to date Ocelus and release Ray Striker from her spell." />
+		</mission>
+		<mission name="A Poem for the Mermaid" storageid="17502" startvalue="7" endvalue="9" ignoreendvalue="true">
+			<missionstate id="7" description="You need to find the man-stealing mermaid and try to break her spell over poor Raymond, the mermaid Marina is near the northern coast of the island." />
+			<missionstate id="8" description="You discovered that she does in fact have a spell on him, and will not release him unless someone better comes along." />
+			<missionstate id="9" description="You are a true master in reciting love poems now. No mermaid will be able to resist if you ask for a date!" />
+		</mission>
+		<mission name="Access to Goroma" storageid="17501" startvalue="2" endvalue="2" description="After helping Jack Fate to collect the 30 woodpieces, Jack Fate in Liberty Bay will bring you to Goroma." />
+		<mission name="Access to Laguna Island" storageid="17502" startvalue="13" endvalue="13" ignoreendvalue="true" description="After arranging a date for Marina and Ocelus, you are allowed to use Marina's sea turtles. They will bring you to the idyllic Laguna Islands." />
+		<mission name="Access to Meriana" storageid="17502" startvalue="6" endvalue="6" ignoreendvalue="true" description="After earning the trust of the governor's daughter Eleonore, Captain Waverider in Liberty Bay will bring you to Meriana if you tell him the secret codeword 'peg leg'." />
+		<mission name="The Counterspell" storageid="17509" startvalue="2" endvalue="5">
+			<missionstate id="2" description="You have begun Chondur's ritual. Bring him a fresh dead chicken so that he can begin to create a counterspell which will allow you to pass the magical barrier on Goroma." />
+			<missionstate id="3" description="You have begun Chondur's ritual. Bring him a fresh dead rat so that he can continue creating a counterspell which will allow you to pass the magical barrier on Goroma." />
+			<missionstate id="4" description="You have begun Chondur's ritual. Bring him a fresh dead black sheep so that he can complete his counterspell which will allow you to pass the magical barrier on Goroma." />
+			<missionstate id="5" description="You may pass the energy barrier on Goroma. The counterspell Chondur created for you with his ritual will allow you to withstand the evil magic of the cultist." />
+		</mission>
+		<mission name="The Errand" storageid="17502" startvalue="3" endvalue="4" ignoreendvalue="true">
+			<missionstate id="3" description="You told Eleonore to run a small errand. Deliver the 200 gold pieces she gave to the herbalist Charlotta in the south-western part of Liberty Bay." />
+			<missionstate id="4" description="You delivered the gold to Charlotta. Return to Eleonore and tell her the secret password: peg leg" />
+		</mission>
+		<mission name="The Governor's Daughter" storageid="17502" startvalue="1" endvalue="2" ignoreendvalue="true">
+			<missionstate id="1" description="You promised to find Eleonore's lost ring. She told you that a parrot stole it from her dressing table and flew to the nearby mountains. You might need a rake to retrieve the ring." />
+			<missionstate id="2" description="You returned the ring to Eleonore." />
+		</mission>
+	</quest>
+	<quest name="The Queen of the Banshees" startstorageid="5" startstoragevalue="1">
+		<mission name="The Hidden Seal" storageid="5" startvalue="1" endvalue="1" description="You broke the first seal." />
+		<mission name="The Seal of Logic" storageid="10" startvalue="1" endvalue="1" description="You broke the sixth seal." />
+		<mission name="The Seal of True Path" storageid="9" startvalue="1" endvalue="1" description="You broke the fifth seal." />
+		<mission name="The Seal of Sacrifice" storageid="4" startvalue="1" endvalue="1" description="You broke the fourth seal." />
+		<mission name="The Seal of Demonrage" storageid="7" startvalue="1" endvalue="1" description="You broke the third seal." />
+		<mission name="The Plague Seal" storageid="6" startvalue="1" endvalue="1" description="You broke the second seal." />
+		<mission name="All Seals" storageid="11" startvalue="1" endvalue="1" description="You broke all the seals." />
+	</quest>
+	<quest name="The White Raven Monastery" startstorageid="62" startstoragevalue="2">
+		<mission name="Access to the Isle of Kings" storageid="62" endvalue="2">
+			<missionstate id="2" description="You are a friend of Dalbrect. Since you returned his family brooch he will sail you to the Isle of Kings unless you do something stupid." />
+		</mission>
+		<mission name="The Investigation" storageid="17584" startvalue="1" endvalue="2">
+			<missionstate id="1" description="Investigate the catacombs. Abbot Costello should be interested in information about brother Fugio." />
+			<missionstate id="2" description="You returned Fugio's Diary. Costello was very thankful about your help and gave you a blessed ankh as reward." />
+		</mission>
+	</quest>
+	<quest name="The Serpentine Tower" startstorageid="17596" startstoragevalue="1">
+		<mission name="The Academy of Magic Arts Disaster" storageid="17596" endvalue="2">
+			<missionstate id="1" description="The evil ancient gods teleported you to the Serpentine Tower. You must survive the disaster!" />
+			<missionstate id="2" description="The earthquake destroyed the Serpentine Tower. There must be a way to get in the undergrounds." />
+		</mission>
+		<mission name="The Reward of The Serpentine Tower" storageid="17604" endvalue="1">
+			<missionstate id="1" description="You have solved The Serpentine Tower live event quest!" />
+		</mission>
+	</quest>
+	<quest name="Killing in the Name of..." startstorageid="17607" startstoragevalue="1">
+		<!-- Daniel Steelsoul: level 6 to 49 -->
+		<mission name="Daniel Steelsoul: Trolls" storageid="17633" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 trolls." />
+		<mission name="Daniel Steelsoul: Trolls" storageid="17633" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Daniel Steelsoul: Goblins" storageid="17634" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 goblins." />
+		<mission name="Daniel Steelsoul: Goblins" storageid="17634" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Daniel Steelsoul: Rotworms" storageid="17635" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 rotworms." />
+		<mission name="Daniel Steelsoul: Rotworms" storageid="17635" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Daniel Steelsoul: Cyclopes" storageid="17636" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 cyclopes." />
+		<mission name="Daniel Steelsoul: Cyclopes" storageid="17636" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		
+		<!-- killing in the name of rank -->
+		<mission name="Paw and Fur: Member" storageid="17615" startvalue="0" endvalue="10" description="You are member of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
+		<mission name="Paw and Fur: Ranger" storageid="17615" startvalue="11" endvalue="20" description="You are Ranger of the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
+		<mission name="Paw and Fur: Big Game Hunter" storageid="17615" startvalue="21" endvalue="40" description="You are Big Game Hunter in the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points." />
+		<mission name="Paw and Fur: Trophy Hunter" storageid="17615" startvalue="41" endvalue="70" description="You are Trophy Hunter in the Paw and Fur hunting elite. You currently have |STATE| Paw &amp; Fur points. Ask Grizzly Adams for 'special task' he might have something for you." />
+		<mission name="Paw and Fur: Elite Hunter" storageid="17615" startvalue="71" endvalue="100" description="You have obtained the highest possible rank in the Paw and Fur hunting elite, you are Elite Hunter. You currently have |STATE| Paw &amp; Fur points. Ask Grizzly Adams for 'special task' he might have something for you." />
+	
+		<!-- Grizzly Adams: level 6 to 49 -->
+		<mission name="Paw and Fur: Crocodiles" storageid="17609" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 crocodiles." />
+		<mission name="Paw and Fur: Crocodiles" storageid="17609" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Tarantulas" storageid="17610" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 tarantulas." />
+		<mission name="Paw and Fur: Tarantulas" storageid="17610" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Carniphilas" storageid="17611" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 carniphilas." />
+		<mission name="Paw and Fur: Carniphilas" storageid="17611" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 apes." />
+		<mission name="Paw and Fur: Apes" storageid="17612" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 thornback tortoises." />
+		<mission name="Paw and Fur: Thornback Tortoises" storageid="17613" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="0" endvalue="65" description="You already hunted |STATE|/65 gargoyles." />
+		<mission name="Paw and Fur: Gargoyles" storageid="17614" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Frost Trolls" storageid="17697" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 frost trolls." />
+		<mission name="Paw and Fur: Frost Trolls" storageid="17697" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Swamp Trolls" storageid="17698" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 swamp trolls." />
+		<mission name="Paw and Fur: Swamp Trolls" storageid="17698" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Rats" storageid="17699" startvalue="0" endvalue="25" description="You already hunted |STATE|/25 rats." />
+		<mission name="Paw and Fur: Rats" storageid="17699" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Wolves" storageid="17700" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wolves." />
+		<mission name="Paw and Fur: Wolves" storageid="17700" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Wasps" storageid="17701" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wasps." />
+		<mission name="Paw and Fur: Wasps" storageid="17701" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Larvas" storageid="17702" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 larvas." />
+		<mission name="Paw and Fur: Larvas" storageid="17702" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Dwarfs" storageid="17703" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 dwarfs." />
+		<mission name="Paw and Fur: Dwarfs" storageid="17703" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Low Undeads" storageid="17704" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 undeads." />
+		<mission name="Paw and Fur: Low Undeads" storageid="17704" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		
+		<!--Grizzly Adams: level 50 to 79 -->
+		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 quara scouts." />
+		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Ancient Scarabs" storageid="17617" startvalue="0" endvalue="125" description="You already hunted |STATE|/125 ancient scarabs." />
+		<mission name="Paw and Fur: Ancient Scarabs" storageid="17617" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Wyverns" storageid="17618" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 wyverns." />
+		<mission name="Paw and Fur: Wyverns" storageid="17618" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Bonebeasts" storageid="17619" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 bonebeasts." />
+		<mission name="Paw and Fur: Bonebeasts" storageid="17619" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Dragons" storageid="17620" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 dragons." />
+		<mission name="Paw and Fur: Dragons" storageid="17620" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Medium Class Orcs" storageid="17712" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 orcs." />
+		<mission name="Paw and Fur: High Class Minotaurs" storageid="17713" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 minotaurs." />
+		<mission name="Paw and Fur: Lizards" storageid="17714" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 lizards." />
+		<mission name="Paw and Fur: High Class Dwarfs" storageid="17715" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 dwarfs." />
+		<mission name="Paw and Fur: Medium Undeads" storageid="17716" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 undeads." />
+		
+		<!--Grizzly Adams: level 80 to 129 -->
+		<mission name="Paw and Fur: Quara" storageid="17621" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 quara." />
+		<mission name="Paw and Fur: Giant Spiders" storageid="17622" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 giant spiders." />
+		<mission name="Paw and Fur: Banshees" storageid="17623" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 banshees." />
+		<mission name="Paw and Fur: Lichs" storageid="17624" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 lichs." />
+		<mission name="Paw and Fur: Cults" storageid="17625" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 cults." />
+		<mission name="Paw and Fur: High Class Orcs" storageid="17717" startvalue="0" endvalue="125" description="You already hunted |STATE|/125 orcs." />
+		<mission name="Paw and Fur: High Class Orcs" storageid="17717" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Heros" storageid="17718" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 heros." />
+		<mission name="Paw and Fur: Heros" storageid="17718" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Necromancers" storageid="17719" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 necromancers." />
+		<mission name="Paw and Fur: Necromancers" storageid="17719" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		
+		<!--Grizzly Adams: level 130+ -->
+		<mission name="Paw and Fur: Hydras" storageid="17626" startvalue="0" endvalue="650" description="You already hunted |STATE|/650 hydras." />
+		<mission name="Paw and Fur: Hydras" storageid="17626" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Serpent Spawns" storageid="17627" startvalue="0" endvalue="800" description="You already hunted |STATE|/800 serpent spawns." />
+		<mission name="Paw and Fur: Serpent Spawns" storageid="17627" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Behemoths" storageid="17628" startvalue="0" endvalue="700" description="You already hunted |STATE|/700 behemoths." />
+		<mission name="Paw and Fur: Behemoths" storageid="17628" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Dragon Lords" storageid="17629" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 dragon lords." />
+		<mission name="Paw and Fur: Dragon Lords" storageid="17629" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Hand of Cursed Fates" storageid="17630" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 hand of cursed fates." />
+		<mission name="Paw and Fur: Hand of Cursed Fates" storageid="17630" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Juggernauts" storageid="17631" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 juggernauts." />
+		<mission name="Paw and Fur: Juggernauts" storageid="17631" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Nightmares" storageid="17720" startvalue="0" endvalue="150" description="You already hunted |STATE|/150 nightmares." />
+		<mission name="Paw and Fur: Nightmares" storageid="17720" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Warlocks" storageid="17721" startvalue="0" endvalue="300" description="You already hunted |STATE|/300 warlocks." />
+		<mission name="Paw and Fur: Warlocks" storageid="17721" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Demons" storageid="17722" startvalue="0" endvalue="6666" description="You already hunted |STATE|/6666 demons." />
+		<mission name="Paw and Fur: Demons" storageid="17722" startvalue="99999" endvalue="99999" description="You have finished the task." />
+	</quest>
+	<quest name="Young Mage Tasks" startstorageid="17646" startstoragevalue="1">
+		<mission name="Proof of the trustworthy" storageid="17645" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 amazons." />
+		<mission name="Reward of the trustworthy" storageid="17646" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
+	</quest>
+	<quest name="Young Paladin Tasks" startstorageid="17647" startstoragevalue="1">
+		<mission name="Proof of the trustworthy" storageid="17648" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 minotaurs." />
+		<mission name="Reward of the trustworthy" storageid="17647" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
+	</quest>
+	<quest name="Young Knight Tasks" startstorageid="17650" startstoragevalue="1">
+		<mission name="Proof of the trustworthy" storageid="17651" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 orcs." />
+		<mission name="Reward of the trustworthy" storageid="17650" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
+	</quest>
+</quests>

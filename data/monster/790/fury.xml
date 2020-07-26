@@ -1,0 +1,74 @@
+<monster name="Fury" nameDescription="a fury" race="blood" experience="4500" speed="125" manacost="0">
+	<health now="4100" max="4100" />
+	<look type="149" head="94" body="77" legs="96" feet="0" addons="3" corpse="6081" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="50" attack="170">
+		<attack name="fire" interval="2000" chance="10" length="8" spread="3" min="-200" max="-300">
+			<attribute key="areaEffect" value="explosionarea" />
+		</attack>
+		<attack name="physical" interval="2000" chance="5" length="8" spread="0" min="-120" max="-700">
+			<attribute key="areaEffect" value="redspark" />
+		</attack>
+		<attack name="physical" interval="2000" chance="10" radius="4" target="0" min="-120" max="-300">
+			<attribute key="areaEffect" value="redspark" />
+		</attack>
+		<attack name="lifedrain" interval="2000" chance="10" radius="3" target="0" min="-120" max="-300">
+			<attribute key="areaEffect" value="blackspark" />
+		</attack>
+		<attack name="physical" interval="2000" chance="10" range="7" min="-125" max="-250">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-100" duration="30000">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20">
+		<defense name="speed" interval="2000" chance="15" speedchange="60" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+		<immunity fire="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Ahhhhrrrr!" />
+		<voice sentence="Waaaaah!" />
+		<voice sentence="Carnage!" />
+		<voice sentence="Dieee!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="300" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="300" /><!-- gold coin -->
+		<item id="3031" countmax="69" chance="380" /><!-- gold coin -->
+		<item id="3035" countmax="4" chance="28" /><!-- platinum coin -->
+		<item id="6558" countmax="3" chance="350" /><!-- concentrated demonic blood -->
+		<item id="3364" chance="1" /><!-- golden legs -->
+		<item id="3577" chance="250" /><!-- meat -->
+		<item id="5021" countmax="4" chance="15" /><!-- orichalcum pearl -->
+		<item id="5911" chance="40" /><!-- red piece of cloth -->
+		<item id="3003" countmax="3" chance="80" /><!-- small amethyst -->
+		<item id="5944" chance="215" /><!-- soul orb -->
+		<item id="3554" chance="7" /><!-- steel boots -->
+		<item id="3065" chance="200" /><!-- terra rod -->
+		<item id="5944" chance="50" /><!-- assassin star -->
+		<item id="3007" chance="4" /><!-- crystal ring-->
+		<item id="6299" chance="60" /><!-- death ring-->
+	</loot>
+</monster>

@@ -41,9 +41,19 @@ VANISH,!           -> "May Crunor bless you."
 "life","fluid"    -> Type=2874, Data=11, Amount=1,  Price=60,    "Do you want to buy life fluid for %P gold?", Topic=1
 %1,"life","fluid" -> Type=2874, Data=11, Amount=%1, Price=60*%1, "Do you want to buy %A potions of life fluid for %P gold?", Topic=1
 
+"backpack","life","fluid" -> Type=2874, Data=11, Amount=1, Price=61*20, "Do you want to buy a backpack of life fluid for %P gold?", Topic=8
+"bp","life","fluid" -> *
+
+%1,1<%1,"backpack","life","fluid"  -> Type=2874, Data=11, Amount=%1, Price=61*20*%1, "Do you want to buy %A backpacks of potions of life fluid for %P gold?", Topic=8
+%1,1<%1,"bp","life","fluid"  -> *
+
 Topic=1,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold on the vial.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back, when you have enough money."
 Topic=1                         -> "Hmm, but next time."
+
+Topic=8,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold on the vial.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=8,"yes"                   -> "Come back, when you have enough money."
+Topic=8                         -> "Hmm, but next time."
 
 "deposit"                   -> "I will pay you 5 gold for every empty vial. Ok?", Data=0, Topic=2
 "vial"                      -> *

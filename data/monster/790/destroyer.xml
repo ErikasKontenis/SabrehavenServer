@@ -1,0 +1,59 @@
+<monster name="Destroyer" nameDescription="a destroyer" race="undead" experience="2500" speed="135" manacost="0">
+	<health now="3700" max="3700" />
+	<look type="236" corpse="6319" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="90" attack="100">
+		<attack name="physical" interval="2000" chance="15" range="7" min="0" max="-200">
+			<attribute key="shootEffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="30" defense="30">
+		<defense name="speed" interval="2000" chance="15" speedchange="70" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity energy="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="COME HERE AND DIE!" />
+		<voice sentence="Destructiooooon!" />
+		<voice sentence="It's a good day to destroy!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="600" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="400" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="400" /><!-- gold coin -->
+		<item id="3031" countmax="41" chance="600" /><!-- gold coin -->
+		<item id="3577" countmax="6" chance="500" /><!-- meat -->
+		<item id="3304" chance="142" /><!-- crowbar -->
+		<item id="3449" countmax="12" chance="125" /><!-- burst arrow -->
+		<item id="3383" chance="100" /><!-- dark armor -->
+		<item id="3033" countmax="2" chance="76" /><!-- small amethyst -->
+		<item id="5944" chance="66" /><!-- soul orb-->
+		<item id="3456" chance="62" /><!-- pick -->
+		<item id="3357" chance="43" /><!-- plate armor -->
+		<item id="3035" countmax="3" chance="41" /><!-- platinum coin -->
+		<item id="3281" chance="16" /><!-- giant sword -->
+		<item id="3554" chance="9" /><!-- steel boots -->
+		<item id="3008" chance="5" /><!-- crystal necklace -->
+		<item id="3062" chance="5" /><!-- mind stone -->
+		<item id="6299" chance="1" /><!-- death ring -->
+		<item id="5741" chance="1" /><!-- skull helmet -->
+	</loot>
+</monster>

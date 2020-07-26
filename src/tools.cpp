@@ -670,6 +670,10 @@ MagicEffectNames magicEffectNames[] = {
 	{"whitenote",		CONST_ME_SOUND_WHITE},
 	{"bubbles",		CONST_ME_BUBBLES},
 	{"dice",		CONST_ME_CRAPS},
+	{"giftwraps",		CONST_ME_GIFT_WRAPS},
+	{"yellowfirework",	CONST_ME_FIREWORK_YELLOW},
+	{"redfirework",		CONST_ME_FIREWORK_RED},
+	{"bluefirework",	CONST_ME_FIREWORK_BLUE},
 };
 
 ShootTypeNames shootTypeNames[] = {
@@ -688,6 +692,7 @@ ShootTypeNames shootTypeNames[] = {
 	{"snowball",		CONST_ANI_SNOWBALL},
 	{"powerbolt",		CONST_ANI_POWERBOLT},
 	{"poison",		CONST_ANI_POISON},
+	{"infernalbolt",	CONST_ANI_INFERNALBOLT},
 };
 
 CombatTypeNames combatTypeNames[] = {
@@ -1229,4 +1234,34 @@ void getFilesInDirectory(const boost::filesystem::path& root, const std::string&
 			++it;
 		}
 	}
+}
+
+std::string getClientVersionString(uint32_t version)
+{
+	return getClientVersionString(static_cast<ClientVersion_t>(version));
+}
+
+std::string getClientVersionString(ClientVersion_t version)
+{
+	std::string result;
+	switch (version)
+	{
+	case CLIENT_VERSION_780:
+		result = "7.80";
+		break;
+	case CLIENT_VERSION_781:
+		result = "7.81";
+		break;
+	case CLIENT_VERSION_790:
+		result = "7.90";
+		break;
+	case CLIENT_VERSION_792:
+		result = "7.92";
+		break;
+	default:
+		result = "Unknown";
+		break;
+	}
+
+	return result;
 }

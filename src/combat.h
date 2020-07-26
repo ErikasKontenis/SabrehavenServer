@@ -117,7 +117,7 @@ struct DunkenImpact : Impact
 	void handleCreature(Creature* target) final;
 };
 
-typedef void(*COMBATFUNC)(Creature*, Creature*, const CombatParams&, CombatDamage*);
+typedef bool(*COMBATFUNC)(Creature*, Creature*, const CombatParams&, CombatDamage*);
 
 class MatrixArea
 {
@@ -352,11 +352,11 @@ class Combat
 
 		static void CombatFunc(Creature* caster, const Position& pos, const AreaCombat* area, const CombatParams& params, COMBATFUNC func, CombatDamage* data);
 
-		static void CombatHealthFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
-		static void CombatManaFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* damage);
-		static void CombatConditionFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
-		static void CombatDispelFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
-		static void CombatNullFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
+		static bool CombatHealthFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
+		static bool CombatManaFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* damage);
+		static bool CombatConditionFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
+		static bool CombatDispelFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
+		static bool CombatNullFunc(Creature* caster, Creature* target, const CombatParams& params, CombatDamage* data);
 
 		static void combatTileEffects(const SpectatorVec& list, Creature* caster, Tile* tile, const CombatParams& params);
 		CombatDamage getCombatDamage(Creature* creature) const;

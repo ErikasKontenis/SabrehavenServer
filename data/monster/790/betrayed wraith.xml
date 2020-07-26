@@ -1,0 +1,67 @@
+<monster name="Betrayed Wraith" nameDescription="a betrayed wraith" race="undead" experience="3500" speed="115" manacost="0">
+	<health now="4200" max="4200" />
+	<look type="233" corpse="6315" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="0" mostdamage="30" random="0" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="300" />
+	</flags>
+	<attacks attack="80" skill="100">
+		<attack name="speed" interval="2000" chance="20" range="7" target="1" speedchange="-100" duration="3000">
+			<attribute key="shootEffect" value="death" />
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<defenses armor="55" defense="55">
+		<defense name="healing" interval="2000" chance="30" min="350" max="600">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+		<defense name="invisible" interval="2000" chance="10" duration="5000">
+			<attribute key="areaEffect" value="redspark" />
+		</defense>
+		<defense name="speed" interval="2000" chance="15" speedchange="57" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity fire="1" />
+		<immunity energy="1" />
+		<immunity earth="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Rrrah!" />
+		<voice sentence="Gnarr!" />
+		<voice sentence="Tcharrr!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="198" chance="1000" />	<!-- gold coin -->
+		<item id="3035" countmax="8" chance="1000" />		<!-- platinum coin -->
+		<item id="6558" chance="652" />					<!-- concentrated demonic blood -->
+		<item id="3450" countmax="15" chance="500" />		<!-- power bolt -->
+							<!-- demonic essence -->
+							<!-- unholy bone -->
+				<!-- great mana potion -->
+							<!-- ultimate health potion -->
+		<item id="3028" countmax="4" chance="118" />		<!-- small diamond -->
+				<!-- assassin star -->
+		<item id="5944" chance="90" />						<!-- soul orb -->
+		<item id="5021" countmax="2" chance="80" />		<!-- orichalcum pearl -->
+								<!-- mercenary sword -->
+		<item id="6299" chance="4" />						<!-- death ring -->
+		<item id="5741" chance="4" />						<!-- skull helmet -->
+		<item id="5799" chance="1" />						<!-- golden figurine -->
+								<!-- bloody edge -->
+	</loot>
+</monster>

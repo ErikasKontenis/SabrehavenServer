@@ -82,6 +82,8 @@ VANISH,!           -> "Good bye."
 "pick"          -> Type=3456, Amount=1,  Price=50,   "Do you want to buy a pick for %P gold?", Topic=1
 "shovel"        -> Type=3457, Amount=1,  Price=50,   "Do you want to buy a shovel for %P gold?", Topic=1
 "rod"           -> Type=3483, Amount=1,  Price=150,  "Do you want to buy a fishing rod for %P gold?", Topic=1
+"greeting","card",ClientVersion>=790 -> Type=6386, Amount=1,  Price=30,  "Do you want to buy a greeting card for %P gold?", Topic=1
+"valentine","card",ClientVersion>=790 -> Type=6538, Amount=1,  Price=30,  "Do you want to buy a valentine's card for %P gold?", Topic=1
 
 %1,1<%1,"torch"         -> Type=2920, Amount=%1,  Price=2*%1,    "Do you want to buy %A torches for %P gold?", Topic=1
 %1,1<%1,"bag"           -> Type=2864, Amount=%1,  Price=5*%1,    "Do you want to buy %A bags for %P gold?", Topic=1
@@ -107,6 +109,8 @@ VANISH,!           -> "Good bye."
 %1,1<%1,"pick"          -> Type=3456, Amount=%1,  Price=50*%1,   "Do you want to buy %A picks for %P gold?", Topic=1
 %1,1<%1,"shovel"        -> Type=3457, Amount=%1,  Price=50*%1,   "Do you want to buy %A shovels for %P gold?", Topic=1
 %1,1<%1,"rod"           -> Type=3483, Amount=%1,  Price=150*%1,  "Do you want to buy %A fishing rods for %P gold?", Topic=1
+%1,1<%1,"greeting","card",ClientVersion>=790           -> Type=6386, Amount=%1,  Price=30*%1,  "Do you want to buy %A greeting cards for %P gold?", Topic=1
+%1,1<%1,"valentine","card",ClientVersion>=790           -> Type=6538, Amount=%1,  Price=30*%1,  "Do you want to buy %A valentine's cards for %P gold?", Topic=1
 
 "worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms would you like to buy?"
 "worms"         -> *
@@ -128,11 +132,13 @@ Topic=1                         -> "Hmm, but next time."
 "crossbow"        -> Type=3349, Amount=1,  Price=500,  "Do you want to buy a crossbow for %P gold?", Topic=2
 "arrow"           -> Type=3447, Amount=1, Price=2,   "Do you want to buy an arrow for %P gold?", Topic=2
 "bolt"            -> Type=3446, Amount=1, Price=3,   "Do you want to buy a bolt for %P gold?", Topic=2
+"power","bolt"            -> Type=3450, Amount=1, Price=6,   "Do you want to buy a power bolt for %P gold?", Topic=2
 
 %1,1<%1,"bow"          -> Type=3350, Amount=%1, Price=400*%1, "Do you want to buy %A bows for %P gold?", Topic=2
 %1,1<%1,"crossbow"     -> Type=3349, Amount=%1, Price=500*%1, "Do you want to buy %A crossbows for %P gold?", Topic=2
 %1,1<%1,"arrow"        -> Type=3447, Amount=%1, Price=2*%1,   "Do you want to buy %A arrows for %P gold?", Topic=2
 %1,1<%1,"bolt"         -> Type=3446, Amount=%1, Price=3*%1,   "Do you want to buy %A bolts for %P gold?", Topic=2
+%1,1<%1,"power","bolt"         -> Type=3450, Amount=%1, Price=6*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=2
 
 Topic=2,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=2,"yes"                   -> "Come back when you have enough money."

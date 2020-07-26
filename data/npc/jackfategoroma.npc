@@ -68,7 +68,7 @@ Topic=1                                   -> "Oh, well."
 Topic=2,"yes" -> "Good! Please return once you have gathered 30 pieces of wood.", SetQuestValue(17501,1)
 Topic=2                                   -> "Oh, well."
 
-Topic=3,"yes",Count(Type)>=Amount -> "Excellent! Now we can leave this godforsaken place. Thank you for your help. Should you ever want to return to this island, ask me for a passage to Goroma.", Delete(Type), SetQuestValue(17501,2)
+Topic=3,"yes",Count(Type)>=Amount -> "Excellent! Now we can leave this godforsaken place. Thank you for your help. Should you ever want to return to this island, ask me for a passage to Goroma.", Delete(Type), SetQuestValue(17501,2), SetQuestValue(17593,2)
 Topic=3,"yes"					           -> "You don't have that many."
 Topic=3                                   -> "Oh, I'm still waiting then."
 

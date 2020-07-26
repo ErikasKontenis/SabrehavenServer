@@ -1,0 +1,11 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# 17608 - any task in progress
+
+Name = "Grizzly Adams"
+Outfit = (144,97-97-94-97-3)
+Home = [32700,31638,6]
+Radius = 3
+
+Behaviour = {
+@"killing-tasks.ndb"
+}

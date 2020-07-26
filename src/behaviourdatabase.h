@@ -84,6 +84,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_WITHDRAW, // withdraw from player bank balance
 	BEHAVIOUR_TYPE_DEPOSIT, // deposit x amount of gold
 	BEHAVIOUR_TYPE_TRANSFER, // transfer x amount of gold
+	BEHAVIOUR_TYPE_EXPERIENCESTAGE, // get experience staged based on player level
 	BEHAVIOUR_TYPE_BLESS, // add blessing to player
 	BEHAVIOUR_TYPE_CREATECONTAINER, // create a container of an item in particular
 	BEHAVIOUR_TYPE_TOWN, // change player town
@@ -94,6 +95,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_EXPIRINGQUESTVALUE, // get/set expiring quest value
 	BEHAVIOUR_TYPE_SLOTITEM, // get slot item
 	BEHAVIOUR_TYPE_PZFREE, // is player pz not locked
+	BEHAVIOUR_TYPE_CLIENTVERSION, // get client version
 };
 
 enum NpcBehaviourOperator_t
@@ -105,6 +107,7 @@ enum NpcBehaviourOperator_t
 	BEHAVIOUR_OPERATOR_LESSER_OR_EQUALS = 'L',
 	BEHAVIOUR_OPERATOR_NOT_EQUALS = 'N',
 	BEHAVIOUR_OPERATOR_MULTIPLY = '*',
+	BEHAVIOUR_OPERATOR_DIVIDE = '/',
 	BEHAVIOUR_OPERATOR_SUM = '+',
 	BEHAVIOUR_OPERATOR_RES = '-',
 };

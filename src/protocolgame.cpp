@@ -429,6 +429,8 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xE6: parseBugReport(msg); break;
 		case 0xE7: /* violation window */ break;
 		case 0xE8: parseDebugAssert(msg); break;
+		case 0xF0: addGameTaskTimed(DISPATCHER_TASK_EXPIRATION, &Game::playerShowQuestLog, player->getID()); break;
+		case 0xF1: parseQuestLine(msg); break;
 		default:
 		    std::cout << "Player: " << player->getName() << " sent an unknown packet header: 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << "!" << std::endl;
 			break;
@@ -963,6 +965,12 @@ void ProtocolGame::parsePassPartyLeadership(NetworkMessage& msg)
 	addGameTask(&Game::playerPassPartyLeadership, player->getID(), targetId);
 }
 
+void ProtocolGame::parseQuestLine(NetworkMessage& msg)
+{
+	uint16_t questId = msg.get<uint16_t>();
+	addGameTask(&Game::playerShowQuestLine, player->getID(), questId);
+}
+
 void ProtocolGame::parseSeekInContainer(NetworkMessage& msg)
 {
 	uint8_t containerId = msg.getByte();
@@ -1205,7 +1213,39 @@ void ProtocolGame::sendContainer(uint8_t cid, const Container* container, bool h
 	writeToOutputBuffer(msg);
 }
 
+void ProtocolGame::sendQuestLog()
+{
+	NetworkMessage msg;
+	msg.addByte(0xF0);
+	msg.add<uint16_t>(g_game.quests.getQuestsCount(player));
 
+	for (const Quest& quest : g_game.quests.getQuests()) {
+		if (quest.isStarted(player)) {
+			msg.add<uint16_t>(quest.getID());
+			msg.addString(quest.getName());
+			msg.addByte(quest.isCompleted(player));
+		}
+	}
+
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendQuestLine(const Quest* quest)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF1);
+	msg.add<uint16_t>(quest->getID());
+	msg.addByte(quest->getMissionsCount(player));
+
+	for (const Mission& mission : quest->getMissions()) {
+		if (mission.isStarted(player)) {
+			msg.addString(mission.getName(player));
+			msg.addString(mission.getDescription(player));
+		}
+	}
+
+	writeToOutputBuffer(msg);
+}
 
 void ProtocolGame::sendTradeItemRequest(const std::string& traderName, const Item* item, bool ack)
 {
@@ -1733,11 +1773,12 @@ void ProtocolGame::sendTextWindow(uint32_t windowTextId, Item* item, uint16_t ma
 		msg.add<uint16_t>(0x00);
 	}
 
-	if (player->getOperatingSystem() >= CLIENTOS_OTCLIENT_LINUX) {
+	if (g_game.getClientVersion() >= CLIENT_VERSION_790) {
 		time_t writtenDate = item->getDate();
 		if (writtenDate != 0) {
 			msg.addString(formatDateShort(writtenDate));
-		} else {
+		}
+		else {
 			msg.add<uint16_t>(0x00);
 		}
 	}
@@ -1775,6 +1816,7 @@ void ProtocolGame::sendOutfitWindow()
 	Outfit_t currentOutfit = player->getDefaultOutfit();
 	AddOutfit(msg, currentOutfit);
 
+	const ClientVersion_t clientVersion = g_game.getClientVersion();
 	std::vector<ProtocolOutfit> protocolOutfits;
 	if (player->isAccessPlayer()) {
 		static const std::string gamemasterOutfitName = "Gamemaster";
@@ -1790,14 +1832,19 @@ void ProtocolGame::sendOutfitWindow()
 		}
 
 		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
-		if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits
-			break;
+		if (CLIENT_VERSION_780 <= clientVersion && clientVersion <= CLIENT_VERSION_792) {
+			if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits in 780-792
+				break;
+			}
 		}
 	}
 
 	msg.addByte(protocolOutfits.size());
 	for (const ProtocolOutfit& outfit : protocolOutfits) {
 		msg.add<uint16_t>(outfit.lookType);
+		if (clientVersion > CLIENT_VERSION_781) {
+			msg.addString(outfit.name);
+		}
 		msg.addByte(outfit.addons);
 	}
 

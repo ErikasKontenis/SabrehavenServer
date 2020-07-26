@@ -277,6 +277,13 @@ void Creature::addEventWalk(bool firstStep)
 		g_game.checkCreatureWalk(getID());
 	}
 
+	if (const Monster* monster = getMonster()) {
+		Creature* creature = monster->getFollowCreature();
+		if (!creature) {
+			ticks = ticks * 1.25;
+		}
+	}
+
 	eventWalk = g_scheduler.addEvent(createSchedulerTask(ticks, std::bind(&Game::checkCreatureWalk, &g_game, getID())));
 }
 
@@ -600,7 +607,12 @@ void Creature::onCreatureMove(Creature* creature, const Tile* newTile, const Pos
 		} else {
 			if (hasExtraSwing()) {
 				//our target is moving lets see if we can get in hit
-				g_dispatcher.addTask(createTask(std::bind(&Game::checkCreatureAttack, &g_game, getID())));
+				if (getMonster()) {
+					g_dispatcher.addTask(createTask(std::bind(&Game::checkMonsterExtraAttack, &g_game, getID())));
+				}
+				else {
+					g_dispatcher.addTask(createTask(std::bind(&Game::checkCreatureAttack, &g_game, getID())));
+				}
 			}
 
 			if (newTile->getZone() != oldTile->getZone()) {

@@ -81,7 +81,7 @@ bool ConfigManager::load()
 	boolean[STACK_CUMULATIVES] = getGlobalBoolean(L, "autoStackCumulatives", false);
 	boolean[BLOCK_HEIGHT] = getGlobalBoolean(L, "blockHeight", false);
 	boolean[DROP_ITEMS] = getGlobalBoolean(L, "dropItems", false);
-
+	boolean[DISTANCE_WEAPONS_DROP_ON_GROUND] = getGlobalBoolean(L, "distanceWeaponsDropOnGround", true);
 
 	string[DEFAULT_PRIORITY] = getGlobalString(L, "defaultPriority", "high");
 	string[SERVER_NAME] = getGlobalString(L, "serverName", "");
@@ -123,6 +123,7 @@ bool ConfigManager::load()
 	integer[NEWBIE_TOWN] = getGlobalNumber(L, "newbieTownId", 1);
 	integer[NEWBIE_LEVEL_THRESHOLD] = getGlobalNumber(L, "newbieLevelThreshold", 5);
 	integer[MONEY_RATE] = getGlobalNumber(L, "moneyRate", 1);
+	integer[CLIENT_VERSION] = getGlobalNumber(L, "clientVersion");
 
 	loaded = true;
 	lua_close(L);

@@ -45,3 +45,19 @@ druid,"snakebite","rod",QuestValue(333)<1  -> "Oh, is this your first snakebite 
 Topic=92,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=92,"yes"                   -> "Sorry, you don't have enough gold."
 Topic=92                         -> "You don't know what you're missing."
+
+"task",QuestValue(17646)=0,druid -> Amount=17645, "Young druid, I see you wan't your second rod but those are too expensive, right. Hmm... I can't give you one for free. ...",
+									"However, if you could kill 50 amazons to prove your trustworthy willingness I will reward you the moonlight rod. Deal?", Topic=120
+
+"task",QuestValue(17646)=0,sorcerer -> Amount=17645, "Young sorcerer, I see you wan't your second wand but those are too expensive, right. Hmm... I can't give you one for free. ...",
+									"However, if you could kill 50 amazons to prove your trustworthy willingness I will reward you the wand of dragonbreath. Deal?", Topic=120
+									
+"task",QuestValue(17645)=50,QuestValue(17646)=1,druid -> "Well done, %N. Here is your moonlight rod!", SetQuestValue(17646,2), SetQuestValue(17644,0), Type=3070, Amount=1,Create(Type)
+"task",QuestValue(17645)=50,QuestValue(17646)=1,sorcerer -> "Well done, %N. Here is your wand of dragonbreath!", SetQuestValue(17646,2), SetQuestValue(17644,0), Type=3075, Amount=1,Create(Type)
+								
+"task",QuestValue(17644)>0 -> "I see you are still in progress with your task."
+									
+Topic=120,"yes" -> "Very well young mage. Come back once you are done.", SetQuestValue(17644,Amount), SetQuestValue(Amount,0), SetQuestValue(17646,1)
+Topic=120 -> "As you wish."
+
+"task" -> "I don't have any tasks for you right now."

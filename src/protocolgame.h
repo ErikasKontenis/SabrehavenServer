@@ -113,6 +113,8 @@ class ProtocolGame final : public Protocol
 		void parseTextWindow(NetworkMessage& msg);
 		void parseHouseWindow(NetworkMessage& msg);
 
+		void parseQuestLine(NetworkMessage& msg);
+
 		void parseInviteToParty(NetworkMessage& msg);
 		void parseJoinParty(NetworkMessage& msg);
 		void parseRevokePartyInvite(NetworkMessage& msg);
@@ -155,6 +157,9 @@ class ProtocolGame final : public Protocol
 		void sendPingBack();
 		void sendCreatureTurn(const Creature* creature, uint32_t stackpos);
 		void sendCreatureSay(const Creature* creature, SpeakClasses type, const std::string& text, const Position* pos = nullptr);
+
+		void sendQuestLog();
+		void sendQuestLine(const Quest* quest);
 
 		void sendCancelWalk();
 		void sendChangeSpeed(const Creature* creature, uint32_t speed);
@@ -262,7 +267,7 @@ class ProtocolGame final : public Protocol
 
 		uint32_t eventConnect = 0;
 		uint32_t challengeTimestamp = 0;
-		uint16_t version = CLIENT_VERSION_MIN;
+		uint16_t version;
 
 		uint8_t challengeRandom = 0;
 

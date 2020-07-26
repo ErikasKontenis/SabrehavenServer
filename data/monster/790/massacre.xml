@@ -1,0 +1,39 @@
+<monster name="Massacre" nameDescription="Massacre" race="blood" experience="9800" speed="195" manacost="0">
+	<health now="30000" max="30000" />
+	<look type="244" corpse="6335" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="150" attack="150">
+		<attack name="physical" interval="2000" chance="24" range="7" min="-280" max="-500">
+			<attribute key="shootEffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="15" defense="15">
+		<defense name="speed" interval="2000" chance="12" speedchange="90" duration="4000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity energy="1" />
+		<immunity fire="1" />
+		<immunity poison="1" />
+		<immunity lifedrain="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item id="6540" chance="1000" /><!-- massacre's shell piece -->
+	</loot>
+</monster>

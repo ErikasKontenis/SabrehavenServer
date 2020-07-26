@@ -30,6 +30,43 @@
 "sudden","death","rune"           -> Type=3155, Data=1, Amount=1,  Price=325,    "Do you want to buy a sudden death rune for %P gold?", Topic=99
 "energy","wall","rune"            -> Type=3166, Data=4, Amount=1,  Price=340,    "Do you want to buy an energy wall rune for %P gold?", Topic=99
 
+"backpack","light","magic","missile","rune" -> Type=3174, Data=5, Amount=1,  Price=41*20,    "Do you want to buy a backpack of light magic missile rune for %P gold?", Topic=100
+"bp","light","magic","missile","rune" -> *
+"backpack","poison","field","rune" -> Type=3172, Data=3, Amount=1,  Price=66*20,    "Do you want to buy a backpack of poison field rune for %P gold?", Topic=100
+"bp","poison","field","rune" -> *
+"backpack","antidote","rune" -> Type=3153, Data=1, Amount=1,  Price=66*20,    "Do you want to buy a backpack of antidote rune for %P gold?", Topic=100
+"bp","antidote","rune" -> *
+"backpack","fire","field","rune" -> Type=3188, Data=3, Amount=1,  Price=86*20,    "Do you want to buy a backpack of fire field rune for %P gold?", Topic=100
+"bp","fire","field","rune" -> *
+"backpack","intense","healing","rune" -> Type=3152, Data=1, Amount=1,  Price=96*20,    "Do you want to buy a backpack of intense healing rune for %P gold?", Topic=100
+"bp","intense","healing","rune" -> *
+"backpack","fireball","rune" -> Type=3189, Data=2, Amount=1,  Price=96*20,    "Do you want to buy a backpack of fireball rune for %P gold?", Topic=100
+"bp","fireball","rune" -> *
+"backpack","destroy","field","rune" -> Type=3148, Data=3, Amount=1,  Price=46*20,    "Do you want to buy a backpack of destroy field rune for %P gold?", Topic=100
+"bp","destroy","field","rune" -> *
+"backpack","heavy","magic","missile","rune" -> Type=3198, Data=5, Amount=1,  Price=126*20,    "Do you want to buy a backpack of heavy magic missile rune for %P gold?", Topic=100
+"bp","heavy","magic","missile","rune" -> *
+"backpack","energy","field","rune" -> Type=3164, Data=3, Amount=1,  Price=116*20,    "Do you want to buy a backpack of energy field rune for %P gold?", Topic=100
+"bp","energy","field","rune" -> *
+"backpack","ultimate","healing","rune" -> Type=3160, Data=1, Amount=1,  Price=176*20,    "Do you want to buy a backpack of ultimate healing rune for %P gold?", Topic=100
+"bp","ultimate","healing","rune" -> *
+"backpack","convince","creature","rune" -> Type=3177, Data=1, Amount=1,  Price=81*20,    "Do you want to buy a backpack of convince creature rune for %P gold?", Topic=100
+"bp","convince","creature","rune" -> *
+"backpack","great","fireball","rune" -> Type=3191, Data=2, Amount=1,  Price=181*20,    "Do you want to buy a backpack of great fireball rune for %P gold?", Topic=100
+"bp","great","fireball","rune" -> *
+"backpack","chameleon","rune" -> Type=3178, Data=1, Amount=1,  Price=211*20,    "Do you want to buy a backpack of chameleon rune for %P gold?", Topic=100
+"bp","chameleon","rune" -> *
+"backpack","fire","bomb","rune" -> Type=3192, Data=2, Amount=1,  Price=236*20,    "Do you want to buy a backpack of firebomb rune for %P gold?", Topic=100
+"bp","fire","bomb","rune" -> *
+"backpack","poison","wall","rune" -> Type=3176, Data=4, Amount=1,  Price=211*20,    "Do you want to buy a backpack of poison wall rune for %P gold?", Topic=100
+"bp","poison","wall","rune" -> *
+"backpack","explosion","rune" -> Type=3200, Data=3, Amount=1,  Price=251*20,    "Do you want to buy a backpack of explosion rune for %P gold?", Topic=100
+"bp","explosion","rune" -> *
+"backpack","fire","wall","rune" -> Type=3190, Data=4, Amount=1,  Price=246*20,    "Do you want to buy a backpack of fire wall rune for %P gold?", Topic=100
+"bp","fire","wall","rune" -> *
+"backpack","energy","wall","rune" -> Type=3166, Data=4, Amount=1,  Price=341*20,    "Do you want to buy a backpack of energy wall rune for %P gold?", Topic=100
+"bp","energy","wall","rune" -> *
+
 "envenom","rune"            	  -> "Sorry, but runes of this type can't be purchased here."
 "desintegrate","rune"          	  -> *
 "poison","bomb","rune"            -> *
@@ -59,7 +96,49 @@
 %1,1<%1,"sudden","death","rune"             -> Type=3155, Data=1, Amount=%1,  Price=325*%1,    "Do you want to buy %A sudden death runes for %P gold?", Topic=99
 %1,1<%1,"energy","wall","rune"            	-> Type=3166, Data=4, Amount=%1,  Price=340*%1,    "Do you want to buy %A energy wall runes for %P gold?", Topic=99
 
+%1,1<%1,"backpack","light","magic","missile","rune" -> Type=3174, Data=5, Amount=%1,  Price=41*20*%1,    "Do you want to buy %A backpacks of light magic missile runes for %P gold?", Topic=100
+%1,1<%1,"bp","light","magic","missile","rune" -> *
+%1,1<%1,"backpack","poison","field","rune" -> Type=3172, Data=3, Amount=%1,  Price=66*20*%1,    "Do you want to buy %A backpacks of poison field runes for %P gold?", Topic=100
+%1,1<%1,"bp","poison","field","rune" -> *
+%1,1<%1,"backpack","antidote","rune" -> Type=3153, Data=1, Amount=%1, Price=66*20*%1, "Do you want to buy %A backpacks of antidote runes for %P gold?", Topic=100
+%1,1<%1,"bp","antidote","rune" -> *
+%1,1<%1,"backpack","fire","field","rune" -> Type=3188, Data=3, Amount=%1,  Price=86*20*%1,    "Do you want to buy %A backpacks of fire field runes for %P gold?", Topic=100
+%1,1<%1,"bp","fire","field","rune" -> *
+%1,1<%1,"backpack","intense","healing","rune" -> Type=3152, Data=1, Amount=%1,  Price=96*20*%1,    "Do you want to buy %A backpacks of intense healing runes for %P gold?", Topic=100
+%1,1<%1,"bp","intense","healing","rune" -> *
+%1,1<%1,"backpack","fireball","rune" -> Type=3189, Data=2, Amount=%1,  Price=96*20*%1,    "Do you want to buy %A backpacks of fireball runes for %P gold?", Topic=100
+%1,1<%1,"bp","fireball","rune" -> *
+%1,1<%1,"backpack","destroy","field","rune" -> Type=3148, Data=3, Amount=%1,  Price=46*20*%1,    "Do you want to buy %A backpacks of destroy field runes for %P gold?", Topic=100
+%1,1<%1,"bp","destroy","field","rune" -> *
+%1,1<%1,"backpack","heavy","magic","missile","rune" -> Type=3198, Data=5, Amount=%1,  Price=126*20*%1,    "Do you want to buy %A backpacks of heavy magic missile runes for %P gold?", Topic=100
+%1,1<%1,"bp","heavy","magic","missile","rune" -> *
+%1,1<%1,"backpack","energy","field","rune" -> Type=3164, Data=3, Amount=%1,  Price=116*20*%1,    "Do you want to buy %A backpacks of energy field runes for %P gold?", Topic=100
+%1,1<%1,"bp","energy","field","rune" -> *
+%1,1<%1,"backpack","ultimate","healing","rune" -> Type=3160, Data=1, Amount=%1,  Price=176*20*%1,    "Do you want to buy %A backpacks of ultimate healing runes for %P gold?", Topic=100
+%1,1<%1,"bp","ultimate","healing","rune" -> *
+%1,1<%1,"backpack","convince","creature","rune" -> Type=3177, Data=1, Amount=%1,  Price=81*20*%1,    "Do you want to buy %A backpacks of convince creature runes for %P gold?", Topic=100
+%1,1<%1,"bp","convince","creature","rune" -> *
+%1,1<%1,"backpack","great","fireball","rune" -> Type=3191, Data=2, Amount=%1,  Price=181*20*%1,    "Do you want to buy %A backpacks of great fireball runes for %P gold?", Topic=100
+%1,1<%1,"bp","great","fireball","rune" -> *
+%1,1<%1,"backpack","chameleon","rune" -> Type=3178, Data=1, Amount=%1,  Price=211*20*%1,    "Do you want to buy %A backpacks of chameleon runes for %P gold?", Topic=100
+%1,1<%1,"bp","chameleon","rune" -> *
+%1,1<%1,"backpack","fire","bomb","rune" -> Type=3192, Data=2, Amount=%1,  Price=236*20*%1,    "Do you want to buy %A backpacks of firebomb runes for %P gold?", Topic=100
+%1,1<%1,"bp","fire","bomb","rune" -> *
+%1,1<%1,"backpack","poison","wall","rune" -> Type=3176, Data=4, Amount=%1,  Price=211*20*%1,    "Do you want to buy %A backpacks of poison wall runes for %P gold?", Topic=100
+%1,1<%1,"bp","poison","wall","rune" -> *
+%1,1<%1,"backpack","explosion","rune" -> Type=3200, Data=3, Amount=%1,  Price=251*20*%1,    "Do you want to buy %A backpacks of explosion runes for %P gold?", Topic=100
+%1,1<%1,"bp","explosion","rune" -> *
+%1,1<%1,"backpack","fire","wall","rune" -> Type=3190, Data=4, Amount=%1,  Price=246*20*%1,    "Do you want to buy %A backpacks of fire wall runes for %P gold?", Topic=100
+%1,1<%1,"bp","fire","wall","rune" -> *
+%1,1<%1,"backpack","sudden","death","rune" -> Type=3155, Data=1, Amount=%1,  Price=326*20*%1,    "Do you want to buy %A backpacks of sudden death runes for %P gold?", Topic=100
+%1,1<%1,"bp","sudden","death","rune" -> *
+%1,1<%1,"backpack","energy","wall","rune" -> Type=3166, Data=4, Amount=%1,  Price=341*20*%1,    "Do you want to buy %A backpacks of energy wall runes for %P gold?", Topic=100
+%1,1<%1,"bp","energy","wall","rune" -> *
 
 Topic=99,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=99,"yes"                   -> "Sorry, you don't have enough gold."
 Topic=99                         -> "As you wish."
+
+Topic=100,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, CreateContainer(2854,Type,Data)
+Topic=100,"yes"                   -> "Sorry, you don't have enough gold."
+Topic=100                         -> "As you wish."

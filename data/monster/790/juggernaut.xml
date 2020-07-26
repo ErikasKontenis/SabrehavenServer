@@ -1,0 +1,65 @@
+<monster name="Juggernaut" nameDescription="a juggernaut" race="blood" experience="6500" speed="145" manacost="0">
+	<health now="20000" max="20000" />
+	<look type="244" corpse="6335" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks skill="200" attack="140">
+		<attack name="physical" interval="2000" chance="15" range="7" min="0" max="-780">
+			<attribute key="shootEffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="60">
+		<defense name="speed" interval="2000" chance="15" speedchange="72" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+		<defense name="healing" interval="2000" chance="15" min="400" max="900">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="RAAARRR!" />
+		<voice sentence="GRRRRRR!" />
+		<voice sentence="WAHHHH!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="1000" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="1000" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="1000" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="1000" /><!-- gold coin -->
+		<item id="3035" countmax="15" chance="1000" /><!-- platinum coin -->
+		<item id="3582" countmax="8" chance="600" /><!-- ham -->
+		<item id="5944" chance="333" /><!-- soul orb -->
+		<item id="6558" countmax="4" chance="250" /><!-- concentrated demonic blood -->
+		<item id="3030" countmax="4" chance="200" /><!-- small ruby -->
+		<item id="3032" countmax="5" chance="200" /><!-- small emerald -->
+		<item id="3039" chance="138" /><!-- red gem -->
+		<item id="3036" chance="8" /><!-- violet gem -->
+		<item id="3019" chance="5" /><!-- demonbone amulet -->
+		<item id="3360" chance="5" /><!-- golden armor -->
+		<item id="3038" chance="8" /><!-- green gem -->
+		<item id="3481" chance="2" /><!-- closed trap -->
+		<item id="3370" chance="49" /><!-- knight armor -->
+		<item id="3414" chance="8" /><!-- mastermind shield -->
+		<item id="3322" chance="90" /><!-- dragon hammer -->
+		<item id="3364" chance="5" /><!-- golden legs -->
+		<item id="3113" chance="6" /><!-- broken pottery -->
+		<item id="3340" chance="4" /><!-- heavy mace -->
+		<item id="3342" chance="4" /><!-- war axe -->
+	</loot>
+</monster>

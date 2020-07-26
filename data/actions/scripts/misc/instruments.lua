@@ -17,6 +17,11 @@ function onUse(player, item, fromPosition, target, toPosition)
 		else
 			item:getPosition():sendMagicEffect(CONST_ME_SOUND_YELLOW)
 		end
+	elseif item:getId() == 6572 then
+		item:getPosition():sendMagicEffect(CONST_ME_SOUND_GREEN)
+		item:getPosition():sendMonsterSay("TOOOOOOT")
+		item:transform(6573)
+		item:decay()
 	end
 	
 	return true

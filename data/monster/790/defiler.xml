@@ -1,0 +1,65 @@
+<monster name="Defiler" nameDescription="a defiler" race="venom" experience="3700" speed="115" manacost="0">
+	<health now="3650" max="3650" />
+	<look type="238" corpse="6532" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="85" />
+	</flags>
+	<attacks skill="50" attack="80" poison="150">
+		<attack name="poison" interval="2000" chance="20" range="7" min="-160" max="-270">
+			<attribute key="shootEffect" value="poison" />
+		</attack>
+		<attack name="poisoncondition" interval="2000" chance="15" target="0" radius="7" range="7" count="70" min="-400" max="-640">
+			<attribute key="areaEffect" value="greenspark" />
+		</attack>
+		<attack name="poison" interval="2000" chance="20" radius="3" target="0" min="-120" max="-170">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="poisoncondition" interval="2000" chance="10" length="8" spread="3" count="70" min="-500" max="-1000">
+			<attribute key="areaEffect" value="poison" />
+		</attack>
+		<attack name="speed" interval="2000" chance="15" length="8" spread="3" speedchange="-100" duration="15000">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20">
+		<defense name="healing" interval="2000" chance="10" min="280" max="350">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity earth="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Blubb" />
+		<voice sentence="Blubb Blubb" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="1000" /><!-- gold coin -->
+		<item id="3031" countmax="100" chance="1000" /><!-- gold coin -->
+		<item id="3031" countmax="72" chance="1000" /><!-- gold coin -->
+		<item id="3035" countmax="6" chance="950" /><!-- platinum coin -->
+		<item id="5944" chance="200" /><!-- soul orb -->
+		<item id="3034" chance="57" /><!-- talon -->
+		<item id="3041" chance="3" /><!-- blue gem -->
+		<item id="3032" countmax="3" chance="53" /><!-- small emeralds-->
+		<item id="3030" countmax="2" chance="30" /><!-- small rubies -->
+		<item id="6299" chance="30" /><!-- death ring-->
+		<item id="3028" countmax="2" chance="24" /><!-- small diamond -->
+		<item id="3039" chance="15" /><!-- red gem -->
+		<item id="3037" chance="12" /><!-- yellow gem -->
+		<item id="3038" chance="6" /><!-- green gem -->
+	</loot>
+</monster>

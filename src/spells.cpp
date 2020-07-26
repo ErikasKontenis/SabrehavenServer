@@ -1808,34 +1808,37 @@ bool RuneSpell::executeUse(Player* player, Item* item, const Position&, Thing* t
 		return false;
 	}
 
-	if (!scripted) {
-		return false;
-	}
+	bool result = false;
+	if (scripted) {
+		LuaVariant var;
 
-	LuaVariant var;
+		if (needTarget) {
+			var.type = VARIANT_NUMBER;
 
-	if (needTarget) {
-		var.type = VARIANT_NUMBER;
-
-		if (target == nullptr) {
-			Tile* toTile = g_game.map.getTile(toPosition);
-			if (toTile) {
-				const Creature* visibleCreature = toTile->getTopCreature();
-				if (visibleCreature) {
-					var.number = visibleCreature->getID();
+			if (target == nullptr) {
+				Tile* toTile = g_game.map.getTile(toPosition);
+				if (toTile) {
+					const Creature* visibleCreature = toTile->getTopCreature();
+					if (visibleCreature) {
+						var.number = visibleCreature->getID();
+					}
 				}
+			}
+			else {
+				var.number = target->getCreature()->getID();
 			}
 		}
 		else {
-			var.number = target->getCreature()->getID();
+			var.type = VARIANT_POSITION;
+			var.pos = toPosition;
 		}
-	}
-	else {
-		var.type = VARIANT_POSITION;
-		var.pos = toPosition;
+
+		result = internalCastSpell(player, var, isHotkey);
+	} else if (runeFunction) {
+		result = runeFunction(this, player, toPosition);
 	}
 
-	if (!internalCastSpell(player, var, isHotkey)) {
+	if (!result) {
 		return false;
 	}
 

@@ -183,12 +183,18 @@ function Player:onGainExperience(source, exp, rawExp)
 	if configManager.getBoolean(configKeys.STAMINA_SYSTEM) then
 		useStamina(self)
 
+		if self:getStorageValue(17582) > os.time() then
+			exp = exp * 1.1
+		end
+		
 		local staminaMinutes = self:getStamina()
-		if staminaMinutes > 2400 and self:getStorageValue(17582) > os.time() then
-			exp = exp * 1.5
-		elseif staminaMinutes <= 840 then
+		if staminaMinutes <= 840 then
 			exp = exp * 0.5
 		end
+	end
+	
+	if getGlobalStorageValue(17589) > os.time() then
+		exp = exp * (1 + getGlobalStorageValue(17585) / 100) 
 	end
 	
 	return exp
@@ -204,7 +210,20 @@ function Player:onGainSkillTries(skill, tries)
 	end
 
 	if skill == SKILL_MAGLEVEL then
-		return tries * configManager.getNumber(configKeys.RATE_MAGIC)
+		tries = tries * configManager.getNumber(configKeys.RATE_MAGIC)
+		
+		if getGlobalStorageValue(17591) > os.time() then
+			tries = tries * (1 + getGlobalStorageValue(17587) / 100) 
+		end
+		
+		return tries
 	end
-	return tries * configManager.getNumber(configKeys.RATE_SKILL)
+	
+	tries = tries * configManager.getNumber(configKeys.RATE_SKILL)
+	
+	if getGlobalStorageValue(17590) > os.time() then
+		tries = tries * (1 + getGlobalStorageValue(17586) / 100) 
+	end
+	
+	return tries
 end

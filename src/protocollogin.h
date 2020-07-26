@@ -21,6 +21,7 @@
 #define FS_PROTOCOLLOGIN_H_1238F4B473074DF2ABC595C29E81C46D
 
 #include "protocol.h"
+#include "tools.h"
 
 class NetworkMessage;
 class OutputMessage;
@@ -38,6 +39,7 @@ class ProtocolLogin : public Protocol
 		explicit ProtocolLogin(Connection_ptr connection) : Protocol(connection) {}
 
 		void onRecvFirstMessage(NetworkMessage& msg) override;
+		bool isProtocolAllowed(uint16_t version);
 
 	private:
 		void disconnectClient(const std::string& message, uint16_t version);

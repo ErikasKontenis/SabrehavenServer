@@ -100,9 +100,17 @@ const char* getReturnMessage(ReturnValue value);
 
 void getFilesInDirectory(const boost::filesystem::path& root, const std::string& ext, std::vector<boost::filesystem::path>& ret);
 
+std::string getClientVersionString(uint32_t version);
+std::string getClientVersionString(ClientVersion_t version);
+
 inline int64_t OTSYS_TIME()
 {
 	return std::chrono::duration_cast<std::chrono::milliseconds>(std::chrono::system_clock::now().time_since_epoch()).count();
+}
+
+inline int32_t OTSYS_TIME_MINUTES()
+{
+	return std::chrono::duration_cast<std::chrono::minutes>(std::chrono::system_clock::now().time_since_epoch()).count();
 }
 
 #endif

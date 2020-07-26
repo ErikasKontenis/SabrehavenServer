@@ -28,7 +28,7 @@
 		<attack name="lifedrain" chance="8" range="7" target="1" min="-45" max="-170">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>	
-			<attack name="speed" chance="10" range="7" speedchange="-600" duration="5000">
+			<attack name="speed" chance="10" range="7" speedchange="-100" duration="5000">
 		</attack>	
 	</attacks>
 	<defenses armor="15" defense="18">

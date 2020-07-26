@@ -28,7 +28,7 @@ Topic=2,"yes" -> "I hope that I am not asking too much of you with this task. I 
 				"I would be deeply grateful if you could support me in this matter and collect a sample of the blooming Griffinclaw for me. ...",
 				"Have you understood everything I told you and will fulfill this task for me?", Topic=3
 Topic=2 -> "Maybe another time."
-Topic=3,"yes" -> Type=4867, Amount=1, "Alright then. Take this botanist's container and return to me once you were able to retrieve a sample. Don't lose patience!", Create(Type), SetQuestValue(17535,1)
+Topic=3,"yes" -> Type=4867, Amount=1, "Alright then. Take this botanist's container and return to me once you were able to retrieve a sample. Don't lose patience!", Create(Type), SetQuestValue(17535,1), SetQuestValue(17594,1)
 Topic=3 -> "Maybe another time."
 
 "task",QuestValue(17535)=1 -> Type=5937, Amount=1, "Were you able to obtain a sample of the Griffinclaw?", Topic=4

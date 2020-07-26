@@ -52,6 +52,10 @@ enum MagicEffectClasses : uint8_t {
 	CONST_ME_SOUND_WHITE = 25,
 	CONST_ME_BUBBLES = 26,
 	CONST_ME_CRAPS = 27,
+	CONST_ME_GIFT_WRAPS = 28,
+	CONST_ME_FIREWORK_YELLOW = 29,
+	CONST_ME_FIREWORK_RED = 30,
+	CONST_ME_FIREWORK_BLUE = 31,
 };
 
 enum ShootType_t : uint8_t {
@@ -72,6 +76,7 @@ enum ShootType_t : uint8_t {
 	CONST_ANI_SNOWBALL = 13,
 	CONST_ANI_POWERBOLT = 14,
 	CONST_ANI_POISON = 15,
+	CONST_ANI_INFERNALBOLT = 16,
 };
 
 enum SpeakClasses : uint8_t {
@@ -276,6 +281,8 @@ enum item_t : uint16_t {
 	ITEM_FULLSPLASH = 2886,
 	ITEM_SMALLSPLASH = 2889,
 
+	ITEM_BAG = 2853,
+
 	ITEM_PARCEL = 3503,
 	ITEM_PARCEL_STAMPED = 3504,
 	ITEM_LETTER = 3505,
@@ -349,6 +356,13 @@ enum ReloadTypes_t : uint8_t {
 	RELOAD_TYPE_SPELLS,
 	RELOAD_TYPE_TALKACTIONS,
 	RELOAD_TYPE_WEAPONS,
+};
+
+enum ClientVersion_t : uint16_t {
+	CLIENT_VERSION_780 = 780,
+	CLIENT_VERSION_781 = 781,
+	CLIENT_VERSION_790 = 790,
+	CLIENT_VERSION_792 = 792,
 };
 
 static constexpr int32_t CHANNEL_GUILD = 0x00;

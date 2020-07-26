@@ -1,5 +1,5 @@
 local ovens = {
-	2535, 2537, 2539, 2541, 3510
+	2535, 2537, 2539, 2541, 3510, 6355, 6357, 6359, 6361
 }
 
 local milestone = {
@@ -26,6 +26,12 @@ function onUse(player, item, fromPosition, target, toPosition)
 	elseif item:getId() == 3604 then
 		if table.contains(ovens, target:getId()) then
 			Game.createItem(3600, 1, target:getPosition()) 
+			item:remove(1)
+			return true
+		end
+	elseif item:getId() == 6276 then
+		if table.contains(ovens, target:getId()) then
+			Game.createItem(6277, 1, target:getPosition()) 
 			item:remove(1)
 			return true
 		end

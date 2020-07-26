@@ -119,6 +119,11 @@ void Monster::onAttackedCreature(Creature* creature)
 	}
 }
 
+void Monster::onAttackedCreatureDisappear(bool)
+{
+	extraMeleeAttack = true;
+}
+
 void Monster::onCreatureAppear(Creature* creature, bool isLogin)
 {
 	Creature::onCreatureAppear(creature, isLogin);
@@ -855,6 +860,36 @@ void Monster::onThink(uint32_t interval)
 	}
 }
 
+void Monster::doExtraMeleeAttack()
+{
+	if (!attackedCreature || (isSummon() && attackedCreature == this)) {
+		return;
+	}
+
+	bool updateLook = false;
+	bool isCloseAttack = false;
+
+	if (OTSYS_TIME() >= earliestAttackTime && !isFleeing()) {
+		updateLook = true;
+		isCloseAttack = Combat::closeAttack(this, attackedCreature, FIGHTMODE_BALANCED);
+		if (isCloseAttack) {
+			egibleToDance = true;
+			earliestAttackTime = OTSYS_TIME() + 2000;
+			removeCondition(CONDITION_AGGRESSIVE, true);
+			extraMeleeAttack = false;
+		}
+
+		if (!isCloseAttack) {
+			//melee swing out of reach
+			extraMeleeAttack = true;
+		}
+	}
+
+	if (updateLook) {
+		updateLookDirection();
+	}
+}
+
 void Monster::doAttacking(uint32_t)
 {
 	if (!attackedCreature || (isSummon() && attackedCreature == this)) {
@@ -865,13 +900,21 @@ void Monster::doAttacking(uint32_t)
 	const Position& targetPos = attackedCreature->getPosition();
 
 	bool updateLook = false;
+	bool isCloseAttack = false;
 
 	if (OTSYS_TIME() >= earliestAttackTime && !isFleeing()) {
 		updateLook = true;
-		if (Combat::closeAttack(this, attackedCreature, FIGHTMODE_BALANCED)) {
+		isCloseAttack = Combat::closeAttack(this, attackedCreature, FIGHTMODE_BALANCED);
+		if (isCloseAttack) {
 			egibleToDance = true;
 			earliestAttackTime = OTSYS_TIME() + 2000;
 			removeCondition(CONDITION_AGGRESSIVE, true);
+			extraMeleeAttack = false;
+		}
+
+		if (!isCloseAttack) {
+			//melee swing out of reach
+			extraMeleeAttack = true;
 		}
 	}
 
@@ -879,10 +922,10 @@ void Monster::doAttacking(uint32_t)
 		if (spellBlock.range != 0 && std::max<uint32_t>(Position::getDistanceX(myPos, targetPos), Position::getDistanceY(myPos, targetPos)) <= spellBlock.range) {
 			if (uniform_random(0, spellBlock.chance) == 0 && (master || health > mType->info.runAwayHealth || uniform_random(1, 3) == 1)) {
 				updateLookDirection();
-
+	
 				minCombatValue = spellBlock.minCombatValue;
 				maxCombatValue = spellBlock.maxCombatValue;
-
+	
 				spellBlock.spell->castSpell(this, attackedCreature);
 				egibleToDance = true;
 			}

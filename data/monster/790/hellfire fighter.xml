@@ -1,0 +1,52 @@
+<monster name="Hellfire Fighter" nameDescription="a hellfire fighter" race="fire" experience="3900" speed="110" manacost="0">
+	<health now="3800" max="3800" />
+	<look type="243" corpse="6323" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks attack="80" skill="120">
+		<attack name="firefield" interval="2000" chance="10" range="7" radius="3" target="0" />
+		<attack name="fire" interval="2000" chance="10" target="0" length="8" spread="0" min="-392" max="-1500">
+			<attribute key="areaEffect" value="firearea" />
+		</attack>
+		<attack name="fire" interval="2000" chance="15" range="7" radius="3" target="0" min="-60" max="-330">
+			<attribute key="areaEffect" value="fire" />
+		</attack>
+	</attacks>
+	<defenses armor="35" defense="35" />
+	<immunities>
+		<immunity fire="1" />
+		<immunity paralyze="1" />
+		<immunity invisible="1" />
+	</immunities>
+	<loot>
+		<item id="3031" countmax="246" chance="1000" />	<!-- gold coin -->
+		<item id="3124" chance="500" />					<!-- burnt scroll -->
+		<item id="3147" countmax="2" chance="300" />		<!-- blank rune -->
+							<!-- demonic essence -->
+		<item id="5944" chance="120" />					<!-- soul orb -->
+							<!-- fiery heart -->
+		<item id="3071" chance="95" />						<!-- wand of inferno -->
+							<!-- piece of hellfire armor -->
+		<item id="3280" chance="43" />						<!-- fire sword -->
+		<item id="3010" chance="22" />						<!-- emerald bangle -->
+		<item id="3028" chance="14" />						<!-- small diamond -->
+		<item id="3035" chance="10" />						<!-- platinum coin -->
+								<!-- magma legs -->
+								<!-- coal -->
+		<item id="3320" chance="4" />						<!-- fire axe -->
+								<!-- magma coat -->
+		<item id="3019" chance="2" />						<!-- demonbone amulet -->
+	</loot>
+</monster>

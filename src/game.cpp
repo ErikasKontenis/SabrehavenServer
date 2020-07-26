@@ -76,6 +76,11 @@ void Game::setWorldType(WorldType_t type)
 	worldType = type;
 }
 
+void Game::setClientVersion(ClientVersion_t version)
+{
+	clientVersion = version;
+}
+
 void Game::setGameState(GameState_t newState)
 {
 	if (gameState == GAME_STATE_SHUTDOWN) {
@@ -98,6 +103,8 @@ void Game::setGameState(GameState_t newState)
 
 			raids.loadFromXml();
 			raids.startup();
+
+			quests.loadFromXml();
 
 			loadMotdNum();
 			loadPlayersRecord();
@@ -173,7 +180,7 @@ bool Game::loadMainMap(const std::string& filename)
 {
 	Monster::despawnRange = g_config.getNumber(ConfigManager::DEFAULT_DESPAWNRANGE);
 	Monster::despawnRadius = g_config.getNumber(ConfigManager::DEFAULT_DESPAWNRADIUS);
-	return map.loadMap("data/world/" + filename + ".otbm", true);
+	return map.loadMap("data/world" + std::to_string(getClientVersion()) + "/" + filename + ".otbm", true);
 }
 
 void Game::loadMap(const std::string& path)
@@ -2909,6 +2916,31 @@ void Game::playerChangeOutfit(uint32_t playerId, Outfit_t outfit)
 	}
 }
 
+void Game::playerShowQuestLog(uint32_t playerId)
+{
+	Player* player = getPlayerByID(playerId);
+	if (!player) {
+		return;
+	}
+
+	player->sendQuestLog();
+}
+
+void Game::playerShowQuestLine(uint32_t playerId, uint16_t questId)
+{
+	Player* player = getPlayerByID(playerId);
+	if (!player) {
+		return;
+	}
+
+	Quest* quest = quests.getQuestByID(questId);
+	if (!quest) {
+		return;
+	}
+
+	player->sendQuestLine(quest);
+}
+
 void Game::playerSay(uint32_t playerId, uint16_t channelId, SpeakClasses type,
                      const std::string& receiver, const std::string& text)
 {
@@ -3170,6 +3202,16 @@ void Game::checkCreatureAttack(uint32_t creatureId)
 	Creature* creature = getCreatureByID(creatureId);
 	if (creature && creature->getHealth() > 0) {
 		creature->onAttacking(0);
+	}
+}
+
+void Game::checkMonsterExtraAttack(uint32_t creatureId)
+{
+	Creature* creature = getCreatureByID(creatureId);
+	if (creature && creature->getHealth() > 0) {
+		if (Monster* monster = creature->getMonster()) {
+			monster->doExtraMeleeAttack();
+		}
 	}
 }
 
@@ -4594,6 +4636,8 @@ bool Game::reload(ReloadTypes_t reloadType)
 		Npcs::reload();
 		return true;
 	}
+
+	case RELOAD_TYPE_QUESTS: return quests.reload();
 	case RELOAD_TYPE_RAIDS: return raids.reload() && raids.startup();
 
 	case RELOAD_TYPE_SPELLS: {
@@ -4631,6 +4675,7 @@ bool Game::reload(ReloadTypes_t reloadType)
 		raids.reload() && raids.startup();
 		g_talkActions->reload();
 		Item::items.reload();
+		quests.reload();
 		g_globalEvents->reload();
 		g_events->load();
 		g_chat->load();

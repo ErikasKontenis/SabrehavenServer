@@ -507,7 +507,7 @@ uint16_t Player::getLookCorpse() const
 	}
 }
 
-void Player::addStorageValue(const uint32_t key, const int32_t value)
+void Player::addStorageValue(const uint32_t key, const int32_t value, const bool isLogin/* = false*/)
 {
 	if (IS_IN_KEYRANGE(key, RESERVED_RANGE)) {
 		if (IS_IN_KEYRANGE(key, OUTFITS_RANGE)) {
@@ -524,8 +524,20 @@ void Player::addStorageValue(const uint32_t key, const int32_t value)
 	}
 
 	if (value != -1) {
+		int32_t oldValue;
+		getStorageValue(key, oldValue);
+
 		storageMap[key] = value;
-	} else {
+
+		if (!isLogin && g_game.getClientVersion() >= CLIENT_VERSION_790) {
+			auto currentFrameTime = g_dispatcher.getDispatcherCycle();
+			if (lastQuestlogUpdate != currentFrameTime && g_game.quests.isQuestStorage(key, value, oldValue)) {
+				lastQuestlogUpdate = currentFrameTime;
+				sendTextMessage(MESSAGE_EVENT_ADVANCE, "Your questlog has been updated.");
+			}
+		}
+	}
+	else {
 		storageMap.erase(key);
 	}
 }
@@ -1584,6 +1596,15 @@ void Player::dropLoot(Container* corpse, Creature*)
 						sendInventoryItem(static_cast<slots_t>(i), nullptr);
 					}
 				}
+			}
+		}
+	}
+
+	if (g_game.getClientVersion() >= CLIENT_VERSION_790) {
+		if (!inventory[CONST_SLOT_BACKPACK]) {
+			Item* bagItem = Item::CreateItem(ITEM_BAG, 1);
+			if (bagItem) {
+				g_game.internalPlayerAddItem(this, bagItem, false, CONST_SLOT_BACKPACK);
 			}
 		}
 	}

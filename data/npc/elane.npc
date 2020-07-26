@@ -139,7 +139,7 @@ Topic=6,"yes" -> "Alright, I will give you a chance. Pay close attention to what
 				"Lastly, for our arrow heads we need a lot of steel. Best would be one piece of royal steel, one piece of draconian steel and one piece of hell steel. ...",
 				"Did you understand everything I told you and are willing to handle this task?", Topic=7
 Topic=6 -> "However."
-Topic=7,"yes" -> "That's the spirit! I hope you will find my crossbow, %N.", SetQuestValue(17539,1)
+Topic=7,"yes" -> "That's the spirit! I hope you will find my crossbow, %N.", SetQuestValue(17539,1), SetQuestValue(17594,1)
 Topic=7 -> "Maybe another time."
 
 "crossbow",QuestValue(17539)=1 -> Type=5947, Amount=1, "I'm so excited! Have you really found my crossbow?", Topic=8

@@ -20,6 +20,7 @@
 #include "otpch.h"
 
 #include "items.h"
+#include "game.h"
 #include "spells.h"
 #include "movement.h"
 #include "script.h"
@@ -54,7 +55,7 @@ bool Items::reload()
 bool Items::loadItems()
 {
 	ScriptReader script;
-	if (!script.open("data/items/items.srv")) {
+	if (!script.open("data/items" + std::to_string(g_game.getClientVersion()) + "/items.srv")) {
 		return false;
 	}
 

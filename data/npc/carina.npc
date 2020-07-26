@@ -24,15 +24,19 @@ VANISH,!           -> "Good bye."
 "goods"           -> *
 "do","you","sell" -> *
 "do","you","have" -> *
-"jewel"           -> "We offer wedding rings, golden amulets, and ruby necklaces."
+"jewel"           -> "We offer gold converting rings, wedding rings, golden amulets, and ruby necklaces."
 
 "wedding","ring"  -> Type=3004, Amount=1, Price=990,  "Do you want to buy a wedding ring for %P gold?", Topic=1
 "golden","amulet" -> Type=3013, Amount=1, Price=6600, "Do you want to buy a golden amulet for %P gold?", Topic=1
 "ruby","necklace" -> Type=3016, Amount=1, Price=3560, "Do you want to buy a ruby necklace for %P gold?", Topic=1
+"crystal","ring"  -> Type=3007, Amount=1, Price=250,  "Do you want to buy a crystal ring to convert gold for %P gold?", Topic=1
+"gold","convert"  -> *
 
 %1,1<%1,"wedding","ring"  -> Type=3004, Amount=%1, Price=990*%1,  "Do you want to buy %A wedding rings for %P gold?", Topic=1
 %1,1<%1,"golden","amulet" -> Type=3013, Amount=%1, Price=6600*%1, "Do you want to buy %A golden amulets for %P gold?", Topic=1
 %1,1<%1,"ruby","necklace" -> Type=3016, Amount=%1, Price=3560*%1, "Do you want to buy %A ruby necklaces for %P gold?", Topic=1
+%1,1<%1,"crystal","ring" -> Type=3007, Amount=%1, Price=250*%1, "Do you want to buy %A crystal rings to convert gold for %P gold?", Topic=1
+%1,1<%1,"gold","convert" -> *
 
 Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Sorry, make sure to come back, as soon as you have enough money."

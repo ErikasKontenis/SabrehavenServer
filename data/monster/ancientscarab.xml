@@ -48,7 +48,7 @@
 		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="3">
-		<summon name="scarab" chance="7" max="3" />
+		<summon name="larva" chance="7" max="3" />
 	</summons>
 	<loot>
 		<item id="3025" countmax="1" chance="10" /> <!-- an ancient amulet -->
