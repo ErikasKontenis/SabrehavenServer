@@ -84,6 +84,31 @@ local tasks = {
 	['orc'] = {taskerStorage = 17652, progressStorage = 17651, killsRequired = 50},
 }
 
+local function randomSort(arr)
+	local sorted = {}
+	local rand2
+	local rand
+	local mem
+	for i=1,#arr do
+		sorted[i] = arr[i]
+	end
+	if (#arr <= 1) then
+		return sorted;
+	end
+	for i=1,(#arr)^2 do	    
+		repeat
+			rand = math.random(1,#sorted)
+			rand2 = math.random(1,#sorted)
+		until rand ~= rand2
+		mem = sorted[rand]
+		sorted[rand] = pgtss[rand2]
+		sorted[rand2] = mem
+	end
+	return sorted
+end
+
+local maxPlayersInPartyShare = 2
+-- not tested probably nothing is working 
 function onKill(player, target)
 	if target:isPlayer() or target:getMaster() then
 		return true
@@ -98,17 +123,24 @@ function onKill(player, target)
 		if party ~= nil and party:isSharedExperienceEnabled() then
 			players = party:getMembers() -- all members of the party
 			players[#players + 1] = party:getLeader() -- don't forget the leader
+			
+			if #players > maxPlayersInPartyShare then -- if more than 4 players are in party than shuffle the table and give task bonus only for the first 4 players
+				players = randomSort(players)
+			end
 		else
 			players = { player } -- no party? then just the player
 		end
 
-		for _, member in ipairs(players) do
-			local inProgressQuest = member:getStorageValue(task.taskerStorage)
-			if inProgressQuest == task.progressStorage then
-				local playerQuestKills = member:getStorageValue(task.progressStorage)
-				if playerQuestKills < task.killsRequired then
-					member:setStorageValue(task.progressStorage, playerQuestKills + 1)
-					member:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Tracker] You have killed " .. playerQuestKills + 1 .. "/" .. task.killsRequired .. " " .. targetName .. ".")
+		for i, member in ipairs(players) do
+		print(i)
+			if i < maxPlayersInPartyShare then
+				local inProgressQuest = member:getStorageValue(task.taskerStorage)
+				if inProgressQuest == task.progressStorage then
+					local playerQuestKills = member:getStorageValue(task.progressStorage)
+					if playerQuestKills < task.killsRequired then
+						member:setStorageValue(task.progressStorage, playerQuestKills + 1)
+						member:sendTextMessage(MESSAGE_STATUS_CONSOLE_ORANGE, "[Task Tracker] You have killed " .. playerQuestKills + 1 .. "/" .. task.killsRequired .. " " .. targetName .. ".")
+					end
 				end
 			end
 		end
