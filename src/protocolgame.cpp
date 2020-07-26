@@ -247,13 +247,13 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 		return;
 	}
 
-	uint32_t key[4];
+	xtea::key key;
 	key[0] = msg.get<uint32_t>();
 	key[1] = msg.get<uint32_t>();
 	key[2] = msg.get<uint32_t>();
 	key[3] = msg.get<uint32_t>();
 	enableXTEAEncryption();
-	setXTEAKey(key);
+	setXTEAKey(std::move(key));
 
 	if (operatingSystem >= CLIENTOS_OTCLIENT_LINUX) {
 		NetworkMessage opcodeMessage;
@@ -265,7 +265,8 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 
 	msg.skipBytes(1); // gamemaster flag
 
-	uint32_t accountNumber = msg.get<uint32_t>();
+	std::string accountName = msg.getString();
+	uint32_t accountNumber = 1234567;
 	std::string characterName = msg.getString();
 	std::string password = msg.getString();
 
@@ -318,8 +319,30 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 
 void ProtocolGame::onConnect()
 {
+	auto output = OutputMessagePool::getOutputMessage();
+	static std::random_device rd;
+	static std::ranlux24 generator(rd());
+	static std::uniform_int_distribution<uint16_t> randNumber(0x00, 0xFF);
 
+	// Skip checksum
+	output->skipBytes(sizeof(uint32_t));
 
+	// Packet length & type
+	output->add<uint16_t>(0x0006);
+	output->addByte(0x1F);
+
+	// Add timestamp & random number
+	challengeTimestamp = static_cast<uint32_t>(time(nullptr));
+	output->add<uint32_t>(challengeTimestamp);
+
+	challengeRandom = randNumber(generator);
+	output->addByte(challengeRandom);
+
+	// Go back and write checksum
+	output->skipBytes(-12);
+	output->add<uint32_t>(adlerChecksum(output->getOutputBuffer() + sizeof(uint32_t), 8));
+
+	send(output);
 }
 
 void ProtocolGame::disconnectClient(const std::string& message) const
@@ -461,8 +484,7 @@ void ProtocolGame::GetTileDescription(const Tile* tile, NetworkMessage& msg)
 			count++;
 			if (count == 9 && tile->getPosition() == player->getPosition()) {
 				break;
-			}
-			else if (count == 10) {
+			} else if (count == 10) {
 				return;
 			}
 		}
@@ -565,7 +587,7 @@ void ProtocolGame::checkCreatureAsKnown(uint32_t id, bool& known, uint32_t& remo
 
 	known = false;
 
-	if (knownCreatureSet.size() > 150) {
+	if (knownCreatureSet.size() > 250) {
 		// Look for a creature to remove
 		for (auto it = knownCreatureSet.begin(), end = knownCreatureSet.end(); it != end; ++it) {
 			Creature* creature = g_game.getCreatureByID(*it);
@@ -671,7 +693,7 @@ void ProtocolGame::parseOpenPrivateChannel(NetworkMessage& msg)
 void ProtocolGame::parseAutoWalk(NetworkMessage& msg)
 {
 	uint8_t numdirs = msg.getByte();
-	if (numdirs == 0 || (msg.getBufferPosition() + numdirs) != (msg.getLength() + 4)) {
+	if (numdirs == 0 || (msg.getBufferPosition() + numdirs) != (msg.getLength() + 8)) {
 		return;
 	}
 
@@ -1015,6 +1037,19 @@ void ProtocolGame::sendWorldLight(const LightInfo& lightInfo)
 {
 	NetworkMessage msg;
 	AddWorldLight(msg, lightInfo);
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendCreatureWalkthrough(const Creature* creature, bool walkthrough)
+{
+	if (!canSee(creature)) {
+		return;
+	}
+
+	NetworkMessage msg;
+	msg.addByte(0x92);
+	msg.add<uint32_t>(creature->getID());
+	msg.addByte(walkthrough ? 0x00 : 0x01);
 	writeToOutputBuffer(msg);
 }
 
@@ -1601,8 +1636,7 @@ void ProtocolGame::sendAddCreature(const Creature* creature, const Position& pos
 	msg.addByte(0x0A);
 
 	msg.add<uint32_t>(player->getID());
-	msg.addByte(0x32); // beat duration (50)
-	msg.addByte(0x00);
+	msg.add<uint16_t>(0x32); // beat duration (50)
 
 	// can report bugs?
 	if (player->getAccountType() >= ACCOUNT_TYPE_TUTOR) {
@@ -1924,6 +1958,7 @@ void ProtocolGame::AddCreature(NetworkMessage& msg, const Creature* creature, bo
 
 	msg.addByte(player->getSkullClient(creature));
 	msg.addByte(player->getPartyShield(otherPlayer));
+	msg.addByte(player->canWalkthroughEx(creature) ? 0x00 : 0x01);
 }
 
 void ProtocolGame::AddPlayerStats(NetworkMessage& msg)

@@ -243,16 +243,18 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 
 	bool teleport = forceTeleport || !newTile.getGround() || !Position::areInRange<1, 1, 0>(oldPos, newPos);
 
-	SpectatorVec list;
-	getSpectators(list, oldPos, true);
-	getSpectators(list, newPos, true);
+	SpectatorVec spectators, newPosSpectators;
+	getSpectators(spectators, oldPos, true);
+	getSpectators(newPosSpectators, newPos, true);
+	spectators.addSpectators(newPosSpectators);
 
 	std::vector<int32_t> oldStackPosVector;
-	for (Creature* spectator : list) {
+	for (Creature* spectator : spectators) {
 		if (Player* tmpPlayer = spectator->getPlayer()) {
 			if (tmpPlayer->canSeeCreature(&creature)) {
 				oldStackPosVector.push_back(oldTile.getClientIndexOfCreature(tmpPlayer, &creature));
-			} else {
+			}
+			else {
 				oldStackPosVector.push_back(-1);
 			}
 		}
@@ -276,20 +278,22 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 	if (!teleport) {
 		if (oldPos.y > newPos.y) {
 			creature.setDirection(DIRECTION_NORTH);
-		} else if (oldPos.y < newPos.y) {
+		}
+		else if (oldPos.y < newPos.y) {
 			creature.setDirection(DIRECTION_SOUTH);
 		}
 
 		if (oldPos.x < newPos.x) {
 			creature.setDirection(DIRECTION_EAST);
-		} else if (oldPos.x > newPos.x) {
+		}
+		else if (oldPos.x > newPos.x) {
 			creature.setDirection(DIRECTION_WEST);
 		}
 	}
 
 	//send to client
 	size_t i = 0;
-	for (Creature* spectator : list) {
+	for (Creature* spectator : spectators) {
 		if (Player* tmpPlayer = spectator->getPlayer()) {
 			//Use the correct stackpos
 			int32_t stackpos = oldStackPosVector[i++];
@@ -300,7 +304,7 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 	}
 
 	//event method
-	for (Creature* spectator : list) {
+	for (Creature* spectator : spectators) {
 		spectator->onCreatureMove(&creature, &newTile, newPos, &oldTile, oldPos, teleport);
 	}
 
@@ -308,7 +312,7 @@ void Map::moveCreature(Creature& creature, Tile& newTile, bool forceTeleport/* =
 	newTile.postAddNotification(&creature, &oldTile, 0);
 }
 
-void Map::getSpectatorsInternal(SpectatorVec& list, const Position& centerPos, int32_t minRangeX, int32_t maxRangeX, int32_t minRangeY, int32_t maxRangeY, int32_t minRangeZ, int32_t maxRangeZ, bool onlyPlayers) const
+void Map::getSpectatorsInternal(SpectatorVec& spectators, const Position& centerPos, int32_t minRangeX, int32_t maxRangeX, int32_t minRangeY, int32_t maxRangeY, int32_t minRangeZ, int32_t maxRangeZ, bool onlyPlayers) const
 {
 	int_fast16_t min_y = centerPos.y + minRangeY;
 	int_fast16_t min_x = centerPos.x + minRangeX;
@@ -348,23 +352,25 @@ void Map::getSpectatorsInternal(SpectatorVec& list, const Position& centerPos, i
 						continue;
 					}
 
-					list.insert(creature);
+					spectators.emplace_back(creature);
 				}
 				leafE = leafE->leafE;
-			} else {
+			}
+			else {
 				leafE = QTreeNode::getLeafStatic<const QTreeLeafNode*, const QTreeNode*>(&root, nx + FLOOR_SIZE, ny);
 			}
 		}
 
 		if (leafS) {
 			leafS = leafS->leafS;
-		} else {
+		}
+		else {
 			leafS = QTreeNode::getLeafStatic<const QTreeLeafNode*, const QTreeNode*>(&root, startx1, ny + FLOOR_SIZE);
 		}
 	}
 }
 
-void Map::getSpectators(SpectatorVec& list, const Position& centerPos, bool multifloor /*= false*/, bool onlyPlayers /*= false*/, int32_t minRangeX /*= 0*/, int32_t maxRangeX /*= 0*/, int32_t minRangeY /*= 0*/, int32_t maxRangeY /*= 0*/)
+void Map::getSpectators(SpectatorVec& spectators, const Position& centerPos, bool multifloor /*= false*/, bool onlyPlayers /*= false*/, int32_t minRangeX /*= 0*/, int32_t maxRangeX /*= 0*/, int32_t minRangeY /*= 0*/, int32_t maxRangeY /*= 0*/)
 {
 	if (centerPos.z >= MAP_MAX_LAYERS) {
 		return;
@@ -382,11 +388,12 @@ void Map::getSpectators(SpectatorVec& list, const Position& centerPos, bool mult
 		if (onlyPlayers) {
 			auto it = playersSpectatorCache.find(centerPos);
 			if (it != playersSpectatorCache.end()) {
-				if (!list.empty()) {
-					const SpectatorVec& cachedList = it->second;
-					list.insert(cachedList.begin(), cachedList.end());
-				} else {
-					list = it->second;
+				if (!spectators.empty()) {
+					const SpectatorVec& cachedSpectators = it->second;
+					spectators.insert(spectators.end(), cachedSpectators.begin(), cachedSpectators.end());
+				}
+				else {
+					spectators = it->second;
 				}
 
 				foundCache = true;
@@ -397,23 +404,26 @@ void Map::getSpectators(SpectatorVec& list, const Position& centerPos, bool mult
 			auto it = spectatorCache.find(centerPos);
 			if (it != spectatorCache.end()) {
 				if (!onlyPlayers) {
-					if (!list.empty()) {
-						const SpectatorVec& cachedList = it->second;
-						list.insert(cachedList.begin(), cachedList.end());
-					} else {
-						list = it->second;
+					if (!spectators.empty()) {
+						const SpectatorVec& cachedSpectators = it->second;
+						spectators.insert(spectators.end(), cachedSpectators.begin(), cachedSpectators.end());
 					}
-				} else {
-					const SpectatorVec& cachedList = it->second;
-					for (Creature* spectator : cachedList) {
+					else {
+						spectators = it->second;
+					}
+				}
+				else {
+					const SpectatorVec& cachedSpectators = it->second;
+					for (Creature* spectator : cachedSpectators) {
 						if (spectator->getPlayer()) {
-							list.insert(spectator);
+							spectators.emplace_back(spectator);
 						}
 					}
 				}
 
 				foundCache = true;
-			} else {
+			}
+			else {
 				cacheResult = true;
 			}
 		}
@@ -430,28 +440,33 @@ void Map::getSpectators(SpectatorVec& list, const Position& centerPos, bool mult
 				//8->15
 				minRangeZ = std::max<int32_t>(centerPos.getZ() - 2, 0);
 				maxRangeZ = std::min<int32_t>(centerPos.getZ() + 2, MAP_MAX_LAYERS - 1);
-			} else if (centerPos.z == 6) {
+			}
+			else if (centerPos.z == 6) {
 				minRangeZ = 0;
 				maxRangeZ = 8;
-			} else if (centerPos.z == 7) {
+			}
+			else if (centerPos.z == 7) {
 				minRangeZ = 0;
 				maxRangeZ = 9;
-			} else {
+			}
+			else {
 				minRangeZ = 0;
 				maxRangeZ = 7;
 			}
-		} else {
+		}
+		else {
 			minRangeZ = centerPos.z;
 			maxRangeZ = centerPos.z;
 		}
 
-		getSpectatorsInternal(list, centerPos, minRangeX, maxRangeX, minRangeY, maxRangeY, minRangeZ, maxRangeZ, onlyPlayers);
+		getSpectatorsInternal(spectators, centerPos, minRangeX, maxRangeX, minRangeY, maxRangeY, minRangeZ, maxRangeZ, onlyPlayers);
 
 		if (cacheResult) {
 			if (onlyPlayers) {
-				playersSpectatorCache[centerPos] = list;
-			} else {
-				spectatorCache[centerPos] = list;
+				playersSpectatorCache[centerPos] = spectators;
+			}
+			else {
+				spectatorCache[centerPos] = spectators;
 			}
 		}
 	}

@@ -38,7 +38,7 @@ replaceKickOnLogin = true
 maxPacketsPerSecond = -1
 autoStackCumulatives = false
 moneyRate = 1
-clientVersion = 792
+clientVersion = 870
 
 -- Deaths
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
@@ -55,7 +55,7 @@ timeBetweenExActions = 1000
 
 -- Map
 -- NOTE: set mapName WITHOUT .otbm at the end
-mapName = "map"
+mapName = "mymap"
 mapAuthor = "CipSoft"
 
 -- MySQL

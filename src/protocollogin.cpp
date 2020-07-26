@@ -128,13 +128,13 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 		return;
 	}
 
-	uint32_t key[4];
+	xtea::key key;
 	key[0] = msg.get<uint32_t>();
 	key[1] = msg.get<uint32_t>();
 	key[2] = msg.get<uint32_t>();
 	key[3] = msg.get<uint32_t>();
 	enableXTEAEncryption();
-	setXTEAKey(key);
+	setXTEAKey(std::move(key));
 
 	if (!isProtocolAllowed(version)) {
 		std::ostringstream ss;
@@ -170,11 +170,12 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 		return;
 	}
 
-	uint32_t accountNumber = msg.get<uint32_t>();
-	if (!accountNumber) {
-		disconnectClient("Invalid account number.", version);
-		return;
-	}
+	//uint32_t accountNumber = msg.get<uint32_t>();
+	std::string accountName = msg.getString();
+	//if (!accountNumber) {
+	//	disconnectClient("Invalid account number.", version);
+	//	return;
+//	}
 
 	std::string password = msg.getString();
 	if (password.empty()) {
@@ -183,7 +184,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	}
 
 	auto thisPtr = std::static_pointer_cast<ProtocolLogin>(shared_from_this());
-	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, accountNumber, password, version)));
+	g_dispatcher.addTask(createTask(std::bind(&ProtocolLogin::getCharacterList, thisPtr, 1234567, password, version)));
 }
 
 
