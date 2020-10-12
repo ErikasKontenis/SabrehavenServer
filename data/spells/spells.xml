@@ -45,6 +45,10 @@
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
+	<instant name="Poison Wave" words="exevo pox hur" lvl="38" mana="250" direction="1" needlearn="0" script="spells/poison wave.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
 
 	<!-- Knight Spells -->
 	<instant name="Challenge" words="exeta res" lvl="20" mana="30" prem="1" aggressive="0" needlearn="0" script="spells/challenge.lua">
