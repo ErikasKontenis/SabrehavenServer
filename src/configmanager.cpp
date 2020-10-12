@@ -108,6 +108,8 @@ bool ConfigManager::load()
 	integer[KICK_AFTER_MINUTES] = getGlobalNumber(L, "kickIdlePlayerAfterMinutes", 15);
 	integer[PROTECTION_LEVEL] = getGlobalNumber(L, "protectionLevel", 1);
 	integer[DEATH_LOSE_PERCENT] = getGlobalNumber(L, "deathLosePercent", -1);
+	integer[KNIGHT_CLOSE_ATTACK_DAMAGE_INCREASE_PERCENT] = getGlobalNumber(L, "knightCloseAttackDamageIncreasePercent", -1);
+	integer[PALADIN_RANGE_ATTACK_DAMAGE_INCREASE_PERCENT] = getGlobalNumber(L, "paladinRangeAttackDamageIncreasePercent", -1);
 	integer[STATUSQUERY_TIMEOUT] = getGlobalNumber(L, "statusTimeout", 5000);
 	integer[WHITE_SKULL_TIME] = getGlobalNumber(L, "whiteSkullTime", 15 * 60);
 	integer[RED_SKULL_TIME] = getGlobalNumber(L, "redSkullTime", 30 * 24 * 60 * 60);

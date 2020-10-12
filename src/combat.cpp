@@ -896,9 +896,12 @@ bool Combat::closeAttack(Creature* attacker, Creature* target, fightMode_t fight
 	combatDamage.value = totalDamage;
 	combatDamage.origin = ORIGIN_MELEE;
 
-	if (Player* player = attacker->getPlayer()) {
-		if (player->getVocationId() == 4 || player->getVocationId() == 8) {
-			combatDamage.value += combatDamage.value * 0.20;
+	int32_t knightCloseAttackDamageIncreasePercent = g_config.getNumber(ConfigManager::KNIGHT_CLOSE_ATTACK_DAMAGE_INCREASE_PERCENT);
+	if (knightCloseAttackDamageIncreasePercent != -1) {
+		if (Player* player = attacker->getPlayer()) {
+			if (player->getVocationId() == 4 || player->getVocationId() == 8) {
+				combatDamage.value += combatDamage.value * knightCloseAttackDamageIncreasePercent / 100;
+			}
 		}
 	}
 
@@ -1018,9 +1021,12 @@ bool Combat::rangeAttack(Creature* attacker, Creature* target, fightMode_t fight
 		combatDamage.value = Combat::getTotalDamage(skillValue, attackValue, fightMode);
 		combatDamage.origin = ORIGIN_RANGED;
 
-		if (Player* player = attacker->getPlayer()) {
-			if (player->getVocationId() == 3 || player->getVocationId() == 7) {
-				combatDamage.value += combatDamage.value * 0.15;
+		int32_t paladinRangeAttackDamageIncreasePercent = g_config.getNumber(ConfigManager::PALADIN_RANGE_ATTACK_DAMAGE_INCREASE_PERCENT);
+		if (paladinRangeAttackDamageIncreasePercent != -1) {
+			if (Player* player = attacker->getPlayer()) {
+				if (player->getVocationId() == 3 || player->getVocationId() == 7) {
+					combatDamage.value += combatDamage.value * paladinRangeAttackDamageIncreasePercent / 100;
+				}
 			}
 		}
 
