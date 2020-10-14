@@ -520,6 +520,9 @@ class LuaScriptInterface
 		static int luaIsType(lua_State* L);
 		static int luaRawGetMetatable(lua_State* L);
 
+		// random
+		static int luaRandomRand(lua_State* L);
+
 		// os
 		static int luaSystemTime(lua_State* L);
 
@@ -1161,6 +1164,7 @@ class LuaScriptInterface
 		static int luaMonsterTypeGetMaxSummons(lua_State* L);
 
 		static int luaMonsterTypeGetArmor(lua_State* L);
+		static int luaMonsterTypeGetSkill(lua_State* L);
 		static int luaMonsterTypeGetDefense(lua_State* L);
 		static int luaMonsterTypeGetOutfit(lua_State* L);
 		static int luaMonsterTypeGetRace(lua_State* L);

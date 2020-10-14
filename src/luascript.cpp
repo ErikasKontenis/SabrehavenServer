@@ -1684,6 +1684,9 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::BLOCK_HEIGHT)
 	registerEnumIn("configKeys", ConfigManager::DROP_ITEMS)
 	registerEnumIn("configKeys", ConfigManager::CLIENT_VERSION)
+	
+	// random
+	registerMethod("os", "rand", LuaScriptInterface::luaRandomRand);
 
 	// os
 	registerMethod("os", "mtime", LuaScriptInterface::luaSystemTime);
@@ -2348,6 +2351,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("MonsterType", "getMaxSummons", LuaScriptInterface::luaMonsterTypeGetMaxSummons);
 
 	registerMethod("MonsterType", "getArmor", LuaScriptInterface::luaMonsterTypeGetArmor);
+	registerMethod("MonsterType", "getSkill", LuaScriptInterface::luaMonsterTypeGetSkill);
 	registerMethod("MonsterType", "getDefense", LuaScriptInterface::luaMonsterTypeGetDefense);
 	registerMethod("MonsterType", "getOutfit", LuaScriptInterface::luaMonsterTypeGetOutfit);
 	registerMethod("MonsterType", "getRace", LuaScriptInterface::luaMonsterTypeGetRace);
@@ -3885,6 +3889,14 @@ int LuaScriptInterface::luaRawGetMetatable(lua_State* L)
 {
 	// rawgetmetatable(metatableName)
 	luaL_getmetatable(L, getString(L, 1).c_str());
+	return 1;
+}
+
+// random
+int LuaScriptInterface::luaRandomRand(lua_State* L)
+{
+	// random.rand()
+	lua_pushnumber(L, rand());
 	return 1;
 }
 
@@ -11220,6 +11232,19 @@ int LuaScriptInterface::luaMonsterTypeGetArmor(lua_State* L)
 	if (monsterType) {
 		lua_pushnumber(L, monsterType->info.armor);
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaMonsterTypeGetSkill(lua_State* L)
+{
+	// monsterType:getSkill()
+	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+	if (monsterType) {
+		lua_pushnumber(L, monsterType->info.skill);
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;
