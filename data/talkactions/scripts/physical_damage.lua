@@ -262,7 +262,7 @@ function onSay(player, words, param)
 	if ammunition ~= nil and weapon ~= nil and weapon:getWeaponType() == WEAPON_DISTANCE then
 		commandStr = commandStr .. ", " .. ammunitionName
 	end
-	player:sendCancelMessage(commandStr)
+	player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, commandStr)
 	
 	local offensiveDamageContainer = getTotalDamage(creature, weapon, ammunition, vocation, attack, skillValue, FIGHTMODE_ATTACK)
 	local balancedDamageContainer = getTotalDamage(creature, weapon, ammunition, vocation, attack, skillValue, FIGHTMODE_BALANCED)
