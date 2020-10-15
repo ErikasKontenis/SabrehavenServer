@@ -95,7 +95,7 @@ void NetworkMessage::addPosition(const Position& pos)
 	addByte(pos.z);
 }
 
-void NetworkMessage::addItem(uint16_t id, uint8_t count)
+void NetworkMessage::addItem(uint16_t id, uint8_t count, bool textWindow /* = false*/)
 {
 	const ItemType& it = Item::items[id];
 
@@ -105,14 +105,17 @@ void NetworkMessage::addItem(uint16_t id, uint8_t count)
 		add<uint16_t>(it.id);
 	}
 
-	if (it.stackable || it.isRune()) {
-		addByte(count);
-	} else if (it.isSplash() || it.isFluidContainer()) {
-		addByte(getLiquidColor(count));
+	if (!textWindow) {
+		if (it.stackable || it.isRune()) {
+			addByte(count);
+		}
+		else if (it.isSplash() || it.isFluidContainer()) {
+			addByte(getLiquidColor(count));
+		}
 	}
 }
 
-void NetworkMessage::addItem(const Item* item)
+void NetworkMessage::addItem(const Item* item, bool textWindow /* = false*/)
 {
 	const ItemType& it = Item::items[item->getID()];
 
@@ -122,12 +125,16 @@ void NetworkMessage::addItem(const Item* item)
 		add<uint16_t>(it.id);
 	}
 
-	if (it.stackable) {
-		addByte(std::min<uint16_t>(0xFF, item->getItemCount()));
-	} else if (it.isRune()) {
-		addByte(std::min<uint16_t>(0xFF, item->getCharges()));
-	} else if (it.isSplash() || it.isFluidContainer()) {
-		addByte(getLiquidColor(item->getFluidType()));
+	if (!textWindow) {
+		if (it.stackable) {
+			addByte(std::min<uint16_t>(0xFF, item->getItemCount()));
+		}
+		else if (it.isRune()) {
+			addByte(std::min<uint16_t>(0xFF, item->getCharges()));
+		}
+		else if (it.isSplash() || it.isFluidContainer()) {
+			addByte(getLiquidColor(item->getFluidType()));
+		}
 	}
 }
 

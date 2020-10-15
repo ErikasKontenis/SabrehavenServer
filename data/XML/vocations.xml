@@ -18,7 +18,7 @@
 		<skill id="5" multiplier="1.5"/>
 		<skill id="6" multiplier="1.1"/>
 	</vocation>
-	<vocation id="2" flagid="2" name="Druid" description="a druid" gaincap="10" gainhp="5" gainmana="30" gainhpticks="6" gainhpamount="1" gainmanaticks="3" gainmanaamount="2" manamultiplier="1.1" attackspeed="2000" basespeed="70" soulmax="100" gainsoulticks="120" fromvoc="2">
+	<vocation id="2" flagid="2" name="Druid" description="a druid" gaincap="10" gainhp="5" gainmana="30" gainhpticks="6" gainhpamount="1" gainmanaticks="3" gainmanaamount="2" manamultiplier="1.1" attackspeed="1" basespeed="70" soulmax="100" gainsoulticks="120" fromvoc="2">
 		<skill id="0" multiplier="1.5"/>
 		<skill id="1" multiplier="1.8"/>
 		<skill id="2" multiplier="1.8"/>
