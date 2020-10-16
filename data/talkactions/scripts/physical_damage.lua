@@ -281,9 +281,21 @@ function onSay(player, words, param)
 	message = message .. "Min: " .. defensiveDamageContainer[1] .. ", Max: " .. defensiveDamageContainer[2] .. "\n"
 	
 	message = message .. "\nFirst 100 Hits Damage Simulator in Offensive Fighting\n"
+	local creatureHealth = creature:getType():getMaxHealth()
+	local creatureHitsTillDeath = 1
 	for i=1,100 do
 		local damageContainer = getTotalDamage(creature, weapon, ammunition, vocation, attack, skillValue, FIGHTMODE_ATTACK)
 		message = message .. "Hit: " .. i .. ", Damage: " .. damageContainer[0] .. "\n"
+		creatureHealth = creatureHealth + damageContainer[0]
+		if creatureHealth > 0 then
+			creatureHitsTillDeath = creatureHitsTillDeath + 1
+		end
+	end
+
+	if creatureHealth <= 0 then
+		message = message .. "\nIt would take you approximately " .. creatureHitsTillDeath .. " hits to slain " .. creature:getName() .. ".\n"
+	else
+		message = message .. "\nIt would take you more than 100 hits to slain " .. creature:getName() .. ".\n"
 	end
 	player:showTextDialog(weapon and weapon:getId() or 2950, message, false)
 	return false
