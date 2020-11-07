@@ -1138,6 +1138,8 @@ CREATE TABLE `players` (
   `onlinetime` int(11) NOT NULL DEFAULT '0',
   `deletion` bigint(15) NOT NULL DEFAULT '0',
   `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `offlinetraining_time` smallint(5) unsigned NOT NULL DEFAULT '43200',
+  `offlinetraining_skill` int(11) NOT NULL DEFAULT '-1',
   `stamina` smallint(5) NOT NULL DEFAULT '3360',
   `skill_fist` int(10) UNSIGNED NOT NULL DEFAULT '10',
   `skill_fist_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',

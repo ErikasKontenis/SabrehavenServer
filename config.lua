@@ -1,6 +1,6 @@
 -- Custom
-knightCloseAttackDamageIncreasePercent = 50
-paladinRangeAttackDamageIncreasePercent = 40
+knightCloseAttackDamageIncreasePercent = 20
+paladinRangeAttackDamageIncreasePercent = 15
 
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
