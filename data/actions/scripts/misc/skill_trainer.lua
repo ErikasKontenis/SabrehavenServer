@@ -1,13 +1,13 @@
 local statues = {
-	[2032] = SKILL_SWORD,
-	[18489] = SKILL_AXE,
-	[18490] = SKILL_CLUB,
-	[18491] = SKILL_DISTANCE,
-	[18492] = SKILL_MAGLEVEL
+	[17725] = SKILL_SWORD,
+	[17724] = SKILL_AXE,
+	[17726] = SKILL_CLUB,
+	[17727] = SKILL_DISTANCE,
+	[17728] = SKILL_MAGLEVEL
 }
 
 function onUse(player, item, fromPosition, target, toPosition, isHotkey)
-	local skill = statues[item:getId()]
+	local skill = statues[item:getActionId()]
 	if not player:isPremium() then
 		player:sendCancelMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT)
 		return true
@@ -16,8 +16,15 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	if player:isPzLocked() then
 		return false
 	end
-
+	
+	local entreePrice = 1000
+	if player:getBankBalance() < entreePrice then
+		player:sendCancelMessage("You do not have 1000 gold coins in your bank account balance to participate in offline training.")
+		return true
+	end
+	
 	player:setOfflineTrainingSkill(skill)
+	player:setBankBalance(player:getBankBalance() - entreePrice)
 	player:remove()
 	return true
 end

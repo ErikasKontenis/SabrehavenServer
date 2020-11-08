@@ -10,7 +10,8 @@ function onLogin(player)
 	player:setOfflineTrainingSkill(-1)
 
 	if offlineTime < 600 then
-		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You must be logged out for more than 10 minutes to start offline training.")
+		player:setBankBalance(player:getBankBalance() + 1000)
+		player:sendTextMessage(MESSAGE_EVENT_ADVANCE, "You must be logged out for more than 10 minutes to start offline training. Your 1000 gold coins entree fee were returned to your bank account.")
 		return true
 	end
 

@@ -239,7 +239,7 @@
 	<action itemid="3031" script="misc/changegold.lua" />
 	<action itemid="3035" script="misc/changegold.lua" />
 	<action itemid="3043" script="misc/changegold.lua" />
-	<action fromid="2032" toid="2032" script="misc/skill_trainer.lua" />
+	<action fromaid="17724" toaid="17728" script="misc/skill_trainer.lua" />
 	
 	<!-- Chests -->
 	<action itemid="2479" script="misc/chests.lua" />
