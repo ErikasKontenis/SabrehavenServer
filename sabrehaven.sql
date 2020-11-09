@@ -93,7 +93,8 @@ CREATE TABLE `guilds` (
   `name` varchar(255) NOT NULL,
   `ownerid` int(11) NOT NULL,
   `creationdata` int(11) NOT NULL,
-  `motd` varchar(255) NOT NULL DEFAULT ''
+  `motd` varchar(255) NOT NULL DEFAULT '',
+  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

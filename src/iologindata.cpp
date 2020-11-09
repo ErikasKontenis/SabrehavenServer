@@ -829,6 +829,18 @@ uint32_t IOLoginData::getGuidByName(const std::string& name)
 	return result->getNumber<uint32_t>("id");
 }
 
+uint64_t IOLoginData::getGuildBalance(uint32_t id)
+{
+	std::ostringstream query;
+	query << "SELECT `balance` FROM `guilds` WHERE `id` = " << id;
+	DBResult_ptr result = Database::getInstance()->storeQuery(query.str());
+	if (!result) {
+		return 0;
+	}
+
+	return result->getNumber<uint64_t>("balance");
+}
+
 // Return 0 means player not found, 1 player is without vocation, 2 player with vocation
 uint16_t IOLoginData::canTransferMoneyToByName(const std::string& name)
 {

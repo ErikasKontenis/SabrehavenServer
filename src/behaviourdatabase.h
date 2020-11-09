@@ -81,6 +81,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_SUMMON, // summons a monster
 	BEHAVIOUR_TYPE_EXPERIENCE, // grant experience to a player
 	BEHAVIOUR_TYPE_BALANCE, // return player balance
+	BEHAVIOUR_TYPE_GUILDBALANCE, // return guild balance
 	BEHAVIOUR_TYPE_WITHDRAW, // withdraw from player bank balance
 	BEHAVIOUR_TYPE_DEPOSIT, // deposit x amount of gold
 	BEHAVIOUR_TYPE_TRANSFER, // transfer x amount of gold

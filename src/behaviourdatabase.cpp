@@ -541,6 +541,9 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 	} else if (identifier == "balance") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_BALANCE;
+	} else if (identifier == "guildbalance") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_GUILDBALANCE;
 	} else if (identifier == "transfertoplayernamestate") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_MESSAGE_TRANSFERTOPLAYERNAME_STATE;
@@ -1254,6 +1257,14 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 		return checkOperation(player, node, message);
 	case BEHAVIOUR_TYPE_BALANCE:
 		return player->getBankBalance();
+	case BEHAVIOUR_TYPE_GUILDBALANCE: {
+		const Guild* playerGuild = player->getGuild();
+		if (!playerGuild) {
+			return false;
+		}
+
+		return IOLoginData::getGuildBalance(playerGuild->getId());
+	}
 	case BEHAVIOUR_TYPE_CLIENTVERSION:
 		return g_game.getClientVersion();
 	case BEHAVIOUR_TYPE_MESSAGE_TRANSFERTOPLAYERNAME_STATE: {
