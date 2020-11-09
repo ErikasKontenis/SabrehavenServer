@@ -34,4 +34,7 @@
 		<item id="3130" countmax="1" chance="80" /> <!-- twigs -->
 		<item id="3412" countmax="1" chance="150" /> <!-- a wooden shield -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

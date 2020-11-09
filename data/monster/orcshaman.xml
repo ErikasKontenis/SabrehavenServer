@@ -54,4 +54,7 @@
 		<item id="3289" countmax="1" chance="70" /> <!-- a staff -->
 		<item id="3072" countmax="1" chance="10" /> <!-- a wand of plague -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

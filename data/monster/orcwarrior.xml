@@ -35,4 +35,7 @@
 		<item id="3273" countmax="1" chance="500" /> <!-- a sabre -->
 		<item id="3412" countmax="1" chance="180" /> <!-- a wooden shield -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

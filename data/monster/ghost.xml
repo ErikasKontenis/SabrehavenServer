@@ -43,4 +43,7 @@
 		<item id="3049" countmax="1" chance="2" /> <!-- a stealth ring -->
 		<item id="5909" countmax="1" chance="8" /> <!-- white piece of cloth -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

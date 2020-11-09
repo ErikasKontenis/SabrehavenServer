@@ -41,4 +41,7 @@
 		<item id="3375" countmax="1" chance="20" /> <!-- a soldier helmet -->
 		<item id="5878" countmax="1" chance="10" /> <!-- minotaur leather -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -39,14 +39,17 @@
 		<voice sentence="Praise voodoo!" />
 	</voices>
 	<loot>
-    <item id="3085" chance="14" /><!-- dragon necklace -->
-    <item id="2843" chance="13" /><!-- book -->
-    <item id="5810" chance="14" /><!-- pirate voodoo doll -->
-    <item id="6088" chance="10" /><!-- music sheet -->
-    <item id="3282" chance="56" /><!-- morning star -->
-    <item id="3052" chance="9" /><!-- life ring -->
-    <item id="3031" countmax="40" chance="240" /><!-- gold coin -->
-    <item id="3032" chance="10" /><!-- small emerald -->
-    <item id="3065" chance="7" /><!-- terra rod -->
-</loot>
+		<item id="3085" chance="14" /><!-- dragon necklace -->
+		<item id="2843" chance="13" /><!-- book -->
+		<item id="5810" chance="14" /><!-- pirate voodoo doll -->
+		<item id="6088" chance="10" /><!-- music sheet -->
+		<item id="3282" chance="56" /><!-- morning star -->
+		<item id="3052" chance="9" /><!-- life ring -->
+		<item id="3031" countmax="40" chance="240" /><!-- gold coin -->
+		<item id="3032" chance="10" /><!-- small emerald -->
+		<item id="3065" chance="7" /><!-- terra rod -->
+	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

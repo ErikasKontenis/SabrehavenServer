@@ -47,4 +47,7 @@
 		<item id="3298" countmax="4" chance="100" /> <!-- a throwing knife -->
 		<item id="3369" countmax="1" chance="1" /> <!-- a warrior helmet -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

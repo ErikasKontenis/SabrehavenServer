@@ -64,4 +64,7 @@
 		<item id="5882" countmax="1" chance="18" /> <!-- red dragon scale -->
 		<item id="5948" countmax="1" chance="10" /> <!-- red dragon leather -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

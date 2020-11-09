@@ -38,4 +38,7 @@
 		<item id="3351" countmax="1" chance="10" /> <!-- a steel helmet -->
 		<item id="3053" countmax="1" chance="1" /> <!-- a time ring -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

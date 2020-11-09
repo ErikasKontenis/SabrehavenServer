@@ -45,4 +45,7 @@
 		<item id="3581" chance="54" /><!-- shrimp -->
 		<item id="5895" chance="24" /><!-- fish fin -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

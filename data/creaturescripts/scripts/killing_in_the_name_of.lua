@@ -84,56 +84,37 @@ local tasks = {
 	['orc'] = {taskerStorage = 17652, progressStorage = 17651, killsRequired = 50},
 }
 
-local function randomSort(arr)
-	local sorted = {}
-	local rand2
-	local rand
-	local mem
-	for i=1,#arr do
-		sorted[i] = arr[i]
-	end
-	if (#arr <= 1) then
-		return sorted;
-	end
-	for i=1,(#arr)^2 do	    
-		repeat
-			rand = math.random(1,#sorted)
-			rand2 = math.random(1,#sorted)
-		until rand ~= rand2
-		mem = sorted[rand]
-		sorted[rand] = pgtss[rand2]
-		sorted[rand2] = mem
-	end
-	return sorted
-end
-
 local maxPlayersInPartyShare = 2
--- not tested probably nothing is working 
-function onKill(player, target)
-	if target:isPlayer() or target:getMaster() then
+
+function onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
+	if not creature:isMonster() or creature:getMaster() then
 		return true
 	end
 	
-	local targetName = target:getName():lower()
+	local player = mostdamagekiller
+	if not mostdamagekiller:isPlayer() then
+		local master = mostdamagekiller:getMaster()
+		if master and master:isPlayer() then
+			player = master
+		else
+			return true
+		end
+	end
+	
+	local targetName = creature:getName():lower()
 	local task = tasks[targetName]
 	if task ~= nil then
-	
 		local players
 		local party = player:getParty()
-		if party ~= nil and party:isSharedExperienceEnabled() then
+		if party ~= nil and party:isSharedExperienceActive() then
 			players = party:getMembers() -- all members of the party
 			players[#players + 1] = party:getLeader() -- don't forget the leader
-			
-			if #players > maxPlayersInPartyShare then -- if more than 4 players are in party than shuffle the table and give task bonus only for the first 4 players
-				players = randomSort(players)
-			end
 		else
 			players = { player } -- no party? then just the player
 		end
 
 		for i, member in ipairs(players) do
-		print(i)
-			if i < maxPlayersInPartyShare then
+			if i <= maxPlayersInPartyShare then
 				local inProgressQuest = member:getStorageValue(task.taskerStorage)
 				if inProgressQuest == task.progressStorage then
 					local playerQuestKills = member:getStorageValue(task.progressStorage)
@@ -145,5 +126,5 @@ function onKill(player, target)
 			end
 		end
 	end
-	return true
+    return true
 end

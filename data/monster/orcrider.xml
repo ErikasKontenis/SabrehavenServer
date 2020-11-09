@@ -43,4 +43,7 @@
 		<item id="2920" countmax="1" chance="80" /> <!-- a torch -->
 		<item id="3012" countmax="1" chance="100" /> <!-- a wolf tooth chain -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

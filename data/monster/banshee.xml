@@ -68,4 +68,7 @@
 		<item id="3004" countmax="1" chance="5" /> <!-- a wedding ring -->
 		<item id="3026" countmax="1" chance="10" /> <!-- a white pearl -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -77,4 +77,7 @@
 		<item id="3373" countmax="1" chance="6" /> <!-- a strange helmet -->
 		<item id="3428" countmax="1" chance="4" /> <!-- a tower shield -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

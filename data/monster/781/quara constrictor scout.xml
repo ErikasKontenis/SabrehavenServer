@@ -36,4 +36,7 @@
 		<item id="5895" chance="10" /><!-- fish fin -->
 		<item id="3033" chance="9" /><!-- small amethyst -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

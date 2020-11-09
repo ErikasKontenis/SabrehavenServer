@@ -59,4 +59,7 @@
 		<item id="5893" countmax="1" chance="9" /> <!-- perfect behemoth fang -->
 		<item id="5930" countmax="1" chance="9" /> <!-- behemoth claw -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

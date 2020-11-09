@@ -39,15 +39,18 @@
 		<summon name="Ghoul" chance="10" max="2" />
 	</summons>
 	<loot>
-    <item id="3053" chance="9" /><!-- time ring -->
-    <item id="5810" chance="19" /><!-- pirate voodoo doll -->
-    <item id="2843" chance="13" /><!-- book -->
-    <item id="3054" chance="15" /><!-- silver amulet -->
-    <item id="3031" countmax="60" chance="227" /><!-- gold coin -->
-    <item id="3311" chance="14" /><!-- clerical mace -->
-    <item id="6089" chance="10" /><!-- music sheet -->
-    <item id="3067" chance="7" /><!-- hailstorm rod -->
-    <item id="3566" chance="6" /><!-- red robe -->
-    <item id="3030" chance="7" /><!-- small ruby -->
-</loot>
+		<item id="3053" chance="9" /><!-- time ring -->
+		<item id="5810" chance="19" /><!-- pirate voodoo doll -->
+		<item id="2843" chance="13" /><!-- book -->
+		<item id="3054" chance="15" /><!-- silver amulet -->
+		<item id="3031" countmax="60" chance="227" /><!-- gold coin -->
+		<item id="3311" chance="14" /><!-- clerical mace -->
+		<item id="6089" chance="10" /><!-- music sheet -->
+		<item id="3067" chance="7" /><!-- hailstorm rod -->
+		<item id="3566" chance="6" /><!-- red robe -->
+		<item id="3030" chance="7" /><!-- small ruby -->
+	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

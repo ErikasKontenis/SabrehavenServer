@@ -28,4 +28,7 @@
 		<item id="5678" countmax="3" chance="10" /><!-- tortoise egg -->
 		<item id="3279" chance="10" /><!-- war hammer -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

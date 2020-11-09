@@ -81,4 +81,7 @@
 		<item id="5954" countmax="1" chance="100" /> <!-- a demon horn -->
 		<item id="5776" countmax="1" chance="1" /> <!-- a Sabrehaven talon -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

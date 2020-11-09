@@ -45,4 +45,7 @@
 		<item id="3061" chance="10" /><!-- life crystal -->
 		<item id="5895" chance="10" /><!-- fish fin -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

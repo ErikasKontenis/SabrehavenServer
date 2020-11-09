@@ -43,4 +43,7 @@
 		<item id="3462" countmax="1" chance="100" /> <!-- a small axe -->
 		<item id="1781" countmax="3" chance="300" /> <!-- a small stone -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -33,4 +33,7 @@
 		<item id="3552" countmax="1" chance="100" /> <!-- leather boots -->
 		<item id="2920" countmax="1" chance="150" /> <!-- a torch -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

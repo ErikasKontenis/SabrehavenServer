@@ -58,4 +58,7 @@
 		<item id="3098" chance="8" /><!-- ring of healing -->
 		<item id="3370" chance="8" /><!-- knight armor -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

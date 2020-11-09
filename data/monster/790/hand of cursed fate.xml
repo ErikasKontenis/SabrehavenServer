@@ -67,4 +67,7 @@
 		<item id="5668" chance="2" /><!-- mysterious voodoo skull -->
 		<item id="3155" countmax="8" chance="42" /><!-- sudden death rune -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

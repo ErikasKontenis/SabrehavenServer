@@ -82,4 +82,7 @@
 		<item id="3081" countmax="1" chance="5" /> <!-- a stone skin amulet -->
 		<item id="3034" countmax="1" chance="11" /> <!-- a talon -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

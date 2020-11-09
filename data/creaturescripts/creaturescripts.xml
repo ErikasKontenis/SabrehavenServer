@@ -9,5 +9,5 @@
 	<event type="login" name="OfflineTraining" script="offlinetraining.lua" />
 		
 	<!-- Killing In The Name Of Quest -->
-	<event type="kill" name="KillingInTheNameOfKills" script="killing_in_the_name_of.lua" />
+	<event type="death" name="KillingInTheNameOf" script="killing_in_the_name_of.lua" />
 </creaturescripts>

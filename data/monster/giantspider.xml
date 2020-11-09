@@ -49,4 +49,7 @@
 		<item id="3053" countmax="1" chance="7" /> <!-- a time ring -->
 		<item id="5879" countmax="1" chance="21" /> <!-- spider silk -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

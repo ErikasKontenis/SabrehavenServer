@@ -58,4 +58,7 @@
 		<item id="3394" countmax="1" chance="6" /> <!-- an amazon armor -->
 		<item id="3437" countmax="1" chance="4" /> <!-- an amazon shield -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>
