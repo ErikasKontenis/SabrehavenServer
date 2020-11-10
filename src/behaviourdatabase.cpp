@@ -292,8 +292,14 @@ bool BehaviourDatabase::loadActions(ScriptReader& script, NpcBehaviour* behaviou
 			} else if (identifier == "withdraw") {
 				action->type = BEHAVIOUR_TYPE_WITHDRAW;
 				searchType = BEHAVIOUR_PARAMETER_ONE;
+			} else if (identifier == "guildwithdraw") {
+				action->type = BEHAVIOUR_TYPE_GUILDWITHDRAW;
+				searchType = BEHAVIOUR_PARAMETER_ONE;
 			} else if (identifier == "deposit") {
 				action->type = BEHAVIOUR_TYPE_DEPOSIT;
+				searchType = BEHAVIOUR_PARAMETER_ONE;
+			} else if (identifier == "guilddeposit") {
+				action->type = BEHAVIOUR_TYPE_GUILDDEPOSIT;
 				searchType = BEHAVIOUR_PARAMETER_ONE;
 			} else if (identifier == "transfer") {
 				action->type = BEHAVIOUR_TYPE_TRANSFER;
@@ -535,6 +541,9 @@ NpcBehaviourNode* BehaviourDatabase::readValue(ScriptReader& script)
 	} else if (identifier == "level") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_LEVEL;
+	} else if (identifier == "guildlevel") {
+		node = new NpcBehaviourNode();
+		node->type = BEHAVIOUR_TYPE_GUILDLEVEL;
 	} else if (identifier == "poison") {
 		node = new NpcBehaviourNode();
 		node->type = BEHAVIOUR_TYPE_POISON;
@@ -1063,9 +1072,55 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 		player->setBankBalance(player->getBankBalance() - money);
 		break;
 	}
+	case BEHAVIOUR_TYPE_GUILDWITHDRAW: {
+		int32_t money = evaluate(action->expression, player, message);
+		const Guild* playerGuild = player->getGuild();
+		if (!playerGuild) {
+			break;
+		}
+
+		if (player->getGuildRank()->level <= 1) {
+			break;
+		}
+
+		if (money <= 0) {
+			break;
+		}
+
+		if (IOLoginData::getGuildBalance(playerGuild->getId()) < static_cast<uint64_t>(money)) {
+			break;
+		}
+
+		if (IOLoginData::decreaseGuildBankBalance(playerGuild->getId(), money)) {
+			player->setBankBalance(player->getBankBalance() + money);
+		}
+
+		break;
+	}
 	case BEHAVIOUR_TYPE_DEPOSIT: {
 		int32_t money = evaluate(action->expression, player, message);
 		player->setBankBalance(player->getBankBalance() + money);
+		break;
+	}
+	case BEHAVIOUR_TYPE_GUILDDEPOSIT: {
+		int32_t money = evaluate(action->expression, player, message);
+		const Guild* playerGuild = player->getGuild();
+		if (!playerGuild) {
+			break;
+		}
+
+		if (money <= 0) {
+			break;
+		}
+
+		if (player->getBankBalance() < static_cast<uint64_t>(money)) {
+			break;
+		}
+
+		if (IOLoginData::increaseGuildBankBalance(playerGuild->getId(), money)) {
+			player->setBankBalance(player->getBankBalance() - money);
+		}
+
 		break;
 	}
 	case BEHAVIOUR_TYPE_TRANSFER: {
@@ -1207,6 +1262,14 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 	}
 	case BEHAVIOUR_TYPE_LEVEL:
 		return player->getLevel();
+	case BEHAVIOUR_TYPE_GUILDLEVEL: {
+		const Guild* playerGuild = player->getGuild();
+		if (!playerGuild) {
+			return -1;
+		}
+
+		return player->getGuildRank()->level;
+	}
 	case BEHAVIOUR_TYPE_RANDOM: {
 		int32_t min = evaluate(node->left, player, message);
 		int32_t max = evaluate(node->right, player, message);

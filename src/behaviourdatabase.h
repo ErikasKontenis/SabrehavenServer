@@ -63,6 +63,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_SPELLLEVEL, // get spell level
 	BEHAVIOUR_TYPE_TEACHSPELL, // player learn spell
 	BEHAVIOUR_TYPE_LEVEL, // get player level
+	BEHAVIOUR_TYPE_GUILDLEVEL, // get player guild level
 	BEHAVIOUR_TYPE_RANDOM, // random value
 	BEHAVIOUR_TYPE_QUESTVALUE, // get/set quest value
 	BEHAVIOUR_TYPE_TELEPORT, // teleport player to position
@@ -83,7 +84,9 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_BALANCE, // return player balance
 	BEHAVIOUR_TYPE_GUILDBALANCE, // return guild balance
 	BEHAVIOUR_TYPE_WITHDRAW, // withdraw from player bank balance
+	BEHAVIOUR_TYPE_GUILDWITHDRAW, // withdraw from guild bank balance
 	BEHAVIOUR_TYPE_DEPOSIT, // deposit x amount of gold
+	BEHAVIOUR_TYPE_GUILDDEPOSIT, // deposit x amount of gold to guild
 	BEHAVIOUR_TYPE_TRANSFER, // transfer x amount of gold
 	BEHAVIOUR_TYPE_EXPERIENCESTAGE, // get experience staged based on player level
 	BEHAVIOUR_TYPE_BLESS, // add blessing to player

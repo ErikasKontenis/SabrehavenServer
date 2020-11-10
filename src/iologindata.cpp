@@ -930,6 +930,20 @@ void IOLoginData::increaseBankBalance(uint32_t guid, uint64_t bankBalance)
 	Database::getInstance()->executeQuery(query.str());
 }
 
+bool IOLoginData::increaseGuildBankBalance(uint32_t guid, uint64_t bankBalance)
+{
+	std::ostringstream query;
+	query << "UPDATE `guilds` SET `balance` = `balance` + " << bankBalance << " WHERE `id` = " << guid;
+	return Database::getInstance()->executeQuery(query.str());
+}
+
+bool IOLoginData::decreaseGuildBankBalance(uint32_t guid, uint64_t bankBalance)
+{
+	std::ostringstream query;
+	query << "UPDATE `guilds` SET `balance` = `balance` - " << bankBalance << " WHERE `id` = " << guid;
+	return Database::getInstance()->executeQuery(query.str());
+}
+
 void IOLoginData::increaseBankBalance(std::string name, uint64_t bankBalance)
 {
 	Database* db = Database::getInstance();

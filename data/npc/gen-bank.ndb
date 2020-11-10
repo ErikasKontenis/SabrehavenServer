@@ -14,6 +14,9 @@
 "money"           -> *
 "change"          -> *
 "exchange"        -> *
+"guild" -> "If you are a member of a guild, you can deposit money on its account via guild deposit or check the guild money via guild balance. ...",
+			"If you are leader or vice leader of a guild, you can also withdraw gold from your guild account via guild withdraw. ...",
+			"Please keep in mind that we may need some time to process such requests."
 
 "change","gold",!       -> "How many platinum coins do you want to get?", Topic=91
 "exchange","gold",!     -> *
@@ -90,6 +93,9 @@ Topic=99                            -> "Well, can I help you with something else
 "balance",balance>9999999 -> Amount=Balance, "You have made ten millions and it still grows! Your account balance is %A gold."
 "balance",balance>99999999 -> Amount=Balance, "I think you must be one of the richest inhabitants in the world! Your account balance is %A gold."
 
+"guild","balance" -> "You are not a member of a guild."
+"guild","balance",GuildLevel>0 -> Amount=GuildBalance, "Your guild account balance is %A gold."
+
 "deposit" -> "You don't have any gold with you."
 "deposit",CountMoney>0 -> "Please tell me how much gold it is you would like to deposit.", Topic=81
 "deposit","all",CountMoney>0 -> Price=CountMoney, "Would you really like to deposit %P gold?", Topic=82
@@ -104,6 +110,22 @@ Topic=82,"yes",CountMoney>=Price -> "Alright, we have added the amount of %P gol
 Topic=82,"yes" -> "I am inconsolable, but it seems you have lost your gold. I hope you get it back."
 Topic=82 -> "As you wish. Is there something else I can do for you?"
 
+"guild","deposit",GuildLevel<=0 -> "You are not a member of a guild."
+"guild","deposit" -> "You don't have any gold in your bank account."
+"guild","deposit",Balance>0 -> "Please tell me how much gold it is you would like to deposit for your guild.", Topic=71
+"guild","deposit","all",GuildLevel<=0 -> "You are not a member of a guild."
+"guild","deposit","all",Balance>0 -> Price=Balance, "Would you really like to deposit %P gold in to your guild bank account?", Topic=72
+"guild","deposit",$1,0<$1,GuildLevel<=0 -> "You are not a member of a guild."
+"guild","deposit",$1,0<$1,Balance>=$1 -> Price=$1, "Would you really like to deposit %P gold in to your guild bank account?", Topic=72
+"guild","deposit",$1,0<$1,Balance<$1 -> "You do not have enough gold in your bank account."
+Topic=71,$1,0<$1,Balance>=$1 -> Price=$1, "Would you really like to deposit %P gold in to your guild bank account?", Topic=72
+Topic=71,"0" -> "You are joking, aren't you?"
+Topic=71,$1,0<$1,Balance<$1 -> "You do not have enough gold in your bank account."
+Topic=71 -> "Please tell me how much gold it is you would like to deposit for your guild.", Topic=71
+Topic=72,"yes",Balance>=Price,GuildLevel>0 -> "Alright, we have added the amount of %P gold to your guild balance. Keep in mind that only authorized person can withdraw from the guild account.", GuildDeposit(Price)
+Topic=72,"yes" -> "I am inconsolable, but it seems you do not have enough gold in your bank account anymore."
+Topic=72 -> "As you wish. Is there something else I can do for you?"
+
 "withdraw" -> "Please tell me how much gold you would like to withdraw.", Topic=83
 "withdraw",$1,0<$1,Balance>=$1 -> Price=$1, "Are you sure you wish to withdraw %P gold from your bank account?", Topic=84
 "withdraw","0" -> "Sure, you want nothing you get nothing!"
@@ -115,6 +137,21 @@ Topic=83 -> "Please tell me how much gold you would like to withdraw.", Topic=83
 Topic=84,"yes",Balance>=Price -> "Here you are, %P gold. Please let me know if there is something else I can do for you.", CreateMoney, Withdraw(Price)
 Topic=84,"yes" -> "I am inconsolable, but it seems you don't have that many gold in your bank account."
 Topic=84 -> "The customer is king! Come back anytime you want to if you wish to withdraw your money."
+
+"guild","withdraw",GuildLevel<=0 -> "I am sorry but it seems you are currently not in any guild."
+"guild","withdraw",GuildLevel=1 -> "I am sorry but you are not eligible to withdraw from the guild account."
+"guild","withdraw" -> "Please tell me how much gold you would like to withdraw from your guild account.", Topic=73
+"guild","withdraw",$1,0<$1,GuildLevel<=0 -> "I am sorry but it seems you are currently not in any guild."
+"guild","withdraw",$1,0<$1,GuildLevel=1 -> "I am sorry but you are not eligible to withdraw from the guild account."
+"guild","withdraw",$1,0<$1,GuildBalance>=$1 -> Price=$1, "Are you sure you wish to withdraw %P gold from your guild bank account?", Topic=74
+"guild","withdraw",$1,0<$1,GuildBalance<$1 -> "There is not enough gold on your guild account."
+Topic=73,$1,0<$1,GuildBalance>=$1 -> Price=$1, "Are you sure you wish to withdraw %P gold from your guild bank account?", Topic=74
+Topic=73,"0" -> "Sure, you want nothing you get nothing!"
+Topic=73,$1,0<$1,GuildBalance<$1 -> "There is not enough gold on your guild account."
+Topic=73 -> "Please tell me how much gold you would like to withdraw from your guild account..", Topic=73
+Topic=74,"yes",GuildBalance>=Price,GuildLevel>1 -> "Here you are, we withdraw %P gold from your guild account to your personal account. Please let me know if there is something else I can do for you.", GuildWithdraw(Price)
+Topic=74,"yes" -> "I am inconsolable, but it seems you don't have that many gold in your guild bank account."
+Topic=74 -> "The customer is king! Come back anytime you want to if you wish to withdraw your money."
 
 "transfer" -> "Please tell me the amount of gold you would like to transfer.", Topic=85
 "transfer","0","to" -> "Please think about it. Okay?"

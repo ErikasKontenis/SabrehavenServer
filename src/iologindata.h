@@ -51,6 +51,8 @@ class IOLoginData
 		static std::string getNameByGuid(uint32_t guid);
 		static bool formatPlayerName(std::string& name);
 		static void increaseBankBalance(uint32_t guid, uint64_t bankBalance);
+		static bool increaseGuildBankBalance(uint32_t guid, uint64_t bankBalance);
+		static bool decreaseGuildBankBalance(uint32_t guid, uint64_t bankBalance);
 		static void increaseBankBalance(const std::string name, uint64_t bankBalance);
 		static bool hasBiddedOnHouse(uint32_t guid);
 
