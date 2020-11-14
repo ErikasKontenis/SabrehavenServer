@@ -485,6 +485,9 @@ class LuaScriptInterface
 
 		static int luaGetWaypointPositionByName(lua_State* L);
 
+		static int luaSendChannelMessage(lua_State* L);
+		static int luaSendGuildChannelMessage(lua_State* L);
+
 #ifndef LUAJIT_VERSION
 		static int luaBitNot(lua_State* L);
 		static int luaBitAnd(lua_State* L);
@@ -977,10 +980,15 @@ class LuaScriptInterface
 		static int luaGuildGetId(lua_State* L);
 		static int luaGuildGetName(lua_State* L);
 		static int luaGuildGetMembersOnline(lua_State* L);
+		static int luaGuildSetGuildWarEmblem(lua_State* L);
 
 		static int luaGuildAddRank(lua_State* L);
 		static int luaGuildGetRankById(lua_State* L);
 		static int luaGuildGetRankByLevel(lua_State* L);
+
+		static int luaGuildGetBankBalance(lua_State* L);
+		static int luaGuildIncreaseBankBalance(lua_State* L);
+		static int luaGuildDecreaseBankBalance(lua_State* L);
 
 		// Group
 		static int luaGroupCreate(lua_State* L);

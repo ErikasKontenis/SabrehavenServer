@@ -1176,6 +1176,18 @@ void ProtocolGame::sendChannel(uint16_t channelId, const std::string& channelNam
 	writeToOutputBuffer(msg);
 }
 
+void ProtocolGame::sendChannelMessage(const std::string& author, const std::string& text, SpeakClasses type, uint16_t channel)
+{
+	NetworkMessage msg;
+	msg.addByte(0xAA);
+	msg.add<uint32_t>(0x00);
+	msg.addString(author);
+	msg.add<uint16_t>(0x00);
+	msg.addByte(type);
+	msg.add<uint16_t>(channel);
+	msg.addString(text);
+	writeToOutputBuffer(msg);
+}
 
 void ProtocolGame::sendIcons(uint16_t icons)
 {

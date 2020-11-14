@@ -829,18 +829,6 @@ uint32_t IOLoginData::getGuidByName(const std::string& name)
 	return result->getNumber<uint32_t>("id");
 }
 
-uint64_t IOLoginData::getGuildBalance(uint32_t id)
-{
-	std::ostringstream query;
-	query << "SELECT `balance` FROM `guilds` WHERE `id` = " << id;
-	DBResult_ptr result = Database::getInstance()->storeQuery(query.str());
-	if (!result) {
-		return 0;
-	}
-
-	return result->getNumber<uint64_t>("balance");
-}
-
 // Return 0 means player not found, 1 player is without vocation, 2 player with vocation
 uint16_t IOLoginData::canTransferMoneyToByName(const std::string& name)
 {
@@ -928,20 +916,6 @@ void IOLoginData::increaseBankBalance(uint32_t guid, uint64_t bankBalance)
 	std::ostringstream query;
 	query << "UPDATE `players` SET `balance` = `balance` + " << bankBalance << " WHERE `id` = " << guid;
 	Database::getInstance()->executeQuery(query.str());
-}
-
-bool IOLoginData::increaseGuildBankBalance(uint32_t guid, uint64_t bankBalance)
-{
-	std::ostringstream query;
-	query << "UPDATE `guilds` SET `balance` = `balance` + " << bankBalance << " WHERE `id` = " << guid;
-	return Database::getInstance()->executeQuery(query.str());
-}
-
-bool IOLoginData::decreaseGuildBankBalance(uint32_t guid, uint64_t bankBalance)
-{
-	std::ostringstream query;
-	query << "UPDATE `guilds` SET `balance` = `balance` - " << bankBalance << " WHERE `id` = " << guid;
-	return Database::getInstance()->executeQuery(query.str());
 }
 
 void IOLoginData::increaseBankBalance(std::string name, uint64_t bankBalance)

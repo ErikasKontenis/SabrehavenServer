@@ -45,14 +45,11 @@ class IOLoginData
 		static bool loadPlayer(Player* player, DBResult_ptr result);
 		static bool savePlayer(Player* player);
 		static uint32_t getGuidByName(const std::string& name); 
-		static uint64_t getGuildBalance(uint32_t id);
 		static uint16_t canTransferMoneyToByName(const std::string& name);
 		static bool getGuidByNameEx(uint32_t& guid, bool& specialVip, std::string& name);
 		static std::string getNameByGuid(uint32_t guid);
 		static bool formatPlayerName(std::string& name);
 		static void increaseBankBalance(uint32_t guid, uint64_t bankBalance);
-		static bool increaseGuildBankBalance(uint32_t guid, uint64_t bankBalance);
-		static bool decreaseGuildBankBalance(uint32_t guid, uint64_t bankBalance);
 		static void increaseBankBalance(const std::string name, uint64_t bankBalance);
 		static bool hasBiddedOnHouse(uint32_t guid);
 

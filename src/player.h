@@ -201,6 +201,7 @@ class Player final : public Creature, public Cylinder
 			guildNick = nick;
 		}
 
+		uint32_t getWarId(const Player* player) const;
 		bool isInWar(const Player* player) const;
 		bool isInWarList(uint32_t guild_id) const;
 
@@ -638,6 +639,11 @@ class Player final : public Creature, public Cylinder
 			}
 		}
 
+		void sendChannelMessage(const std::string& author, const std::string& text, SpeakClasses type, uint16_t channel) {
+			if (client) {
+				client->sendChannelMessage(author, text, type, channel);
+			}
+		}
 		void sendCreatureAppear(const Creature* creature, const Position& pos, bool isLogin) {
 			if (client) {
 				client->sendAddCreature(creature, pos, creature->getTile()->getStackposOfCreature(this, creature), isLogin);

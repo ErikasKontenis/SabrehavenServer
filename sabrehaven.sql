@@ -172,11 +172,10 @@ CREATE TABLE `guild_wars` (
   `id` int(11) NOT NULL,
   `guild1` int(11) NOT NULL DEFAULT '0',
   `guild2` int(11) NOT NULL DEFAULT '0',
-  `name1` varchar(255) NOT NULL,
-  `name2` varchar(255) NOT NULL,
   `status` tinyint(2) NOT NULL DEFAULT '0',
-  `started` bigint(15) NOT NULL DEFAULT '0',
-  `ended` bigint(15) NOT NULL DEFAULT '0'
+  `frag_limit` int(11) NOT NULL DEFAULT '0',
+  `declaration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `bounty` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1586,6 +1585,14 @@ ALTER TABLE `account_viplist`
 ALTER TABLE `guilds`
   ADD CONSTRAINT `guilds_ibfk_1` FOREIGN KEY (`ownerid`) REFERENCES `players` (`id`) ON DELETE CASCADE;
 
+--
+-- Constraints for table `guild_wars`
+--
+ALTER TABLE `guild_wars`
+  ADD CONSTRAINT `guild1_ibfk_1` FOREIGN KEY (`guild1`) REFERENCES `guilds` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `guild2_ibfk_1` FOREIGN KEY (`guild2`) REFERENCES `guilds` (`id`) ON DELETE CASCADE;
+COMMIT;
+  
 --
 -- Constraints for table `guildwar_kills`
 --

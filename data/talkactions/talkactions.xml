@@ -57,6 +57,7 @@
 	<talkaction words="!share" script="experienceshare.lua"/>
 	<talkaction words="!shop" script="znoteshop.lua"/>
 	<talkaction words="!physicaldamage" separator=" " script="physical_damage.lua"/>
+	<talkaction words="!war" separator=" " script="war.lua"/>
 	<talkaction words="469" script="469.lua"/>
 	
 	<!-- test talkactions -->

@@ -1012,6 +1012,12 @@ void LuaScriptInterface::registerFunctions()
 	//getWaypointPosition(name)
 	lua_register(luaState, "getWaypointPositionByName", LuaScriptInterface::luaGetWaypointPositionByName);
 
+	//sendChannelMessage(channelId, type, message)
+	lua_register(luaState, "sendChannelMessage", LuaScriptInterface::luaSendChannelMessage);
+
+	//sendGuildChannelMessage(guildId, type, message)
+	lua_register(luaState, "sendGuildChannelMessage", LuaScriptInterface::luaSendGuildChannelMessage);
+
 #ifndef LUAJIT_VERSION
 	//bit operations for Lua, based on bitlib project release 24
 	//bit.bnot, bit.band, bit.bor, bit.bxor, bit.lshift, bit.rshift
@@ -2154,10 +2160,15 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Guild", "getId", LuaScriptInterface::luaGuildGetId);
 	registerMethod("Guild", "getName", LuaScriptInterface::luaGuildGetName);
 	registerMethod("Guild", "getMembersOnline", LuaScriptInterface::luaGuildGetMembersOnline);
+	registerMethod("Guild", "setGuildWarEmblem", LuaScriptInterface::luaGuildSetGuildWarEmblem);
 
 	registerMethod("Guild", "addRank", LuaScriptInterface::luaGuildAddRank);
 	registerMethod("Guild", "getRankById", LuaScriptInterface::luaGuildGetRankById);
 	registerMethod("Guild", "getRankByLevel", LuaScriptInterface::luaGuildGetRankByLevel);
+	
+	registerMethod("Guild", "getBankBalance", LuaScriptInterface::luaGuildGetBankBalance);
+	registerMethod("Guild", "increaseBankBalance", LuaScriptInterface::luaGuildIncreaseBankBalance);
+	registerMethod("Guild", "decreaseBankBalance", LuaScriptInterface::luaGuildDecreaseBankBalance);
 
 	// Group
 	registerClass("Group", "", LuaScriptInterface::luaGroupCreate);
@@ -3572,7 +3583,7 @@ int LuaScriptInterface::luaIsInWar(lua_State* L)
 		return 1;
 	}
 
-	pushBoolean(L, player->isInWar(targetPlayer));
+	lua_pushnumber(L, player->getWarId(targetPlayer));
 	return 1;
 }
 
@@ -3587,6 +3598,40 @@ int LuaScriptInterface::luaGetWaypointPositionByName(lua_State* L)
 	} else {
 		pushBoolean(L, false);
 	}
+	return 1;
+}
+
+int LuaScriptInterface::luaSendChannelMessage(lua_State* L)
+{
+	//sendChannelMessage(channelId, type, message)
+	uint32_t channelId = getNumber<uint32_t>(L, 1);
+	ChatChannel* channel = g_chat->getChannelById(channelId);
+	if (!channel) {
+		pushBoolean(L, false);
+		return 1;
+	}
+
+	SpeakClasses type = getNumber<SpeakClasses>(L, 2);
+	std::string message = getString(L, 3);
+	channel->sendToAll(message, type);
+	pushBoolean(L, true);
+	return 1;
+}
+
+int LuaScriptInterface::luaSendGuildChannelMessage(lua_State* L)
+{
+	//sendGuildChannelMessage(guildId, type, message)
+	uint32_t guildId = getNumber<uint32_t>(L, 1);
+	ChatChannel* channel = g_chat->getGuildChannelById(guildId);
+	if (!channel) {
+		pushBoolean(L, false);
+		return 1;
+	}
+
+	SpeakClasses type = getNumber<SpeakClasses>(L, 2);
+	std::string message = getString(L, 3);
+	channel->sendToAll(message, type);
+	pushBoolean(L, true);
 	return 1;
 }
 
@@ -9225,6 +9270,44 @@ int LuaScriptInterface::luaGuildGetName(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaGuildSetGuildWarEmblem(lua_State* L)
+{
+	// guild:setGuildWarEmblem(guild2)
+	const Guild* guild = getUserdata<const Guild>(L, 1);
+	if (!guild) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	const Guild* guild2 = getUserdata<const Guild>(L, 2);
+	if (!guild2) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	auto& members = guild->getMembersOnline();
+	for (Player* player : members) {
+		GuildWarList guildWarList;
+		IOGuild::getWarList(player->getGuild()->getId(), guildWarList);
+		player->guildWarList = guildWarList;
+	}
+
+	auto& members2 = guild2->getMembersOnline();
+	for (Player* player : members2) {
+		GuildWarList guildWarList;
+		IOGuild::getWarList(player->getGuild()->getId(), guildWarList);
+		player->guildWarList = guildWarList;
+		g_game.updateCreatureSkull(player);
+	}
+
+	for (Player* player : members) {
+		g_game.updateCreatureSkull(player);
+	}
+
+	pushBoolean(L, true);
+	return 1;
+}
+
 int LuaScriptInterface::luaGuildGetMembersOnline(lua_State* L)
 {
 	// guild:getMembersOnline()
@@ -9301,6 +9384,49 @@ int LuaScriptInterface::luaGuildGetRankByLevel(lua_State* L)
 		setField(L, "name", rank->name);
 		setField(L, "level", rank->level);
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaGuildGetBankBalance(lua_State* L)
+{
+	// guild:getBankBalance()
+	Guild* guild = getUserdata<Guild>(L, 1);
+	if (guild) {
+		lua_pushnumber(L, IOGuild::getGuildBalance(guild->getId()));
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaGuildIncreaseBankBalance(lua_State* L)
+{
+	// guild:increaseBankBalance(amount)
+	Guild* guild = getUserdata<Guild>(L, 1);
+	if (guild) {
+		uint32_t amount = getNumber<uint32_t>(L, 2);
+		bool isSuccess = IOGuild::increaseGuildBankBalance(guild->getId(), amount);
+		pushBoolean(L, isSuccess);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaGuildDecreaseBankBalance(lua_State* L)
+{
+	// guild:decreaseBankBalance(amount)
+	Guild* guild = getUserdata<Guild>(L, 1);
+	if (guild) {
+		uint32_t amount = getNumber<uint32_t>(L, 2);
+		bool isSuccess = IOGuild::decreaseGuildBankBalance(guild->getId(), amount);
+		pushBoolean(L, isSuccess);
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;

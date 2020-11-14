@@ -1087,11 +1087,12 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 			break;
 		}
 
-		if (IOLoginData::getGuildBalance(playerGuild->getId()) < static_cast<uint64_t>(money)) {
+
+		if (IOGuild::getGuildBalance(playerGuild->getId()) < static_cast<uint64_t>(money)) {
 			break;
 		}
 
-		if (IOLoginData::decreaseGuildBankBalance(playerGuild->getId(), money)) {
+		if (IOGuild::decreaseGuildBankBalance(playerGuild->getId(), money)) {
 			player->setBankBalance(player->getBankBalance() + money);
 		}
 
@@ -1117,7 +1118,7 @@ void BehaviourDatabase::checkAction(const NpcBehaviourAction* action, Player* pl
 			break;
 		}
 
-		if (IOLoginData::increaseGuildBankBalance(playerGuild->getId(), money)) {
+		if (IOGuild::increaseGuildBankBalance(playerGuild->getId(), money)) {
 			player->setBankBalance(player->getBankBalance() - money);
 		}
 
@@ -1326,7 +1327,7 @@ int32_t BehaviourDatabase::evaluate(NpcBehaviourNode* node, Player* player, cons
 			return false;
 		}
 
-		return IOLoginData::getGuildBalance(playerGuild->getId());
+		return IOGuild::getGuildBalance(playerGuild->getId());
 	}
 	case BEHAVIOUR_TYPE_CLIENTVERSION:
 		return g_game.getClientVersion();

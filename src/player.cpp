@@ -3447,10 +3447,6 @@ Skulls_t Player::getSkullClient(const Creature* creature) const
 		return SKULL_GREEN;
 	}
 
-	if (!player->getGuildWarList().empty() && guild == player->getGuild()) {
-		return SKULL_GREEN;
-	}
-
 	if (player->hasAttacked(this)) {
 		return SKULL_YELLOW;
 	}
@@ -3612,6 +3608,33 @@ bool Player::hasLearnedInstantSpell(const std::string& spellName) const
 		}
 	}
 	return false;
+}
+
+uint32_t Player::getWarId(const Player* targetPlayer) const
+{
+	if (!targetPlayer || !guild) {
+		return false;
+	}
+
+	const Guild* targetPlayerGuild = targetPlayer->getGuild();
+	if (!targetPlayerGuild) {
+		return false;
+	}
+
+	const auto targetGuild = guild->getId();
+	const auto killerGuild = targetPlayerGuild->getId();
+
+	Database* db = Database::getInstance();
+
+	std::ostringstream query;
+	query << "SELECT `id` FROM `guild_wars` WHERE `status` IN (1, 4) AND ((`guild1` = " << killerGuild << " AND `guild2` = " << targetGuild << ") OR (`guild1` = " << targetGuild << " AND `guild2` = " << killerGuild << "))";
+	DBResult_ptr result = db->storeQuery(query.str());
+
+	if (!result) {
+		return 0;
+	}
+
+	return result->getNumber<uint32_t>("id");
 }
 
 bool Player::isInWar(const Player* player) const
