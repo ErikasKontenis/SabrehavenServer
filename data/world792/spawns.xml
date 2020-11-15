@@ -1208,7 +1208,7 @@
 		<monster name="Wyvern" x="0" y="1" z="5" spawntime="600" />
 	</spawn>
 	<spawn centerx="33213" centery="31763" centerz="5" radius="1">
-		<monster name="Wyvern" x="0" y="0" z="5" spawntime="120" />
+		<monster name="Wyvern" x="0" y="0" z="5" spawntime="600" />
 	</spawn>
 	<spawn centerx="33233" centery="31764" centerz="5" radius="1">
 		<monster name="Wyvern" x="0" y="1" z="5" spawntime="600" />

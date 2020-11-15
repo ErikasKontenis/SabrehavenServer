@@ -1,6 +1,9 @@
 -- Custom
 knightCloseAttackDamageIncreasePercent = 20
 paladinRangeAttackDamageIncreasePercent = 15
+-- Min/Max rate spawn is a multiplication of the map spawntime in spawns.xml Regular monster spawn time is 600. The formula would be randomValue = random(600*100, 600*200) which varies between 60s and 120s
+minRateSpawn = 100
+maxRateSpawn = 200
 
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
