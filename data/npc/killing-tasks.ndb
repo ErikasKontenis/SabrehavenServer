@@ -34,42 +34,45 @@ VANISH,!           -> "Happy hunting, old chap!"
 "trade" -> *
 "sabrehaven","talon" -> "We as a hunting society know very interesting purposes of those magical talons. But only the loyal hunters of the 'Paw and Fur - Hunting Elite' are allowed to know."
 
-# Level 6-49
-"task",QuestValue(17607)=1,QuestValue(17608)=0,level>5,level<50 -> "Alright, what would you like to hunt? Frost trolls, swamp trolls, rats, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises or gargoyles.", Topic=1
-Topic=1,"crocodile" -> Amount=17609, "They are a nuisance! You'll find them here in the jungle near the river. Hunt 100 crocodiles and you'll get a nice reward. Interested?", Topic=2
-Topic=1,"tarantula" -> Amount=17610, "There is a veritable plague of tarantulas living in the caves north of the river to the east. Can you squish 100 tarantulas for the Hunting Elite. What do you say?", Topic=2
-Topic=1,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out 50 carniphilas for our society. Alright?", Topic=2
-Topic=1,"ape" -> Amount=17612, "You'll find the apes deeper in the jungle. Hunt 100 merlkins, kongras or sibangs to complete this task. Alright?", Topic=2
-Topic=1,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 65 of them. Interested?", Topic=2
-Topic=1,"frost","troll" -> Amount=17697, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"swamp","troll" -> Amount=17698, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"rat" -> Amount=17699, "They can be found all over Tibia. Hunt 25 of them. Interested?", Topic=2
-Topic=1,"wolves" -> Amount=17700, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"wasp" -> Amount=17701, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"larva" -> Amount=17702, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"dwarf" -> Amount=17703, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1,"undead" -> Amount=17704, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
-Topic=1 -> "Maybe next time."
+"low","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Frost trolls, swamp trolls, rats, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises or gargoyles.", Topic=5
+"medium","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
+"high","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: High class orcs, hero, necromancers, underwater quara, giant spiders, banshees, lichs or cults.", Topic=5
+"very","high","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Nightmare, hydras, serpent spawns, behemoths, dragon lords, warlocks, hand of cursed fates, juggernauts, demons.", Topic=5
+"task",QuestValue(17607)=1,QuestValue(17608)=0 -> "Alright, what would you like to hunt? I have low level tasks, medium level tasks, high level tasks and very high level tasks.", Topic=5
 
-"task",QuestValue(17609)=100 -> Data=1, Amount=40*QuestValue(17609)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17610)=100 -> Data=2, Amount=120*QuestValue(17610)*ExperienceStage(49)*40/100, Price=10000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+# Recommended tasks for low level
+Topic=5,"crocodile" -> Amount=17609, "They are a nuisance! You'll find them here in the jungle near the river. Hunt 100 crocodiles and you'll get a nice reward. Interested?", Topic=2
+Topic=5,"tarantula" -> Amount=17610, "There is a veritable plague of tarantulas living in the caves north of the river to the east. Can you squish 100 tarantulas for the Hunting Elite. What do you say?", Topic=2
+Topic=5,"carniphila" -> Amount=17611, "Damn walking weed-thingies! You'll find them deeper in the jungle. Weed out 50 carniphilas for our society. Alright?", Topic=2
+Topic=5,"ape" -> Amount=17612, "You'll find the apes deeper in the jungle. Hunt 100 merlkins, kongras or sibangs to complete this task. Alright?", Topic=2
+Topic=5,"tortoise" -> Amount=17613, "You'll find them on the Laguna Islands. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"gargoyle" -> Amount=17614, "They can be found all over Tibia. Hunt 65 of them. Interested?", Topic=2
+Topic=5,"frost","troll" -> Amount=17697, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"swamp","troll" -> Amount=17698, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"rat" -> Amount=17699, "They can be found all over Tibia. Hunt 25 of them. Interested?", Topic=2
+Topic=5,"wolves" -> Amount=17700, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"wasp" -> Amount=17701, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"larva" -> Amount=17702, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"dwarf" -> Amount=17703, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5,"undead" -> Amount=17704, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
+Topic=5 -> "Maybe next time."
+
+"task",QuestValue(17609)=100 -> Data=1, Amount=40*QuestValue(17609)*ExperienceStage(49)*40/100, Price=2000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17610)=100 -> Data=2, Amount=120*QuestValue(17610)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17611)=50 -> Data=2, Amount=150*QuestValue(17611)*ExperienceStage(49)*40/100, Price=8000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17612)=100 -> Data=1, Amount=115*QuestValue(17612)*ExperienceStage(49)*40/100, Price=10000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17612)=100 -> Data=1, Amount=115*QuestValue(17612)*ExperienceStage(49)*40/100, Price=8000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17613)=100 -> Data=2, Amount=150*QuestValue(17613)*ExperienceStage(49)*40/100, Price=10000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17614)=65 -> Data=3, Amount=150*QuestValue(17614)*ExperienceStage(49)*40/100, Price=10000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17697)=100 -> Data=2, Amount=23*QuestValue(17697)*ExperienceStage(49)*40/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17698)=100 -> Data=2, Amount=25*QuestValue(17698)*ExperienceStage(49)*40/100, Price=5500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17699)=25 -> Data=1, Amount=7*QuestValue(17699)*ExperienceStage(49)*40/100, Price=2000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17700)=100 -> Data=2, Amount=19*QuestValue(17700)*ExperienceStage(49)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17701)=100 -> Data=2, Amount=24*QuestValue(17701)*ExperienceStage(49)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17702)=100 -> Data=2, Amount=44*QuestValue(17702)*ExperienceStage(49)*40/100, Price=8000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17703)=100 -> Data=2, Amount=45*QuestValue(17703)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17704)=100 -> Data=2, Amount=60*QuestValue(17704)*ExperienceStage(49)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17614)=65 -> Data=3, Amount=150*QuestValue(17614)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17697)=100 -> Data=2, Amount=23*QuestValue(17697)*ExperienceStage(49)*40/100, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17698)=100 -> Data=2, Amount=25*QuestValue(17698)*ExperienceStage(49)*40/100, Price=1100, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17699)=25 -> Data=1, Amount=7*QuestValue(17699)*ExperienceStage(49)*40/100, Price=200, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17700)=100 -> Data=2, Amount=19*QuestValue(17700)*ExperienceStage(49)*40/100, Price=900, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17701)=100 -> Data=2, Amount=24*QuestValue(17701)*ExperienceStage(49)*40/100, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17702)=100 -> Data=2, Amount=44*QuestValue(17702)*ExperienceStage(49)*40/100, Price=1200, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17703)=100 -> Data=2, Amount=45*QuestValue(17703)*ExperienceStage(49)*40/100, Price=2000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17704)=100 -> Data=2, Amount=60*QuestValue(17704)*ExperienceStage(49)*40/100, Price=2500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
-# Level 50-79
-"available","task",QuestValue(17607)=1,QuestValue(17608)=0,level>49 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts or dragons. ...", "High class orcs, hero, necromancers, underwater quara, giant spiders, banshees, lichs or cults. ...", "Nightmare, hydras, serpent spawns, behemoths, dragon lords, warlocks, hand of cursed fates, juggernauts, demons."
-"task",QuestValue(17607)=1,QuestValue(17608)=0,level>49 -> "Alright, what would you like to hunt? If you have no idea yet I can tell you which available tasks are for you.", Topic=5
+# Recommended tasks for medium level
 Topic=5,"quara","scout" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
 Topic=5,"scarab" -> Amount=17617, "They can be found in tombs beneath the desert around Ankrahmun. Hunt 125 of them. Interested?", Topic=2
 Topic=5,"wyvern" -> Amount=17618, "They can be found all over Tibia. Hunt 100 wyverns. Interested?", Topic=2
@@ -78,8 +81,8 @@ Topic=5,"dragon" -> Amount=17620, "They can be found all over Tibia. Hunt 200 dr
 Topic=5,"medium","orc" -> Amount=17712, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"minotaur" -> Amount=17713, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"lizard" -> Amount=17714, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
-Topic=5,"dwarf" -> Amount=17715, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
-Topic=5,"undead" -> Amount=17716, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
+Topic=5,"high","dwarf" -> Amount=17715, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
+Topic=5,"medium","undead" -> Amount=17716, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
 
 "task",QuestValue(17616)=200 -> Data=2, Amount=430*QuestValue(17616)*ExperienceStage(79)*35/100, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17617)=125 -> Data=2, Amount=720*QuestValue(17617)*ExperienceStage(79)*35/100, Price=25000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -92,6 +95,7 @@ Topic=5,"undead" -> Amount=17716, "They can be found all over Tibia. Hunt 200 of
 "task",QuestValue(17715)=300 -> Data=2, Amount=166*QuestValue(17715)*ExperienceStage(79)*35/100, Price=21000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17716)=200 -> Data=2, Amount=221*QuestValue(17716)*ExperienceStage(79)*35/100, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
+# Recommended tasks for high level
 Topic=5,"quara" -> Amount=17621, "As you wish. Seek out a quara settlement and hunt 600 quara, it doesn't matter which type you hunt except scouts. Alright?", Topic=2
 Topic=5,"spider" -> Amount=17622, "Never liked spiders. Simply too many legs. And I always find them in my bath! Those nasty creepy-crawlies are a threat to the hygiene of every living being in Tibia. Hunt 500 of them. Okay?", Topic=2
 Topic=5,"banshee" -> Amount=17623, "The Banshee is an undead creature of sheer terror. There is several places where you can hunt them. Hunt 300 of them. Okay?", Topic=2
@@ -110,6 +114,7 @@ Topic=5,"necromancer" -> Amount=17719, "They can be found all over Tibia. Hunt 3
 "task",QuestValue(17718)=150 -> Data=2, Amount=1200*QuestValue(17718)*ExperienceStage(129)*30/100, Price=35000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17719)=300 -> Data=2, Amount=500*QuestValue(17719)*ExperienceStage(129)*30/100, Price=35000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
+# Recommended tasks for very high level
 Topic=5,"hydra" -> Amount=17626, "The hydras are located in the eastern jungle of Tiquanda and there are several mountain caves that are inhabited by them. Your task is to hunt a mere 650 hydras. Are you willing to do that?", Topic=2
 Topic=5,"serpent" -> Amount=17627, "Very dangerous, nasty and slimy creatures. They live deep in the old ruins of Banuta. I think a mere 800 serpent spawns should do the trick. What do you say?", Topic=2
 Topic=5,"behemoth" -> Amount=17628, "Behemoths must be kept away from the settlements at all costs. You'll find them east of here in the taboo-area or under Cyclopolis in Edron. Go there and hunt a few of them - shall we say... 700? Are you up for that?", Topic=2
