@@ -40,6 +40,7 @@ local tasks = {
 	['rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 25},
 	['cave rat'] = {taskerStorage = 17608, progressStorage = 17699, killsRequired = 25},
 	['wolf'] = {taskerStorage = 17608, progressStorage = 17700, killsRequired = 100},
+	['winter wolf'] = {taskerStorage = 17608, progressStorage = 17700, killsRequired = 100},
 	['wasp'] = {taskerStorage = 17608, progressStorage = 17701, killsRequired = 100},
 	['larva'] = {taskerStorage = 17608, progressStorage = 17702, killsRequired = 100},
 	['dwarf'] = {taskerStorage = 17608, progressStorage = 17703, killsRequired = 100},
