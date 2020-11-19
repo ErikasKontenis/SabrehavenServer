@@ -1,4 +1,4 @@
-<monster name="Azure Frog" namedescription="a azure frog" race="blood" experience="20" speed="95" manacost="305">
+<monster name="Azure Frog" nameDescription="a azure frog" race="blood" experience="20" speed="95" manacost="305">
 	<health now="60" max="60" />
 	<look type="226" head="69" body="66" legs="69" feet="66" corpse="6079" />
 	<targetchange interval="1000" chance="50" />
