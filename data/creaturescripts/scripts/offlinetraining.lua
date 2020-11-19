@@ -58,9 +58,9 @@ function onLogin(player)
 	local updateSkills = false
 	if table.contains({SKILL_CLUB, SKILL_SWORD, SKILL_AXE, SKILL_DISTANCE}, offlineTrainingSkill) then
 		local modifier = topVocation:getAttackSpeed() / 1000
-		updateSkills = player:addOfflineTrainingTries(offlineTrainingSkill, (trainingTime / modifier) / (offlineTrainingSkill == SKILL_DISTANCE and 4 or 2))
+		updateSkills = player:addOfflineTrainingTries(offlineTrainingSkill, (trainingTime / modifier) / (offlineTrainingSkill == SKILL_DISTANCE and 8 or 4))
 	elseif offlineTrainingSkill == SKILL_MAGLEVEL then
-		local gainTicks = topVocation:getManaGainTicks() * 2
+		local gainTicks = topVocation:getManaGainTicks() * 4
 		if gainTicks == 0 then
 			gainTicks = 1
 		end
@@ -69,7 +69,7 @@ function onLogin(player)
 	end
 
 	if updateSkills then
-		player:addOfflineTrainingTries(SKILL_SHIELD, trainingTime / 4)
+		player:addOfflineTrainingTries(SKILL_SHIELD, trainingTime / 8)
 	end
 
 	return true
