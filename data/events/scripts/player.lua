@@ -5,7 +5,7 @@ function Player:onLook(thing, position, distance)
 	
 	if thing:isItem() and thing:getId() == 2028 then
 		if isInArray(trainingStatues, thing:getActionId()) then
-			local trainingTime = math.min(43200, self:getOfflineTrainingTime() / 1000)
+			local trainingTime = math.min(43200 / 2, self:getOfflineTrainingTime() / 1000)
 			local text = "You have"
 			local hours = math.floor(trainingTime / 3600)
 			if hours > 1 then

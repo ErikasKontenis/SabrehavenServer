@@ -15,7 +15,7 @@ function onLogin(player)
 		return true
 	end
 
-	local trainingTime = math.max(0, math.min(offlineTime, math.min(43200, player:getOfflineTrainingTime() / 1000)))
+	local trainingTime = math.max(0, math.min(offlineTime, math.min(43200 / 2, player:getOfflineTrainingTime() / 1000)))
 	player:removeOfflineTrainingTime(trainingTime * 1000)
 
 	local remainder = offlineTime - trainingTime
