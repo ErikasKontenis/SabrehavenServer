@@ -59,9 +59,9 @@ Topic=5 -> "Maybe next time."
 
 "task",QuestValue(17609)=100 -> Data=1, Amount=40*QuestValue(17609)*ExperienceStage(49)*40/100, Price=2000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17610)=100 -> Data=2, Amount=120*QuestValue(17610)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17611)=50 -> Data=2, Amount=150*QuestValue(17611)*ExperienceStage(49)*40/100, Price=8000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17612)=100 -> Data=1, Amount=115*QuestValue(17612)*ExperienceStage(49)*40/100, Price=8000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17613)=100 -> Data=2, Amount=150*QuestValue(17613)*ExperienceStage(49)*40/100, Price=10000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17611)=50 -> Data=2, Amount=150*QuestValue(17611)*ExperienceStage(49)*40/100, Price=6500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17612)=100 -> Data=1, Amount=115*QuestValue(17612)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17613)=100 -> Data=2, Amount=150*QuestValue(17613)*ExperienceStage(49)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17614)=65 -> Data=3, Amount=150*QuestValue(17614)*ExperienceStage(49)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17697)=100 -> Data=2, Amount=23*QuestValue(17697)*ExperienceStage(49)*40/100, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17698)=100 -> Data=2, Amount=25*QuestValue(17698)*ExperienceStage(49)*40/100, Price=1100, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -84,16 +84,16 @@ Topic=5,"lizard" -> Amount=17714, "They can be found all over Tibia. Hunt 300 of
 Topic=5,"high","dwarf" -> Amount=17715, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"medium","undead" -> Amount=17716, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
 
-"task",QuestValue(17616)=200 -> Data=2, Amount=430*QuestValue(17616)*ExperienceStage(79)*35/100, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17617)=125 -> Data=2, Amount=720*QuestValue(17617)*ExperienceStage(79)*35/100, Price=25000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17618)=100 -> Data=3, Amount=515*QuestValue(17618)*ExperienceStage(79)*35/100, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17619)=100 -> Data=3, Amount=580*QuestValue(17619)*ExperienceStage(79)*35/100, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17620)=200 -> Data=2, Amount=700*QuestValue(17620)*ExperienceStage(79)*35/100, Price=25000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17712)=300 -> Data=2, Amount=100*QuestValue(17712)*ExperienceStage(79)*35/100, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17713)=300 -> Data=2, Amount=125*QuestValue(17713)*ExperienceStage(79)*35/100, Price=21000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17714)=300 -> Data=2, Amount=158*QuestValue(17714)*ExperienceStage(79)*35/100, Price=21000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17715)=300 -> Data=2, Amount=166*QuestValue(17715)*ExperienceStage(79)*35/100, Price=21000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17716)=200 -> Data=2, Amount=221*QuestValue(17716)*ExperienceStage(79)*35/100, Price=20000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17616)=200 -> Data=2, Amount=430*QuestValue(17616)*ExperienceStage(79)*35/100, Price=13000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17617)=125 -> Data=2, Amount=720*QuestValue(17617)*ExperienceStage(79)*35/100, Price=13000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17618)=100 -> Data=3, Amount=515*QuestValue(17618)*ExperienceStage(79)*35/100, Price=11000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17619)=100 -> Data=3, Amount=580*QuestValue(17619)*ExperienceStage(79)*35/100, Price=12000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17620)=200 -> Data=2, Amount=700*QuestValue(17620)*ExperienceStage(79)*35/100, Price=15000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17712)=300 -> Data=2, Amount=100*QuestValue(17712)*ExperienceStage(79)*35/100, Price=10000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17713)=300 -> Data=2, Amount=125*QuestValue(17713)*ExperienceStage(79)*35/100, Price=11000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17714)=300 -> Data=2, Amount=158*QuestValue(17714)*ExperienceStage(79)*35/100, Price=11500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17715)=300 -> Data=2, Amount=166*QuestValue(17715)*ExperienceStage(79)*35/100, Price=11500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17716)=200 -> Data=2, Amount=221*QuestValue(17716)*ExperienceStage(79)*35/100, Price=11000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Recommended tasks for high level
 Topic=5,"quara" -> Amount=17621, "As you wish. Seek out a quara settlement and hunt 600 quara, it doesn't matter which type you hunt except scouts. Alright?", Topic=2
