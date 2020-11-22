@@ -521,6 +521,20 @@ ReturnValue Tile::queryAdd(int32_t, const Thing& thing, uint32_t, uint32_t flags
 				}
 			}
 
+			if (monster->hasCondition(CONDITION_AGGRESSIVE) && !monster->canPushItems()) {
+				if (hasFlag(TILESTATE_FIREDAMAGE) && !monster->isImmune(COMBAT_FIREDAMAGE)) {
+					return RETURNVALUE_NOTPOSSIBLE;
+				}
+
+				if (hasFlag(TILESTATE_POISONDAMAGE) && !monster->isImmune(COMBAT_EARTHDAMAGE)) {
+					return RETURNVALUE_NOTPOSSIBLE;
+				}
+
+				if (hasFlag(TILESTATE_ENERGYDAMAGE) && !monster->isImmune(COMBAT_ENERGYDAMAGE)) {
+					return RETURNVALUE_NOTPOSSIBLE;
+				}
+			}
+
 			if (!monster->hasCondition(CONDITION_AGGRESSIVE) &&
 				!hasBitSet(FLAG_IGNOREFIELDDAMAGE, flags)) {
 				if (hasFlag(TILESTATE_FIREDAMAGE) && !monster->isImmune(COMBAT_FIREDAMAGE)) {
