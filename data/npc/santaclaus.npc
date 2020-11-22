@@ -1,0 +1,11 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# 17608 - any task in progress
+
+Name = "Santa Claus"
+Outfit = (160,0-112-93-95-0)
+Home = [32362,32207,7]
+Radius = 3
+
+Behaviour = {
+@"gen-xmas.ndb"
+}
