@@ -67,4 +67,7 @@
 		<item id="3037" countmax="1" chance="2" /> <!-- a yellow gem -->
 		<item id="5922" countmax="1" chance="25" /> <!-- a holy orchid -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

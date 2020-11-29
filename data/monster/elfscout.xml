@@ -46,4 +46,7 @@
 		<item id="2901" countmax="1" chance="140" /> <!-- a waterskin -->
 		<item id="5921" countmax="1" chance="10" /> <!-- a heaven blossom -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -24,4 +24,7 @@
 		<item id="3590" countmax="3" chance="30" /> <!-- a cherry -->
 		<item id="3031" countmax="6" chance="350" /> <!-- a gold coin -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

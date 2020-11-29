@@ -94,7 +94,7 @@ CREATE TABLE `guilds` (
   `ownerid` int(11) NOT NULL,
   `creationdata` int(11) NOT NULL,
   `motd` varchar(255) NOT NULL DEFAULT '',
-  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
