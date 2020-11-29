@@ -31,4 +31,7 @@
 		<item id="5896" countmax="1" chance="25" /> <!-- bear paw -->
 		<item id="5902" countmax="1" chance="10" /> <!-- honeycomb -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

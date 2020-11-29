@@ -452,6 +452,12 @@
 		<mission name="Paw and Fur: Bugs" storageid="17730" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Outlaws" storageid="17731" startvalue="0" endvalue="250" description="You already hunted |STATE|/250 outlaws." />
 		<mission name="Paw and Fur: Outlaws" storageid="17731" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Hyaenas" storageid="17732" startvalue="0" endvalue="30" description="You already hunted |STATE|/30 hyaenas." />
+		<mission name="Paw and Fur: Hyaenas" storageid="17732" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Lions" storageid="17733" startvalue="0" endvalue="20" description="You already hunted |STATE|/20 lions." />
+		<mission name="Paw and Fur: Lions" storageid="17733" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Bears" storageid="17734" startvalue="0" endvalue="35" description="You already hunted |STATE|/35 bears." />
+		<mission name="Paw and Fur: Bears" storageid="17734" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		
 		<!--Grizzly Adams: level 50 to 79 -->
 		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 quara scouts." />

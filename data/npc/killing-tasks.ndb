@@ -34,7 +34,7 @@ VANISH,!           -> "Happy hunting, old chap!"
 "trade" -> *
 "sabrehaven","talon" -> "We as a hunting society know very interesting purposes of those magical talons. But only the loyal hunters of the 'Paw and Fur - Hunting Elite' are allowed to know."
 
-"low","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Frost trolls, swamp trolls, rats, bugs, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises, gargoyles, elves or outlaws.", Topic=5
+"low","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Frost trolls, swamp trolls, lions, rats, hyaenas, bears, bugs, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises, gargoyles, elves or outlaws.", Topic=5
 "medium","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
 "high","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: High class orcs, hero, necromancers, underwater quara, giant spiders, banshees, lichs or cults.", Topic=5
 "very","high","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Nightmare, hydras, serpent spawns, behemoths, dragon lords, warlocks, hand of cursed fates, juggernauts, demons.", Topic=5
@@ -58,6 +58,9 @@ Topic=5,"undead" -> Amount=17704, "They can be found all over Tibia. Hunt 100 of
 Topic=5,"elves" -> Amount=17729, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
 Topic=5,"bug" -> Amount=17730, "They can be found all over Tibia. Hunt 40 of them. Interested?", Topic=2
 Topic=5,"outlaw" -> Amount=17731, "They can be found all over Tibia. Hunt 250 of them. Interested?", Topic=2
+Topic=5,"hyaena" -> Amount=17732, "They can be found all over Tibia. Hunt 30 of them. Interested?", Topic=2
+Topic=5,"lion" -> Amount=17733, "They can be found all over Tibia. Hunt 20 of them. Interested?", Topic=2
+Topic=5,"bear" -> Amount=17734, "They can be found all over Tibia. Hunt 35 of them. Interested?", Topic=2
 Topic=5 -> "Maybe next time."
 
 "task",QuestValue(17609)=100 -> Data=1, Amount=40*QuestValue(17609)*ExperienceStage(29)*40/100, Price=2000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -77,6 +80,9 @@ Topic=5 -> "Maybe next time."
 "task",QuestValue(17729)=200 -> Data=3, Amount=97*QuestValue(17729)*ExperienceStage(29)*40/100, Price=3800, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17730)=40 -> Data=1, Amount=18*QuestValue(17730)*ExperienceStage(29)*40/100, Price=400, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17731)=250 -> Data=1, Amount=57*QuestValue(17731)*ExperienceStage(29)*40/100, Price=4000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17732)=30 -> Data=1, Amount=20*QuestValue(17732)*ExperienceStage(29)*40/100, Price=350, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17733)=20 -> Data=1, Amount=30*QuestValue(17733)*ExperienceStage(29)*40/100, Price=600, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17734)=35 -> Data=1, Amount=23*QuestValue(17734)*ExperienceStage(29)*40/100, Price=400, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Recommended tasks for medium level
 Topic=5,"quara","scout" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
