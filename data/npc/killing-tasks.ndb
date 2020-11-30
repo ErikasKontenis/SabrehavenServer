@@ -34,8 +34,8 @@ VANISH,!           -> "Happy hunting, old chap!"
 "trade" -> *
 "sabrehaven","talon" -> "We as a hunting society know very interesting purposes of those magical talons. But only the loyal hunters of the 'Paw and Fur - Hunting Elite' are allowed to know."
 
-"low","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Frost trolls, swamp trolls, lions, rats, hyaenas, bears, bugs, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises, gargoyles, elves or outlaws.", Topic=5
-"medium","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts or dragons.", Topic=5
+"low","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Frost trolls, swamp trolls, lions, rats, hyaenas, bears, bugs, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises, gargoyles, elves, outlaws or slimes.", Topic=5
+"medium","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts, beholders, djinns, pirates or dragons.", Topic=5
 "high","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: High class orcs, hero, necromancers, underwater quara, giant spiders, banshees, lichs or cults.", Topic=5
 "very","high","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Nightmare, hydras, serpent spawns, behemoths, dragon lords, warlocks, hand of cursed fates, juggernauts, demons.", Topic=5
 "task",QuestValue(17607)=1,QuestValue(17608)=0 -> "Alright, what would you like to hunt? I have low level tasks, medium level tasks, high level tasks and very high level tasks.", Topic=5
@@ -61,13 +61,14 @@ Topic=5,"outlaw" -> Amount=17731, "They can be found all over Tibia. Hunt 250 of
 Topic=5,"hyaena" -> Amount=17732, "They can be found all over Tibia. Hunt 30 of them. Interested?", Topic=2
 Topic=5,"lion" -> Amount=17733, "They can be found all over Tibia. Hunt 20 of them. Interested?", Topic=2
 Topic=5,"bear" -> Amount=17734, "They can be found all over Tibia. Hunt 35 of them. Interested?", Topic=2
+Topic=5,"slime" -> Amount=17735, "They can be found all over Tibia. Hunt 100 of them. Interested?", Topic=2
 Topic=5 -> "Maybe next time."
 
 "task",QuestValue(17609)=100 -> Data=1, Amount=40*QuestValue(17609)*ExperienceStage(29)*40/100, Price=2000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17610)=100 -> Data=2, Amount=120*QuestValue(17610)*ExperienceStage(29)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17611)=50 -> Data=2, Amount=150*QuestValue(17611)*ExperienceStage(29)*40/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17612)=100 -> Data=1, Amount=115*QuestValue(17612)*ExperienceStage(29)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
-"task",QuestValue(17613)=100 -> Data=2, Amount=150*QuestValue(17613)*ExperienceStage(29)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17613)=100 -> Data=2, Amount=150*QuestValue(17613)*ExperienceStage(29)*40/100, Price=6000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17614)=65 -> Data=3, Amount=150*QuestValue(17614)*ExperienceStage(29)*40/100, Price=5000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17697)=100 -> Data=2, Amount=23*QuestValue(17697)*ExperienceStage(29)*40/100, Price=1000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17698)=100 -> Data=2, Amount=25*QuestValue(17698)*ExperienceStage(29)*40/100, Price=1100, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -83,6 +84,7 @@ Topic=5 -> "Maybe next time."
 "task",QuestValue(17732)=30 -> Data=1, Amount=20*QuestValue(17732)*ExperienceStage(29)*40/100, Price=350, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17733)=20 -> Data=1, Amount=30*QuestValue(17733)*ExperienceStage(29)*40/100, Price=600, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17734)=35 -> Data=1, Amount=23*QuestValue(17734)*ExperienceStage(29)*40/100, Price=400, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17735)=100 -> Data=1, Amount=160*QuestValue(17735)*ExperienceStage(29)*40/100, Price=7000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Recommended tasks for medium level
 Topic=5,"quara","scout" -> Amount=17616, "The scouts can be found on Malada, one of the Shattered Isles. Your task is to kill 200 quara scouts. I accept quara constrictor scouts, quara hydromancer scouts, quara mantassin scouts, quara pincher scouts and quara predator scouts, are you in?", Topic=2
@@ -95,6 +97,9 @@ Topic=5,"minotaur" -> Amount=17713, "They can be found all over Tibia. Hunt 300 
 Topic=5,"lizard" -> Amount=17714, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"high","dwarf" -> Amount=17715, "They can be found all over Tibia. Hunt 300 of them. Interested?", Topic=2
 Topic=5,"medium","undead" -> Amount=17716, "They can be found all over Tibia. Hunt 200 of them. Interested?", Topic=2
+Topic=5,"beholder" -> Amount=17736, "They can be found all over Tibia. Hunt 250 of them. Interested?", Topic=2
+Topic=5,"djinn" -> Amount=17737, "They can be found all over Tibia. Hunt 500 of them. Interested?", Topic=2
+Topic=5,"pirate" -> Amount=17738, "They can be found all over Tibia. Hunt 600 of them. Interested?", Topic=2
 
 "task",QuestValue(17616)=200 -> Data=2, Amount=430*QuestValue(17616)*ExperienceStage(49)*35/100, Price=13000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17617)=125 -> Data=2, Amount=720*QuestValue(17617)*ExperienceStage(49)*35/100, Price=13000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
@@ -106,6 +111,9 @@ Topic=5,"medium","undead" -> Amount=17716, "They can be found all over Tibia. Hu
 "task",QuestValue(17714)=300 -> Data=2, Amount=158*QuestValue(17714)*ExperienceStage(49)*35/100, Price=11500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17715)=300 -> Data=2, Amount=166*QuestValue(17715)*ExperienceStage(49)*35/100, Price=11500, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 "task",QuestValue(17716)=200 -> Data=2, Amount=221*QuestValue(17716)*ExperienceStage(49)*35/100, Price=11000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17736)=250 -> Data=3, Amount=450*QuestValue(17736)*ExperienceStage(49)*35/100, Price=15000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17737)=500 -> Data=4, Amount=245*QuestValue(17737)*ExperienceStage(49)*35/100, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
+"task",QuestValue(17738)=600 -> Data=4, Amount=205*QuestValue(17738)*ExperienceStage(49)*35/100, Price=30000, "Spiffing work, old chap. What would you like to get for reward: %A EXP or %P gold?", Topic=4
 
 # Recommended tasks for high level
 Topic=5,"quara" -> Amount=17621, "As you wish. Seek out a quara settlement and hunt 600 quara, it doesn't matter which type you hunt except scouts. Alright?", Topic=2

@@ -61,4 +61,7 @@
 		<item id="3029" countmax="4" chance="25" /> <!-- a small sapphire -->
 		<item id="5912" countmax="1" chance="10" /> <!-- a blue piece of cloth -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

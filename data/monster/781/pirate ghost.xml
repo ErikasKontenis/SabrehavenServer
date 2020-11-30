@@ -48,4 +48,7 @@
 		<item id="3271" chance="7" /><!-- spike sword -->
 		<item id="3566" chance="7" /><!-- red robe -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

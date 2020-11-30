@@ -458,6 +458,14 @@
 		<mission name="Paw and Fur: Lions" storageid="17733" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		<mission name="Paw and Fur: Bears" storageid="17734" startvalue="0" endvalue="35" description="You already hunted |STATE|/35 bears." />
 		<mission name="Paw and Fur: Bears" storageid="17734" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Slimes" storageid="17735" startvalue="0" endvalue="100" description="You already hunted |STATE|/100 slimes." />
+		<mission name="Paw and Fur: Slimes" storageid="17735" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Beholders" storageid="17736" startvalue="0" endvalue="250" description="You already hunted |STATE|/250 beholders." />
+		<mission name="Paw and Fur: Beholders" storageid="17736" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Djinns" storageid="17737" startvalue="0" endvalue="500" description="You already hunted |STATE|/500 djinns." />
+		<mission name="Paw and Fur: Djinns" storageid="17737" startvalue="99999" endvalue="99999" description="You have finished the task." />
+		<mission name="Paw and Fur: Pirates" storageid="17738" startvalue="0" endvalue="600" description="You already hunted |STATE|/600 pirates." />
+		<mission name="Paw and Fur: Pirates" storageid="17738" startvalue="99999" endvalue="99999" description="You have finished the task." />
 		
 		<!--Grizzly Adams: level 50 to 79 -->
 		<mission name="Paw and Fur: Quara Scouts" storageid="17616" startvalue="0" endvalue="200" description="You already hunted |STATE|/200 quara scouts." />

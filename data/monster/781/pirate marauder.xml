@@ -45,4 +45,7 @@
 		<item id="5928" chance="6" /><!-- goldfish bowl -->
 		<item id="5792" chance="6" /><!-- dice -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

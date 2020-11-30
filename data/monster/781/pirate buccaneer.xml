@@ -30,20 +30,23 @@
 		<voice sentence="Plundeeeeer!" />
 	</voices>
 	<loot>
-    <item id="3031" countmax="59" chance="275" /><!-- gold coin -->
-    <item id="6095" chance="15" /><!-- pirate shirt -->
-    <item id="3273" chance="108" /><!-- sabre -->
-    <item id="2920" chance="103" /><!-- torch -->
-    <item id="3298" countmax="5" chance="60" /><!-- throwing knife -->
-    <item id="5090" chance="18" /><!-- treasure map -->
-    <item id="3123" chance="104" /><!-- worn leather boots -->
-    <item id="5926" chance="8" /><!-- pirate backpack -->
-    <item id="6097" chance="10" /><!-- hook -->
-    <item id="6098" chance="9" /><!-- eye patch -->
-    <item id="3413" chance="44" /><!-- battle shield -->
-    <item id="3357" chance="11" /><!-- plate armor -->
-    <item id="6126" chance="8" /><!-- peg leg -->
-    <item id="5792" chance="5" /><!-- dice -->
-    <item id="5552" chance="5" /><!-- rum flask -->
-</loot>
+		<item id="3031" countmax="59" chance="275" /><!-- gold coin -->
+		<item id="6095" chance="15" /><!-- pirate shirt -->
+		<item id="3273" chance="108" /><!-- sabre -->
+		<item id="2920" chance="103" /><!-- torch -->
+		<item id="3298" countmax="5" chance="60" /><!-- throwing knife -->
+		<item id="5090" chance="18" /><!-- treasure map -->
+		<item id="3123" chance="104" /><!-- worn leather boots -->
+		<item id="5926" chance="8" /><!-- pirate backpack -->
+		<item id="6097" chance="10" /><!-- hook -->
+		<item id="6098" chance="9" /><!-- eye patch -->
+		<item id="3413" chance="44" /><!-- battle shield -->
+		<item id="3357" chance="11" /><!-- plate armor -->
+		<item id="6126" chance="8" /><!-- peg leg -->
+		<item id="5792" chance="5" /><!-- dice -->
+		<item id="5552" chance="5" /><!-- rum flask -->
+	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

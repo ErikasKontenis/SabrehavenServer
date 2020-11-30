@@ -73,4 +73,7 @@
 		<item id="3265" countmax="1" chance="60" /> <!-- a two handed sword -->
 		<item id="5898" countmax="1" chance="8" /> <!-- beholder eye -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

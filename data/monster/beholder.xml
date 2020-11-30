@@ -67,4 +67,7 @@
 		<item id="3412" countmax="1" chance="30" /> <!-- a wooden shield -->
 		<item id="5898" countmax="1" chance="8" /> <!-- beholder eye -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>
