@@ -44,11 +44,11 @@ function onSay(player, words, param)
 	message = message .. "Default murders\n"
 	message = message .. "- Daily kills for red skull " .. killsDayRedSkull .. "\n"
 	message = message .. "- Weekly kills for red skull " .. killsWeekRedSkull .. "\n"
-	message = message .. "- Monthly kills for red skull " .. killsMonthRedSkull .. "\n"
+	message = message .. "- Monthly kills for red skull " .. (killsMonthRedSkull >= 99999 and "unlimited" or tostring(killsMonthRedSkull)) .. "\n"
 	
 	message = message .. "- Daily kills for banishment " .. killsDayBanishment .. "\n"
 	message = message .. "- Weekly kills for banishment " .. killsWeekBanishment .. "\n"
-	message = message .. "- Monthly kills for banishment " .. killsMonthBanishment .. "\n"
+	message = message .. "- Monthly kills for banishment " .. (killsMonthBanishment >= 99999 and "unlimited" or tostring(killsMonthBanishment)) .. "\n"
 	
 	message = message .. "\n"
 	
