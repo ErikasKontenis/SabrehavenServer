@@ -94,7 +94,7 @@ newbieLevelThreshold = 5
 rateExp = 1
 rateSkill = 3
 rateLoot = 2
-rateMagic = 1
+rateMagic = 2
 rateSpawn = 0
 
 -- Monsters
