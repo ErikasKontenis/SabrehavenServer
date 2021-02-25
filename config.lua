@@ -25,7 +25,7 @@ redSkullTime = 7 * 24 * 60 * 60
 killsDayRedSkull = 3
 killsWeekRedSkull = 6
 killsMonthRedSkull = 99999
-killsDayBanishment = 5
+killsDayBanishment = 1
 killsWeekBanishment = 12
 killsMonthBanishment = 99999
 

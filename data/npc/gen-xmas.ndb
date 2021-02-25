@@ -16,31 +16,31 @@ VANISH,!                    -> "Good bye, little %N!"
 "thank"           -> "You had a few hard times last year, I know. Considering all that you did well and I'm proud of you."
 "thank",amount>9000 -> "You're one of my favourite children, little %N. But pssht, don't tell the others! I love all of you, of course."
 
-"present",QuestValue(217)<999,amount<2000,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=6506, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,amount<4000,amount>1999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=6507, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,amount<6000,amount>3999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=6508, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,amount<8000,amount>5999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=2992, Amount=10,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount<9000,amount>7999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3039, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount<9500,amount>8999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3036, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,amount<9982,amount>9499,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=2991, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9983,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3382, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9984,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3419, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9985,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3381, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9986,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3420, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9987,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3279, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9988,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3079, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9989,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3386, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9990,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3567, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9991,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3364, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9992,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3366, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9993,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3389, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9994,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3001, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9995,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3570, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9996,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=5919, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9997,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3553, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9998,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3057, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=9999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=5080, Amount=1,Create(Type),Idle
-"present",QuestValue(217)<999,Level>20,amount=10000,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=2993, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,amount<2000,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=6506, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,amount<4000,amount>1999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=6507, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,amount<6000,amount>3999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=6508, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,amount<8000,amount>5999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3599, Amount=10,Create(Type),Type=2992, Amount=10,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount<9000,amount>7999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3039, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount<9500,amount>8999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3036, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,amount<9982,amount>9499,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=2991, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9983,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3382, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9984,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3419, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9985,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3381, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9986,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3420, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9987,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3279, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9988,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3079, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9989,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3386, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9990,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3567, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9991,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3364, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9992,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3366, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9993,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3389, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9994,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3001, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9995,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3570, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9996,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=5919, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9997,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3553, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9998,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=3057, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=9999,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=5080, Amount=1,Create(Type),Idle
+"present",QuestValue(217)<3,Level>20,amount=10000,!   -> "Here is your present! Enjoy!",SetQuestValue(217,3),Type=2993, Amount=1,Create(Type),Idle
 
 
 "present",QuestValue(217)=3        -> "You already got your present! Next please!", Idle
