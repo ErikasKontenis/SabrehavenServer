@@ -89,7 +89,7 @@ bool Spawns::loadFromXml(const std::string& filename)
 				spawnList.emplace_front(pos, radius);
 				Spawn& spawn = spawnList.front();
 
-				uint32_t interval = uniform_random(pugi::cast<uint32_t>(childNode.attribute("spawntime").value()) * 250, pugi::cast<uint32_t>(childNode.attribute("spawntime").value()) * 500);
+				uint32_t interval = uniform_random(pugi::cast<uint32_t>(childNode.attribute("spawntime").value()) * g_config.getNumber(ConfigManager::MIN_RATE_SPAWN), pugi::cast<uint32_t>(childNode.attribute("spawntime").value()) * g_config.getNumber(ConfigManager::MAX_RATE_SPAWN));
 				if (interval > MINSPAWN_INTERVAL) {
 					uint32_t exInterval = g_config.getNumber(ConfigManager::RATE_SPAWN);
 					if (exInterval) {

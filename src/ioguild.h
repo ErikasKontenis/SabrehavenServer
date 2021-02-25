@@ -27,6 +27,10 @@ class IOGuild
 	public:
 		static uint32_t getGuildIdByName(const std::string& name);
 		static void getWarList(uint32_t guildId, GuildWarList& guildWarList);
+
+		static uint64_t getGuildBalance(uint32_t id);
+		static bool increaseGuildBankBalance(uint32_t guid, uint64_t bankBalance);
+		static bool decreaseGuildBankBalance(uint32_t guid, uint64_t bankBalance);
 };
 
 #endif

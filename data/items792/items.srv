@@ -11218,17 +11218,17 @@ Attributes  = {ChangeTarget=2541,Brightness=0,LightColor=215}
 TypeID      = 2543
 Name        = "a box"
 Flags       = {Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=2469}
+Attributes  = {DisguiseTarget=2469}
 
 TypeID      = 2544
 Name        = "a wooden coffin"
 Flags       = {Bottom,Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=2476}
+Attributes  = {DisguiseTarget=2476}
 
 TypeID      = 2545
 Name        = "a wooden coffin"
 Flags       = {Bottom,Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=2474}
+Attributes  = {DisguiseTarget=2474}
 
 TypeID      = 2546
 Name        = "a chest"
@@ -11268,12 +11268,12 @@ Attributes  = {DisguiseTarget=3634}
 TypeID      = 2553
 Name        = "drawers"
 Flags       = {Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=2433}
+Attributes  = {DisguiseTarget=2433}
 
 TypeID      = 2554
 Name        = "drawers"
 Flags       = {Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=2434}
+Attributes  = {DisguiseTarget=2434}
 
 TypeID      = 2555
 Name        = "a small hole"
@@ -11293,27 +11293,27 @@ Attributes  = {DisguiseTarget=4285}
 TypeID      = 2558
 Name        = "a bookcase"
 Flags       = {Chest,Unpass,Unmove,Unlay,Height,Disguise}
-Attributes  = {,DisguiseTarget=2435}
+Attributes  = {DisguiseTarget=2435}
 
 TypeID      = 2559
 Name        = "a bookcase"
 Flags       = {Chest,Unpass,Unmove,Unlay,Height,Disguise}
-Attributes  = {,DisguiseTarget=2438}
+Attributes  = {DisguiseTarget=2438}
 
 TypeID      = 2560
 Name        = "a stone coffin"
 Flags       = {Bottom,Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=1983}
+Attributes  = {DisguiseTarget=1983}
 
 TypeID      = 2561
 Name        = "a barrel"
 Flags       = {Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=2523}
+Attributes  = {DisguiseTarget=2523}
 
 TypeID      = 2562
 Name        = "a hollow stone"
 Flags       = {Bottom,Chest,Unpass,Unmove,Unlay,Height,Disguise}
-Attributes  = {,DisguiseTarget=1777}
+Attributes  = {DisguiseTarget=1777}
 
 TypeID      = 2563
 Name        = "a pile of bones"
@@ -11323,12 +11323,12 @@ Attributes  = {DisguiseTarget=4305}
 TypeID      = 2564
 Name        = "a sarcophagus"
 Flags       = {Bottom,Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=1994}
+Attributes  = {DisguiseTarget=1994}
 
 TypeID      = 2565
 Name        = "a sarcophagus"
 Flags       = {Bottom,Chest,Unpass,Unmove,Height,Disguise}
-Attributes  = {,DisguiseTarget=1992}
+Attributes  = {DisguiseTarget=1992}
 
 TypeID      = 2566
 Name        = "a lever"

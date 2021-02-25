@@ -1,5 +1,38 @@
+local trainingStatues = {17724, 17725, 17726, 17727, 17728}
+
 function Player:onLook(thing, position, distance)
 	local description = "You see " .. thing:getDescription(distance)
+	
+	if thing:isItem() and thing:getId() == 2028 then
+		if isInArray(trainingStatues, thing:getActionId()) then
+			local trainingTime = math.min(43200 / 2, self:getOfflineTrainingTime() / 1000)
+			local text = "You have"
+			local hours = math.floor(trainingTime / 3600)
+			if hours > 1 then
+				text = string.format("%s %d hours", text, hours)
+			elseif hours == 1 then
+				text = string.format("%s 1 hour", text)
+			end
+
+			local minutes = math.floor((trainingTime % 3600) / 60)
+			if minutes ~= 0 then
+				if hours ~= 0 then
+					text = string.format("%s and", text)
+				end
+
+				if minutes > 1 then
+					text = string.format("%s %d minutes", text, minutes)
+				else
+					text = string.format("%s 1 minute", text)
+				end
+			end
+
+			text = string.format(" %s offline training time remaining.", text)
+			
+			description = string.format(description .. "%s", text)
+		end
+	end
+			
 	if self:getGroup():getAccess() then
 		if thing:isItem() then
 			description = string.format("%s\nItem ID: %d", description, thing:getId())

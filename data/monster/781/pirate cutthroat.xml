@@ -43,4 +43,7 @@
 		<item id="5552" chance="6" /><!-- rum flask -->
 		<item id="5792" chance="5" /><!-- dice -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

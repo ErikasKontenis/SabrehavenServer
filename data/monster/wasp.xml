@@ -29,4 +29,7 @@
 	<loot>
 		<item id="5902" countmax="1" chance="30" /> <!-- honeycomb -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

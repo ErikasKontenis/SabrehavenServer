@@ -39,7 +39,7 @@ uint32_t IOGuild::getGuildIdByName(const std::string& name)
 void IOGuild::getWarList(uint32_t guildId, GuildWarList& guildWarList)
 {
 	std::ostringstream query;
-	query << "SELECT `guild1`, `guild2` FROM `guild_wars` WHERE (`guild1` = " << guildId << " OR `guild2` = " << guildId << ") AND `ended` = 0 AND `status` = 1";
+	query << "SELECT `guild1`, `guild2` FROM `guild_wars` WHERE (`guild1` = " << guildId << " OR `guild2` = " << guildId << ") AND `status` IN (1, 4)";
 
 	DBResult_ptr result = Database::getInstance()->storeQuery(query.str());
 	if (!result) {
@@ -54,4 +54,30 @@ void IOGuild::getWarList(uint32_t guildId, GuildWarList& guildWarList)
 			guildWarList.push_back(result->getNumber<uint32_t>("guild2"));
 		}
 	} while (result->next());
+}
+
+uint64_t IOGuild::getGuildBalance(uint32_t id)
+{
+	std::ostringstream query;
+	query << "SELECT `balance` FROM `guilds` WHERE `id` = " << id;
+	DBResult_ptr result = Database::getInstance()->storeQuery(query.str());
+	if (!result) {
+		return 0;
+	}
+
+	return result->getNumber<uint64_t>("balance");
+}
+
+bool IOGuild::increaseGuildBankBalance(uint32_t guid, uint64_t bankBalance)
+{
+	std::ostringstream query;
+	query << "UPDATE `guilds` SET `balance` = `balance` + " << bankBalance << " WHERE `id` = " << guid;
+	return Database::getInstance()->executeQuery(query.str());
+}
+
+bool IOGuild::decreaseGuildBankBalance(uint32_t guid, uint64_t bankBalance)
+{
+	std::ostringstream query;
+	query << "UPDATE `guilds` SET `balance` = `balance` - " << bankBalance << " WHERE `id` = " << guid;
+	return Database::getInstance()->executeQuery(query.str());
 }

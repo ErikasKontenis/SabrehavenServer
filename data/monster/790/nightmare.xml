@@ -62,4 +62,7 @@
 		<item id="5668" chance="1" /><!-- mysterious voodoo skull -->
 		<item id="3342" chance="95" /><!-- war axe -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

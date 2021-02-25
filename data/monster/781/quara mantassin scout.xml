@@ -38,4 +38,7 @@
 		<item id="3265" chance="16" /><!-- two handed sword -->
 		<item id="3029" chance="5" /><!-- small sapphire -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

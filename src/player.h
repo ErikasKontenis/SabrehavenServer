@@ -154,6 +154,25 @@ class Player final : public Creature, public Cylinder
 			return staminaMinutes;
 		}
 
+		bool addOfflineTrainingTries(skills_t skill, uint64_t tries);
+
+		void addOfflineTrainingTime(int32_t addTime) {
+			offlineTrainingTime = std::min<int32_t>(12 * 3600 * 1000, offlineTrainingTime + addTime);
+		}
+		void removeOfflineTrainingTime(int32_t removeTime) {
+			offlineTrainingTime = std::max<int32_t>(0, offlineTrainingTime - removeTime);
+		}
+		int32_t getOfflineTrainingTime() const {
+			return offlineTrainingTime;
+		}
+
+		int32_t getOfflineTrainingSkill() const {
+			return offlineTrainingSkill;
+		}
+		void setOfflineTrainingSkill(int32_t skill) {
+			offlineTrainingSkill = skill;
+		}
+
 		uint64_t getBankBalance() const {
 			return bankBalance;
 		}
@@ -182,6 +201,7 @@ class Player final : public Creature, public Cylinder
 			guildNick = nick;
 		}
 
+		uint32_t getWarId(const Player* player) const;
 		bool isInWar(const Player* player) const;
 		bool isInWarList(uint32_t guild_id) const;
 
@@ -619,6 +639,11 @@ class Player final : public Creature, public Cylinder
 			}
 		}
 
+		void sendChannelMessage(const std::string& author, const std::string& text, SpeakClasses type, uint16_t channel) {
+			if (client) {
+				client->sendChannelMessage(author, text, type, channel);
+			}
+		}
 		void sendCreatureAppear(const Creature* creature, const Position& pos, bool isLogin) {
 			if (client) {
 				client->sendAddCreature(creature, pos, creature->getTile()->getStackposOfCreature(this, creature), isLogin);
@@ -1069,6 +1094,8 @@ class Player final : public Creature, public Cylinder
 		int32_t premiumDays = 0;
 		int32_t bloodHitCount = 0;
 		int32_t shieldBlockCount = 0;
+		int32_t offlineTrainingSkill = -1;
+		int32_t offlineTrainingTime = 0;
 		int32_t idleTime = 0;
 		int32_t lastWalkingTime = 0;
 

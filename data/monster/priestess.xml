@@ -58,4 +58,7 @@
 		<item id="3727" countmax="1" chance="35" /> <!-- a wood mushroom -->
 		<item id="2948" countmax="1" chance="14" /> <!-- a wooden flute -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

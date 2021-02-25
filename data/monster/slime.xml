@@ -30,4 +30,7 @@
 	<voices>
 		<voice sentence="Blubb" />
 	</voices>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

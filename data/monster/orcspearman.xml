@@ -35,4 +35,7 @@
 		<item id="3376" countmax="1" chance="90" /> <!-- a studded helmet -->
 		<item id="3362" countmax="1" chance="100" /> <!-- studded legs -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

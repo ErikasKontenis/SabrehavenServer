@@ -39,4 +39,7 @@
 		<item id="3426" countmax="1" chance="50" /> <!-- a studded shield -->
 		<item id="2920" countmax="1" chance="50" /> <!-- a torch -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -60,4 +60,7 @@
 		<item id="3081" countmax="1" chance="8" /> <!-- a stone skin amulet -->
 		<item id="3369" countmax="1" chance="10" /> <!-- a warrior helmet -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

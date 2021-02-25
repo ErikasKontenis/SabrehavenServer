@@ -65,4 +65,7 @@
 		<item id="3033" countmax="4" chance="12" /> <!-- a small amethyst -->
 		<item id="3032" countmax="3" chance="6" /> <!-- a small emerald -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

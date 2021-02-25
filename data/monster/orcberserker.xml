@@ -38,4 +38,7 @@
 		<item id="3582" countmax="1" chance="170" /> <!-- ham -->
 		<item id="2914" countmax="1" chance="80" /> <!-- a lamp -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

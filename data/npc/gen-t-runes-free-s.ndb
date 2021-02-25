@@ -64,6 +64,8 @@
 "bp","explosion","rune" -> *
 "backpack","fire","wall","rune" -> Type=3190, Data=4, Amount=1,  Price=246*20,    "Do you want to buy a backpack of fire wall rune for %P gold?", Topic=100
 "bp","fire","wall","rune" -> *
+"backpack","sudden","death","rune" -> Type=3155, Data=1, Amount=1,  Price=325*20,    "Do you want to buy a backpack of sudden death rune for %P gold?", Topic=100
+"bp","sudden","death","rune" -> *
 "backpack","energy","wall","rune" -> Type=3166, Data=4, Amount=1,  Price=341*20,    "Do you want to buy a backpack of energy wall rune for %P gold?", Topic=100
 "bp","energy","wall","rune" -> *
 

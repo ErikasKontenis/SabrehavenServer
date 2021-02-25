@@ -42,4 +42,7 @@
 		<item id="3409" countmax="1" chance="10" /> <!-- a steel shield -->
 		<item id="3279" countmax="1" chance="1" /> <!-- a war hammer -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

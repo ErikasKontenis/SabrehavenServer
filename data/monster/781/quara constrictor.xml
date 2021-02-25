@@ -49,4 +49,7 @@
 		<item id="5895" chance="10" /><!-- fish fin -->
 		<item id="3294" chance="70" /><!-- short sword -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

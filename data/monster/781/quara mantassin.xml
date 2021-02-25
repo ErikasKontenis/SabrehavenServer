@@ -48,4 +48,7 @@
 		<item id="3373" chance="6" /><!-- strange helmet -->
 		<item id="3567" chance="6" /><!-- blue robe -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -23,4 +23,7 @@
 	<loot>
 		<item id="3577" countmax="2" chance="300" /> <!-- meat -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

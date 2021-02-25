@@ -45,7 +45,16 @@
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" />
 	</instant>
-
+	<instant name="Poison Wave" words="exevo pox hur" lvl="38" mana="250" direction="1" needlearn="0" script="spells/poison wave.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
+	<instant name="Wild Growth" words="exevo grav vita" lvl="27" mana="220" prem="1" cooldown="1000" range="3" direction="1" blocktype="all" needlearn="0" script="spells/wild growth.lua">
+		<vocation name="Druid" />
+		<vocation name="Elder Druid" />
+	</instant>
+	
+	
 	<!-- Knight Spells -->
 	<instant name="Challenge" words="exeta res" lvl="20" mana="30" prem="1" aggressive="0" needlearn="0" script="spells/challenge.lua">
 		<vocation name="Elite Knight" />
@@ -131,6 +140,12 @@
 		<vocation name="Elite Knight" />
 	</instant>
 	<instant name="Energy Strike" words="exori vis" lvl="12" mana="20" prem="1" cooldown="1000" range="3" direction="1" blockwalls="1" needlearn="0" script="spells/energy strike.lua">
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Master Sorcerer" />
+		<vocation name="Elder Druid" />
+	</instant>
+	<instant name="Poison Strike" words="exori pox" lvl="12" mana="20" prem="1" cooldown="1000" range="3" direction="1" blockwalls="1" needlearn="0" script="spells/poison strike.lua">
 		<vocation name="Sorcerer" />
 		<vocation name="Druid" />
 		<vocation name="Master Sorcerer" />
@@ -248,10 +263,6 @@
 	<rune name="Destroy Field" id="3148" allowfaruse="1" charges="3" maglv="3" aggressive="0" range="5" script="runes/destroy field.lua" />
 	<rune name="Chameleon" id="3178" allowfaruse="1" charges="1" maglv="4" aggressive="0" selftarget="1" blocktype="solid" function="chameleon" />
 	<rune name="Magic Wall" id="3180" allowfaruse="1" charges="3" maglv="9" blocktype="all" script="runes/magic wall.lua" />
-	<rune name="Wild Growth" id="3156" allowfaruse="1" charges="2" maglv="8" blocktype="all" script="runes/wild growth.lua">
-		<vocation name="Druid" />
-		<vocation name="Elder Druid" showInDescription="0" />
-	</rune>
 	<rune name="Paralyze" id="3165" allowfaruse="1" charges="1" maglv="18" mana="1400" needtarget="1" blocktype="solid" script="runes/paralyze.lua">
 		<vocation name="Druid" />
 		<vocation name="Elder Druid" showInDescription="0" />
@@ -425,10 +436,6 @@
 	<conjure name="Magic Wall" words="adevo grav tera" lvl="32" mana="750" soul="5" prem="1" reagentId="3147" conjureId="3180" conjureCount="3" needlearn="0" function="conjureRune">
 		<vocation name="Sorcerer" />
 		<vocation name="Master Sorcerer" />
-	</conjure>
-	<conjure name="Wild Growth" words="exevo grav vita" lvl="27" mana="220" soul="5" prem="1" reagentId="3147" conjureId="3156" conjureCount="2" needlearn="0" function="conjureRune">
-		<vocation name="Druid" />
-		<vocation name="Elder Druid" />
 	</conjure>
 	<conjure name="Paralyze" words="adana ani" lvl="54" mana="1400" soul="3" prem="1" reagentId="3147" conjureId="3165" conjureCount="1" needlearn="0" function="conjureRune">
 		<vocation name="Druid" />

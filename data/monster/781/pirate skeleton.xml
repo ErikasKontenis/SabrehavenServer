@@ -27,4 +27,7 @@
 		<item id="3337" chance="18" /><!-- bone club -->
 		<item id="3264" chance="12" /><!-- sword -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

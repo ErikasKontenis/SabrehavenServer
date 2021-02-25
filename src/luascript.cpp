@@ -1012,6 +1012,12 @@ void LuaScriptInterface::registerFunctions()
 	//getWaypointPosition(name)
 	lua_register(luaState, "getWaypointPositionByName", LuaScriptInterface::luaGetWaypointPositionByName);
 
+	//sendChannelMessage(channelId, type, message)
+	lua_register(luaState, "sendChannelMessage", LuaScriptInterface::luaSendChannelMessage);
+
+	//sendGuildChannelMessage(guildId, type, message)
+	lua_register(luaState, "sendGuildChannelMessage", LuaScriptInterface::luaSendGuildChannelMessage);
+
 #ifndef LUAJIT_VERSION
 	//bit operations for Lua, based on bitlib project release 24
 	//bit.bnot, bit.band, bit.bor, bit.bxor, bit.lshift, bit.rshift
@@ -1656,6 +1662,8 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::RATE_LOOT)
 	registerEnumIn("configKeys", ConfigManager::RATE_MAGIC)
 	registerEnumIn("configKeys", ConfigManager::RATE_SPAWN)
+	registerEnumIn("configKeys", ConfigManager::MIN_RATE_SPAWN)
+	registerEnumIn("configKeys", ConfigManager::MAX_RATE_SPAWN)
 	registerEnumIn("configKeys", ConfigManager::MAX_MESSAGEBUFFER)
 	registerEnumIn("configKeys", ConfigManager::ACTIONS_DELAY_INTERVAL)
 	registerEnumIn("configKeys", ConfigManager::EX_ACTIONS_DELAY_INTERVAL)
@@ -1684,6 +1692,9 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::BLOCK_HEIGHT)
 	registerEnumIn("configKeys", ConfigManager::DROP_ITEMS)
 	registerEnumIn("configKeys", ConfigManager::CLIENT_VERSION)
+	
+	// random
+	registerMethod("os", "rand", LuaScriptInterface::luaRandomRand);
 
 	// os
 	registerMethod("os", "mtime", LuaScriptInterface::luaSystemTime);
@@ -2005,6 +2016,15 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Player", "getSkillTries", LuaScriptInterface::luaPlayerGetSkillTries);
 	registerMethod("Player", "addSkillTries", LuaScriptInterface::luaPlayerAddSkillTries);
 
+	registerMethod("Player", "addOfflineTrainingTime", LuaScriptInterface::luaPlayerAddOfflineTrainingTime);
+	registerMethod("Player", "getOfflineTrainingTime", LuaScriptInterface::luaPlayerGetOfflineTrainingTime);
+	registerMethod("Player", "removeOfflineTrainingTime", LuaScriptInterface::luaPlayerRemoveOfflineTrainingTime);
+
+	registerMethod("Player", "addOfflineTrainingTries", LuaScriptInterface::luaPlayerAddOfflineTrainingTries);
+
+	registerMethod("Player", "getOfflineTrainingSkill", LuaScriptInterface::luaPlayerGetOfflineTrainingSkill);
+	registerMethod("Player", "setOfflineTrainingSkill", LuaScriptInterface::luaPlayerSetOfflineTrainingSkill);
+
 	registerMethod("Player", "getItemCount", LuaScriptInterface::luaPlayerGetItemCount);
 	registerMethod("Player", "getItemById", LuaScriptInterface::luaPlayerGetItemById);
 
@@ -2142,10 +2162,15 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Guild", "getId", LuaScriptInterface::luaGuildGetId);
 	registerMethod("Guild", "getName", LuaScriptInterface::luaGuildGetName);
 	registerMethod("Guild", "getMembersOnline", LuaScriptInterface::luaGuildGetMembersOnline);
+	registerMethod("Guild", "setGuildWarEmblem", LuaScriptInterface::luaGuildSetGuildWarEmblem);
 
 	registerMethod("Guild", "addRank", LuaScriptInterface::luaGuildAddRank);
 	registerMethod("Guild", "getRankById", LuaScriptInterface::luaGuildGetRankById);
 	registerMethod("Guild", "getRankByLevel", LuaScriptInterface::luaGuildGetRankByLevel);
+	
+	registerMethod("Guild", "getBankBalance", LuaScriptInterface::luaGuildGetBankBalance);
+	registerMethod("Guild", "increaseBankBalance", LuaScriptInterface::luaGuildIncreaseBankBalance);
+	registerMethod("Guild", "decreaseBankBalance", LuaScriptInterface::luaGuildDecreaseBankBalance);
 
 	// Group
 	registerClass("Group", "", LuaScriptInterface::luaGroupCreate);
@@ -2264,6 +2289,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("ItemType", "getDefense", LuaScriptInterface::luaItemTypeGetDefense);
 	registerMethod("ItemType", "getArmor", LuaScriptInterface::luaItemTypeGetArmor);
 	registerMethod("ItemType", "getWeaponType", LuaScriptInterface::luaItemTypeGetWeaponType);
+	registerMethod("ItemType", "getAmmoType", LuaScriptInterface::luaItemTypeGetAmmoType);
 
 	registerMethod("ItemType", "getTransformEquipId", LuaScriptInterface::luaItemTypeGetTransformEquipId);
 	registerMethod("ItemType", "getTransformDeEquipId", LuaScriptInterface::luaItemTypeGetTransformDeEquipId);
@@ -2348,6 +2374,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("MonsterType", "getMaxSummons", LuaScriptInterface::luaMonsterTypeGetMaxSummons);
 
 	registerMethod("MonsterType", "getArmor", LuaScriptInterface::luaMonsterTypeGetArmor);
+	registerMethod("MonsterType", "getSkill", LuaScriptInterface::luaMonsterTypeGetSkill);
 	registerMethod("MonsterType", "getDefense", LuaScriptInterface::luaMonsterTypeGetDefense);
 	registerMethod("MonsterType", "getOutfit", LuaScriptInterface::luaMonsterTypeGetOutfit);
 	registerMethod("MonsterType", "getRace", LuaScriptInterface::luaMonsterTypeGetRace);
@@ -3558,7 +3585,7 @@ int LuaScriptInterface::luaIsInWar(lua_State* L)
 		return 1;
 	}
 
-	pushBoolean(L, player->isInWar(targetPlayer));
+	lua_pushnumber(L, player->getWarId(targetPlayer));
 	return 1;
 }
 
@@ -3573,6 +3600,40 @@ int LuaScriptInterface::luaGetWaypointPositionByName(lua_State* L)
 	} else {
 		pushBoolean(L, false);
 	}
+	return 1;
+}
+
+int LuaScriptInterface::luaSendChannelMessage(lua_State* L)
+{
+	//sendChannelMessage(channelId, type, message)
+	uint32_t channelId = getNumber<uint32_t>(L, 1);
+	ChatChannel* channel = g_chat->getChannelById(channelId);
+	if (!channel) {
+		pushBoolean(L, false);
+		return 1;
+	}
+
+	SpeakClasses type = getNumber<SpeakClasses>(L, 2);
+	std::string message = getString(L, 3);
+	channel->sendToAll(message, type);
+	pushBoolean(L, true);
+	return 1;
+}
+
+int LuaScriptInterface::luaSendGuildChannelMessage(lua_State* L)
+{
+	//sendGuildChannelMessage(guildId, type, message)
+	uint32_t guildId = getNumber<uint32_t>(L, 1);
+	ChatChannel* channel = g_chat->getGuildChannelById(guildId);
+	if (!channel) {
+		pushBoolean(L, false);
+		return 1;
+	}
+
+	SpeakClasses type = getNumber<SpeakClasses>(L, 2);
+	std::string message = getString(L, 3);
+	channel->sendToAll(message, type);
+	pushBoolean(L, true);
 	return 1;
 }
 
@@ -3885,6 +3946,14 @@ int LuaScriptInterface::luaRawGetMetatable(lua_State* L)
 {
 	// rawgetmetatable(metatableName)
 	luaL_getmetatable(L, getString(L, 1).c_str());
+	return 1;
+}
+
+// random
+int LuaScriptInterface::luaRandomRand(lua_State* L)
+{
+	// random.rand()
+	lua_pushnumber(L, rand());
 	return 1;
 }
 
@@ -7517,6 +7586,95 @@ int LuaScriptInterface::luaPlayerAddSkillTries(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaPlayerAddOfflineTrainingTime(lua_State* L)
+{
+	// player:addOfflineTrainingTime(time)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		int32_t time = getNumber<int32_t>(L, 2);
+		player->addOfflineTrainingTime(time);
+		player->sendStats();
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+
+int LuaScriptInterface::luaPlayerGetOfflineTrainingTime(lua_State* L)
+{
+	// player:getOfflineTrainingTime()
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		lua_pushnumber(L, player->getOfflineTrainingTime());
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerRemoveOfflineTrainingTime(lua_State* L)
+{
+	// player:removeOfflineTrainingTime(time)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		int32_t time = getNumber<int32_t>(L, 2);
+		player->removeOfflineTrainingTime(time);
+		player->sendStats();
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerAddOfflineTrainingTries(lua_State* L)
+{
+	// player:addOfflineTrainingTries(skillType, tries)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		skills_t skillType = getNumber<skills_t>(L, 2);
+		uint64_t tries = getNumber<uint64_t>(L, 3);
+		pushBoolean(L, player->addOfflineTrainingTries(skillType, tries));
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerGetOfflineTrainingSkill(lua_State* L)
+{
+	// player:getOfflineTrainingSkill()
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		lua_pushnumber(L, player->getOfflineTrainingSkill());
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerSetOfflineTrainingSkill(lua_State* L)
+{
+	// player:setOfflineTrainingSkill(skillId)
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		uint32_t skillId = getNumber<uint32_t>(L, 2);
+		player->setOfflineTrainingSkill(skillId);
+		pushBoolean(L, true);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
 int LuaScriptInterface::luaPlayerGetItemCount(lua_State* L)
 {
 	// player:getItemCount(itemId[, subType = -1])
@@ -9114,6 +9272,44 @@ int LuaScriptInterface::luaGuildGetName(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaGuildSetGuildWarEmblem(lua_State* L)
+{
+	// guild:setGuildWarEmblem(guild2)
+	const Guild* guild = getUserdata<const Guild>(L, 1);
+	if (!guild) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	const Guild* guild2 = getUserdata<const Guild>(L, 2);
+	if (!guild2) {
+		lua_pushnil(L);
+		return 1;
+	}
+
+	auto& members = guild->getMembersOnline();
+	for (Player* player : members) {
+		GuildWarList guildWarList;
+		IOGuild::getWarList(player->getGuild()->getId(), guildWarList);
+		player->guildWarList = guildWarList;
+	}
+
+	auto& members2 = guild2->getMembersOnline();
+	for (Player* player : members2) {
+		GuildWarList guildWarList;
+		IOGuild::getWarList(player->getGuild()->getId(), guildWarList);
+		player->guildWarList = guildWarList;
+		g_game.updateCreatureSkull(player);
+	}
+
+	for (Player* player : members) {
+		g_game.updateCreatureSkull(player);
+	}
+
+	pushBoolean(L, true);
+	return 1;
+}
+
 int LuaScriptInterface::luaGuildGetMembersOnline(lua_State* L)
 {
 	// guild:getMembersOnline()
@@ -9190,6 +9386,49 @@ int LuaScriptInterface::luaGuildGetRankByLevel(lua_State* L)
 		setField(L, "name", rank->name);
 		setField(L, "level", rank->level);
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaGuildGetBankBalance(lua_State* L)
+{
+	// guild:getBankBalance()
+	Guild* guild = getUserdata<Guild>(L, 1);
+	if (guild) {
+		lua_pushnumber(L, IOGuild::getGuildBalance(guild->getId()));
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaGuildIncreaseBankBalance(lua_State* L)
+{
+	// guild:increaseBankBalance(amount)
+	Guild* guild = getUserdata<Guild>(L, 1);
+	if (guild) {
+		uint32_t amount = getNumber<uint32_t>(L, 2);
+		bool isSuccess = IOGuild::increaseGuildBankBalance(guild->getId(), amount);
+		pushBoolean(L, isSuccess);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaGuildDecreaseBankBalance(lua_State* L)
+{
+	// guild:decreaseBankBalance(amount)
+	Guild* guild = getUserdata<Guild>(L, 1);
+	if (guild) {
+		uint32_t amount = getNumber<uint32_t>(L, 2);
+		bool isSuccess = IOGuild::decreaseGuildBankBalance(guild->getId(), amount);
+		pushBoolean(L, isSuccess);
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;
@@ -10327,6 +10566,19 @@ int LuaScriptInterface::luaItemTypeGetWeaponType(lua_State* L)
 	return 1;
 }
 
+int LuaScriptInterface::luaItemTypeGetAmmoType(lua_State* L)
+{
+	// itemType:getAmmoType()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		lua_pushnumber(L, itemType->ammoType);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
 int LuaScriptInterface::luaItemTypeGetTransformEquipId(lua_State* L)
 {
 	// itemType:getTransformEquipId()
@@ -11220,6 +11472,19 @@ int LuaScriptInterface::luaMonsterTypeGetArmor(lua_State* L)
 	if (monsterType) {
 		lua_pushnumber(L, monsterType->info.armor);
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaMonsterTypeGetSkill(lua_State* L)
+{
+	// monsterType:getSkill()
+	MonsterType* monsterType = getUserdata<MonsterType>(L, 1);
+	if (monsterType) {
+		lua_pushnumber(L, monsterType->info.skill);
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;

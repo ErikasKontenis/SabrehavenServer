@@ -25,4 +25,7 @@
 		<item id="3492" countmax="1" chance="100" /> <!-- a worm -->
 		<item id="5897" countmax="1" chance="8" /> <!-- wolf paw -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

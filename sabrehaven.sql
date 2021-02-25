@@ -93,7 +93,8 @@ CREATE TABLE `guilds` (
   `name` varchar(255) NOT NULL,
   `ownerid` int(11) NOT NULL,
   `creationdata` int(11) NOT NULL,
-  `motd` varchar(255) NOT NULL DEFAULT ''
+  `motd` varchar(255) NOT NULL DEFAULT '',
+  `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
@@ -171,11 +172,10 @@ CREATE TABLE `guild_wars` (
   `id` int(11) NOT NULL,
   `guild1` int(11) NOT NULL DEFAULT '0',
   `guild2` int(11) NOT NULL DEFAULT '0',
-  `name1` varchar(255) NOT NULL,
-  `name2` varchar(255) NOT NULL,
   `status` tinyint(2) NOT NULL DEFAULT '0',
-  `started` bigint(15) NOT NULL DEFAULT '0',
-  `ended` bigint(15) NOT NULL DEFAULT '0'
+  `frag_limit` int(11) NOT NULL DEFAULT '0',
+  `declaration_date` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `bounty` bigint(20) UNSIGNED NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -1138,6 +1138,8 @@ CREATE TABLE `players` (
   `onlinetime` int(11) NOT NULL DEFAULT '0',
   `deletion` bigint(15) NOT NULL DEFAULT '0',
   `balance` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
+  `offlinetraining_time` smallint(5) unsigned NOT NULL DEFAULT '43200',
+  `offlinetraining_skill` int(11) NOT NULL DEFAULT '-1',
   `stamina` smallint(5) NOT NULL DEFAULT '3360',
   `skill_fist` int(10) UNSIGNED NOT NULL DEFAULT '10',
   `skill_fist_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
@@ -1583,6 +1585,14 @@ ALTER TABLE `account_viplist`
 ALTER TABLE `guilds`
   ADD CONSTRAINT `guilds_ibfk_1` FOREIGN KEY (`ownerid`) REFERENCES `players` (`id`) ON DELETE CASCADE;
 
+--
+-- Constraints for table `guild_wars`
+--
+ALTER TABLE `guild_wars`
+  ADD CONSTRAINT `guild1_ibfk_1` FOREIGN KEY (`guild1`) REFERENCES `guilds` (`id`) ON DELETE CASCADE,
+  ADD CONSTRAINT `guild2_ibfk_1` FOREIGN KEY (`guild2`) REFERENCES `guilds` (`id`) ON DELETE CASCADE;
+COMMIT;
+  
 --
 -- Constraints for table `guildwar_kills`
 --

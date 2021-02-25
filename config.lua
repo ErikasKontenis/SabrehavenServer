@@ -1,6 +1,10 @@
 -- Custom
-knightCloseAttackDamageIncreasePercent = 50
-paladinRangeAttackDamageIncreasePercent = 40
+clientVersion = 792
+knightCloseAttackDamageIncreasePercent = 20
+paladinRangeAttackDamageIncreasePercent = 15
+-- Min/Max rate spawn is a multiplication of the map spawntime in spawns.xml Regular monster spawn time is 600. The formula would be randomValue = random(600*100, 600*200) which varies between 60s and 120s
+minRateSpawn = 100
+maxRateSpawn = 200
 
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
@@ -15,15 +19,15 @@ expFromPlayersLevelRange = 75
 distanceWeaponsDropOnGround = false
 
 -- Skull System
-banLength = 30 * 24 * 60 * 60
+banLength = 2 * 24 * 60 * 60
 whiteSkullTime = 15 * 60
-redSkullTime = 30 * 24 * 60 * 60
+redSkullTime = 7 * 24 * 60 * 60
 killsDayRedSkull = 3
-killsWeekRedSkull = 5
-killsMonthRedSkull = 10
-killsDayBanishment = 6
-killsWeekBanishment = 10
-killsMonthBanishment = 20
+killsWeekRedSkull = 6
+killsMonthRedSkull = 99999
+killsDayBanishment = 1
+killsWeekBanishment = 12
+killsMonthBanishment = 99999
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
@@ -32,7 +36,7 @@ bindOnlyGlobalAddress = false
 loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
-maxPlayers = 1000
+maxPlayers = 0
 motd = "Welcome to Sabrehaven!"
 onePlayerOnlinePerAccount = true
 allowClones = false
@@ -42,7 +46,6 @@ replaceKickOnLogin = true
 maxPacketsPerSecond = -1
 autoStackCumulatives = false
 moneyRate = 1
-clientVersion = 792
 
 -- Deaths
 -- NOTE: Leave deathLosePercent as -1 if you want to use the default
@@ -89,7 +92,7 @@ newbieLevelThreshold = 5
 -- Rates
 -- NOTE: rateExp is not used if you have enabled stages in data/XML/stages.xml
 rateExp = 1
-rateSkill = 5
+rateSkill = 3
 rateLoot = 2
 rateMagic = 2
 rateSpawn = 0
@@ -109,7 +112,7 @@ defaultPriority = "high"
 startupDatabaseOptimization = true
 
 -- Status server information
-ownerName = ""
+ownerName = "Erikas"
 ownerEmail = ""
-url = "https://otland.net/"
-location = "Sweden"
+url = "https://sabrehaven.com/"
+location = "Poland"

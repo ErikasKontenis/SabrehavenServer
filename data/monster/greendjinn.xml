@@ -62,4 +62,7 @@
 		<item id="2933" countmax="1" chance="75" /> <!-- a small oil lamp -->
 		<item id="5910" countmax="1" chance="25" /> <!-- green piece of cloth -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

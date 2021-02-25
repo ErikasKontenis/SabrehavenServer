@@ -57,4 +57,7 @@
 		<item id="5876" countmax="1" chance="9" /> <!-- lizard leather -->
 		<item id="5881" countmax="1" chance="9" /><!-- lizard scale -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

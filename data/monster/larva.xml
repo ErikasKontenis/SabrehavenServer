@@ -28,4 +28,7 @@
 		<item id="3031" countmax="10" chance="350" /> <!-- a gold coin -->
 		<item id="3577" countmax="1" chance="300" /> <!-- meat -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

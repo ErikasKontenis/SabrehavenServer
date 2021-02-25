@@ -45,4 +45,7 @@
 		<item id="3074" chance="11" /><!-- wand of vortex -->
 		<item id="5810" chance="10" /><!-- pirate voodoo doll -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

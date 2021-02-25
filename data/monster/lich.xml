@@ -73,4 +73,7 @@
 		<item id="3373" countmax="1" chance="5" /> <!-- a strange helmet -->
 		<item id="3026" countmax="1" chance="25" /> <!-- a white pearl -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

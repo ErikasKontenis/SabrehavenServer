@@ -39,4 +39,7 @@
 		<item id="3287" countmax="3" chance="100" /> <!-- a throwing star -->
 		<item id="2920" countmax="1" chance="500" /> <!-- a torch -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

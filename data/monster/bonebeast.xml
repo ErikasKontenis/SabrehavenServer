@@ -55,4 +55,7 @@
 		<item id="3114" countmax="1" chance="200" /> <!-- a skull -->
 		<item id="5925" countmax="1" chance="10" /> <!-- a hardened bone -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

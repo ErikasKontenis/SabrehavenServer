@@ -43,4 +43,7 @@
 		<item id="3376" countmax="1" chance="150" /> <!-- a studded helmet -->
 		<item id="5921" countmax="1" chance="10" /> <!-- a heaven blossom -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

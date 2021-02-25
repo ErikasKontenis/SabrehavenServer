@@ -53,4 +53,7 @@
 		<item id="3073" countmax="1" chance="5" /> <!-- a wand of cosmic energy -->
 		<item id="5878" countmax="1" chance="10" /> <!-- minotaur leather -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

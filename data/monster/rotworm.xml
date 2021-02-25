@@ -35,4 +35,7 @@
 		<item id="3264" countmax="1" chance="30" /> <!-- a sword -->
 		<item id="3492" countmax="5" chance="500" /> <!-- a worm -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

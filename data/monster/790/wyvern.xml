@@ -47,4 +47,7 @@
 		<item id="3071" chance="8" /><!-- wand of inferno -->
 		<item id="3010" chance="5" /><!-- emerald bangle -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

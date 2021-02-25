@@ -64,4 +64,7 @@
 		<item id="3370" chance="8" /><!-- knight armor -->
 		<item id="5895" chance="15" /><!-- fish fin -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

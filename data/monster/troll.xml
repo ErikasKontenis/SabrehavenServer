@@ -39,4 +39,7 @@
 		<item id="3336" countmax="1" chance="50" /> <!-- a studded club -->
 		<item id="3412" countmax="1" chance="150" /> <!-- a wooden shield -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

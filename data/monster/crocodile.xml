@@ -28,4 +28,7 @@
 		<item id="3559" countmax="1" chance="80" /> <!-- leather legs -->
 		<item id="3577" countmax="4" chance="700" /> <!-- meat -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

@@ -37,4 +37,7 @@
 		<item id="3577" countmax="1" chance="100" /> <!-- meat -->
 		<item id="3279" countmax="1" chance="1" /> <!-- a war hammer -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>

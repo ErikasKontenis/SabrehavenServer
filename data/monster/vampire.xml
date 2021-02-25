@@ -54,4 +54,7 @@
 		<item id="3373" countmax="1" chance="4" /> <!-- a strange helmet -->
 		<item id="3434" countmax="1" chance="1" /> <!-- a vampire shield -->
 	</loot>
+	<script>
+		<event name="KillingInTheNameOf" />
+	</script>
 </monster>
