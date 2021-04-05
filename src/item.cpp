@@ -52,19 +52,26 @@ Item* Item::CreateItem(const uint16_t type, uint16_t count /*= 0*/)
 	if (it.id != 0) {
 		if (it.isDepot()) {
 			newItem = new DepotLocker(type);
-		} else if (it.isContainer() || it.isChest()) {
+		}
+		else if (it.isContainer() || it.isChest()) {
 			newItem = new Container(type);
-		} else if (it.isTeleport()) {
+		}
+		else if (it.isTeleport()) {
 			newItem = new Teleport(type);
-		} else if (it.isMagicField()) {
+		}
+		else if (it.isMagicField()) {
 			newItem = new MagicField(type);
-		} else if (it.isDoor()) {
+		}
+		else if (it.isDoor()) {
 			newItem = new Door(type);
-		} else if (it.isMailbox()) {
+		}
+		else if (it.isMailbox()) {
 			newItem = new Mailbox(type);
-		} else if (it.isBed()) {
+		}
+		else if (it.isBed()) {
 			newItem = new BedItem(type);
-		} else {
+		}
+		else {
 			newItem = new Item(type, count);
 		}
 
@@ -94,36 +101,36 @@ Item* Item::CreateItem(PropStream& propStream)
 	}
 
 	switch (id) {
-		case ITEM_FIREFIELD_PVP_FULL:
-			id = ITEM_FIREFIELD_PERSISTENT_FULL;
-			break;
+	case ITEM_FIREFIELD_PVP_FULL:
+		id = ITEM_FIREFIELD_PERSISTENT_FULL;
+		break;
 
-		case ITEM_FIREFIELD_PVP_MEDIUM:
-			id = ITEM_FIREFIELD_PERSISTENT_MEDIUM;
-			break;
+	case ITEM_FIREFIELD_PVP_MEDIUM:
+		id = ITEM_FIREFIELD_PERSISTENT_MEDIUM;
+		break;
 
-		case ITEM_FIREFIELD_PVP_SMALL:
-			id = ITEM_FIREFIELD_PERSISTENT_SMALL;
-			break;
+	case ITEM_FIREFIELD_PVP_SMALL:
+		id = ITEM_FIREFIELD_PERSISTENT_SMALL;
+		break;
 
-		case ITEM_ENERGYFIELD_PVP:
-			id = ITEM_ENERGYFIELD_PERSISTENT;
-			break;
+	case ITEM_ENERGYFIELD_PVP:
+		id = ITEM_ENERGYFIELD_PERSISTENT;
+		break;
 
-		case ITEM_POISONFIELD_PVP:
-			id = ITEM_POISONFIELD_PERSISTENT;
-			break;
+	case ITEM_POISONFIELD_PVP:
+		id = ITEM_POISONFIELD_PERSISTENT;
+		break;
 
-		case ITEM_MAGICWALL:
-			id = ITEM_MAGICWALL_PERSISTENT;
-			break;
+	case ITEM_MAGICWALL:
+		id = ITEM_MAGICWALL_PERSISTENT;
+		break;
 
-		case ITEM_WILDGROWTH:
-			id = ITEM_WILDGROWTH_PERSISTENT;
-			break;
+	case ITEM_WILDGROWTH:
+		id = ITEM_WILDGROWTH_PERSISTENT;
+		break;
 
-		default:
-			break;
+	default:
+		break;
 	}
 
 	return Item::CreateItem(id, 0);
@@ -136,19 +143,24 @@ Item::Item(const uint16_t type, uint16_t count /*= 0*/) :
 
 	if (it.isFluidContainer() || it.isSplash()) {
 		setFluidType(count);
-	} else if (it.stackable) {
+	}
+	else if (it.stackable) {
 		if (count != 0) {
 			setItemCount(count);
-		} else if (it.charges != 0) {
+		}
+		else if (it.charges != 0) {
 			setItemCount(it.charges);
 		}
-	} else if (it.charges != 0) {
+	}
+	else if (it.charges != 0) {
 		if (count != 0) {
 			setCharges(count);
-		} else {
+		}
+		else {
 			setCharges(it.charges);
 		}
-	} else if (it.isKey()) {
+	}
+	else if (it.isKey()) {
 		setIntAttr(ITEM_ATTRIBUTE_KEYNUMBER, count);
 	}
 
@@ -196,7 +208,8 @@ bool Item::equals(const Item* otherItem) const
 					return false;
 				}
 			}
-		} else {
+		}
+		else {
 			for (const auto& otherAttribute : otherAttributeList) {
 				if (attribute.type == otherAttribute.type && attribute.value.integer != otherAttribute.value.integer) {
 					return false;
@@ -216,7 +229,8 @@ void Item::setDefaultSubtype()
 	if (it.charges != 0) {
 		if (it.stackable) {
 			setItemCount(it.charges);
-		} else {
+		}
+		else {
 			setCharges(it.charges);
 		}
 	}
@@ -311,9 +325,11 @@ uint16_t Item::getSubType() const
 	const ItemType& it = items[id];
 	if (it.isFluidContainer() || it.isSplash()) {
 		return getFluidType();
-	} else if (it.stackable) {
+	}
+	else if (it.stackable) {
 		return count;
-	} else if (it.charges != 0) {
+	}
+	else if (it.charges != 0) {
 		return getCharges();
 	}
 	return count;
@@ -337,11 +353,14 @@ void Item::setSubType(uint16_t n)
 	const ItemType& it = items[id];
 	if (it.isFluidContainer() || it.isSplash()) {
 		setFluidType(n);
-	} else if (it.stackable) {
+	}
+	else if (it.stackable) {
 		setItemCount(n);
-	} else if (it.charges != 0) {
+	}
+	else if (it.charges != 0) {
 		setCharges(n);
-	} else {
+	}
+	else {
 		setItemCount(n);
 	}
 }
@@ -349,304 +368,304 @@ void Item::setSubType(uint16_t n)
 Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 {
 	switch (attr) {
-		case ATTR_COUNT:
-		case ATTR_RUNE_CHARGES: {
-			uint8_t count;
-			if (!propStream.read<uint8_t>(count)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setSubType(count);
-			break;
-		}
-
-		case ATTR_ACTION_ID: {
-			uint16_t actionId;
-			if (!propStream.read<uint16_t>(actionId)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setActionId(actionId);
-			break;
-		}
-
-		case ATTR_MOVEMENT_ID: {
-			uint16_t movementId;
-			if (!propStream.read<uint16_t>(movementId)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setMovementID(movementId);
-			break;
-		}
-
-		case ATTR_TEXT: {
-			std::string text;
-			if (!propStream.readString(text)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setText(text);
-			break;
-		}
-
-		case ATTR_WRITTENDATE: {
-			uint32_t writtenDate;
-			if (!propStream.read<uint32_t>(writtenDate)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setDate(writtenDate);
-			break;
-		}
-
-		case ATTR_WRITTENBY: {
-			std::string writer;
-			if (!propStream.readString(writer)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setWriter(writer);
-			break;
-		}
-
-		case ATTR_DESC: {
-			std::string text;
-			if (!propStream.readString(text)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setSpecialDescription(text);
-			break;
-		}
-
-		case ATTR_CHARGES: {
-			uint16_t charges;
-			if (!propStream.read<uint16_t>(charges)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setSubType(charges);
-			break;
-		}
-
-		case ATTR_DURATION: {
-			int32_t duration;
-			if (!propStream.read<int32_t>(duration)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setDuration(std::max<int32_t>(0, duration));
-			break;
-		}
-
-		case ATTR_DECAYING_STATE: {
-			uint8_t state;
-			if (!propStream.read<uint8_t>(state)) {
-				return ATTR_READ_ERROR;
-			}
-
-			if (state != DECAYING_FALSE) {
-				setDecaying(DECAYING_PENDING);
-			}
-			break;
-		}
-
-		case ATTR_NAME: {
-			std::string name;
-			if (!propStream.readString(name)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setStrAttr(ITEM_ATTRIBUTE_NAME, name);
-			break;
-		}
-
-		case ATTR_ARTICLE: {
-			std::string article;
-			if (!propStream.readString(article)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setStrAttr(ITEM_ATTRIBUTE_ARTICLE, article);
-			break;
-		}
-
-		case ATTR_PLURALNAME: {
-			std::string pluralName;
-			if (!propStream.readString(pluralName)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setStrAttr(ITEM_ATTRIBUTE_PLURALNAME, pluralName);
-			break;
-		}
-
-		case ATTR_WEIGHT: {
-			uint32_t weight;
-			if (!propStream.read<uint32_t>(weight)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_WEIGHT, weight);
-			break;
-		}
-
-		case ATTR_ATTACK: {
-			int32_t attack;
-			if (!propStream.read<int32_t>(attack)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_ATTACK, attack);
-			break;
-		}
-
-		case ATTR_DEFENSE: {
-			int32_t defense;
-			if (!propStream.read<int32_t>(defense)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_DEFENSE, defense);
-			break;
-		}
-
-		case ATTR_ARMOR: {
-			int32_t armor;
-			if (!propStream.read<int32_t>(armor)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_ARMOR, armor);
-			break;
-		}
-
-		case ATTR_SHOOTRANGE: {
-			uint8_t shootRange;
-			if (!propStream.read<uint8_t>(shootRange)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_SHOOTRANGE, shootRange);
-			break;
-		}
-
-		case ATTR_KEYNUMBER: {
-			uint16_t keyNumber;
-			if (!propStream.read<uint16_t>(keyNumber)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_KEYNUMBER, keyNumber);
-			break;
-		}
-
-		case ATTR_KEYHOLENUMBER:
-		{
-			uint16_t keyHoleNumber;
-			if (!propStream.read<uint16_t>(keyHoleNumber)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_KEYHOLENUMBER, keyHoleNumber);
-			break;
-		}
-
-		case ATTR_DOORLEVEL:
-		{
-			uint16_t doorLevel;
-			if (!propStream.read<uint16_t>(doorLevel)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_DOORLEVEL, doorLevel);
-			break;
-		}
-
-		case ATTR_DOORQUESTNUMBER:
-		{
-			uint16_t doorQuestNumber;
-			if (!propStream.read<uint16_t>(doorQuestNumber)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_DOORQUESTNUMBER, doorQuestNumber);
-			break;
-		}
-
-		case ATTR_DOORQUESTVALUE:
-		{
-			uint16_t doorQuestValue;
-			if (!propStream.read<uint16_t>(doorQuestValue)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_DOORQUESTVALUE, doorQuestValue);
-			break;
-		}
-
-		case ATTR_CHESTQUESTNUMBER:
-		{
-			uint16_t chestQuestNumber;
-			if (!propStream.read<uint16_t>(chestQuestNumber)) {
-				return ATTR_READ_ERROR;
-			}
-
-			setIntAttr(ITEM_ATTRIBUTE_CHESTQUESTNUMBER, chestQuestNumber);
-			break;
-		}
-
-		//these should be handled through derived classes
-		//If these are called then something has changed in the items.xml since the map was saved
-		//just read the values
-
-		//Depot class
-		case ATTR_DEPOT_ID: {
-			if (!propStream.skip(2)) {
-				return ATTR_READ_ERROR;
-			}
-			break;
-		}
-
-		//Door class
-		case ATTR_HOUSEDOORID: {
-			if (!propStream.skip(1)) {
-				return ATTR_READ_ERROR;
-			}
-			break;
-		}
-
-		//Bed class
-		case ATTR_SLEEPERGUID: {
-			if (!propStream.skip(4)) {
-				return ATTR_READ_ERROR;
-			}
-			break;
-		}
-
-		case ATTR_SLEEPSTART: {
-			if (!propStream.skip(4)) {
-				return ATTR_READ_ERROR;
-			}
-			break;
-		}
-
-		//Teleport class
-		case ATTR_TELE_DEST: {
-			if (!propStream.skip(5)) {
-				return ATTR_READ_ERROR;
-			}
-			break;
-		}
-
-		//Container class
-		case ATTR_CONTAINER_ITEMS: {
+	case ATTR_COUNT:
+	case ATTR_RUNE_CHARGES: {
+		uint8_t count;
+		if (!propStream.read<uint8_t>(count)) {
 			return ATTR_READ_ERROR;
 		}
 
-		default:
+		setSubType(count);
+		break;
+	}
+
+	case ATTR_ACTION_ID: {
+		uint16_t actionId;
+		if (!propStream.read<uint16_t>(actionId)) {
 			return ATTR_READ_ERROR;
+		}
+
+		setActionId(actionId);
+		break;
+	}
+
+	case ATTR_MOVEMENT_ID: {
+		uint16_t movementId;
+		if (!propStream.read<uint16_t>(movementId)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setMovementID(movementId);
+		break;
+	}
+
+	case ATTR_TEXT: {
+		std::string text;
+		if (!propStream.readString(text)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setText(text);
+		break;
+	}
+
+	case ATTR_WRITTENDATE: {
+		uint32_t writtenDate;
+		if (!propStream.read<uint32_t>(writtenDate)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setDate(writtenDate);
+		break;
+	}
+
+	case ATTR_WRITTENBY: {
+		std::string writer;
+		if (!propStream.readString(writer)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setWriter(writer);
+		break;
+	}
+
+	case ATTR_DESC: {
+		std::string text;
+		if (!propStream.readString(text)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setSpecialDescription(text);
+		break;
+	}
+
+	case ATTR_CHARGES: {
+		uint16_t charges;
+		if (!propStream.read<uint16_t>(charges)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setSubType(charges);
+		break;
+	}
+
+	case ATTR_DURATION: {
+		int32_t duration;
+		if (!propStream.read<int32_t>(duration)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setDuration(std::max<int32_t>(0, duration));
+		break;
+	}
+
+	case ATTR_DECAYING_STATE: {
+		uint8_t state;
+		if (!propStream.read<uint8_t>(state)) {
+			return ATTR_READ_ERROR;
+		}
+
+		if (state != DECAYING_FALSE) {
+			setDecaying(DECAYING_PENDING);
+		}
+		break;
+	}
+
+	case ATTR_NAME: {
+		std::string name;
+		if (!propStream.readString(name)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setStrAttr(ITEM_ATTRIBUTE_NAME, name);
+		break;
+	}
+
+	case ATTR_ARTICLE: {
+		std::string article;
+		if (!propStream.readString(article)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setStrAttr(ITEM_ATTRIBUTE_ARTICLE, article);
+		break;
+	}
+
+	case ATTR_PLURALNAME: {
+		std::string pluralName;
+		if (!propStream.readString(pluralName)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setStrAttr(ITEM_ATTRIBUTE_PLURALNAME, pluralName);
+		break;
+	}
+
+	case ATTR_WEIGHT: {
+		uint32_t weight;
+		if (!propStream.read<uint32_t>(weight)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_WEIGHT, weight);
+		break;
+	}
+
+	case ATTR_ATTACK: {
+		int32_t attack;
+		if (!propStream.read<int32_t>(attack)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_ATTACK, attack);
+		break;
+	}
+
+	case ATTR_DEFENSE: {
+		int32_t defense;
+		if (!propStream.read<int32_t>(defense)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_DEFENSE, defense);
+		break;
+	}
+
+	case ATTR_ARMOR: {
+		int32_t armor;
+		if (!propStream.read<int32_t>(armor)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_ARMOR, armor);
+		break;
+	}
+
+	case ATTR_SHOOTRANGE: {
+		uint8_t shootRange;
+		if (!propStream.read<uint8_t>(shootRange)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_SHOOTRANGE, shootRange);
+		break;
+	}
+
+	case ATTR_KEYNUMBER: {
+		uint16_t keyNumber;
+		if (!propStream.read<uint16_t>(keyNumber)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_KEYNUMBER, keyNumber);
+		break;
+	}
+
+	case ATTR_KEYHOLENUMBER:
+	{
+		uint16_t keyHoleNumber;
+		if (!propStream.read<uint16_t>(keyHoleNumber)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_KEYHOLENUMBER, keyHoleNumber);
+		break;
+	}
+
+	case ATTR_DOORLEVEL:
+	{
+		uint16_t doorLevel;
+		if (!propStream.read<uint16_t>(doorLevel)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_DOORLEVEL, doorLevel);
+		break;
+	}
+
+	case ATTR_DOORQUESTNUMBER:
+	{
+		uint16_t doorQuestNumber;
+		if (!propStream.read<uint16_t>(doorQuestNumber)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_DOORQUESTNUMBER, doorQuestNumber);
+		break;
+	}
+
+	case ATTR_DOORQUESTVALUE:
+	{
+		uint16_t doorQuestValue;
+		if (!propStream.read<uint16_t>(doorQuestValue)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_DOORQUESTVALUE, doorQuestValue);
+		break;
+	}
+
+	case ATTR_CHESTQUESTNUMBER:
+	{
+		uint16_t chestQuestNumber;
+		if (!propStream.read<uint16_t>(chestQuestNumber)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_CHESTQUESTNUMBER, chestQuestNumber);
+		break;
+	}
+
+	//these should be handled through derived classes
+	//If these are called then something has changed in the items.xml since the map was saved
+	//just read the values
+
+	//Depot class
+	case ATTR_DEPOT_ID: {
+		if (!propStream.skip(2)) {
+			return ATTR_READ_ERROR;
+		}
+		break;
+	}
+
+						//Door class
+	case ATTR_HOUSEDOORID: {
+		if (!propStream.skip(1)) {
+			return ATTR_READ_ERROR;
+		}
+		break;
+	}
+
+						   //Bed class
+	case ATTR_SLEEPERGUID: {
+		if (!propStream.skip(4)) {
+			return ATTR_READ_ERROR;
+		}
+		break;
+	}
+
+	case ATTR_SLEEPSTART: {
+		if (!propStream.skip(4)) {
+			return ATTR_READ_ERROR;
+		}
+		break;
+	}
+
+						  //Teleport class
+	case ATTR_TELE_DEST: {
+		if (!propStream.skip(5)) {
+			return ATTR_READ_ERROR;
+		}
+		break;
+	}
+
+						 //Container class
+	case ATTR_CONTAINER_ITEMS: {
+		return ATTR_READ_ERROR;
+	}
+
+	default:
+		return ATTR_READ_ERROR;
 	}
 
 	return ATTR_READ_CONTINUE;
@@ -659,7 +678,8 @@ bool Item::unserializeAttr(PropStream& propStream)
 		Attr_ReadValue ret = readAttr(static_cast<AttrTypes_t>(attr_type), propStream);
 		if (ret == ATTR_READ_ERROR) {
 			return false;
-		} else if (ret == ATTR_READ_END) {
+		}
+		else if (ret == ATTR_READ_END) {
 			return true;
 		}
 	}
@@ -803,20 +823,20 @@ bool Item::hasProperty(ITEMPROPERTY prop) const
 {
 	const ItemType& it = items[id];
 	switch (prop) {
-		case CONST_PROP_BLOCKSOLID: return it.blockSolid;
-		case CONST_PROP_MOVEABLE: return it.moveable;
-		case CONST_PROP_HASHEIGHT: return it.hasHeight;
-		case CONST_PROP_BLOCKPROJECTILE: return it.blockProjectile;
-		case CONST_PROP_BLOCKPATH: return it.blockPathFind;
-		case CONST_PROP_ISVERTICAL: return it.isVertical;
-		case CONST_PROP_ISHORIZONTAL: return it.isHorizontal;
-		case CONST_PROP_IMMOVABLEBLOCKSOLID: return it.blockSolid && !it.moveable;
-		case CONST_PROP_IMMOVABLEBLOCKPATH: return it.blockPathFind && !it.moveable;
-		case CONST_PROP_IMMOVABLENOFIELDBLOCKPATH: return !it.isMagicField() && it.blockPathFind && !it.moveable;
-		case CONST_PROP_NOFIELDBLOCKPATH: return !it.isMagicField() && it.blockPathFind;
-		case CONST_PROP_SUPPORTHANGABLE: return it.isHorizontal || it.isVertical;
-		case CONST_PROP_UNLAY: return !it.allowPickupable;
-		default: return false;
+	case CONST_PROP_BLOCKSOLID: return it.blockSolid;
+	case CONST_PROP_MOVEABLE: return it.moveable;
+	case CONST_PROP_HASHEIGHT: return it.hasHeight;
+	case CONST_PROP_BLOCKPROJECTILE: return it.blockProjectile;
+	case CONST_PROP_BLOCKPATH: return it.blockPathFind;
+	case CONST_PROP_ISVERTICAL: return it.isVertical;
+	case CONST_PROP_ISHORIZONTAL: return it.isHorizontal;
+	case CONST_PROP_IMMOVABLEBLOCKSOLID: return it.blockSolid && !it.moveable;
+	case CONST_PROP_IMMOVABLEBLOCKPATH: return it.blockPathFind && !it.moveable;
+	case CONST_PROP_IMMOVABLENOFIELDBLOCKPATH: return !it.isMagicField() && it.blockPathFind && !it.moveable;
+	case CONST_PROP_NOFIELDBLOCKPATH: return !it.isMagicField() && it.blockPathFind;
+	case CONST_PROP_SUPPORTHANGABLE: return it.isHorizontal || it.isVertical;
+	case CONST_PROP_UNLAY: return !it.allowPickupable;
+	default: return false;
 	}
 }
 
@@ -865,7 +885,7 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 				s << ", Atk" << std::showpos << it.attack << std::noshowpos;
 			}
 		}
-		else if (it.weaponType != WEAPON_AMMO && it.weaponType != WEAPON_WAND && (it.attack != 0 || it.defense != 0)) {
+		else if (it.weaponType != WEAPON_WAND && (it.attack != 0 || it.defense != 0)) {
 			s << " (";
 			if (it.attack != 0) {
 				s << "Atk:" << static_cast<int>(it.attack);
@@ -882,7 +902,7 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 		}
 		s << ".";
 	}
-	else if (it.armor != 0) {
+	else if (it.armor != 0 || (it.abilities && it.abilities->speed != 0)) {
 		if (it.charges > 0) {
 			if (subType > 1) {
 				s << " that has " << static_cast<int32_t>(subType) << " charges left";
@@ -892,7 +912,17 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 			}
 		}
 
-		s << " (Arm:" << it.armor << ").";
+		s << " (";
+		if (it.armor > 0) {
+			s << "Arm:" << it.armor;
+		}
+		if (it.abilities && it.abilities->speed > 0) {
+			if (it.armor > 0) {
+				s << ", ";
+			}
+			s << "Speed +" << it.abilities->speed;
+		}
+		s << ").";
 	}
 	else if (it.isFluidContainer()) {
 		if (item && item->getFluidType() != 0) {
@@ -1083,15 +1113,18 @@ std::string Item::getWeightDescription(const ItemType& it, uint32_t weight, uint
 	std::ostringstream ss;
 	if (it.stackable && count > 1 && it.showCount != 0) {
 		ss << "They weigh ";
-	} else {
+	}
+	else {
 		ss << "It weighs ";
 	}
 
 	if (weight < 10) {
 		ss << "0.0" << weight;
-	} else if (weight < 100) {
+	}
+	else if (weight < 100) {
 		ss << "0." << weight;
-	} else {
+	}
+	else {
 		std::string weightString = std::to_string(weight);
 		weightString.insert(weightString.end() - 2, '.');
 		ss << weightString;
@@ -1133,17 +1166,17 @@ bool Item::canDecay() const
 uint32_t Item::getWorth() const
 {
 	switch (id) {
-		case ITEM_GOLD_COIN:
-			return count;
+	case ITEM_GOLD_COIN:
+		return count;
 
-		case ITEM_PLATINUM_COIN:
-			return count * 100;
+	case ITEM_PLATINUM_COIN:
+		return count * 100;
 
-		case ITEM_CRYSTAL_COIN:
-			return count * 10000;
+	case ITEM_CRYSTAL_COIN:
+		return count * 10000;
 
-		default:
-			return 0;
+	default:
+		return 0;
 	}
 }
 
@@ -1193,7 +1226,8 @@ void ItemAttributes::removeAttribute(itemAttrTypes type)
 	auto prev_it = attributes.cbegin();
 	if ((*prev_it).type == type) {
 		attributes.pop_front();
-	} else {
+	}
+	else {
 		auto it = prev_it, end = attributes.cend();
 		while (++it != end) {
 			if ((*it).type == type) {

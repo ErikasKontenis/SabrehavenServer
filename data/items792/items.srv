@@ -16179,7 +16179,7 @@ Attributes  = {Weight=1000,SlotType=FEET,ArmorValue=2}
 TypeID      = 3551
 Name        = "sandals"
 Flags       = {Take}
-Attributes  = {Weight=600,SlotType=FEET}
+Attributes  = {Weight=600,SlotType=FEET,SpeedBoost=5}
 
 TypeID      = 3552
 Name        = "leather boots"
