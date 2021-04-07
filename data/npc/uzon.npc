@@ -10,11 +10,16 @@ Behaviour = {
 ADDRESS,"hello$",!         -> "Daraman's blessings, traveller %N."
 ADDRESS,"hi$",!            -> *
 ADDRESS,!                  -> Idle
-BUSY,"please","bring","me","to","darashia",PZFree,Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
-BUSY,"please","bring","me","to","darashia",PZFree,Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","edron",PZFree,Premium,QuestValue(250)>2,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
-BUSY,"please","bring","me","to","edron",PZFree,Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+BUSY,"please","bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+BUSY,"please","bring","me","to","darashia",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","darashia",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+
+BUSY,"please","bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+BUSY,"please","bring","me","to","edron",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+ADDRESS,"please","bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+ADDRESS,"please","bring","me","to","edron",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
 
 BUSY,"hello$",!            -> "Hastiness is not the way of the people of Darama, %N. Give me the time I need here.", Queue
 BUSY,"hi$",!               -> *
@@ -52,9 +57,6 @@ VANISH,!                   -> "Daraman's blessings."
 "darashia",QuestValue(250)>2  -> Price=50, "Do you want to get a ride to Darashia on Darama for %P gold?", Topic=1
 "darama",QuestValue(250)>2    -> *
 "edron",QuestValue(250)>2     -> Price=50, "Do you want to get a ride to Edron for %P gold?", Topic=2
-
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-Topic=2,"yes",PZBlock,! -> *
 
 Topic=1,"yes",Premium,CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 Topic=1,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account in order to enter Darama."

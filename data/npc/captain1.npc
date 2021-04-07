@@ -12,23 +12,36 @@ ADDRESS,"hi$",male,!      -> *
 ADDRESS,"hello$",female,! -> "Welcome on board, Madam %N."
 ADDRESS,"hi$",female,!    -> *
 ADDRESS,!                 -> Idle
-BUSY,"please","bring","me","to","carlin",PZFree,Premium,QuestValue(250)>2,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11)
-BUSY,"please","bring","me","to","carlin",PZFree,Premium,CountMoney>=110,! -> Price=110, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","ab'dendriel",PZFree,Premium,QuestValue(250)>2,CountMoney>=120,! -> Price=120, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32733,31668,6), EffectOpp(11)
-BUSY,"please","bring","me","to","ab'dendriel",PZFree,Premium,CountMoney>=130,! -> Price=130, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32733,31668,6), EffectOpp(11)
+BUSY,"please","bring","me","to","carlin",Premium,QuestValue(250)>2,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11)
+BUSY,"please","bring","me","to","carlin",Premium,CountMoney>=110,! -> Price=110, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","carlin",Premium,QuestValue(250)>2,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","carlin",Premium,CountMoney>=110,! -> Price=110, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","edron",PZFree,Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
-BUSY,"please","bring","me","to","edron",PZFree,Premium,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+BUSY,"please","bring","me","to","ab'dendriel",Premium,QuestValue(250)>2,CountMoney>=120,! -> Price=120, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32733,31668,6), EffectOpp(11)
+BUSY,"please","bring","me","to","ab'dendriel",Premium,CountMoney>=130,! -> Price=130, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32733,31668,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","ab'dendriel",Premium,QuestValue(250)>2,CountMoney>=120,! -> Price=120, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32733,31668,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","ab'dendriel",Premium,CountMoney>=130,! -> Price=130, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32733,31668,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","venore",PZFree,Premium,QuestValue(250)>2,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
-BUSY,"please","bring","me","to","venore",PZFree,Premium,CountMoney>=170,! -> Price=170, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
+BUSY,"please","bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+BUSY,"please","bring","me","to","edron",Premium,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","edron",Premium,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","port","hope",PZFree,Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
-BUSY,"please","bring","me","to","port","hope",PZFree,Premium,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
+BUSY,"please","bring","me","to","venore",Premium,QuestValue(250)>2,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
+BUSY,"please","bring","me","to","venore",Premium,CountMoney>=170,! -> Price=170, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","venore",Premium,QuestValue(250)>2,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","venore",Premium,CountMoney>=170,! -> Price=170, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32954,32023,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,QuestValue(250)>2,CountMoney>=170,! -> Price=170, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
-BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,CountMoney>=180,! -> Price=180, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+BUSY,"please","bring","me","to","port","hope",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
+BUSY,"please","bring","me","to","port","hope",Premium,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","port","hope",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","port","hope",Premium,CountMoney>=160,! -> Price=160, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32530,32784,6), EffectOpp(11)
+
+BUSY,"please","bring","me","to","liberty","bay",Premium,QuestValue(250)>2,CountMoney>=170,! -> Price=170, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+BUSY,"please","bring","me","to","liberty","bay",Premium,CountMoney>=180,! -> Price=180, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","liberty","bay",Premium,QuestValue(250)>2,CountMoney>=170,! -> Price=170, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","liberty","bay",Premium,CountMoney>=180,! -> Price=180, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
 
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
@@ -75,13 +88,6 @@ VANISH,!                  -> "Good bye. Recommend us, if you were satisfied with
 "venore",QuestValue(250)>2      -> Price=160, "Do you seek a passage to Venore for %P gold?", Topic=5
 "port","hope",QuestValue(250)>2 -> Price=150, "Do you seek a passage to Port Hope for %P gold?", Topic=7
 "liberty","bay",QuestValue(250)>2 -> Price=170, "Do you seek a passage to Liberty Bay for %P gold?", Topic=8
-
-Topic>0,Topic<9,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-
-#Topic=2,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-#Topic=3,"yes",PZBlock,! -> *
-#Topic=4,"yes",PZBlock,! -> *
-#Topic=5,"yes",PZBlock,! -> *
 
 # für postquest
 Topic=2,"yes",Premium, QuestValue(227)=1,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(32387,31821,6), EffectOpp(11),SetQuestValue(227,2)

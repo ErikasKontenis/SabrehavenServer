@@ -67,8 +67,6 @@ Topic=2                                   -> *
 "passage",QuestValue(62)=2 -> Price=10, "Since you are my friend now I will sail you to the isle of the kings for %P gold. Is that okay for you?", Topic=1
 "passage" -> "You do not have the abbot's permission, and I won't risk angering the monks because of some guy I do not even know."
 
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-
 Topic=1,"yes",CountMoney>=Price -> "Have a nice trip!", DeleteMoney, Idle, EffectOpp(11), Teleport(32190,31957,6), EffectOpp(11)
 Topic=1,"yes"                   -> "You don't have enough money."
 Topic=1                         -> "Well, I'll be here if you change your mind."

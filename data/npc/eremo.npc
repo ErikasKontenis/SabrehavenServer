@@ -72,8 +72,6 @@ Topic=1,"yes"                             -> "Here you are. Look in your spellbo
 Topic=1                                   -> "Fine. Do as you please."
 
 
-Topic=2,"yes",PZBlock,! -> "Your soul is imbalanced by death and murder. Try again after you regained your balance!"
-
 Topic=2,"yes" -> "Here you go!", Idle, EffectOpp(11), Teleport(33288,31956,6), EffectOpp(11)
 Topic=2       -> "Maybe later."
 

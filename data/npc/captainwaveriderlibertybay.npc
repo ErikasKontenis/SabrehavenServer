@@ -9,8 +9,11 @@ Behaviour = {
 ADDRESS,"hello$",!        -> "Greetings, daring adventurer. If you need a passage, let me know."
 ADDRESS,"hi$",!           -> *
 ADDRESS,!                 -> Idle
-BUSY,"please","bring","me","to","peg","leg",PZFree,Premium,QuestValue(17502)>5,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32348,32625,7), EffectOpp(11)
-BUSY,"please","bring","me","to","treasure","island",PZFree,Premium,CountMoney>=200,! -> Price=200, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32132,32913,7), EffectOpp(11)
+
+BUSY,"please","bring","me","to","peg","leg",Premium,QuestValue(17502)>5,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32348,32625,7), EffectOpp(11)
+BUSY,"please","bring","me","to","treasure","island",Premium,CountMoney>=200,! -> Price=200, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32132,32913,7), EffectOpp(11)
+ADDRESS,"please","bring","me","to","peg","leg",Premium,QuestValue(17502)>5,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32348,32625,7), EffectOpp(11)
+ADDRESS,"please","bring","me","to","treasure","island",Premium,CountMoney>=200,! -> Price=200, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32132,32913,7), EffectOpp(11)
 
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
@@ -26,9 +29,6 @@ VANISH,!                  -> "Oh well."
 
 "treasure","island"       -> Price=200, "Do you seek a passage to Treasure Island for %P?", Topic=1
 "peg","leg",QuestValue(17502)>5       -> Price=50, "Ohhhh. So... <lowers his voice> 'you know who' sent you so I sail you to 'you know where'. <wink> <wink> It will cost 50 gold to cover my expenses. Is it that what you wish?", Topic=2
-
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-Topic=2,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
 
 Topic=1,"yes",Premium,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(32132,32913,7), EffectOpp(11)
 Topic=2,"yes",Premium,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(32348,32625,7), EffectOpp(11)

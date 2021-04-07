@@ -10,11 +10,16 @@ Behaviour = {
 ADDRESS,"hello$",!         -> "Greetings, traveller %N."
 ADDRESS,"hi$",!            -> *
 ADDRESS,!                  -> Idle
-BUSY,"please","bring","me","to","femor",PZFree,Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
-BUSY,"please","bring","me","to","femor",PZFree,Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 
-BUSY,"please","bring","me","to","darashia",PZFree,Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
-BUSY,"please","bring","me","to","darashia",PZFree,Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+BUSY,"please","bring","me","to","femor",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+BUSY,"please","bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+ADDRESS,"please","bring","me","to","femor",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+ADDRESS,"please","bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+
+BUSY,"please","bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+BUSY,"please","bring","me","to","darashia",Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+ADDRESS,"please","bring","me","to","darashia",Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 
 BUSY,"hello$",!            -> "Please wait, %N.", Queue
 BUSY,"hi$",!               -> *
@@ -43,9 +48,6 @@ VANISH,!                   -> "Good bye!"
 "darama",QuestValue(250)>2    -> *
 "hill",QuestValue(250)>2      -> Price=50, "Do you want to get a ride to the Femor Hills for %P gold?", Topic=2
 "femor",QuestValue(250)>2     -> *
-
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-Topic=2,"yes",PZBlock,! -> *
 
 Topic=1,"yes",CountMoney>=Price         -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 Topic=1,"yes"                           -> "You don't have enough money."
