@@ -18,7 +18,7 @@ function onUse(player, item, fromPosition, target, toPosition)
 		return false
 	end
 	
-	if table.contains(ropeSpots, tile:getGround():getId()) then
+	if table.contains(ropeSpots, tile:getGround():getId()) and tile:getThingCount() <= 1 then
 		player:teleportTo(target:getPosition():moveRel(0, 1, -1))
 		return true
 	elseif table.contains(holeSpots, tile:getGround():getId()) or target:getId() == 435 then

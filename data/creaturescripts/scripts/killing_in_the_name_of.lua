@@ -108,7 +108,7 @@ local tasks = {
 	['orc'] = {taskerStorage = 17652, progressStorage = 17651, killsRequired = 50},
 }
 
-local maxPlayersInPartyShare = 2
+local maxPlayersInPartyShare = 10
 
 function onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjustified, mostdamageunjustified)
 	if not creature:isMonster() or creature:getMaster() then
