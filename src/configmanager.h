@@ -49,6 +49,7 @@ class ConfigManager
 			BLOCK_HEIGHT,
 			DROP_ITEMS,
 			DISTANCE_WEAPONS_DROP_ON_GROUND,
+			CORPSE_OWNER_ENABLED,
 
 			LAST_BOOLEAN_CONFIG /* this must be the last one */
 		};
