@@ -1690,6 +1690,7 @@ void LuaScriptInterface::registerFunctions()
 	registerEnumIn("configKeys", ConfigManager::NEWBIE_TOWN)
 	registerEnumIn("configKeys", ConfigManager::NEWBIE_LEVEL_THRESHOLD)
 	registerEnumIn("configKeys", ConfigManager::BLOCK_HEIGHT)
+	registerEnumIn("configKeys", ConfigManager::UH_TRAP)
 	registerEnumIn("configKeys", ConfigManager::DROP_ITEMS)
 	registerEnumIn("configKeys", ConfigManager::CLIENT_VERSION)
 	

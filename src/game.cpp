@@ -223,7 +223,12 @@ Thing* Game::internalGetThing(Player* player, const Position& pos, int32_t index
 				if (item && item->isMoveable()) {
 					thing = item;
 				} else {
-					thing = tile->getTopVisibleCreature(player);
+					if (g_config.getBoolean(ConfigManager::UH_TRAP)) {
+						thing = tile->getBottomVisibleCreatureUH(player);
+					}
+					else {
+						thing = tile->getTopVisibleCreature(player);
+					}
 				}
 				break;
 			}
@@ -239,9 +244,11 @@ Thing* Game::internalGetThing(Player* player, const Position& pos, int32_t index
 			}
 
 			case STACKPOS_USETARGET: {
-				thing = tile->getTopVisibleCreature(player);
-				if (!thing) {
-					thing = tile->getUseItem(index);
+				if (g_config.getBoolean(ConfigManager::UH_TRAP)) {
+					thing = tile->getBottomCreatureUH();
+				}
+				else {
+					thing = tile->getTopCreature();
 				}
 				break;
 			}

@@ -80,6 +80,7 @@ bool ConfigManager::load()
 	boolean[TELEPORT_NEWBIES] = getGlobalBoolean(L, "teleportNewbies", true);
 	boolean[STACK_CUMULATIVES] = getGlobalBoolean(L, "autoStackCumulatives", false);
 	boolean[BLOCK_HEIGHT] = getGlobalBoolean(L, "blockHeight", false);
+	boolean[UH_TRAP] = getGlobalBoolean(L, "uhTrap", false);
 	boolean[DROP_ITEMS] = getGlobalBoolean(L, "dropItems", false);
 	boolean[DISTANCE_WEAPONS_DROP_ON_GROUND] = getGlobalBoolean(L, "distanceWeaponsDropOnGround", true);
 
