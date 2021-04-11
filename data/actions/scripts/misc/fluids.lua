@@ -45,10 +45,10 @@ function onUse(player, item, fromPosition, target, toPosition)
 			elseif self and item:getFluidType() == FLUID_SLIME then
 				player:addCondition(poison)
 			elseif item:getFluidType() == FLUID_MANAFLUID then
-				target:addMana(math.random(50, 100))
+				target:addMana(math.random(25, 75))
 				target:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			elseif item:getFluidType() == FLUID_LIFEFLUID then
-				target:addHealth(math.random(25, 50))
+				target:addHealth(math.random(25, 75))
 				target:getPosition():sendMagicEffect(CONST_ME_MAGIC_BLUE)
 			end
 			
