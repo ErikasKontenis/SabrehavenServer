@@ -14,7 +14,7 @@ dropItems = false
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
 worldType = "pvp"
-hotkeyAimbotEnabled = false
+hotkeyAimbotEnabled = true
 protectionLevel = 1
 pzLocked = 60000
 removeChargesFromRunes = true

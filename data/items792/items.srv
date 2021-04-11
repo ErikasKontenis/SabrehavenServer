@@ -1748,51 +1748,51 @@ Attributes  = {Waypoints=100}
 
 TypeID      = 439
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 440
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 441
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 442
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 443
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 444
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 445
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 446
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 447
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 448
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 449
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 450
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Top,Unpass,Unmove,Unlay}
 
 TypeID      = 451
 Name        = "stairs"
@@ -10664,22 +10664,22 @@ Attributes  = {Capacity=6}
 
 TypeID      = 2431
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=10,RotateTarget=2434,DestroyTarget=3136}
 
 TypeID      = 2432
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=10,RotateTarget=2431,DestroyTarget=3136}
 
 TypeID      = 2433
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=10,RotateTarget=2432,DestroyTarget=3136}
 
 TypeID      = 2434
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=10,RotateTarget=2433,DestroyTarget=3136}
 
 TypeID      = 2435
@@ -10869,7 +10869,7 @@ Attributes  = {Capacity=15,Weight=8000,DestroyTarget=3135}
 
 TypeID      = 2472
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2482,DestroyTarget=3137}
 
 TypeID      = 2473
@@ -10905,37 +10905,37 @@ Attributes  = {DisguiseTarget=2472}
 
 TypeID      = 2480
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2481,DestroyTarget=3137}
 
 TypeID      = 2481
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2472,DestroyTarget=3137}
 
 TypeID      = 2482
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2480,DestroyTarget=3137}
 
 TypeID      = 2483
 Name        = "a large trunk"
-Flags       = {Container,Rotate,Destroy,Height}
+Flags       = {Container,Rotate,Destroy,Height,Unpass}
 Attributes  = {Capacity=18,RotateTarget=2486,DestroyTarget=3140}
 
 TypeID      = 2484
 Name        = "a large trunk"
-Flags       = {Container,Unpass,Rotate,Destroy,Height}
+Flags       = {Container,Unpass,Rotate,Destroy,Height,Unpass}
 Attributes  = {Capacity=18,RotateTarget=2485,DestroyTarget=3140}
 
 TypeID      = 2485
 Name        = "a large trunk"
-Flags       = {Container,Unpass,Rotate,Destroy,Height}
+Flags       = {Container,Unpass,Rotate,Destroy,Height,Unpass}
 Attributes  = {Capacity=18,RotateTarget=2483,DestroyTarget=3140}
 
 TypeID      = 2486
 Name        = "a large trunk"
-Flags       = {Container,Unpass,Rotate,Destroy,Height}
+Flags       = {Container,Unpass,Rotate,Destroy,Height,Unpass}
 Attributes  = {Capacity=18,RotateTarget=2484,DestroyTarget=3140}
 
 TypeID      = 2487
@@ -11098,7 +11098,7 @@ Flags       = {Unmove}
 
 TypeID      = 2519
 Name        = "a barrel"
-Flags       = {Container,Destroy,Height,Avoid}
+Flags       = {Container,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=25,DestroyTarget=3138}
 
 TypeID      = 2520
@@ -11118,7 +11118,7 @@ Attributes  = {FluidSource=WINE}
 
 TypeID      = 2523
 Name        = "a barrel"
-Flags       = {Container,Destroy,Height,Avoid}
+Flags       = {Container,Destroy,Height,Avoid,Unpass}
 Attributes  = {Capacity=25,DestroyTarget=3135}
 
 TypeID      = 2524
