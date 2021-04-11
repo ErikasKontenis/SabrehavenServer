@@ -250,6 +250,9 @@ Thing* Game::internalGetThing(Player* player, const Position& pos, int32_t index
 				else {
 					thing = tile->getTopCreature();
 				}
+				if (!thing) {
+					thing = tile->getUseItem(index);
+				}
 				break;
 			}
 
