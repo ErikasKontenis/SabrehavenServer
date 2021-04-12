@@ -99,8 +99,8 @@ rateMagic = 2
 rateSpawn = 0
 
 -- Monsters
-deSpawnRange = 2
-deSpawnRadius = 50
+deSpawnRange = 0
+deSpawnRadius = 0
 
 -- Scripts
 warnUnsafeScripts = true
