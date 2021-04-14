@@ -13838,7 +13838,7 @@ Attributes  = {Weight=80,SlotType=RING,ManaShield=1,ExpireTarget=0,TotalExpireTi
 TypeID      = 3089
 Name        = "a life ring"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=80,SlotType=RING,HealthTicks=6000,HealthGain=2,ManaTicks=6000,ManaGain=8,ExpireTarget=0,TotalExpireTime=1200,DeEquipTarget=3052}
+Attributes  = {Weight=80,SlotType=RING,HealthTicks=2000,HealthGain=1,ManaTicks=2000,ManaGain=4,ExpireTarget=0,TotalExpireTime=1200,DeEquipTarget=3052}
 
 TypeID      = 3090
 Name        = "a time ring"
@@ -13893,7 +13893,7 @@ Attributes  = {Weight=110,SlotType=RING,SuppressDrunk=1,ExpireTarget=0,TotalExpi
 TypeID      = 3100
 Name        = "a ring of healing"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=80,SlotType=RING,HealthTicks=6000,HealthGain=6,ManaTicks=6000,ManaGain=24,ExpireTarget=0,TotalExpireTime=450,DeEquipTarget=3098}
+Attributes  = {Weight=80,SlotType=RING,HealthTicks=2000,HealthGain=3,ManaTicks=2000,ManaGain=12,ExpireTarget=0,TotalExpireTime=450,DeEquipTarget=3098}
 
 TypeID      = 3101
 Name        = "a screaming spellbook"
@@ -16169,7 +16169,7 @@ Attributes  = {Weight=500}
 TypeID      = 3549
 Name        = "soft boots"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=800,DeEquipTarget=6529,SlotType=FEET,ExpireTarget=6530,TotalExpireTime=14400,HealthGain=1,HealthTicks=2000,ManaGain=2,ManaTicks=1000}
+Attributes  = {Weight=800,DeEquipTarget=6529,SlotType=FEET,ExpireTarget=6530,TotalExpireTime=14400,HealthGain=3,HealthTicks=4000,ManaGain=6,ManaTicks=2000}
 
 TypeID      = 3550
 Name        = "patched boots"
