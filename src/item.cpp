@@ -881,28 +881,28 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 	}
 	else if (it.weaponType != WEAPON_NONE) {
 		if (it.weaponType == WEAPON_DISTANCE && it.ammoType != AMMO_NONE) {
-			if (it.attack != 0) {
-				s << ", Atk" << std::showpos << it.attack << std::noshowpos;
+			if (item->getAttack() != 0) {
+				s << ", Atk" << std::showpos << item->getAttack() << std::noshowpos;
 			}
 		}
-		else if (it.weaponType != WEAPON_WAND && (it.attack != 0 || it.defense != 0)) {
+		else if (it.weaponType != WEAPON_WAND && (item->getAttack() != 0 || item->getDefense() != 0)) {
 			s << " (";
-			if (it.attack != 0) {
-				s << "Atk:" << static_cast<int>(it.attack);
+			if (item->getAttack() != 0) {
+				s << "Atk:" << static_cast<int>(item->getAttack());
 			}
 
-			if (it.defense != 0) {
-				if (it.attack != 0)
+			if (item->getDefense() != 0) {
+				if (item->getAttack() != 0)
 					s << " ";
 
-				s << "Def:" << static_cast<int>(it.defense);
+				s << "Def:" << static_cast<int>(item->getDefense());
 			}
 
 			s << ")";
 		}
 		s << ".";
 	}
-	else if (it.armor != 0 || (it.abilities && it.abilities->speed != 0)) {
+	else if (item->getArmor() != 0 || (it.abilities && it.abilities->speed != 0)) {
 		if (it.charges > 0) {
 			if (subType > 1) {
 				s << " that has " << static_cast<int32_t>(subType) << " charges left";
@@ -913,11 +913,11 @@ std::string Item::getDescription(const ItemType& it, int32_t lookDistance,
 		}
 
 		s << " (";
-		if (it.armor > 0) {
-			s << "Arm:" << it.armor;
+		if (item->getArmor() > 0) {
+			s << "Arm:" << item->getArmor();
 		}
 		if (it.abilities && it.abilities->speed > 0) {
-			if (it.armor > 0) {
+			if (item->getArmor() > 0) {
 				s << ", ";
 			}
 			s << "Speed +" << it.abilities->speed;
