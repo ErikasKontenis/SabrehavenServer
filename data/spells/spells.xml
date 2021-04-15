@@ -288,6 +288,9 @@
 	<conjure name="Conjure Power Bolt" words="exevo con vis" maglv="14" mana="200" soul="0" prem="1" conjureId="3450" conjureCount="2" needlearn="0" function="conjureItem">
 		<vocation name="Royal Paladin" />
 	</conjure>
+	<conjure name="Conjure Infernal Bolt" words="exevo con mort flam" maglv="16" mana="180" soul="0" prem="1" conjureId="6528" conjureCount="1" needlearn="0" function="conjureItem">
+		<vocation name="Royal Paladin" />
+	</conjure>
 	<conjure name="Enchant Staff" words="exeta vis" maglv="22" mana="80" prem="1" conjureId="3321" reagentId="3289" needlearn="0" function="conjureItem">
 		<vocation name="Master Sorcerer" />
 	</conjure>
