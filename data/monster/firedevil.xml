@@ -45,5 +45,6 @@
 		<item id="3033" countmax="1" chance="3" /> <!-- a small amethyst -->
 		<item id="2920" countmax="2" chance="150" /> <!-- a torch -->
 		<item id="3069" countmax="1" chance="5" /> <!-- a volcanic rod -->
+		<item id="3075" countmax="1" chance="22" /> <!-- a wand of dragonbreath -->
 	</loot>
 </monster>

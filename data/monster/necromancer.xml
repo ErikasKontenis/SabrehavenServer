@@ -54,6 +54,7 @@
 		<item id="3377" countmax="1" chance="100" /> <!-- a scale armor -->
 		<item id="3294" countmax="1" chance="150" /> <!-- a short sword -->
 		<item id="3324" countmax="1" chance="1" /> <!-- a skull staff -->
+		<item id="3070" countmax="1" chance="22" /> <!-- a moonlight rod -->
 	</loot>
 	<script>
 		<event name="KillingInTheNameOf" />
