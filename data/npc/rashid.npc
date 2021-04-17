@@ -41,7 +41,7 @@ VANISH,!           -> "Good bye."
 "vega"          -> "Um... I don't think so."
 "venore"          -> "Although it's the flourishing trade centre of Tibia, I don't like going there. Too much competition for my taste."
 "king"          -> "Kings, queens, emperors and kaliphs... everyone claims to be different and unique, but actually it's the same thing everywhere."
-"sabrehaven","talon"          -> "This currency is very stable. However I prefer gold."
+"tibianus","talon"          -> "This currency is very stable. However I prefer gold."
 
 "buy"             -> "I am sorry but I do not sell anything. However I am interested in buying several things."
 "do","you","sell" -> *

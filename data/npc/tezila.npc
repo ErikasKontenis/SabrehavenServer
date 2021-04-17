@@ -29,7 +29,7 @@ VANISH,!           -> "Good bye."
 "pearl"           -> "I have white and black pearls you can buy, but you can also sell me some."
 "jewel"           -> "You can purchase our fine dwarfish wares like gold converting rings, wedding rings, golden amulets, and ruby necklaces."
 "talon"           -> "I am suspicious of these magic gems. Better you ask some mages about this."
-"sabrehaven","talon"           -> "I am more interested in buying them instead of selling."
+"tibianus","talon"           -> "I am more interested in buying them instead of selling."
 
 "wedding","ring"   -> Type=3004, Amount=1, Price=990,  "Do you want to buy a wedding ring for %P gold?", Topic=1
 "golden","amulet"  -> Type=3013, Amount=1, Price=6600, "Do you want to buy a golden amulet for %P gold?", Topic=1

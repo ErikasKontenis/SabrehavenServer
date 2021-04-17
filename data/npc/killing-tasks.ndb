@@ -28,11 +28,11 @@ VANISH,!           -> "Happy hunting, old chap!"
 "mission",QuestValue(17607)=0 -> *
 
 # Trades
-"do","you","sell" -> "I am looking for Sabrehaven talons however I will need them later."
+"do","you","sell" -> "I am looking for Tibianus talons however I will need them later."
 "do","you","have" -> *
 "offer" -> *
 "trade" -> *
-"sabrehaven","talon" -> "We as a hunting society know very interesting purposes of those magical talons. But only the loyal hunters of the 'Paw and Fur - Hunting Elite' are allowed to know."
+"tibianus","talon" -> "We as a hunting society know very interesting purposes of those magical talons. But only the loyal hunters of the 'Paw and Fur - Hunting Elite' are allowed to know."
 
 "low","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Frost trolls, swamp trolls, lions, rats, hyaenas, bears, bugs, wolves, wasps, larvas, dwarfs, low undeads, crocodiles, tarantulas, carniphilas, apes, thornback tortoises, gargoyles, elves, outlaws or slimes.", Topic=5
 "medium","task",QuestValue(17607)=1,QuestValue(17608)=0 -> "You can hunt: Medium class orcs, high class minotaurs, lizards, high class dwarfs, medium undeads, quara scouts, ancient scarabs, wyverns, bonebeasts, beholders, djinns, pirates or dragons.", Topic=5
