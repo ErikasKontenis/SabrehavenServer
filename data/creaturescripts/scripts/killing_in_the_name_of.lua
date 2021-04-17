@@ -115,6 +115,10 @@ function onDeath(creature, corpse, lasthitkiller, mostdamagekiller, lasthitunjus
 		return true
 	end
 	
+	if mostdamagekiller == nil then
+		return true
+	end
+	
 	local player = mostdamagekiller
 	if not mostdamagekiller:isPlayer() then
 		local master = mostdamagekiller:getMaster()
