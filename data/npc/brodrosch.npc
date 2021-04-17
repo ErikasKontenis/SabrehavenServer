@@ -12,10 +12,10 @@ ADDRESS,"hi$",!    -> *
 ADDRESS,"hiho$",!  -> *
 ADDRESS,!          -> Idle
 
-BUSY,"please","bring","me","to","cormaya",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
-BUSY,"please","bring","me","to","cormaya",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
-ADDRESS,"please","bring","me","to","cormaya",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
-ADDRESS,"please","bring","me","to","cormaya",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+BUSY,"bring","me","to","cormaya",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+BUSY,"bring","me","to","cormaya",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+ADDRESS,"bring","me","to","cormaya",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+ADDRESS,"bring","me","to","cormaya",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
 
 BUSY,"hello$",!    -> "Shut up and wait like the rest, jawoll!", Queue
 BUSY,"hi$",!       -> *

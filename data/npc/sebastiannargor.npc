@@ -10,10 +10,10 @@ ADDRESS,"hello$",!        -> "Ho, %N."
 ADDRESS,"hi$",!           -> *
 ADDRESS,!                 -> Idle
 
-BUSY,"please","bring","me","to","liberty","bay",Premium,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32316,32702,7), EffectOpp(11)
-BUSY,"please","bring","me","to","meriana",Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32346,32625,7), EffectOpp(11)
-ADDRESS,"please","bring","me","to","liberty","bay",Premium,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32316,32702,7), EffectOpp(11)
-ADDRESS,"please","bring","me","to","meriana",Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32346,32625,7), EffectOpp(11)
+BUSY,"bring","me","to","liberty","bay",Premium,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32316,32702,7), EffectOpp(11)
+BUSY,"bring","me","to","meriana",Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32346,32625,7), EffectOpp(11)
+ADDRESS,"bring","me","to","liberty","bay",Premium,CountMoney>=100,! -> Price=100, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32316,32702,7), EffectOpp(11)
+ADDRESS,"bring","me","to","meriana",Premium,CountMoney>=50,! -> Price=50, "Set the sails %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32346,32625,7), EffectOpp(11)
 
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *

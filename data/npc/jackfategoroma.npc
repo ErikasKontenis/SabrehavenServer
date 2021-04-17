@@ -12,10 +12,10 @@ ADDRESS,"hello$",female,! -> "Welcome on board, Madam %N."
 ADDRESS,"hi$",female,!    -> *
 ADDRESS,!                 -> Idle
 
-BUSY,"please","bring","me","to","liberty","bay",Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
-BUSY,"please","bring","me","to","liberty","bay",Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
-ADDRESS,"please","bring","me","to","liberty","bay",Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
-ADDRESS,"please","bring","me","to","liberty","bay",Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+BUSY,"bring","me","to","liberty","bay",Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
+BUSY,"bring","me","to","liberty","bay",Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+ADDRESS,"bring","me","to","liberty","bay",Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
+ADDRESS,"bring","me","to","liberty","bay",Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
 
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
