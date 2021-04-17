@@ -343,6 +343,10 @@ function Player:onGainExperience(source, exp, rawExp)
 		end
 	end
 	
+	if self:isPremium() then
+		exp = exp * (1 + 10 / 100) 
+	end
+	
 	return exp
 end
 

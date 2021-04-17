@@ -1852,7 +1852,7 @@ void ProtocolGame::sendOutfitWindow()
 
 		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
 		if (CLIENT_VERSION_780 <= clientVersion && clientVersion <= CLIENT_VERSION_792) {
-			if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits in 780-792
+			if (protocolOutfits.size() == 20) { // Game client doesn't allow more than 15 outfits in 780-792
 				break;
 			}
 		}

@@ -80,7 +80,7 @@ mysqlSock = ""
 
 -- Misc.
 allowChangeOutfit = true
-freePremium = true
+freePremium = false
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 8
 

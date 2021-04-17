@@ -140,6 +140,9 @@ bool BehaviourDatabase::loadConditions(ScriptReader& script, NpcBehaviour* behav
 			} else if (identifier == "premium") {
 				condition->type = BEHAVIOUR_TYPE_ISPREMIUM;
 				searchTerm = true;
+			} else if (identifier == "realpremium") {
+				condition->type = BEHAVIOUR_TYPE_ISREALPREMIUM;
+				searchTerm = true;
 			} else if (identifier == "pvpenforced") {
 				condition->type = BEHAVIOUR_TYPE_PVPENFORCED;
 				searchTerm = true;
@@ -801,6 +804,9 @@ bool BehaviourDatabase::checkCondition(const NpcBehaviourCondition* condition, P
 		}
 		break;
 	case BEHAVIOUR_TYPE_ISPREMIUM:
+
+		break;
+	case BEHAVIOUR_TYPE_ISREALPREMIUM:
 		if (!player->isPremium()) {
 			return false;
 		}

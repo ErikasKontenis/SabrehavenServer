@@ -1725,7 +1725,7 @@ bool Game::playerBroadcastMessage(Player* player, const std::string& text) const
 void Game::playerCreatePrivateChannel(uint32_t playerId)
 {
 	Player* player = getPlayerByID(playerId);
-	if (!player || !player->isPremium()) {
+	if (!player) {
 		return;
 	}
 
