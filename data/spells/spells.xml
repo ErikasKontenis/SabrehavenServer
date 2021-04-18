@@ -269,6 +269,14 @@
 	</rune>
 	
 	<!-- Conjure Spells -->
+	<conjure name="Conjure Blank Rune" words="adori blank" maglv="10" mana="10" soul="10" conjureId="3147" conjureCount="1" needlearn="0" function="conjureItem">
+		<vocation name="Paladin" />
+		<vocation name="Royal Paladin" />
+		<vocation name="Sorcerer" />
+		<vocation name="Druid" />
+		<vocation name="Master Sorcerer" />
+		<vocation name="Elder Druid" />
+	</conjure>
 	<conjure name="Conjure Arrow" words="exevo con" maglv="2" mana="40" soul="0" conjureId="3447" conjureCount="15" needlearn="0" function="conjureItem">
 		<vocation name="Paladin" />
 		<vocation name="Royal Paladin" />
