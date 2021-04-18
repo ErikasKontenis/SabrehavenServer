@@ -10,6 +10,16 @@ function onLogin(player)
 
 		loginStr = string.format("Your last visit on " .. configManager.getString(configKeys.SERVER_NAME) .. ": %s.", os.date("%a %b %d %X %Y", player:getLastLoginSaved()))
 	end
+	
+	local dayNow = tonumber(os.date("%d", os.time()))
+	local hourNow = tonumber(os.date("%H", os.time()))
+	if dayNow == 8 and hourNow <= 20 then
+		if player:getPremiumDays() == 0 then
+			player:addPremiumDays(5)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Congratulations " .. player:getName() .. " on starting your adventure at the " .. configManager.getString(configKeys.SERVER_NAME) .. "! 5 premium days have been added to your account!")
+		end
+	end
+	
 	player:sendTextMessage(MESSAGE_STATUS_DEFAULT, loginStr)
 	
 	-- Stamina
