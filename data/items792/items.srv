@@ -26947,7 +26947,7 @@ Attributes  = {Weight=250}
 
 TypeID      = 5952
 Name        = "a poem scroll"
-Description = "It contains a love poem, written by an unknown elven poet."
+Description = "It contains a love poem, written by an unknown elven poet"
 Flags       = {Take}
 Attributes  = {Weight=120}
 
@@ -29752,10 +29752,16 @@ Flags       = {MultiUse,Take,Weapon}
 Attributes  = {Weight=5800,SlotType=TWOHANDED,WeaponType=AXE,Attack=49,Defense=15}
 
 TypeID      = 6554
-Name        = "" # this is nothing in client
+Name        = "a 100 points scroll"
+Description = "It grants you 100 shop points"
+Flags       = {Take}
+Attributes  = {Weight=120}
 
 TypeID      = 6555
-Name        = "" # this is nothing in client
+Name        = "a 50 points scroll"
+Description = "It grants you 50 shop points"
+Flags       = {Take}
+Attributes  = {Weight=120}
 
 TypeID      = 6556
 Name        = "a tic-tac-toe token"
