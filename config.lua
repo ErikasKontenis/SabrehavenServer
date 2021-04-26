@@ -26,7 +26,7 @@ distanceWeaponsDropOnGround = true
 -- Skull System
 banLength = 2 * 24 * 60 * 60
 whiteSkullTime = 15 * 60
-redSkullTime = 7 * 24 * 60 * 60
+redSkullTime = 2 * 24 * 60 * 60
 killsDayRedSkull = 4
 killsWeekRedSkull = 12
 killsMonthRedSkull = 35
