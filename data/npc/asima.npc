@@ -26,7 +26,7 @@ VANISH,!           -> "Daraman's blessings."
 "do","you","have" -> *
 
 
-"rune"         -> "I sell blank runes and spell runes."
+"rune"         -> "I sell blank runes."
 "life","fluid" -> Type=2874, Data=11, Amount=1, Price=60, "Do you want to buy life fluid for %P gold?", Topic=5
 "mana","fluid" -> Type=2874, Data=10, Amount=1, Price=55, "Do you want to buy mana fluid for %P gold?", Topic=5
 "blank","rune" -> Type=3147, Amount=1, Price=10, "Do you want to buy a blank rune for %P gold?", Topic=4
@@ -55,7 +55,6 @@ VANISH,!           -> "Daraman's blessings."
 "vial"    -> *
 "flask"   -> * 
 
-@"gen-t-runes-free-s.ndb"
 @"gen-t-wands-prem-s.ndb"
  
 Topic=4,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)

@@ -34,7 +34,7 @@ VANISH,!                           -> "These impatient young brats!"
 "spell$"           -> "I am too busy to teach you, ask in your guild about that."
 "spells"           -> *
 
-"rune"             -> "I sell blank runes and spell runes."
+"rune"             -> "I sell blank runes."
 "spellbook"        -> Type=3059, Amount=1,  Price=150,   "A spellbook is a nice tool for beginners. Do you want to buy one for %P gold?",Topic=2
 "blank","rune"     -> Type=3147, Amount=1,  Price=10,    "Do you want to buy one for %P gold?", Topic=2
 "mana","fluid"     -> Type=2874, Data=10, Amount=1,  Price=55,    "Do you want to buy mana fluid for %P gold?", Topic=3
@@ -95,6 +95,5 @@ Topic=8,"yes",CountMoney>=Price -> "Here you are. There is a deposit of 5 gold o
 Topic=8,"yes"                   -> "Come back, when you have enough money."
 Topic=8                         -> "Hmm, but next time."
 
-@"gen-t-runes-free-s.ndb"
 @"gen-t-wands-free-s.ndb"
 }
