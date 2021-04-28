@@ -10135,17 +10135,17 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2314
 Name        = "a big table"
-Flags       = {Destroy,Height,Avoid}
+Flags       = {Destroy,Height,Avoid,Unpass}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2315
 Name        = "a square table"
-Flags       = {Destroy,Height,Avoid}
+Flags       = {Destroy,Height,Avoid,Unpass}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2316
 Name        = "a small round table"
-Flags       = {Destroy,Height,Avoid}
+Flags       = {Destroy,Height,Avoid,Unpass}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2317
@@ -10158,7 +10158,7 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2319
 Name        = "a small table"
-Flags       = {Destroy,Height,Avoid}
+Flags       = {Destroy,Height,Avoid,Unpass}
 Attributes  = {DestroyTarget=3140}
 
 TypeID      = 2320
@@ -10267,42 +10267,42 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2346
 Name        = "a carved stone table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2347,DestroyTarget=3141}
 
 TypeID      = 2347
 Name        = "a carved stone table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2346,DestroyTarget=3141}
 
 TypeID      = 2348
 Name        = "a tusk table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2349,DestroyTarget=3137}
 
 TypeID      = 2349
 Name        = "a tusk table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2348,DestroyTarget=3137}
 
 TypeID      = 2350
 Name        = "a bamboo table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2351,DestroyTarget=3137}
 
 TypeID      = 2351
 Name        = "a bamboo table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2350,DestroyTarget=3137}
 
 TypeID      = 2352
 Name        = "a thick trunk"
-Flags       = {Destroy,Height}
+Flags       = {Destroy,Height,Unpass}
 Attributes  = {DestroyTarget=3136}
 
 TypeID      = 2353
 Name        = "an ornamented stone table"
-Flags       = {Rotate,Destroy,Height}
+Flags       = {Rotate,Destroy,Height,Unpass}
 Attributes  = {RotateTarget=2346,DestroyTarget=3141}
 
 TypeID      = 2354
