@@ -21495,6 +21495,13 @@
 		<monster name="troll" x="-2" y="2" z="9" spawntime="600" />
 		<monster name="troll" x="0" y="4" z="9" spawntime="600" />
 	</spawn>
+	<spawn centerx="33358" centery="31696" centerz="9" radius="1">
+		<monster name="sheep" x="0" y="0" z="9" spawntime="60" />
+		<monster name="sheep" x="1" y="0" z="9" spawntime="60" />
+		<monster name="sheep" x="-1" y="1" z="9" spawntime="60" />
+		<monster name="sheep" x="0" y="1" z="9" spawntime="60" />
+		<monster name="sheep" x="1" y="1" z="9" spawntime="60" />
+	</spawn>
 	<spawn centerx="32613" centery="31701" centerz="9" radius="4">
 		<monster name="wasp" x="0" y="-3" z="9" spawntime="600" />
 		<monster name="wasp" x="0" y="0" z="9" spawntime="600" />
