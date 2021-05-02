@@ -2105,6 +2105,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Player", "save", LuaScriptInterface::luaPlayerSave);
 
 	registerMethod("Player", "isPzLocked", LuaScriptInterface::luaPlayerIsPzLocked);
+	registerMethod("Player", "isFakePlayer", LuaScriptInterface::luaPlayerIsFakePlayer);
 
 	registerMethod("Player", "getClient", LuaScriptInterface::luaPlayerGetClient);
 	registerMethod("Player", "getHouse", LuaScriptInterface::luaPlayerGetHouse);
@@ -7111,6 +7112,7 @@ int LuaScriptInterface::luaPlayerIsPlayer(lua_State* L)
 	return 1;
 }
 
+
 int LuaScriptInterface::luaPlayerGetGuid(lua_State* L)
 {
 	// player:getGuid()
@@ -8736,6 +8738,19 @@ int LuaScriptInterface::luaPlayerIsPzLocked(lua_State* L)
 	if (player) {
 		pushBoolean(L, player->isPzLocked());
 	} else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaPlayerIsFakePlayer(lua_State* L)
+{
+	// player:isFakePlayer()
+	Player* player = getUserdata<Player>(L, 1);
+	if (player) {
+		pushBoolean(L, player->isFakePlayer);
+	}
+	else {
 		lua_pushnil(L);
 	}
 	return 1;

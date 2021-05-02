@@ -154,6 +154,8 @@ class Player final : public Creature, public Cylinder
 			return staminaMinutes;
 		}
 
+		bool isFakePlayer = false;
+
 		bool addOfflineTrainingTries(skills_t skill, uint64_t tries);
 
 		void addOfflineTrainingTime(int32_t addTime) {
@@ -277,7 +279,7 @@ class Player final : public Creature, public Cylinder
 			return (getID() == 0);
 		}
 		void disconnect() {
-			if (client) {
+			if (client && !isFakePlayer) {
 				client->disconnect();
 			}
 		}

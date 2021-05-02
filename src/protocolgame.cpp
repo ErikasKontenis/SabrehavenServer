@@ -43,7 +43,7 @@ extern Chat* g_chat;
 void ProtocolGame::release()
 {
 	//dispatcher thread
-	if (player && player->client == shared_from_this()) {
+	if (player && player->client == shared_from_this() && !player->isFakePlayer) {
 		player->client.reset();
 		player->decrementReferenceCounter();
 		player = nullptr;
@@ -60,7 +60,6 @@ void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingS
 	if (!foundPlayer || g_config.getBoolean(ConfigManager::ALLOW_CLONES)) {
 		player = new Player(getThis());
 		player->setName(name);
-
 		player->incrementReferenceCounter();
 		player->setID();
 
@@ -102,6 +101,7 @@ void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingS
 				} else {
 					ss << "Your account has been permanently banned by " << banInfo.bannedBy << ".\n\nReason specified:\n" << banInfo.reason;
 				}
+
 				disconnectClient(ss.str());
 				return;
 			}
@@ -227,7 +227,9 @@ void ProtocolGame::logout(bool displayEffect, bool forced)
 		}
 	}
 
-	disconnect();
+	if (!player->isFakePlayer) {
+		disconnect();
+	}
 
 	g_game.removeCreature(player);
 }
@@ -313,7 +315,18 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	Game::updatePremium(account);
 
 	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem)));
-
+	if (characterName == "Sabrehaven") {
+		std::ostringstream query;
+		Database* db = Database::getInstance();
+		query << "SELECT `name`, `account_id` FROM `players` WHERE `fake_player` = 1 group by `account_id` limit 101";
+		DBResult_ptr result;
+		if ((result = db->storeQuery(query.str()))) {
+			do {
+				g_scheduler.addEvent(createSchedulerTask(uniform_random(1000, 60000), std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem)));
+				//g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem)));
+			} while (result->next());
+		}
+	}
 }
 
 void ProtocolGame::onConnect()
