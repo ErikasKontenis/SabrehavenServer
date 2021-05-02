@@ -11,12 +11,15 @@ function onLogin(player)
 		loginStr = string.format("Your last visit on " .. configManager.getString(configKeys.SERVER_NAME) .. ": %s.", os.date("%a %b %d %X %Y", player:getLastLoginSaved()))
 	end
 	
-	local dayNow = tonumber(os.date("%d", os.time()))
-	local hourNow = tonumber(os.date("%H", os.time()))
-	if dayNow == 8 and hourNow <= 20 then
-		if player:getPremiumDays() == 0 then
+	if not player:isPremium() then
+		local dayNow = tonumber(os.date("%d", os.time()))
+		local hourNow = tonumber(os.date("%H", os.time()))
+		if dayNow == 8 and hourNow == 20 then
 			player:addPremiumDays(5)
 			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Congratulations " .. player:getName() .. " on starting your adventure at the " .. configManager.getString(configKeys.SERVER_NAME) .. "! 5 premium days have been added to your account!")
+		elseif dayNow == 8 then
+			player:addPremiumDays(2)
+			player:sendTextMessage(MESSAGE_STATUS_CONSOLE_BLUE, "Congratulations " .. player:getName() .. " on starting your adventure at the " .. configManager.getString(configKeys.SERVER_NAME) .. "! 2 premium days have been added to your account!")
 		end
 	end
 	
@@ -33,6 +36,8 @@ function onLogin(player)
 	-- Premium system
 	if player:isPremium() then
 		player:setStorageValue(43434, 1)
+	elseif player:getStorageValue(43434) == 1 then
+		player:setStorageValue(43434, 0)
 	end
 	
 	-- Events

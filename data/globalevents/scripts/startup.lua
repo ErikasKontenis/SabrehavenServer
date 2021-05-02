@@ -196,6 +196,7 @@ function onStartup()
 	end
 	
 	spawnRashid()
+	addEvent(function () Game.setGameState(GAME_STATE_CLOSED) end, 5000)
 	setGlobalStorageValue(17657, 0) -- reset POI levers
 	setGlobalStorageValue(8420, monsterOfTheDay[math.random(1, #monsterOfTheDay)].id)
 	setGlobalStorageValue(8421, math.random(10, 25))
