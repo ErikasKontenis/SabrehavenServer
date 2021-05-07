@@ -82,5 +82,4 @@ function onDeath(player, corpse, killer, mostDamageKiller, unjustified, mostDama
     if warId ~= 0 then
         guildwars:processKill(warId, killer, player)
     end
-
 end

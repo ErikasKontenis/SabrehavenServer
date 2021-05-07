@@ -279,7 +279,7 @@ class Player final : public Creature, public Cylinder
 			return (getID() == 0);
 		}
 		void disconnect() {
-			if (client && !isFakePlayer) {
+			if (client) {
 				client->disconnect();
 			}
 		}

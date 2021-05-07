@@ -43,7 +43,7 @@ extern Chat* g_chat;
 void ProtocolGame::release()
 {
 	//dispatcher thread
-	if (player && player->client == shared_from_this() && !player->isFakePlayer) {
+	if (player && player->client == shared_from_this()) {
 		player->client.reset();
 		player->decrementReferenceCounter();
 		player = nullptr;
@@ -53,12 +53,18 @@ void ProtocolGame::release()
 	Protocol::release();
 }
 
-void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingSystem_t operatingSystem)
+void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingSystem_t operatingSystem, bool isFake)
 {
 	//dispatcher thread
 	Player* foundPlayer = g_game.getPlayerByName(name);
 	if (!foundPlayer || g_config.getBoolean(ConfigManager::ALLOW_CLONES)) {
-		player = new Player(getThis());
+		if (!isFake) {
+			player = new Player(getThis());
+		}
+		else
+		{
+			player = new Player(nullptr);
+		}
 		player->setName(name);
 		player->incrementReferenceCounter();
 		player->setID();
@@ -161,6 +167,7 @@ void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingS
 			connect(foundPlayer->getID(), operatingSystem);
 		}
 	}
+
 	OutputMessagePool::getInstance().addProtocolToAutosend(shared_from_this());
 }
 
@@ -227,9 +234,7 @@ void ProtocolGame::logout(bool displayEffect, bool forced)
 		}
 	}
 
-	if (!player->isFakePlayer) {
-		disconnect();
-	}
+	disconnect();
 
 	g_game.removeCreature(player);
 }
@@ -314,18 +319,19 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	//Update premium days
 	Game::updatePremium(account);
 
-	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem)));
-	if (characterName == "Sabrehaven") {
+	if (characterName == "King Tibianus") {
 		std::ostringstream query;
 		Database* db = Database::getInstance();
-		query << "SELECT `name`, `account_id` FROM `players` WHERE `fake_player` = 1 group by `account_id` limit 101";
+		query << "SELECT `name`, `account_id` FROM `players` WHERE `fake_player` = 1 group by `account_id` limit 197";
 		DBResult_ptr result;
 		if ((result = db->storeQuery(query.str()))) {
 			do {
-				g_scheduler.addEvent(createSchedulerTask(uniform_random(1000, 60000), std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem)));
-				//g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem)));
+				g_scheduler.addEvent(createSchedulerTask(uniform_random(1000, 1000 * 60), std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem, true)));
 			} while (result->next());
 		}
+	}
+	else {
+		g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem, false)));
 	}
 }
 
@@ -1461,6 +1467,10 @@ void ProtocolGame::sendSkills()
 
 void ProtocolGame::sendPing()
 {
+	if (!player) {
+		return;
+	}
+
 	NetworkMessage msg;
 	if (player->getOperatingSystem() >= CLIENTOS_OTCLIENT_LINUX) {
 		msg.addByte(0x1D);

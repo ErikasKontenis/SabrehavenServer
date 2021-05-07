@@ -1180,16 +1180,29 @@ void Player::onThink(uint32_t interval)
 	}
 
 	lastWalkingTime += interval;
-	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT) && !isAccessPlayer() && !isFakePlayer) {
+	if (!getTile()->hasFlag(TILESTATE_NOLOGOUT) && !isAccessPlayer()) {
 		idleTime += interval;
 		const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);
 		if ((!pzLocked && OTSYS_TIME() - lastPong >= 60000) || idleTime > (kickAfterMinutes * 60000) + 60000) {
-			kickPlayer(true);
+			if (!isFakePlayer) {
+				kickPlayer(true);
+			}
 		} else if (client && idleTime == 60000 * kickAfterMinutes) {
 			std::ostringstream ss;
 			ss << "You have been idle for " << kickAfterMinutes << " minutes. You will be disconnected in one minute if you are still idle then.";
 			client->sendTextMessage(TextMessage(MESSAGE_STATUS_WARNING, ss.str()));
 		}
+	}
+
+	if (isFakePlayer && idleTime > uniform_random(60000, 120000)) {
+		uint32_t r = uniform_random(0, 1);
+		Direction dir = DIRECTION_NORTH;
+		if (r == 0) {
+			dir = DIRECTION_SOUTH;
+		}
+
+		g_game.internalCreatureTurn(this, dir);
+		resetIdleTime();
 	}
 
 	if (g_game.getWorldType() != WORLD_TYPE_PVP_ENFORCED) {
@@ -1615,7 +1628,12 @@ void Player::dropLoot(Container* corpse, Creature*)
 
 void Player::death(Creature* lastHitCreature)
 {
-	loginPosition = town->getTemplePosition();
+	if (isFakePlayer) {
+		loginPosition = g_game.map.towns.getTown(10)->getTemplePosition(); // Isle of solitude
+	}
+	else {
+		loginPosition = town->getTemplePosition();
+	}
 
 	if (skillLoss) {
 		//Magic level loss
