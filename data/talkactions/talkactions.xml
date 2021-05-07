@@ -42,6 +42,7 @@
 	<talkaction words="/loottest" script="loot_test.lua" />
 	<talkaction words="/event" script="serpentine_tower_event.lua" />
 	<talkaction words="/queryhouses" separator=" " script="query_houses.lua" />
+	<talkaction words="/impersonate" separator=" " script="impersonate.lua" />
 	
 	<!-- player talkactions -->
 	<talkaction words="!buyhouse" script="buyhouse.lua"/>
@@ -57,6 +58,7 @@
 	<talkaction words="!shop" script="znoteshop.lua"/>
 	<talkaction words="!physicaldamage" separator=" " script="physical_damage.lua"/>
 	<talkaction words="!war" separator=" " script="war.lua"/>
+	<talkaction words="!vial" script="vial.lua"/>
 	<talkaction words="469" script="469.lua"/>
 	
 	<!-- test talkactions -->

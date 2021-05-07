@@ -80,7 +80,12 @@ function onUse(player, item, fromPosition, target, toPosition)
 			else
 				target:say("Gulp.", TALKTYPE_MONSTER_SAY)
 			end
-			item:transform(item:getId(), FLUID_NONE)
+			
+			if player:getStorageValue(17742) ~= 1 then
+				item:transform(item:getId(), FLUID_NONE)
+			else
+				item:remove()
+			end
 		end
 	else
 		if toPosition.x == CONTAINER_POSITION then
