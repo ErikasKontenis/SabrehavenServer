@@ -56,10 +56,10 @@
 	
 	
 	<!-- Knight Spells -->
-	<instant name="Challenge" words="exeta res" maglv="4" mana="90" prem="0" aggressive="0" needlearn="0" script="spells/challenge.lua">
+	<instant name="Challenge" words="exeta res" maglv="4" mana="30" prem="0" aggressive="0" needlearn="0" script="spells/challenge.lua">
 		<vocation name="Elite Knight" />
 	</instant>
-	<instant name="Berserk" words="exori" maglv="5" manapercent="4" prem="0" needweapon="1" needlearn="0" script="spells/berserk.lua">
+	<instant name="Berserk" words="exori" maglv="5" mana="150" prem="0" needweapon="1" needlearn="0" script="spells/berserk.lua">
 		<vocation name="Knight" />
 		<vocation name="Elite Knight" />
 	</instant>
