@@ -5,29 +5,23 @@ DEFAULT_LAYOUT = "retro" -- on android it's forced to "mobile", check code bello
 
 -- If you don't use updater or other service, set it to updater = ""
 Services = {
-  website = "http://otclient.ovh", -- currently not used
-  updater = "http://otclient.ovh/api/updater.php",
+  website = "https://tibianus.com", -- currently not used
+  updater = "https://tibianus.com/api/updater.php",
   stats = "",
-  crash = "http://otclient.ovh/api/crash.php",
-  feedback = "http://otclient.ovh/api/feedback.php",
-  status = "http://otclient.ovh/api/status.php"
+  crash = "",
+  feedback = "",
+  status = "https://tibianus.com/status.php"
 }
 
 -- Servers accept http login url, websocket login url or ip:port:version
 Servers = {
---[[  OTClientV8 = "http://otclient.ovh/api/login.php",
-  OTClientV8proxy = "http://otclient.ovh/api/login.php?proxy=1",
-  OTClientV8c = "otclient.ovh:7171:1099:25:30:80:90",
-  OTClientV8Test = "http://otclient.ovh/api/login2.php",
-  Evoulinia = "evolunia.net:7171:1098",
-  GarneraTest = "garnera-global.net:7171:1100",
-  LocalTestServ = "127.0.0.1:7171:1098:110:30:93"  ]]
+  Tibianus = "164.132.112.189:7171:792"
 }
 
 --Server = "ws://otclient.ovh:3000/"
 --Server = "ws://127.0.0.1:88/"
 --USE_NEW_ENERGAME = true -- uses entergamev2 based on websockets instead of entergame
-ALLOW_CUSTOM_SERVERS = true -- if true it shows option ANOTHER on server list
+ALLOW_CUSTOM_SERVERS = false -- if true it shows option ANOTHER on server list
 
 g_app.setName("OTCv8")
 -- CONFIG END
