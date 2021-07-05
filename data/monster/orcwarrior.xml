@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF - 8"?>
-<monster name="orc warrior" nameDescription="an orc warrior" race="blood" experience="50" speed="55" manacost="360">
+<monster name="Orc Warrior" nameDescription="an orc warrior" race="blood" experience="50" speed="55" manacost="360">
 	<health now="125" max="125" />
 	<look type="7" head="0" body="0" legs="0" feet="0" corpse="5979" />
 	<targetchange interval="1000" chance="0" />

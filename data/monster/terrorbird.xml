@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF - 8"?>
-<monster name="terror bird" nameDescription="a terror bird" race="blood" experience="150" speed="66" manacost="490">
+<monster name="Terror Bird" nameDescription="a terror bird" race="blood" experience="150" speed="66" manacost="490">
 	<health now="300" max="300" />
 	<look type="218" head="0" body="0" legs="0" feet="0" corpse="6057" />
 	<targetchange interval="1000" chance="5" />

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF - 8"?>
-<monster name="wasp" nameDescription="a wasp" race="venom" experience="24" speed="120" manacost="280">
+<monster name="Wasp" nameDescription="a wasp" race="venom" experience="24" speed="120" manacost="280">
 	<health now="35" max="35" />
 	<look type="44" head="0" body="0" legs="0" feet="0" corpse="5989" />
 	<targetchange interval="1000" chance="10" />

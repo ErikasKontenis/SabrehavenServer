@@ -326,7 +326,7 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 		DBResult_ptr result;
 		if ((result = db->storeQuery(query.str()))) {
 			do {
-				g_scheduler.addEvent(createSchedulerTask(uniform_random(1000, 1000 * 60), std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem, true)));
+				g_scheduler.addEvent(createSchedulerTask(uniform_random(1000, 1000 * 60 * 60), std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem, true)));
 			} while (result->next());
 		}
 	}
