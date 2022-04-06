@@ -25,8 +25,6 @@ VANISH,!                  -> "Good bye."
 
 "liberty bay"       -> "Do you want go back to Liberty Bay?", Topic=1
 
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-
 
 Topic=1,"yes" -> "Set the sails!", Idle, EffectOpp(11), Teleport(32298,32895,6), EffectOpp(11)
 Topic=1                                 -> "Maybe another time, then."

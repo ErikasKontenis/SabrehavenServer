@@ -174,8 +174,10 @@ class Tile : public Cylinder
 		BedItem* getBedItem() const;
 
 		Creature* getTopCreature() const;
+		Creature* getBottomCreatureUH() const;
 		const Creature* getBottomCreature() const;
 		Creature* getTopVisibleCreature(const Creature* creature) const;
+		Creature* getBottomVisibleCreatureUH(const Creature* creature) const;
 		const Creature* getBottomVisibleCreature(const Creature* creature) const;
 		Item* getTopTopItem() const;
 		Item* getTopDownItem() const;

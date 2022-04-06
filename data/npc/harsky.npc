@@ -10,7 +10,7 @@ Behaviour = {
 ADDRESS,"hello$","king",!       -> "HAIL TO THE KING!"       
 ADDRESS,"hail$","king",!        -> "HAIL TO THE KING!"       
 ADDRESS,"salutations$","king",! -> "HAIL TO THE KING!"    
-ADDRESS,"hail$","sabrehaven",! -> "HAIL TO THE SABREHAVEN!"   
+ADDRESS,"hail$","tibianus",! -> "HAIL TO THE TIBIANUS!"   
 ADDRESS,"hi$",!                 -> "MIND YOUR MANNERS COMMONER! To address the king greet with his title!", Idle
 ADDRESS,"hello$",!              -> *
 ADDRESS,!                       -> Idle

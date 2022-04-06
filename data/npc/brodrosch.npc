@@ -11,8 +11,12 @@ ADDRESS,"hello$",! -> "Welcome, %N! May Earth protect you, even whilst sailing!"
 ADDRESS,"hi$",!    -> *
 ADDRESS,"hiho$",!  -> *
 ADDRESS,!          -> Idle
-BUSY,"please","bring","me","to","cormaya",PZFree,Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
-BUSY,"please","bring","me","to","cormaya",PZFree,Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+
+BUSY,"bring","me","to","cormaya",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+BUSY,"bring","me","to","cormaya",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+ADDRESS,"bring","me","to","cormaya",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+ADDRESS,"bring","me","to","cormaya",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(33309,31989,15), EffectOpp(3)
+
 BUSY,"hello$",!    -> "Shut up and wait like the rest, jawoll!", Queue
 BUSY,"hi$",!       -> *
 BUSY,"hiho$",!     -> *
@@ -55,8 +59,6 @@ VANISH,!           -> "Yeah, yeah, walk, it's cheaper."
 "passage",QuestValue(250)>2        -> *
 
 
-
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
 
 # für post-quest
 

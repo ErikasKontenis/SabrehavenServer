@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF - 8"?>
-<monster name="skunk" nameDescription="a skunk" race="blood" experience="3" speed="28" manacost="200">
+<monster name="Skunk" nameDescription="a skunk" race="blood" experience="3" speed="28" manacost="200">
 	<health now="20" max="20" />
 	<look type="106" head="0" body="0" legs="0" feet="0" corpse="6035" />
 	<targetchange interval="1000" chance="0" />

@@ -96,7 +96,7 @@ function wave2()
 end
 
 function wave3()
-	broadcastMessage("Ankrahmun: All Sabrehaven PEOPLE. THIS IS NOT A PRACTICE. Leave our city NOW!", MESSAGE_STATUS_WARNING)
+	broadcastMessage("Ankrahmun: All Tibianus PEOPLE. THIS IS NOT A PRACTICE. Leave our city NOW!", MESSAGE_STATUS_WARNING)
 	earthquakeTower(area.fromPos, area.toPos)
 end
 

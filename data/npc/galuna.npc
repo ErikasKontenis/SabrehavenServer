@@ -40,18 +40,20 @@ VANISH,!           -> "Good bye."
 
 "sell","bow"      -> "I don't buy used bows."
 "sell","crossbow" -> "I don't buy used crossbows."
+"power","bolt",QuestValue(17538)=0,male -> "Power bolts for you? Ha ha, boy you don't look like a real hunter to me."
+"power","bolt",QuestValue(17538)=0,female -> "Power bolts for you? Ha ha, girl you don't look like a real hunter to me."
 
 "bow"             -> Type=3350, Amount=1,  Price=400,  "Do you want to buy a bow for %P gold?", Topic=1
 "crossbow"        -> Type=3349, Amount=1,  Price=500,  "Do you want to buy a crossbow for %P gold?", Topic=1
 "arrow"           -> Type=3447, Amount=1,  Price=2,   "Do you want to buy an arrow for %P gold?", Topic=1
 "bolt"            -> Type=3446, Amount=1,  Price=3,   "Do you want to buy a bolt for %P gold?", Topic=1
-"power","bolt"            -> Type=3450, Amount=1, Price=6,   "Do you want to buy a power bolt for %P gold?", Topic=1
+"power","bolt",QuestValue(17538)=1 -> Type=3450, Amount=1,  Price=10,   "Do you want to buy a power bolt for %P gold?", Topic=1
 
 %1,1<%1,"bow"          -> Type=3350, Amount=%1, Price=400*%1, "Do you want to buy %A bows for %P gold?", Topic=1
 %1,1<%1,"crossbow"     -> Type=3349, Amount=%1, Price=500*%1, "Do you want to buy %A crossbows for %P gold?", Topic=1
 %1,1<%1,"arrow"        -> Type=3447, Amount=%1, Price=2*%1,   "Do you want to buy %A arrows for %P gold?", Topic=1
 %1,1<%1,"bolt"         -> Type=3446, Amount=%1, Price=3*%1,   "Do you want to buy %A bolts for %P gold?", Topic=1
-%1,1<%1,"power","bolt"         -> Type=3450, Amount=%1, Price=6*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=1
+%1,1<%1,"power","bolt",QuestValue(17538)=1 -> Type=3450, Amount=%1, Price=10*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=1
 
 Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
 Topic=1,"yes"                   -> "Come back, when you have enough money."

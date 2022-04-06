@@ -1,5 +1,5 @@
 function onLogin(player)
-	if player:getStorageValue(17571) ~= 1 then
+	if player:getStorageValue(17571) ~= 1 and not player:isFakePlayer() then
 		player:setStorageValue(17571, 1)
 		
 		-- Items

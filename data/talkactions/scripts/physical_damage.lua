@@ -92,7 +92,6 @@ end
 local function getDefense(creature, random1, random2)
 	local totalDefense = creature:getType():getDefense() + 1
 	local defenseSkill = creature:getType():getSkill()
-	
 	local formula = math.floor((5 * (defenseSkill) + 50) * totalDefense)
 	local randresult = math.floor(random1 % 100)
 
@@ -112,13 +111,15 @@ local function getArmor(creature, rand)
 	return armor
 end
 
-local function setPhysicalDamageBlock(creature, damage, random1, random2, randomArmor)
+local function setPhysicalDamageBlock(creature, isCloseRange, damage, random1, random2, randomArmor)
 	if bit.band(creature:getType():getCombatImmunities(), COMBAT_PHYSICALDAMAGE) == COMBAT_PHYSICALDAMAGE then
 		return 0
 	end
-
-	damage = damage + getDefense(creature, random1, random2)
-
+	
+	if isCloseRange then
+		damage = damage + getDefense(creature, random1, random2)
+	end
+	
 	if damage >= 0 then
 		return 0
 	end
@@ -134,7 +135,7 @@ local function setPhysicalDamageBlock(creature, damage, random1, random2, random
 end
 
 local function isThrowableHit(weapon, ammunition, skillValue, rand)
-	local distance = 15 -- we consider distance is always the best
+	local distance = 75 -- we consider distance is always the best
 	local hitChance = 75 -- throwables and such
 
 	if weapon:getAmmoType() ~= 0 then
@@ -158,20 +159,20 @@ local function getTotalDamage(creature, weapon, ammunition, vocation, attack, sk
 	
 	if weapon ~= nil and weapon:getWeaponType() == WEAPON_DISTANCE then
 		if isThrowableHit(weapon, ammunition, skillValue, os.rand()) then
-			damage = setPhysicalDamageBlock(creature, damage, os.rand(), os.rand(), os.rand())
+			damage = setPhysicalDamageBlock(creature, false, damage, os.rand(), os.rand(), os.rand())
 		else
 			damage = 0
 		end
 		minDamage = 0
 		if isThrowableHit(weapon, ammunition, skillValue, 0) then
-			maxDamage = setPhysicalDamageBlock(creature, maxDamage, 0, 0, 0)
+			maxDamage = setPhysicalDamageBlock(creature, false, maxDamage, 0, 0, 0)
 		else
 			maxDamage = 0
 		end
 	else
-		damage = setPhysicalDamageBlock(creature, damage, os.rand(), os.rand(), os.rand())
-		minDamage = setPhysicalDamageBlock(creature, minDamage, 99, 99, rshift(creature:getType():getArmor(), 1) + 1)
-		maxDamage = setPhysicalDamageBlock(creature, maxDamage, 0, 0, 0)
+		damage = setPhysicalDamageBlock(creature, true, damage, os.rand(), os.rand(), os.rand())
+		minDamage = setPhysicalDamageBlock(creature, true, minDamage, 99, 99, rshift(creature:getType():getArmor(), 1) + 1)
+		maxDamage = setPhysicalDamageBlock(creature, true, maxDamage, 0, 0, 0)
 	end
 	
 	local container = {}
@@ -235,7 +236,12 @@ function onSay(player, words, param)
 	local skillValue = player:getSkillLevel(skillType)
 	if skillValueNumber ~= nil then
 		if tonumber(skillValueNumber) > 0 then
-			skillValue = tonumber(skillValueNumber)
+			if tonumber(skillValueNumber) <= 300 then
+				skillValue = tonumber(skillValueNumber)
+			else
+				player:sendCancelMessage("The skill value has to be no bigger than 300.")
+				return false
+			end
 		else
 			player:sendCancelMessage("The skill value has to be a number and greater than zero.")
 			return false

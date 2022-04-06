@@ -19,18 +19,15 @@ function onUse(player, item, fromPosition, target, toPosition)
 	end
 	
 	if not Tile(player:getPosition()):hasFlag(TILESTATE_PROTECTIONZONE) then
-		if player:getItemCount(3492) >= 1 then
-			player:addSkillTries(SKILL_FISHING, 1)
-			if math.random(1, 100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
-				player:addItem(3578, 1)
-				
-				if target:getId() ~= 622 then
-					target:transform(4609, 1)
-				end
-				
-				target:decay()
-				player:removeItem(3492, 1)
+		player:addSkillTries(SKILL_FISHING, 1)
+		if math.random(1, 100) <= math.min(math.max(10 + (player:getEffectiveSkillLevel(SKILL_FISHING) - 10) * 0.597, 10), 50) then
+			player:addItem(3578, 1)
+			
+			if target:getId() ~= 622 then
+				target:transform(4609, 1)
 			end
+			
+			target:decay()
 		end
 	end
 	

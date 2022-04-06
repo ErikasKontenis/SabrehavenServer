@@ -223,7 +223,12 @@ Thing* Game::internalGetThing(Player* player, const Position& pos, int32_t index
 				if (item && item->isMoveable()) {
 					thing = item;
 				} else {
-					thing = tile->getTopVisibleCreature(player);
+					if (g_config.getBoolean(ConfigManager::UH_TRAP)) {
+						thing = tile->getBottomVisibleCreatureUH(player);
+					}
+					else {
+						thing = tile->getTopVisibleCreature(player);
+					}
 				}
 				break;
 			}
@@ -239,7 +244,12 @@ Thing* Game::internalGetThing(Player* player, const Position& pos, int32_t index
 			}
 
 			case STACKPOS_USETARGET: {
-				thing = tile->getTopVisibleCreature(player);
+				if (g_config.getBoolean(ConfigManager::UH_TRAP)) {
+					thing = tile->getBottomCreatureUH();
+				}
+				else {
+					thing = tile->getTopCreature();
+				}
 				if (!thing) {
 					thing = tile->getUseItem(index);
 				}
@@ -1715,7 +1725,7 @@ bool Game::playerBroadcastMessage(Player* player, const std::string& text) const
 void Game::playerCreatePrivateChannel(uint32_t playerId)
 {
 	Player* player = getPlayerByID(playerId);
-	if (!player || !player->isPremium()) {
+	if (!player) {
 		return;
 	}
 

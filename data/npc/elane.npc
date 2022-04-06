@@ -115,7 +115,7 @@ Topic=3                                   -> "Ok. Then not."
 
 "sniper","gloves",Count(5875)<=0 -> "We are always looking for sniper gloves. They are supposed to raise accuracy. If you find a pair, bring them here. Maybe I can offer you a nice trade."
 "sniper","gloves",QuestValue(17538)=0 -> Type=5875, Amount=1, "You found sniper gloves?! Incredible! Listen, if you give them to me, I will grant you the right to wear the sniper gloves accessory. How about it?", Topic=4
-Topic=4,"yes",Count(Type)>=Amount -> "Great! I hereby grant you the right to wear the sniper gloves as accessory. Congratulations!", Delete(Type), SetQuestValue(17538,1), AddOutfitAddon(137,2), AddOutfitAddon(129,2), EffectOpp(13)
+Topic=4,"yes",Count(Type)>=Amount -> "Great! I hereby grant you the right to wear the sniper gloves as accessory. Congratulations! Also, you can ask for power bolts to Galuna she will be surprised to see a hunter like you.", Delete(Type), SetQuestValue(17538,1), AddOutfitAddon(137,2), AddOutfitAddon(129,2), EffectOpp(13)
 Topic=4,"yes"					           -> "You don't have it."
 Topic=4                                   -> "Maybe another time."
 

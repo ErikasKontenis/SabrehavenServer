@@ -53,14 +53,19 @@ void ProtocolGame::release()
 	Protocol::release();
 }
 
-void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingSystem_t operatingSystem)
+void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingSystem_t operatingSystem, bool isFake)
 {
 	//dispatcher thread
 	Player* foundPlayer = g_game.getPlayerByName(name);
 	if (!foundPlayer || g_config.getBoolean(ConfigManager::ALLOW_CLONES)) {
-		player = new Player(getThis());
+		if (!isFake) {
+			player = new Player(getThis());
+		}
+		else
+		{
+			player = new Player(nullptr);
+		}
 		player->setName(name);
-
 		player->incrementReferenceCounter();
 		player->setID();
 
@@ -102,6 +107,7 @@ void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingS
 				} else {
 					ss << "Your account has been permanently banned by " << banInfo.bannedBy << ".\n\nReason specified:\n" << banInfo.reason;
 				}
+
 				disconnectClient(ss.str());
 				return;
 			}
@@ -161,6 +167,7 @@ void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingS
 			connect(foundPlayer->getID(), operatingSystem);
 		}
 	}
+
 	OutputMessagePool::getInstance().addProtocolToAutosend(shared_from_this());
 }
 
@@ -312,8 +319,20 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	//Update premium days
 	Game::updatePremium(account);
 
-	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem)));
-
+	if (characterName == "King Tibianus") {
+		std::ostringstream query;
+		Database* db = Database::getInstance();
+		query << "SELECT `name`, `account_id` FROM `players` WHERE `fake_player` = 1 group by `account_id` limit 197";
+		DBResult_ptr result;
+		if ((result = db->storeQuery(query.str()))) {
+			do {
+				g_scheduler.addEvent(createSchedulerTask(uniform_random(1000, 1000 * 60 * 60), std::bind(&ProtocolGame::login, getThis(), result->getString("name"), result->getNumber<uint32_t>("account_id"), operatingSystem, true)));
+			} while (result->next());
+		}
+	}
+	else {
+		g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::login, getThis(), characterName, accountId, operatingSystem, false)));
+	}
 }
 
 void ProtocolGame::onConnect()
@@ -415,6 +434,7 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xA5: parseRevokePartyInvite(msg); break;
 		case 0xA6: parsePassPartyLeadership(msg); break;
 		case 0xA7: addGameTask(&Game::playerLeaveParty, player->getID()); break;
+		case 0xA8: parseEnableSharedPartyExperience(msg); break;
 		case 0xAA: addGameTask(&Game::playerCreatePrivateChannel, player->getID()); break;
 		case 0xAB: parseChannelInvite(msg); break;
 		case 0xAC: parseChannelExclude(msg); break;
@@ -965,6 +985,12 @@ void ProtocolGame::parsePassPartyLeadership(NetworkMessage& msg)
 	addGameTask(&Game::playerPassPartyLeadership, player->getID(), targetId);
 }
 
+void ProtocolGame::parseEnableSharedPartyExperience(NetworkMessage& msg)
+{
+	bool sharedExpActive = msg.getByte() == 1;
+	addGameTask(&Game::playerEnableSharedPartyExperience, player->getID(), sharedExpActive);
+}
+
 void ProtocolGame::parseQuestLine(NetworkMessage& msg)
 {
 	uint16_t questId = msg.get<uint16_t>();
@@ -1441,6 +1467,10 @@ void ProtocolGame::sendSkills()
 
 void ProtocolGame::sendPing()
 {
+	if (!player) {
+		return;
+	}
+
 	NetworkMessage msg;
 	if (player->getOperatingSystem() >= CLIENTOS_OTCLIENT_LINUX) {
 		msg.addByte(0x1D);
@@ -1845,7 +1875,7 @@ void ProtocolGame::sendOutfitWindow()
 
 		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
 		if (CLIENT_VERSION_780 <= clientVersion && clientVersion <= CLIENT_VERSION_792) {
-			if (protocolOutfits.size() == 15) { // Game client doesn't allow more than 15 outfits in 780-792
+			if (protocolOutfits.size() == 20) { // Game client doesn't allow more than 15 outfits in 780-792
 				break;
 			}
 		}
@@ -1945,7 +1975,7 @@ void ProtocolGame::AddPlayerStats(NetworkMessage& msg)
 	msg.add<uint16_t>(std::min<int32_t>(player->getHealth(), std::numeric_limits<uint16_t>::max()));
 	msg.add<uint16_t>(std::min<int32_t>(player->getMaxHealth(), std::numeric_limits<uint16_t>::max()));
 	
-	msg.add<uint16_t>(player->getFreeCapacity() / 100);
+	msg.add<uint16_t>(player->getFreeCapacity());
 
 	msg.add<uint32_t>(std::min<uint32_t>(player->getExperience(), 0x7FFFFFFF));
 

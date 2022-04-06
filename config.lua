@@ -1,10 +1,16 @@
 -- Custom
 clientVersion = 792
-knightCloseAttackDamageIncreasePercent = 20
-paladinRangeAttackDamageIncreasePercent = 15
+knightCloseAttackDamageIncreasePercent = 15
+paladinRangeAttackDamageIncreasePercent = 10
 -- Min/Max rate spawn is a multiplication of the map spawntime in spawns.xml Regular monster spawn time is 600. The formula would be randomValue = random(600*100, 600*200) which varies between 60s and 120s
 minRateSpawn = 100
 maxRateSpawn = 200
+corpseOwnerEnabled = false
+uhTrap = true
+ropeSpotBlock = false
+showMonsterLoot = true
+blockHeight = true
+dropItems = false
 
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"
@@ -14,20 +20,20 @@ protectionLevel = 1
 pzLocked = 60000
 removeChargesFromRunes = true
 stairJumpExhaustion = 0
-experienceByKillingPlayers = false
-expFromPlayersLevelRange = 75
-distanceWeaponsDropOnGround = false
+experienceByKillingPlayers = true
+expFromPlayersLevelRange = 50
+distanceWeaponsDropOnGround = true
 
 -- Skull System
 banLength = 2 * 24 * 60 * 60
 whiteSkullTime = 15 * 60
-redSkullTime = 7 * 24 * 60 * 60
-killsDayRedSkull = 3
-killsWeekRedSkull = 6
-killsMonthRedSkull = 99999
-killsDayBanishment = 1
-killsWeekBanishment = 12
-killsMonthBanishment = 99999
+redSkullTime = 2 * 24 * 60 * 60
+killsDayRedSkull = 4
+killsWeekRedSkull = 12
+killsMonthRedSkull = 35
+killsDayBanishment = 7
+killsWeekBanishment = 18
+killsMonthBanishment = 60
 
 -- Connection Config
 -- NOTE: maxPlayers set to 0 means no limit
@@ -37,10 +43,10 @@ loginProtocolPort = 7171
 gameProtocolPort = 7172
 statusProtocolPort = 7171
 maxPlayers = 0
-motd = "Welcome to Sabrehaven!"
+motd = "Welcome to Tibianus!"
 onePlayerOnlinePerAccount = true
 allowClones = false
-serverName = "Sabrehaven"
+serverName = "Tibianus"
 statusTimeout = 5000
 replaceKickOnLogin = true
 maxPacketsPerSecond = -1
@@ -75,13 +81,9 @@ mysqlSock = ""
 
 -- Misc.
 allowChangeOutfit = true
-freePremium = true
+freePremium = false
 kickIdlePlayerAfterMinutes = 15
 maxMessageBuffer = 8
-showMonsterLoot = true
-blockHeight = false
-dropItems = false
-
 
 -- Character Rooking
 -- Level threshold is the level requirement to teleport players back to newbie town
@@ -114,5 +116,5 @@ startupDatabaseOptimization = true
 -- Status server information
 ownerName = "Erikas"
 ownerEmail = ""
-url = "https://sabrehaven.com/"
+url = "https://tibianus.com/"
 location = "Poland"

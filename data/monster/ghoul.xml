@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF - 8"?>
-<monster name="ghoul" nameDescription="a ghoul" race="blood" experience="85" speed="32" manacost="450">
+<monster name="Ghoul" nameDescription="a ghoul" race="blood" experience="85" speed="32" manacost="450">
 	<health now="100" max="100" />
 	<look type="18" head="0" body="0" legs="0" feet="0" corpse="5976" />
 	<targetchange interval="1000" chance="0" />

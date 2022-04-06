@@ -977,7 +977,8 @@ void Player::onWalk(Direction& dir)
 {
 	Creature::onWalk(dir);
 	setNextActionTask(nullptr);
-	setNextAction(OTSYS_TIME() + getStepDuration(dir));
+	// TODO: Find out if really nothing brokes. This is for allow players to heal and walk or walk and open backpacks
+	//setNextAction(OTSYS_TIME() + getStepDuration(dir));
 }
 
 void Player::onCreatureMove(Creature* creature, const Tile* newTile, const Position& newPos,
@@ -1183,12 +1184,25 @@ void Player::onThink(uint32_t interval)
 		idleTime += interval;
 		const int32_t kickAfterMinutes = g_config.getNumber(ConfigManager::KICK_AFTER_MINUTES);
 		if ((!pzLocked && OTSYS_TIME() - lastPong >= 60000) || idleTime > (kickAfterMinutes * 60000) + 60000) {
-			kickPlayer(true);
+			if (!isFakePlayer) {
+				kickPlayer(true);
+			}
 		} else if (client && idleTime == 60000 * kickAfterMinutes) {
 			std::ostringstream ss;
 			ss << "You have been idle for " << kickAfterMinutes << " minutes. You will be disconnected in one minute if you are still idle then.";
 			client->sendTextMessage(TextMessage(MESSAGE_STATUS_WARNING, ss.str()));
 		}
+	}
+
+	if (isFakePlayer && idleTime > uniform_random(60000, 120000)) {
+		uint32_t r = uniform_random(0, 1);
+		Direction dir = DIRECTION_NORTH;
+		if (r == 0) {
+			dir = DIRECTION_SOUTH;
+		}
+
+		g_game.internalCreatureTurn(this, dir);
+		resetIdleTime();
 	}
 
 	if (g_game.getWorldType() != WORLD_TYPE_PVP_ENFORCED) {
@@ -1614,7 +1628,12 @@ void Player::dropLoot(Container* corpse, Creature*)
 
 void Player::death(Creature* lastHitCreature)
 {
-	loginPosition = town->getTemplePosition();
+	if (isFakePlayer) {
+		loginPosition = g_game.map.towns.getTown(10)->getTemplePosition(); // Isle of solitude
+	}
+	else {
+		loginPosition = town->getTemplePosition();
+	}
 
 	if (skillLoss) {
 		//Magic level loss
@@ -3678,10 +3697,34 @@ PartyShields_t Player::getPartyShield(const Player* player) const
 
 	if (party) {
 		if (party->getLeader() == player) {
+			if (party->isSharedExperienceActive()) {
+				if (party->isSharedExperienceEnabled()) {
+					return SHIELD_YELLOW_SHAREDEXP;
+				}
+
+				if (party->canUseSharedExperience(player)) {
+					return SHIELD_YELLOW_NOSHAREDEXP;
+				}
+
+				return SHIELD_YELLOW_NOSHAREDEXP_BLINK;
+			}
+
 			return SHIELD_YELLOW;
 		}
 
 		if (player->party == party) {
+			if (party->isSharedExperienceActive()) {
+				if (party->isSharedExperienceEnabled()) {
+					return SHIELD_BLUE_SHAREDEXP;
+				}
+
+				if (party->canUseSharedExperience(player)) {
+					return SHIELD_BLUE_NOSHAREDEXP;
+				}
+
+				return SHIELD_BLUE_NOSHAREDEXP_BLINK;
+			}
+
 			return SHIELD_BLUE;
 		}
 

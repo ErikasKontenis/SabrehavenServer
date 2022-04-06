@@ -72,6 +72,7 @@ enum NpcBehaviourType_t
 	BEHAVIOUR_TYPE_KNIGHT, // get/set vocation
 	BEHAVIOUR_TYPE_PALADIN, // get/set vocation
 	BEHAVIOUR_TYPE_ISPREMIUM, // is account premium
+	BEHAVIOUR_TYPE_ISREALPREMIUM, // is REALLY account premium because many isPremium features are for free players also
 	BEHAVIOUR_TYPE_PVPENFORCED, // get world type pvpenforced
 	BEHAVIOUR_TYPE_MALE, // is player male
 	BEHAVIOUR_TYPE_FEMALE, // is player female

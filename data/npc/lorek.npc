@@ -59,9 +59,6 @@ VANISH,!           -> "Bye."
 "west"       -> Price=7, "Do you seek a passage to the west end of Port Hope for %P gold?", Topic=2
 
 
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-Topic=2,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-
 Topic=1,"yes",Premium,CountMoney>=Price   -> "Here we go!", DeleteMoney, Idle, EffectOpp(11), Teleport(32628,32771,7), EffectOpp(11)
 Topic=1,"yes",CountMoney<Price            -> "Sorry, you do not have enough gold."
 Topic=2,"yes",Premium,CountMoney>=Price   -> "Here we go!", DeleteMoney, Idle, EffectOpp(11), Teleport(32558,32780,7), EffectOpp(11)

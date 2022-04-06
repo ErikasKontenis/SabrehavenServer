@@ -80,6 +80,8 @@ bool ConfigManager::load()
 	boolean[TELEPORT_NEWBIES] = getGlobalBoolean(L, "teleportNewbies", true);
 	boolean[STACK_CUMULATIVES] = getGlobalBoolean(L, "autoStackCumulatives", false);
 	boolean[BLOCK_HEIGHT] = getGlobalBoolean(L, "blockHeight", false);
+	boolean[UH_TRAP] = getGlobalBoolean(L, "uhTrap", false);
+	boolean[ROPE_SPOT_BLOCK] = getGlobalBoolean(L, "ropeSpotBlock", false);
 	boolean[DROP_ITEMS] = getGlobalBoolean(L, "dropItems", false);
 	boolean[DISTANCE_WEAPONS_DROP_ON_GROUND] = getGlobalBoolean(L, "distanceWeaponsDropOnGround", true);
 
@@ -112,6 +114,7 @@ bool ConfigManager::load()
 	integer[DEATH_LOSE_PERCENT] = getGlobalNumber(L, "deathLosePercent", -1);
 	integer[KNIGHT_CLOSE_ATTACK_DAMAGE_INCREASE_PERCENT] = getGlobalNumber(L, "knightCloseAttackDamageIncreasePercent", -1);
 	integer[PALADIN_RANGE_ATTACK_DAMAGE_INCREASE_PERCENT] = getGlobalNumber(L, "paladinRangeAttackDamageIncreasePercent", -1);
+	integer[CORPSE_OWNER_ENABLED] = getGlobalBoolean(L, "corpseOwnerEnabled", true);
 	integer[STATUSQUERY_TIMEOUT] = getGlobalNumber(L, "statusTimeout", 5000);
 	integer[WHITE_SKULL_TIME] = getGlobalNumber(L, "whiteSkullTime", 15 * 60);
 	integer[RED_SKULL_TIME] = getGlobalNumber(L, "redSkullTime", 30 * 24 * 60 * 60);

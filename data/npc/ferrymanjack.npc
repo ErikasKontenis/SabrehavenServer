@@ -44,8 +44,6 @@ VANISH,!                  -> "Good bye. You are welcome."
 "tibia",QuestValue(62)=1 -> Price=20, "Tibia is the main continent. Do you want a passage to the continent for %P gold?", Topic=1
 "tibia",QuestValue(62)<1 -> "Without the abbots permission I won't take you anywhere! Go and ask him for a passage first."
 
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-
 Topic=1,"yes",CountMoney>=Price -> "Have a nice trip!", DeleteMoney, Idle, EffectOpp(11), Teleport(32205,31756,6), EffectOpp(11)
 Topic=1,"yes"                   -> "You don't have enough money."
 Topic=1                         -> "Well, I'll be here if you change your mind."

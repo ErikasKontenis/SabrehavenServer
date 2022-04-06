@@ -26079,7 +26079,7 @@ Flags       = {Chest,Unpass,Unmove,Height,Disguise}
 Attributes  = {DisguiseTarget=2481}
 
 TypeID      = 5776
-Name        = "a Sabrehaven talon"
+Name        = "a Tibianus talon"
 Description = "Rumours say that the Gods enchanted these talons for the greatest good, or the greatest evil achievements"
 Flags       = {Cumulative,Take,Disguise}
 Attributes  = {DisguiseTarget=3034,Weight=20}
