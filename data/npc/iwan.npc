@@ -38,7 +38,7 @@ VANISH,!           -> "Bye, bye."
 "gem"             -> "You can buy and sell small diamonds, small sapphires, small rubies, small emeralds, and small amethysts."
 "pearl"           -> "There are white and black pearls you can buy or sell."
 "jewel"           -> "Currently you can purchase gold converting rings, wedding rings, golden amulets, and ruby necklaces."
-"sabrehaven","talon"           -> "The Edron Academy is very interested in them, however the King doesn't want to invest that many money!"
+"tibianus","talon"           -> "The Edron Academy is very interested in them, however the King doesn't want to invest that many money!"
 
 "wedding","ring"   -> Type=3004, Amount=1, Price=990,  "Do you want to buy a wedding ring for %P gold?", Topic=1
 "golden","amulet"  -> Type=3013, Amount=1, Price=6600, "Do you want to buy a golden amulet for %P gold?", Topic=1

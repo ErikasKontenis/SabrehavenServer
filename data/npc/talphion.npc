@@ -55,11 +55,9 @@ topic=4,"kazordoon" -> "OH, THE CITY? NICE, ISN'T IT?"
 
 "crossbow" -> Type=3349, Amount=1,  Price=1150, "DO YOU WANT TO BUY A CROSSBOW FOR %P GOLD?", Topic=5
 "bolt"     -> Type=3446, Amount=1, Price=5,   "DO YOU WANT TO BUY A BOLT FOR %P GOLD?", Topic=5
-"power","bolt"            -> Type=3450, Amount=1, Price=12,   "Do you want to buy a power bolt for %P gold?", Topic=5
 
 %1,1<%1,"bolt"     -> Type=3446, Amount=%1, Price=5*%1, "DO YOU WANT TO BUY %A BOLTS FOR %P GOLD?", Topic=5
 %1,1<%1,"crossbow" -> Type=3349, Amount=%1, Price=1150*%1, "DO YOU WANT TO BUY %A CROSSBOWS FOR %P GOLD?", Topic=5
-%1,1<%1,"power","bolt"         -> Type=3450, Amount=%1, Price=12*%1,   "Do you want to buy %A power bolts for %P gold?", Topic=5
 
 Topic=5,"yes",CountMoney>=Price -> "HERE YOU ARE.", DeleteMoney, Create(Type)
 Topic=5,"yes"                   -> "NOT ENOUGH MONEY. SORRY."

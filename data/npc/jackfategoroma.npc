@@ -11,8 +11,12 @@ ADDRESS,"hi$",male,!      -> *
 ADDRESS,"hello$",female,! -> "Welcome on board, Madam %N."
 ADDRESS,"hi$",female,!    -> *
 ADDRESS,!                 -> Idle
-BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
-BUSY,"please","bring","me","to","liberty","bay",PZFree,Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+
+BUSY,"bring","me","to","liberty","bay",Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
+BUSY,"bring","me","to","liberty","bay",Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+ADDRESS,"bring","me","to","liberty","bay",Premium,QuestValue(17501)<2,! -> "One moment please %N. I want to warn you about this trip.", Queue
+ADDRESS,"bring","me","to","liberty","bay",Premium,QuestValue(17501)=2,! -> "Set the sails %N!", Queue, EffectOpp(11), Teleport(32285,32892,6), EffectOpp(11)
+
 BUSY,"hello$",!           -> "One moment please %N. You're next in line.", Queue
 BUSY,"hi$",!              -> *
 BUSY,!                    -> NOP
@@ -58,8 +62,6 @@ VANISH,!                  -> "Good bye. Recommend us, if you were satisfied with
 "go",QuestValue(17501)>1           -> *
 "back",QuestValue(17501)>1           -> *
 "liberty","bay",QuestValue(17501)>1           -> *
-
-Topic>0,Topic<8,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
 
 Topic=1,"yes" -> "Thank you. Luckily the damage my ship has taken looks more severe than it is, so I will only need a few wooden boards. ...",
 				 "I saw some lousy trolls running away with some parts of the ship. It might be a good idea to follow them and check if they have some more wood. ...",

@@ -1155,7 +1155,8 @@ CREATE TABLE `players` (
   `skill_shielding_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
   `skill_fishing` int(10) UNSIGNED NOT NULL DEFAULT '10',
   `skill_fishing_tries` bigint(20) UNSIGNED NOT NULL DEFAULT '0',
-  `deleted` tinyint(1) NOT NULL DEFAULT '0'
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `fake_player` tinyint(1) NOT NULL DEFAULT '0'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --

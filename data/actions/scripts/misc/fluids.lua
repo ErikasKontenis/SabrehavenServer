@@ -35,6 +35,18 @@ function onUse(player, item, fromPosition, target, toPosition)
 		end
 	end
 	
+	if (configManager.getBoolean(configKeys.UH_TRAP)) then
+		local tile = Tile(toPosition)
+		local creature = tile:getBottomCreature()
+		if creature and creature:isPlayer() then
+			target = creature
+		end
+	else
+		-- monsters do not use mana also I do not know if you can use life fluid on monsters
+		-- if you can just want to use life fluids on monster then change isPlayer to isCreature
+		target = target:isPlayer() and target
+	end
+	
 	if target:isCreature() and target:getPlayer() ~= nil then
 		if item:getFluidType() == FLUID_NONE then
 			player:sendCancelMessage("It is empty.")
@@ -68,7 +80,12 @@ function onUse(player, item, fromPosition, target, toPosition)
 			else
 				target:say("Gulp.", TALKTYPE_MONSTER_SAY)
 			end
-			item:transform(item:getId(), FLUID_NONE)
+			
+			if player:getStorageValue(17742) ~= 1 then
+				item:transform(item:getId(), FLUID_NONE)
+			else
+				item:remove()
+			end
 		end
 	else
 		if toPosition.x == CONTAINER_POSITION then

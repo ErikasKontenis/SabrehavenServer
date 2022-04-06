@@ -4,4 +4,5 @@
 	<globalevent type="record" name="PlayerRecord" script="record.lua"/>
 	<globalevent name="Server Save" time="07:55:00" script="serversave.lua" />
 	<globalevent name="Rookgaard Book" interval="5000" script="rookgaard_book.lua"/>
+	<globalevent name="PowerGamers" interval="60000" script="powergamers.lua"/>
 </globalevents>

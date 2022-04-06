@@ -41,7 +41,7 @@ VANISH,!           -> "Good bye."
 "vega"          -> "Um... I don't think so."
 "venore"          -> "Although it's the flourishing trade centre of Tibia, I don't like going there. Too much competition for my taste."
 "king"          -> "Kings, queens, emperors and kaliphs... everyone claims to be different and unique, but actually it's the same thing everywhere."
-"sabrehaven","talon"          -> "This currency is very stable. However I prefer gold."
+"tibianus","talon"          -> "This currency is very stable. However I prefer gold."
 
 "buy"             -> "I am sorry but I do not sell anything. However I am interested in buying several things."
 "do","you","sell" -> *
@@ -125,7 +125,8 @@ VANISH,!           -> "Good bye."
 
 %1,1<%1,"light","shovel"  -> Type=5710, Amount=%1, Price=300*%1,   "You want sell %A light shovels for %P gold?", Topic=2
 
-Topic=2,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=2,"yes",Count(Type)>=Amount,RealPremium -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=2,"yes",Count(Type)>=Amount -> "I'm sorry %N, but I only serve premium account customers."
 Topic=2,"yes"                             -> "You not have one."
 Topic=2,"yes",Amount>1					  -> "Sorry, you do not have that many."
 Topic=2                                   -> "Maybe you sell it next time."

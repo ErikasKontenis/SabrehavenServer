@@ -24,8 +24,6 @@ VANISH,!                  -> "Good bye."
 
 "calassa"       -> Price=200, "That is quite a long unprofitable travel. I'll bring you to Calassa though for %P gold. Do you want me to do it?", Topic=1
 
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-
 
 Topic=1,"yes",QuestValue(300)>8,Premium,CountMoney>=Price -> "Set the sails!", DeleteMoney, Idle, EffectOpp(11), Teleport(31911,32710,6), EffectOpp(11)
 Topic>0,"yes",CountMoney>=Price,QuestValue(300)>8         -> "I'm sorry, but you need a premium account in order to travel onboard our ships."

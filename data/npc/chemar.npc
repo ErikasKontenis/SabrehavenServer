@@ -10,11 +10,16 @@ Behaviour = {
 ADDRESS,"hello$",!         -> "Ah, the wind brings in another visitor. Feel welcome %N."
 ADDRESS,"hi$",!            -> *
 ADDRESS,!                  -> Idle
-BUSY,"please","bring","me","to","edron",PZFree,Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
-BUSY,"please","bring","me","to","edron",PZFree,Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
 
-BUSY,"please","bring","me","to","femor",PZFree,Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
-BUSY,"please","bring","me","to","femor",PZFree,Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+BUSY,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+BUSY,"bring","me","to","edron",Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+ADDRESS,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+ADDRESS,"bring","me","to","edron",Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+
+BUSY,"bring","me","to","femor",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+BUSY,"bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+ADDRESS,"bring","me","to","femor",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+ADDRESS,"bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 
 BUSY,"hello$",!            -> "%N! Be calm as the eye of the storm, and your patience will be rewarded.", Queue
 BUSY,"hi$",!               -> *
@@ -72,9 +77,6 @@ VANISH,!                   -> "Daraman's blessings!"
 #Topic=3,"yes"                   -> "Oh, you have not enough gold to buy a parcel."
 #Topic=3                         -> "Ok."
 
-
-Topic=4,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-Topic=5,"yes",PZBlock,! -> *
 
 Topic=4,"yes",CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 Topic=4,"yes"                   -> "You don't have enough money."

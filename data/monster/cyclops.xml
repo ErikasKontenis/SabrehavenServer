@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF - 8"?>
-<monster name="cyclops" nameDescription="a cyclops" race="blood" experience="150" speed="55" manacost="490">
+<monster name="Cyclops" nameDescription="a cyclops" race="blood" experience="150" speed="55" manacost="490">
 	<health now="260" max="260" />
 	<look type="22" head="0" body="0" legs="0" feet="0" corpse="5962" />
 	<targetchange interval="1000" chance="5" />

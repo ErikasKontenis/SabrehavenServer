@@ -45,14 +45,14 @@ VANISH,!           -> "Yeah, get lost."
 
 "leather","helmet" -> Type=3355, Amount=1, Price=12, "Do you want to buy a leather helmet for %P gold?", Topic=1
 "studded","helmet" -> Type=3376, Amount=1, Price=63, "Do you want to buy a studded helmet for %P gold?", Topic=1
-"sandals"          -> Type=3551, Amount=1, Price=2,  "Do you want to buy one of my wonderful sandals for %P gold?", Topic=1
+"sandals"          -> Type=3551, Amount=1, Price=2000,  "Do you want to buy one of my wonderful sandals for %P gold?", Topic=1
 "leather","boot"   -> Type=3552, Amount=1, Price=2,  "Do you want to buy one of my wonderful leather boots for %P gold?", Topic=1
 "leather","legs"   -> Type=3559, Amount=1, Price=10, "Do you want to buy leather legs for %P gold?", Topic=1
 "studded","legs"   -> Type=3362, Amount=1, Price=60, "Do you want to buy studded legs for %P gold?", Topic=1
 
 %1,1<%1,"leather","helmet" -> Type=3355, Amount=%1, Price=12*%1, "Do you want to buy %A leather helmets for %P gold?", Topic=1
 %1,1<%1,"studded","helmet" -> Type=3376, Amount=%1, Price=63*%1, "Do you want to buy %A studded helmets for %P gold?", Topic=1
-%1,1<%1,"sandals"          -> Type=3551, Amount=%1, Price=2*%1,  "Do you want to buy %A of my wonderful sandals for %P gold?", Topic=1
+%1,1<%1,"sandals"          -> Type=3551, Amount=%1, Price=2000*%1,  "Do you want to buy %A of my wonderful sandals for %P gold?", Topic=1
 %1,1<%1,"leather","boot"   -> Type=3552, Amount=%1, Price=2*%1,  "Do you want to buy %A of my wonderful leather boots for %P gold?", Topic=1
 %1,1<%1,"leather","legs"   -> Type=3559, Amount=%1, Price=10*%1, "Do you want to buy %A leather legs for %P gold?", Topic=1
 %1,1<%1,"studded","legs"   -> Type=3362, Amount=%1, Price=60*%1, "Do you want to buy %A studded legs for %P gold?", Topic=1

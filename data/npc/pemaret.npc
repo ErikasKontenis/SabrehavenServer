@@ -12,10 +12,14 @@ ADDRESS,"hi$",male,!      -> *
 ADDRESS,"hello$",female,! -> "Greetings, young lady. Looking for a passage or some fish, %N?"
 ADDRESS,"hi$",female,!    -> *
 ADDRESS,!                 -> Idle
-BUSY,"please","bring","me","to","edron",PZFree,Premium,QuestValue(250)>2,CountMoney>=10,! -> Price=10, "Here we go %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
-BUSY,"please","bring","me","to","edron",PZFree,Premium,CountMoney>=20,! -> Price=20, "Here we go %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
 
-BUSY,"please","bring","me","to","eremo",PZFree,Premium,! -> "Here we go %N!", Queue, EffectOpp(11), Teleport(33315,31882,7), EffectOpp(11)
+BUSY,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=10,! -> Price=10, "Here we go %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+BUSY,"bring","me","to","edron",Premium,CountMoney>=20,! -> Price=20, "Here we go %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+ADDRESS,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=10,! -> Price=10, "Here we go %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+ADDRESS,"bring","me","to","edron",Premium,CountMoney>=20,! -> Price=20, "Here we go %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
+
+BUSY,"bring","me","to","eremo",Premium,! -> "Here we go %N!", Queue, EffectOpp(11), Teleport(33315,31882,7), EffectOpp(11)
+ADDRESS,"bring","me","to","eremo",Premium,! -> "Here we go %N!", Queue, EffectOpp(11), Teleport(33315,31882,7), EffectOpp(11)
 
 BUSY,"hello$",!           -> "One moment please, %N.", Queue
 BUSY,"hi$",!              -> *
@@ -44,9 +48,6 @@ VANISH,!                  -> "Good bye. You are welcome."
 
 "eremo"        -> "Oh, you know the good old sage Eremo. I can bring you to his little island. Do you want me to do that?", Topic=3
 "sage"         -> *
-
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
-Topic=3,"yes",PZBlock,! -> *
 
 Topic=1,"yes",CountMoney>=Price -> "Here we go!", DeleteMoney, Idle, EffectOpp(11), Teleport(33175,31764,6), EffectOpp(11)
 Topic=1,"yes"                   -> "You don't have enough money."

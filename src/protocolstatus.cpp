@@ -122,16 +122,22 @@ void ProtocolStatus::sendStatusString()
 	std::map<uint32_t, uint32_t> listIP;
 
 	for (const auto& it : g_game.getPlayers()) {
-		if (it.second->getIP() != 0) {
-			auto ip = listIP.find(it.second->getIP());
-			if (ip != listIP.end()) {
-				listIP[it.second->getIP()]++;
-				if (listIP[it.second->getIP()] < 5) {
+		if (it.second->isFakePlayer) {
+			real++;
+		}
+		else {
+			if (it.second->getIP() != 0) {
+				auto ip = listIP.find(it.second->getIP());
+				if (ip != listIP.end()) {
+					listIP[it.second->getIP()]++;
+					if (listIP[it.second->getIP()] < 5) {
+						real++;
+					}
+				}
+				else {
+					listIP[it.second->getIP()] = 1;
 					real++;
 				}
-			} else {
-				listIP[it.second->getIP()] = 1;
-				real++;
 			}
 		}
 	}

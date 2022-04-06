@@ -22,11 +22,14 @@
 
 #include "tile.h"
 #include "monsters.h"
+#include "configmanager.h"
 
 class Creature;
 class Game;
 class Spawn;
 class Combat;
+
+extern ConfigManager g_config;
 
 typedef std::unordered_set<Creature*> CreatureHashSet;
 typedef std::list<Creature*> CreatureList;
@@ -257,6 +260,13 @@ class Monster final : public Creature
 			return skillLoss ? mType->info.experience : 0;
 		}
 		uint16_t getLookCorpse() const final {
+			if (!g_config.getBoolean(ConfigManager::CORPSE_OWNER_ENABLED)) {
+				const ItemType& itemtype = Item::items[mType->info.lookcorpse];
+				if (itemtype.decayTo != 0) {
+					return itemtype.decayTo;
+				}
+			}
+
 			return mType->info.lookcorpse;
 		}
 		void dropLoot(Container* corpse, Creature* lastHitCreature) final;

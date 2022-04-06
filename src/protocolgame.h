@@ -59,7 +59,7 @@ class ProtocolGame final : public Protocol
 
 		explicit ProtocolGame(Connection_ptr connection) : Protocol(connection) {}
 
-		void login(const std::string& name, uint32_t accnumber, OperatingSystem_t operatingSystem);
+		void login(const std::string& name, uint32_t accnumber, OperatingSystem_t operatingSystem, bool isFake);
 		void logout(bool displayEffect, bool forced);
 
 		uint16_t getVersion() const {
@@ -119,6 +119,7 @@ class ProtocolGame final : public Protocol
 		void parseJoinParty(NetworkMessage& msg);
 		void parseRevokePartyInvite(NetworkMessage& msg);
 		void parsePassPartyLeadership(NetworkMessage& msg);
+		void parseEnableSharedPartyExperience(NetworkMessage& msg);
 
 		void parseSeekInContainer(NetworkMessage& msg);
 

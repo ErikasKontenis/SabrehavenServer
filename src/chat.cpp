@@ -329,7 +329,7 @@ ChatChannel* Chat::createChannel(const Player& player, uint16_t channelId)
 
 		case CHANNEL_PRIVATE: {
 			//only 1 private channel for each premium player
-			if (!player.isPremium() || getPrivateChannel(player)) {
+			if (getPrivateChannel(player)) {
 				return nullptr;
 			}
 
@@ -522,7 +522,7 @@ ChannelList Chat::getChannelList(const Player& player)
 		}
 	}
 
-	if (!hasPrivate && player.isPremium()) {
+	if (!hasPrivate) {
 		list.push_front(&dummyPrivate);
 	}
 	return list;

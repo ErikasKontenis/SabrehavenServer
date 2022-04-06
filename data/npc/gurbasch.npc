@@ -11,8 +11,12 @@ ADDRESS,"hello$",! -> "Welcome, %N!"
 ADDRESS,"hi$",!    -> *
 ADDRESS,"hiho$",!  -> *      
 ADDRESS,!          -> Idle
-BUSY,"please","bring","me","to","kazordoon",PZFree,Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
-BUSY,"please","bring","me","to","kazordoon",PZFree,Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
+
+BUSY,"bring","me","to","kazordoon",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
+BUSY,"bring","me","to","kazordoon",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
+ADDRESS,"bring","me","to","kazordoon",Premium,QuestValue(250)>2,CountMoney>=150,! -> Price=150, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
+ADDRESS,"bring","me","to","kazordoon",Premium,CountMoney>=160,! -> Price=160, "Full steam ahead %N!", Queue, DeleteMoney, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
+
 BUSY,"hello$",!    -> "Don't hurry.", Queue
 BUSY,"hi$",!       -> *
 BUSY,"hiho$",!     -> *
@@ -56,8 +60,6 @@ VANISH,!           -> "No patience, these brats!"
 
 "kazordoon",QuestValue(250)>2 -> Price=150,  "Do you want to go to Kazordoon? And try the beer there? %P gold?", Topic=1
 "passage",QuestValue(250)>2   -> *
-
-Topic=1,"yes",PZBlock,! -> "First get rid of those blood stains! You are not going to ruin my vehicle!"
 
 Topic=1,"yes",Premium,CountMoney>=Price -> "Full steam ahead!", DeleteMoney, Idle, EffectOpp(3), Teleport(32658,31957,15), EffectOpp(3)
 Topic=1,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account in order to travel onboard our ships."

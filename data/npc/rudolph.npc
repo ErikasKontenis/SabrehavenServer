@@ -43,7 +43,7 @@ VANISH,!           -> "Oh, good bye."
 "cape"           -> Type=3565, Amount=1, Price=9,  "Oh, do you want to buy one of my wonderful capes for %P gold?", Topic=1
 "leather","legs" -> Type=3559, Amount=1, Price=10, "Oh, do you want to buy one of my wonderful leather legs for %P gold?", Topic=1
 "scarf"          -> Type=3572, Amount=1, Price=15, "Oh, do you want to buy one of my wonderful silky scarfs for %P gold?", Topic=1
-"sandals"        -> Type=3551, Amount=1, Price=2,  "Oh, do you want to buy one of my wonderful sandals for %P gold?", Topic=1
+"sandals"        -> Type=3551, Amount=1, Price=2000,  "Oh, do you want to buy one of my wonderful sandals for %P gold?", Topic=1
 "leather","boot" -> Type=3552, Amount=1, Price=2,  "Oh, do you want to buy one of my wonderful leather boots for %P gold?", Topic=1
 
 %1,1<%1,"jacket"         -> Type=3561, Amount=%1, Price=12*%1, "Oh, do you want to buy %A of my wonderful jackets for %P gold?", Topic=1
@@ -51,7 +51,7 @@ VANISH,!           -> "Oh, good bye."
 %1,1<%1,"cape"           -> Type=3565, Amount=%1, Price=9*%1,  "Oh, do you want to buy %A of my wonderful capes for %P gold?", Topic=1
 %1,1<%1,"leather","legs" -> Type=3559, Amount=%1, Price=10*%1, "Oh, do you want to buy %A of my wonderful leather legs for %P gold?", Topic=1
 %1,1<%1,"scar"          -> Type=3572, Amount=%1, Price=15*%1, "Oh, do you want to buy %A of my wonderful silky scarves for %P gold?", Topic=1
-%1,1<%1,"sandals"        -> Type=3551, Amount=%1, Price=2*%1,  "Oh, do you want to buy %A of my wonderful sandals for %P gold?", Topic=1
+%1,1<%1,"sandals"        -> Type=3551, Amount=%1, Price=2000*%1,  "Oh, do you want to buy %A of my wonderful sandals for %P gold?", Topic=1
 %1,1<%1,"leather","boot" -> Type=3552, Amount=%1, Price=2*%1,  "Oh, do you want to buy %A of my wonderful leather boots for %P gold?", Topic=1
 
 Topic=1,"yes",CountMoney>=Price -> "Oh, here you are.", DeleteMoney, Create(Type)
