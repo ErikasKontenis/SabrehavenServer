@@ -1258,6 +1258,9 @@ std::string getClientVersionString(ClientVersion_t version)
 	case CLIENT_VERSION_792:
 		result = "7.92";
 		break;
+	case CLIENT_VERSION_800:
+		result = "8.00";
+		break;
 	default:
 		result = "Unknown";
 		break;

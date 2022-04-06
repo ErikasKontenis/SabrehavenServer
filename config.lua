@@ -1,15 +1,15 @@
 -- Custom
-clientVersion = 792
+clientVersion = 800
 knightCloseAttackDamageIncreasePercent = 15
 paladinRangeAttackDamageIncreasePercent = 10
 -- Min/Max rate spawn is a multiplication of the map spawntime in spawns.xml Regular monster spawn time is 600. The formula would be randomValue = random(600*100, 600*200) which varies between 60s and 120s
 minRateSpawn = 100
 maxRateSpawn = 200
 corpseOwnerEnabled = false
-uhTrap = true
+uhTrap = false
 ropeSpotBlock = false
 showMonsterLoot = true
-blockHeight = true
+blockHeight = false
 dropItems = false
 
 -- Combat settings
@@ -22,7 +22,7 @@ removeChargesFromRunes = true
 stairJumpExhaustion = 0
 experienceByKillingPlayers = true
 expFromPlayersLevelRange = 50
-distanceWeaponsDropOnGround = true
+distanceWeaponsDropOnGround = false
 
 -- Skull System
 banLength = 2 * 24 * 60 * 60
@@ -50,7 +50,7 @@ serverName = "Tibianus"
 statusTimeout = 5000
 replaceKickOnLogin = true
 maxPacketsPerSecond = -1
-autoStackCumulatives = false
+autoStackCumulatives = true
 moneyRate = 1
 
 -- Deaths

@@ -370,6 +370,7 @@ enum ClientVersion_t : uint16_t {
 	CLIENT_VERSION_781 = 781,
 	CLIENT_VERSION_790 = 790,
 	CLIENT_VERSION_792 = 792,
+	CLIENT_VERSION_800 = 800,
 };
 
 static constexpr int32_t CHANNEL_GUILD = 0x00;
