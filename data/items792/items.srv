@@ -1748,51 +1748,51 @@ Attributes  = {Waypoints=100}
 
 TypeID      = 439
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 440
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 441
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 442
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 443
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 444
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 445
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 446
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 447
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 448
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 449
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 450
 Name        = "wooden floor"
-Flags       = {Top,Unpass,Unmove,Unlay}
+Flags       = {Unpass,Unmove,Unlay}
 
 TypeID      = 451
 Name        = "stairs"
@@ -10135,17 +10135,17 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2314
 Name        = "a big table"
-Flags       = {Destroy,Height,Avoid,Unpass}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2315
 Name        = "a square table"
-Flags       = {Destroy,Height,Avoid,Unpass}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2316
 Name        = "a small round table"
-Flags       = {Destroy,Height,Avoid,Unpass}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3138}
 
 TypeID      = 2317
@@ -10158,7 +10158,7 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2319
 Name        = "a small table"
-Flags       = {Destroy,Height,Avoid,Unpass}
+Flags       = {Destroy,Height,Avoid}
 Attributes  = {DestroyTarget=3140}
 
 TypeID      = 2320
@@ -10267,42 +10267,42 @@ Flags       = {Bottom,Unpass,Unmove,Height}
 
 TypeID      = 2346
 Name        = "a carved stone table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2347,DestroyTarget=3141}
 
 TypeID      = 2347
 Name        = "a carved stone table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2346,DestroyTarget=3141}
 
 TypeID      = 2348
 Name        = "a tusk table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2349,DestroyTarget=3137}
 
 TypeID      = 2349
 Name        = "a tusk table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2348,DestroyTarget=3137}
 
 TypeID      = 2350
 Name        = "a bamboo table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2351,DestroyTarget=3137}
 
 TypeID      = 2351
 Name        = "a bamboo table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2350,DestroyTarget=3137}
 
 TypeID      = 2352
 Name        = "a thick trunk"
-Flags       = {Destroy,Height,Unpass}
+Flags       = {Destroy,Height}
 Attributes  = {DestroyTarget=3136}
 
 TypeID      = 2353
 Name        = "an ornamented stone table"
-Flags       = {Rotate,Destroy,Height,Unpass}
+Flags       = {Rotate,Destroy,Height}
 Attributes  = {RotateTarget=2346,DestroyTarget=3141}
 
 TypeID      = 2354
@@ -10664,22 +10664,22 @@ Attributes  = {Capacity=6}
 
 TypeID      = 2431
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2434,DestroyTarget=3136}
 
 TypeID      = 2432
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2431,DestroyTarget=3136}
 
 TypeID      = 2433
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2432,DestroyTarget=3136}
 
 TypeID      = 2434
 Name        = "drawers"
-Flags       = {Container,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=10,RotateTarget=2433,DestroyTarget=3136}
 
 TypeID      = 2435
@@ -10869,7 +10869,7 @@ Attributes  = {Capacity=15,Weight=8000,DestroyTarget=3135}
 
 TypeID      = 2472
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2482,DestroyTarget=3137}
 
 TypeID      = 2473
@@ -10905,37 +10905,37 @@ Attributes  = {DisguiseTarget=2472}
 
 TypeID      = 2480
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2481,DestroyTarget=3137}
 
 TypeID      = 2481
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2472,DestroyTarget=3137}
 
 TypeID      = 2482
 Name        = "a chest"
-Flags       = {Container,Take,Rotate,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Take,Rotate,Destroy,Height,Avoid}
 Attributes  = {Capacity=15,Weight=12000,RotateTarget=2480,DestroyTarget=3137}
 
 TypeID      = 2483
 Name        = "a large trunk"
-Flags       = {Container,Rotate,Destroy,Height,Unpass}
+Flags       = {Container,Rotate,Destroy,Height}
 Attributes  = {Capacity=18,RotateTarget=2486,DestroyTarget=3140}
 
 TypeID      = 2484
 Name        = "a large trunk"
-Flags       = {Container,Unpass,Rotate,Destroy,Height,Unpass}
+Flags       = {Container,Unpass,Rotate,Destroy,Height}
 Attributes  = {Capacity=18,RotateTarget=2485,DestroyTarget=3140}
 
 TypeID      = 2485
 Name        = "a large trunk"
-Flags       = {Container,Unpass,Rotate,Destroy,Height,Unpass}
+Flags       = {Container,Unpass,Rotate,Destroy,Height}
 Attributes  = {Capacity=18,RotateTarget=2483,DestroyTarget=3140}
 
 TypeID      = 2486
 Name        = "a large trunk"
-Flags       = {Container,Unpass,Rotate,Destroy,Height,Unpass}
+Flags       = {Container,Unpass,Rotate,Destroy,Height}
 Attributes  = {Capacity=18,RotateTarget=2484,DestroyTarget=3140}
 
 TypeID      = 2487
@@ -11098,7 +11098,7 @@ Flags       = {Unmove}
 
 TypeID      = 2519
 Name        = "a barrel"
-Flags       = {Container,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Destroy,Height,Avoid}
 Attributes  = {Capacity=25,DestroyTarget=3138}
 
 TypeID      = 2520
@@ -11118,7 +11118,7 @@ Attributes  = {FluidSource=WINE}
 
 TypeID      = 2523
 Name        = "a barrel"
-Flags       = {Container,Destroy,Height,Avoid,Unpass}
+Flags       = {Container,Destroy,Height,Avoid}
 Attributes  = {Capacity=25,DestroyTarget=3135}
 
 TypeID      = 2524
@@ -13838,7 +13838,7 @@ Attributes  = {Weight=80,SlotType=RING,ManaShield=1,ExpireTarget=0,TotalExpireTi
 TypeID      = 3089
 Name        = "a life ring"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=80,SlotType=RING,HealthTicks=3000,HealthGain=1,ManaTicks=3000,ManaGain=1,ExpireTarget=0,TotalExpireTime=1200,DeEquipTarget=3052}
+Attributes  = {Weight=80,SlotType=RING,HealthTicks=6000,HealthGain=2,ManaTicks=6000,ManaGain=8,ExpireTarget=0,TotalExpireTime=1200,DeEquipTarget=3052}
 
 TypeID      = 3090
 Name        = "a time ring"
@@ -13893,7 +13893,7 @@ Attributes  = {Weight=110,SlotType=RING,SuppressDrunk=1,ExpireTarget=0,TotalExpi
 TypeID      = 3100
 Name        = "a ring of healing"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=80,SlotType=RING,HealthTicks=2000,HealthGain=1,ManaTicks=2000,ManaGain=4,ExpireTarget=0,TotalExpireTime=450,DeEquipTarget=3098}
+Attributes  = {Weight=80,SlotType=RING,HealthTicks=6000,HealthGain=6,ManaTicks=6000,ManaGain=24,ExpireTarget=0,TotalExpireTime=450,DeEquipTarget=3098}
 
 TypeID      = 3101
 Name        = "a screaming spellbook"
@@ -14802,7 +14802,7 @@ Attributes  = {Weight=3500,WeaponType=AXE,Attack=15,Defense=8}
 TypeID      = 3277
 Name        = "a spear"
 Flags       = {Cumulative,Take,Distance}
-Attributes  = {Weight=2000,Range=7,Attack=25,Defense=0,MissileEffect=1}
+Attributes  = {Weight=2000,Range=7,Attack=25,Defense=0,MissileEffect=1,Fragility=3}
 
 TypeID      = 3278
 Name        = "a magic longsword"
@@ -16169,7 +16169,7 @@ Attributes  = {Weight=500}
 TypeID      = 3549
 Name        = "soft boots"
 Flags       = {Take,Expire,ShowDetail}
-Attributes  = {Weight=800,DeEquipTarget=6529,SlotType=FEET,ExpireTarget=6530,TotalExpireTime=14400,HealthGain=1,HealthTicks=2000,ManaGain=1,ManaTicks=2000}
+Attributes  = {Weight=800,DeEquipTarget=6529,SlotType=FEET,ExpireTarget=6530,TotalExpireTime=14400,HealthGain=1,HealthTicks=2000,ManaGain=2,ManaTicks=1000}
 
 TypeID      = 3550
 Name        = "patched boots"
@@ -16179,7 +16179,7 @@ Attributes  = {Weight=1000,SlotType=FEET,ArmorValue=2}
 TypeID      = 3551
 Name        = "sandals"
 Flags       = {Take}
-Attributes  = {Weight=600,SlotType=FEET,SpeedBoost=5}
+Attributes  = {Weight=600,SlotType=FEET}
 
 TypeID      = 3552
 Name        = "leather boots"
@@ -25411,122 +25411,122 @@ Attributes  = {Weight=6000,ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 5630
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5631
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5632
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5633
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5634
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5635
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5636
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5637
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5638
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5639
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5640
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5641
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5642
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5643
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5644
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5645
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5646
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5647
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5648
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5649
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5650
 Name        = "a dirt wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5651
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5652
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5653
 Name        = "a stone wall"
-Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5654
@@ -26079,7 +26079,7 @@ Flags       = {Chest,Unpass,Unmove,Height,Disguise}
 Attributes  = {DisguiseTarget=2481}
 
 TypeID      = 5776
-Name        = "a Tibianus talon"
+Name        = "a Sabrehaven talon"
 Description = "Rumours say that the Gods enchanted these talons for the greatest good, or the greatest evil achievements"
 Flags       = {Cumulative,Take,Disguise}
 Attributes  = {DisguiseTarget=3034,Weight=20}
@@ -26947,7 +26947,7 @@ Attributes  = {Weight=250}
 
 TypeID      = 5952
 Name        = "a poem scroll"
-Description = "It contains a love poem, written by an unknown elven poet"
+Description = "It contains a love poem, written by an unknown elven poet."
 Flags       = {Take}
 Attributes  = {Weight=120}
 
@@ -29752,16 +29752,10 @@ Flags       = {MultiUse,Take,Weapon}
 Attributes  = {Weight=5800,SlotType=TWOHANDED,WeaponType=AXE,Attack=49,Defense=15}
 
 TypeID      = 6554
-Name        = "a 100 points scroll"
-Description = "It grants you 100 shop points"
-Flags       = {Take}
-Attributes  = {Weight=120}
+Name        = "" # this is nothing in client
 
 TypeID      = 6555
-Name        = "a 50 points scroll"
-Description = "It grants you 50 shop points"
-Flags       = {Take}
-Attributes  = {Weight=120}
+Name        = "" # this is nothing in client
 
 TypeID      = 6556
 Name        = "a tic-tac-toe token"
