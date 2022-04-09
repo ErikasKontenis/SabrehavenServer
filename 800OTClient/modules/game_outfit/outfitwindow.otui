@@ -1,0 +1,3 @@
+OutfitWindow
+  @onEnter: modules.game_outfit.accept()
+  @onEscape: self:hide()

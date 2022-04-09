@@ -136,12 +136,14 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 	enableXTEAEncryption();
 	setXTEAKey(key);
 
+	/* 
 	if (!isProtocolAllowed(version)) {
 		std::ostringstream ss;
 		ss << "Only clients with protocol " << getClientVersionString(g_game.getClientVersion()) << " allowed!";
 		disconnectClient(ss.str(), version);
 		return;
 	}
+	*/
 
 	if (g_game.getGameState() == GAME_STATE_STARTUP) {
 		disconnectClient("Gameworld is starting up. Please wait.", version);
@@ -176,6 +178,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 		return;
 	}
 
+	
 	uint32_t accountNumberOtClientShallow = msg.get<uint32_t>();
 	if (!accountNumber || accountNumberOtClientShallow != accountNumber) {
 		std::ostringstream ss;
@@ -183,7 +186,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 		disconnectClient(ss.str(), version);
 		return;
 	}
-
+	
 	std::string password = msg.getString();
 	if (password.empty()) {
 		disconnectClient("Invalid password.", version);

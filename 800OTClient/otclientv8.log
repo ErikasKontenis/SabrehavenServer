@@ -1,0 +1,429 @@
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 06 2022 18:32:29
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+ERROR: protected lua call failed: /modules/client_topmenu/topmenu.lua:266: attempt to index local 'data' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:266: in function 'callback'
+	/modules/corelib/http.lua:172: in function </modules/corelib/http.lua:150>
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: /modules/client_topmenu/topmenu.lua:266: attempt to index local 'data' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:266: in function 'callback'
+	/modules/corelib/http.lua:172: in function </modules/corelib/http.lua:150>
+ERROR: protected lua call failed: /modules/client_topmenu/topmenu.lua:266: attempt to index local 'data' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:266: in function 'callback'
+	/modules/corelib/http.lua:172: in function </modules/corelib/http.lua:150>
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: /modules/client_topmenu/topmenu.lua:266: attempt to index local 'data' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:266: in function 'callback'
+	/modules/corelib/http.lua:172: in function </modules/corelib/http.lua:150>
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: /modules/client_topmenu/topmenu.lua:266: attempt to index local 'data' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:266: in function 'callback'
+	/modules/corelib/http.lua:172: in function </modules/corelib/http.lua:150>
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: /modules/client_topmenu/topmenu.lua:266: attempt to index local 'data' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/client_topmenu/topmenu.lua:266: in function 'callback'
+	/modules/corelib/http.lua:172: in function </modules/corelib/http.lua:150>
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 08 2022 13:58:07
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:21:31
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+ERROR: Failed to read dat '/things/800/Tibia.dat': corrupt data (id: 100, category: 0, count: 255, lastAttr: 1)'
+ERROR: Failed to read dat '/things/800/Tibia.dat': corrupt data (id: 100, category: 0, count: 255, lastAttr: 1)'
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:24:10
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Exiting application..
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (3635 bytes, 2979 unread, last opcode is 0x64 (100), prev opcode is 0x0b (11)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (206 bytes, 101 unread, last opcode is 0x66 (102), prev opcode is 0x6d (109)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (320 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xa2 (162)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: no thing at pos:32345 32218 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:32345 32219 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:32345 32220 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (4035 bytes, 3404 unread, last opcode is 0x64 (100), prev opcode is 0x0b (11)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: no thing at pos:32346 32221 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:32349 32220 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: no thing at pos:32347 32221 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+Login to 127.0.0.1:7172
+ERROR: lua function callback failed: /modules/game_walking/walking.lua:322: attempt to index local 'toPos' (a nil value)
+stack traceback:
+	[C]: in function '__index'
+	/modules/game_walking/walking.lua:322: in function 'walk'
+	/modules/game_walking/walking.lua:259: in function </modules/game_walking/walking.lua:259>
+ERROR: ProtocolGame parse message exception (4208 bytes, 3577 unread, last opcode is 0x64 (100), prev opcode is 0x0b (11)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (222 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xa2 (162)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: no thing at pos:32350 32220 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: ProtocolGame parse message exception (313 bytes, 181 unread, last opcode is 0x65 (101), prev opcode is 0x6d (109)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (230 bytes, 91 unread, last opcode is 0x66 (102), prev opcode is 0x6d (109)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (105 bytes, 13 unread, last opcode is 0x66 (102), prev opcode is 0x6d (109)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (103 bytes, 29 unread, last opcode is 0x66 (102), prev opcode is 0x6d (109)): invalid thing id (0)
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: no thing at pos:32368 32219 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: ProtocolGame parse message exception (90 bytes, 57 unread, last opcode is 0x20 (32), prev opcode is 0xa0 (160)): unhandled opcode 32
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (90 bytes, 57 unread, last opcode is 0x20 (32), prev opcode is 0xa0 (160)): unhandled opcode 32
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (90 bytes, 57 unread, last opcode is 0x20 (32), prev opcode is 0xa0 (160)): unhandled opcode 32
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: no thing at pos:32368 32218 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: ProtocolGame parse message exception (66 bytes, 33 unread, last opcode is 0x20 (32), prev opcode is 0xa0 (160)): unhandled opcode 32
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: no thing at pos:32369 32218 7, stackpos:1
+at:
+	[C++]: ?getMappedThing@ProtocolGame@@QAE?AV?$shared_object_ptr@VThing@@@stdext@@ABV?$shared_object_ptr@VInputMessage@@@3@@Z
+ERROR: no creature found to move
+at:
+	[C++]: ?parseCreatureMove@ProtocolGame@@AAEXABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: Missing file: 800/Tibia.dat
+Missing file: 800/Tibia.spr
+
+You should open data/things and create directory 800.
+In this directory (data/things/800) you should put missing
+files (Tibia.dat and Tibia.spr/Tibia.cwm) from correct Tibia version.
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:31:16
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:31:57
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:39:00
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:40:17
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:47:31
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:48:35
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:49:23
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:50:38
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:51:46
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:52:17
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:53:55
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:55:45
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:56:13
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:56:55
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:57:26
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:58:55
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 12:59:22
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:00:28
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:01:26
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:07:44
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:09:28
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:17:50
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:19:55
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:20:53
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 13:22:25
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
