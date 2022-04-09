@@ -258,6 +258,7 @@ class ItemType
 		bool useEvent = false;
 		bool multiUseEvent = false;
 		bool distUse = false;
+		bool storeItem = false;
 		bool disguise = false;
 		bool forceUse = false;
 		bool changeUse = false;

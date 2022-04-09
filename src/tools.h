@@ -48,7 +48,7 @@ typedef std::vector<int32_t> IntegerVec;
 
 StringVec explodeString(const std::string& inString, const std::string& separator, int32_t limit = -1);
 IntegerVec vectorAtoi(const StringVec& stringVector);
-inline bool hasBitSet(uint32_t flag, uint32_t flags) {
+constexpr bool hasBitSet(uint32_t flag, uint32_t flags) {
 	return (flags & flag) != 0;
 }
 

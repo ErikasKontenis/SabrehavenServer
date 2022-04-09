@@ -24,6 +24,7 @@
 #include "player.h"
 #include "iologindata.h"
 #include "town.h"
+#include "inbox.h"
 
 extern Game g_game;
 
@@ -94,49 +95,41 @@ bool Mailbox::sendItem(Item* item) const
 {
 	std::string receiver;
 	std::string townName;
+	townName = "thais";
 	if (!getDestination(item, receiver, townName)) {
 		return false;
 	}
 
-	if (receiver.empty() || townName.empty()) {
-		return false;
-	}
-
-	Town* town = g_game.map.towns.getTown(townName);
-	if (!town) {
+	/**No need to continue if its still empty**/
+	if (receiver.empty()) {
 		return false;
 	}
 
 	Player* player = g_game.getPlayerByName(receiver);
 	if (player) {
-		DepotLocker* depotLocker = player->getDepotLocker(town->getID(), true);
-		if (depotLocker) {
-			if (g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER,
-				item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
-				g_game.transformItem(item, item->getID() + 1);
-				player->onReceiveMail(town->getID());
-				return true;
-			}
+		if (g_game.internalMoveItem(item->getParent(), player->getInbox(), INDEX_WHEREEVER,
+			item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
+			g_game.transformItem(item, item->getID() + 1);
+			player->onReceiveMail();
+			return true;
 		}
-	} else {
+	}
+	else {
 		Player tmpPlayer(nullptr);
 		if (!IOLoginData::loadPlayerByName(&tmpPlayer, receiver)) {
 			return false;
 		}
 
-		DepotLocker* depotLocker = tmpPlayer.getDepotLocker(town->getID(), true);
-		if (depotLocker) {
-			if (g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER,
-				item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
-				g_game.transformItem(item, item->getID() + 1);
-				IOLoginData::savePlayer(&tmpPlayer);
-				return true;
-			}
+		if (g_game.internalMoveItem(item->getParent(), tmpPlayer.getInbox(), INDEX_WHEREEVER,
+			item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
+			g_game.transformItem(item, item->getID() + 1);
+			IOLoginData::savePlayer(&tmpPlayer);
+			return true;
 		}
 	}
-
 	return false;
 }
+
 
 bool Mailbox::getDestination(Item* item, std::string& name, std::string& town) const
 {

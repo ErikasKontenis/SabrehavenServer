@@ -115,6 +115,13 @@ class ProtocolGame final : public Protocol
 
 		void parseQuestLine(NetworkMessage& msg);
 
+		//market methods
+		void parseMarketLeave();
+		void parseMarketBrowse(NetworkMessage& msg);
+		void parseMarketCreateOffer(NetworkMessage& msg);
+		void parseMarketCancelOffer(NetworkMessage& msg);
+		void parseMarketAcceptOffer(NetworkMessage& msg);
+
 		void parseInviteToParty(NetworkMessage& msg);
 		void parseJoinParty(NetworkMessage& msg);
 		void parseRevokePartyInvite(NetworkMessage& msg);
@@ -160,6 +167,13 @@ class ProtocolGame final : public Protocol
 		void sendCreatureTurn(const Creature* creature, uint32_t stackpos);
 		void sendCreatureSay(const Creature* creature, SpeakClasses type, const std::string& text, const Position* pos = nullptr);
 
+		void sendMarketEnter(uint32_t depotId);
+		void sendMarketLeave();
+		void sendMarketBrowseItem(uint16_t itemId, const MarketOfferList& buyOffers, const MarketOfferList& sellOffers);
+		void sendMarketAcceptOffer(const MarketOfferEx& offer);
+		void sendMarketBrowseOwnOffers(const MarketOfferList& buyOffers, const MarketOfferList& sellOffers);
+		void sendMarketCancelOffer(const MarketOfferEx& offer);
+		void sendMarketBrowseOwnHistory(const HistoryMarketOfferList& buyOffers, const HistoryMarketOfferList& sellOffers);
 		void sendQuestLog();
 		void sendQuestLine(const Quest* quest);
 

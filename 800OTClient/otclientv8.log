@@ -427,3 +427,1889 @@ OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
 Connecting to: 127.0.0.1:7171
 Login to 127.0.0.1:7172
 Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 14:11:26
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:00:09
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (54 bytes, 49 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:00:29
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (54 bytes, 49 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:01:03
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (46 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (46 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:02:09
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:02:30
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (54 bytes, 49 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:02:40
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:02:53
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:03:07
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:04:57
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (46 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (46 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:08:19
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (9 bytes, 4 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU64'
+	/modules/game_market/marketprotocol.lua:61: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (8 bytes, 3 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (65 bytes, 60 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (46 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (50 bytes, 45 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:49: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:40:05
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:78: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:40:35
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:50: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:40:54
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:78: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:41:16
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:78: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:43:02
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:69: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:43:18
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+FATAL ERROR: Unable to load module 'game_market': LUA ERROR: /modules/game_market/marketprotocol.lua:75: 'end' expected (to close 'function' at line 41) near 'signalcall'
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'ensureModuleLoaded'
+	/init.lua:71: in function 'loadModules'
+	/init.lua:92: in main chunk
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:43:26
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:69: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:44:03
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:44:20
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:69: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:45:03
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:69: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:46:07
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:46:56
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:48: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:47:49
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU8'
+	/modules/game_market/marketprotocol.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:48:37
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+ERROR: ProtocolGame parse message exception (51 bytes, 41 unread, last opcode is 0x00 (0), prev opcode is 0xf6 (246)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+256
+ERROR: ProtocolGame parse message exception (51 bytes, 41 unread, last opcode is 0x00 (0), prev opcode is 0xf6 (246)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:49:59
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+49152
+ERROR: ProtocolGame parse message exception (51 bytes, 41 unread, last opcode is 0x0c (12), prev opcode is 0xf6 (246)): unhandled opcode 12
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:50:30
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+ERROR: ProtocolGame parse message exception (51 bytes, 41 unread, last opcode is 0x0c (12), prev opcode is 0xf6 (246)): unhandled opcode 12
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 17:51:29
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:05:23
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:06:04
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:07:02
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:08:14
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:08:40
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+table: 0x0e38bf10
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:12:19
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+{ } 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:18:42
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (63 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:19:45
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:20:18
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+{ [1] = { ["category"] = 255,["name"] = sword,["id"] = 3264,} ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:21:45
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+{ [1] = { ["category"] = 255,["name"] = sword,["id"] = 3264,} ,} 
+papala
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:23:16
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e5f2a78,["thingType"] = userdata: 0x0e627a08,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+256
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0582fae8,["thingType"] = userdata: 0x0582fb08,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:39:10
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:57: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:40:55
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:47: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (51 bytes, 46 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:41:48
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+0
+192
+ î ù"      
+{ } 
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { } ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+256
+0
+192
+ î ù"      
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: invalid encrypted network message 24577
+at:
+	[C++]: ?xteaDecrypt@Protocol@@AAE_NABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: failed to decrypt message
+at:
+	[C++]: ?internalRecvData@Protocol@@AAEXPAEI@Z
+Login to 127.0.0.1:7172
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:48:11
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: invalid encrypted network message 24577
+at:
+	[C++]: ?xteaDecrypt@Protocol@@AAE_NABV?$shared_object_ptr@VInputMessage@@@stdext@@@Z
+ERROR: failed to decrypt message
+at:
+	[C++]: ?internalRecvData@Protocol@@AAEXPAEI@Z
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+256
+0
+192
+ î ù"      
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:53:46
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0ed938f0,["thingType"] = userdata: 0x0ed93e98,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 18:54:44
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+256
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0dd83c00,["thingType"] = userdata: 0x0dd0c270,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (177 bytes, 153 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+257
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0dc6f830,["thingType"] = userdata: 0x0de4bd70,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (181 bytes, 157 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+258
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e4ad7d8,["thingType"] = userdata: 0x0e58f280,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (256 bytes, 232 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x1bba9838,["thingType"] = userdata: 0x1bba9858,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:06:37
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e04d868,["thingType"] = userdata: 0x0de5d880,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:07:26
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0defdda8,["thingType"] = userdata: 0x0defdde8,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x1bac2ee0,["thingType"] = userdata: 0x1bac2f00,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:09:59
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0ef42100,["thingType"] = userdata: 0x0ef42120,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:16:12
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e4a1438,["thingType"] = userdata: 0x0e49fad8,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:18:24
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+259
+49152
+12
+1
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0d7bf9a8,["thingType"] = userdata: 0x0d817630,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (51 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:29:32
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+768
+44544
+269
+13312
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:78: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:30:40
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: /modules/game_market/marketprotocol.lua:42: bad argument #1 to 'insert' (table expected, got nil)
+stack traceback:
+	[C]: at 0x00c9e880
+	[C]: in function 'insert'
+	/modules/game_market/marketprotocol.lua:42: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (58 bytes, 53 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:31:05
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e22f4d8,["thingType"] = userdata: 0x0e22d610,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0edb7a88,["thingType"] = userdata: 0x0edb86d0,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e938f20,["thingType"] = userdata: 0x0ef15a20,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:32:46
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [7477] = 1,} 
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0e712e98,["thingType"] = userdata: 0x0df74fd0,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+{ [1] = { ["category"] = 20,["name"] = sword,["id"] = 3264,} ,} 
+papala
+{ [1] = { } ,[2] = { } ,[3] = { } ,[4] = { } ,[5] = { } ,[6] = { } ,[7] = { } ,[8] = { } ,[9] = { } ,[10] = { } ,[11] = { } ,[12] = { } ,[13] = { } ,[14] = { } ,[15] = { } ,[16] = { } ,[17] = { } ,[18] = { } ,[19] = { } ,[20] = { [1] = { ["displayItem"] = userdata: 0x0eacb5c8,["thingType"] = userdata: 0x0eacb5e8,["marketData"] = { ["requiredLevel"] = 0,["showAs"] = 3264,["restrictVocation"] = 0,["category"] = 20,["name"] = sword,["tradeAs"] = 3264,} ,} ,} ,[21] = { } ,[22] = { } ,[23] = { } ,[24] = { } ,[25] = { } ,[26] = { } ,[27] = { } ,[28] = { } ,[29] = { } ,[30] = { } ,[31] = { } ,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:33:55
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [238] = 9055,} 
+ERROR: ProtocolGame parse message exception (54 bytes, 26 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (65 bytes, 5 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7476] = 1,} 
+ERROR: ProtocolGame parse message exception (62 bytes, 41 unread, last opcode is 0x35 (53), prev opcode is 0xf6 (246)): unhandled opcode 53
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7476] = 1,} 
+ERROR: ProtocolGame parse message exception (62 bytes, 41 unread, last opcode is 0x35 (53), prev opcode is 0xf6 (246)): unhandled opcode 53
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7476] = 1,} 
+ERROR: ProtocolGame parse message exception (62 bytes, 41 unread, last opcode is 0x35 (53), prev opcode is 0xf6 (246)): unhandled opcode 53
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7476] = 1,} 
+ERROR: ProtocolGame parse message exception (62 bytes, 41 unread, last opcode is 0x35 (53), prev opcode is 0xf6 (246)): unhandled opcode 53
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:44:08
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:45:01
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (58 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (62 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (165 bytes, 141 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (62 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getU16'
+	/modules/game_market/marketprotocol.lua:74: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (66 bytes, 61 unread, last opcode is 0xf6 (246), prev opcode is 0xffffffff (-1)): unhandled opcode 246
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:56:36
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:57:07
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ } 
+ERROR: ProtocolGame parse message exception (66 bytes, 44 unread, last opcode is 0x00 (0), prev opcode is 0xae (174)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:57:25
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+9056
+{ } 
+ERROR: ProtocolGame parse message exception (66 bytes, 44 unread, last opcode is 0x00 (0), prev opcode is 0xae (174)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 19:58:53
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (70 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (66 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (66 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (70 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (173 bytes, 149 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (70 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (70 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (22 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (70 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (34 bytes, 10 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+ERROR: ProtocolGame parse message exception (22 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Exiting application..
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 20:13:04
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,[3264] = 1,[7476] = 1,} 
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:34: in function 'readMarketOffer'
+	/modules/game_market/marketprotocol.lua:145: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (98 bytes, 38 unread, last opcode is 0xf9 (249), prev opcode is 0xf6 (246)): unhandled opcode 249
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 20:19:15
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [3502] = 1,[3264] = 2,[7477] = 1,} 
+{ [3502] = 1,[3264] = 2,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[3264] = 2,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: protected lua call failed: C++ call failed: InputMessage eof reached
+stack traceback:
+	[builtin#146]: at 0x00df4070
+	[C]: in function 'getString'
+	/modules/game_market/marketprotocol.lua:34: in function 'readMarketOffer'
+	/modules/game_market/marketprotocol.lua:145: in function 'callback'
+	/modules/gamelib/protocolgame.lua:10: in function </modules/gamelib/protocolgame.lua:7>
+ERROR: ProtocolGame parse message exception (143 bytes, 38 unread, last opcode is 0xf9 (249), prev opcode is 0xf6 (246)): unhandled opcode 249
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+GPU Radeon RX 580 Series (ATI Technologies Inc.)
+OpenGL 4.6.13596 Compatibility Profile Context 20.10.35.02 27.20.1034.6
+[Atlas] Texture size is: 4096x4096 (max: 16384x16384)
+Found work dir at 'C:/Users/erika/source/repos/Sabrehaven/800OTClient/'
+== application started at Apr 09 2022 20:20:07
+OTCv8 3.1 rev 163 (dev) made by otclient.net built on Mar 31 2022 for arch x86
+Connecting to: 127.0.0.1:7171
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+{ [3502] = 1,[3264] = 2,[7477] = 1,} 
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+{ [7477] = 1,[3264] = 1,[7476] = 1,} 
+ERROR: ProtocolGame parse message exception (16 bytes, 0 unread, last opcode is 0x00 (0), prev opcode is 0xf9 (249)): InputMessage eof reached
+Packet has been saved to packet.log, you can use it to find what was wrong. (Protocol: 772)
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+{ [7477] = 2,[3452] = 1,[7476] = 2,} 
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7477] = 1,[3264] = 1,[7476] = 1,} 
+{ [3502] = 1,[3264] = 1,[7477] = 1,} 
+Login to 127.0.0.1:7172
+{ [3502] = 1,[3264] = 1,[7477] = 1,} 
+{ [3502] = 1,[3264] = 1,[7477] = 1,} 
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+{ [3502] = 1,[3264] = 1,[7477] = 1,} 
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+Login to 127.0.0.1:7172
+{ [3502] = 1,[7476] = 1,[7477] = 1,} 
+Login to 127.0.0.1:7172
+{ [3502] = 1,[3264] = 1,[7477] = 1,} 
+Exiting application..

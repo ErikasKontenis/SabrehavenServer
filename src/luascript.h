@@ -807,6 +807,7 @@ class LuaScriptInterface
 		static int luaPlayerGetFreeCapacity(lua_State* L);
 
 		static int luaPlayerGetDepotChest(lua_State* L);
+		static int luaPlayerGetInbox(lua_State* L);
 
 		static int luaPlayerGetMurderTimestamps(lua_State* L);
 		static int luaPlayerGetPlayerKillerEnd(lua_State* L);
@@ -1109,6 +1110,9 @@ class LuaScriptInterface
 		static int luaItemTypeGetDecayId(lua_State* L);
 		static int luaItemTypeGetNutrition(lua_State* L);
 		static int luaItemTypeGetRequiredLevel(lua_State* L);
+
+		static int luaItemTypeGetMarketBuyStatistics(lua_State* L);
+		static int luaItemTypeGetMarketSellStatistics(lua_State* L);
 
 		static int luaItemTypeHasSubType(lua_State* L);
 

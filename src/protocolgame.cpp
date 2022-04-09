@@ -30,10 +30,13 @@
 #include "configmanager.h"
 #include "actions.h"
 #include "game.h"
+#include "inbox.h"
+#include "iomarket.h"
 #include "iologindata.h"
 #include "waitlist.h"
 #include "ban.h"
 #include "scheduler.h"
+#include "depotchest.h"
 
 extern ConfigManager g_config;
 extern Actions actions;
@@ -451,6 +454,11 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xE8: parseDebugAssert(msg); break;
 		case 0xF0: addGameTaskTimed(DISPATCHER_TASK_EXPIRATION, &Game::playerShowQuestLog, player->getID()); break;
 		case 0xF1: parseQuestLine(msg); break;
+		case 0xF4: parseMarketLeave(); break;
+		case 0xF5: parseMarketBrowse(msg); break;
+		case 0xF6: parseMarketCreateOffer(msg); break;
+		case 0xF7: parseMarketCancelOffer(msg); break;
+		case 0xF8: parseMarketAcceptOffer(msg); break;
 		default:
 		    std::cout << "Player: " << player->getName() << " sent an unknown packet header: 0x" << std::hex << static_cast<uint16_t>(recvbyte) << std::dec << "!" << std::endl;
 			break;
@@ -997,6 +1005,61 @@ void ProtocolGame::parseQuestLine(NetworkMessage& msg)
 	addGameTask(&Game::playerShowQuestLine, player->getID(), questId);
 }
 
+void ProtocolGame::parseMarketLeave()
+{
+	addGameTask(&Game::playerLeaveMarket, player->getID());
+}
+
+void ProtocolGame::parseMarketBrowse(NetworkMessage& msg)
+{
+	uint8_t browseId = msg.get<uint8_t>();
+	if (browseId == MARKETREQUEST_OWN_OFFERS) {
+		addGameTask(&Game::playerBrowseMarketOwnOffers, player->getID());
+	}
+	else if (browseId == MARKETREQUEST_OWN_HISTORY) {
+		addGameTask(&Game::playerBrowseMarketOwnHistory, player->getID());
+	}
+	else {
+		uint16_t spriteID = msg.get<uint16_t>();
+		addGameTask(&Game::playerBrowseMarket, player->getID(), spriteID);
+	}
+}
+
+void ProtocolGame::parseMarketCreateOffer(NetworkMessage& msg)
+{
+	uint8_t type = msg.getByte();
+	uint16_t spriteId = msg.get<uint16_t>();
+
+	const ItemType& it = Item::items[spriteId];
+	if (it.id == 0) {
+		return;
+	}
+	// TODO:
+	//else if (it.classification > 0) {
+	//	msg.getByte(); // item tier
+	//}
+
+	uint16_t amount = msg.get<uint16_t>();
+	uint64_t price = msg.get<uint64_t>();
+	bool anonymous = (msg.getByte() != 0);
+	addGameTask(&Game::playerCreateMarketOffer, player->getID(), type, spriteId, amount, price, anonymous);
+}
+
+void ProtocolGame::parseMarketCancelOffer(NetworkMessage& msg)
+{
+	uint32_t timestamp = msg.get<uint32_t>();
+	uint16_t counter = msg.get<uint16_t>();
+	addGameTask(&Game::playerCancelMarketOffer, player->getID(), timestamp, counter);
+}
+
+void ProtocolGame::parseMarketAcceptOffer(NetworkMessage& msg)
+{
+	uint32_t timestamp = msg.get<uint32_t>();
+	uint16_t counter = msg.get<uint16_t>();
+	uint16_t amount = msg.get<uint16_t>();
+	addGameTask(&Game::playerAcceptMarketOffer, player->getID(), timestamp, counter, amount);
+}
+
 void ProtocolGame::parseSeekInContainer(NetworkMessage& msg)
 {
 	uint8_t containerId = msg.getByte();
@@ -1248,6 +1311,259 @@ void ProtocolGame::sendContainer(uint8_t cid, const Container* container, bool h
 	} else {
 		msg.addByte(0x00);
 	}
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketEnter(uint32_t depotId)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF6);
+	msg.addByte(std::min<uint32_t>(IOMarket::getPlayerOfferCount(player->getGUID()), std::numeric_limits<uint8_t>::max()));
+
+	DepotLocker* depotLocker = player->getDepotLocker(depotId, false);
+	if (!depotLocker) {
+		msg.add<uint16_t>(0x00);
+		writeToOutputBuffer(msg);
+		return;
+	}
+
+	player->setInMarket(true);
+
+	msg.add<uint64_t>(player->getBankBalance());
+
+	std::map<uint16_t, uint32_t> depotItems;
+	std::forward_list<Container*> containerList{ depotLocker, player->getInbox() };
+
+	do {
+		Container* container = containerList.front();
+		containerList.pop_front();
+
+		for (Item* item : container->getItemList()) {
+			Container* c = item->getContainer();
+			if (c && !c->empty()) {
+				containerList.push_front(c);
+				continue;
+			}
+
+			const ItemType& itemType = Item::items[item->getID()];
+			if (itemType.id == 0) {
+				continue;
+			}
+
+			if (c && (!itemType.isContainer() || c->capacity() != itemType.maxItems)) {
+				continue;
+			}
+
+			if (!item->hasMarketAttributes()) {
+				continue;
+			}
+
+			depotItems[itemType.id] += Item::countByType(item, -1);
+		}
+	} while (!containerList.empty());
+
+	uint16_t itemsToSend = std::min<size_t>(depotItems.size(), std::numeric_limits<uint16_t>::max());
+	uint16_t i = 0;
+
+	msg.add<uint16_t>(itemsToSend);
+	for (std::map<uint16_t, uint32_t>::const_iterator it = depotItems.begin(); i < itemsToSend; ++it, ++i) {
+		const ItemType& itemType = Item::items[it->first];
+		msg.add<uint16_t>(itemType.id);
+		// TODO
+		//if (itemType.classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(std::min<uint32_t>(0xFFFF, it->second));
+	}
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketLeave()
+{
+	NetworkMessage msg;
+	msg.addByte(0xF7);
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketBrowseItem(uint16_t itemId, const MarketOfferList& buyOffers, const MarketOfferList& sellOffers)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF9);
+	msg.addByte(MARKETREQUEST_ITEM);
+	msg.addItemId(itemId);
+
+	// TODO
+	//if (Item::items[itemId].classification > 0) {
+	//	msg.addByte(0); // item tier
+	//}
+
+	msg.add<uint32_t>(buyOffers.size());
+	for (const MarketOffer& offer : buyOffers) {
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+		msg.addString(offer.playerName);
+	}
+
+	msg.add<uint32_t>(sellOffers.size());
+	for (const MarketOffer& offer : sellOffers) {
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+		msg.addString(offer.playerName);
+	}
+
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketAcceptOffer(const MarketOfferEx& offer)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF9);
+	msg.addByte(MARKETREQUEST_ITEM);
+	msg.addItemId(offer.itemId);
+	// TODO
+	//if (Item::items[offer.itemId].classification > 0) {
+	//	msg.addByte(0);
+	//}
+
+	if (offer.type == MARKETACTION_BUY) {
+		msg.add<uint32_t>(0x01);
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+		msg.addString(offer.playerName);
+		msg.add<uint32_t>(0x00);
+	}
+	else {
+		msg.add<uint32_t>(0x00);
+		msg.add<uint32_t>(0x01);
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+		msg.addString(offer.playerName);
+	}
+
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketBrowseOwnOffers(const MarketOfferList& buyOffers, const MarketOfferList& sellOffers)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF9);
+	msg.addByte(MARKETREQUEST_OWN_OFFERS);
+
+	msg.add<uint32_t>(buyOffers.size());
+	for (const MarketOffer& offer : buyOffers) {
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.addItemId(offer.itemId);
+		// TODO
+		//if (Item::items[offer.itemId].classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+	}
+
+	msg.add<uint32_t>(sellOffers.size());
+	for (const MarketOffer& offer : sellOffers) {
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.addItemId(offer.itemId);
+		// TODO
+		//if (Item::items[offer.itemId].classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+	}
+
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketCancelOffer(const MarketOfferEx& offer)
+{
+	NetworkMessage msg;
+	msg.addByte(0xF9);
+	msg.addByte(MARKETREQUEST_OWN_OFFERS);
+
+	if (offer.type == MARKETACTION_BUY) {
+		msg.add<uint32_t>(0x01);
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.addItemId(offer.itemId);
+		// TODO
+		//if (Item::items[offer.itemId].classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+		msg.add<uint32_t>(0x00);
+	}
+	else {
+		msg.add<uint32_t>(0x00);
+		msg.add<uint32_t>(0x01);
+		msg.add<uint32_t>(offer.timestamp);
+		msg.add<uint16_t>(offer.counter);
+		msg.addItemId(offer.itemId);
+		// TODO
+		//if (Item::items[offer.itemId].classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(offer.amount);
+		msg.add<uint64_t>(offer.price);
+	}
+
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendMarketBrowseOwnHistory(const HistoryMarketOfferList& buyOffers, const HistoryMarketOfferList& sellOffers)
+{
+	uint32_t i = 0;
+	std::map<uint32_t, uint16_t> counterMap;
+	uint32_t buyOffersToSend = std::min<uint32_t>(buyOffers.size(), 810 + std::max<int32_t>(0, 810 - sellOffers.size()));
+	uint32_t sellOffersToSend = std::min<uint32_t>(sellOffers.size(), 810 + std::max<int32_t>(0, 810 - buyOffers.size()));
+
+	NetworkMessage msg;
+	msg.addByte(0xF9);
+	msg.addByte(MARKETREQUEST_OWN_HISTORY);
+
+	msg.add<uint32_t>(buyOffersToSend);
+	for (auto it = buyOffers.begin(); i < buyOffersToSend; ++it, ++i) {
+		msg.add<uint32_t>(it->timestamp);
+		msg.add<uint16_t>(counterMap[it->timestamp]++);
+		msg.addItemId(it->itemId);
+		// TODO
+		//if (Item::items[it->itemId].classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(it->amount);
+		msg.add<uint64_t>(it->price);
+		msg.addByte(it->state);
+	}
+
+	counterMap.clear();
+	i = 0;
+
+	msg.add<uint32_t>(sellOffersToSend);
+	for (auto it = sellOffers.begin(); i < sellOffersToSend; ++it, ++i) {
+		msg.add<uint32_t>(it->timestamp);
+		msg.add<uint16_t>(counterMap[it->timestamp]++);
+		msg.addItemId(it->itemId);
+		// TODO
+		//if (Item::items[it->itemId].classification > 0) {
+		//	msg.addByte(0);
+		//}
+		msg.add<uint16_t>(it->amount);
+		msg.add<uint64_t>(it->price);
+		msg.addByte(it->state);
+	}
+
 	writeToOutputBuffer(msg);
 }
 

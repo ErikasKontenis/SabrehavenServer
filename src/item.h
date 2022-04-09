@@ -776,6 +776,8 @@ class Item : virtual public Thing
 
 		virtual void startDecaying();
 
+		bool hasMarketAttributes() const;
+
 		void setLoadedFromMap(bool value) {
 			loadedFromMap = value;
 		}

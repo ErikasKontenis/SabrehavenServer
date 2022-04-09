@@ -35,6 +35,7 @@
 #include "town.h"
 
 class BehaviourDatabase;
+class DepotChest;
 class House;
 class NetworkMessage;
 class Weapon;
@@ -207,6 +208,10 @@ class Player final : public Creature, public Cylinder
 		bool isInWar(const Player* player) const;
 		bool isInWarList(uint32_t guild_id) const;
 
+		Inbox* getInbox() const {
+			return inbox;
+		}
+
 		uint16_t getClientIcons() const;
 
 		const GuildWarList& getGuildWarList() const {
@@ -304,6 +309,20 @@ class Player final : public Creature, public Cylinder
 		}
 		Group* getGroup() const {
 			return group;
+		}
+
+		void setInMarket(bool value) {
+			inMarket = value;
+		}
+		bool isInMarket() const {
+			return inMarket;
+		}
+
+		void setLastDepotId(int16_t newId) {
+			lastDepotId = newId;
+		}
+		int16_t getLastDepotId() const {
+			return lastDepotId;
 		}
 
 		void resetIdleTime() {
@@ -454,9 +473,10 @@ class Player final : public Creature, public Cylinder
 		void addConditionSuppressions(uint32_t conditions);
 		void removeConditionSuppressions(uint32_t conditions);
 
+		DepotChest* getDepotChest(uint32_t depotId, bool autoCreate);
 		DepotLocker* getDepotLocker(uint32_t depotId, bool autoCreate);
-		void onReceiveMail(uint32_t townId) const;
-		bool isNearDepotBox(uint32_t townId) const;
+		void onReceiveMail() const;
+		bool isNearDepotBox() const;
 
 		bool canSee(const Position& pos) const final;
 		bool canSeeCreature(const Creature* creature) const final;
@@ -856,6 +876,42 @@ class Player final : public Creature, public Cylinder
 				client->sendToChannel(creature, type, text, channelId);
 			}
 		}
+		void sendMarketEnter(uint32_t depotId) const {
+			if (client) {
+				client->sendMarketEnter(depotId);
+			}
+		}
+		void sendMarketLeave() {
+			inMarket = false;
+			if (client) {
+				client->sendMarketLeave();
+			}
+		}
+		void sendMarketBrowseItem(uint16_t itemId, const MarketOfferList& buyOffers, const MarketOfferList& sellOffers) const {
+			if (client) {
+				client->sendMarketBrowseItem(itemId, buyOffers, sellOffers);
+			}
+		}
+		void sendMarketBrowseOwnOffers(const MarketOfferList& buyOffers, const MarketOfferList& sellOffers) const {
+			if (client) {
+				client->sendMarketBrowseOwnOffers(buyOffers, sellOffers);
+			}
+		}
+		void sendMarketBrowseOwnHistory(const HistoryMarketOfferList& buyOffers, const HistoryMarketOfferList& sellOffers) const {
+			if (client) {
+				client->sendMarketBrowseOwnHistory(buyOffers, sellOffers);
+			}
+		}
+		void sendMarketAcceptOffer(const MarketOfferEx& offer) const {
+			if (client) {
+				client->sendMarketAcceptOffer(offer);
+			}
+		}
+		void sendMarketCancelOffer(const MarketOfferEx& offer) const {
+			if (client) {
+				client->sendMarketCancelOffer(offer);
+			}
+		}
 		void sendTradeItemRequest(const std::string& traderName, const Item* item, bool ack) const {
 			if (client) {
 				client->sendTradeItemRequest(traderName, item, ack);
@@ -1023,6 +1079,7 @@ class Player final : public Creature, public Cylinder
 
 		std::map<uint8_t, OpenContainer> openContainers;
 		std::map<uint32_t, DepotLocker*> depotLockerMap;
+		std::map<uint32_t, DepotChest*> depotChests;
 		std::map<uint32_t, int32_t> storageMap;
 
 		std::vector<OutfitEntry> outfits;
@@ -1061,6 +1118,7 @@ class Player final : public Creature, public Cylinder
 		Guild* guild = nullptr;
 		const GuildRank* guildRank = nullptr;
 		Group* group = nullptr;
+		Inbox* inbox;
 		Item* tradeItem = nullptr;
  		Item* inventory[CONST_SLOT_LAST + 1] = {};
 		Item* writeItem = nullptr;
@@ -1103,6 +1161,7 @@ class Player final : public Creature, public Cylinder
 
 		uint16_t staminaMinutes = 3360;
 		uint16_t maxWriteLen = 0;
+		int16_t lastDepotId = -1;
 
 		uint8_t soul = 0;
 		uint8_t blessings = 0;
@@ -1118,6 +1177,7 @@ class Player final : public Creature, public Cylinder
 		AccountType_t accountType = ACCOUNT_TYPE_NORMAL;
 
 		bool secureMode = false;
+		bool inMarket = false;
 		bool ghostMode = false;
 		bool pzLocked = false;
 		bool isConnecting = false;

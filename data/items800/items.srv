@@ -33802,3 +33802,17 @@ Flags       = {Bottom,Unpass,Unmove}
 TypeID      = 7475
 Name        = "a sarcophagus"
 Flags       = {Bottom,Unpass,Unmove}
+
+TypeID      = 7476
+Name        = "your inbox"
+Flags       = {Container,Unmove}
+Attributes  = {Capacity=30}
+
+TypeID      = 7477
+Name        = "the market"
+Flags       = {Unmove}
+
+TypeID      = 7478
+Name        = "your store inbox"
+Flags       = {Container,Unmove}
+Attributes  = {Capacity=30}

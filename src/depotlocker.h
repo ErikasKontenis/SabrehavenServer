@@ -22,6 +22,8 @@
 
 #include "container.h"
 
+class Inbox;
+
 class DepotLocker final : public Container
 {
 	public:
@@ -50,6 +52,8 @@ class DepotLocker final : public Container
 
 		void postAddNotification(Thing* thing, const Cylinder* oldParent, int32_t index, cylinderlink_t link = LINK_OWNER) final;
 		void postRemoveNotification(Thing* thing, const Cylinder* newParent, int32_t index, cylinderlink_t link = LINK_OWNER) final;
+
+		void removeInbox(Inbox* inbox);
 
 		bool canRemove() const final {
 			return false;

@@ -1302,3 +1302,44 @@ void Item::startDecaying()
 {
 	g_game.startDecay(this);
 }
+
+bool Item::hasMarketAttributes() const
+{
+	if (!attributes) {
+		return true;
+	}
+
+	// discard items with custom boost and reflect
+	/*
+	TODO: find out if necessary
+	for (uint16_t i = 0; i < COMBAT_COUNT; ++i) {
+		if (getBoostPercent(indexToCombatType(i), false) > 0) {
+			return false;
+		}
+
+		Reflect tmpReflect = getReflect(indexToCombatType(i), false);
+		if (tmpReflect.chance != 0 || tmpReflect.percent != 0) {
+			return false;
+		}
+	}
+	*/ 
+	// discard items with other modified attributes
+	for (const auto& attr : attributes->getList()) {
+		if (attr.type == ITEM_ATTRIBUTE_CHARGES) {
+			uint16_t charges = static_cast<uint16_t>(attr.value.integer);
+			if (charges != items[id].charges) {
+				return false;
+			}
+		}
+		else if (attr.type == ITEM_ATTRIBUTE_DURATION) {
+			uint32_t duration = static_cast<uint32_t>(attr.value.integer);
+			if (duration != getDefaultDuration()) {
+				return false;
+			}
+		}
+		else {
+			return false;
+		}
+	}
+	return true;
+}

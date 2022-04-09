@@ -63,6 +63,26 @@ enum VipStatus_t : uint8_t {
 	VIPSTATUS_ONLINE = 1,
 };
 
+enum MarketAction_t {
+	MARKETACTION_BUY = 0,
+	MARKETACTION_SELL = 1,
+};
+
+enum MarketRequest_t {
+	MARKETREQUEST_OWN_HISTORY = 1,
+	MARKETREQUEST_OWN_OFFERS = 2,
+	MARKETREQUEST_ITEM = 3,
+};
+
+enum MarketOfferState_t {
+	OFFERSTATE_ACTIVE = 0,
+	OFFERSTATE_CANCELLED = 1,
+	OFFERSTATE_EXPIRED = 2,
+	OFFERSTATE_ACCEPTED = 3,
+
+	OFFERSTATE_ACCEPTEDEX = 255,
+};
+
 enum OperatingSystem_t : uint8_t {
 	CLIENTOS_NONE = 0,
 
@@ -351,6 +371,8 @@ enum ReturnValue {
 	RETURNVALUE_YOUDONTOWNTHISHOUSE,
 	RETURNVALUE_TRADEPLAYERALREADYOWNSAHOUSE,
 	RETURNVALUE_TRADEPLAYERHIGHESTBIDDER,
+	RETURNVALUE_CANNOTMOVEITEMISNOTSTOREITEM,
+	RETURNVALUE_ITEMCANNOTBEMOVEDTHERE,
 	RETURNVALUE_YOUCANNOTTRADETHISHOUSE,
 };
 
@@ -369,6 +391,48 @@ struct LightInfo {
 	uint8_t color = 0;
 	constexpr LightInfo() = default;
 	constexpr LightInfo(uint8_t level, uint8_t color) : level(level), color(color) {}
+};
+
+struct MarketOffer {
+	uint64_t price;
+	uint32_t timestamp;
+	uint16_t amount;
+	uint16_t counter;
+	uint16_t itemId;
+	std::string playerName;
+};
+
+struct MarketOfferEx {
+	MarketOfferEx() = default;
+	MarketOfferEx(MarketOfferEx&& other) :
+		id(other.id), playerId(other.playerId), timestamp(other.timestamp), price(other.price),
+		amount(other.amount), counter(other.counter), itemId(other.itemId), type(other.type),
+		playerName(std::move(other.playerName)) {}
+
+	uint32_t id;
+	uint32_t playerId;
+	uint32_t timestamp;
+	uint64_t price;
+	uint16_t amount;
+	uint16_t counter;
+	uint16_t itemId;
+	MarketAction_t type;
+	std::string playerName;
+};
+
+struct HistoryMarketOffer {
+	uint32_t timestamp;
+	uint64_t price;
+	uint16_t itemId;
+	uint16_t amount;
+	MarketOfferState_t state;
+};
+
+struct MarketStatistics {
+	uint32_t numTransactions = 0;
+	uint32_t highestPrice = 0;
+	uint64_t totalPrice = 0;
+	uint32_t lowestPrice = 0;
 };
 
 enum CombatOrigin
@@ -397,5 +461,8 @@ struct CombatDamage
 		max = 0;
 	}
 };
+
+using MarketOfferList = std::list<MarketOffer>;
+using HistoryMarketOfferList = std::list<HistoryMarketOffer>;
 
 #endif

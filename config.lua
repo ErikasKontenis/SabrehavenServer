@@ -11,6 +11,8 @@ ropeSpotBlock = false
 showMonsterLoot = true
 blockHeight = false
 dropItems = false
+marketOfferDuration = 1
+premiumToCreateMarketOffer = false
 
 -- Combat settings
 -- NOTE: valid values for worldType are: "pvp", "no-pvp" and "pvp-enforced"

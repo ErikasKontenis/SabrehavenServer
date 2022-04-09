@@ -21,6 +21,8 @@
 #define FS_CONST_H_0A49B5996F074465BF44B90F4F780E8B
 
 static constexpr int32_t NETWORKMESSAGE_MAXSIZE = 24590;
+static constexpr int32_t MIN_MARKET_FEE = 20;
+static constexpr int32_t MAX_MARKET_FEE = 100000;
 
 enum MagicEffectClasses : uint8_t {
 	CONST_ME_NONE,
@@ -281,6 +283,8 @@ enum item_t : uint16_t {
 
 	ITEM_DEPOT = 3502,
 	ITEM_LOCKER1 = 3497,
+	ITEM_INBOX = 7476,
+	ITEM_MARKET = 7477,
 
 	ITEM_MALE_CORPSE = 4240,
 	ITEM_FEMALE_CORPSE = 4247,
@@ -299,6 +303,14 @@ enum item_t : uint16_t {
 	ITEM_AMULETOFLOSS = 3057,
 
 	ITEM_DOCUMENT_RO = 2819, //read-only
+};
+
+enum ResourceTypes_t : uint8_t {
+	RESOURCE_BANK_BALANCE = 0x00,
+	RESOURCE_GOLD_EQUIPPED = 0x01,
+	RESOURCE_PREY_WILDCARDS = 0x0A,
+	RESOURCE_DAILYREWARD_STREAK = 0x14,
+	RESOURCE_DAILYREWARD_JOKERS = 0x15,
 };
 
 enum PlayerFlags : uint64_t {

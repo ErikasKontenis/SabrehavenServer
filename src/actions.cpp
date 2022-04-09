@@ -273,6 +273,7 @@ ReturnValue Actions::internalUseItem(Player* player, const Position& pos, uint8_
 				DepotLocker* myDepotLocker = player->getDepotLocker(depot->getDepotId(), true);
 				myDepotLocker->setParent(depot->getParent()->getTile());
 				openContainer = myDepotLocker;
+				player->setLastDepotId(depot->getDepotId());
 			} else {
 				openContainer = container;
 			}
@@ -324,6 +325,17 @@ bool Actions::useItem(Player* player, const Position& pos, uint8_t index, Item* 
 {
 	player->setNextAction(OTSYS_TIME() + g_config.getNumber(ConfigManager::ACTIONS_DELAY_INTERVAL));
 	player->stopWalk();
+
+	if (item->getID() == ITEM_MARKET)
+	{
+		if (player->getLastDepotId() == -1) {
+			return false;
+		}
+
+		player->sendMarketEnter(player->getLastDepotId());
+
+		return true;
+	}
 
 	if (isHotkey) {
 		uint32_t count = 0;

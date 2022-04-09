@@ -32,6 +32,8 @@
 #include "monster.h"
 #include "movement.h"
 #include "scheduler.h"
+#include "depotchest.h"
+#include "inbox.h"
 
 extern ConfigManager g_config;
 extern Game g_game;
@@ -46,8 +48,9 @@ MuteCountMap Player::muteCountMap;
 uint32_t Player::playerAutoID = 0x10000000;
 
 Player::Player(ProtocolGame_ptr p) :
-	Creature(), lastPing(OTSYS_TIME()), lastPong(lastPing), client(std::move(p))
+	Creature(), lastPing(OTSYS_TIME()), lastPong(lastPing), client(std::move(p)), inbox(new Inbox(ITEM_INBOX))
 {
+	inbox->incrementReferenceCounter();
 }
 
 Player::~Player()
@@ -60,8 +63,10 @@ Player::~Player()
 	}
 
 	for (const auto& it : depotLockerMap) {
-		it.second->decrementReferenceCounter();
+		it.second->removeInbox(inbox);
 	}
+
+	inbox->decrementReferenceCounter();
 
 	setWriteItem(nullptr);
 	setEditHouse(nullptr);
@@ -579,14 +584,14 @@ bool Player::canSeeCreature(const Creature* creature) const
 	return true;
 }
 
-void Player::onReceiveMail(uint32_t townId) const
+void Player::onReceiveMail() const
 {
-	if (isNearDepotBox(townId)) {
+	if (isNearDepotBox()) {
 		sendTextMessage(MESSAGE_EVENT_ADVANCE, "New mail has arrived.");
 	}
 }
 
-bool Player::isNearDepotBox(uint32_t townId) const
+bool Player::isNearDepotBox() const
 {
 	const Position& pos = getPosition();
 	for (int32_t cx = -1; cx <= 1; ++cx) {
@@ -597,25 +602,43 @@ bool Player::isNearDepotBox(uint32_t townId) const
 			}
 
 			if (DepotLocker* depotLocker = tile->getDepotLocker()) {
-				if (depotLocker->getDepotId() == townId) {
-					return true;
-				}
+				return true;
 			}
 		}
 	}
 	return false;
 }
 
+DepotChest* Player::getDepotChest(uint32_t depotId, bool autoCreate)
+{
+	auto it = depotChests.find(depotId);
+	if (it != depotChests.end()) {
+		return it->second;
+	}
+
+	if (!autoCreate) {
+		return nullptr;
+	}
+
+	it = depotChests.emplace(depotId, new DepotChest(ITEM_DEPOT)).first;
+	it->second->setMaxDepotItems(getMaxDepotItems());
+	return it->second;
+}
+
+
 DepotLocker* Player::getDepotLocker(uint32_t depotId, bool autoCreate)
 {
 	auto it = depotLockerMap.find(depotId);
 	if (it != depotLockerMap.end()) {
+		inbox->setParent(it->second);
 		return it->second;
 	}
 
 	if (autoCreate) {
 		DepotLocker* depotLocker = new DepotLocker(ITEM_LOCKER1);
 		depotLocker->setDepotId(depotId);
+		depotLocker->internalAddThing(Item::CreateItem(ITEM_MARKET));
+		depotLocker->internalAddThing(inbox);
 		Item* depotItem = Item::CreateItem(ITEM_DEPOT);
 		if (depotItem) {
 			depotLocker->internalAddThing(depotItem);
@@ -1004,6 +1027,11 @@ void Player::onCreatureMove(Creature* creature, const Tile* newTile, const Posit
 		if (tradePartner && !Position::areInRange<2, 2, 0>(tradePartner->getPosition(), getPosition())) {
 			g_game.internalCloseTrade(this);
 		}
+	}
+
+	// leave market
+	if (inMarket) {
+		inMarket = false;
 	}
 
 	if (party) {

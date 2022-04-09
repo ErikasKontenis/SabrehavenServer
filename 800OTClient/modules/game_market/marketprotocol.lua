@@ -37,39 +37,33 @@ local function readMarketOffer(msg, action, var)
   return MarketOffer.new({timestamp, counter}, action, Item.create(itemId), amount, price, playerName, state, var)
 end
 
+local function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
 -- parsing protocols
 local function parseMarketEnter(protocol, msg)
-  local items
-  if g_game.getClientVersion() < 944 then
-    items = {}
-    local itemsCount = msg:getU16()
-    for i = 1, itemsCount do
-      local itemId = msg:getU16()
-      local category = msg:getU8()
-      local name = msg:getString()
-      table.insert(items, {
-        id = itemId,
-        category = category,
-        name = name
+  local version = 981
+  local items = {}
+  
+table.insert(items, {
+        id = 3264,
+        category = 20,
+        name = "sword"
       })
-    end    
-  end
-  
-  local balance = 0
-  if g_game.getProtocolVersion() <= 1250 or not g_game.getFeature(GameTibia12Protocol) then
-    if g_game.getProtocolVersion() >= 981 or g_game.getProtocolVersion() < 944 then
-      balance = msg:getU64()
-    else
-      balance = msg:getU32()
-    end
-  end
-  
-  local vocation = -1
-  if g_game.getProtocolVersion() >= 944 and g_game.getProtocolVersion() < 950 then
-    vocation = msg:getU8() -- get vocation id
-  end
-  local offers = msg:getU8()
 
+  local vocation = -1
+  local offers = msg:getU8()
+  local balance = msg:getU64();
   local depotItems = {}
   local depotCount = msg:getU16()
   for i = 1, depotCount do
@@ -78,8 +72,10 @@ local function parseMarketEnter(protocol, msg)
 
     depotItems[itemId] = itemCount
   end
-
+  
+  print(dump(depotItems))
   signalcall(Market.onMarketEnter, depotItems, offers, balance, vocation, items)
+  --signalcall(Market.onMarketEnter, depotItems, offers, balance, vocation, items)
   return true
 end
 
@@ -89,9 +85,11 @@ local function parseMarketLeave(protocol, msg)
 end
 
 local function parseMarketDetail(protocol, msg)
+print("DETAILS")
   local itemId = msg:getU16()
-
+	print (itemId + "assadsd")
   local descriptions = {}
+  table.insert(descriptions, {2, "28"})
   for i = MarketItemDescription.First, MarketItemDescription.Last do
     if msg:peekU16() ~= 0x00 then
       table.insert(descriptions, {i, msg:getString()}) -- item descriptions

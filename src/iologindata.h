@@ -59,6 +59,7 @@ class IOLoginData
 
 		static void addPremiumDays(uint32_t accountId, int32_t addDays);
 		static void removePremiumDays(uint32_t accountId, int32_t removeDays);
+		static uint32_t getAccountIdByPlayerId(uint32_t playerId);
 
 	protected:
 		typedef std::map<uint32_t, std::pair<Item*, uint32_t>> ItemMap;

@@ -740,6 +740,19 @@ local function onMarketMessage(messageMode, message)
   Market.displayMessage(message)
 end
 
+local function dump(o)
+   if type(o) == 'table' then
+      local s = '{ '
+      for k,v in pairs(o) do
+         if type(k) ~= 'number' then k = '"'..k..'"' end
+         s = s .. '['..k..'] = ' .. dump(v) .. ','
+      end
+      return s .. '} '
+   else
+      return tostring(o)
+   end
+end
+
 local function initMarketItems(items)
   for c = MarketCategory.First, MarketCategory.Last do
     marketItems[c] = {}
@@ -768,7 +781,6 @@ local function initMarketItems(items)
             tradeAs = entry.id
           }
         }
-     
         -- add new market item
         if marketItems[entry.category] ~= nil then
           table.insert(marketItems[entry.category], marketItem)
