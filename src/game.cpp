@@ -38,8 +38,6 @@
 #include "scheduler.h"
 #include "databasetasks.h"
 #include "movement.h"
-#include "inbox.h"
-#include "depotchest.h"
 
 extern ConfigManager g_config;
 extern Actions* g_actions;
@@ -4580,7 +4578,7 @@ void Game::playerCreateMarketOffer(uint32_t playerId, uint8_t type, uint16_t spr
 			return;
 		}
 
-		std::forward_list<Item*> itemList = getMarketItemList(it.id, amount, depotLocker, player->getInbox());
+		std::forward_list<Item*> itemList = getMarketItemList(it.id, amount, depotLocker);
 		if (itemList.empty()) {
 			return;
 		}
@@ -4660,7 +4658,7 @@ void Game::playerCancelMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 			while (tmpAmount > 0) {
 				int32_t stackCount = std::min<int32_t>(100, tmpAmount);
 				Item* item = Item::CreateItem(it.id, stackCount);
-				if (internalAddItem(player->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+				if (internalAddItem(player->getDepotLocker(player->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 					delete item;
 					break;
 				}
@@ -4679,7 +4677,7 @@ void Game::playerCancelMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 
 			for (uint16_t i = 0; i < offer.amount; ++i) {
 				Item* item = Item::CreateItem(it.id, subType);
-				if (internalAddItem(player->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+				if (internalAddItem(player->getDepotLocker(player->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 					delete item;
 					break;
 				}
@@ -4737,7 +4735,7 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 			return;
 		}
 
-		std::forward_list<Item*> itemList = getMarketItemList(it.id, amount, depotLocker, player->getInbox());
+		std::forward_list<Item*> itemList = getMarketItemList(it.id, amount, depotLocker);
 		if (itemList.empty()) {
 			return;
 		}
@@ -4776,7 +4774,7 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 			while (tmpAmount > 0) {
 				uint16_t stackCount = std::min<uint16_t>(100, tmpAmount);
 				Item* item = Item::CreateItem(it.id, stackCount);
-				if (internalAddItem(buyerPlayer->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+				if (internalAddItem(buyerPlayer->getDepotLocker(buyerPlayer->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 					delete item;
 					break;
 				}
@@ -4795,7 +4793,7 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 
 			for (uint16_t i = 0; i < amount; ++i) {
 				Item* item = Item::CreateItem(it.id, subType);
-				if (internalAddItem(buyerPlayer->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+				if (internalAddItem(buyerPlayer->getDepotLocker(buyerPlayer->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 					delete item;
 					break;
 				}
@@ -4807,25 +4805,22 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 			delete buyerPlayer;
 		}
 		else {
-			buyerPlayer->onReceiveMail();
+			buyerPlayer->onReceiveMail(buyerPlayer->getLastDepotId());
 		}
 	}
 	else {
-		if (totalPrice > (player->getMoney() + player->bankBalance)) {
+		if (totalPrice > player->bankBalance) {
 			return;
 		}
 
-		const auto debitCash = std::min(player->getMoney(), totalPrice);
-		const auto debitBank = totalPrice - debitCash;
-		removeMoney(player, debitCash);
-		player->bankBalance -= debitBank;
+		player->bankBalance -= totalPrice;
 
 		if (it.stackable) {
 			uint16_t tmpAmount = amount;
 			while (tmpAmount > 0) {
 				uint16_t stackCount = std::min<uint16_t>(100, tmpAmount);
 				Item* item = Item::CreateItem(it.id, stackCount);
-				if (internalAddItem(player->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+				if (internalAddItem(player->getDepotLocker(player->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 					delete item;
 					break;
 				}
@@ -4844,7 +4839,7 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 
 			for (uint16_t i = 0; i < amount; ++i) {
 				Item* item = Item::CreateItem(it.id, subType);
-				if (internalAddItem(player->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+				if (internalAddItem(player->getDepotLocker(player->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 					delete item;
 					break;
 				}
@@ -4859,7 +4854,7 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 			IOLoginData::increaseBankBalance(offer.playerId, totalPrice);
 		}
 
-		player->onReceiveMail();
+		player->onReceiveMail(player->getLastDepotId());
 	}
 
 	const int32_t marketOfferDuration = g_config.getNumber(ConfigManager::MARKET_OFFER_DURATION);
@@ -4882,12 +4877,12 @@ void Game::playerAcceptMarketOffer(uint32_t playerId, uint32_t timestamp, uint16
 	player->sendMarketAcceptOffer(offer);
 }
 
-std::forward_list<Item*> Game::getMarketItemList(uint16_t wareId, uint16_t sufficientCount, DepotLocker* depotLocker, Inbox* inbox)
+std::forward_list<Item*> Game::getMarketItemList(uint16_t wareId, uint16_t sufficientCount, DepotLocker* depotLocker)
 {
 	std::forward_list<Item*> itemList;
 	uint16_t count = 0;
 
-	std::list<Container*> containers{ depotLocker, inbox };
+	std::list<Container*> containers{ depotLocker };
 	do {
 		Container* container = containers.front();
 		containers.pop_front();

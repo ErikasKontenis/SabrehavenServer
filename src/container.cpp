@@ -19,8 +19,6 @@
 
 #include "otpch.h"
 
-#include "depotchest.h"
-#include "inbox.h"
 #include "container.h"
 #include "iomap.h"
 #include "game.h"
@@ -271,10 +269,6 @@ ReturnValue Container::queryAdd(int32_t index, const Thing& thing, uint32_t coun
 		while (cylinder) {
 			if (cylinder == &thing) {
 				return RETURNVALUE_THISISIMPOSSIBLE;
-			}
-
-			if (dynamic_cast<const Inbox*>(cylinder)) {
-				return RETURNVALUE_CONTAINERNOTENOUGHROOM;
 			}
 
 			cylinder = cylinder->getParent();

@@ -8,7 +8,6 @@
 #include "configmanager.h"
 #include "databasetasks.h"
 #include "game.h"
-#include "inbox.h"
 #include "iologindata.h"
 #include "scheduler.h"
 #include <fmt/core.h>
@@ -128,7 +127,7 @@ void IOMarket::processExpiredOffers(DBResult_ptr result, bool)
 				while (tmpAmount > 0) {
 					uint16_t stackCount = std::min<uint16_t>(100, tmpAmount);
 					Item* item = Item::CreateItem(itemType.id, stackCount);
-					if (g_game.internalAddItem(player->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+					if (g_game.internalAddItem(player->getDepotLocker(player->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 						delete item;
 						break;
 					}
@@ -147,7 +146,7 @@ void IOMarket::processExpiredOffers(DBResult_ptr result, bool)
 
 				for (uint16_t i = 0; i < amount; ++i) {
 					Item* item = Item::CreateItem(itemType.id, subType);
-					if (g_game.internalAddItem(player->getInbox(), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
+					if (g_game.internalAddItem(player->getDepotLocker(player->getLastDepotId(), false), item, INDEX_WHEREEVER, FLAG_NOLIMIT) != RETURNVALUE_NOERROR) {
 						delete item;
 						break;
 					}

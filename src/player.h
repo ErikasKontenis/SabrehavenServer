@@ -35,7 +35,6 @@
 #include "town.h"
 
 class BehaviourDatabase;
-class DepotChest;
 class House;
 class NetworkMessage;
 class Weapon;
@@ -208,10 +207,6 @@ class Player final : public Creature, public Cylinder
 		bool isInWar(const Player* player) const;
 		bool isInWarList(uint32_t guild_id) const;
 
-		Inbox* getInbox() const {
-			return inbox;
-		}
-
 		uint16_t getClientIcons() const;
 
 		const GuildWarList& getGuildWarList() const {
@@ -322,6 +317,14 @@ class Player final : public Creature, public Cylinder
 			lastDepotId = newId;
 		}
 		int16_t getLastDepotId() const {
+			if (lastDepotId == -1) {
+				if (town) {
+					return town->getID();
+				}
+				else {
+					return 1; // Thais
+				}
+			}
 			return lastDepotId;
 		}
 
@@ -473,10 +476,9 @@ class Player final : public Creature, public Cylinder
 		void addConditionSuppressions(uint32_t conditions);
 		void removeConditionSuppressions(uint32_t conditions);
 
-		DepotChest* getDepotChest(uint32_t depotId, bool autoCreate);
 		DepotLocker* getDepotLocker(uint32_t depotId, bool autoCreate);
-		void onReceiveMail() const;
-		bool isNearDepotBox() const;
+		void onReceiveMail(uint32_t townId) const;
+		bool isNearDepotBox(uint32_t townId) const;
 
 		bool canSee(const Position& pos) const final;
 		bool canSeeCreature(const Creature* creature) const final;
@@ -1079,7 +1081,6 @@ class Player final : public Creature, public Cylinder
 
 		std::map<uint8_t, OpenContainer> openContainers;
 		std::map<uint32_t, DepotLocker*> depotLockerMap;
-		std::map<uint32_t, DepotChest*> depotChests;
 		std::map<uint32_t, int32_t> storageMap;
 
 		std::vector<OutfitEntry> outfits;
@@ -1118,7 +1119,6 @@ class Player final : public Creature, public Cylinder
 		Guild* guild = nullptr;
 		const GuildRank* guildRank = nullptr;
 		Group* group = nullptr;
-		Inbox* inbox;
 		Item* tradeItem = nullptr;
  		Item* inventory[CONST_SLOT_LAST + 1] = {};
 		Item* writeItem = nullptr;

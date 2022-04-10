@@ -26,7 +26,6 @@
 #include "game.h"
 #include "configmanager.h"
 #include "bed.h"
-#include "inbox.h"
 
 extern ConfigManager g_config;
 extern Game g_game;

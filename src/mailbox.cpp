@@ -24,7 +24,6 @@
 #include "player.h"
 #include "iologindata.h"
 #include "town.h"
-#include "inbox.h"
 
 extern Game g_game;
 
@@ -95,23 +94,29 @@ bool Mailbox::sendItem(Item* item) const
 {
 	std::string receiver;
 	std::string townName;
-	townName = "thais";
 	if (!getDestination(item, receiver, townName)) {
 		return false;
 	}
 
-	/**No need to continue if its still empty**/
-	if (receiver.empty()) {
+	if (receiver.empty() || townName.empty()) {
+		return false;
+	}
+
+	Town* town = g_game.map.towns.getTown(townName);
+	if (!town) {
 		return false;
 	}
 
 	Player* player = g_game.getPlayerByName(receiver);
 	if (player) {
-		if (g_game.internalMoveItem(item->getParent(), player->getInbox(), INDEX_WHEREEVER,
-			item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
-			g_game.transformItem(item, item->getID() + 1);
-			player->onReceiveMail();
-			return true;
+		DepotLocker* depotLocker = player->getDepotLocker(town->getID(), true);
+		if (depotLocker) {
+			if (g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER,
+				item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
+				g_game.transformItem(item, item->getID() + 1);
+				player->onReceiveMail(town->getID());
+				return true;
+			}
 		}
 	}
 	else {
@@ -120,16 +125,19 @@ bool Mailbox::sendItem(Item* item) const
 			return false;
 		}
 
-		if (g_game.internalMoveItem(item->getParent(), tmpPlayer.getInbox(), INDEX_WHEREEVER,
-			item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
-			g_game.transformItem(item, item->getID() + 1);
-			IOLoginData::savePlayer(&tmpPlayer);
-			return true;
+		DepotLocker* depotLocker = tmpPlayer.getDepotLocker(town->getID(), true);
+		if (depotLocker) {
+			if (g_game.internalMoveItem(item->getParent(), depotLocker, INDEX_WHEREEVER,
+				item, item->getItemCount(), nullptr, FLAG_NOLIMIT) == RETURNVALUE_NOERROR) {
+				g_game.transformItem(item, item->getID() + 1);
+				IOLoginData::savePlayer(&tmpPlayer);
+				return true;
+			}
 		}
 	}
+
 	return false;
 }
-
 
 bool Mailbox::getDestination(Item* item, std::string& name, std::string& town) const
 {
@@ -156,9 +164,11 @@ bool Mailbox::getDestination(Item* item, std::string& name, std::string& town) c
 	while (getline(iss, temp, '\n')) {
 		if (currentLine == 1) {
 			name = temp;
-		} else if (currentLine == 2) {
+		}
+		else if (currentLine == 2) {
 			town = temp;
-		} else {
+		}
+		else {
 			break;
 		}
 
@@ -169,6 +179,7 @@ bool Mailbox::getDestination(Item* item, std::string& name, std::string& town) c
 	trimString(town);
 	return true;
 }
+
 
 bool Mailbox::canSend(const Item* item)
 {

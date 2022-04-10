@@ -22,8 +22,6 @@
 #include "iologindata.h"
 #include "configmanager.h"
 #include "game.h"
-#include "depotchest.h"
-#include "inbox.h"
 #include <fmt/core.h>
 
 extern ConfigManager g_config;
@@ -498,35 +496,6 @@ bool IOLoginData::loadPlayer(Player* player, DBResult_ptr result)
 		}
 	}
 
-	//load inbox items
-	itemMap.clear();
-
-	if ((result = db->storeQuery(fmt::format("SELECT `pid`, `sid`, `itemtype`, `count`, `attributes` FROM `player_inboxitems` WHERE `player_id` = {:d} ORDER BY `sid` DESC", player->getGUID())))) {
-		loadItems(itemMap, result);
-
-		for (ItemMap::const_reverse_iterator it = itemMap.rbegin(), end = itemMap.rend(); it != end; ++it) {
-			const std::pair<Item*, int32_t>& pair = it->second;
-			Item* item = pair.first;
-			int32_t pid = pair.second;
-
-			if (pid >= 0 && pid < 100) {
-				player->getInbox()->internalAddThing(item);
-			}
-			else {
-				ItemMap::const_iterator it2 = itemMap.find(pid);
-
-				if (it2 == itemMap.end()) {
-					continue;
-				}
-
-				Container* container = it2->second.first->getContainer();
-				if (container) {
-					container->internalAddThing(item);
-				}
-			}
-		}
-	}
-
 	//load storage map
 	query.str(std::string());
 	query << "SELECT `key`, `value` FROM `player_storage` WHERE `player_id` = " << player->getGUID();
@@ -794,41 +763,28 @@ bool IOLoginData::savePlayer(Player* player)
 		return false;
 	}
 
-	if (player->lastDepotId != -1) {
-		//save depot items
-		if (!db->executeQuery(fmt::format("DELETE FROM `player_depotitems` WHERE `player_id` = {:d}", player->getGUID()))) {
-			return false;
-		}
+	//save depot items
+	query.str(std::string());
+	query << "DELETE FROM `player_depotitems` WHERE `player_id` = " << player->getGUID();
 
-		DBInsert depotQuery("INSERT INTO `player_depotitems` (`player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`) VALUES ");
-		itemList.clear();
-
-		for (const auto& it : player->depotLockerMap) {
-			itemList.emplace_back(it.first, it.second);
-		}
-
-		if (!saveItems(player, itemList, depotQuery, propWriteStream)) {
-			return false;
-		}
-	}
-
-	//save inbox items
-	if (!db->executeQuery(fmt::format("DELETE FROM `player_inboxitems` WHERE `player_id` = {:d}", player->getGUID()))) {
+	if (!db->executeQuery(query.str())) {
 		return false;
 	}
 
-	DBInsert inboxQuery("INSERT INTO `player_inboxitems` (`player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`) VALUES ");
+	DBInsert depotQuery("INSERT INTO `player_depotitems` (`player_id`, `pid`, `sid`, `itemtype`, `count`, `attributes`) VALUES ");
 	itemList.clear();
 
-	for (Item* item : player->getInbox()->getItemList()) {
-		itemList.emplace_back(0, item);
+	for (const auto& it : player->depotLockerMap) {
+		itemList.emplace_back(it.first, it.second);
 	}
 
-	if (!saveItems(player, itemList, inboxQuery, propWriteStream)) {
+	if (!saveItems(player, itemList, depotQuery, propWriteStream)) {
 		return false;
 	}
 
 	query.str(std::string());
+
+
 	query << "DELETE FROM `player_storage` WHERE `player_id` = " << player->getGUID();
 	if (!db->executeQuery(query.str())) {
 		return false;

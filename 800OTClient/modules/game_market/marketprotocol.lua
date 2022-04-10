@@ -24,7 +24,7 @@ local function readMarketOffer(msg, action, var)
   end
 
   local amount = msg:getU16()
-  local price = msg:getU32()
+  local price = msg:getU64()
   local playerName
   local state = MarketOfferState.Active
   if var == MarketRequest.MyHistory then
@@ -52,14 +52,12 @@ end
 
 -- parsing protocols
 local function parseMarketEnter(protocol, msg)
-  local version = 981
   local items = {}
-  
-table.insert(items, {
-        id = 3264,
-        category = 20,
-        name = "sword"
-      })
+  table.insert(items, {
+    id = 3264,
+    category = 20,
+    name = "sword"
+  })
 
   local vocation = -1
   local offers = msg:getU8()
@@ -73,9 +71,7 @@ table.insert(items, {
     depotItems[itemId] = itemCount
   end
   
-  print(dump(depotItems))
   signalcall(Market.onMarketEnter, depotItems, offers, balance, vocation, items)
-  --signalcall(Market.onMarketEnter, depotItems, offers, balance, vocation, items)
   return true
 end
 
@@ -85,11 +81,8 @@ local function parseMarketLeave(protocol, msg)
 end
 
 local function parseMarketDetail(protocol, msg)
-print("DETAILS")
   local itemId = msg:getU16()
-	print (itemId + "assadsd")
   local descriptions = {}
-  table.insert(descriptions, {2, "28"})
   for i = MarketItemDescription.First, MarketItemDescription.Last do
     if msg:peekU16() ~= 0x00 then
       table.insert(descriptions, {i, msg:getString()}) -- item descriptions
@@ -112,9 +105,9 @@ print("DETAILS")
   local count = msg:getU8()
   for i=1, count do
     local transactions = msg:getU32() -- transaction count
-    local totalPrice = msg:getU32() -- total price
-    local highestPrice = msg:getU32() -- highest price
-    local lowestPrice = msg:getU32() -- lowest price
+    local totalPrice = msg:getU64() -- total price
+    local highestPrice = msg:getU64() -- highest price
+    local lowestPrice = msg:getU64() -- lowest price
 
     local tmp = time - statistics.SECONDS_PER_DAY
     table.insert(purchaseStats, OfferStatistic.new(tmp, MarketAction.Buy, transactions, totalPrice, highestPrice, lowestPrice))
@@ -124,9 +117,9 @@ print("DETAILS")
   count = msg:getU8()
   for i=1, count do
     local transactions = msg:getU32() -- transaction count
-    local totalPrice = msg:getU32() -- total price
-    local highestPrice = msg:getU32() -- highest price
-    local lowestPrice = msg:getU32() -- lowest price
+    local totalPrice = msg:getU64() -- total price
+    local highestPrice = msg:getU64() -- highest price
+    local lowestPrice = msg:getU64() -- lowest price
 
     local tmp = time - statistics.SECONDS_PER_DAY
     table.insert(saleStats, OfferStatistic.new(tmp, MarketAction.Sell, transactions, totalPrice, highestPrice, lowestPrice))
@@ -242,7 +235,7 @@ function MarketProtocol.sendMarketCreateOffer(type, spriteId, amount, price, ano
     msg:addU8(type)
     msg:addU16(spriteId)
     msg:addU16(amount)
-    msg:addU32(price)
+    msg:addU64(price)
     msg:addU8(anonymous)
     send(msg)
   else

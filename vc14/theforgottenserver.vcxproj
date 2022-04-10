@@ -159,7 +159,6 @@
     <ClCompile Include="..\src\database.cpp" />
     <ClCompile Include="..\src\databasemanager.cpp" />
     <ClCompile Include="..\src\databasetasks.cpp" />
-    <ClCompile Include="..\src\depotchest.cpp" />
     <ClCompile Include="..\src\depotlocker.cpp" />
     <ClCompile Include="..\src\events.cpp" />
     <ClCompile Include="..\src\fileloader.cpp" />
@@ -169,7 +168,6 @@
     <ClCompile Include="..\src\guild.cpp" />
     <ClCompile Include="..\src\house.cpp" />
     <ClCompile Include="..\src\housetile.cpp" />
-    <ClCompile Include="..\src\inbox.cpp" />
     <ClCompile Include="..\src\ioguild.cpp" />
     <ClCompile Include="..\src\iologindata.cpp" />
     <ClCompile Include="..\src\iomap.cpp" />
@@ -243,7 +241,6 @@
     <ClInclude Include="..\src\databasemanager.h" />
     <ClInclude Include="..\src\databasetasks.h" />
     <ClInclude Include="..\src\definitions.h" />
-    <ClInclude Include="..\src\depotchest.h" />
     <ClInclude Include="..\src\depotlocker.h" />
     <ClInclude Include="..\src\events.h" />
     <ClInclude Include="..\src\enums.h" />
@@ -254,7 +251,6 @@
     <ClInclude Include="..\src\guild.h" />
     <ClInclude Include="..\src\house.h" />
     <ClInclude Include="..\src\housetile.h" />
-    <ClInclude Include="..\src\inbox.h" />
     <ClInclude Include="..\src\ioguild.h" />
     <ClInclude Include="..\src\iologindata.h" />
     <ClInclude Include="..\src\iomap.h" />

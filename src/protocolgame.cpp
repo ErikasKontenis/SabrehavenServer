@@ -30,13 +30,11 @@
 #include "configmanager.h"
 #include "actions.h"
 #include "game.h"
-#include "inbox.h"
 #include "iomarket.h"
 #include "iologindata.h"
 #include "waitlist.h"
 #include "ban.h"
 #include "scheduler.h"
-#include "depotchest.h"
 
 extern ConfigManager g_config;
 extern Actions actions;
@@ -1012,7 +1010,7 @@ void ProtocolGame::parseMarketLeave()
 
 void ProtocolGame::parseMarketBrowse(NetworkMessage& msg)
 {
-	uint8_t browseId = msg.get<uint8_t>();
+	uint16_t browseId = msg.get<uint16_t>();
 	if (browseId == MARKETREQUEST_OWN_OFFERS) {
 		addGameTask(&Game::playerBrowseMarketOwnOffers, player->getID());
 	}
@@ -1020,8 +1018,8 @@ void ProtocolGame::parseMarketBrowse(NetworkMessage& msg)
 		addGameTask(&Game::playerBrowseMarketOwnHistory, player->getID());
 	}
 	else {
-		uint16_t spriteID = msg.get<uint16_t>();
-		addGameTask(&Game::playerBrowseMarket, player->getID(), spriteID);
+		//uint16_t spriteID = msg.get<uint16_t>();
+		addGameTask(&Game::playerBrowseMarket, player->getID(), browseId);
 	}
 }
 
@@ -1034,10 +1032,6 @@ void ProtocolGame::parseMarketCreateOffer(NetworkMessage& msg)
 	if (it.id == 0) {
 		return;
 	}
-	// TODO:
-	//else if (it.classification > 0) {
-	//	msg.getByte(); // item tier
-	//}
 
 	uint16_t amount = msg.get<uint16_t>();
 	uint64_t price = msg.get<uint64_t>();
@@ -1332,7 +1326,7 @@ void ProtocolGame::sendMarketEnter(uint32_t depotId)
 	msg.add<uint64_t>(player->getBankBalance());
 
 	std::map<uint16_t, uint32_t> depotItems;
-	std::forward_list<Container*> containerList{ depotLocker, player->getInbox() };
+	std::forward_list<Container*> containerList{ depotLocker };
 
 	do {
 		Container* container = containerList.front();
@@ -1369,10 +1363,6 @@ void ProtocolGame::sendMarketEnter(uint32_t depotId)
 	for (std::map<uint16_t, uint32_t>::const_iterator it = depotItems.begin(); i < itemsToSend; ++it, ++i) {
 		const ItemType& itemType = Item::items[it->first];
 		msg.add<uint16_t>(itemType.id);
-		// TODO
-		//if (itemType.classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(std::min<uint32_t>(0xFFFF, it->second));
 	}
 	writeToOutputBuffer(msg);
@@ -1389,13 +1379,7 @@ void ProtocolGame::sendMarketBrowseItem(uint16_t itemId, const MarketOfferList& 
 {
 	NetworkMessage msg;
 	msg.addByte(0xF9);
-	msg.addByte(MARKETREQUEST_ITEM);
 	msg.addItemId(itemId);
-
-	// TODO
-	//if (Item::items[itemId].classification > 0) {
-	//	msg.addByte(0); // item tier
-	//}
 
 	msg.add<uint32_t>(buyOffers.size());
 	for (const MarketOffer& offer : buyOffers) {
@@ -1422,12 +1406,7 @@ void ProtocolGame::sendMarketAcceptOffer(const MarketOfferEx& offer)
 {
 	NetworkMessage msg;
 	msg.addByte(0xF9);
-	msg.addByte(MARKETREQUEST_ITEM);
 	msg.addItemId(offer.itemId);
-	// TODO
-	//if (Item::items[offer.itemId].classification > 0) {
-	//	msg.addByte(0);
-	//}
 
 	if (offer.type == MARKETACTION_BUY) {
 		msg.add<uint32_t>(0x01);
@@ -1455,17 +1434,13 @@ void ProtocolGame::sendMarketBrowseOwnOffers(const MarketOfferList& buyOffers, c
 {
 	NetworkMessage msg;
 	msg.addByte(0xF9);
-	msg.addByte(MARKETREQUEST_OWN_OFFERS);
+	msg.add<uint16_t>(MARKETREQUEST_OWN_OFFERS);
 
 	msg.add<uint32_t>(buyOffers.size());
 	for (const MarketOffer& offer : buyOffers) {
 		msg.add<uint32_t>(offer.timestamp);
 		msg.add<uint16_t>(offer.counter);
 		msg.addItemId(offer.itemId);
-		// TODO
-		//if (Item::items[offer.itemId].classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(offer.amount);
 		msg.add<uint64_t>(offer.price);
 	}
@@ -1475,10 +1450,6 @@ void ProtocolGame::sendMarketBrowseOwnOffers(const MarketOfferList& buyOffers, c
 		msg.add<uint32_t>(offer.timestamp);
 		msg.add<uint16_t>(offer.counter);
 		msg.addItemId(offer.itemId);
-		// TODO
-		//if (Item::items[offer.itemId].classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(offer.amount);
 		msg.add<uint64_t>(offer.price);
 	}
@@ -1490,17 +1461,13 @@ void ProtocolGame::sendMarketCancelOffer(const MarketOfferEx& offer)
 {
 	NetworkMessage msg;
 	msg.addByte(0xF9);
-	msg.addByte(MARKETREQUEST_OWN_OFFERS);
+	msg.add<uint16_t>(MARKETREQUEST_OWN_OFFERS);
 
 	if (offer.type == MARKETACTION_BUY) {
 		msg.add<uint32_t>(0x01);
 		msg.add<uint32_t>(offer.timestamp);
 		msg.add<uint16_t>(offer.counter);
 		msg.addItemId(offer.itemId);
-		// TODO
-		//if (Item::items[offer.itemId].classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(offer.amount);
 		msg.add<uint64_t>(offer.price);
 		msg.add<uint32_t>(0x00);
@@ -1511,10 +1478,6 @@ void ProtocolGame::sendMarketCancelOffer(const MarketOfferEx& offer)
 		msg.add<uint32_t>(offer.timestamp);
 		msg.add<uint16_t>(offer.counter);
 		msg.addItemId(offer.itemId);
-		// TODO
-		//if (Item::items[offer.itemId].classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(offer.amount);
 		msg.add<uint64_t>(offer.price);
 	}
@@ -1531,17 +1494,13 @@ void ProtocolGame::sendMarketBrowseOwnHistory(const HistoryMarketOfferList& buyO
 
 	NetworkMessage msg;
 	msg.addByte(0xF9);
-	msg.addByte(MARKETREQUEST_OWN_HISTORY);
+	msg.add<uint16_t>(MARKETREQUEST_OWN_HISTORY);
 
 	msg.add<uint32_t>(buyOffersToSend);
 	for (auto it = buyOffers.begin(); i < buyOffersToSend; ++it, ++i) {
 		msg.add<uint32_t>(it->timestamp);
 		msg.add<uint16_t>(counterMap[it->timestamp]++);
 		msg.addItemId(it->itemId);
-		// TODO
-		//if (Item::items[it->itemId].classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(it->amount);
 		msg.add<uint64_t>(it->price);
 		msg.addByte(it->state);
@@ -1555,10 +1514,6 @@ void ProtocolGame::sendMarketBrowseOwnHistory(const HistoryMarketOfferList& buyO
 		msg.add<uint32_t>(it->timestamp);
 		msg.add<uint16_t>(counterMap[it->timestamp]++);
 		msg.addItemId(it->itemId);
-		// TODO
-		//if (Item::items[it->itemId].classification > 0) {
-		//	msg.addByte(0);
-		//}
 		msg.add<uint16_t>(it->amount);
 		msg.add<uint64_t>(it->price);
 		msg.addByte(it->state);

@@ -36,8 +36,6 @@
 #include "monster.h"
 #include "scheduler.h"
 #include "databasetasks.h"
-#include "inbox.h"
-#include "depotchest.h"
 
 extern Chat* g_chat;
 extern Game g_game;
@@ -1996,7 +1994,6 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("Player", "getFreeCapacity", LuaScriptInterface::luaPlayerGetFreeCapacity);
 
 	registerMethod("Player", "getDepotChest", LuaScriptInterface::luaPlayerGetDepotChest);
-	registerMethod("Player", "getInbox", LuaScriptInterface::luaPlayerGetInbox);
 
 	registerMethod("Player", "getMurderTimestamps", LuaScriptInterface::luaPlayerGetMurderTimestamps);
 	registerMethod("Player", "getPlayerKillerEnd", LuaScriptInterface::luaPlayerGetPlayerKillerEnd);
@@ -2307,6 +2304,13 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("ItemType", "getDecayId", LuaScriptInterface::luaItemTypeGetDecayId);
 	registerMethod("ItemType", "getNutrition", LuaScriptInterface::luaItemTypeGetNutrition);
 	registerMethod("ItemType", "getRequiredLevel", LuaScriptInterface::luaItemTypeGetRequiredLevel);
+	registerMethod("ItemType", "getDuration", LuaScriptInterface::luaItemTypeGetDuration);
+	registerMethod("ItemType", "getMinReqLevel", LuaScriptInterface::luaItemTypeGetMinReqLevel);
+	registerMethod("ItemType", "getMinReqMagicLevel", LuaScriptInterface::luaItemTypeGetMinReqMagicLevel);
+	registerMethod("ItemType", "getRuneSpellName", LuaScriptInterface::luaItemTypeGetRuneSpellName);
+	registerMethod("ItemType", "getVocationString", LuaScriptInterface::luaItemTypeGetVocationString);
+	registerMethod("ItemType", "hasShowCharges", LuaScriptInterface::luaItemTypeHasShowCharges);
+	registerMethod("ItemType", "getAbilities", LuaScriptInterface::luaItemTypeGetAbilities);
 
 	registerMethod("ItemType", "getMarketBuyStatistics", LuaScriptInterface::luaItemTypeGetMarketBuyStatistics);
 	registerMethod("ItemType", "getMarketSellStatistics", LuaScriptInterface::luaItemTypeGetMarketSellStatistics);
@@ -7281,31 +7285,13 @@ int LuaScriptInterface::luaPlayerGetDepotChest(lua_State* L)
 
 		pushUserdata<Item>(L, depotLocker);
 		setItemMetatable(L, -1, depotLocker);
-	} else {
-		pushBoolean(L, false);
-	}
-	return 1;
-}
-
-int LuaScriptInterface::luaPlayerGetInbox(lua_State* L)
-{
-	// player:getInbox()
-	Player* player = getUserdata<Player>(L, 1);
-	if (!player) {
-		lua_pushnil(L);
-		return 1;
-	}
-
-	Inbox* inbox = player->getInbox();
-	if (inbox) {
-		pushUserdata<Item>(L, inbox);
-		setItemMetatable(L, -1, inbox);
 	}
 	else {
 		pushBoolean(L, false);
 	}
 	return 1;
 }
+
 
 int LuaScriptInterface::luaPlayerGetMurderTimestamps(lua_State * L)
 {
@@ -10683,6 +10669,149 @@ int LuaScriptInterface::luaItemTypeGetRequiredLevel(lua_State* L)
 		lua_pushnumber(L, itemType->minReqLevel);
 	} else {
 		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetDuration(lua_State* L)
+{
+	// itemType:getDuration()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		lua_pushinteger(L, itemType->decayTime);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetMinReqLevel(lua_State* L)
+{
+	// itemType:getMinReqLevel()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		lua_pushinteger(L, itemType->minReqLevel);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetMinReqMagicLevel(lua_State* L)
+{
+	// itemType:getMinReqMagicLevel()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		lua_pushinteger(L, itemType->minReqMagicLevel);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetRuneSpellName(lua_State* L)
+{
+	// itemType:getRuneSpellName()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType && itemType->isRune()) {
+		pushString(L, itemType->runeSpellName);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetVocationString(lua_State* L)
+{
+	// itemType:getVocationString()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		pushString(L, itemType->vocationString);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeHasShowCharges(lua_State* L)
+{
+	// itemType:hasShowCharges()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		pushBoolean(L, itemType->showCharges);
+	}
+	else {
+		lua_pushnil(L);
+	}
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetAbilities(lua_State* L)
+{
+	// itemType:getAbilities()
+	ItemType* itemType = getUserdata<ItemType>(L, 1);
+	if (itemType) {
+		Abilities& abilities = itemType->getAbilities();
+		lua_createtable(L, 6, 12);
+		setField(L, "healthGain", abilities.healthGain);
+		setField(L, "healthTicks", abilities.healthTicks);
+		setField(L, "manaGain", abilities.manaGain);
+		setField(L, "manaTicks", abilities.manaTicks);
+		setField(L, "conditionImmunities", abilities.conditionImmunities);
+		setField(L, "conditionSuppressions", abilities.conditionSuppressions);
+		setField(L, "speed", abilities.speed);
+
+		lua_pushboolean(L, abilities.manaShield);
+		lua_setfield(L, -2, "manaShield");
+		lua_pushboolean(L, abilities.invisible);
+		lua_setfield(L, -2, "invisible");
+		lua_pushboolean(L, abilities.regeneration);
+		lua_setfield(L, -2, "regeneration");
+
+		// Stats
+		lua_createtable(L, 0, STAT_LAST + 1);
+		for (int32_t i = STAT_FIRST; i <= STAT_LAST; i++) {
+			lua_pushnumber(L, abilities.stats[i]);
+			lua_rawseti(L, -2, i + 1);
+		}
+		lua_setfield(L, -2, "stats");
+
+		// Stats percent
+		lua_createtable(L, 0, STAT_LAST + 1);
+		for (int32_t i = STAT_FIRST; i <= STAT_LAST; i++) {
+			lua_pushnumber(L, abilities.statsPercent[i]);
+			lua_rawseti(L, -2, i + 1);
+		}
+		lua_setfield(L, -2, "statsPercent");
+
+		// Skills
+		lua_createtable(L, 0, SKILL_LAST + 1);
+		for (int32_t i = SKILL_FIRST; i <= SKILL_LAST; i++) {
+			lua_pushnumber(L, abilities.skills[i]);
+			lua_rawseti(L, -2, i + 1);
+		}
+		lua_setfield(L, -2, "skills");
+
+		// Field absorb percent
+		lua_createtable(L, 0, COMBAT_COUNT);
+		for (int32_t i = 0; i < COMBAT_COUNT; i++) {
+			lua_pushnumber(L, abilities.fieldAbsorbPercent[i]);
+			lua_rawseti(L, -2, i + 1);
+		}
+		lua_setfield(L, -2, "fieldAbsorbPercent");
+
+		// Absorb percent
+		lua_createtable(L, 0, COMBAT_COUNT);
+		for (int32_t i = 0; i < COMBAT_COUNT; i++) {
+			lua_pushnumber(L, abilities.absorbPercent[i]);
+			lua_rawseti(L, -2, i + 1);
+		}
+		lua_setfield(L, -2, "absorbPercent");
 	}
 	return 1;
 }
