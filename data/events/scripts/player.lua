@@ -309,7 +309,7 @@ function Player:onLookInMarket(itemType)
 	do
 		local desc = itemType:getDescription()
 		if desc and #desc > 0 then
-			response:addString(desc:sub(1, -2))
+			response:addString(desc)
 		else
 			response:addU16(0)
 		end
@@ -327,6 +327,7 @@ function Player:onLookInMarket(itemType)
 		end
 
 		if duration > 0 then
+			-- TODO!!!!!!!!!!!!!
 			response:addString(Game.getCountdownString(duration, true, true))
 		else
 			response:addU16(0)
