@@ -60,7 +60,7 @@
 	<house name="Southern Thais Guildhall" houseid="58" entryx="32401" entryy="32254" entryz="7" rent="43020" guildhall="true" townid="1" size="263" />
 	<house name="Upper Swamp Lane 10" houseid="59" entryx="32412" entryy="32256" entryz="7" rent="3920" townid="1" size="41" />
 	<house name="Upper Swamp Lane 12" houseid="60" entryx="32419" entryy="32256" entryz="7" rent="7400" townid="1" size="43" />
-	<house name="Sorcerer's Avenue 1a" houseid="61" entryx="32300" entryy="32254" entryz="7" rent="2410" townid="1" size="15" />
+	<house name="Sorcerer's Avenue 1a" houseid="61" entryx="32300" entryy="32254" entryz="7" rent="2410" townid="1" size="24" />
 	<house name="Sorcerer's Avenue 1b" houseid="62" entryx="32300" entryy="32251" entryz="6" rent="1970" townid="1" size="12" />
 	<house name="Sorcerer's Avenue 1c" houseid="63" entryx="32300" entryy="32249" entryz="6" rent="2410" townid="1" size="15" />
 	<house name="Sorcerer's Avenue 5" houseid="64" entryx="32284" entryy="32256" entryz="7" rent="5390" townid="1" size="40" />
@@ -951,10 +951,8 @@
 	<house name="Unnamed House #2401" houseid="2401" entryx="32365" entryy="32201" entryz="6" rent="0" townid="1" size="16" />
 	<house name="Unnamed House #2402" houseid="2402" entryx="32365" entryy="32197" entryz="6" rent="0" townid="1" size="16" />
 	<house name="Unnamed House #2403" houseid="2403" entryx="32365" entryy="32193" entryz="6" rent="0" townid="1" size="16" />
-	<house name="Unnamed House #2404" houseid="2404" entryx="32380" entryy="32189" entryz="7" rent="0" townid="1" size="12" />
-	<house name="Unnamed House #2405" houseid="2405" entryx="32380" entryy="32193" entryz="7" rent="0" townid="1" size="12" />
-	<house name="Unnamed House #2406" houseid="2406" entryx="32380" entryy="32193" entryz="6" rent="0" townid="1" size="12" />
-	<house name="Unnamed House #2407" houseid="2407" entryx="32380" entryy="32189" entryz="6" rent="0" townid="1" size="12" />
+	<house name="Unnamed House #2406" houseid="2406" entryx="32380" entryy="32193" entryz="6" rent="0" townid="1" size="24" />
+	<house name="Unnamed House #2407" houseid="2407" entryx="32380" entryy="32189" entryz="6" rent="0" townid="1" size="24" />
 	<house name="Unnamed House #2408" houseid="2408" entryx="32407" entryy="32201" entryz="7" rent="0" townid="1" size="27" />
 	<house name="Unnamed House #2409" houseid="2409" entryx="32412" entryy="32201" entryz="7" rent="0" townid="1" size="27" />
 	<house name="Unnamed House #2410" houseid="2410" entryx="32327" entryy="32213" entryz="7" rent="0" townid="1" size="28" />
