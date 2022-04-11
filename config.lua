@@ -11,7 +11,7 @@ ropeSpotBlock = false
 showMonsterLoot = true
 blockHeight = false
 dropItems = false
-marketOfferDuration = 1
+marketOfferDuration = 7 * 24 * 60 * 60
 premiumToCreateMarketOffer = false
 
 -- Combat settings

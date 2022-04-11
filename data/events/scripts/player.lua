@@ -327,7 +327,6 @@ function Player:onLookInMarket(itemType)
 		end
 
 		if duration > 0 then
-			-- TODO!!!!!!!!!!!!!
 			response:addString(Game.getCountdownString(duration, true, true))
 		else
 			response:addU16(0)
@@ -427,7 +426,7 @@ function Player:onLookInMarket(itemType)
 
 		-- speed
 		if abilities.speed ~= 0 then
-			skillBoosts[#skillBoosts + 1] = string.format("speed %+d", math.floor(abilities.speed / 2))
+			skillBoosts[#skillBoosts + 1] = string.format("speed %+d", abilities.speed)
 		end
 
 		-- skills
@@ -465,16 +464,7 @@ function Player:onLookInMarket(itemType)
 
 	-- weight
 	response:addString(string.format("%0.2f", itemType:getWeight() / 100))
-
-	-- to do
-	response:addU16(0) -- Imbuement Slots
-	response:addU16(0) -- Magic Shield Capacity
-	response:addU16(0) -- Cleave
-	response:addU16(0) -- Damage Reflection
-	response:addU16(0) -- Perfect Shot
-	response:addU16(0) -- Classification
-	response:addU16(0) -- Tier
-
+	
 	-- buy stats
 	do
 		local stats = itemType:getMarketBuyStatistics()

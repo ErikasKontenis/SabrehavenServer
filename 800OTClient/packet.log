@@ -1271,3 +1271,1193 @@ ProtocolGame parse message exception (138 bytes, 1 unread, last opcode is 0x00 (
 00 00 00 00 00 
 00 00 00 00 
 
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 1e 0d 00 00 00 00 00 00 00 00 f8 1e 0d 01 00 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 31 30 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (72 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 44 00 f9 45 0d 00 00 00 00 00 00 00 00 f8 45 0d 02 00 31 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 31 33 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c5 1c 00 00 00 00 00 00 00 00 f8 c5 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c4 1c 00 00 00 00 00 00 00 00 f8 c4 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c3 1c 00 00 00 00 00 00 00 00 f8 c3 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c4 1c 00 00 00 00 00 00 00 00 f8 c4 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c5 1c 00 00 00 00 00 00 00 00 f8 c5 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (99 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 5f 00 f9 c5 0b 00 00 00 00 00 00 00 00 f8 c5 0b 00 00 00 00 00 00 00 00 1f 00 4d 61 6e 79 20 67 65 6d 73 20 67 6c 69 74 74 65 72 20 6f 6e 20 74 68 65 20 61 6d 75 6c 65 74 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 33 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 08 0c 00 00 00 00 00 00 00 00 f8 08 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f1 0b 00 00 00 00 00 00 00 00 f8 f1 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 08 0c 00 00 00 00 00 00 00 00 f8 08 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f1 0b 00 00 00 00 00 00 00 00 f8 f1 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (87 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 53 00 f9 20 1d 00 00 00 00 00 00 00 00 f8 20 1d 00 00 02 00 33 39 00 00 02 00 32 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 05 00 33 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (87 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 53 00 f9 1f 1d 00 00 00 00 00 00 00 00 f8 1f 1d 00 00 02 00 34 38 00 00 02 00 32 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 05 00 35 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (99 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 5f 00 f9 1e 1d 00 00 00 00 00 00 00 00 f8 1e 1d 00 00 02 00 34 30 00 00 02 00 32 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 39 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (99 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 5f 00 f9 1d 1d 00 00 00 00 00 00 00 00 f8 1d 1d 00 00 02 00 35 31 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 39 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (87 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 53 00 f9 09 1d 00 00 00 00 00 00 00 00 f8 09 1d 00 00 02 00 34 35 00 00 02 00 32 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 05 00 35 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (99 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 5f 00 f9 0c 1d 00 00 00 00 00 00 00 00 f8 0c 1d 00 00 02 00 34 34 00 00 02 00 32 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 1a 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 35 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (147 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+98 00 8f 00 f9 0a 1d 00 00 00 00 00 00 00 00 f8 0a 1d 00 00 02 00 34 37 00 00 02 00 32 35 3c 00 54 68 69 73 20 61 78 65 20 69 73 20 6f 6e 6c 79 20 67 72 61 6e 74 65 64 20 74 6f 20 61 20 77 61 72 6c 6f 72 64 20 6f 66 20 74 68 65 20 53 76 61 72 67 72 6f 6e 64 20 61 72 65 6e 61 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 63 75 74 74 69 6e 67 20 77 65 61 70 6f 6e 05 00 39 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 e1 0d 00 00 00 00 00 00 00 00 f8 e1 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 55 15 00 00 00 00 00 00 00 00 f8 55 15 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 38 0b 00 00 00 00 00 00 00 00 f8 38 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 32 0b 00 00 00 00 00 00 00 00 f8 32 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 2e 0b 00 00 00 00 00 00 00 00 f8 2e 0b 00 00 00 00 01 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 30 0b 00 00 00 00 00 00 00 00 f8 30 0b 00 00 00 00 01 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 38 0b 00 00 00 00 00 00 00 00 f8 38 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 34 0b 00 00 00 00 00 00 00 00 f8 34 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 2c 0b 00 00 00 00 00 00 00 00 f8 2c 0b 00 00 00 00 01 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 33 0b 00 00 00 00 00 00 00 00 f8 33 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 2b 0b 00 00 00 00 00 00 00 00 f8 2b 0b 00 00 00 00 01 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (76 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 48 00 f9 b0 0b 00 00 00 00 00 00 00 00 f8 b0 0b 00 00 01 00 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 cd 0c 00 00 00 00 00 00 00 00 f8 cd 0c 00 00 02 00 32 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 05 00 32 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 e2 0c 00 00 00 00 00 00 00 00 f8 e2 0c 00 00 02 00 32 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 c8 1c 00 00 00 00 00 00 00 00 f8 c8 1c 00 00 02 00 36 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 04 00 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 c7 1c 00 00 00 00 00 00 00 00 f8 c7 1c 00 00 02 00 33 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 05 00 32 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 c8 1c 00 00 00 00 00 00 00 00 f8 c8 1c 00 00 02 00 36 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 04 00 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 d2 1c 00 00 00 00 00 00 00 00 f8 d2 1c 00 00 02 00 33 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 07 00 6d 69 73 73 69 6c 65 05 00 32 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 4d 0d 00 00 00 00 00 00 00 00 f8 4d 0d 01 00 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 34 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (110 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 6a 00 f9 3b 0d 00 00 00 00 00 00 00 00 f8 3b 0d 02 00 31 30 00 00 00 00 00 00 27 00 59 6f 75 20 68 65 61 72 20 61 6e 20 65 76 69 6c 20 77 68 69 73 70 65 72 69 6e 67 20 66 72 6f 6d 20 69 6e 73 69 64 65 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 39 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (106 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 66 00 f9 25 0d 00 00 00 00 00 00 00 00 f8 25 0d 02 00 31 32 00 00 00 00 00 00 23 00 49 74 27 73 20 74 68 65 20 66 61 6d 6f 75 73 20 48 65 6c 6d 65 74 20 6f 66 20 74 68 65 20 53 74 61 72 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 be 0b 00 00 00 00 00 00 00 00 f8 be 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 34 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 5a 0d 00 00 00 00 00 00 00 00 f8 5a 0d 00 00 00 00 00 00 02 00 32 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 34 37 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 72 0d 00 00 00 00 00 00 00 00 f8 72 0d 00 00 00 00 00 00 02 00 33 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 35 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 f3 17 00 00 00 00 00 00 00 00 f8 f3 17 00 00 00 00 00 00 02 00 32 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 35 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (131 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+88 00 7f 00 f9 f6 18 00 00 00 00 00 00 00 00 f8 f6 18 00 00 00 00 00 00 02 00 33 37 3c 00 49 74 20 77 61 73 20 63 72 61 66 74 65 64 20 62 79 20 74 68 65 20 61 6e 63 69 65 6e 74 20 6f 72 64 65 72 20 6f 66 20 74 68 65 20 6e 69 67 68 74 6d 61 72 65 20 6b 6e 69 67 68 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 12 0e 00 00 00 00 00 00 00 00 f8 12 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (123 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+80 00 77 00 f9 ff 0b 00 00 00 00 00 00 00 00 f8 ff 0b 00 00 00 00 00 00 00 00 23 00 49 74 20 75 6e 6c 65 61 73 68 65 73 20 74 68 65 20 76 65 72 79 20 66 69 72 65 73 20 6f 66 20 68 65 6c 6c 00 00 00 00 02 00 33 33 00 00 09 00 73 6f 72 63 65 72 65 72 73 00 00 00 00 00 00 08 00 77 61 6e 64 2f 72 6f 64 05 00 33 30 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (206 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+d0 00 ca 00 f9 02 0c 00 00 00 00 00 00 00 00 f8 02 0c 00 00 00 00 00 00 00 00 77 00 53 75 72 67 65 73 20 6f 66 20 65 6e 65 72 67 79 20 72 75 73 68 20 74 68 72 6f 75 67 68 20 74 68 65 20 74 69 70 20 6f 66 20 74 68 69 73 20 77 61 6e 64 2e 20 54 68 65 20 77 61 6e 64 20 68 61 73 20 6d 61 67 69 63 61 6c 20 70 6f 77 65 72 73 20 69 6e 73 69 64 65 20 61 6e 64 20 72 65 71 75 69 72 65 73 20 6e 6f 20 6d 61 6e 61 20 63 6f 6e 73 75 6d 70 74 69 6f 6e 00 00 00 00 01 00 37 00 00 09 00 73 6f 72 63 65 72 65 72 73 00 00 00 00 00 00 08 00 77 61 6e 64 2f 72 6f 64 05 00 32 33 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (147 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+98 00 8f 00 f9 03 0c 00 00 00 00 00 00 00 00 f8 03 0c 00 00 00 00 00 00 00 00 3b 00 4c 65 67 65 6e 64 73 20 73 61 79 20 74 68 61 74 20 74 68 69 73 20 77 61 6e 64 20 68 6f 6c 64 73 20 74 68 65 20 73 6f 75 6c 20 6f 66 20 61 20 79 6f 75 6e 67 20 64 72 61 67 6f 6e 00 00 00 00 02 00 31 33 00 00 09 00 73 6f 72 63 65 72 65 72 73 00 00 00 00 00 00 08 00 77 61 6e 64 2f 72 6f 64 05 00 32 33 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (117 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+78 00 71 00 f9 00 0c 00 00 00 00 00 00 00 00 f8 00 0c 00 00 00 00 00 00 00 00 1d 00 49 6e 66 65 63 74 69 6f 75 73 20 67 6f 6f 20 63 6f 76 65 72 73 20 69 74 73 20 74 69 70 00 00 00 00 02 00 31 39 00 00 09 00 73 6f 72 63 65 72 65 72 73 00 00 00 00 00 00 08 00 77 61 6e 64 2f 72 6f 64 05 00 32 33 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c4 1c 00 00 00 00 00 00 00 00 f8 c4 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c3 1c 00 00 00 00 00 00 00 00 f8 c3 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 99 0b 00 00 00 00 00 00 00 00 f8 99 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 54 0e 00 00 00 00 00 00 00 00 f8 54 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 60 0a 00 00 00 00 00 00 00 00 f8 60 0a 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 69 0c 00 00 00 00 00 00 00 00 f8 69 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 09 00 61 64 65 74 61 20 73 69 6f 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (82 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4e 00 f9 53 0c 00 00 00 00 00 00 00 00 f8 53 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 61 64 6f 72 69 20 76 69 74 61 20 76 69 73 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 32 0b 00 00 00 00 00 00 00 00 f8 32 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 37 0b 00 00 00 00 00 00 00 00 f8 37 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 38 0b 00 00 00 00 00 00 00 00 f8 38 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 31 0b 00 00 00 00 00 00 00 00 f8 31 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (95 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5b 00 f9 26 0b 00 00 00 00 01 00 00 00 9f da 53 62 03 00 01 00 01 00 00 00 00 00 00 00 06 00 45 72 69 6b 61 73 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 0b 00 00 00 00 00 00 00 00 f8 26 0b 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (82 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4e 00 f9 64 0c 00 00 00 00 00 00 00 00 f8 64 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 61 64 65 76 6f 20 67 72 61 76 20 70 6f 78 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (82 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4e 00 f9 53 0c 00 00 00 00 00 00 00 00 f8 53 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 61 64 6f 72 69 20 76 69 74 61 20 76 69 73 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 58 0c 00 00 00 00 00 00 00 00 f8 58 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 61 64 75 72 61 20 76 69 74 61 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (86 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 52 00 f9 5e 0c 00 00 00 00 00 00 00 00 f8 5e 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 12 00 61 64 65 76 6f 20 6d 61 73 20 67 72 61 76 20 76 69 73 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 f4 0d 00 00 00 00 00 00 00 00 f8 f4 0d 01 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 79 0d 00 00 00 00 00 00 00 00 f8 79 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 78 0d 00 00 00 00 00 00 00 00 f8 78 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 77 0d 00 00 00 00 00 00 00 00 f8 77 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 80 19 00 00 00 00 00 00 00 00 f8 80 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 37 30 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 7a 0d 00 00 00 00 00 00 00 00 f8 7a 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 76 0d 00 00 00 00 00 00 00 00 f8 76 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (113 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 6d 00 f9 da 0b 00 00 00 00 00 00 00 00 f8 da 0b 00 00 00 00 00 00 00 00 2d 00 54 68 65 72 65 20 61 72 65 20 6d 61 6e 79 20 72 75 6d 6f 75 72 73 20 61 62 6f 75 74 20 74 68 65 73 65 20 6d 61 67 69 63 20 67 65 6d 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (113 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 6d 00 f9 20 0b 00 00 00 00 00 00 00 00 f8 20 0b 00 00 00 00 00 00 00 00 2c 00 49 74 27 73 20 61 20 76 6f 6c 75 6d 65 20 6f 66 20 54 68 65 20 4d 79 73 74 69 63 20 53 65 63 72 65 74 73 20 6f 66 20 54 69 62 69 61 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 de 0b 00 00 00 00 00 00 00 00 f8 de 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 33 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (113 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 6d 00 f9 20 0b 00 00 00 00 00 00 00 00 f8 20 0b 00 00 00 00 00 00 00 00 2c 00 49 74 27 73 20 61 20 76 6f 6c 75 6d 65 20 6f 66 20 54 68 65 20 4d 79 73 74 69 63 20 53 65 63 72 65 74 73 20 6f 66 20 54 69 62 69 61 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 79 0d 00 00 00 00 00 00 00 00 f8 79 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c5 1c 00 00 00 00 00 00 00 00 f8 c5 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c4 1c 00 00 00 00 00 00 00 00 f8 c4 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 79 0d 00 00 00 00 00 00 00 00 f8 79 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 80 19 00 00 00 00 00 00 00 00 f8 80 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 37 30 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c5 1c 00 00 00 00 00 00 00 00 f8 c5 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 7a 0d 00 00 00 00 00 00 00 00 f8 7a 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 76 0d 00 00 00 00 00 00 00 00 f8 76 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 79 0d 00 00 00 00 00 00 00 00 f8 79 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c4 1c 00 00 00 00 00 00 00 00 f8 c4 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c3 1c 00 00 00 00 00 00 00 00 f8 c3 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 80 19 00 00 00 00 00 00 00 00 f8 80 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 37 30 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c5 1c 00 00 00 00 00 00 00 00 f8 c5 1c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 80 19 00 00 00 00 00 00 00 00 f8 80 19 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 37 30 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 7a 0d 00 00 00 00 00 00 00 00 f8 7a 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 79 0d 00 00 00 00 00 00 00 00 f8 79 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (75 bytes, 6 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 47 00 f9 78 0d 00 00 00 00 00 00 00 00 f8 78 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 6c 5b 7e e4 7d 06 01 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 77 0d 00 00 00 00 00 00 00 00 f8 77 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 76 0d 00 00 00 00 00 00 00 00 f8 76 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (115 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+78 00 6f 00 f9 ca 17 00 00 00 00 00 00 00 00 f8 ca 17 00 00 00 00 00 00 00 00 2f 00 49 74 20 63 6f 6e 74 61 69 6e 73 20 74 68 65 20 66 6f 75 72 74 68 20 61 6e 64 20 6c 61 73 74 20 76 65 72 73 65 20 6f 66 20 61 20 68 79 6d 6e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (85 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 51 00 f9 fe 0a 00 00 00 00 00 00 00 00 f8 fe 0a 00 00 00 00 00 00 00 00 11 00 49 74 20 69 73 20 72 65 77 72 69 74 65 61 62 6c 65 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 85 0d 00 00 00 00 00 00 00 00 f8 85 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (155 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a0 00 97 00 f9 60 19 00 00 00 00 00 00 00 00 f8 60 19 00 00 00 00 00 00 00 00 56 00 49 74 20 63 6f 6e 74 61 69 6e 73 20 70 72 65 73 65 6e 74 73 20 77 68 69 63 68 20 77 65 72 65 20 73 74 6f 6c 65 6e 20 66 72 6f 6d 20 53 61 6e 74 61 2e 20 42 72 69 6e 67 20 74 68 65 6d 20 62 61 63 6b 20 74 6f 20 52 75 70 72 65 63 68 74 20 6f 6e 20 56 65 67 61 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 38 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 0c 0e 00 00 00 00 00 00 00 00 f8 0c 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 8d 0e 00 00 00 00 00 00 00 00 f8 8d 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (173 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+b0 00 a9 00 f9 90 16 00 00 00 00 00 00 00 00 f8 90 16 00 00 00 00 00 00 00 00 69 00 52 75 6d 6f 75 72 73 20 73 61 79 20 74 68 61 74 20 74 68 65 20 47 6f 64 73 20 65 6e 63 68 61 6e 74 65 64 20 74 68 65 73 65 20 74 61 6c 6f 6e 73 20 66 6f 72 20 74 68 65 20 67 72 65 61 74 65 73 74 20 67 6f 6f 64 2c 20 6f 72 20 74 68 65 20 67 72 65 61 74 65 73 74 20 65 76 69 6c 20 61 63 68 69 65 76 65 6d 65 6e 74 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 d6 0b 00 00 00 00 00 00 00 00 f8 d6 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 31 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 68 0b 00 00 00 00 00 00 00 00 f8 68 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 d8 0b 00 00 00 00 00 00 00 00 f8 d8 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 31 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 d9 0b 00 00 00 00 00 00 00 00 f8 d9 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 31 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 e1 0b 00 00 00 00 00 00 00 00 f8 e1 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 33 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 04 0c 00 00 00 00 00 00 00 00 f8 04 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 34 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f6 0b 00 00 00 00 00 00 00 00 f8 f6 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f5 0b 00 00 00 00 00 00 00 00 f8 f5 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 d5 0b 00 00 00 00 00 00 00 00 f8 d5 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 31 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (113 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 6d 00 f9 20 0b 00 00 00 00 00 00 00 00 f8 20 0b 00 00 00 00 00 00 00 00 2c 00 49 74 27 73 20 61 20 76 6f 6c 75 6d 65 20 6f 66 20 54 68 65 20 4d 79 73 74 69 63 20 53 65 63 72 65 74 73 20 6f 66 20 54 69 62 69 61 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f4 0b 00 00 00 00 00 00 00 00 f8 f4 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 ba 0b 00 00 00 00 00 00 00 00 f8 ba 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 65 0b 00 00 00 00 00 00 00 00 f8 65 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 33 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 87 0d 00 00 00 00 00 00 00 00 f8 87 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 39 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c9 0b 00 00 00 00 00 00 00 00 f8 c9 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 31 2e 31 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 85 0b 00 00 00 00 00 00 00 00 f8 85 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 32 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 32 0c 00 00 00 00 00 00 00 00 f8 32 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 39 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 fe 0d 00 00 00 00 00 00 00 00 f8 fe 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 08 17 00 00 00 00 00 00 00 00 f8 08 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 31 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 f3 0b 00 00 00 00 00 00 00 00 f8 f3 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 35 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (105 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 65 00 f9 0a 17 00 00 00 00 00 00 00 00 f8 0a 17 00 00 00 00 00 00 00 00 25 00 59 6f 75 20 63 6f 75 6c 64 20 73 77 65 61 72 20 69 74 20 6a 75 73 74 20 77 69 6e 6b 65 64 20 61 74 20 79 6f 75 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 2a 17 00 00 00 00 00 00 00 00 f8 2a 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 32 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (105 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 65 00 f9 0a 17 00 00 00 00 00 00 00 00 f8 0a 17 00 00 00 00 00 00 00 00 25 00 59 6f 75 20 63 6f 75 6c 64 20 73 77 65 61 72 20 69 74 20 6a 75 73 74 20 77 69 6e 6b 65 64 20 61 74 20 79 6f 75 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 4b 0e 00 00 00 00 00 00 00 00 f8 4b 0e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 18 17 00 00 00 00 00 00 00 00 f8 18 17 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (143 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+90 00 8b 00 f9 02 17 00 00 00 00 00 00 00 00 f8 02 17 00 00 00 00 00 00 00 00 4b 00 53 6f 6d 65 20 74 68 6f 75 73 61 6e 64 73 20 6f 66 20 74 68 65 73 65 20 77 6f 75 6c 64 20 70 72 6f 62 61 62 6c 79 20 6d 61 6b 65 20 61 6e 20 65 78 74 72 65 6d 65 6c 79 20 63 6f 6d 66 6f 72 74 61 62 6c 65 20 70 69 6c 6c 6f 77 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 31 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (95 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5b 00 f9 1f 17 00 00 00 00 00 00 00 00 f8 1f 17 00 00 00 00 00 00 00 00 1a 00 49 74 20 69 73 20 74 68 65 20 63 6c 61 77 20 6f 66 20 44 65 6d 6f 64 72 61 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 32 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 4d 0d 00 00 00 00 00 00 00 00 f8 4d 0d 01 00 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 34 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 1c 0d 00 00 00 00 00 00 00 00 f8 1c 0d 01 00 37 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 35 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 27 0d 00 00 00 00 00 00 00 00 f8 27 0d 01 00 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (107 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 67 00 f9 f6 0d 00 00 00 00 00 00 00 00 f8 f6 0d 01 00 31 00 00 00 00 00 00 26 00 53 6f 6d 65 74 68 69 6e 67 20 69 73 20 73 74 72 61 6e 67 65 20 61 62 6f 75 74 20 74 68 69 73 20 74 75 72 62 61 6e 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 2f 0d 00 00 00 00 00 00 00 00 f8 2f 0d 01 00 35 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (167 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a8 00 a3 00 f9 0f 17 00 00 00 00 00 00 00 00 f8 0f 17 01 00 31 00 00 00 00 00 00 62 00 49 74 20 69 73 20 74 68 65 20 70 72 6f 6f 66 20 74 68 61 74 20 46 65 72 75 6d 62 72 61 73 20 68 61 73 20 66 61 6c 6c 65 6e 2e 20 46 6f 72 20 6e 6f 77 2e 20 54 68 65 20 45 64 72 6f 6e 20 41 63 61 64 65 6d 79 20 73 68 6f 75 6c 64 20 62 65 20 69 6e 74 65 72 65 73 74 65 64 20 69 6e 20 74 68 69 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 88 0b 00 00 00 00 00 00 00 00 f8 88 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 8a 0b 00 00 00 00 00 00 00 00 f8 8a 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (118 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+78 00 72 00 f9 ec 12 00 00 00 00 00 00 00 00 f8 ec 12 00 00 00 00 00 00 00 00 31 00 49 74 20 63 6f 6e 74 61 69 6e 73 20 61 20 63 6f 6c 6c 65 63 74 69 6f 6e 20 6f 66 20 62 65 61 75 74 69 66 75 6c 20 65 6c 76 65 6e 20 70 6f 65 6d 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 33 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (79 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4b 00 f9 e5 0b 00 00 00 00 00 00 00 00 f8 e5 0b 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 65 6e 65 72 67 79 20 2b 31 30 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 cb 0b 00 00 00 00 00 00 00 00 f8 cb 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (79 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4b 00 f9 e5 0b 00 00 00 00 00 00 00 00 f8 e5 0b 00 00 00 00 00 00 00 00 00 00 00 00 0b 00 65 6e 65 72 67 79 20 2b 31 30 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 08 0c 00 00 00 00 00 00 00 00 f8 08 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (99 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 5f 00 f9 c5 0b 00 00 00 00 00 00 00 00 f8 c5 0b 00 00 00 00 00 00 00 00 1f 00 4d 61 6e 79 20 67 65 6d 73 20 67 6c 69 74 74 65 72 20 6f 6e 20 74 68 65 20 61 6d 75 6c 65 74 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 33 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 ee 0b 00 00 00 00 00 00 00 00 f8 ee 0b 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 65 61 72 74 68 20 2b 31 30 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 ca 0b 00 00 00 00 00 00 00 00 f8 ca 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 37 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 ee 0b 00 00 00 00 00 00 00 00 f8 ee 0b 00 00 00 00 00 00 00 00 00 00 00 00 0a 00 65 61 72 74 68 20 2b 31 30 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 c8 0b 00 00 00 00 00 00 00 00 f8 c8 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 f4 0d 00 00 00 00 00 00 00 00 f8 f4 0d 01 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (82 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4e 00 f9 f0 0b 00 00 00 00 00 00 00 00 f8 f0 0b 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 6d 61 6e 61 64 72 61 69 6e 20 2b 31 35 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (82 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4e 00 f9 0b 0c 00 00 00 00 00 00 00 00 f8 0b 0c 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 6c 69 66 65 64 72 61 69 6e 20 2b 32 30 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 33 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f1 0b 00 00 00 00 00 00 00 00 f8 f1 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 34 2e 32 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (82 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4e 00 f9 0b 0c 00 00 00 00 00 00 00 00 f8 0b 0c 00 00 00 00 00 00 00 00 00 00 00 00 0e 00 6c 69 66 65 64 72 61 69 6e 20 2b 32 30 25 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 33 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 55 15 00 00 00 00 00 00 00 00 f8 55 15 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 e4 0d 00 00 00 00 00 00 00 00 f8 e4 0d 01 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 df 0d 00 00 00 00 00 00 00 00 f8 df 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 e2 0d 00 00 00 00 00 00 00 00 f8 e2 0d 01 00 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 e1 0d 00 00 00 00 00 00 00 00 f8 e1 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 e0 0d 00 00 00 00 00 00 00 00 f8 e0 0d 01 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 07 0c 00 00 00 00 00 00 00 00 f8 07 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 09 00 73 70 65 65 64 20 2b 31 30 00 00 00 00 04 00 37 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 e2 0d 00 00 00 00 00 00 00 00 f8 e2 0d 01 00 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 07 0c 00 00 00 00 00 00 00 00 f8 07 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 09 00 73 70 65 65 64 20 2b 31 30 00 00 00 00 04 00 37 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 07 0c 00 00 00 00 00 00 00 00 f8 07 0c 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 09 00 73 70 65 65 64 20 2b 32 30 00 00 00 00 04 00 37 2e 35 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (98 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5e 00 f9 ae 0c 00 00 00 00 00 00 00 00 f8 ae 0c 00 00 00 00 00 00 00 00 1e 00 28 54 68 69 73 20 69 74 65 6d 20 68 61 73 20 35 20 63 68 61 72 67 65 73 20 6c 65 66 74 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 37 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (98 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5e 00 f9 ae 0c 00 00 00 00 00 00 00 00 f8 ae 0c 00 00 00 00 00 00 00 00 1e 00 28 54 68 69 73 20 69 74 65 6d 20 68 61 73 20 35 20 63 68 61 72 67 65 73 20 6c 65 66 74 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 37 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 de 0d 00 00 00 00 00 00 00 00 f8 de 0d 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (98 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5e 00 f9 ae 0c 00 00 00 00 00 00 00 00 f8 ae 0c 00 00 00 00 00 00 00 00 1e 00 28 54 68 69 73 20 69 74 65 6d 20 68 61 73 20 35 20 63 68 61 72 67 65 73 20 6c 65 66 74 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 37 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (98 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5e 00 f9 ae 0c 00 00 00 00 00 00 00 00 f8 ae 0c 00 00 00 00 00 00 00 00 1e 00 28 54 68 69 73 20 69 74 65 6d 20 68 61 73 20 35 20 63 68 61 72 67 65 73 20 6c 65 66 74 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 37 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (157 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a0 00 99 00 f9 21 1d 00 00 00 00 00 00 00 00 f8 21 1d 01 00 32 00 00 00 00 00 00 57 00 54 68 65 73 65 20 62 6f 6f 74 73 20 6b 65 65 70 20 79 6f 75 72 20 74 6f 65 73 20 77 61 72 6d 20 69 6e 20 65 76 65 6e 20 74 68 65 20 69 63 69 65 73 74 20 72 65 67 69 6f 6e 73 2c 20 62 75 74 20 74 68 65 79 20 66 65 65 6c 20 6b 69 6e 64 20 6f 66 20 68 65 61 76 79 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 55 15 00 00 00 00 00 00 00 00 f8 55 15 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (157 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a0 00 99 00 f9 21 1d 00 00 00 00 00 00 00 00 f8 21 1d 01 00 32 00 00 00 00 00 00 57 00 54 68 65 73 65 20 62 6f 6f 74 73 20 6b 65 65 70 20 79 6f 75 72 20 74 6f 65 73 20 77 61 72 6d 20 69 6e 20 65 76 65 6e 20 74 68 65 20 69 63 69 65 73 74 20 72 65 67 69 6f 6e 73 2c 20 62 75 74 20 74 68 65 79 20 66 65 65 6c 20 6b 69 6e 64 20 6f 66 20 68 65 61 76 79 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 55 15 00 00 00 00 00 00 00 00 f8 55 15 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 55 15 00 00 00 00 00 00 00 00 f8 55 15 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 e2 0d 00 00 00 00 00 00 00 00 f8 e2 0d 01 00 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (98 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+60 00 5e 00 f9 ae 0c 00 00 00 00 00 00 00 00 f8 ae 0c 00 00 00 00 00 00 00 00 1e 00 28 54 68 69 73 20 69 74 65 6d 20 68 61 73 20 35 20 63 68 61 72 67 65 73 20 6c 65 66 74 29 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 37 2e 37 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 f3 0d 00 00 00 00 00 00 00 00 f8 f3 0d 01 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 33 0d 00 00 00 00 00 00 00 00 f8 33 0d 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 32 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (72 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 44 00 f9 2a 0d 00 00 00 00 00 00 00 00 f8 2a 0d 02 00 31 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 31 32 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (112 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+70 00 6c 00 f9 26 0d 00 00 00 00 00 00 00 00 f8 26 0d 02 00 31 37 00 00 00 00 00 00 29 00 41 6e 20 65 6e 63 68 61 6e 74 65 64 20 67 65 6d 20 67 6c 6f 77 73 20 6f 6e 20 74 68 65 20 70 6c 61 74 65 20 61 72 6d 6f 72 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 38 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 df 0d 00 00 00 00 00 00 00 00 f8 df 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 de 0d 00 00 00 00 00 00 00 00 f8 de 0d 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 df 0d 00 00 00 00 00 00 00 00 f8 df 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 de 0d 00 00 00 00 00 00 00 00 f8 de 0d 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 df 0d 00 00 00 00 00 00 00 00 f8 df 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (157 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a0 00 99 00 f9 21 1d 00 00 00 00 00 00 00 00 f8 21 1d 01 00 32 00 00 00 00 00 00 57 00 54 68 65 73 65 20 62 6f 6f 74 73 20 6b 65 65 70 20 79 6f 75 72 20 74 6f 65 73 20 77 61 72 6d 20 69 6e 20 65 76 65 6e 20 74 68 65 20 69 63 69 65 73 74 20 72 65 67 69 6f 6e 73 2c 20 62 75 74 20 74 68 65 79 20 66 65 65 6c 20 6b 69 6e 64 20 6f 66 20 68 65 61 76 79 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 32 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 e3 0d 00 00 00 00 00 00 00 00 f8 e3 0d 01 00 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 e3 0d 00 00 00 00 00 00 00 00 f8 e3 0d 01 00 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 e4 0d 00 00 00 00 00 00 00 00 f8 e4 0d 01 00 31 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 55 15 00 00 00 00 00 00 00 00 f8 55 15 01 00 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 e3 0d 00 00 00 00 00 00 00 00 f8 e3 0d 01 00 34 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 33 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 e1 0d 00 00 00 00 00 00 00 00 f8 e1 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 df 0d 00 00 00 00 00 00 00 00 f8 df 0d 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 36 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (69 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 41 00 f9 af 1c 00 00 00 00 00 00 00 00 f8 af 1c 00 00 00 00 01 00 38 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 26 17 00 00 00 00 00 00 00 00 f8 26 17 00 00 00 00 02 00 32 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 31 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (87 bytes, 11 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 53 00 f9 81 19 00 00 00 00 00 00 00 00 f8 81 19 00 00 00 00 00 00 00 00 00 00 07 00 34 20 68 6f 75 72 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 38 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 6d 5d 7e e5 7d 06 01 5e 7e e5 7d 06 
+
+ProtocolGame parse message exception (72 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 44 00 f9 2a 0d 00 00 00 00 00 00 00 00 f8 2a 0d 02 00 31 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 06 00 31 32 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (88 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 54 00 f9 1a 0c 00 00 00 00 00 00 00 00 f8 1a 0c 00 00 00 00 00 00 00 00 00 00 14 00 37 20 6d 69 6e 75 74 65 73 20 33 30 20 73 65 63 6f 6e 64 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 14 0c 00 00 00 00 00 00 00 00 f8 14 0c 00 00 00 00 00 00 00 00 00 00 0a 00 33 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 eb 0b 00 00 00 00 00 00 00 00 f8 eb 0b 00 00 00 00 00 00 00 00 00 00 0a 00 31 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 ec 0b 00 00 00 00 00 00 00 00 f8 ec 0b 00 00 00 00 00 00 00 00 00 00 0a 00 32 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (68 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 40 00 f9 f7 0b 00 00 00 00 00 00 00 00 f8 f7 0b 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 ed 0b 00 00 00 00 00 00 00 00 f8 ed 0b 00 00 00 00 00 00 00 00 00 00 0a 00 31 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 e9 0b 00 00 00 00 00 00 00 00 f8 e9 0b 00 00 00 00 00 00 00 00 00 00 0a 00 31 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 ea 0b 00 00 00 00 00 00 00 00 f8 ea 0b 00 00 00 00 00 00 00 00 00 00 0a 00 33 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 eb 0b 00 00 00 00 00 00 00 00 f8 eb 0b 00 00 00 00 00 00 00 00 00 00 0a 00 31 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (78 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 4a 00 f9 ec 0b 00 00 00 00 00 00 00 00 f8 ec 0b 00 00 00 00 00 00 00 00 00 00 0a 00 32 30 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (88 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 54 00 f9 1a 0c 00 00 00 00 00 00 00 00 f8 1a 0c 00 00 00 00 00 00 00 00 00 00 14 00 37 20 6d 69 6e 75 74 65 73 20 33 30 20 73 65 63 6f 6e 64 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (77 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+50 00 49 00 f9 9b 18 00 00 00 00 00 00 00 00 f8 9b 18 00 00 00 00 00 00 00 00 00 00 09 00 38 20 6d 69 6e 75 74 65 73 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 38 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (104 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+68 00 64 00 f9 cd 17 00 00 00 00 00 00 00 00 f8 cd 17 00 00 00 00 00 00 00 00 24 00 54 68 65 20 69 6e 69 74 69 61 6c 73 20 45 2e 53 2e 20 61 72 65 20 65 6e 67 72 61 76 65 64 20 6f 6e 20 69 74 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (116 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+78 00 70 00 f9 bf 0b 00 00 00 00 00 00 00 00 f8 bf 0b 00 00 00 00 00 00 00 00 30 00 54 68 65 20 6d 61 67 69 63 61 6c 20 72 69 6e 67 20 77 69 6c 6c 20 63 6f 6e 76 65 72 74 20 74 68 65 20 67 6f 6c 64 20 79 6f 75 20 74 6f 75 63 68 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 04 00 30 2e 39 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (89 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 55 00 f9 16 0d 00 00 00 00 00 00 00 00 f8 16 0d 00 00 01 00 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 33 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (158 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a0 00 9a 00 f9 0e 1d 00 00 00 00 00 00 00 00 f8 0e 1d 00 00 01 00 30 00 00 00 00 45 00 54 68 69 73 20 62 65 61 75 74 69 66 75 6c 6c 79 20 6f 72 6e 61 6d 65 6e 74 65 64 20 62 6f 77 20 77 61 73 20 6d 61 64 65 20 62 79 20 61 20 73 6b 69 6c 6c 65 64 20 65 6c 76 69 73 68 20 62 6f 77 6d 61 6b 65 72 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 33 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (89 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 55 00 f9 15 0d 00 00 00 00 00 00 00 00 f8 15 0d 00 00 01 00 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 34 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (149 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+98 00 91 00 f9 ab 16 00 00 00 00 00 00 00 00 f8 ab 16 00 00 01 00 30 00 00 00 00 3c 00 49 74 20 69 73 20 61 20 62 69 74 20 68 65 61 76 79 20 64 75 65 20 74 6f 20 74 68 65 20 69 72 6f 6e 20 6d 6f 75 6e 74 69 6e 67 2c 20 62 75 74 20 76 65 72 79 20 70 72 65 63 69 73 65 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 39 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (158 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+a0 00 9a 00 f9 0e 1d 00 00 00 00 00 00 00 00 f8 0e 1d 00 00 01 00 30 00 00 00 00 45 00 54 68 69 73 20 62 65 61 75 74 69 66 75 6c 6c 79 20 6f 72 6e 61 6d 65 6e 74 65 64 20 62 6f 77 20 77 61 73 20 6d 61 64 65 20 62 79 20 61 20 73 6b 69 6c 6c 65 64 20 65 6c 76 69 73 68 20 62 6f 77 6d 61 6b 65 72 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 33 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (89 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 55 00 f9 16 0d 00 00 00 00 00 00 00 00 f8 16 0d 00 00 01 00 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 33 31 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (89 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 55 00 f9 15 0d 00 00 00 00 00 00 00 00 f8 15 0d 00 00 01 00 30 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 13 00 6d 69 73 73 69 6c 65 2c 20 74 77 6f 2d 68 61 6e 64 65 64 05 00 34 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (70 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 42 00 f9 4a 0d 00 00 00 00 00 00 00 00 f8 4a 0d 01 00 37 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 38 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 3c 0d 00 00 00 00 00 00 00 00 f8 3c 0d 02 00 31 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 38 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 42 0d 00 00 00 00 00 00 00 00 f8 42 0d 02 00 31 33 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 39 39 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (71 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+48 00 43 00 f9 3c 0d 00 00 00 00 00 00 00 00 f8 3c 0d 02 00 31 36 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 05 00 38 30 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (88 bytes, 1 unread, last opcode is 0x00 (0), prev opcode is 0x00 (0), proto: 772): InputMessage eof reached
+58 00 54 00 f9 c0 0c 00 00 00 00 00 00 00 00 f8 c0 0c 00 00 02 00 31 34 00 00 02 00 31 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 73 74 61 62 62 69 6e 67 20 77 65 61 70 6f 6e 05 00 33 35 2e 30 30 00 00 00 00 00 00 00 
+00 00 00 00 00 
+00 00 00 00 
+
+ProtocolGame parse message exception (74 bytes, 58 unread, last opcode is 0xf8 (248), prev opcode is 0xf9 (249), proto: 772): unhandled opcode 248
+48 00 46 00 
+f9 c0 0c 00 00 00 00 00 00 00 00 
+f8 c0 0c 00 00 02 00 31 34 00 00 02 00 31 32 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 0f 00 73 74 61 62 62 69 6e 67 20 77 65 61 70 6f 6e 05 00 33 35 2e 30 30 00 00 
+

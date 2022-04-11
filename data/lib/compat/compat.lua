@@ -998,3 +998,22 @@ end
 function Guild.removeMember(self, player)
 	return player:getGuild() == self and player:setGuild(nil)
 end
+
+function getCombatName(combat)
+	local combats = {
+		[COMBAT_PHYSICALDAMAGE] = 'physical',
+		[COMBAT_ENERGYDAMAGE] = 'energy',
+		[COMBAT_EARTHDAMAGE] = 'earth',
+		[COMBAT_FIREDAMAGE] = 'fire',
+		[COMBAT_UNDEFINEDDAMAGE] = 'undefined',
+		[COMBAT_LIFEDRAIN] = 'lifedrain',
+		[COMBAT_MANADRAIN] = 'manadrain',
+		[COMBAT_HEALING] = 'healing',
+		[COMBAT_DROWNDAMAGE] = 'drown',
+		--[COMBAT_ICEDAMAGE] = 'ice',
+		--[COMBAT_HOLYDAMAGE] = 'holy',
+		--[COMBAT_DEATHDAMAGE] = 'death'
+	}
+
+	return combats[combat]
+end
