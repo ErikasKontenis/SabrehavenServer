@@ -1,0 +1,57 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# Henricus.npc: Datenbank für den Waffenhändler Henricus
+
+Name = "Henricus"
+Outfit = (132,79-0-96-0-0)
+Home = [32316,32268,8]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!   -> "Greetings, fellow believer %N!"
+ADDRESS,"hi$",!      -> *
+ADDRESS,!            -> Idle
+BUSY,"hello$",!      -> "I will have finished soon %N.", Queue
+BUSY,"hi$",!         -> *
+BUSY,!               -> NOP
+VANISH,!             -> "This ungraceful haste is most suspicious!", Idle
+
+"bye"             -> "Always be on guard, %N!", Idle
+"inquisitor" -> "The churches of the gods entrusted me with the enormous and responsible task to lead the inquisition. I leave the field work to inquisitors who I recruit from fitting people that cross my way."
+"name" -> "I'm Henricus, the Lord Inquisitor."
+"time" -> "Don't worry, there is enough time left."
+"job" -> "By edict of the churches I'm the Lord Inquisitor."
+"believer" -> "Belive on the gods and they will show you the path."
+"church" -> "The churches of the gods united to fight heresy and dark magic. They are the shield of the true believers, while the inquisition is the sword that fights all enemies of virtuousness."
+"gods" -> "We owe to the gods of good our creation and continuing existence. If it weren't for them, we would surely fall prey to the minions of the vile and dark gods."
+"crunor" -> "The church of Crunor works closely together with the druid guild. This makes a cooperation sometimes difficult."
+"zathroth" -> "We can see his evil influence almost everywhere. Keep your eyes open or the dark one will lead you on the wrong way and destroy you."
+"carlin" -> "Carlin is a city of sin and heresy. After the reunion of Carlin with the kingdom, the inquisition will have much work to purify the city and its inhabitants."
+"demon" -> "Demons exist in many different shapes and levels of power. In general, they are servants of the dark gods and command great powers of destruction."
+"darashia" -> "Darashia is a godless town full of mislead fools. One day, it will surely share the fate of its sister town Drefia."
+"drefia" -> "Drefia used to be a city of sin and heresy, just like Carlin nowadays. One day, the gods decided to destroy this town and to erase all evil there."
+"venore" -> "Venore is somewhat difficult to handle. The merchants have a close eye on our activities in their city and our authority is limited there. However, we will use all of our influence to prevent a second Carlin."
+"ab'dendriel" -> "Those elves are hardly any more civilised than orcs. They can become a threat to mankind at any time."
+"elves" -> "Those elves are hardly any more civilised than orcs. They can become a threat to mankind at any time."
+"kazordoon" -> "The dwarfs are allied with Thais but follow their own obscure religion. Although dwarfs keep mostly to themselves, we have to observe this alliance closely."
+"dwarf" -> "The dwarfs are allied with Thais but follow their own obscure religion. Although dwarfs keep mostly to themselves, we have to observe this alliance closely."
+"druid" -> "The druids here still follow the old rules. Sadly, the druids of Carlin have left the right path in the last years."
+"sorcerer" -> "Those who wield great power have to resist great temptations. We have the burden to eliminate all those who give in to the temptations."
+"knight" -> "Nowadays, most knights seem to have forgotten the noble cause to which all knights were bound in the past. Only a few have remained pious, serve the gods and follow their teachings."
+"paladin" -> "It's a shame that only a few paladins still use their abilities to further the cause of the gods of good. Too many paladins have become selfish and greedy."
+
+"join",QuestValue(12160)<1 -> "Do you want to join the inquisition?", topic=1
+"mission",QuestValue(12160)<1 -> "Do you want to join the inquisition?", topic=1
+"report",QuestValue(12160)<1 -> "Do you want to join the inquisition?", topic=1
+topic=1,"no" -> "I expected better from you."
+topic=1,"yes" -> "So be it. Now you are a member of the inquisition. You might ask me for a mission to raise in my esteem.",SetQuestValue(12160,1)
+topic=1 -> "Uh? Whatever."
+
+"mission",QuestValue(12160)=1 -> "Let's see if you are worthy. Take an inquisitor's field guide from the box in the back room. ...",
+	"Follow the instructions in the guide to talk to the Thaian guards that protect the walls and gates of the city and test their loyalty. Then report to me about your mission.",SetQuestValue(12160,2),SetQuestValue(12161,1)
+"mission",QuestValue(12160)=2 -> "Your current mission is to investigate the reliability of certain guards. Are you done with that mission?", topic=2
+"yes",QuestValue(12174)=1,QuestValue(12171)=1,QuestValue(12170)=1,QuestValue(12172)=1,QuestValue(12173)=1,topic=2 -> "Indeed, this is exactly what my other sources told me. Of course I knew the outcome of this investigation in advance. This was just a test. ...",
+	"Well, now that you've proven yourself as useful, you can ask me for another mission. Let's see if you can handle some field duty, too.",SetQuestValue(12161,7),SetQuestValue(12160,3)
+"yes",topic=2  -> "You haven't done your mission yet."
+topic=2  -> "I expected better from you."
+
+}

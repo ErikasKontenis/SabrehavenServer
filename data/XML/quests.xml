@@ -539,4 +539,50 @@
 		<mission name="Proof of the trustworthy" storageid="17651" startvalue="0" endvalue="50" description="You already hunted |STATE|/50 orcs." />
 		<mission name="Reward of the trustworthy" storageid="17650" startvalue="2" endvalue="2" description="You have proved your trustworthy and claimed the reward." />
 	</quest>
+	<quest name="The Inquisition" startstorageid="12160" startstoragevalue="2">
+		<mission name="Mission 1: Interrogation" storageid="12161" startvalue="1" endvalue="7">
+			<missionstate id="1" description="Your mission is to investigate the 5 guards in Thais regarding the Heretic behavior. Tim, Kulag, Grof, Miles and Walter are their names. If you do well you see a holy sprite on you." />
+			<missionstate id="2" description="You investigated 1 of 5 guards in Thais." />
+			<missionstate id="3" description="You investigated 2 of 5 guards in Thais." />
+			<missionstate id="4" description="You investigated 3 of 5 guards in Thais." />
+			<missionstate id="5" description="You investigated 4 of 5 guards in Thais." />
+			<missionstate id="6" description="You investigated 5 of 5 guards in Thais. Get back to Thais and report your mission to Henricus." />
+			<missionstate id="7" description="You investigated all guards in Thais." />
+		</mission>
+		<mission name="Mission 2: Eclipse" storageid="12162" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Henricus tells you to get The Witches' Grimoire, he sends you to Femor Hills where you can fly to the witches' mountain, say Eclipse to Uzon and he will take you there. Use the vial of holy water that he gives you on the big cauldron and open the chest to your left, then bring the witches' grimoire to Henricus." />
+			<missionstate id="2" description="Find the witches' grimoire and bring it to Henricus." />
+			<missionstate id="3" description="You already brought the witches' grimoire to Henricus." />
+		</mission>
+		<mission name="Mission 3: Vampire Hunt" storageid="12163" startvalue="1" endvalue="6">
+			<missionstate id="1" description="Henricus wants you to find the Dwarfish Vampire Hunter, Storkus, located west of the Dwarf Bridge. It's good idea bring your 20 Vampire Dusts with you to save some time." />
+			<missionstate id="2" description="Go Back to Storkus the Dwarf and ask for Mission." />
+			<missionstate id="3" description="Now Storkus wants you to kill a vampire lord, The Count in the Green Claw Swamp, The Count is located near to the Blood Herb Quest. To summon The Count, you must use the coffin in the center of the room. Kill it and bring The Ring of the Count to Storkus." />
+			<missionstate id="4" description="Kill The Count and bring his ring to Storkus the Dwarf and ask for Mission." />
+			<missionstate id="5" description="Return to Henricus and tell him that you finished your job here." />
+			<missionstate id="6" description="Get back to Thais and report your mission to Henricus." />
+		</mission>
+		<mission name="Mission 4: The Haunted Ruin" storageid="12164" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Henricus will gave you a Special Flask (vial of holy water). Go to Liberty Bay and use the vial on an old house. Use this vial of holy water on that spot to drive out the evil being." />
+			<missionstate id="2" description="Kill the Pirate Ghost and get back to Thais and report your mission to Henricus." />
+			<missionstate id="3" description="You already cleaned the abandoned and haunted house in Liberty, ask Henricus for mission." />
+		</mission>
+		<mission name="Mission 5: Essential Gathering" storageid="12165" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Henricus wants 20 Demonic Essences as a proof of your accomplishments." />
+			<missionstate id="2" description="Now ask Henricus for outfit to get the Demon Hunter Outfit." />
+			<missionstate id="3" description="You got the Demon Hunter Outfit! Ask Henricus for mission to unlock more addons." />
+		</mission>
+		<mission name="Mission 6: The Demon Ungreez" storageid="12166" startvalue="1" endvalue="3">
+			<missionstate id="1" description="Henricus wants you to kill a demon called Ungreez. Head to Edron Hero Cave and go down a few levels." />
+			<missionstate id="2" description="You killed Ungreez, report your mission to Henricus." />
+			<missionstate id="3" description="You got the the first addon of Demon Hunter Outfit! Ask Henricus for mission to unlock more addons." />
+		</mission>
+		<mission name="Mission 7: The Shadow Nexus" storageid="12167" startvalue="1" endvalue="5">
+			<missionstate id="1" description="Your mission is to go to the Demon Forge and slay seven of The Ruthless Seven Minions. The Demon Forge is located in the Edron Hero Cave, through a portal after the Vampire Shield Quest." />
+			<missionstate id="2" description="You destroyed the shadow nexus! Get back to Thais and report your mission to Henricus." />
+			<missionstate id="3" description="Now ask to Henricus for a outfit. He will give you the 2nd addon of the Demon Hunter Outfits." />
+			<missionstate id="4" description="You got the the second addon of Demon Hunter Outfit! Go now to the reward room and choose one wisely!" />
+			<missionstate id="5" description="You have completed The Inquisition Quest! You can now buy the Blessing of the Inquisition!" />
+		</mission>
+	</quest>
 </quests>
