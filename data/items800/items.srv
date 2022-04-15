@@ -33813,6 +33813,7 @@ Name        = "the market"
 Flags       = {Unmove}
 
 TypeID      = 7478
-Name        = "your store inbox"
-Flags       = {Container,Unmove}
-Attributes  = {Capacity=30}
+Name        = "a special flask"
+Description = "It contains holy water from the white raven monastery"
+Flags       = {Take}
+Attributes  = {Weight=180}

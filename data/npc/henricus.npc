@@ -54,4 +54,9 @@ topic=1 -> "Uh? Whatever."
 "yes",topic=2  -> "You haven't done your mission yet."
 topic=2  -> "I expected better from you."
 
+"mission",QuestValue(12160)=3 -> "Listen, we have information about a heretic coven that hides in a mountain called the Big Old One. The witches reach this cursed place on flying brooms and think they are safe there. ...",
+	"I've arranged a flying carpet that will bring you to their hideout. Travel to Femor Hills and tell the carpet pilot the codeword 'eclipse' ...",
+	"He'll bring you to your destination. At their meeting place, you'll find a cauldron in which they cook some forbidden brew ...",
+	"Use this vial of holy water to destroy the brew. Also steal their grimoire and bring it to me.",SetQuestValue(12160,4),SetQuestValue(12162,1),Create(7478)
+"mission",QuestValue(12160)=4 -> "Your current mission is to destroy the brew in the eclipse."
 }

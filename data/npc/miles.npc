@@ -1,0 +1,16 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# Miles.npc: Datenbank für die Stadtwache am Westtor
+
+Name = "Miles, the guard"
+Outfit = (131,19-19-19-19-0)
+Home = [32431,32173,05]
+Radius = 2
+
+Behaviour = {
+@"guards-thais.ndb"
+
+"trouble",QuestValue(12172)<1,QuestValue(12161)>=1 -> "I'm fine. There's no trouble at all.",topic=2
+"foresight of the authorities",topic=2  -> "Well, of course. We live in safety and peace.",topic=3
+"also for the gods",topic=3  -> "I think the gods are looking after us and their hands shield us from evil.",topic=4
+"trouble will arise in the near future",topic=4  -> "I think the gods and the government do their best to keep away harm from the citizens.",SetQuestValue(12161, QuestValue(12161) + 1),SetQuestValue(12172,1),EffectOpp(13)
+}

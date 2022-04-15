@@ -8,4 +8,9 @@ Radius = 4
 
 Behaviour = {
 @"guards-thais.ndb"
+
+"trouble",QuestValue(12173)<1,QuestValue(12161)>=1 -> "Ah, well. Just this morning my new toothbrush fell into the toilet.",topic=2
+"authorities",topic=2  -> "What do you mean? Of course they will immediately send someone with extra long and thin arms to retrieve it!",topic=3
+"avoided",topic=3  -> "Your humour might let end you up beaten in some dark alley, you know? No, I don't think someone could have prevented that accident!",topic=4
+"gods would allow",topic=4  -> "It's not a drama!! I think there is just no god who's responsible for toothbrush safety, that's all!",SetQuestValue(12161, QuestValue(12161) + 1),SetQuestValue(12173,1),EffectOpp(13)
 }

@@ -8,4 +8,7 @@ Radius = 2
 
 Behaviour = {
 @"guards-thais.ndb"
+
+"trouble",QuestValue(12171)<1,QuestValue(12161)>=1 -> "You adventurers become more and more of a pest.",topic=4
+"authorities",topic=4  -> "They should throw you all into jail instead of giving you all those quests and rewards an honest watchman can only dream about.",SetQuestValue(12161, QuestValue(12161) + 1),SetQuestValue(12171,1),EffectOpp(13)
 }
