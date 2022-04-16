@@ -214,9 +214,10 @@ Flags       = {Bank,Unmove}
 Attributes  = {Waypoints=160}
 
 TypeID      = 133
-Name        = "sand"
-Flags       = {Bank,Unmove}
-Attributes  = {Waypoints=160}
+Name        = "a special flask"
+Description = "It contains holy water from the white raven monastery"
+Flags       = {Take}
+Attributes  = {Weight=180}
 
 TypeID      = 134
 Name        = "dirt"
@@ -26206,7 +26207,7 @@ TypeID      = 5803
 Name        = "an arbalest"
 Description = "It is a bit heavy due to the iron mounting, but very precise"
 Flags       = {Take,Distance}
-Attributes  = {Weight=9500,SlotType=TWOHANDED,Range=7,AmmoType=BOLT}
+Attributes  = {Weight=9500,SlotType=TWOHANDED,Range=6,AmmoType=BOLT,ExtraHitChance=3,Attack=2}
 
 TypeID      = 5804
 Name        = "a nose ring"
@@ -33623,8 +33624,8 @@ Attributes  = {Weight=2100,WeaponType=CLUB,Attack=37,Defense=18}
 TypeID      = 7438
 Name        = "an elvish bow"
 Description = "This beautifully ornamented bow was made by a skilled elvish bowmaker"
-Flags       = {Take}
-Attributes  = {Weight=3900,WeaponType=DISTANCE,SlotType=TWOHANDED}
+Flags       = {Take,Distance}
+Attributes  = {Weight=3900,SlotType=TWOHANDED,Range=6,AmmoType=ARROW,ExtraHitChance=5}
 
 TypeID      = 7439
 Name        = "a berserk potion"
@@ -33803,17 +33804,17 @@ TypeID      = 7475
 Name        = "a sarcophagus"
 Flags       = {Bottom,Unpass,Unmove}
 
-TypeID      = 7476
+TypeID      = 8023
+Name        = "a royal crossbow"
+Description = "It is a bit heavy due to the iron mounting, but very precise"
+Flags       = {Take,Distance}
+Attributes  = {Weight=12000,SlotType=TWOHANDED,Range=6,AmmoType=BOLT,ExtraHitChance=3,Attack=5}
+
+TypeID      = 12902
 Name        = "your inbox"
 Flags       = {Container,Unmove}
 Attributes  = {Capacity=30}
 
-TypeID      = 7477
+TypeID      = 12903
 Name        = "the market"
 Flags       = {Unmove}
-
-TypeID      = 7478
-Name        = "a special flask"
-Description = "It contains holy water from the white raven monastery"
-Flags       = {Take}
-Attributes  = {Weight=180}

@@ -1052,6 +1052,15 @@ void LuaScriptInterface::registerFunctions()
 	registerEnum(ACCOUNT_TYPE_GAMEMASTER)
 	registerEnum(ACCOUNT_TYPE_GOD)
 
+	registerEnum(AMMO_NONE)
+	registerEnum(AMMO_BOLT)
+	registerEnum(AMMO_ARROW)
+	registerEnum(AMMO_SPEAR)
+	registerEnum(AMMO_THROWINGSTAR)
+	registerEnum(AMMO_THROWINGKNIFE)
+	registerEnum(AMMO_STONE)
+	registerEnum(AMMO_SNOWBALL)
+
 	registerEnum(CALLBACK_PARAM_LEVELMAGICVALUE)
 	registerEnum(CALLBACK_PARAM_SKILLVALUE)
 	registerEnum(CALLBACK_PARAM_TARGETTILE)
@@ -2291,6 +2300,7 @@ void LuaScriptInterface::registerFunctions()
 	registerMethod("ItemType", "getCapacity", LuaScriptInterface::luaItemTypeGetCapacity);
 	registerMethod("ItemType", "getWeight", LuaScriptInterface::luaItemTypeGetWeight);
 
+	registerMethod("ItemType", "getHitChance", LuaScriptInterface::luaItemTypeGetHitChance);
 	registerMethod("ItemType", "getShootRange", LuaScriptInterface::luaItemTypeGetShootRange);
 
 	registerMethod("ItemType", "getAttack", LuaScriptInterface::luaItemTypeGetAttack);
@@ -10537,6 +10547,19 @@ int LuaScriptInterface::luaItemTypeGetWeight(lua_State* L)
 
 	uint64_t weight = static_cast<uint64_t>(itemType->weight) * std::max<int32_t>(1, count);
 	lua_pushnumber(L, weight);
+	return 1;
+}
+
+int LuaScriptInterface::luaItemTypeGetHitChance(lua_State* L)
+{
+	// itemType:getHitChance()
+	const ItemType* itemType = getUserdata<const ItemType>(L, 1);
+	if (itemType) {
+		lua_pushnumber(L, itemType->extraHitChance);
+	}
+	else {
+		lua_pushnil(L);
+	}
 	return 1;
 }
 

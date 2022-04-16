@@ -252,6 +252,8 @@ class ItemType
 		uint8_t lightColor = 0;
 		uint8_t shootRange = 1;
 		uint8_t weaponSpecialEffect = 0;
+		uint8_t extraHitChance = 0;
+		uint8_t extraAttack = 0;
 
 		bool collisionEvent = false;
 		bool separationEvent = false;

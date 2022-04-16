@@ -1035,6 +1035,9 @@ bool Combat::rangeAttack(Creature* attacker, Creature* target, fightMode_t fight
 			specialEffect = weapon->getWeaponSpecialEffect();
 			attackStrength = weapon->getAttackStrength();
 			attackVariation = weapon->getAttackVariation();
+
+			hitChance += Item::items.getItemType(weapon->getID()).extraHitChance;
+
 			if (weapon->getFragility()) {
 				if (normal_random(0, 99) <= weapon->getFragility()) {
 					uint16_t count = weapon->getItemCount();
@@ -1054,6 +1057,9 @@ bool Combat::rangeAttack(Creature* attacker, Creature* target, fightMode_t fight
 			specialEffect = ammunition->getWeaponSpecialEffect();
 			attackStrength = ammunition->getAttackStrength();
 			attackVariation = ammunition->getAttackVariation();
+
+			hitChance += Item::items.getItemType(ammunition->getID()).extraHitChance;
+
 			if (normal_random(0, 100) <= ammunition->getFragility()) {
 				uint16_t count = ammunition->getItemCount();
 				if (count > 1) {
@@ -1233,27 +1239,27 @@ void Combat::getAttackValue(Creature* creature, uint32_t& attackValue, uint32_t&
 			switch (weapon->getWeaponType()) {
 			case WEAPON_AXE: {
 				skill = SKILL_AXE;
-				attackValue = weapon->getAttack();
+				attackValue = weapon->getAttack() + Item::items.getItemType(weapon->getID()).extraAttack;
 				break;
 			}
 			case WEAPON_SWORD: {
 				skill = SKILL_SWORD;
-				attackValue = weapon->getAttack();
+				attackValue = weapon->getAttack() + Item::items.getItemType(weapon->getID()).extraAttack;
 				break;
 			}
 			case WEAPON_CLUB: {
 				skill = SKILL_CLUB;
-				attackValue = weapon->getAttack();
+				attackValue = weapon->getAttack() + Item::items.getItemType(weapon->getID()).extraAttack;
 				break;
 			}
 			case WEAPON_DISTANCE: {
 				skill = SKILL_DISTANCE;
-				attackValue = weapon->getAttack();
+				attackValue = weapon->getAttack() + Item::items.getItemType(weapon->getID()).extraAttack;
 
 				if (weapon->getAmmoType() != AMMO_NONE) {
 					Item* ammunition = player->getAmmunition();
 					if (ammunition && ammunition->getAmmoType() == weapon->getAmmoType()) {
-						attackValue += ammunition->getAttack();
+						attackValue += ammunition->getAttack() + Item::items.getItemType(ammunition->getID()).extraAttack;
 					}
 				}
 				break;

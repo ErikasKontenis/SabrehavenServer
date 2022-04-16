@@ -86,7 +86,7 @@
 	<action actionid="83" script="nostalrius/83.lua" />
 	
 	<!-- Inquisition -->
-	<action itemid="7478" script="inquisition/holyWater.lua" />
+	<action itemid="133" script="inquisition/holyWater.lua" />
 	
 	<!-- Pits of Inferno -->
 	<action actionid="17642" script="pits_of_inferno/oil.lua" />

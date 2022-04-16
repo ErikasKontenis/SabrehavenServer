@@ -605,6 +605,9 @@ class Item : virtual public Thing
 			}
 			return items[id].shootRange;
 		}
+		uint8_t getExtraHitChance() const {
+			return items[id].extraHitChance;
+		}
 		uint8_t getMissileType() const {
 			return items[id].shootType;
 		}

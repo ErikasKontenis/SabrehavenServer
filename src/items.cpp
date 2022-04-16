@@ -421,6 +421,10 @@ bool Items::loadItems()
 						items[id].lightLevel = script.readNumber();
 					} else if (identifier == "lightcolor") {
 						items[id].lightColor = script.readNumber();
+					} else if (identifier == "extrahitchance") {
+						items[id].extraHitChance = script.readNumber();
+					} else if (identifier == "extraattack") {
+						items[id].extraAttack = script.readNumber();
 					} else if (identifier == "totalexpiretime") {
 						items[id].decayTime = script.readNumber();
 					} else if (identifier == "expiretarget") {
