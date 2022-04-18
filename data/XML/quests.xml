@@ -577,12 +577,11 @@
 			<missionstate id="2" description="You killed Ungreez, report your mission to Henricus." />
 			<missionstate id="3" description="You got the the first addon of Demon Hunter Outfit! Ask Henricus for mission to unlock more addons." />
 		</mission>
-		<mission name="Mission 7: The Shadow Nexus" storageid="12167" startvalue="1" endvalue="5">
+		<mission name="Mission 7: The Shadow Nexus" storageid="12167" startvalue="1" endvalue="4">
 			<missionstate id="1" description="Your mission is to go to the Demon Forge and slay seven of The Ruthless Seven Minions. The Demon Forge is located in the Edron Hero Cave, through a portal after the Vampire Shield Quest." />
 			<missionstate id="2" description="You destroyed the shadow nexus! Get back to Thais and report your mission to Henricus." />
 			<missionstate id="3" description="Now ask to Henricus for a outfit. He will give you the 2nd addon of the Demon Hunter Outfits." />
-			<missionstate id="4" description="You got the the second addon of Demon Hunter Outfit! Go now to the reward room and choose one wisely!" />
-			<missionstate id="5" description="You have completed The Inquisition Quest! You can now buy the Blessing of the Inquisition!" />
+			<missionstate id="4" description="You have completed The Inquisition Quest! You can now buy the Blessing of the Inquisition!" />
 		</mission>
 	</quest>
 </quests>

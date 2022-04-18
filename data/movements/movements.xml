@@ -395,6 +395,20 @@
 	<movevent event="StepIn" itemid="5764" script="misc/drowning.lua" />
 	<movevent event="StepOut" itemid="5764" script="misc/drowning.lua"/>
 	
+	<!-- Inquisition Quest -->
+	<movevent event="StepIn" frommovementid="2150" tomovementid="2180" script="inquisition/teleportMain.lua" />
+	<movevent event="StepIn" movementid="9014" script="inquisition/entrance.lua" />
+	<movevent event="StepIn" movementid="17745" script="inquisition/entrance_back.lua" />
+	<movevent event="AddItem" movementid="17745" tileitem="1" script="inquisition/entrance_back.lua" />
+	<movevent event="StepIn" movementid="17746" script="inquisition/arcanum_1.lua" />
+	<movevent event="AddItem" movementid="17746" tileitem="1" script="inquisition/arcanum_1.lua" />
+	<movevent event="StepIn" movementid="17747" script="inquisition/arcanum_1_back.lua" />
+	<movevent event="AddItem" movementid="17747" tileitem="1" script="inquisition/arcanum_1_back.lua" />
+	<movevent event="StepIn" movementid="17748" script="inquisition/arcanum_2.lua" />
+	<movevent event="AddItem" movementid="17748" tileitem="1" script="inquisition/arcanum_2.lua" />
+	<movevent event="StepIn" movementid="17749" script="inquisition/arcanum_2_back.lua" />
+	<movevent event="AddItem" movementid="17749" tileitem="1" script="inquisition/arcanum_2_back.lua" />
+	
 	<!-- Pits of Inferno -->
 	<movevent event="StepIn" frommovementid="17640" tomovementid="17641" script="pits_of_inferno/holy_tible_tile.lua" />
 	<movevent event="StepIn" movementid="4002" script="pits_of_inferno/drawbridge.lua" />
@@ -641,6 +655,14 @@
 	<movevent event="AddItem" itemid="6172" tileitem="1" script="misc/floorchange.lua" />
 	<movevent event="StepIn" itemid="6173" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="6173" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6127" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6127" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6128" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6128" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6129" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6129" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6130" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6130" tileitem="1" script="misc/floorchange.lua" />
 	
 	<!-- Damage -->
 	<movevent event="StepIn" itemid="2145" script="misc/damage.lua" />

@@ -1,8 +1,8 @@
 local doorPosition = Position(32260, 32791, 7)
-local shadowNexusPosition = Position(33115, 31702, 12)
+local shadowNexusPosition = Position(33117, 31708, 12)
 local effectPositions = {
-	Position(33113, 31702, 12),
-	Position(33116, 31702, 12)
+	Position(33116, 31708, 12),
+	Position(33118, 31708, 12)
 }
 
 local function revertItem(position, itemId, transformId)
@@ -58,13 +58,13 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 	end
 
 	-- Shadow Nexus
-	if isInArray({8753, 8755, 8757}, target.itemid) then
+	if isInArray({7925, 7927, 7929}, target.itemid) then
 		target:transform(target.itemid + 1)
 		target:decay()
 		nexusMessage(player, player:getName() .. ' damaged the shadow nexus! You can\'t damage it while it\'s burning.')
-		shadowNexusPosition:sendMagicEffect(CONST_ME_HOLYAREA)
+		shadowNexusPosition:sendMagicEffect(CONST_ME_ENERGYHIT)
 
-	elseif target.itemid == 8759 then
+	elseif target.itemid == 7931 then
 		if player:getStorageValue(12160) < 22 then
 			-- The Inquisition Questlog- 'Mission 7: The Shadow Nexus'
 			player:setStorageValue(12167, 2)
@@ -72,7 +72,7 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 
 		for i = 1, #effectPositions do
-			effectPositions[i]:sendMagicEffect(CONST_ME_HOLYAREA)
+			effectPositions[i]:sendMagicEffect(CONST_ME_ENERGYHIT)
 		end
 
 		nexusMessage(player, player:getName() .. ' destroyed the shadow nexus! In 20 seconds it will return to its original state.')

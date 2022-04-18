@@ -248,4 +248,11 @@
 	<monster name="The Count" file="800/the count.xml" />
 	<monster name="The Weakened Count" file="800/the weakened count.xml" />
 	<monster name="Ungreez" file="800/ungreez.xml" />
+	<monster name="Ushuriel" file="800/ushuriel.xml" />
+	<monster name="Zugurosh" file="800/zugurosh.xml" />
+	<monster name="Madareth" file="800/madareth.xml" />
+	<monster name="Golgordan" file="800/golgordan.xml" />
+	<monster name="Latrivan" file="800/latrivan.xml" />
+	<monster name="Annihilon" file="800/annihilon.xml" />
+	<monster name="Hellgorak" file="800/hellgorak.xml" />
 </monsters>

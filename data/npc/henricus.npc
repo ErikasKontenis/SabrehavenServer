@@ -104,12 +104,9 @@ topic=4  -> "I expected better from you."
 "mission",QuestValue(12160)=21 -> "Your current mission is to destroy the shadow nexus in the Demon Forge. Are you done with that mission?", topic=5
 "mission",QuestValue(12160)=22 -> *
 "yes",QuestValue(12160)=22,topic=5 -> "Incredible! You're a true defender of faith! I grant you the title of a High Inquisitor for your noble deeds. From now on you can obtain the blessing of the inquisition which makes the pilgrimage of ashes obsolete ...",
-	"The blessing of the inquisition will bestow upon you all available blessings. Also, don't forget to ask me about your outfit to receive the final addon as demon hunter.",SetQuestValue(12167,3),SetQuestValue(12160,23)
+	"The blessing of the inquisition will bestow upon you all available blessings. Also, here is the final addon for your demon hunter outfit.",SetQuestValue(12167,3),SetQuestValue(12160,23),SetQuestValue(12160,24),SetQuestValue(12167,4),AddOutfitAddon(288,2),AddOutfitAddon(289,2),EffectOpp(13)
 "yes",topic=5  -> "You haven't done your mission yet."
 topic=5  -> "Come back when you have destroyed the shadow nexus."
-
-"mission",QuestValue(12160)=23 -> "Here is the final addon for your demon hunter outfit. Congratulations!",SetQuestValue(12160,24),SetQuestValue(12167,4),AddOutfitAddon(288,2),AddOutfitAddon(289,2),EffectOpp(13)
-"outfit",QuestValue(12160)=23 -> *
 
 "mission",QuestValue(12160)=24 -> "Currently we have no missions for you brave fellow."
 

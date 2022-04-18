@@ -38,8 +38,8 @@ end
 
 function setupTables()
   configOptions = {
-    {id = "addon1", text = "Addon 1", checked = false, enabled = g_game.getClientVersion() >= 780},
-    {id = "addon2", text = "Addon 2", checked = false, enabled = g_game.getClientVersion() >= 780},
+    {id = "addon1", text = "Addon 1", checked = false, enabled = g_game.getFeature(GamePlayerAddons)},
+    {id = "addon2", text = "Addon 2", checked = false, enabled = g_game.getFeature(GamePlayerAddons)},
     {id = "mount", text = "Mount", checked = false, enabled = g_game.getFeature(GamePlayerMounts)},
     {id = "wings", text = "Wings", checked = false, enabled = g_game.getFeature(GameWingsAndAura)},
     {id = "aura", text = "Aura", checked = false, enabled = g_game.getFeature(GameWingsAndAura)},

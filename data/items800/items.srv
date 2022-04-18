@@ -33814,11 +33814,87 @@ Name        = "the ring of the count"
 Flags       = {Take}
 Attributes  = {Weight=75,SlotType=RING}
 
+TypeID      = 7925
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Brightness=3,LightColor=5}
+
+TypeID      = 7926
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay,Expire}
+Attributes  = {Brightness=3,LightColor=5,ExpireTarget=7927,TotalExpireTime=30}
+
+TypeID      = 7927
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay,Expire}
+Attributes  = {Brightness=3,LightColor=5,ExpireTarget=7925,TotalExpireTime=20}
+
+TypeID      = 7928
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay,Expire}
+Attributes  = {Brightness=3,LightColor=5,ExpireTarget=7929,TotalExpireTime=30}
+
+TypeID      = 7929
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay,Expire}
+Attributes  = {Brightness=3,LightColor=5,ExpireTarget=7925,TotalExpireTime=20}
+
+TypeID      = 7930
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay,Expire}
+Attributes  = {Brightness=3,LightColor=5,ExpireTarget=7931,TotalExpireTime=30}
+
+TypeID      = 7931
+Name        = "the shadow nexus"
+Flags       = {Unpass,Unmove,Unthrow,Unlay,Expire}
+Attributes  = {Brightness=3,LightColor=5,ExpireTarget=7925,TotalExpireTime=20}
+
 TypeID      = 8023
 Name        = "a royal crossbow"
 Description = "It is a bit heavy due to the iron mounting, but very precise"
 Flags       = {Take,Distance}
 Attributes  = {Weight=12000,SlotType=TWOHANDED,Range=6,AmmoType=BOLT,ExtraHitChance=3,Attack=5}
+
+TypeID      = 8026
+Name        = "a warsinger bow"
+Flags       = {Take,Distance}
+Attributes  = {Weight=4500,SlotType=TWOHANDED,Range=7,AmmoType=ARROW,ExtraHitChance=5,Attack=3}
+
+TypeID      = 8053
+Name        = "a fireborn giant armor"
+Flags       = {Take,Armor}
+Attributes  = {Weight=12000,SlotType=BODY,ArmorValue=15,AbsorbFire=5,SwordBoost=2}
+
+TypeID      = 8060
+Name        = "a master archer's armor"
+Flags       = {Take,Armor}
+Attributes  = {Weight=6900,SlotType=BODY,ArmorValue=15,DistanceBoost=3}
+
+TypeID      = 8062
+Name        = "a robe of the underworld"
+Flags       = {Take,Armor}
+Attributes  = {Weight=3100,SlotType=BODY,ArmorValue=12,AbsorbPhysical=12}
+
+TypeID      = 8090
+Name        = "a spellbook of dark mysteries"
+Description = "It shows your spells and can also shield against attacks when worn"
+Flags       = {Take,Shield}
+Attributes  = {Weight=2850,Defense=16,MagicBoost=3}
+
+TypeID      = 8096
+Name        = "a hellforged axe"
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=8800,WeaponType=AXE,Attack=51,Defense=28}
+
+TypeID      = 8100
+Name        = "an obsidian truncheon"
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=6500,WeaponType=CLUB,Attack=50,Defense=30}
+
+TypeID      = 8102
+Name        = "an emerald sword"
+Flags       = {MultiUse,Take,Weapon}
+Attributes  = {Weight=4100,WeaponType=SWORD,Attack=49,Defense=33}
 
 TypeID      = 8109
 Name        = "remains of a vampire lord"
