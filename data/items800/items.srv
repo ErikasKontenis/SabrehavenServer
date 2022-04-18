@@ -25412,122 +25412,122 @@ Attributes  = {Weight=6000,ExpireTarget=0,TotalExpireTime=600}
 
 TypeID      = 5630
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5631
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5632
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5633
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5634
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5635
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5636
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5637
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5638
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5639
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5640
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5641
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5642
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5643
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5644
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5645
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5646
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5647
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5648
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5649
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5650
 Name        = "a dirt wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5651
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5652
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5653
 Name        = "a stone wall"
-Flags       = {Unpass,Unmove,Unthrow,Unlay}
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
 Attributes  = {Waypoints=0}
 
 TypeID      = 5654
@@ -33804,11 +33804,41 @@ TypeID      = 7475
 Name        = "a sarcophagus"
 Flags       = {Bottom,Unpass,Unmove}
 
+TypeID      = 7874
+Name        = "the witches' grimoire"
+Flags       = {Take}
+Attributes  = {Weight=1300}
+
+TypeID      = 7924
+Name        = "the ring of the count"
+Flags       = {Take}
+Attributes  = {Weight=75,SlotType=RING}
+
 TypeID      = 8023
 Name        = "a royal crossbow"
 Description = "It is a bit heavy due to the iron mounting, but very precise"
 Flags       = {Take,Distance}
 Attributes  = {Weight=12000,SlotType=TWOHANDED,Range=6,AmmoType=BOLT,ExtraHitChance=3,Attack=5}
+
+TypeID      = 8109
+Name        = "remains of a vampire lord"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=8110,TotalExpireTime=10}
+
+TypeID      = 8110
+Name        = "remains of a vampire lord"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,Weight=130000,ExpireTarget=8111,TotalExpireTime=1800}
+
+TypeID      = 8111
+Name        = "remains of a vampire lord"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=10,Weight=105000,ExpireTarget=8112,TotalExpireTime=1800}
+
+TypeID      = 8112
+Name        = "remains of a vampire lord"
+Flags       = {Container,Take,Corpse,Expire}
+Attributes  = {Capacity=10,Weight=85000,ExpireTarget=0,TotalExpireTime=1800}
 
 TypeID      = 12902
 Name        = "your inbox"

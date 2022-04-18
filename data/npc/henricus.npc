@@ -59,4 +59,64 @@ topic=2  -> "I expected better from you."
 	"He'll bring you to your destination. At their meeting place, you'll find a cauldron in which they cook some forbidden brew ...",
 	"Use this vial of holy water to destroy the brew. Also steal their grimoire and bring it to me.",SetQuestValue(12160,4),SetQuestValue(12162,1),Create(133)
 "mission",QuestValue(12160)=4 -> "Your current mission is to destroy the brew in the eclipse."
+
+"mission",QuestValue(12160)=5,Count(7874)>=1 -> "I think it's time to truly test your abilities. One of our allies has requested assistance. I think you are just the right person to help him ...",
+	"Storkus is an old and grumpy dwarf who works as a vampire hunter since many, many decades. He's quite successful but even he has his limits. ...",
+	"So occasionally, we send him help. In return he trains and tests our recruits. It's an advantageous agreement for both sides ...",
+	"You'll find him in his cave at the mountain outside of Kazordoon. He'll tell you about your next mission.",SetQuestValue(12160,6),SetQuestValue(12162,3),SetQuestValue(12163,1),DeleteAmount(7874,1)
+"mission",QuestValue(12160)=5 -> "You need bring me the witches' grimoire."
+
+"mission",QuestValue(12160)>=5,QuestValue(12160)<11 -> "Your current mission is to help the vampire hunter Storkus. Are you done with that mission?", topic=3
+"yes",QuestValue(12160)=10,topic=3 -> "Good, you've returned. Your skill in practical matters seems to be useful. If you're ready for a further mission, just ask.",SetQuestValue(12160,11),SetQuestValue(12163,6)
+"yes",topic=3  -> "You haven't done your mission with Storkus yet."
+topic=3  -> "I expected better from you."
+
+"mission",QuestValue(12160)=11 -> "We've got a report about an abandoned and haunted house in Liberty Bay. I want you to examine this house. It's the only ruin in Liberty Bay so you should have no trouble finding it. ...",
+	"There's an evil being somewhere. I assume that it will be easier to find the right spot at night. Use this vial of holy water on that spot to drive out the evil being.",SetQuestValue(12160,12),SetQuestValue(12164,1),Create(133)
+
+"mission",QuestValue(12160)=12 -> "Your current mission is to exorcise an evil being from a house in Liberty Bay. Are you done with that mission?", topic=4
+"mission",QuestValue(12160)=13 -> *
+"yes",QuestValue(12160)=13,topic=4 -> "Well, this was an easy task, but your next mission will be much more challenging.",SetQuestValue(12164,3),SetQuestValue(12160,14)
+"yes",topic=4  -> "You haven't done your mission yet."
+topic=4  -> "I expected better from you."
+
+"mission",QuestValue(12160)=14 -> "You've handled heretics, witches, vampires and ghosts. Now be prepared to face the most evil creatures we are fighting - demons. Your new task is extremely simple, though far from easy. ...",
+	"Go and slay demonic creatures wherever you find them. Bring me 20 of their essences as a proof of your accomplishments.",SetQuestValue(12160,15),SetQuestValue(12165,1)
+
+
+"mission",QuestValue(12160)=15,Count(6499)>=20 -> Type=6499, Amount=20, "You're indeed a dedicated protector of the true believers. Don't stop now. Kill as many of these creatures as you can. ...",
+	"I also have a reward for your great efforts. Talk to me about your demon hunter outfit anytime from now on. Afterwards, let's talk about the next mission that's awaiting you.",Delete(Type),SetQuestValue(12160,16),SetQuestValue(12165,2)
+"mission",QuestValue(12160)=15 -> "Your current mission is to bring 20 demonic essence."
+
+"mission",QuestValue(12160)=16 -> "Here is your demon hunter outfit. You deserve it. Unlock more addons by completing more missions.",SetQuestValue(12160,17),SetQuestValue(12165,3),addOutfit(288),addOutfit(289),EffectOpp(13)
+"outfit",QuestValue(12160)=16 -> *
+
+"mission",QuestValue(12160)=17 -> "We've got information about something very dangerous going on on the isle of Edron. The demons are preparing something there ...",
+	"Something that is a threat to all of us. Our investigators were able to acquire vital information before some of them were slain by a demon named Ungreez. ...",
+	"It'll be your task to take revenge and to kill that demon. You'll find him in the depths of Edron. Good luck.",SetQuestValue(12160,18),SetQuestValue(12166,1)
+"mission",QuestValue(12160)=18 -> "Your current mission is to find and kill the Ungreez!"
+
+"mission",QuestValue(12160)=19 -> "So the beast is finally dead! Thank the gods. At least some things work out in our favour ...",
+	"Our other operatives were not that lucky, though. But you will learn more about that in your next mission.",SetQuestValue(12160,20),SetQuestValue(12166,3),AddOutfitAddon(288,1), AddOutfitAddon(289,1), EffectOpp(13)
+	
+"mission",QuestValue(12160)=20 -> "Destroy the shadow nexus using this vial of holy water and kill all demon lords.",SetQuestValue(12160,21),SetQuestValue(12167,1),Create(133)
+
+"mission",QuestValue(12160)=21 -> "Your current mission is to destroy the shadow nexus in the Demon Forge. Are you done with that mission?", topic=5
+"mission",QuestValue(12160)=22 -> *
+"yes",QuestValue(12160)=22,topic=5 -> "Incredible! You're a true defender of faith! I grant you the title of a High Inquisitor for your noble deeds. From now on you can obtain the blessing of the inquisition which makes the pilgrimage of ashes obsolete ...",
+	"The blessing of the inquisition will bestow upon you all available blessings. Also, don't forget to ask me about your outfit to receive the final addon as demon hunter.",SetQuestValue(12167,3),SetQuestValue(12160,23)
+"yes",topic=5  -> "You haven't done your mission yet."
+topic=5  -> "Come back when you have destroyed the shadow nexus."
+
+"mission",QuestValue(12160)=23 -> "Here is the final addon for your demon hunter outfit. Congratulations!",SetQuestValue(12160,24),SetQuestValue(12167,4),AddOutfitAddon(288,2),AddOutfitAddon(289,2),EffectOpp(13)
+"outfit",QuestValue(12160)=23 -> *
+
+"mission",QuestValue(12160)=24 -> "Currently we have no missions for you brave fellow."
+
+"bless",QuestValue(12160)=24 -> Price=60000, "Do you want to receive all blessings for %P gold?", Topic=6
+Topic=6,"yes",QuestValue(101)=1,QuestValue(102)=1,QuestValue(103)=1,QuestValue(104)=1,QuestValue(105)=1,! -> "I can sense you already have bought all the blessings."
+Topic=6,"yes",CountMoney>=Price -> "So receive all blessings!",EffectOpp(11),DeleteMoney,SetQuestValue(101,1),SetQuestValue(102,1),SetQuestValue(103,1),SetQuestValue(104,1),SetQuestValue(105,1),Bless(1),Bless(2),Bless(3),Bless(4),Bless(5)
+Topic=6,"yes"				-> "You do not have enough money."
+Topic=6 					-> "Some other time then."
+
 }

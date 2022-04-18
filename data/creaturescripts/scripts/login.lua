@@ -321,6 +321,7 @@ function onLogin(player)
 	player:registerEvent("PlayerLogout")
 	player:registerEvent("FirstItems")
 	player:registerEvent("RegenerateStamina")
+	player:registerEvent("InquisitionUngreez")
 	
 	return true
 end

@@ -42,11 +42,18 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		player:setStorageValue(12160, 13)
 		player:setStorageValue(12164, 2)
 
-		local doorItem = Tile(doorPosition):getItemById(8697)
+		local doorItem = Tile(doorPosition):getItemById(5126)
+		local doorItem2 = Tile(doorPosition):getItemById(5125)
+		local doorId = 5126
 		if doorItem then
-			doorItem:transform(8696)
+			doorItem:transform(5124)
 		end
-		addEvent(revertItem, 10 * 1000, doorPosition, 8696, 8697)
+		
+		if doorItem2 then
+			doorId = 5125
+			doorItem2:transform(5124)
+		end
+		addEvent(revertItem, 10 * 1000, doorPosition, 5124, doorId)
 		return true
 	end
 

@@ -243,4 +243,9 @@
 	<monster name="undead dragon" file="790/undead dragon.xml" />
 	<monster name="wyvern" file="790/wyvern.xml" />
 	<monster name="Demon (Goblin)" file="790/demon (goblin).xml" />
+	
+	<!-- 800 -->
+	<monster name="The Count" file="800/the count.xml" />
+	<monster name="The Weakened Count" file="800/the weakened count.xml" />
+	<monster name="Ungreez" file="800/ungreez.xml" />
 </monsters>

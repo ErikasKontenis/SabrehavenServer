@@ -10,4 +10,6 @@
 		
 	<!-- Killing In The Name Of Quest -->
 	<event type="death" name="KillingInTheNameOf" script="killing_in_the_name_of.lua" />
+	
+	<event type="kill" name="InquisitionUngreez" script="inquisitionQuestUngreez.lua" />
 </creaturescripts>

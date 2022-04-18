@@ -1,0 +1,40 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# Storkus.npc: Datenbank für den Waffenhändler Storkus
+
+Name = "Storkus"
+Outfit = (69,57-59-118-114-0)
+Home = [32590,31960,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!   -> "Greetings, human %N!"
+ADDRESS,"hi$",!      -> *
+ADDRESS,!            -> Idle
+BUSY,"hello$",!      -> "I will have finished soon %N.", Queue
+BUSY,"hi$",!         -> *
+BUSY,!               -> NOP
+VANISH,!             -> "This ungraceful haste is most suspicious!", Idle
+
+"bye"             -> "See ya, %N!", Idle
+"job" -> "I am vampire hunter"
+
+"mission",QuestValue(12160)=6 -> Type=5905, Amount=20, "Ah, right, Henricus sent ye'! Do ye' have 20 vampire dusts with ye'??", Topic=6
+"dust",QuestValue(12160)=6 -> *
+Topic=6,"yes",Count(Type)>=Amount -> "Fine, you're done! Ye' should talk to me about your mission again now.", Delete(Type),SetQuestValue(12160,7),SetQuestValue(12163,2)
+Topic=6,"yes" -> "You don't have that many!"
+Topic=6 -> "Too bad."
+
+"mission",QuestValue(12160)=7 -> "While ye' were keeping the lower ranks busy, I could get valuable information about some vampire lords. ...",
+	"One of them is hiding somewhere beneath the Green Claw Swamp. I expect ye' to find him and kill him. ...",
+	"But be warned: Without good preparation, ye' might get into trouble. I hope for ye' he will be sleeping in his coffin when ye' arrive. ...",
+	"Before ye' open his coffin and drag that beast out to destroy it, I advise ye' to place some garlic necklaces on the stone slabs next to his coffin. That will weaken him considerably. ...",
+	"Bring me his ring as proof for his death. And now hurry and good hunt to ye'.",SetQuestValue(12160,8),SetQuestValue(12163,6),SetQuestValue(12163,3)
+
+"mission",QuestValue(12160)=8,Count(7924)>=1 -> "Ding, dong, the vampire is dead, eh? So I guess ye' can return to Henricus and tell him that ye' finished your job here. I'm quite sure he has some more challenging task up his sleeve. ...",
+	"One more thing before ye' leave: I already mentioned the master vampires. ...",
+	"They are quite hard to find. If ye' stumble across one of them and manage to kill him, he will surely drop some token that proves his death. Bring me these tokens. ...",
+	"If ye' kill enough of them, I might have a little surprise for ye'.",SetQuestValue(12160,10),SetQuestValue(12163,5),DeleteAmount(7924,1)
+"mission",QuestValue(12160)=9,Count(7924)>=1 -> *
+"mission",QuestValue(12160)=8 -> "Have ye' killed the vampire lord? Because ye' have no his ring."
+
+}

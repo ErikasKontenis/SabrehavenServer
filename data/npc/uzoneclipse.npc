@@ -1,0 +1,46 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# uzon: Datenbank für den Teppichpiloten Uzon auf den Femor Hills
+
+Name = "Uzon"
+Outfit = (130,95-5-18-76-0)
+Home = [32661,31914,0]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Daraman's blessings, traveller %N."
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+
+BUSY,"hello$",!            -> "Hastiness is not the way of the people of Darama, %N. Give me the time I need here.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Daraman's blessings."
+
+"bye"             -> "Daraman's blessings", Idle
+"name"            -> "I am known as Uzon Ibn Kalith."
+"job"             -> "I am a licensed Darashian carpetpilot. I can bring you to Darashia or Edron."
+"time"            -> "It's %T right now. The next flight is scheduled soon."
+"caliph"          -> "The caliph welcomes travellers to his land."
+"kazzan"          -> *
+"daraman"         -> "Oh, there is so much to tell about Daraman. You better travel to Darama to learn about his teachings."
+"ferumbras"       -> "I would never transport this one."
+"drefia"          -> "So you heared about haunted Drefia? Many adventures travel there to test their skills against the undead: vampires, mummies, and ghosts." 
+"excalibug"       -> "Some people claim it is hidden somewhere under the endless sands of the devourer desert in Darama."
+"thais"           -> "Thais is noisy and overcroweded. That's why I like Darashia more."
+"tibia"           -> "I have seen almost every place on the continent."
+"continent"       -> "I could retell the tales of my travels for hours. Sadly another flight is scheduled soon."
+"carlin"          -> "Just another Thais but with women to lead them."
+"flying","carpet" -> "You can buy flying carpets only in Darashia."
+"fly"             -> "I transport travellers to the continent of Darama for a small fee. So many want to see the wonders of the desert and learn the secrets of Darama."
+"news"            -> "I heard too many news to recall them all."
+"rumors"          -> *
+
+"leave" -> "Can we finally leave this cursed place?", Topic=5
+"back" -> *
+"passage" -> *
+"transport" -> *
+"ride"      -> *
+"trip"      -> *
+Topic=5,"yes" -> "Hold on!", Idle, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
+Topic=5 -> "We shouldn't stay here for too long."
+}

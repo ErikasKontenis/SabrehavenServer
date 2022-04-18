@@ -78,20 +78,8 @@ function ItemType.isTrinket(self)
 	return self:usesSlot(CONST_SLOT_AMMO) and self:getWeaponType() == WEAPON_NONE
 end
 
-function ItemType.isKey(self)
-	return self:getType() == ITEM_TYPE_KEY
-end
-
 function ItemType.isBed(self)
 	return self:getType() == ITEM_TYPE_BED
-end
-
-function ItemType.isSplash(self)
-	return self:getGroup() == ITEM_GROUP_SPLASH
-end
-
-function ItemType.isPodium(self)
-	return self:getGroup() == ITEM_GROUP_PODIUM
 end
 
 function ItemType.getWeaponString(self)

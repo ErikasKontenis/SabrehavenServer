@@ -73,6 +73,7 @@ Topic=2,"yes"                           -> "You don't have enough money."
 Topic=2                                 -> "You shouldn't miss the experience."
 
 "eclipse",QuestValue(12160)=4 -> "Oh no, so the time has come? Do you really want me to fly you to this unholy place?", Topic=5
+"eclipse",QuestValue(12160)=5 -> *
 Topic=5,"yes" -> "Hold on!", Idle, EffectOpp(11), Teleport(32659,31915,0), EffectOpp(11)
 Topic=5 -> "You shouldn't miss the experience."
 }
