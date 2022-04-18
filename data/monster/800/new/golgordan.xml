@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <monster name="Golgordan" nameDescription="Golgordan" race="fire" experience="10000" speed="350" manacost="0">
 	<health now="40000" max="40000" />
 	<look type="12" head="108" body="100" legs="105" feet="114" corpse="8721" />
@@ -56,34 +55,34 @@
 		<voice sentence="We are the right hand and the left hand of the seven!" />
 	</voices>
 	<loot>
-		<item id="2148" countmax="273" chance="100000" />	<!-- gold coin -->
-		<item id="7591" chance="55000" />					<!-- great health potion -->
-		<item id="2387" chance="30000" />					<!-- double axe -->
-		<item id="6300" chance="25000" />					<!-- death ring -->
-		<item id="2214" chance="25000" />					<!-- ring of healing -->
-		<item id="2144" countmax="13" chance="20000" />		<!-- black pearl -->
-		<item id="2149" countmax="10" chance="20000" />		<!-- small emerald -->
-		<item id="2396" chance="15000" />					<!-- ice rapier -->
-		<item id="2162" chance="15000" />					<!-- magic light wand -->
-		<item id="2170" chance="15000" />					<!-- silver amulet -->
-		<item id="2146" countmax="10" chance="15000" />		<!-- small sapphire -->
-		<item id="2143" countmax="13" chance="15000" />		<!-- white pearl -->
-		<item id="2520" chance="10000" />					<!-- demon shield -->
-		<item id="6500" chance="10000" />					<!-- demonic essence -->
-		<item id="2167" chance="10000" />					<!-- energy ring -->
-		<item id="2393" chance="10000" />					<!-- giant sword -->
-		<item id="9971" chance="10000" />					<!-- gold ingot -->
-		<item id="2179" chance="10000" />					<!-- gold ring -->
-		<item id="2470" chance="10000" />					<!-- golden legs -->
-		<item id="2158" chance="5000" />						<!-- blue gem -->
-		<item id="2462" chance="5000" />						<!-- devil helmet -->
-		<item id="2432" chance="5000" />						<!-- fire axe -->
-		<item id="2155" chance="5000" />						<!-- green gem -->
-		<item id="2164" chance="5000" />						<!-- might ring -->
-		<item id="2402" chance="5000" />						<!-- silver dagger -->
-		<item id="2150" countmax="12" chance="15000" />		<!-- small amethyst -->
-		<item id="2182" chance="5000" />						<!-- snakebite rod -->
-		<item id="2165" chance="5000" />						<!-- stealth ring -->
-		<item id="2197" chance="5000" />						<!-- stone skin amulet -->
+		<item id="3031" countmax="273" chance="1000" />	<!-- gold coin -->
+		<item id="239" chance="550" />					<!-- great health potion -->
+		<item id="3275" chance="300" />					<!-- double axe -->
+		<item id="6299" chance="250" />					<!-- death ring -->
+		<item id="3098" chance="250" />					<!-- ring of healing -->
+		<item id="3027" countmax="13" chance="200" />		<!-- black pearl -->
+		<item id="3032" countmax="10" chance="200" />		<!-- small emerald -->
+		<item id="3284" chance="150" />					<!-- ice rapier -->
+		<item id="3046" chance="150" />					<!-- magic light wand -->
+		<item id="3054" chance="150" />					<!-- silver amulet -->
+		<item id="3029" countmax="10" chance="150" />		<!-- small sapphire -->
+		<item id="3026" countmax="13" chance="150" />		<!-- white pearl -->
+		<item id="3420" chance="100" />					<!-- demon shield -->
+		<item id="6499" chance="100" />					<!-- demonic essence -->
+		<item id="3051" chance="100" />					<!-- energy ring -->
+		<item id="3281" chance="100" />					<!-- giant sword -->
+							<!-- gold ingot -->
+		<item id="3063" chance="100" />					<!-- gold ring -->
+		<item id="3364" chance="100" />					<!-- golden legs -->
+		<item id="3041" chance="50" />						<!-- blue gem -->
+		<item id="3356" chance="50" />						<!-- devil helmet -->
+		<item id="3320" chance="50" />						<!-- fire axe -->
+		<item id="3038" chance="50" />						<!-- green gem -->
+		<item id="3048" chance="50" />						<!-- might ring -->
+		<item id="3290" chance="50" />						<!-- silver dagger -->
+		<item id="3033" countmax="12" chance="150" />		<!-- small amethyst -->
+		<item id="3066" chance="50" />						<!-- snakebite rod -->
+		<item id="3049" chance="50" />						<!-- stealth ring -->
+		<item id="3081" chance="50" />						<!-- stone skin amulet -->
 	</loot>
 </monster>

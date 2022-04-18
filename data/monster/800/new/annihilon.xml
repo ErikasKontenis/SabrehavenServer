@@ -1,0 +1,98 @@
+<monster name="Annihilon" nameDescription="Annihilon" race="fire" experience="15000" speed="380" manacost="0">
+	<health now="46500" max="46500" />
+	<look type="12" head="19" body="104" legs="96" feet="96" corpse="8721" />
+	<targetchange interval="5000" chance="8" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="85" />
+		<flag runonhealth="200" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="185" attack="175" />
+		<attack name="death" interval="1000" chance="11" length="8" spread="0" min="0" max="-600">
+			<attribute key="areaEffect" value="mortarea" />
+		</attack>
+		<attack name="death" interval="2000" chance="15" target="0" radius="4" min="-200" max="-700">
+			<attribute key="areaEffect" value="icearea" />
+		</attack>
+		<attack name="physical" interval="3000" chance="18" radius="5" target="1" min="-50" max="-255">
+			<attribute key="areaEffect" value="groundshaker" />
+		</attack>
+		<attack name="fire" interval="2000" chance="15" radius="6" target="1" min="-50" max="-600">
+			<attribute key="areaEffect" value="firearea" />
+			<attribute key="shootEffect" value="fire" />
+		</attack>
+	</attacks>
+	<defenses armor="60" defense="55">
+		<defense name="healing" interval="1000" chance="14" min="400" max="900">
+			<attribute key="areaEffect" value="greenshimmer" />
+		</defense>
+		<defense name="speed" interval="1000" chance="4" speedchange="500" duration="7000">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element icePercent="20" />
+		<element energyPercent="95" />
+		<element deathPercent="95" />
+		<element holyPercent="-5" />
+	</elements>
+	<immunities>
+		<immunity invisible="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Flee as long as you can!" />
+		<voice sentence="Annihilon's might will crush you all!" />
+		<voice sentence="I am coming for you!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="100" chance="1000" />	<!-- gold coin -->
+							<!-- rusty armor (rare) -->
+		<item id="281" chance="389" />					<!-- giant shimmering pearl -->
+		<item id="282" chance="389" />					<!-- giant shimmering pearl -->
+		<item id="3340" chance="283" />					<!-- heavy mace -->
+		<item id="7368" countmax="50" chance="230" />		<!-- assassin star -->
+		<item id="3041" chance="230" />					<!-- blue gem -->
+		<item id="3010" chance="230" />					<!-- emerald bangle -->
+		<item id="3037" chance="225" />					<!-- yellow gem -->
+		<item id="6528" countmax="46" chance="216" />		<!-- infernal bolt -->
+		<item id="3315" chance="212" />					<!-- guardian halberd -->
+		<item id="3269" chance="208" />					<!-- halberd -->
+		<item id="3039" chance="208" />					<!-- red gem -->
+		<item id="7439" chance="199" />					<!-- berserk potion -->
+		<item id="763" countmax="96" chance="194" />		<!-- flaming arrow -->
+							<!-- gold ingot -->
+		<item id="3035" countmax="30" chance="190" />		<!-- platinum coin -->
+		<item id="3450" countmax="99" chance="190" />		<!-- power bolt -->
+		<item id="5944" countmax="5" chance="185" />		<!-- soul orb -->
+		<item id="3036" chance="177" />					<!-- violet gem -->
+		<item id="7366" countmax="70" chance="168" />		<!-- viper star -->
+		<item id="3038" chance="159" />					<!-- green gem -->
+		<item id="7440" chance="154" />					<!-- mastermind potion -->
+							<!-- ultimate health potion -->
+		<item id="239" chance="137" />					<!-- great health potion -->
+		<item id="7421" chance="137" />					<!-- onyx flail -->
+		<item id="3419" chance="132" />					<!-- crown shield -->
+							<!-- great spirit potion -->
+		<item id="5954" countmax="2" chance="128" />		<!-- demon horn -->
+		<item id="238" chance="123" />					<!-- great mana potion -->
+							<!-- paladin armor -->
+		<item id="3428" chance="101" />					<!-- tower shield -->
+		<item id="7387" chance="75" />						<!-- diamond sceptre -->
+		<item id="3415" chance="75" />						<!-- guardian shield -->
+		<item id="3414" chance="39" />						<!-- mastermind shield -->
+		<item id="3420" chance="35" />						<!-- demon shield -->
+		<item id="7431" chance="17" />						<!-- demonbone -->
+								<!-- lavos armor -->
+								<!-- obsidian truncheon -->
+								<!-- the stomper -->
+	</loot>
+</monster>

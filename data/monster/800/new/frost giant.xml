@@ -1,0 +1,54 @@
+<monster name="Frost Giant" nameDescription="a frost giant" race="blood" experience="150" speed="200" manacost="490">
+	<health now="270" max="270" />
+	<look type="257" corpse="7330" />
+	<targetchange interval="4000" chance="10" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="1" />
+		<flag convinceable="1" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag staticattack="80" />
+		<flag lightlevel="0" />
+		<flag lightcolor="0" />
+		<flag targetdistance="1" />
+		<flag runonhealth="0" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" skill="45" attack="40" />
+		<attack name="physical" interval="2000" chance="15" range="7" min="0" max="-90">
+			<attribute key="shootEffect" value="largerock" />
+		</attack>
+	</attacks>
+	<defenses armor="20" defense="20">
+		<defense name="speed" interval="2000" chance="15" speedchange="300" duration="5000">
+			<attribute key="areaEffect" value="redshimmer" />
+		</defense>
+	</defenses>
+	<immunities>
+		<immunity ice="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="Hmm Humansoup" />
+		<voice sentence="Stand still ya tasy snack!" />
+		<voice sentence="Joh Thun!" />
+		<voice sentence="Brore Smode!" />
+		<voice sentence="Horre Sjan Flan!" />
+		<voice sentence="Forle Bramma!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="40" chance="820" /><!-- gold coin -->
+		<item id="3577" countmax="2" chance="49" /><!-- meat -->
+		<item id="3294" chance="81" /><!-- short sword -->
+		<item id="7441" chance="21" /><!-- ice cube -->
+		<item id="3413" chance="13" /><!-- battle shield -->
+		<item id="3269" chance="5" /><!-- halberd -->
+		<item id="7460" chance="2" /><!-- norse shield -->
+		<item id="3384" chance="1" /><!-- dark helmet -->
+		<item id="266" chance="8" /><!-- health potion -->
+		<item id="7290" chance="6" /><!-- shard -->
+		<item id="3093" chance="1" /><!-- club ring -->
+	</loot>
+</monster>

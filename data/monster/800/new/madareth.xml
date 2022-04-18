@@ -1,0 +1,88 @@
+<monster name="Madareth" nameDescription="Madareth" race="fire" experience="10000" speed="380" manacost="0">
+	<health now="75000" max="75000" />
+	<look type="12" head="77" body="116" legs="82" feet="79" corpse="8721" />
+	<targetchange interval="5000" chance="8" />
+	<flags>
+		<flag summonable="0" />
+		<flag attackable="1" />
+		<flag hostile="1" />
+		<flag illusionable="0" />
+		<flag convinceable="0" />
+		<flag pushable="0" />
+		<flag canpushitems="1" />
+		<flag canpushcreatures="1" />
+		<flag targetdistance="1" />
+		<flag staticattack="85" />
+		<flag runonhealth="1200" />
+	</flags>
+	<attacks>
+		<attack name="melee" interval="2000" min="0" max="-2000" />
+		<attack name="energy" interval="2000" chance="15" radius="4" target="1" min="-180" max="-660">
+			<attribute key="areaEffect" value="purpleenergy" />
+		</attack>
+		<attack name="death" interval="2000" chance="10" length="5" spread="2" min="-600" max="-850">
+			<attribute key="areaEffect" value="blacksmoke" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="20" radius="4" target="1" min="0" max="-200">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+		<attack name="manadrain" interval="2000" chance="5" radius="5" target="1" min="0" max="-250">
+			<attribute key="areaEffect" value="redshimmer" />
+		</attack>
+	</attacks>
+	<defenses armor="48" defense="46">
+		<defense name="healing" interval="3000" chance="14" min="400" max="900">
+			<attribute key="areaEffect" value="blueshimmer" />
+		</defense>
+	</defenses>
+	<elements>
+		<element firePercent="-5" />
+		<element icePercent="5" />
+		<element deathPercent="95" />
+		<element energyPercent="99" />
+	</elements>
+	<immunities>
+		<immunity invisible="1" />
+		<immunity paralyze="1" />
+	</immunities>
+	<voices interval="2000" chance="7">
+		<voice sentence="I am going to play with yourself!" yell="1" />
+		<voice sentence="Feel my wrath!" />
+		<voice sentence="No one matches my battle prowess!" />
+		<voice sentence="You will all die!" />
+	</voices>
+	<loot>
+		<item id="3031" countmax="150" chance="1000" />	<!-- gold coin -->
+		<item id="7443" chance="330" />					<!-- bullseye potion -->
+		<item id="239" chance="300" />					<!-- great health potion -->
+		<item id="7440" chance="280" />					<!-- mastermind potion -->
+		<item id="7439" chance="230" />					<!-- berserk potion -->
+		<item id="238" chance="210" />					<!-- great mana potion -->
+		<item id="6299" chance="190" />					<!-- death ring -->
+		<item id="3067" chance="190" />					<!-- hailstorm rod -->
+		<item id="3035" countmax="26" chance="190" />		<!-- platinum coin -->
+		<item id="3265" chance="190" />					<!-- two handed sword -->
+		<item id="7404" chance="160" />					<!-- assassin dagger -->
+		<item id="3092" chance="160" />					<!-- axe ring -->
+		<item id="3093" chance="140" />					<!-- club ring -->
+		<item id="6499" chance="140" />					<!-- demonic essence -->
+		<item id="7407" chance="140" />					<!-- haunted blade -->
+		<item id="2949" chance="140" />					<!-- lyre -->
+		<item id="7418" chance="140" />					<!-- nightmare blade -->
+		<item id="2966" chance="140" />					<!-- war drum -->
+		<item id="3071" chance="110" />					<!-- wand of inferno -->
+		<item id="7416" chance="95" />						<!-- bloody edge -->
+		<item id="7449" chance="2" />						<!-- crystal sword -->
+		<item id="3098" chance="95" />						<!-- ring of healing -->
+		<item id="5954" countmax="2" chance="70" />		<!-- demon horn -->
+		<item id="3052" chance="70" />						<!-- life ring -->
+		<item id="7383" chance="70" />						<!-- relic sword -->
+		<item id="3053" chance="70" />						<!-- time ring -->
+		<item id="2958" chance="70" />						<!-- war horn -->
+		<item id="2965" chance="47" />						<!-- didgeridoo -->
+		<item id="3097" chance="47" />						<!-- dwarven ring -->
+		<item id="3284" chance="47" />						<!-- ice rapier -->
+		<item id="7386" chance="47" />						<!-- mercenary sword -->
+		<item id="3091" chance="47" />						<!-- sword ring -->
+	</loot>
+</monster>
