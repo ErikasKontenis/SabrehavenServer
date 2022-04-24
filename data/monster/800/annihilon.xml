@@ -1,7 +1,8 @@
-<monster name="Annihilon" nameDescription="Annihilon" race="fire" experience="15000" speed="380" manacost="0">
+<monster name="Annihilon" nameDescription="Annihilon" race="fire" experience="15000" speed="108" manacost="0">
 	<health now="46500" max="46500" />
 	<look type="12" head="19" body="104" legs="96" feet="96" corpse="8721" />
-	<targetchange interval="5000" chance="8" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,16 +13,14 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="85" />
 		<flag runonhealth="200" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="185" attack="175" />
-		<attack name="death" interval="1000" chance="11" length="8" spread="0" min="0" max="-600">
+	<attacks skill="185" attack="175">
+		<attack name="physical" interval="1000" chance="11" length="8" spread="0" min="0" max="-600">
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
-		<attack name="death" interval="2000" chance="15" target="0" radius="4" min="-200" max="-700">
-			<attribute key="areaEffect" value="icearea" />
+		<attack name="physical" interval="2000" chance="15" target="0" radius="4" min="-200" max="-700">
+			<attribute key="areaEffect" value="poff" />
 		</attack>
 		<attack name="physical" interval="3000" chance="18" radius="5" target="1" min="-50" max="-255">
 			<attribute key="areaEffect" value="groundshaker" />
@@ -35,15 +34,12 @@
 		<defense name="healing" interval="1000" chance="14" min="400" max="900">
 			<attribute key="areaEffect" value="greenshimmer" />
 		</defense>
-		<defense name="speed" interval="1000" chance="4" speedchange="500" duration="7000">
+		<defense name="speed" interval="1000" chance="4" speedchange="142" duration="7000">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element icePercent="20" />
 		<element energyPercent="95" />
-		<element deathPercent="95" />
-		<element holyPercent="-5" />
 	</elements>
 	<immunities>
 		<immunity invisible="1" />

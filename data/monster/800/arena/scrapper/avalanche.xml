@@ -12,8 +12,7 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="50" attack="60" />
+	<attacks skill="50" attack="60">
 		<attack name="drown" interval="1000" chance="100" length="5" spread="6" min="-10" max="-50">
 			<attribute key="areaEffect" value="energyarea" />
 		</attack>
@@ -30,7 +29,6 @@
 		<element energyPercent="-10" />
 	</elements>
 	<immunities>
-		<immunity ice="1" />
 		<immunity earth="1" />
 		<immunity invisible="1" />
 	</immunities>

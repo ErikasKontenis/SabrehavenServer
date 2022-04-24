@@ -1,7 +1,8 @@
-<monster name="Ice Witch" nameDescription="an ice witch" race="blood" experience="580" speed="200" manacost="0">
+<monster name="Ice Witch" nameDescription="an ice witch" race="blood" experience="580" speed="57" manacost="0">
 	<health now="650" max="650" />
 	<look type="149" head="0" body="47" legs="105" feet="105" addons="0" corpse="20426" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -11,26 +12,24 @@
 		<flag pushable="0" />
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
-		<flag staticattack="70" />
 		<flag targetdistance="4" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-60" />
-		<attack name="ice" interval="2000" chance="10" length="8" spread="3" min="0" max="-100">
-			<attribute key="areaEffect" value="iceattack" />
+	<attacks skill="30" attack="30">
+		<attack name="physical" interval="2000" chance="10" length="8" spread="3" min="0" max="-100">
+			<attribute key="areaEffect" value="poff" />
 		</attack>
-		<attack name="ice" interval="2000" chance="20" range="7" min="0" max="-110">
+		<attack name="physical" interval="2000" chance="20" range="7" min="0" max="-110">
 			<attribute key="shootEffect" value="snowball" />
 		</attack>
-		<attack name="ice" interval="2000" chance="10" length="8" spread="3" min="-50" max="-124">
-			<attribute key="areaEffect" value="icearea" />
+		<attack name="physical" interval="2000" chance="10" length="8" spread="3" min="-50" max="-124">
+			<attribute key="areaEffect" value="poff" />
 		</attack>
 		<attack name="outfit" interval="2000" chance="10" range="7" item="7172" duration="4000">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</attack>
 		<attack name="speed" interval="2000" chance="15" range="7" speedchange="-300" duration="20000">
-			<attribute key="areaEffect" value="icetornado" />
+			<attribute key="areaEffect" value="poff" />
 		</attack>
 	</attacks>
 	<defenses armor="20" defense="20">
@@ -41,12 +40,9 @@
 	<elements>
 		<element firePercent="50" />
 		<element earthPercent="40" />
-		<element holyPercent="30" />
 		<element energyPercent="-10" />
-		<element deathPercent="-10" />
 	</elements>
 	<immunities>
-		<immunity ice="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 	</immunities>

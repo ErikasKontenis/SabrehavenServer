@@ -1,7 +1,8 @@
-<monster name="Madareth" nameDescription="Madareth" race="fire" experience="10000" speed="380" manacost="0">
+<monster name="Madareth" nameDescription="Madareth" race="fire" experience="10000" speed="108" manacost="0">
 	<health now="75000" max="75000" />
 	<look type="12" head="77" body="116" legs="82" feet="79" corpse="8721" />
-	<targetchange interval="5000" chance="8" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,16 +13,14 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="85" />
 		<flag runonhealth="1200" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-2000" />
+	<attacks skill="120" attack="135">
 		<attack name="energy" interval="2000" chance="15" radius="4" target="1" min="-180" max="-660">
-			<attribute key="areaEffect" value="purpleenergy" />
+			<attribute key="areaEffect" value="energy" />
 		</attack>
-		<attack name="death" interval="2000" chance="10" length="5" spread="2" min="-600" max="-850">
-			<attribute key="areaEffect" value="blacksmoke" />
+		<attack name="physical" interval="2000" chance="10" length="5" spread="2" min="-600" max="-850">
+			<attribute key="areaEffect" value="poff" />
 		</attack>
 		<attack name="manadrain" interval="2000" chance="20" radius="4" target="1" min="0" max="-200">
 			<attribute key="areaEffect" value="redshimmer" />
@@ -37,8 +36,6 @@
 	</defenses>
 	<elements>
 		<element firePercent="-5" />
-		<element icePercent="5" />
-		<element deathPercent="95" />
 		<element energyPercent="99" />
 	</elements>
 	<immunities>

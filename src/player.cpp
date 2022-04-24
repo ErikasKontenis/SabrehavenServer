@@ -184,6 +184,15 @@ Item* Player::getWeapon() const
 	return nullptr;
 }
 
+WeaponType_t Player::getWeaponType() const
+{
+	Item* item = getWeapon();
+	if (!item) {
+		return WEAPON_NONE;
+	}
+	return item->getWeaponType();
+}
+
 Item* Player::getAmmunition() const
 {
 	return inventory[CONST_SLOT_AMMO];

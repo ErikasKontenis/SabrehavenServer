@@ -12,8 +12,7 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="85" attack="80" />
+	<attacks skill="85" attack="80">
 		<attack name="physical" interval="7500" chance="100" min="-100" max="-250">
 			<attribute key="shootEffect" value="largerock" />
 		</attack>
@@ -28,7 +27,6 @@
 	</defenses>
 	<elements>
 		<element earthPercent="35" />
-		<element icePercent="-20" />
 	</elements>
 	<immunities>
 		<immunity invisible="1" />

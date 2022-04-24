@@ -255,4 +255,25 @@
 	<monster name="Latrivan" file="800/latrivan.xml" />
 	<monster name="Annihilon" file="800/annihilon.xml" />
 	<monster name="Hellgorak" file="800/hellgorak.xml" />
+	<monster name="Barbarian Bloodwalker" file="800/barbarian bloodwalker.xml" />
+	<monster name="Barbarian Brutetamer" file="800/barbarian brutetamer.xml" />
+	<monster name="Barbarian Headsplitter" file="800/barbarian headsplitter.xml" />
+	<monster name="Barbarian Skullhunter" file="800/barbarian skullhunter.xml" />
+	<monster name="Braindeath" file="800/braindeath.xml" />
+	<monster name="Chakoya Toolshaper" file="800/chakoya toolshaper.xml" />
+	<monster name="Chakoya Tribewarden" file="800/chakoya tribewarden.xml" />
+	<monster name="Chakoya Windcaller" file="800/chakoya windcaller.xml" />
+	<monster name="Crystal Spider" file="800/crystal spider.xml" />
+	<monster name="Dire Penguin" file="800/dire penguin.xml" />
+	<monster name="Frost Dragon" file="800/frost dragon.xml" />
+	<monster name="Frost Giant" file="800/frost giant.xml" />
+	<monster name="Frost Giantess" file="800/frost giantess.xml" />
+	<monster name="Ghazbaran" file="800/ghazbaran.xml" />
+	<monster name="Husky" file="800/husky.xml" />
+	<monster name="Ice Golem" file="800/ice golem.xml" />
+	<monster name="Ice Witch" file="800/ice witch.xml" />
+	<monster name="Man In The Cave" file="800/man in the cave.xml" />
+	<monster name="Penguin" file="800/penguin.xml" />
+	<monster name="Silver Rabbit" file="800/silver rabbit.xml" />
+	<monster name="Yakchal" file="800/yakchal.xml" />
 </monsters>

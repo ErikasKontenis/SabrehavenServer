@@ -12,16 +12,14 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="80" attack="50" />
+	<attacks skill="80" attack="50">
+
 	</attacks>
 	<defenses armor="25" defense="27" />
 	<elements>
-		<element deathPercent="-15" />
-		<element energyPercent="-10" />
+
 	</elements>
 	<immunities>
-		<immunity ice="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<voices interval="2000" chance="5">

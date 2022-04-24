@@ -1,7 +1,8 @@
-<monster name="Braindeath" nameDescription="a braindeath" race="undead" experience="895" speed="230" manacost="0">
+<monster name="Braindeath" nameDescription="a braindeath" race="undead" experience="895" speed="65" manacost="0">
 	<health now="1225" max="1225" />
 	<look type="256" corpse="7256" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,19 +13,17 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="4" />
-		<flag staticattack="80" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="50" />
+	<attacks skill="30" attack="50">
 		<attack name="energy" interval="2000" chance="10" range="7" min="-93" max="-170">
 			<attribute key="shootEffect" value="energy" />
 		</attack>
 		<attack name="fire" interval="2000" chance="10" range="7" min="-75" max="-125">
 			<attribute key="shootEffect" value="fire" />
 		</attack>
-		<attack name="death" interval="2000" chance="10" range="7" min="-85" max="-170">
-			<attribute key="shootEffect" value="suddendeath" />
+		<attack name="physical" interval="2000" chance="10" range="7" min="-85" max="-170">
+			<attribute key="shootEffect" value="death" />
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 		<attack name="earth" interval="2000" chance="10" range="7" min="-65" max="-125">
@@ -40,20 +39,17 @@
 		<defense name="healing" interval="2000" chance="15" min="150" max="200">
 			<attribute key="areaEffect" value="blueshimmer" />
 		</defense>
-		<defense name="speed" interval="2000" chance="15" speedchange="260" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="74" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
 	<elements>
-		<element icePercent="20" />
 		<element physicalPercent="10" />
 		<element energyPercent="10" />
-		<element holyPercent="-20" />
 		<element firePercent="-15" />
 	</elements>
 	<immunities>
 		<immunity earth="1" />
-		<immunity death="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<summons maxSummons="2">

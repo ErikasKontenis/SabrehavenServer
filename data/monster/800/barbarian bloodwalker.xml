@@ -1,7 +1,8 @@
-<monster name="Barbarian Bloodwalker" nameDescription="a barbarian bloodwalker" race="blood" experience="195" speed="230" manacost="590">
+<monster name="Barbarian Bloodwalker" nameDescription="a barbarian bloodwalker" race="blood" experience="195" speed="65" manacost="590">
 	<health now="305" max="305" />
 	<look type="255" head="114" body="132" legs="132" feet="132" corpse="20335" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -10,26 +11,22 @@
 		<flag convinceable="1" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="80" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="1" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="50" attack="80" />
+	<attacks skill="50" attack="80">
+
 	</attacks>
 	<defenses armor="15" defense="15">
-		<defense name="speed" interval="2000" chance="15" speedchange="240" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="68" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
 	<elements>
 		<element physicalPercent="5" />
-		<element holyPercent="20" />
 		<element energyPercent="10" />
-		<element icePercent="50" />
-		<element deathPercent="-5" />
 		<element earthPercent="-5" />
 	</elements>
 	<voices interval="2000" chance="7">

@@ -1,7 +1,8 @@
-<monster name="Frost Giantess" nameDescription="a frost giantess" race="blood" experience="150" speed="210" manacost="490">
+<monster name="Frost Giantess" nameDescription="a frost giantess" race="blood" experience="150" speed="59" manacost="490">
 	<health now="275" max="275" />
 	<look type="265" corpse="7330" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -10,31 +11,27 @@
 		<flag convinceable="1" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="60" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="4" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="30" />
+	<attacks skill="30" attack="30">
 		<attack name="physical" interval="2000" chance="30" range="7" min="0" max="-90">
 			<attribute key="shootEffect" value="largerock" />
 		</attack>
 	</attacks>
 	<defenses armor="15" defense="15">
-		<defense name="speed" interval="2000" chance="15" speedchange="300" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="85" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
 	<elements>
 		<element firePercent="20" />
-		<element holyPercent="10" />
 		<element energyPercent="-10" />
-		<element deathPercent="-3" />
 	</elements>
 	<immunities>
-		<immunity ice="1" />
+
 	</immunities>
 	<voices interval="2000" chance="7">
 		<voice sentence="Ymirs Mjalle!" />

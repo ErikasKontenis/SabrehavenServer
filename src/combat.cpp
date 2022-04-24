@@ -604,12 +604,38 @@ void Combat::combatTileEffects(const SpectatorVec& list, Creature* caster, Tile*
 void Combat::postCombatEffects(Creature* caster, const Position& pos, const CombatParams& params)
 {
 	if (caster && params.distanceEffect != CONST_ANI_NONE) {
-		addDistanceEffect(caster->getPosition(), pos, params.distanceEffect);
+		addDistanceEffect(caster, caster->getPosition(), pos, params.distanceEffect);
 	}
 }
 
-void Combat::addDistanceEffect(const Position& fromPos, const Position& toPos, uint8_t effect)
+void Combat::addDistanceEffect(Creature* caster, const Position& fromPos, const Position& toPos, uint8_t effect)
 {
+	if (effect == CONST_ANI_WEAPONTYPE) {
+		if (!caster) {
+			return;
+		}
+
+		Player* player = caster->getPlayer();
+		if (!player) {
+			return;
+		}
+
+		switch (player->getWeaponType()) {
+		case WEAPON_AXE:
+			effect = CONST_ANI_WHIRLWINDAXE;
+			break;
+		case WEAPON_SWORD:
+			effect = CONST_ANI_WHIRLWINDSWORD;
+			break;
+		case WEAPON_CLUB:
+			effect = CONST_ANI_WHIRLWINDCLUB;
+			break;
+		default:
+			effect = CONST_ANI_NONE;
+			break;
+		}
+	}
+
 	if (effect != CONST_ANI_NONE) {
 		g_game.addDistanceEffect(fromPos, toPos, effect);
 	}
@@ -1326,7 +1352,7 @@ bool Combat::doCombatHealth(Creature* caster, Creature* target, CombatDamage& da
 
 	if (canCombat) {
 		if (caster && params.distanceEffect != CONST_ANI_NONE) {
-			addDistanceEffect(caster->getPosition(), target->getPosition(), params.distanceEffect);
+			addDistanceEffect(caster, caster->getPosition(), target->getPosition(), params.distanceEffect);
 		}
 
 		canCombat = CombatHealthFunc(caster, target, params, &damage);
@@ -1352,7 +1378,7 @@ void Combat::doCombatMana(Creature* caster, Creature* target, CombatDamage& dama
 
 	if (canCombat) {
 		if (caster && params.distanceEffect != CONST_ANI_NONE) {
-			addDistanceEffect(caster->getPosition(), target->getPosition(), params.distanceEffect);
+			addDistanceEffect(caster, caster->getPosition(), target->getPosition(), params.distanceEffect);
 		}
 
 		CombatManaFunc(caster, target, params, &damage);
@@ -1381,7 +1407,7 @@ void Combat::doCombatCondition(Creature* caster, Creature* target, const CombatP
 
 	if (canCombat) {
 		if (caster && params.distanceEffect != CONST_ANI_NONE) {
-			addDistanceEffect(caster->getPosition(), target->getPosition(), params.distanceEffect);
+			addDistanceEffect(caster, caster->getPosition(), target->getPosition(), params.distanceEffect);
 		}
 
 		CombatConditionFunc(caster, target, params, nullptr);
@@ -1410,7 +1436,7 @@ void Combat::doCombatDispel(Creature* caster, Creature* target, const CombatPara
 		}
 
 		if (caster && params.distanceEffect != CONST_ANI_NONE) {
-			addDistanceEffect(caster->getPosition(), target->getPosition(), params.distanceEffect);
+			addDistanceEffect(caster, caster->getPosition(), target->getPosition(), params.distanceEffect);
 		}
 	}
 }
@@ -1435,7 +1461,7 @@ void Combat::doCombatDefault(Creature* caster, Creature* target, const CombatPar
 		*/
 
 		if (caster && params.distanceEffect != CONST_ANI_NONE) {
-			addDistanceEffect(caster->getPosition(), target->getPosition(), params.distanceEffect);
+			addDistanceEffect(caster, caster->getPosition(), target->getPosition(), params.distanceEffect);
 		}
 	}
 }

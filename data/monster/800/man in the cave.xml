@@ -1,7 +1,8 @@
-<monster name="Man In The Cave" nameDescription="man in the cave" race="blood" experience="770" speed="210" manacost="0">
+<monster name="Man In The Cave" nameDescription="man in the cave" race="blood" experience="770" speed="59" manacost="0">
 	<health now="485" max="485" />
 	<look type="128" head="77" body="59" legs="20" feet="116" addons="1" corpse="20446" />
-	<targetchange interval="5000" chance="8" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,17 +13,15 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="0" />
 		<flag targetdistance="1" />
-		<flag staticattack="90" />
 		<flag runonhealth="50" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-62" />
+	<attacks skill="60" attack="30">
 		<attack name="physical" interval="2000" chance="20" range="7" min="0" max="-95">
 			<attribute key="shootEffect" value="smallstone" />
 		</attack>
 	</attacks>
 	<defenses armor="15" defense="15">
-		<defense name="speed" interval="2000" chance="12" speedchange="250" duration="4000">
+		<defense name="speed" interval="2000" chance="12" speedchange="71" duration="4000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 		<defense name="healing" interval="2000" chance="25" min="10" max="50">

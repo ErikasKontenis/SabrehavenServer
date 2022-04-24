@@ -1,7 +1,8 @@
-<monster name="Yakchal" nameDescription="Yakchal" race="blood" experience="4400" speed="220" manacost="0">
+<monster name="Yakchal" nameDescription="Yakchal" race="blood" experience="4400" speed="62" manacost="0">
 	<health now="5000" max="5000" />
 	<look type="149" head="8" body="0" legs="85" feet="85" addons="1" corpse="20546" />
-	<targetchange interval="2000" chance="5" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -11,15 +12,13 @@
 		<flag pushable="0" />
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
-		<flag staticattack="50" />
 		<flag targetdistance="4" />
 		<flag runonhealth="100" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-389" />
-		<attack name="ice" interval="2000" chance="18" target="1" radius="4" min="0" max="-430">
-			<attribute key="areaEffect" value="icearea" />
-			<attribute key="shootEffect" value="smallice" />
+	<attacks skill="30" attack="50">
+		<attack name="physical" interval="2000" chance="18" target="1" radius="4" min="0" max="-430">
+			<attribute key="areaEffect" value="poff" />
+			<attribute key="shootEffect" value="snowball" />
 		</attack>
 		<attack name="physical" interval="3000" chance="34" range="7" radius="3" target="1" min="-200" max="-300">
 			<attribute key="shootEffect" value="snowball" />
@@ -34,7 +33,6 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element holyPercent="50" />
 		<element energyPercent="-5" />
 	</elements>
 	<immunities>

@@ -12,15 +12,14 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="4" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-45" poison="11" />
+	<attacks skill="20" attack="30" poison="11">
 		<attack name="speed" interval="3500" chance="35" range="5" duration="10000" speed="-250">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 		<attack name="manadrain" interval="4000" chance="30" range="5" min="0" max="-110">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
-		<attack name="death" interval="3000" chance="70" range="5" min="-50" max="-90">
+		<attack name="physical" interval="3000" chance="70" range="5" min="-50" max="-90">
 			<attribute key="areaEffect" value="mortarea" />
 			<attribute key="shootEffect" value="suddendeath" />
 		</attack>
@@ -35,7 +34,6 @@
 	</defenses>
 	<elements>
 		<element firePercent="40" />
-		<element deathPercent="5" />
 	</elements>
 	<immunities>
 		<immunity invisible="1" />

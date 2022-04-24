@@ -12,8 +12,7 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="70" attack="160" />
+	<attacks skill="70" attack="160">
 		<attack name="physical" interval="2000" chance="40" min="-38" max="-150">
 			<attribute key="shootEffect" value="throwingknife" />
 		</attack>
@@ -24,7 +23,6 @@
 		</defense>
 	</defenses>
 	<elements>
-		<element holyPercent="-15" />
 		<element energyPercent="30" />
 	</elements>
 	<immunities>

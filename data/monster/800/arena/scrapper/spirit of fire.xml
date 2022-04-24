@@ -12,11 +12,9 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="90" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-300" />
+	<attacks skill="50" attack="100">
 		<attack name="firefield" interval="1000" chance="15" range="7" radius="4" target="1">
 			<attribute key="shootEffect" value="fire" />
 		</attack>
@@ -34,7 +32,6 @@
 	</defenses>
 	<elements>
 		<element energyPercent="20" />
-		<element icePercent="-10" />
 	</elements>
 	<immunities>
 		<immunity fire="1" />

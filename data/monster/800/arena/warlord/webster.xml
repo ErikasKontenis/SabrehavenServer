@@ -12,8 +12,7 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="40" attack="100" />
+	<attacks skill="40" attack="100">
 		<attack name="speed" interval="3500" chance="65" radius="1" target="1" range="1" duration="40" speedchange="-500">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
@@ -30,7 +29,6 @@
 		<element energyPercent="-20" />
 	</elements>
 	<immunities>
-		<immunity ice="1" />
 		<immunity invisible="1" />
 	</immunities>
 	<voices interval="2000" chance="5">

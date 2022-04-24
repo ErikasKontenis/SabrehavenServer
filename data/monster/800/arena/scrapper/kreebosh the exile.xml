@@ -12,8 +12,7 @@
 		<flag canpushitems="1" />
 		<flag targetdistance="1" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="30" attack="50" />
+	<attacks skill="30" attack="50">
 		<attack name="fire" interval="6000" chance="80" radius="3" min="0" max="-120">
 			<attribute key="areaEffect" value="energy" />
 		</attack>
@@ -36,7 +35,6 @@
 	<defenses armor="30" defense="40" />
 	<elements>
 		<element energyPercent="55" />
-		<element deathPercent="-10" />
 	</elements>
 	<immunities>
 		<immunity invisible="1" />

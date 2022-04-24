@@ -1,7 +1,8 @@
-<monster name="Ushuriel" nameDescription="Ushuriel" race="fire" experience="10500" speed="350" manacost="0">
+<monster name="Ushuriel" nameDescription="Ushuriel" race="fire" experience="10500" speed="100" manacost="0">
 	<health now="31500" max="31500" />
 	<look type="12" head="0" body="95" legs="19" feet="112" corpse="8721" />
-	<targetchange interval="5000" chance="8" />
+	<targetchange interval="1000" chance="10" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,28 +13,23 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="85" />
 		<flag runonhealth="1500" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" min="0" max="-1200" />
+	<attacks skill="140" attack="145">
 		<attack name="physical" interval="1000" chance="10" length="10" spread="0" min="-250" max="-500">
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
-		<attack name="ice" interval="2000" chance="10" length="8" spread="3" min="0" max="-400">
-			<attribute key="areaEffect" value="icetornado" />
+		<attack name="physical" interval="2000" chance="10" length="8" spread="3" min="0" max="-400">
+			<attribute key="areaEffect" value="poff" />
 		</attack>
-		<attack name="cursecondition" interval="2000" chance="15" radius="4" target="0" min="0" max="-800">
-			<attribute key="areaEffect" value="mortarea" />
-		</attack>
-		<attack name="energycondition" interval="2000" chance="15" radius="4" target="0" min="-25" max="-25">
+		<attack name="energycondition" interval="2000" chance="15" radius="4" target="0" min="-25" max="-25" count="70">
 			<attribute key="areaEffect" value="energy" />
 		</attack>
 		<attack name="drunk" interval="3000" chance="11" radius="6" target="0" duration="25000">
 			<attribute key="areaEffect" value="purplenote" />
 		</attack>
 		<attack name="earth" interval="2000" chance="9" length="8" spread="3" min="0" max="-600">
-			<attribute key="areaEffect" value="smallplants" />
+			<attribute key="areaEffect" value="poison" />
 		</attack>
 	</attacks>
 	<defenses armor="50" defense="45">
@@ -45,12 +41,9 @@
 		<element physicalPercent="50" />
 		<element firePercent="30" />
 		<element energyPercent="30" />
-		<element icePercent="30" />
 		<element earthPercent="30" />
-		<element holyPercent="25" />
 	</elements>
 	<immunities>
-		<immunity death="1" />
 		<immunity paralyze="1" />
 		<immunity invisible="1" />
 	</immunities>

@@ -1,7 +1,8 @@
-<monster name="Silver Rabbit" nameDescription="a silver rabbit" race="blood" experience="0" speed="195" manacost="220">
+<monster name="Silver Rabbit" nameDescription="a silver rabbit" race="blood" experience="0" speed="55" manacost="220">
 	<health now="15" max="15" />
 	<look type="262" head="69" body="66" legs="69" feet="66" corpse="7338" />
-	<targetchange interval="4000" chance="0" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="1" />
 		<flag attackable="1" />
@@ -10,7 +11,6 @@
 		<flag convinceable="1" />
 		<flag pushable="0" />
 		<flag canpushitems="0" />
-		<flag staticattack="70" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="0" />

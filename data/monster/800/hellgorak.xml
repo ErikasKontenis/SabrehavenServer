@@ -1,7 +1,8 @@
-<monster name="Hellgorak" nameDescription="Hellgorak" race="blood" experience="10000" speed="360" manacost="0">
+<monster name="Hellgorak" nameDescription="Hellgorak" race="blood" experience="10000" speed="105" manacost="0">
 	<health now="25850" max="25850" />
 	<look type="12" head="19" body="96" legs="21" feet="81" corpse="8721" />
-	<targetchange interval="5000" chance="8" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -12,14 +13,11 @@
 		<flag canpushitems="1" />
 		<flag canpushcreatures="1" />
 		<flag targetdistance="1" />
-		<flag staticattack="85" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack script="monster/smokeue.lua" interval="2000" chance="8" />
-		<attack name="melee" interval="2000" min="0" max="-800" />
+	<attacks skill="130" attack="130">
 		<attack name="energy" interval="1000" chance="11" length="8" spread="0" min="-250" max="-850">
-			<attribute key="areaEffect" value="purpleenergy" />
+			<attribute key="areaEffect" value="energy" />
 		</attack>
 		<attack name="fire" interval="1000" chance="11" radius="5" target="1" min="-50" max="-600">
 			<attribute key="areaEffect" value="firearea" />
@@ -38,11 +36,8 @@
 	</defenses>
 	<elements>
 		<element physicalPercent="98" />
-		<element icePercent="98" />
 		<element energyPercent="98" />
 		<element earthPercent="98" />
-		<element holyPercent="95" />
-		<element deathPercent="98" />
 		<element firePercent="98" />
 		<element drownPercent="-205" />
 	</elements>

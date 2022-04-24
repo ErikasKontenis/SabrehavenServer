@@ -1,7 +1,8 @@
-<monster name="Barbarian Headsplitter" nameDescription="a barbarian headsplitter" race="blood" experience="85" speed="200" manacost="450">
+<monster name="Barbarian Headsplitter" nameDescription="a barbarian headsplitter" race="blood" experience="85" speed="57" manacost="450">
 	<health now="100" max="100" />
 	<look type="253" head="115" body="105" legs="119" feet="132" corpse="20343" />
-	<targetchange interval="60000" chance="0" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -10,25 +11,20 @@
 		<flag convinceable="1" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="70" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="1" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="40" attack="20" />
+	<attacks skill="40" attack="20">
 		<attack name="physical" interval="2000" chance="15" range="7" radius="1" target="1" min="0" max="-60">
 			<attribute key="shootEffect" value="whirlwindaxe" />
 		</attack>
 	</attacks>
 	<defenses armor="15" defense="15" />
 	<elements>
-		<element icePercent="50" />
-		<element holyPercent="10" />
 		<element energyPercent="20" />
 		<element earthPercent="-10" />
-		<element deathPercent="-1" />
 	</elements>
 	<immunities>
 		<immunity paralyze="1" />

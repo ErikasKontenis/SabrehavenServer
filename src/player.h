@@ -568,6 +568,7 @@ class Player final : public Creature, public Cylinder
 		}
 
 		Item* getWeapon() const;
+		WeaponType_t getWeaponType() const;
 		Item* getAmmunition() const;
 		void getShieldAndWeapon(const Item*& shield, const Item*& weapon) const;
 

@@ -1,7 +1,8 @@
-<monster name="Frost Giant" nameDescription="a frost giant" race="blood" experience="150" speed="200" manacost="490">
+<monster name="Frost Giant" nameDescription="a frost giant" race="blood" experience="150" speed="57" manacost="490">
 	<health now="270" max="270" />
 	<look type="257" corpse="7330" />
-	<targetchange interval="4000" chance="10" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -10,25 +11,23 @@
 		<flag convinceable="1" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="80" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="1" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="45" attack="40" />
+	<attacks skill="45" attack="40">
 		<attack name="physical" interval="2000" chance="15" range="7" min="0" max="-90">
 			<attribute key="shootEffect" value="largerock" />
 		</attack>
 	</attacks>
 	<defenses armor="20" defense="20">
-		<defense name="speed" interval="2000" chance="15" speedchange="300" duration="5000">
+		<defense name="speed" interval="2000" chance="15" speedchange="85" duration="5000">
 			<attribute key="areaEffect" value="redshimmer" />
 		</defense>
 	</defenses>
 	<immunities>
-		<immunity ice="1" />
+
 	</immunities>
 	<voices interval="2000" chance="7">
 		<voice sentence="Hmm Humansoup" />

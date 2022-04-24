@@ -674,6 +674,10 @@ MagicEffectNames magicEffectNames[] = {
 	{"yellowfirework",	CONST_ME_FIREWORK_YELLOW},
 	{"redfirework",		CONST_ME_FIREWORK_RED},
 	{"bluefirework",	CONST_ME_FIREWORK_BLUE},
+	{"stun",	CONST_ME_STUN},
+	{"sleep",	CONST_ME_SLEEP},
+	{"watercreature",	CONST_ME_WATERCREATURE},
+	{"groundshaker",	CONST_ME_GROUNDSHAKER},
 };
 
 ShootTypeNames shootTypeNames[] = {
@@ -693,6 +697,18 @@ ShootTypeNames shootTypeNames[] = {
 	{"powerbolt",		CONST_ANI_POWERBOLT},
 	{"poison",		CONST_ANI_POISON},
 	{"infernalbolt",	CONST_ANI_INFERNALBOLT},
+	{"huntingspear",	CONST_ANI_HUNTINGSPEAR},
+	{"enchantedspear",	CONST_ANI_ENCHANTEDSPEAR},
+	{"redstar",	CONST_ANI_REDSTAR},
+	{"greenstar",	CONST_ANI_GREENSTAR},
+	{"royalspear",	CONST_ANI_ROYALSPEAR},
+	{"sniperarrow",	CONST_ANI_SNIPERARROW},
+	{"onyxarrow",	CONST_ANI_ONYXARROW},
+	{"piercingbolt",	CONST_ANI_PIERCINGBOLT},
+	{"whirlwindsword",	CONST_ANI_WHIRLWINDSWORD},
+	{"whirlwindaxe",	CONST_ANI_WHIRLWINDAXE},
+	{"whirldwindclub",	CONST_ANI_WHIRLWINDCLUB},
+	{"etherealspear",	CONST_ANI_ETHEREALSPEAR},
 };
 
 CombatTypeNames combatTypeNames[] = {

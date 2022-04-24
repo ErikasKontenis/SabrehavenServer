@@ -1,7 +1,8 @@
-<monster name="Chakoya Tribewarden" nameDescription="a chakoya tribewarden" race="blood" experience="40" speed="200" manacost="305">
+<monster name="Chakoya Tribewarden" nameDescription="a chakoya tribewarden" race="blood" experience="40" speed="57" manacost="305">
 	<health now="68" max="68" />
 	<look type="259" corpse="7320" />
-	<targetchange interval="60000" chance="0" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -10,24 +11,21 @@
 		<flag convinceable="1" />
 		<flag pushable="0" />
 		<flag canpushitems="1" />
-		<flag staticattack="80" />
 		<flag lightlevel="0" />
 		<flag lightcolor="0" />
 		<flag targetdistance="1" />
 		<flag runonhealth="0" />
 	</flags>
-	<attacks>
-		<attack name="melee" interval="2000" skill="20" attack="20" />
+	<attacks skill="20" attack="20">
+
 	</attacks>
 	<defenses armor="10" defense="10" />
 	<elements>
 		<element firePercent="25" />
-		<element holyPercent="10" />
 		<element energyPercent="-15" />
-		<element deathPercent="-5" />
 	</elements>
 	<immunities>
-		<immunity ice="1" />
+
 	</immunities>
 	<voices interval="2000" chance="7">
 		<voice sentence="Quisavu tukavi!" />
