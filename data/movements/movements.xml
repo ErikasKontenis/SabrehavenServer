@@ -663,6 +663,30 @@
 	<movevent event="AddItem" itemid="6129" tileitem="1" script="misc/floorchange.lua" />
 	<movevent event="StepIn" itemid="6130" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="6130" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6909" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6909" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6911" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6911" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6913" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6913" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6915" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6915" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6917" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6917" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6918" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6918" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6919" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6919" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6920" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6920" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6921" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6921" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6922" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6922" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6923" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6923" tileitem="1" script="misc/floorchange.lua" />
+	<movevent event="StepIn" itemid="6924" script="misc/floorchange.lua" />
+	<movevent event="AddItem" itemid="6924" tileitem="1" script="misc/floorchange.lua" />
 	<movevent event="StepIn" itemid="7053" script="misc/floorchange.lua" />
 	<movevent event="AddItem" itemid="7053" tileitem="1" script="misc/floorchange.lua" />
 	

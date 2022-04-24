@@ -31272,74 +31272,74 @@ Flags       = {Top,SeparationEvent,Door,Unmove}
 
 TypeID      = 6909
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
 
 TypeID      = 6910
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,Unmove,Height}
 
 TypeID      = 6911
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
 
 TypeID      = 6912
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,Unmove,Height}
 
 TypeID      = 6913
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
 
 TypeID      = 6914
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,Unmove,Height}
 
 TypeID      = 6915
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,CollisionEvent,Unmove,Avoid,Height}
 
 TypeID      = 6916
 Name        = "a ramp"
-Flags       = {Bottom,Unmove}
+Flags       = {Bottom,Unmove,Height}
 
 TypeID      = 6917
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6918
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6919
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6920
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6921
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6922
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6923
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6924
 Name        = "a ramp"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
 Attributes  = {Waypoints=150}
 
 TypeID      = 6925
