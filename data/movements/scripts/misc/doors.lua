@@ -18,6 +18,10 @@ local verticalDoors = {
 	[6206] = 6205,
 	[6259] = 6258,
 	[6263] = 6262,
+	[6906] = 6905,
+	[6908] = 6907,
+	[7048] = 7047,
+	[7050] = 7049,
 }
 
 local horizontalDoors = {
@@ -40,6 +44,10 @@ local horizontalDoors = {
 	[6208] = 6207,
 	[6261] = 6260,
 	[6265] = 6264,
+	[6897] = 6896,
+	[6899] = 6898,
+	[7039] = 7038,
+	[7041] = 7040,
 }
 
 function onStepOut(creature, item, fromPosition, toPosition)

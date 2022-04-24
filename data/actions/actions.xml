@@ -391,6 +391,10 @@
 	<action itemid="6194" script="misc/doors.lua" />
 	<action itemid="6248" script="misc/doors.lua" />
 	<action itemid="6251" script="misc/doors.lua" />
+	<action itemid="6891" script="misc/doors.lua" />
+	<action itemid="6900" script="misc/doors.lua" />
+	<action itemid="7033" script="misc/doors.lua" />
+	<action itemid="7042" script="misc/doors.lua" />
 	
 	<!-- Level Doors -->
 	<action itemid="1646" script="misc/doors.lua" />
@@ -411,6 +415,10 @@
 	<action itemid="6207" script="misc/doors.lua" />
 	<action itemid="6262" script="misc/doors.lua" />
 	<action itemid="6264" script="misc/doors.lua" />
+	<action itemid="6896" script="misc/doors.lua" />
+	<action itemid="6905" script="misc/doors.lua" />
+	<action itemid="7038" script="misc/doors.lua" />
+	<action itemid="7047" script="misc/doors.lua" />
 	
 	<!-- Quest Doors -->
 	<action itemid="1642" script="misc/doors.lua" />
@@ -433,6 +441,10 @@
 	<action itemid="6203" script="misc/doors.lua" />
 	<action itemid="6258" script="misc/doors.lua" />
 	<action itemid="6260" script="misc/doors.lua" />
+	<action itemid="6898" script="misc/doors.lua" />
+	<action itemid="6907" script="misc/doors.lua" />
+	<action itemid="7040" script="misc/doors.lua" />
+	<action itemid="7049" script="misc/doors.lua" />
 	
 	<!-- Closed Normal Doors -->
 	<action itemid="2177" script="misc/doors.lua" />
@@ -482,6 +494,16 @@
 	<action itemid="6252" script="misc/doors.lua" />
 	<action itemid="6254" script="misc/doors.lua" />
 	<action itemid="6256" script="misc/doors.lua" />
+	<action itemid="6892" script="misc/doors.lua" />
+	<action itemid="6894" script="misc/doors.lua" />
+	<action itemid="6901" script="misc/doors.lua" />
+	<action itemid="6903" script="misc/doors.lua" />
+	<action itemid="7034" script="misc/doors.lua" />
+	<action itemid="7036" script="misc/doors.lua" />
+	<action itemid="7043" script="misc/doors.lua" />
+	<action itemid="7045" script="misc/doors.lua" />
+	<action itemid="7054" script="misc/doors.lua" />
+	<action itemid="7056" script="misc/doors.lua" />
 	
 	<!-- Open Vertical Doors -->
 	<action itemid="1630" script="misc/doors.lua" />
@@ -527,6 +549,15 @@
 	<action itemid="6255" script="misc/doors.lua" />
 	<action itemid="6259" script="misc/doors.lua" />
 	<action itemid="6263" script="misc/doors.lua" />
+	<action itemid="6902" script="misc/doors.lua" />
+	<action itemid="6904" script="misc/doors.lua" />
+	<action itemid="6906" script="misc/doors.lua" />
+	<action itemid="6908" script="misc/doors.lua" />
+	<action itemid="7044" script="misc/doors.lua" />
+	<action itemid="7046" script="misc/doors.lua" />
+	<action itemid="7048" script="misc/doors.lua" />
+	<action itemid="7050" script="misc/doors.lua" />
+	<action itemid="7055" script="misc/doors.lua" />
 	
 	<!-- Open Horizontal Doors -->
 	<action itemid="1633" script="misc/doors.lua" />
@@ -572,4 +603,13 @@
 	<action itemid="6257" script="misc/doors.lua" />
 	<action itemid="6261" script="misc/doors.lua" />
 	<action itemid="6265" script="misc/doors.lua" />
+	<action itemid="6893" script="misc/doors.lua" />
+	<action itemid="6895" script="misc/doors.lua" />
+	<action itemid="6897" script="misc/doors.lua" />
+	<action itemid="6899" script="misc/doors.lua" />
+	<action itemid="7035" script="misc/doors.lua" />
+	<action itemid="7037" script="misc/doors.lua" />
+	<action itemid="7039" script="misc/doors.lua" />
+	<action itemid="7041" script="misc/doors.lua" />
+	<action itemid="7057" script="misc/doors.lua" />
 </actions>
