@@ -394,6 +394,8 @@
 	<movevent event="StepOut" fromid="5743" toid="5744" script="misc/drowning.lua"/>
 	<movevent event="StepIn" itemid="5764" script="misc/drowning.lua" />
 	<movevent event="StepOut" itemid="5764" script="misc/drowning.lua"/>
+	<movevent event="StepOut" itemid="799" script="misc/snow.lua" />
+	<movevent event="StepOut" fromid="6580" toid="6593" script="misc/snow.lua" />
 	
 	<!-- Inquisition Quest -->
 	<movevent event="StepIn" frommovementid="2150" tomovementid="2180" script="inquisition/teleportMain.lua" />

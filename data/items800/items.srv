@@ -3508,7 +3508,7 @@ Attributes  = {Waypoints=0,FluidSource=WATER}
 
 TypeID      = 799
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 800
@@ -29878,72 +29878,72 @@ Attributes  = {Weight=750}
 
 TypeID      = 6580
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6581
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6582
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6583
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6584
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6585
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6586
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6587
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6588
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6589
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6590
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6591
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6592
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6593
 Name        = "snow"
-Flags       = {Bank,Unmove}
+Flags       = {Bank,Unmove,CollisionEvent}
 Attributes  = {Waypoints=200}
 
 TypeID      = 6594
