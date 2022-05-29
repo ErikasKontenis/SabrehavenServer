@@ -2,6 +2,8 @@
 <monster name="Achad" nameDescription="Achad" race="blood" experience="70" speed="185" manacost="0">
 	<health now="185" max="185" />
 	<look type="146" head="93" body="93" legs="57" feet="97" addons="3" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

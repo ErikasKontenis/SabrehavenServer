@@ -2,6 +2,8 @@
 <monster name="Deathbringer" nameDescription="Deathbringer" race="undead" experience="5100" speed="300" manacost="0">
 	<health now="8440" max="8440" />
 	<look type="231" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -20,14 +22,14 @@
 			<attribute key="shootEffect" value="fire" />
 			<attribute key="areaEffect" value="redspark" />
 		</attack>
-		<attack name="drowncondition" interval="2000" chance="15" length="8" spread="3" range="7" target="1">
+		<attack name="drowncondition" interval="2000" chance="15" length="8" count="70" spread="3" range="7" target="1">
 			<attribute key="areaEffect" value="poff" />
 		</attack>
 		<attack name="lifedrain" interval="2000" chance="10" radius="6" target="0" min="-80" max="-595">
 			<attribute key="areaEffect" value="redshimmer" />
 		</attack>
 		<attack name="physical" interval="2000" chance="5" range="7" min="-30" max="-397">
-			<attribute key="shootEffect" value="suddendeath" />
+			<attribute key="shootEffect" value="death" />
 			<attribute key="areaEffect" value="mortarea" />
 		</attack>
 	</attacks>

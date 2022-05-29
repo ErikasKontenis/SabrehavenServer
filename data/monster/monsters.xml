@@ -253,6 +253,7 @@
 	<monster name="Madareth" file="800/madareth.xml" />
 	<monster name="Golgordan" file="800/golgordan.xml" />
 	<monster name="Latrivan" file="800/latrivan.xml" />
+	<monster name="Latrivan" file="800/latrivan.xml" />
 	<monster name="Annihilon" file="800/annihilon.xml" />
 	<monster name="Hellgorak" file="800/hellgorak.xml" />
 	<monster name="Barbarian Bloodwalker" file="800/barbarian bloodwalker.xml" />
@@ -276,4 +277,34 @@
 	<monster name="Penguin" file="800/penguin.xml" />
 	<monster name="Silver Rabbit" file="800/silver rabbit.xml" />
 	<monster name="Yakchal" file="800/yakchal.xml" />
+	<monster name="Achad" file="800/arena/greenhorn/achad.xml" />
+	<monster name="Axeitus Headbanger" file="800/arena/greenhorn/axeitus headbanger.xml" />
+	<monster name="Bloodpaw" file="800/arena/greenhorn/bloodpaw.xml" />
+	<monster name="Bovinus" file="800/arena/greenhorn/bovinus.xml" />
+	<monster name="Colerian The Barbarian" file="800/arena/greenhorn/colerian the barbarian.xml" />
+	<monster name="Cursed Gladiator" file="800/arena/greenhorn/cursed gladiator.xml" />
+	<monster name="Frostfur" file="800/arena/greenhorn/frostfur.xml" />
+	<monster name="Orcus The Cruel" file="800/arena/greenhorn/orcus the cruel.xml" />
+	<monster name="Rocky" file="800/arena/greenhorn/rocky.xml" />
+	<monster name="The Hairy One" file="800/arena/greenhorn/the hairy one.xml" />
+	<monster name="Avalanche" file="800/arena/scrapper/avalanche.xml" />
+	<monster name="Drasilla" file="800/arena/scrapper/drasilla.xml" />
+	<monster name="Grimgor Guteater" file="800/arena/scrapper/grimgor guteater.xml" />
+	<monster name="Kreebosh The Exile" file="800/arena/scrapper/kreebosh the exile.xml" />
+	<monster name="Slim" file="800/arena/scrapper/slim.xml" />
+	<monster name="Spirit of Earth" file="800/arena/scrapper/spirit of earth.xml" />
+	<monster name="Spirit of Fire" file="800/arena/scrapper/spirit of fire.xml" />
+	<monster name="Spirit of Water" file="800/arena/scrapper/spirit of water.xml" />
+	<monster name="The Dark Dancer" file="800/arena/scrapper/the dark dancer.xml" />
+	<monster name="The Hag" file="800/arena/scrapper/the hag.xml" />
+	<monster name="Darakan The Executioner" file="800/arena/warlord/darakan the executioner.xml" />
+	<monster name="Deathbringer" file="800/arena/warlord/deathbringer.xml" />
+	<monster name="Fallen Mooh'tah Master Ghar" file="800/arena/warlord/fallen mooh'tah master ghar.xml" />
+	<monster name="Gnorre Chyllson" file="800/arena/warlord/gnorre chyllson.xml" />
+	<monster name="Norgle Glacierbeard" file="800/arena/warlord/norgle glacierbeard.xml" />
+	<monster name="Svoren The Mad" file="800/arena/warlord/svoren the mad.xml" />
+	<monster name="The Masked Marauder" file="800/arena/warlord/the masked marauder.xml" />
+	<monster name="The Obliverator" file="800/arena/warlord/the obliverator.xml" />
+	<monster name="The Pit Lord" file="800/arena/warlord/the pit lord.xml" />
+	<monster name="Webster" file="800/arena/warlord/webster.xml" />
 </monsters>

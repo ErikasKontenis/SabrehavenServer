@@ -2,6 +2,8 @@
 <monster name="The Dark Dancer" nameDescription="The Dark Dancer" race="blood" experience="435" speed="170" manacost="0">
 	<health now="805" max="805" />
 	<look type="58" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -21,7 +23,6 @@
 		</attack>
 		<attack name="physical" interval="3000" chance="70" range="5" min="-50" max="-90">
 			<attribute key="areaEffect" value="mortarea" />
-			<attribute key="shootEffect" value="suddendeath" />
 		</attack>
 	</attacks>
 	<defenses armor="11" defense="12">

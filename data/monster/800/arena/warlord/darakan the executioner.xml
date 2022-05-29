@@ -2,6 +2,8 @@
 <monster name="Darakan The Executioner" nameDescription="Darakan The Executioner" race="blood" experience="1600" speed="205" manacost="0">
 	<health now="3500" max="3500" />
 	<look type="255" head="78" body="114" legs="114" feet="114" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

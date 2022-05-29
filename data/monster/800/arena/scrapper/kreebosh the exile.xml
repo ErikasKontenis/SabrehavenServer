@@ -2,6 +2,8 @@
 <monster name="Kreebosh The Exile" nameDescription="Kreebosh The Exile" race="blood" experience="350" speed="270" manacost="0">
 	<health now="880" max="880" />
 	<look type="103" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
@@ -21,7 +23,6 @@
 		</attack>
 		<attack name="physical" interval="6000" chance="40" radius="1" target="1" range="5" min="-20" max="-100">
 			<attribute key="areaEffect" value="mortarea" />
-			<attribute key="shootEffect" value="suddendeath" />
 		</attack>
 		<attack name="energy" interval="5000" chance="20" radius="1" target="1" range="5" min="-40" max="-200">
 			<attribute key="areaEffect" value="firearea" />

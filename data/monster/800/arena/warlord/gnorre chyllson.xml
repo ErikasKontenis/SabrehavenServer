@@ -2,6 +2,8 @@
 <monster name="Gnorre Chyllson" nameDescription="Gnorre Chyllson" race="blood" experience="4000" speed="300" manacost="0">
 	<health now="7150" max="7150" />
 	<look type="251" head="11" body="9" legs="11" feet="85" addons="1" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

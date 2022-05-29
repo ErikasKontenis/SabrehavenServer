@@ -2,6 +2,8 @@
 <monster name="Spirit Of Earth" nameDescription="Spirit Of Earth" race="undead" experience="800" speed="180" manacost="0">
 	<health now="1294" max="1294" />
 	<look type="67" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

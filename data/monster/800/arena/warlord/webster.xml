@@ -2,6 +2,8 @@
 <monster name="Webster" nameDescription="Webster" race="undead" experience="1200" speed="290" manacost="0">
 	<health now="1750" max="1750" />
 	<look type="263" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

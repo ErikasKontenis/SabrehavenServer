@@ -2,6 +2,8 @@
 <monster name="Drasilla" nameDescription="Drasilla" race="blood" experience="700" speed="170" manacost="0">
 	<health now="1320" max="1320" />
 	<look type="34" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

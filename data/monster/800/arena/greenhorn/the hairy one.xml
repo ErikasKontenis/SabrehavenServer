@@ -2,6 +2,8 @@
 <monster name="The Hairy One" nameDescription="The Hairy One" race="blood" experience="115" speed="240" manacost="0">
 	<health now="325" max="325" />
 	<look type="116" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

@@ -2,6 +2,8 @@
 <monster name="Svoren The Mad" nameDescription="Svoren The Mad" race="blood" experience="3000" speed="180" manacost="0">
 	<health now="6300" max="6300" />
 	<look type="254" head="80" body="99" legs="118" feet="38" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />

@@ -2,6 +2,8 @@
 <monster name="Spirit Of Fire" nameDescription="Spirit Of Fire" race="blood" experience="950" speed="220" manacost="0">
 	<health now="2210" max="2210" />
 	<look type="242" corpse="7349" />
+	<targetchange interval="1000" chance="5" />
+	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
 		<flag summonable="0" />
 		<flag attackable="1" />
