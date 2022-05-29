@@ -105,7 +105,7 @@ local monsterOfTheDay = {
 
 local function spawnRashid()
 	local rashidSpawns = {
-		['Monday'] = Position(32349, 32231, 6),
+		['Monday'] = Position(32209, 31156, 7),
 		['Tuesday'] = Position(32306, 32835, 7),
 		['Wednesday'] = Position(32579, 32754, 7),
 		['Thursday'] = Position(33065, 32879, 6),
