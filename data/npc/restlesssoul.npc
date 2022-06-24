@@ -1,0 +1,22 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# oldrak.npc: Datenbank fuer den Moench Oldrak
+
+Name = "A Restless Soul"
+Outfit = (48,0-0-0-0-0)
+Home = [32256,31101,10]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Ahhhh! At last someone that can listen to my story!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Uhhh.... %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Uhhh...."
+
+"bye"                 -> "Uhhh....", Idle
+"farewell"            -> *
+"story"                 -> "story"
+
+}

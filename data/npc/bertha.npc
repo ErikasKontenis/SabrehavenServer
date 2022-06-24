@@ -1,0 +1,147 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# beatrice.npc: Datenbank fuer die Ausruestungshaendlerin Beatrice
+
+Name = "Bertha"
+Outfit = (140,57-97-116-99-1)
+Home = [32319,31113,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Greetings %N. Looking for a trade, I hope. Business is not going well."
+ADDRESS,"hi$",!    -> *
+ADDRESS,"ashari$",!   -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "You're next, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,"ashari$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Bye %N."
+
+"bye"       -> "Bye %N.", Idle
+"Svargrond"      -> "These barbarians are still adapting to the city life but they do quite well I guess. They still lack interest in real trading and ... let's say they are a bit limited in their horizon."
+"Thais"      -> "I guess whole Thais is laughing at the failure of our operations."
+"Carlin"      -> "Carlin expects wonders of me. However, as long as they don't send some considerable help, they can wait until moss is growing in their hair."
+"Edron"      -> "They promised me these frozen lands could become for Carlin what Edron is for Thais. What a cruel joke."
+"Venore"      -> "Venore's power and greed is a constant threat to our operations."
+"enemy"      -> "Our major enemy are the trade barons of Venore of course. They never gained foothold here though. Given how bad business is progressing in this settlement, it is not such a big surprise. They probably simply lost interest."
+"dwarf"      -> "Sadly I could not win many dwarfs for our mining operations. They are probably afraid of Thais's reaction if it becomes known that they are helping us."
+"elf"      -> "The elves are of no great help. They do little to convince the spiritual leaders of the barbarians to help me."
+"book"      -> "My inventory of general goods and paperware is large, ask me for a trade to take a look."
+"magic"      -> "Ask a sorcerer or druid about that."
+"yeti"      -> "Another senseless tale of superstitious natives."
+"cult"      -> "Well, we heard of some strangers that travelled through this city. Not exchanging many words with the people here. The locals claim they headed straight to our old mines ...", "As far as I can tell though not much has changed at the mines. Our scouts are still attacked or even killed. So I assume the strangers were either killed or they are friends of the raiders ...", "I have no clue what has happened and I don't have the resources to find out."
+"chakoya"      -> "I think these chakoyas are only a tale to scare the local kids."
+"monsters"      -> "There are enough monsters around to make you think twice about leaving the city."
+"beholders"      -> "Beholders are one of the few threats of which we are spared here."
+"barbarian"      -> "All this cold seems to have frozen the brains of those people to solid ice."
+"barbarian test"      -> "If you pass some disgusting barbarian test, you might become what they call an honourary barbarian. Just talk to jarl Sven the Younger about this nonsense and don't bother me."
+"join"      -> *
+"weapon"      -> "Robert sells that. Go and ask him about that."
+"Robert"      -> "You can buy general goods from me. For weapons and armor you rather see my assistant Robert at the arena in the mountains to the west."
+"jarl"      -> "The jarl here is of no great help. Our equipment and wood is welcome but we get little profit out of these deals."
+"raiders"      -> "Their presence is bad enough. The fact that they occupied the mines and that they hate us non-natives of this frozen rock makes things only worse."
+"mines"      -> "The mines are actually Carlin's property. If only the queen were sending soldiers, to get them back from this rabble. Venore is probably planning to take over these mines just as we are talking."
+"queen"      -> "The queen expects miracles of us. But there is little we can do as long as the barbarians claim these mines that actually belong to us."
+"shaman"      -> "That's how the local druids call themselves."
+"Chyll"      -> "That seems to be a god that the locals worship."
+"Nibelor"      -> "Nibelor is an isle on which the local druids dwell."
+"years of serpents"      -> "What a horrible threat those beasts have been. But if they hadn't vanished all of a sudden, we would never have stranded here."
+"name"      -> "I'm Bertha from Carlin."
+"job"      -> "I'm a trader by profession but here you could also call me the ambassador of Carlin. However, there is little I can do about our problems, and support from Carlin is virtually non-existent."
+"mission"      -> "Unless you can change the whole situation here, I don't have anything to do for you."
+"task"      -> *
+"king"      -> "The pompous king of Thais might be involved in the take-over of our mines."
+"gods"      -> "The gods seem to be far away in this corner of the world."
+"Uman"      -> "We don't have many mages here that would serve Uman. Sorcerers are quite smart people, you know?"
+"Zathroth"      -> "I think even the dark one does not care for these lands or is probably already done with it."
+"Banor"      -> "I'd like to see some knightly order cleansing this land in the name of Banor. But of course Banor's champions seek their glory in warmer areas."
+"camps"      -> "There are several camps of the raiders somewhere in the South-West. If you want to end up as dog food, just travel there."
+"magic"      -> "Ask a sorcerer or druid about that."
+"druids"      -> "The druids of Carlin have quite good connections to the local druids here."
+"leader"      -> "This city would need a new leader that wants to actively help our cause, but I don't see this happening any time soon."
+"Ferumbras"      -> "Well, HE would only be needed to make things worse over here."
+"rumour"      -> "I have confirmed information that Excalibug lies deep in the mines. If you manage to find it, you would be the biggest hero and everybody would know your name! ...", "Imagine that: King %N, who found Excalibug and saved the world !!! Sounds good, huh??"
+"Excalibug"      -> "I toyed with the idea to spread the rumour that Excalibug might be hidden in the mines. I think if enough adventurers were lured into the mines, they might drive out the ones that occupy them now ...", "So do me a favour, when somebody asks about Excalibug, tell them it's down there in those mines."
+"news"      -> "News? Are you mocking me? Almost any news would be good news. As long as it concerns Carlin's affairs, nothing seems to change for the better."
+"how are you?"      -> "It could definitely be better but thanks for asking. I hope you're fine yourself."
+
+"offer"           -> "My inventory is large, just have a look at the blackboard."
+"goods"           -> *
+"do","you","sell" -> *
+"do","you","have" -> *
+"equipment"       -> *
+
+"torch"         -> Type=2920, Amount=1,  Price=2,    "Do you want to buy a torch for %P gold?", Topic=1
+"bag"           -> Type=7343, Amount=1,  Price=5,    "Do you want to buy a bag for %P gold?", Topic=1
+"backpack"      -> Type=7342, Amount=1,  Price=20,   "Do you want to buy a backpack for %P gold?", Topic=1
+"bucket"        -> Type=2873, Amount=1,  Price=4,    "Do you want to buy a bucket for %P gold?", Topic=1
+"watch"         -> Type=2906, Amount=1,  Price=20,   "Do you want to buy a watch for %P gold?", Topic=1
+"rope"          -> Type=3003, Amount=1,  Price=50,   "Do you want to buy a rope for %P gold?", Topic=1
+"scythe"        -> Type=3453, Amount=1,  Price=50,   "Do you want to buy a scythe for %P gold?", Topic=1
+"pick"          -> Type=3456, Amount=1,  Price=50,   "Do you want to buy a pick for %P gold?", Topic=1
+"shovel"        -> Type=3457, Amount=1,  Price=50,   "Do you want to buy a shovel for %P gold?", Topic=1
+"rod"           -> Type=3483, Amount=1,  Price=150,  "Do you want to buy a fishing rod for %P gold?", Topic=1
+"crowbar"       -> Type=3304, Amount=1,  Price=260,  "Do you want to buy a crowbar for %P gold?", Topic=1
+"lamp"          -> Type=2914, Amount=1,  Price=8,    "Do you want to buy a lamp for %P gold?", Topic=1
+"candlestick"   -> Type=2917, Amount=1,  Price=2,    "Do you want to buy a candlestick for %P gold?", Topic=1
+"basket"        -> Type=2855, Amount=1,  Price=6,    "Do you want to buy a basket for %P gold?", Topic=1
+"trap"          -> Type=3481, Amount=1,  Price=280,  "Do you want to buy a trap for %P gold?", Topic=1
+"football"      -> Type=2990, Amount=1,  Price=111,  "Do you want to buy a football for %P gold?", Topic=1
+
+%1,1<%1,"torch"         -> Type=2920, Amount=%1,  Price=2*%1,    "Do you want to buy %A torches for %P gold?", Topic=1
+%1,1<%1,"bag"           -> Type=7343, Amount=%1,  Price=5*%1,    "Do you want to buy %A bags for %P gold?", Topic=1
+%1,1<%1,"backpack"      -> Type=7342, Amount=%1,  Price=20*%1,   "Do you want to buy %A backpacks for %P gold?", Topic=1
+%1,1<%1,"bucket"        -> Type=2873, Amount=%1,  Price=4*%1,    "Do you want to buy %A buckets for %P gold?", Topic=1
+%1,1<%1,"watch"         -> Type=2906, Amount=%1,  Price=20*%1,   "Do you want to buy %A watches for %P gold?", Topic=1
+%1,1<%1,"rope"          -> Type=3003, Amount=%1,  Price=50*%1,   "Do you want to buy %A ropes for %P gold?", Topic=1
+%1,1<%1,"scythe"        -> Type=3453, Amount=%1,  Price=50*%1,   "Do you want to buy %A scythes for %P gold?", Topic=1
+%1,1<%1,"pick"          -> Type=3456, Amount=%1,  Price=50*%1,   "Do you want to buy %A picks for %P gold?", Topic=1
+%1,1<%1,"shovel"        -> Type=3457, Amount=%1,  Price=50*%1,   "Do you want to buy %A shovels for %P gold?", Topic=1
+%1,1<%1,"rod"           -> Type=3483, Amount=%1,  Price=150*%1,  "Do you want to buy %A fishing rods for %P gold?", Topic=1
+%1,1<%1,"crowbar"       -> Type=3304, Amount=%1,  Price=260*%1,  "Do you want to buy %A crowbars for %P gold?", Topic=1
+%1,1<%1,"lamp"          -> Type=2914, Amount=%1,  Price=8*%1,    "Do you want to buy %A lamps for %P gold?", Topic=1
+%1,1<%1,"candlestick"   -> Type=2917, Amount=%1,  Price=2*%1,    "Do you want to buy %A candlesticks for %P gold?", Topic=1
+%1,1<%1,"basket"        -> Type=2855, Amount=%1,  Price=6*%1,    "Do you want to buy %A baskets for %P gold?", Topic=1
+%1,1<%1,"trap"          -> Type=3481, Amount=%1,  Price=280*%1,  "Do you want to buy %A traps for %P gold?", Topic=1
+%1,1<%1,"football"      -> Type=2990, Amount=%1,  Price=111*%1,  "Do you want to buy %A footballs for %P gold?", Topic=1
+
+
+"sell","watch"    -> Type=2906, Amount=1, Price=6,  "Do you want to sell a watch for %P gold?", Topic=2
+"sell","rope"     -> Type=3003, Amount=1, Price=15, "Do you want to sell a rope for %P gold?", Topic=2
+"sell","scythe"   -> Type=3453, Amount=1, Price=12, "Do you want to sell a scythe for %P gold?", Topic=2
+"sell","pick"     -> Type=3456, Amount=1, Price=15, "Do you want to sell a pick for %P gold?", Topic=2
+"sell","shovel"   -> Type=3457, Amount=1, Price=8,  "Do you want to sell a shovel for %P gold?", Topic=2
+"sell","mirror"   -> Type=3463, Amount=1, Price=10, "Do you want to sell a mirror for %P gold?", Topic=2
+"sell","rod"      -> Type=3483, Amount=1, Price=40, "Do you want to sell a fishing rod for %P gold?", Topic=2
+"sell","inkwell"  -> Type=3509, Amount=1, Price=8,  "Do you want to sell an inkwell for %P gold?", Topic=2
+"sell","sickle"   -> Type=3293, Amount=1, Price=3,  "Do you want to sell a sickle for %P gold?", Topic=2
+"sell","crowbar"  -> Type=3304, Amount=1, Price=50, "Do you want to sell a crowbar for %P gold?", Topic=2
+"sell","trap"     -> Type=3481, Amount=1, Price=75, "Do you want to sell a trap for %P gold?", Topic=2
+
+"sell",%1,1<%1,"watch"    -> Type=2906, Amount=%1, Price=6*%1,  "Do you want to sell %A watches for %P gold?", Topic=2
+"sell",%1,1<%1,"rope"     -> Type=3003, Amount=%1, Price=15*%1, "Do you want to sell %A ropes for %P gold?", Topic=2
+"sell",%1,1<%1,"scythe"   -> Type=3453, Amount=%1, Price=12*%1, "Do you want to sell %A scythes for %P gold?", Topic=2
+"sell",%1,1<%1,"pick"     -> Type=3456, Amount=%1, Price=15*%1, "Do you want to sell %A picks for %P gold?", Topic=2
+"sell",%1,1<%1,"shovel"   -> Type=3457, Amount=%1, Price=8*%1,  "Do you want to sell %A shovels for %P gold?", Topic=2
+"sell",%1,1<%1,"mirror"   -> Type=3463, Amount=%1, Price=10*%1, "Do you want to sell %A mirrors for %P gold?", Topic=2
+"sell",%1,1<%1,"rod"      -> Type=3483, Amount=%1, Price=40*%1, "Do you want to sell %A fishing rods for %P gold?", Topic=2
+"sell",%1,1<%1,"inkwell"  -> Type=3509, Amount=%1, Price=8*%1,  "Do you want to sell %A inkwells for %P gold?", Topic=2
+"sell",%1,1<%1,"sickle"   -> Type=3293, Amount=%1, Price=3*%1,  "Do you want to sell %A sickles for %P gold?", Topic=2
+"sell",%1,1<%1,"crowbar"  -> Type=3304, Amount=%1, Price=50*%1, "Do you want to sell %A crowbars for %P gold?", Topic=2
+"sell",%1,1<%1,"trap"     -> Type=3481, Amount=%1, Price=75*%1, "Do you want to sell %A traps for %P gold?", Topic=2
+
+"worm"          -> "I sell worms only in sixpacks for 5 gold each, how many sixpacks of worms do you want to buy?"
+"worms"         -> *
+%1,"worms"      -> Type=3492, Amount=%1*6, Price=5*%1,   "So you want to buy some of my sixpacks with altogether %A worms for %P gold?", Topic=1
+%1,"six","pack" -> *
+
+
+Topic=1,"yes",CountMoney>=Price -> "Here you are.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "Come back, when you have enough money."
+Topic=1                         -> "Hmm, but next time."
+
+Topic=2,"yes",Count(Type)>=Amount -> "Ok. Here is your money.", Delete(Type), CreateMoney
+Topic=2,"yes"                             -> "Sorry, you do not have one."
+Topic=2,"yes",Amount>1                    -> "Sorry, you do not have so much."
+Topic=2                                   -> "Maybe next time."
+}

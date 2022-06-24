@@ -1,0 +1,21 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+
+Name = "A Starving Dog"
+Outfit = (258,0-0-0-0-0)
+Home = [32122,31091,5]
+Radius = 2
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Wuff"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Sniff", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Sniff"
+
+"bye"                 -> "Sniff", Idle
+"farewell"            -> *
+
+
+}
