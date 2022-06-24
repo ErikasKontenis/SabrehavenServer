@@ -16,10 +16,15 @@ BUSY,"bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N
 ADDRESS,"bring","me","to","femor",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 ADDRESS,"bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 
-BUSY,"bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
-BUSY,"bring","me","to","darashia",Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
-ADDRESS,"bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=20,! -> Price=20, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
-ADDRESS,"bring","me","to","darashia",Premium,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+BUSY,"bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+BUSY,"bring","me","to","darashia",Premium,CountMoney>=40,! -> Price=40, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+ADDRESS,"bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+ADDRESS,"bring","me","to","darashia",Premium,CountMoney>=40,! -> Price=40, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
+
+BUSY,"bring","me","to","svargrond",Premium,QuestValue(250)>2,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+BUSY,"bring","me","to","svargrond",Premium,CountMoney>=40,! -> Price=40, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+ADDRESS,"bring","me","to","svargrond",Premium,QuestValue(250)>2,CountMoney>=30,! -> Price=30, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+ADDRESS,"bring","me","to","svargrond",Premium,CountMoney>=40,! -> Price=40, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
 
 BUSY,"hello$",!            -> "Please wait, %N.", Queue
 BUSY,"hi$",!               -> *
@@ -28,12 +33,12 @@ VANISH,!                   -> "Good bye!"
 
 "bye"             -> "Good bye!", Idle
 "name"            -> "Pino at your service."
-"job"             -> "I am a carpetpilot. I can fly you to the Femor Hills or Darashia."
+"job"             -> "I am a carpetpilot. I can fly you to the Femor Hills, Svargrond or Darashia."
 "service"         -> *
 "time"            -> "It's %T right now."
 "tibia"           -> "What a wonderful world. Especially if you look down on it."
 
-"passage"   -> "I can fly you to Darashia on Darama or to the Femor Hills if you like. Where do you want to go?"
+"passage"   -> "I can fly you to Svargrond, Darashia on Darama or to the Femor Hills if you like. Where do you want to go?"
 "transport" -> *
 "ride"      -> *
 "trip"      -> *
@@ -43,11 +48,13 @@ VANISH,!                   -> "Good bye!"
 "hill"      -> Price=60, "Do you want to get a ride to the Femor Hills for %P gold?", Topic=2
 "femor"     -> *
 "femur"     -> "You are probably talking about the FEMOR hills."
+"svargrond"  -> Price=40, "Do you want to get a ride to Svargrond for %P gold?", Topic=3
 
 "darashia",QuestValue(250)>2  -> Price=30, "Do you want to get a ride to Darashia on Darama for %P gold?", Topic=1
 "darama",QuestValue(250)>2    -> *
 "hill",QuestValue(250)>2      -> Price=50, "Do you want to get a ride to the Femor Hills for %P gold?", Topic=2
 "femor",QuestValue(250)>2     -> *
+"svargrond",QuestValue(250)>2  -> Price=30, "Do you want to get a ride to Svargrond for %P gold?", Topic=3
 
 Topic=1,"yes",CountMoney>=Price         -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 Topic=1,"yes"                           -> "You don't have enough money."
@@ -56,4 +63,8 @@ Topic=1                                 -> "You shouldn't miss the experience."
 Topic=2,"yes",CountMoney>=Price         -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 Topic=2,"yes"                           -> "You don't have enough money."
 Topic=2                                 -> "You shouldn't miss the experience."
+
+Topic=3,"yes",CountMoney>=Price         -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+Topic=3,"yes"                           -> "You don't have enough money."
+Topic=3                                 -> "You shouldn't miss the experience."
 }

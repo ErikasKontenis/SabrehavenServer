@@ -16,10 +16,15 @@ BUSY,"bring","me","to","darashia",Premium,CountMoney>=60,! -> Price=60, "Hold on
 ADDRESS,"bring","me","to","darashia",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 ADDRESS,"bring","me","to","darashia",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 
-BUSY,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+BUSY,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
 BUSY,"bring","me","to","edron",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
-ADDRESS,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+ADDRESS,"bring","me","to","edron",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
 ADDRESS,"bring","me","to","edron",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
+
+BUSY,"bring","me","to","svargrond",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+BUSY,"bring","me","to","svargrond",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+ADDRESS,"bring","me","to","svargrond",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+ADDRESS,"bring","me","to","svargrond",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
 
 BUSY,"hello$",!            -> "Hastiness is not the way of the people of Darama, %N. Give me the time I need here.", Queue
 BUSY,"hi$",!               -> *
@@ -28,7 +33,7 @@ VANISH,!                   -> "Daraman's blessings."
 
 "bye"             -> "Daraman's blessings", Idle
 "name"            -> "I am known as Uzon Ibn Kalith."
-"job"             -> "I am a licensed Darashian carpetpilot. I can bring you to Darashia or Edron."
+"job"             -> "I am a licensed Darashian carpetpilot. I can bring you to Darashia, Svargrond or Edron."
 "time"            -> "It's %T right now. The next flight is scheduled soon."
 "caliph"          -> "The caliph welcomes travellers to his land."
 "kazzan"          -> *
@@ -45,7 +50,7 @@ VANISH,!                   -> "Daraman's blessings."
 "news"            -> "I heard too many news to recall them all."
 "rumors"          -> *
 
-"passage"   -> "I can fly you to Darashia on Darama or Edron if you like. Where do you want to go?"
+"passage"   -> "I can fly you to Darashia on Darama, Svargrond or Edron if you like. Where do you want to go?"
 "transport" -> *
 "ride"      -> *
 "trip"      -> *
@@ -53,10 +58,12 @@ VANISH,!                   -> "Daraman's blessings."
 "darashia"  -> Price=60, "Do you want to get a ride to Darashia on Darama for %P gold?", Topic=1
 "darama"    -> *
 "edron"     -> Price=60, "Do you want to get a ride to Edron for %P gold?", Topic=2
+"svargrond"     -> Price=60, "Do you want to get a ride to Svargrond for %P gold?", Topic=3
 
 "darashia",QuestValue(250)>2  -> Price=50, "Do you want to get a ride to Darashia on Darama for %P gold?", Topic=1
 "darama",QuestValue(250)>2    -> *
 "edron",QuestValue(250)>2     -> Price=50, "Do you want to get a ride to Edron for %P gold?", Topic=2
+"svargrond",QuestValue(250)>2     -> Price=50, "Do you want to get a ride to Svargrond for %P gold?", Topic=3
 
 Topic=1,"yes",Premium,CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(33269,32441,6), EffectOpp(11)
 Topic=1,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account in order to enter Darama."
@@ -71,6 +78,11 @@ Topic=2,"yes",Premium,CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, Effect
 Topic=2,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account in order to enter Edron."
 Topic=2,"yes"                           -> "You don't have enough money."
 Topic=2                                 -> "You shouldn't miss the experience."
+
+Topic=3,"yes",Premium,CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+Topic=3,"yes",CountMoney>=Price         -> "I'm sorry, but you need a premium account in order to enter Svargrond."
+Topic=3,"yes"                           -> "You don't have enough money."
+Topic=3                                 -> "You shouldn't miss the experience."
 
 "eclipse",QuestValue(12160)=4 -> "Oh no, so the time has come? Do you really want me to fly you to this unholy place?", Topic=5
 "eclipse",QuestValue(12160)=5 -> *

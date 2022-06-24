@@ -21,6 +21,11 @@ BUSY,"bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N
 ADDRESS,"bring","me","to","femor",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 ADDRESS,"bring","me","to","femor",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32535,31837,4), EffectOpp(11)
 
+BUSY,"bring","me","to","svargrond",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+BUSY,"bring","me","to","svargrond",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+ADDRESS,"bring","me","to","svargrond",Premium,QuestValue(250)>2,CountMoney>=50,! -> Price=50, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+ADDRESS,"bring","me","to","svargrond",Premium,CountMoney>=60,! -> Price=60, "Hold on %N!", Queue, DeleteMoney, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+
 BUSY,"hello$",!            -> "%N! Be calm as the eye of the storm, and your patience will be rewarded.", Queue
 BUSY,"hi$",!               -> *
 BUSY,!                     -> NOP
@@ -28,7 +33,7 @@ VANISH,!                   -> "Daraman's blessings!"
 
 "bye"             -> "Daraman's blessings!", Idle
 "name"            -> "My name is Chemar Ibn Kalith."
-"job"             -> "I am a licensed carpetpilot and responsible for the Darashian airmail. I can bring you to the Femor Hills, Edron, or you can buy letters and parcels."
+"job"             -> "I am a licensed carpetpilot and responsible for the Darashian airmail. I can bring you to the Femor Hills, Edron, Svargrond or you can buy letters and parcels."
 "time"            -> "It's %T, precisely."
 "caliph"          -> "The caliph depends heavily on his carpetfleet for commerce and for war alike."
 "kazzan"          -> *
@@ -44,7 +49,7 @@ VANISH,!                   -> "Daraman's blessings!"
 "flying","carpet" -> "Do you want to buy a flying carpet for 5000 platinum coins?", Price=500000, Topic=7
 #"mail"            -> "Our mail system is unique! And everyone can use it. Do you want to know more about it?", Topic=1
 
-"passage"   -> "I can fly you to Femor Hills or Edron if you like. Where do you want to go?"
+"passage"   -> "I can fly you to Femor Hills, Svargrond or Edron if you like. Where do you want to go?"
 "fly"       -> *
 "go"        -> *
 "transport" -> *
@@ -56,10 +61,12 @@ VANISH,!                   -> "Daraman's blessings!"
 "hill"      -> Price=60, "Do you want to get a ride to the Femor Hills for %P gold?", Topic=4
 "femor"     -> *
 "edron"     -> Price=40, "Do you want to get a ride to Edron for %P gold?", Topic=5
+"svargrond"     -> Price=60, "Do you want to get a ride to Svargrond for %P gold?", Topic=6
 
 "hill",QuestValue(250)>2      -> Price=50, "Do you want to get a ride to the Femor Hills for %P gold?", Topic=4
 "femor",QuestValue(250)>2     -> *
 "edron",QuestValue(250)>2     -> Price=30, "Do you want to get a ride to Edron for %P gold?", Topic=5
+"svargrond",QuestValue(250)>2     -> Price=50, "Do you want to get a ride to Svargrond for %P gold?", Topic=6
 
 @"gen-post.ndb"
 
@@ -85,6 +92,10 @@ Topic=4                         -> "You shouldn't miss the experience."
 Topic=5,"yes",CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(33193,31784,3), EffectOpp(11)
 Topic=5,"yes"                   -> "You don't have enough money."
 Topic=5                         -> "You shouldn't miss the experience."
+
+Topic=6,"yes",CountMoney>=Price -> "Hold on!", DeleteMoney, Idle, EffectOpp(11), Teleport(32253, 31097, 4), EffectOpp(11)
+Topic=6,"yes"                   -> "You don't have enough money."
+Topic=6                         -> "You shouldn't miss the experience."
 
 Topic=7,"yes",CountMoney>=Price -> "Oh, I am sorry, but you have no pilot licence."
 Topic=7,"yes"                   -> "You don't own enough worldly wealth to afford this item."
