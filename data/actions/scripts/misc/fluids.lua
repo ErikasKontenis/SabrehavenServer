@@ -19,7 +19,8 @@ local messages = {
 	[FLUID_LEMONADE] = "Mmmh.",
 	[FLUID_RUM] = "Aah...",
 	[FLUID_COCONUTMILK] = "Mmmh.",
-	[FLUID_FRUITJUICE] = "Mmmh."
+	[FLUID_FRUITJUICE] = "Mmmh.",
+	[FLUID_MEAD] = "Aah...",
 }
 
 function onUse(player, item, fromPosition, target, toPosition)
@@ -35,24 +36,12 @@ function onUse(player, item, fromPosition, target, toPosition)
 		end
 	end
 	
-	if (configManager.getBoolean(configKeys.UH_TRAP)) then
-		local tile = Tile(toPosition)
-		local creature = tile:getBottomCreature()
-		if creature and creature:isPlayer() then
-			target = creature
-		end
-	else
-		-- monsters do not use mana also I do not know if you can use life fluid on monsters
-		-- if you can just want to use life fluids on monster then change isPlayer to isCreature
-		target = target:isPlayer() and target
-	end
-	
 	if target:isCreature() and target:getPlayer() ~= nil then
 		if item:getFluidType() == FLUID_NONE then
 			player:sendCancelMessage("It is empty.")
 		else
 			local self = target == player
-			if self and item:getFluidType() == FLUID_BEER or item:getFluidType() == FLUID_WINE or item:getFluidType() == FLUID_RUM then
+			if self and item:getFluidType() == FLUID_BEER or item:getFluidType() == FLUID_WINE or item:getFluidType() == FLUID_RUM or item:getFluidType() == FLUID_MEAD then
 				player:addCondition(drunk)
 			elseif self and item:getFluidType() == FLUID_SLIME then
 				player:addCondition(poison)

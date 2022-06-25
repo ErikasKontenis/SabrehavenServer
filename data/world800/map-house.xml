@@ -958,64 +958,64 @@
 	<house name="Unnamed House #2410" houseid="2410" entryx="32327" entryy="32213" entryz="7" rent="0" townid="1" size="28" />
 	<house name="Unnamed House #2411" houseid="2411" entryx="32327" entryy="32208" entryz="7" rent="0" townid="1" size="16" />
 	<house name="Unnamed House #2412" houseid="2412" entryx="32403" entryy="32218" entryz="6" rent="0" townid="1" size="39" />
-	<house name="Corner Shop (Shop)" houseid="2413" entryx="32311" entryy="31136" entryz="7" rent="2215" townid="13" size="36"/>
-	<house name="Tusk Flats 1" houseid="2414" entryx="32300" entryy="31124" entryz="7" rent="765" townid="13" size="14"/>
-	<house name="Tusk Flats 2" houseid="2415" entryx="32301" entryy="31117" entryz="7" rent="835" townid="13" size="16"/>
-	<house name="Tusk Flats 3" houseid="2416" entryx="32308" entryy="31111" entryz="7" rent="660" townid="13" size="11"/>
-	<house name="Tusk Flats 4" houseid="2417" entryx="32307" entryy="31105" entryz="7" rent="315" townid="13" size="6"/>
-	<house name="Tusk Flats 6" houseid="2418" entryx="32308" entryy="31099" entryz="7" rent="660" townid="13" size="12"/>
-	<house name="Tusk Flats 5" houseid="2419" entryx="32320" entryy="31108" entryz="7" rent="455" townid="13" size="11"/>
-	<house name="Shady Rocks 5" houseid="2420" entryx="32288" entryy="31125" entryz="7" rent="2890" townid="13" size="57"/>
-	<house name="Shady Rocks 4 (Shop)" houseid="2421" entryx="32279" entryy="31118" entryz="7" rent="2710" townid="13" size="50"/>
-	<house name="Shady Rocks 3" houseid="2422" entryx="32277" entryy="31121" entryz="7" rent="4115" townid="13" size="77"/>
-	<house name="Shady Rocks 2" houseid="2423" entryx="32259" entryy="31119" entryz="7" rent="2010" townid="13" size="29"/>
-	<house name="Shady Rocks 1" houseid="2424" entryx="32259" entryy="31110" entryz="7" rent="3630" townid="13" size="65"/>
-	<house name="Crystal Glance" houseid="2425" entryx="32246" entryy="31118" entryz="7" rent="19625" townid="13" size="237"/>
-	<house name="Arena Walk 3" houseid="2426" entryx="32235" entryy="31118" entryz="7" rent="3550" townid="13" size="59"/>
-	<house name="Arena Walk 2" houseid="2427" entryx="32239" entryy="31126" entryz="7" rent="1400" townid="13" size="21"/>
-	<house name="Arena Walk 1" houseid="2428" entryx="32238" entryy="31134" entryz="7" rent="3250" townid="13" size="55"/>
-	<house name="Bears Paw 2" houseid="2429" entryx="32241" entryy="31133" entryz="7" rent="2305" townid="13" size="44"/>
-	<house name="Bears Paw 1" houseid="2430" entryx="32264" entryy="31132" entryz="7" rent="1810" townid="13" size="33"/>
-	<house name="Spirit Homes 5" houseid="2431" entryx="32223" entryy="31142" entryz="7" rent="1450" townid="13" size="21"/>
-	<house name="Glacier Side 3" houseid="2432" entryx="32206" entryy="31140" entryz="7" rent="1950" townid="13" size="30"/>
-	<house name="Glacier Side 2" houseid="2433" entryx="32203" entryy="31132" entryz="7" rent="4750" townid="13" size="83"/>
-	<house name="Glacier Side 1" houseid="2434" entryx="32206" entryy="31126" entryz="7" rent="1600" townid="13" size="26"/>
-	<house name="Spirit Homes 1" houseid="2435" entryx="32210" entryy="31124" entryz="7" rent="1700" townid="13" size="27"/>
-	<house name="Spirit Homes 2" houseid="2436" entryx="32219" entryy="31124" entryz="7" rent="1900" townid="13" size="31"/>
-	<house name="Spirit Homes 3" houseid="2437" entryx="32216" entryy="31124" entryz="6" rent="4250" townid="13" size="75"/>
-	<house name="Spirit Homes 4" houseid="2438" entryx="32220" entryy="31129" entryz="7" rent="1100" townid="13" size="19"/>
-	<house name="Glacier Side 4" houseid="2439" entryx="32204" entryy="31147" entryz="6" rent="2050" townid="13" size="38"/>
-	<house name="Shelf Site" houseid="2440" entryx="32197" entryy="31150" entryz="6" rent="4800" townid="13" size="83"/>
-	<house name="Raven Corner 1" houseid="2441" entryx="32234" entryy="31154" entryz="7" rent="855" townid="13" size="15"/>
-	<house name="Raven Corner 2" houseid="2442" entryx="32233" entryy="31156" entryz="7" rent="1685" townid="13" size="25"/>
-	<house name="Raven Corner 3" houseid="2443" entryx="32234" entryy="31157" entryz="7" rent="855" townid="13" size="15"/>
-	<house name="Bears Paw 3" houseid="2444" entryx="32248" entryy="31157" entryz="7" rent="2090" townid="13" size="35"/>
-	<house name="Bears Paw 4" houseid="2445" entryx="32256" entryy="31158" entryz="7" rent="5205" townid="13" size="99"/>
-	<house name="Bears Paw 5" houseid="2446" entryx="32272" entryy="31157" entryz="7" rent="2045" townid="13" size="34"/>
-	<house name="Trout Plaza 5 (Shop)" houseid="2447" entryx="32268" entryy="31174" entryz="7" rent="3880" townid="13" size="73"/>
-	<house name="Pilchard Bin 1" houseid="2448" entryx="32280" entryy="31164" entryz="7" rent="685" townid="13" size="8"/>
-	<house name="Pilchard Bin 2" houseid="2449" entryx="32280" entryy="31160" entryz="7" rent="685" townid="13" size="8"/>
-	<house name="Pilchard Bin 3" houseid="2450" entryx="32280" entryy="31156" entryz="7" rent="585" townid="13" size="10"/>
-	<house name="Pilchard Bin 4" houseid="2451" entryx="32280" entryy="31152" entryz="7" rent="585" townid="13" size="10"/>
-	<house name="Pilchard Bin 5" houseid="2452" entryx="32280" entryy="31148" entryz="7" rent="685" townid="13" size="8"/>
-	<house name="Pilchard Bin 10" houseid="2453" entryx="32281" entryy="31148" entryz="6" rent="450" townid="13" size="7"/>
-	<house name="Pilchard Bin 9" houseid="2454" entryx="32281" entryy="31152" entryz="6" rent="450" townid="13" size="7"/>
-	<house name="Pilchard Bin 8" houseid="2455" entryx="32281" entryy="31156" entryz="6" rent="450" townid="13" size="6"/>
-	<house name="Pilchard Bin 7" houseid="2456" entryx="32281" entryy="31160" entryz="6" rent="450" townid="13" size="7"/>
-	<house name="Pilchard Bin 6" houseid="2457" entryx="32281" entryy="31164" entryz="6" rent="450" townid="13" size="7"/>
-	<house name="Trout Plaza 1" houseid="2458" entryx="32248" entryy="31166" entryz="7" rent="2395" townid="13" size="43"/>
-	<house name="Trout Plaza 2" houseid="2459" entryx="32260" entryy="31161" entryz="7" rent="1540" townid="13" size="26"/>
-	<house name="Trout Plaza 3" houseid="2460" entryx="32255" entryy="31173" entryz="7" rent="900" townid="13" size="18"/>
-	<house name="Trout Plaza 4" houseid="2461" entryx="32255" entryy="31177" entryz="7" rent="900" townid="13" size="18"/>
-	<house name="Skiffs End 1" houseid="2462" entryx="32250" entryy="31187" entryz="7" rent="1540" townid="13" size="28"/>
-	<house name="Skiffs End 2" houseid="2463" entryx="32257" entryy="31189" entryz="7" rent="910" townid="13" size="13"/>
-	<house name="Furrier Quarter 3" houseid="2464" entryx="32232" entryy="31191" entryz="7" rent="1010" townid="13" size="20"/>
-	<house name="Mammoth Belly" houseid="2465" entryx="32241" entryy="31174" entryz="7" rent="22810" townid="13" size="278"/>
-	<house name="Furrier Quarter 2" houseid="2466" entryx="32225" entryy="31177" entryz="7" rent="1045" townid="13" size="21"/>
-	<house name="Furrier Quarter 1" houseid="2467" entryx="32221" entryy="31176" entryz="7" rent="1635" townid="13" size="34"/>
-	<house name="Fimbul Shelf 3" houseid="2468" entryx="32215" entryy="31177" entryz="7" rent="1255" townid="13" size="28"/>
-	<house name="Fimbul Shelf 4" houseid="2469" entryx="32218" entryy="31191" entryz="7" rent="1045" townid="13" size="22"/>
-	<house name="Fimbul Shelf 2" houseid="2470" entryx="32209" entryy="31175" entryz="7" rent="1045" townid="13" size="21"/>
-	<house name="Fimbul Shelf 1" houseid="2471" entryx="32204" entryy="31169" entryz="7" rent="975" townid="13" size="20"/>
-	<house name="Frost Manor" houseid="2472" entryx="32287" entryy="31106" entryz="5" rent="26370" townid="13" size="382"/>
+	<house name="Corner Shop (Shop)" houseid="2413" entryx="32311" entryy="31136" entryz="7" rent="2215" townid="13" size="40" />
+	<house name="Tusk Flats 1" houseid="2414" entryx="32300" entryy="31124" entryz="7" rent="765" townid="13" size="14" />
+	<house name="Tusk Flats 2" houseid="2415" entryx="32301" entryy="31117" entryz="7" rent="835" townid="13" size="16" />
+	<house name="Tusk Flats 3" houseid="2416" entryx="32308" entryy="31111" entryz="7" rent="660" townid="13" size="11" />
+	<house name="Tusk Flats 4" houseid="2417" entryx="32307" entryy="31105" entryz="7" rent="315" townid="13" size="6" />
+	<house name="Tusk Flats 6" houseid="2418" entryx="32308" entryy="31099" entryz="7" rent="660" townid="13" size="12" />
+	<house name="Tusk Flats 5" houseid="2419" entryx="32320" entryy="31108" entryz="7" rent="455" townid="13" size="11" />
+	<house name="Shady Rocks 5" houseid="2420" entryx="32288" entryy="31125" entryz="7" rent="2890" townid="13" size="57" />
+	<house name="Shady Rocks 4 (Shop)" houseid="2421" entryx="32279" entryy="31118" entryz="7" rent="2710" townid="13" size="50" />
+	<house name="Shady Rocks 3" houseid="2422" entryx="32277" entryy="31121" entryz="7" rent="4115" townid="13" size="76" />
+	<house name="Shady Rocks 2" houseid="2423" entryx="32259" entryy="31119" entryz="7" rent="2010" townid="13" size="29" />
+	<house name="Shady Rocks 1" houseid="2424" entryx="32259" entryy="31110" entryz="7" rent="3630" townid="13" size="65" />
+	<house name="Crystal Glance" houseid="2425" entryx="32246" entryy="31118" entryz="7" rent="19625" townid="13" size="235" />
+	<house name="Arena Walk 3" houseid="2426" entryx="32235" entryy="31118" entryz="7" rent="3550" townid="13" size="59" />
+	<house name="Arena Walk 2" houseid="2427" entryx="32239" entryy="31126" entryz="7" rent="1400" townid="13" size="21" />
+	<house name="Arena Walk 1" houseid="2428" entryx="32238" entryy="31134" entryz="7" rent="3250" townid="13" size="55" />
+	<house name="Bears Paw 2" houseid="2429" entryx="32241" entryy="31133" entryz="7" rent="2305" townid="13" size="44" />
+	<house name="Bears Paw 1" houseid="2430" entryx="32264" entryy="31132" entryz="7" rent="1810" townid="13" size="33" />
+	<house name="Spirit Homes 5" houseid="2431" entryx="32223" entryy="31142" entryz="7" rent="1450" townid="13" size="21" />
+	<house name="Glacier Side 3" houseid="2432" entryx="32206" entryy="31140" entryz="7" rent="1950" townid="13" size="30" />
+	<house name="Glacier Side 2" houseid="2433" entryx="32203" entryy="31132" entryz="7" rent="4750" townid="13" size="83" />
+	<house name="Glacier Side 1" houseid="2434" entryx="32206" entryy="31126" entryz="7" rent="1600" townid="13" size="26" />
+	<house name="Spirit Homes 1" houseid="2435" entryx="32210" entryy="31124" entryz="7" rent="1700" townid="13" size="27" />
+	<house name="Spirit Homes 2" houseid="2436" entryx="32219" entryy="31124" entryz="7" rent="1900" townid="13" size="31" />
+	<house name="Spirit Homes 3" houseid="2437" entryx="32216" entryy="31124" entryz="6" rent="4250" townid="13" size="75" />
+	<house name="Spirit Homes 4" houseid="2438" entryx="32220" entryy="31129" entryz="7" rent="1100" townid="13" size="19" />
+	<house name="Glacier Side 4" houseid="2439" entryx="32204" entryy="31147" entryz="6" rent="2050" townid="13" size="38" />
+	<house name="Shelf Site" houseid="2440" entryx="32197" entryy="31150" entryz="6" rent="4800" townid="13" size="83" />
+	<house name="Raven Corner 1" houseid="2441" entryx="32234" entryy="31154" entryz="7" rent="855" townid="13" size="15" />
+	<house name="Raven Corner 2" houseid="2442" entryx="32233" entryy="31156" entryz="7" rent="1685" townid="13" size="25" />
+	<house name="Raven Corner 3" houseid="2443" entryx="32234" entryy="31157" entryz="7" rent="855" townid="13" size="15" />
+	<house name="Bears Paw 3" houseid="2444" entryx="32248" entryy="31157" entryz="7" rent="2090" townid="13" size="35" />
+	<house name="Bears Paw 4" houseid="2445" entryx="32256" entryy="31158" entryz="7" rent="5205" townid="13" size="98" />
+	<house name="Bears Paw 5" houseid="2446" entryx="32272" entryy="31157" entryz="7" rent="2045" townid="13" size="34" />
+	<house name="Trout Plaza 5 (Shop)" houseid="2447" entryx="32268" entryy="31174" entryz="7" rent="3880" townid="13" size="73" />
+	<house name="Pilchard Bin 1" houseid="2448" entryx="32280" entryy="31164" entryz="7" rent="685" townid="13" size="8" />
+	<house name="Pilchard Bin 2" houseid="2449" entryx="32280" entryy="31160" entryz="7" rent="685" townid="13" size="8" />
+	<house name="Pilchard Bin 3" houseid="2450" entryx="32280" entryy="31156" entryz="7" rent="585" townid="13" size="10" />
+	<house name="Pilchard Bin 4" houseid="2451" entryx="32280" entryy="31152" entryz="7" rent="585" townid="13" size="10" />
+	<house name="Pilchard Bin 5" houseid="2452" entryx="32280" entryy="31148" entryz="7" rent="685" townid="13" size="8" />
+	<house name="Pilchard Bin 10" houseid="2453" entryx="32281" entryy="31148" entryz="6" rent="450" townid="13" size="7" />
+	<house name="Pilchard Bin 9" houseid="2454" entryx="32281" entryy="31152" entryz="6" rent="450" townid="13" size="7" />
+	<house name="Pilchard Bin 8" houseid="2455" entryx="32281" entryy="31156" entryz="6" rent="450" townid="13" size="6" />
+	<house name="Pilchard Bin 7" houseid="2456" entryx="32281" entryy="31160" entryz="6" rent="450" townid="13" size="7" />
+	<house name="Pilchard Bin 6" houseid="2457" entryx="32281" entryy="31164" entryz="6" rent="450" townid="13" size="7" />
+	<house name="Trout Plaza 1" houseid="2458" entryx="32248" entryy="31166" entryz="7" rent="2395" townid="13" size="42" />
+	<house name="Trout Plaza 2" houseid="2459" entryx="32260" entryy="31161" entryz="7" rent="1540" townid="13" size="26" />
+	<house name="Trout Plaza 3" houseid="2460" entryx="32255" entryy="31173" entryz="7" rent="900" townid="13" size="18" />
+	<house name="Trout Plaza 4" houseid="2461" entryx="32255" entryy="31177" entryz="7" rent="900" townid="13" size="18" />
+	<house name="Skiffs End 1" houseid="2462" entryx="32250" entryy="31187" entryz="7" rent="1540" townid="13" size="28" />
+	<house name="Skiffs End 2" houseid="2463" entryx="32257" entryy="31189" entryz="7" rent="910" townid="13" size="13" />
+	<house name="Furrier Quarter 3" houseid="2464" entryx="32232" entryy="31191" entryz="7" rent="1010" townid="13" size="20" />
+	<house name="Mammoth Belly" houseid="2465" entryx="32241" entryy="31174" entryz="7" rent="22810" townid="13" size="278" />
+	<house name="Furrier Quarter 2" houseid="2466" entryx="32225" entryy="31177" entryz="7" rent="1045" townid="13" size="21" />
+	<house name="Furrier Quarter 1" houseid="2467" entryx="32221" entryy="31176" entryz="7" rent="1635" townid="13" size="34" />
+	<house name="Fimbul Shelf 3" houseid="2468" entryx="32215" entryy="31177" entryz="7" rent="1255" townid="13" size="28" />
+	<house name="Fimbul Shelf 4" houseid="2469" entryx="32218" entryy="31191" entryz="7" rent="1045" townid="13" size="22" />
+	<house name="Fimbul Shelf 2" houseid="2470" entryx="32209" entryy="31175" entryz="7" rent="1045" townid="13" size="21" />
+	<house name="Fimbul Shelf 1" houseid="2471" entryx="32204" entryy="31169" entryz="7" rent="975" townid="13" size="20" />
+	<house name="Frost Manor" houseid="2472" entryx="32287" entryy="31106" entryz="5" rent="26370" townid="13" size="381" />
 </houses>
