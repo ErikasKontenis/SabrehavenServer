@@ -154,6 +154,7 @@ enum FluidTypes_t : uint8_t
 	FLUID_COCONUTMILK,
 	FLUID_FRUITJUICE,
 	FLUID_MEAD,
+	FLUID_TEA,
 };
 
 const uint8_t reverseFluidMap[] = {

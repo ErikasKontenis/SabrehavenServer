@@ -21,6 +21,7 @@ local messages = {
 	[FLUID_COCONUTMILK] = "Mmmh.",
 	[FLUID_FRUITJUICE] = "Mmmh.",
 	[FLUID_MEAD] = "Aah...",
+	[FLUID_TEA] = "Gulp.",
 }
 
 function onUse(player, item, fromPosition, target, toPosition)

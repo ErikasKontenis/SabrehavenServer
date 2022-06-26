@@ -1,0 +1,78 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# boozer.npc: Datenbank für den Wirt Boozer
+
+Name = "Dankwart"
+Outfit = (128,39-58-58-115-0)
+Home = [32202,31161,7]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Hi there and welcome to my tavern. Have a drink."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please give me a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "You'll be back."
+
+"bye"         -> "Good bye.", Idle
+"job"         -> "I am a tavern keeper. Well at least you would call it like that. Actually I am just responsible for the common hall."
+"tavern"      -> *
+"drink"         -> "Are you looking for a drink? I have tea and hot mead. Our mead is a little less stronger than the original barbarian mead though, else we'd have a bunch of tourists pass out here each day."
+"news"         -> "I assume our town gossip would only bore a traveller like you."
+"king"         -> "The king probably laughs about Carlin's failure here."
+"Queen"         -> "The queen should really spend more resources on the Svargrond operations."
+"name"         -> "I am Dankwart. A rather unusual name at this place but my ancestors came here from Carlin."
+"gods"         -> "I learned only little about the gods."
+"Ferumbras"         -> "Some regulars shared stories about this evil sorcerer. It is said that he resurfaced somewhere in the South."
+"Excalibug"         -> "That is some mighty weapon that got lost in a war or so."
+"how", "are", "you"         -> "I am fine, thank you."
+"barbarians"         -> "The barbarians are not as bad as foreigners might think. It is mainly the bad behaviour of the raiders that cause their bad reputation."
+"raiders"         -> "They are nothing more than mislead people. It's a sad thing that they became that hostile to Svargrond."
+"cults"         -> "Several people passed our city. They were quite reclusive. It seemed as if others followed them even without passing our city at all ...","I am not sure if they belonged to some sort of cult but they behaved more than suspiciously."
+"druids"         -> "The druids are still working on intensifying the bonds with the shamans."
+"shamans"         -> "They are spiritual guides and seers."
+"jarl"         -> "The jarl is a wise man."
+"mines"         -> "The mines were lost many years ago. I doubt that we get them back any time soon."
+"Chyll"         -> "My family converted to the faith of the barbarians to some extent. If you live here long enough, you know from the north wind that there is some force at work here."
+"Nibelor"         -> "Most of the shamans live on the isle Nibelor."
+"Everspring"         -> "That is the place of afterlife. Shamans can tell you more about it."
+"years", "of", "serpents"         -> "They were the reason that my people stranded here. However, my ancestors were not too sorry about it and adapted quite well."
+"Svargrond"         -> "The town is somewhat rough but it has its charms."
+"Edron"         -> "Edron must be wonderful and idyllic."
+"Carlin"         -> "Carlin will probably put more efforts into improving relations with Svargrond soon."
+"Venore"         -> "Venore will surely try to hinder Carlin in any way."
+"Thais"         -> "Thais has little interest in this area."
+"dragons"         -> "There are travellers who will assure you that some dragons exist here in this cold climate. Some even claim that an own breed of ice dragons lives on these isles."
+"dwarfs"         -> "The dwarfs that came here were able to drink like a true barbarian."
+"elf"         -> "We rarely see an elf here."
+"chakoyas"         -> "The chakoyas are a true threat. Luckily, they are not too many and they rarely dare to come close to Svargrond."
+"yeti"         -> "I don't know if they are real or just some figure of tavern tales."
+
+"bread"    -> Type=3600, Amount=1, Price=4, "Do you want to buy a bread for %P gold?", Topic=1
+"cheese"   -> Type=3607, Amount=1, Price=6, "Do you want to buy cheese for %P gold?", Topic=1
+"meat"     -> Type=3577, Amount=1, Price=5, "Do you want to buy meat for %P gold?", Topic=1
+"ham"      -> Type=3582, Amount=1, Price=8, "Do you want to buy a ham for %P gold?", Topic=1
+
+%1,1<%1,"bread"         -> Type=3600, Amount=%1, Price=4*%1, "Do you wanna buy %A breads for %P gold?", Topic=1
+%1,1<%1,"cheese"        -> Type=3607, Amount=%1, Price=6*%1, "Do you wanna buy %A cheese for %P gold?", Topic=1
+%1,1<%1,"meat"          -> Type=3577, Amount=%1, Price=5*%1, "Do you wanna buy %A meat for %P gold?", Topic=1
+%1,1<%1,"ham"           -> Type=3582, Amount=%1, Price=8*%1, "Do you wanna buy %A ham for %P gold?", Topic=1
+
+"mead" -> Type=2880, Data=16, Amount=1, Price=5, "Do you want to buy a mug of mead for %P gold?", Topic=1
+"tea"     -> Type=2880, Data=17,  Amount=1, Price=5, "Do you want to buy a mug of tea for %P gold?", Topic=1
+
+%1,1<%1,"mead" -> Type=2880, Data=16, Amount=%1, Price=5*%1, "Do you want to buy %A mugs of mead for %P gold?", Topic=1
+%1,1<%1,"tea"     -> Type=2880, Data=17,  Amount=%1, Price=5*%1, "Do you want to buy %A mugs of tea for %P gold?", Topic=1
+
+Topic=1,"yes",CountMoney>=Price -> "And here is what you ordered.", DeleteMoney, Create(Type)
+Topic=1,"yes"                   -> "You don't have the gold. If we were gambling I'd call you a cheater ... and you know what happens to cheaters, don't you?"
+Topic=1                         -> "Then not, fine with me."
+
+
+"buy"             -> "I can offer you food and drinks. Get anything else somewhere else and don't bother me."
+"do","you","sell" -> *
+"do","you","have" -> *
+"food"            -> "So you are looking for food? We have bread, cheese, ham, and meat."
+
+}

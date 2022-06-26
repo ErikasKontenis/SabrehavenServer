@@ -49,6 +49,9 @@ Name		= "fruit juice"
 TypeID		= 16
 Name		= "mead"
 
+TypeID		= 17
+Name		= "tea"
+
 # --- end of server specific object types ---
 
 TypeID      = 100
