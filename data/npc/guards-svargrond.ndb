@@ -1,0 +1,96 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# guards-thais.ndb: Datenbank für die Stadtwachen von Thais
+
+ADDRESS,"hello$",! -> "LONG LIVE JARL SVEN, THE YOUNGER!"
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$"      -> "I am busy right now!"
+BUSY,"hi$"         -> *
+BUSY,!             -> NOP
+VANISH,!           -> "Hrmpf!"
+
+"bye"            -> "MAY YOUR WEAPON ALWAYS BE SHARP!", Idle
+"farewell"       -> *
+"Barbara"            -> "Is that a name?? Maybe it originates from 'barbarian'. I have to think about that... bye!", Idle
+"news"           -> "I am busy. Please ask the citizens for news."
+"how","are","you"-> "I am healthy and vigilant. Always ready to make some raiders one head smaller."
+"name"           -> "I AM A BARBARIAN! Names are of no concern during work!! If somebody is calling for help, I will come."
+"job"           -> "It's my duty to protect Svargrond and its citizens."
+"mission"           -> "The shamans still have something to do for you. You should go to Nibelor and talk to them if you haven't been there for a while."
+"Nibelor"           -> "It's a sacred place for us! Our shamans live there. Ask Iskan if you want to go there."
+"Iskan"           -> "He is the leader of the dog sled. Last time I saw him he was with his dogs on the shelf ice north of the harbour."
+"shelf"           -> "West of Svargrond is the Fimbul Ice Shelf, Nibelor and Grimlund are embedded in shelf ice, and in the north of Hrodmir are several small shelf ice fields."
+"Fimbul"           -> "Fimbul Shelf is the name of the big shelf ice west of Svargrond. A good spot to go ice fishing."
+"Grimlund"           -> "Stay away from there! It's the home of the chakoyas."
+"Hrodmir"           -> "This big, icy rock you're standing at right now. The raiders live in the middle and south of the big Formorgar glacier."
+"sled"           -> "You can ask Iskan to bring you with his dog sled to Nibelor."
+"magic"           -> "I heard Nelly talking about runes and fluids. Ask her."
+"fruids" -> *
+"spells"           -> "That is a little too general."
+"Hjaern"           -> "He is one of our shamans and trainer for druids. He lives on Nibelor."
+"Romir"           -> "He is an old hermit who lives in a hut on the elevated plain north of Svargrond . He is some kind of male witch, you know what I mean? ...","He knows magic and all that. Maybe he teaches his knowledge to others."
+"Thorwulf"           -> "He is the trainer for knights. You find him near the arena."
+"Hawkyr"           -> "He is the paladin trainer. You find him near the arena."
+"city"           -> "Svargrond is the only city here. Do you want to know where to find a shop,a trainer for a profession or a guildhall?"
+"Svargrond" -> *
+"shop"           -> "Near the harbour you find the equipment shop, the branch of the explorer's society as well as the post office and the bank. ...","Right-hand of the depot, which is in the centre of Svargrond, you find the furniture store ...","All weapon and armor traders linger at the arena in the North and the tavern is to the west."
+"Ferumbras"           -> "Wait, wait! Don't say a word, it's, it's ...","that very small guy with the hairy feet? No?"
+"Excalibug"           -> "I would love to have that legendary weapon. If you find it, bring it to me!"
+"Uman"           -> "I only know Chyll, the cold north wind, the father of frost."
+"Banor"           -> *
+"rumours"           -> "I have no time to natter. Ask the citizens for rumours."
+"jarl"           -> "Our leader is Jarl Sven the Younger! You find him in the tavern west of the city."
+"leader"           -> *
+"busty"           -> "NOT ME! With that thick fur clothes we are wearing, it is not easy to see... er... female characteristics."
+"captain"           -> "Let me think......where could a captain be??? Think twice before you ask me silly questions!!!"
+"Zora"           -> "Never heard that name."
+"Baltim"           -> *
+"Bertha"           -> "She trades with general goods. You can find her in her shop near the harbour."
+"Dankwart"           -> "He is the keeper of our Tavern. No need to explain where you find him."
+"Jessica"           -> "She is the leader of the Carlin traders. She spends most of her time in the jewellery store which is also the bank of Svargrond. You find it south of the road between the harbour and the depot."
+"Kjesse"           -> "You can find him at the temple to the west. He is the shaman of Svargrond."
+"Lurik"           -> "He is the representative of the explorer's society here in Svargrond. You find him south of the road between the harbour and the depot."
+"Nelly"           -> "She is the post office clerk. Follow the moaning and you will find her."
+"Nilsor"           -> "He is one of our shamans that live on Nibelor."
+"Nor"           -> "Mhmmm, Nor? Nobody with that name lives here in Svargrond. Maybe he is one of the southerners that came here."
+"Robert"           -> "HAA, he thinks his weapons are the best!! Too weak to hold a real barbarian axe! You find him near the arena."
+"Siflind"           -> "Ohh, old mother Siflind! She is a lovely shaman. You find her on Nibelor."
+"Sven"           -> "Sven the Younger is our jarl. At this time he should be at the tavern. Follow the main road to the west and at the furrier quarter turn south."
+"weapon"           -> "You can find the weapon and armor shops at the arena to the north. Talk to Robert."
+"camps"           -> "The raider camps are south of Hrodmir. The tribe to the east lives in a glacier cave. They call their settlement Ragnir. ...","The most southern camp is called Krimhorn and the raider caves to the west are called Bittermor."
+"Helheim"           -> "A small island north east of Tyrsung. Nothing important there. Maybe one of the fishermen can bring you there if you like to go."
+"Okolnir"           -> "The third biggest island of all Ice Islands. Home of the frost dragons. Give me your money if you want to go there, you won't need it afterwards."
+"Tyrsung"           -> "That is the big island east of Hrodmir. Venorian hunters settled there ..... or maybe they got eaten up by the frost giants."
+"Dog"           -> "The huskies here at Svargrond are allowed to roam as they like. ...","If they irritate you, hit them and they will run away. But be careful not to kill them if you don't want to get in trouble."
+"Husky" -> *
+"Elfs"           -> "Too weak to hold a real weapon and too soft for the climate here. I've never seen one."
+"Dwarfs"           -> "How can somebody of that size drink that much?? I met a dwarf once but my memory of this evening is a little bit clouded."
+"Demons"           -> "We have tales about dark, evil creatures that can kill dozens of brave warriors in a blink of an eye. I'm glad that these are only tales."
+"tales"           -> "Once upon a time there was ..... WHO DO YOU THINK I AM! GO TO YOUR GRANDMOTHER FOR SUCH THINGS!!"
+"Chakoya"           -> "These chakoyas are nasty little creatures. Not very dangerous for an ambitious fighter but still nasty."
+"Dragons"           -> "A special kind of them lives on Okolnir, the frost dragons. They adapted well to the cold conditions here."
+"Ghost"           -> "Some people say that Helheim is a haunted place because there is a rock that looks like a skull. Just a tale to scare kids if you ask me."
+"Guard"           -> "I am a guard and proud to be a barbarian."
+"cult"           -> "Let me think .......... Yes there have been a bunch of strange looking guys passing Svargrond and heading for the old mines. It somehow reminded me of a cult."
+"Formorgar"           -> "There are valuable ores in the mines under the Formorgar glacier. But nobody who has ever tried to gather some has ever come back. I have no clue what's going on down there."
+"mines"           -> *
+"queen"           -> "Who?"
+"serpents"           -> "All of a sudden the years of the serpents ended. I am glad that we regained the contact with the rest of Tibia. ...","Still, if you are very attentive, you may see a sea serpent. Not all of them have disappeared."
+"barbarians"           -> "Go find Sven our jarl if you want to join our community. At this time he should be at the tavern. Follow the main road to the west and at the furrier quarter turn south."
+"test"           -> *
+"join"           -> *
+"sorcerers"           -> "You have to look for Romir."
+"druids"           -> "You have to look for Hjaern."
+"trainer"           -> "The guild masters for paladins and knights are at the arena, the shamans on Nibelor surely can teach druids new things ...","and Romir the old hermit who lives in a cave north of Svargrond may have some knowledge concerning magic."
+"guildhall"           -> "In the city you will find three guildhalls. Frost Manor is on top of the cliff ...","Crystal Glance is north of the depot at the street which leads to the arena and Mammoth Belly is to the south, near the furrier quarter."
+"arena"           -> "If you think you are strong enough, then try to fight there. You have to challenge waves of monsters that get stronger and stronger. ...","The entrance to the arena is a stairway north of the town, left of the town gate."
+
+"fuck"           -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"idiot"          -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"asshole"        -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"ass$"           -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"fag$"           -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"stupid"         -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"tyrant"         -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"shit"           -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)
+"lunatic"        -> "Take this!", Burning(5,1), EffectOpp(5), EffectMe(8)

@@ -1,0 +1,11 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# walter.npc: Datenbank für die Stadtwache am Südtor
+
+Name = "Sirik"
+Outfit = (251,79-116-116-116-3)
+Home = [32328,31118,7]
+Radius = 2
+
+Behaviour = {
+@"guards-svargrond.ndb"
+}
