@@ -10,7 +10,11 @@
 #include "game.h"
 #include "iologindata.h"
 #include "scheduler.h"
+#if __has_include("fmt/core.h")
 #include <fmt/core.h>
+#else
+#include <fmt/format.h> 
+#endif
 
 extern ConfigManager g_config;
 extern Game g_game;
