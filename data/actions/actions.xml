@@ -205,8 +205,8 @@
 	<action itemid="6549" script="misc/djinn_quest_pass.lua" />
 	<action itemid="6551" script="misc/djinn_quest_pass.lua" />
 	<action itemid="3252" script="misc/postman_quest_pass.lua" />
-	<action itemid="6554" script="misc/shop_points_scroll.lua" />
-	<action itemid="6555" script="misc/shop_points_scroll.lua" />
+	<!-- <action itemid="6554" script="misc/shop_points_scroll.lua" /> those item ids already taken
+	<action itemid="6555" script="misc/shop_points_scroll.lua" /> -->
 	
 	<!-- Dolls -->
 	<action itemid="5080" script="misc/dolls.lua" />

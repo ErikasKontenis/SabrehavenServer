@@ -22,6 +22,8 @@ Servers = {
   Evoulinia = "evolunia.net:7171:1098",
   GarneraTest = "garnera-global.net:7171:1100",
   LocalTestServ = "127.0.0.1:7171:1098:110:30:93"  ]]
+  Local = "127.0.0.1:7171:772",
+  Vanilla = "login.sabrehaven.com:7171:772"
 }
 
 --Server = "ws://otclient.ovh:3000/"

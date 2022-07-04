@@ -184,7 +184,7 @@ void ProtocolLogin::onRecvFirstMessage(NetworkMessage& msg)
 		std::ostringstream ss;
 		ss << "Only clients with protocol " << getClientVersionString(g_game.getClientVersion()) << " allowed!";
 		disconnectClient(ss.str(), version);
-		return;
+		return; 
 	}
 	
 	std::string password = msg.getString();

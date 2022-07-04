@@ -1755,51 +1755,51 @@ Attributes  = {Waypoints=100}
 
 TypeID      = 439
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 440
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 441
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 442
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 443
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 444
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 445
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 446
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 447
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 448
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 449
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 450
 Name        = "wooden floor"
-Flags       = {Unpass,Unmove,Unlay}
+Flags       = {Clip,Unpass,Unmove,Unlay}
 
 TypeID      = 451
 Name        = "stairs"
@@ -29759,10 +29759,13 @@ Flags       = {MultiUse,Take,Weapon}
 Attributes  = {Weight=5800,SlotType=TWOHANDED,WeaponType=AXE,Attack=49,Defense=15}
 
 TypeID      = 6554
-Name        = "" # this is nothing in client
+Name        = "your inbox"
+Flags       = {Container,Unmove} # custom
+Attributes  = {Capacity=30}
 
 TypeID      = 6555
-Name        = "" # this is nothing in client
+Name        = "the market"
+Flags       = {Unmove} # custom
 
 TypeID      = 6556
 Name        = "a tic-tac-toe token"
@@ -33929,12 +33932,3 @@ TypeID      = 8112
 Name        = "remains of a vampire lord"
 Flags       = {Container,Take,Corpse,Expire}
 Attributes  = {Capacity=10,Weight=85000,ExpireTarget=0,TotalExpireTime=1800}
-
-TypeID      = 12902
-Name        = "your inbox"
-Flags       = {Container,Unmove}
-Attributes  = {Capacity=30}
-
-TypeID      = 12903
-Name        = "the market"
-Flags       = {Unmove}
