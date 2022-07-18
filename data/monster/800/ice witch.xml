@@ -1,6 +1,6 @@
 <monster name="Ice Witch" nameDescription="an ice witch" race="blood" experience="580" speed="57" manacost="0">
 	<health now="650" max="650" />
-	<look type="149" head="0" body="47" legs="105" feet="105" addons="0" corpse="20426" />
+	<look type="149" head="0" body="47" legs="105" feet="105" addons="0" corpse="6081" />
 	<targetchange interval="1000" chance="5" />
 	<targetstrategy nearest="70" weakest="10" mostdamage="10" random="10" />
 	<flags>
