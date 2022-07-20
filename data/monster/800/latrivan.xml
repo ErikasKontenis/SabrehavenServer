@@ -47,7 +47,6 @@
 	</voices>
 	<loot>
 		<item id="3031" countmax="273" chance="1000" />	<!-- gold coin -->
-		<item id="239" chance="550" />					<!-- great health potion -->
 		<item id="3275" chance="300" />					<!-- double axe -->
 		<item id="6299" chance="250" />					<!-- death ring -->
 		<item id="3098" chance="250" />					<!-- ring of healing -->
@@ -62,7 +61,6 @@
 		<item id="6499" chance="100" />					<!-- demonic essence -->
 		<item id="3051" chance="100" />					<!-- energy ring -->
 		<item id="3281" chance="100" />					<!-- giant sword -->
-							<!-- gold ingot -->
 		<item id="3063" chance="100" />					<!-- gold ring -->
 		<item id="3364" chance="100" />					<!-- golden legs -->
 		<item id="3041" chance="50" />						<!-- blue gem -->

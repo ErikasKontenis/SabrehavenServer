@@ -59,18 +59,12 @@
 		<item id="3031" countmax="190" chance="880" />	<!-- gold coin -->
 		<item id="5880" countmax="10" chance="390" />	<!-- iron ore -->
 		<item id="5925" countmax="20" chance="320" />	<!-- hardened bone -->
-		<item id="239" chance="240" />				<!-- great health potion -->
 		<item id="7391" chance="240" />				<!-- thaian sword -->
 		<item id="3062" chance="230" />				<!-- mind stone -->
 		<item id="3392" chance="220" />				<!-- royal helmet -->
-						<!-- ultimate health potion -->
-		<item id="238" chance="210" />				<!-- great mana potion -->
 		<item id="5741" chance="210" />				<!-- skull helmet -->
-						<!-- great spirit potion -->
-						<!-- rusty armor (rare) -->
 		<item id="3369" chance="200" />				<!-- warrior helmet -->
 		<item id="3035" countmax="26" chance="200" />	<!-- platinum coin -->
-						<!-- gold ingot -->
 		<item id="3061" chance="170" />				<!-- life crystal -->
 		<item id="3060" chance="170" />				<!-- orb -->
 		<item id="3280" chance="150" />				<!-- fire sword -->

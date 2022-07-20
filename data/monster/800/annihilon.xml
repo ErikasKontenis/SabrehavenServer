@@ -51,9 +51,6 @@
 	</voices>
 	<loot>
 		<item id="3031" countmax="100" chance="1000" />	<!-- gold coin -->
-							<!-- rusty armor (rare) -->
-		<item id="281" chance="389" />					<!-- giant shimmering pearl -->
-		<item id="282" chance="389" />					<!-- giant shimmering pearl -->
 		<item id="3340" chance="283" />					<!-- heavy mace -->
 		<item id="7368" countmax="50" chance="230" />		<!-- assassin star -->
 		<item id="3041" chance="230" />					<!-- blue gem -->
@@ -64,8 +61,6 @@
 		<item id="3269" chance="208" />					<!-- halberd -->
 		<item id="3039" chance="208" />					<!-- red gem -->
 		<item id="7439" chance="199" />					<!-- berserk potion -->
-		<item id="763" countmax="96" chance="194" />		<!-- flaming arrow -->
-							<!-- gold ingot -->
 		<item id="3035" countmax="30" chance="190" />		<!-- platinum coin -->
 		<item id="3450" countmax="99" chance="190" />		<!-- power bolt -->
 		<item id="5944" countmax="5" chance="185" />		<!-- soul orb -->
@@ -73,14 +68,9 @@
 		<item id="7366" countmax="70" chance="168" />		<!-- viper star -->
 		<item id="3038" chance="159" />					<!-- green gem -->
 		<item id="7440" chance="154" />					<!-- mastermind potion -->
-							<!-- ultimate health potion -->
-		<item id="239" chance="137" />					<!-- great health potion -->
 		<item id="7421" chance="137" />					<!-- onyx flail -->
 		<item id="3419" chance="132" />					<!-- crown shield -->
-							<!-- great spirit potion -->
 		<item id="5954" countmax="2" chance="128" />		<!-- demon horn -->
-		<item id="238" chance="123" />					<!-- great mana potion -->
-							<!-- paladin armor -->
 		<item id="3428" chance="101" />					<!-- tower shield -->
 		<item id="7387" chance="75" />						<!-- diamond sceptre -->
 		<item id="3415" chance="75" />						<!-- guardian shield -->

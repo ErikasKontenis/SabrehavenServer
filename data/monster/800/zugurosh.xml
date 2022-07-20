@@ -63,13 +63,6 @@
 	<loot>
 		<item id="6499" chance="1000" />					<!-- demonic essence -->
 		<item id="3031" countmax="194" chance="1000" />	<!-- gold coin -->
-							<!-- rusty legs (rare) -->
-							<!-- rusty armor (rare) -->
-		<item id="238" chance="270" />					<!-- great mana potion -->
-							<!-- great spirit potion -->
-		<item id="239" chance="230" />					<!-- great health potion -->
-							<!-- ultimate health potion -->
-							<!-- gold ingot -->
 		<item id="3035" countmax="30" chance="210" />		<!-- platinum coin -->
 		<item id="6104" chance="210" />					<!-- jewel case -->
 		<item id="5944" countmax="10" chance="210" />		<!-- soul orb -->

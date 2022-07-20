@@ -58,10 +58,7 @@
 						<!-- gold ingot -->
 		<item id="7449" chance="220" />				<!-- crystal sword -->
 		<item id="3085" chance="150" />				<!-- dragon necklace -->
-		<item id="823" chance="120" />				<!-- glacier kilt -->
-		<item id="238" chance="95" />					<!-- great mana potion -->
 		<item id="7443" chance="80" />					<!-- bullseye potion -->
-		<item id="824" chance="80" />					<!-- glacier robe -->
 		<item id="3324" chance="80" />					<!-- skull staff -->
 		<item id="7459" chance="63" />					<!-- pair of earmuffs -->
 		<item id="7439" chance="47" />					<!-- berserk potion -->

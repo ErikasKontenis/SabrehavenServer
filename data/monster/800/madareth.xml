@@ -51,10 +51,8 @@
 	<loot>
 		<item id="3031" countmax="150" chance="1000" />	<!-- gold coin -->
 		<item id="7443" chance="330" />					<!-- bullseye potion -->
-		<item id="239" chance="300" />					<!-- great health potion -->
 		<item id="7440" chance="280" />					<!-- mastermind potion -->
 		<item id="7439" chance="230" />					<!-- berserk potion -->
-		<item id="238" chance="210" />					<!-- great mana potion -->
 		<item id="6299" chance="190" />					<!-- death ring -->
 		<item id="3067" chance="190" />					<!-- hailstorm rod -->
 		<item id="3035" countmax="26" chance="190" />		<!-- platinum coin -->

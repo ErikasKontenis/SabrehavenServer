@@ -60,22 +60,15 @@
 		<item id="5954" countmax="2" chance="333" />	<!-- demon horn -->
 		<item id="3028" countmax="5" chance="300" />	<!-- small diamond -->
 		<item id="6299" chance="280" />				<!-- death ring -->
-		<item id="239" chance="260" />				<!-- great health potion -->
-						<!-- great spirit potion -->
-						<!-- spellscroll of prophecies -->
-						<!-- ultimate health potion -->
 		<item id="3026" countmax="15" chance="260" />	<!-- white pearl -->
 		<item id="3062" chance="230" />				<!-- mind stone -->
 		<item id="3098" chance="230" />				<!-- ring of healing -->
 		<item id="3033" countmax="17" chance="230" />	<!-- small amethyst -->
 		<item id="3032" countmax="10" chance="230" />	<!-- small emerald -->
 		<item id="2850" chance="210" />				<!-- blue tome -->
-		<item id="238" chance="210" />				<!-- great mana potion -->
 		<item id="3038" chance="210" />				<!-- green gem -->
 		<item id="3060" chance="210" />				<!-- orb -->
 		<item id="3029" countmax="10" chance="210" />	<!-- small sapphire -->
-						<!-- spellbook of dark mysteries -->
-						<!-- spellbook of warding -->
 		<item id="3063" chance="200" />				<!-- gold ring -->
 		<item id="7405" chance="170" />				<!-- havoc blade -->
 						<!-- oceanborn leviathan armor -->
@@ -92,7 +85,6 @@
 		<item id="3034" countmax="7" chance="130" />	<!-- talon -->
 		<item id="3027" countmax="14" chance="100" />	<!-- black pearl -->
 		<item id="3007" chance="100" />				<!-- crystal ring -->
-		<item id="823" chance="100" />				<!-- glacier kilt -->
 						<!-- spellbook of mind control -->
 		<item id="3058" chance="100" />				<!-- strange symbol -->
 		<item id="3335" chance="100" />				<!-- twin axe -->

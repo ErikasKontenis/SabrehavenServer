@@ -58,16 +58,13 @@
 		<item id="3031" countmax="198" chance="1000" />	<!-- gold coin -->
 		<item id="3344" chance="290" />					<!-- beastslayer axe -->
 		<item id="3035" countmax="30" chance="210" />		<!-- platinum coin -->
-		<item id="239" chance="200" />					<!-- great health potion -->
 		<item id="3381" chance="190" />					<!-- crown armor -->
-		<item id="238" chance="150" />					<!-- great mana potion -->
 		<item id="3027" countmax="25" chance="144" />		<!-- black pearl -->
 		<item id="3008" chance="134" />					<!-- crystal necklace -->
 		<item id="3030" countmax="25" chance="133" />		<!-- small ruby -->
 		<item id="3026" countmax="25" chance="132" />		<!-- white pearl -->
 		<item id="7456" chance="124" />					<!-- noble axe -->
 		<item id="3028" countmax="25" chance="123" />		<!-- small diamond -->
-		<item id="821" chance="119" />					<!-- magma legs -->
 		<item id="3029" countmax="25" chance="119" />		<!-- small sapphire -->
 		<item id="3016" chance="118" />					<!-- ruby necklace -->
 		<item id="3033" countmax="25" chance="115" />		<!-- small amethyst -->
