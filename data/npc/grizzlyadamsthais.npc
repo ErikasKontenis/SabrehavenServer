@@ -3,7 +3,7 @@
 
 Name = "Grizzly Adams"
 Outfit = (144,97-97-94-97-3)
-Home = [32359,32232,7]
+Home = [32354,32221,7]
 Radius = 3
 
 Behaviour = {

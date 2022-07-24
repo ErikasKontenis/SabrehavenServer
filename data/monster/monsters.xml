@@ -307,4 +307,8 @@
 	<monster name="The Obliverator" file="800/arena/warlord/the obliverator.xml" />
 	<monster name="The Pit Lord" file="800/arena/warlord/the pit lord.xml" />
 	<monster name="Webster" file="800/arena/warlord/webster.xml" />
+	
+	<monster name="red hat cyclops" file="customs/red hat cyclops.xml" />
+	<monster name="blood graw" file="customs/blood graw.xml" />
+	<monster name="fire spider" file="customs/fire spider.xml" />
 </monsters>

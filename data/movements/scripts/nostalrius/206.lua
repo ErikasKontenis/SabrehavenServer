@@ -1,8 +1,8 @@
 function onStepIn(creature, item, position, fromPosition)
 	if creature:isPlayer() then 
-		doRelocate(item:getPosition(),{x = 32369, y = 32241, z = 07})
+		doRelocate(item:getPosition(),{x = 32369, y = 32241, z = 5})
 		creature:getPlayer():setTown(Town("Thais"))
-		Game.sendMagicEffect({x = 32369, y = 32241, z = 07}, 13)
+		Game.sendMagicEffect({x = 32369, y = 32241, z = 5}, 13)
 	end
 end
 

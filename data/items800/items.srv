@@ -34191,3 +34191,18 @@ TypeID      = 17158
 Name        = "a blood graw"
 Flags       = {Corpse,Expire}
 Attributes  = {ExpireTarget=0,TotalExpireTime=1800}
+
+TypeID      = 17159
+Name        = "a dead cyclops"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=17151,TotalExpireTime=10}
+
+TypeID      = 17160
+Name        = "a fire spider"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=SLIME,ExpireTarget=17154,TotalExpireTime=10}
+
+TypeID      = 17161
+Name        = "a blood graw"
+Flags       = {Container,Unmove,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=17157,TotalExpireTime=10}

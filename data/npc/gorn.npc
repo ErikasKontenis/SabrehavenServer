@@ -3,7 +3,7 @@
 
 Name = "Gorn"
 Outfit = (129,58-68-101-95-0)
-Home = [32377, 32206, 7]
+Home = [32377,32206,7]
 Radius = 3
 
 Behaviour = {
