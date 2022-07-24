@@ -53,6 +53,12 @@ local foods = {
 	[6545] = "Gulp.", -- coloured egg
 	[6569] = "Mmmm.", -- candy
 	[6574] = "Mmmm.", -- bar of chocolate
+	[7372] = "Slurp.", -- ice cream cone
+	[7373] = "Slurp.", -- ice cream cone
+	[7374] = "Slurp.", -- ice cream cone
+	[7375] = "Slurp.", -- ice cream cone
+	[7376] = "Slurp.", -- ice cream cone
+	[7377] = "Slurp.", -- ice cream cone
 }
 
 function onUse(player, item, fromPosition, target, toPosition)

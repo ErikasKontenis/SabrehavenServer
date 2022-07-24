@@ -215,6 +215,15 @@
 	<action itemid="5668" script="misc/dolls.lua" />
 	<action itemid="5791" script="misc/dolls.lua" />
 	<action itemid="6511" script="misc/dolls.lua" />
+	<action itemid="7184" script="misc/dolls.lua" />
+	
+	<!-- Surprise bags -->
+	<action fromid="6570" toid="6571" script="misc/surprisebag.lua" />
+	
+	<!-- Strengthening potions -->
+	<action itemid="7439" script="misc/strengthening_potions.lua" />
+	<action itemid="7440" script="misc/strengthening_potions.lua" />
+	<action itemid="7443" script="misc/strengthening_potions.lua" />
 	
 	<!-- Keys -->
 	<action fromid="2967" toid="2973" script="misc/key.lua" />
@@ -367,6 +376,12 @@
 	<action itemid="6545" script="misc/food.lua" />
 	<action itemid="6569" script="misc/food.lua" />
 	<action itemid="6574" script="misc/food.lua" />
+	<action itemid="7372" script="misc/food.lua" />
+	<action itemid="7373" script="misc/food.lua" />
+	<action itemid="7374" script="misc/food.lua" />
+	<action itemid="7375" script="misc/food.lua" />
+	<action itemid="7376" script="misc/food.lua" />
+	<action itemid="7377" script="misc/food.lua" />
 	
 	<!-- Passthrough -->
 	<action fromid="2334" toid="2341" script="misc/doors.lua" />

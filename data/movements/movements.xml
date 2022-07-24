@@ -436,6 +436,14 @@
 	<movevent event="StepIn" movementid="17689" script="pits_of_inferno/pumin_throne_room_teleport_back.lua" />
 	<movevent event="AddItem" movementid="17689" tileitem="1" script="pits_of_inferno/pumin_throne_room_teleport_back.lua" />
 	
+	<!--Svargrond Arena Quest-->
+ 	<movevent event="StepIn" movementid="25100" script="svargrond_arena/arenaEnter.lua" />
+	<movevent event="StepIn" movementid="25200" script="svargrond_arena/arenaPit.lua" />
+	<movevent event="StepIn" movementid="25300" script="svargrond_arena/arenaPit.lua" />
+	<movevent event="StepIn" frommovementid="23201" tomovementid="23203" script="svargrond_arena/arenaTrophy.lua" />
+	<movevent event="StepIn" movementid="17751" script="svargrond_arena/back.lua" />
+	<movevent event="AddItem" movementid="17751" tileitem="1" script="svargrond_arena/back.lua" />
+	
 	<!-- Serpentine Tower -->
 	<movevent event="StepIn" frommovementid="17602" tomovementid="17603" script="serpentine_tower/final_tile.lua" />
 	<movevent event="RemoveItem" movementid="17605" tileitem="1" script="serpentine_tower/take_waterwalking_boots.lua" />

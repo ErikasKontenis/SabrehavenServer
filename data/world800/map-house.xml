@@ -5,9 +5,9 @@
 	<house name="Halls of the Adventurers" houseid="3" entryx="32397" entryy="32042" entryz="7" rent="29060" guildhall="true" townid="1" size="223" />
 	<house name="Dark Mansion" houseid="4" entryx="32397" entryy="32155" entryz="7" rent="34090" guildhall="true" townid="1" size="275" />
 	<house name="Bloodhall" houseid="5" entryx="32469" entryy="32170" entryz="7" rent="29040" guildhall="true" townid="1" size="232" />
-	<house name="Sunset Homes, Flat 01" houseid="6" entryx="32333" entryy="32232" entryz="7" rent="1040" townid="1" size="20" />
-	<house name="Sunset Homes, Flat 02" houseid="7" entryx="32333" entryy="32237" entryz="7" rent="1040" townid="1" size="20" />
-	<house name="Sunset Homes, Flat 03" houseid="8" entryx="32334" entryy="32244" entryz="7" rent="1040" townid="1" size="20" />
+	<house name="Sunset Homes, Flat 01" houseid="6" entryx="32333" entryy="32232" entryz="7" rent="1040" townid="1" size="10" />
+	<house name="Sunset Homes, Flat 02" houseid="7" entryx="32333" entryy="32237" entryz="7" rent="1040" townid="1" size="10" />
+	<house name="Sunset Homes, Flat 03" houseid="8" entryx="32334" entryy="32244" entryz="7" rent="1040" townid="1" size="10" />
 	<house name="Sunset Homes, Flat 11" houseid="9" entryx="32333" entryy="32232" entryz="6" rent="1040" townid="1" size="10" />
 	<house name="Sunset Homes, Flat 12" houseid="10" entryx="32333" entryy="32237" entryz="6" rent="1040" townid="1" size="10" />
 	<house name="Sunset Homes, Flat 13" houseid="11" entryx="32334" entryy="32244" entryz="6" rent="1620" townid="1" size="13" />
@@ -16,12 +16,12 @@
 	<house name="Sunset Homes, Flat 22" houseid="14" entryx="32333" entryy="32237" entryz="5" rent="1040" townid="1" size="10" />
 	<house name="Sunset Homes, Flat 23" houseid="15" entryx="32334" entryy="32244" entryz="5" rent="1620" townid="1" size="13" />
 	<house name="Sunset Homes, Flat 24" houseid="16" entryx="32334" entryy="32249" entryz="5" rent="1040" townid="1" size="10" />
-	<house name="Beach Home Apartments, Flat 01" houseid="17" entryx="32314" entryy="32245" entryz="7" rent="1430" townid="1" size="16" />
-	<house name="Beach Home Apartments, Flat 02" houseid="18" entryx="32314" entryy="32240" entryz="7" rent="1430" townid="1" size="16" />
-	<house name="Beach Home Apartments, Flat 03" houseid="19" entryx="32317" entryy="32235" entryz="7" rent="1430" townid="1" size="16" />
-	<house name="Beach Home Apartments, Flat 04" houseid="20" entryx="32313" entryy="32235" entryz="7" rent="1430" townid="1" size="16" />
-	<house name="Beach Home Apartments, Flat 05" houseid="21" entryx="32309" entryy="32235" entryz="7" rent="1430" townid="1" size="16" />
-	<house name="Beach Home Apartments, Flat 06" houseid="22" entryx="32309" entryy="32243" entryz="7" rent="2190" townid="1" size="19" />
+	<house name="Beach Home Apartments, Flat 01" houseid="17" entryx="32314" entryy="32245" entryz="7" rent="1430" townid="1" size="10" />
+	<house name="Beach Home Apartments, Flat 02" houseid="18" entryx="32314" entryy="32240" entryz="7" rent="1430" townid="1" size="10" />
+	<house name="Beach Home Apartments, Flat 03" houseid="19" entryx="32317" entryy="32235" entryz="7" rent="1430" townid="1" size="10" />
+	<house name="Beach Home Apartments, Flat 04" houseid="20" entryx="32313" entryy="32235" entryz="7" rent="1430" townid="1" size="10" />
+	<house name="Beach Home Apartments, Flat 05" houseid="21" entryx="32309" entryy="32235" entryz="7" rent="1430" townid="1" size="10" />
+	<house name="Beach Home Apartments, Flat 06" houseid="22" entryx="32309" entryy="32243" entryz="7" rent="2190" townid="1" size="13" />
 	<house name="Beach Home Apartments, Flat 11" houseid="23" entryx="32314" entryy="32243" entryz="6" rent="1430" townid="1" size="10" />
 	<house name="Beach Home Apartments, Flat 12" houseid="24" entryx="32314" entryy="32238" entryz="6" rent="1760" townid="1" size="13" />
 	<house name="Beach Home Apartments, Flat 13" houseid="25" entryx="32314" entryy="32234" entryz="6" rent="1760" townid="1" size="13" />
@@ -60,7 +60,7 @@
 	<house name="Southern Thais Guildhall" houseid="58" entryx="32401" entryy="32254" entryz="7" rent="43020" guildhall="true" townid="1" size="263" />
 	<house name="Upper Swamp Lane 10" houseid="59" entryx="32412" entryy="32256" entryz="7" rent="3920" townid="1" size="41" />
 	<house name="Upper Swamp Lane 12" houseid="60" entryx="32419" entryy="32256" entryz="7" rent="7400" townid="1" size="43" />
-	<house name="Sorcerer's Avenue 1a" houseid="61" entryx="32300" entryy="32254" entryz="7" rent="2410" townid="1" size="24" />
+	<house name="Sorcerer's Avenue 1a" houseid="61" entryx="32300" entryy="32254" entryz="7" rent="2410" townid="1" size="15" />
 	<house name="Sorcerer's Avenue 1b" houseid="62" entryx="32300" entryy="32251" entryz="6" rent="1970" townid="1" size="12" />
 	<house name="Sorcerer's Avenue 1c" houseid="63" entryx="32300" entryy="32249" entryz="6" rent="2410" townid="1" size="15" />
 	<house name="Sorcerer's Avenue 5" houseid="64" entryx="32284" entryy="32256" entryz="7" rent="5390" townid="1" size="40" />

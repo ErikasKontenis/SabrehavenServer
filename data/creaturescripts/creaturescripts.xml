@@ -13,4 +13,7 @@
 	
 	<event type="kill" name="InquisitionUngreez" script="inquisitionQuestUngreez.lua" />
 	<event type="kill" name="InquisitionBosses" script="inquisitionQuestBosses.lua" />
+	
+	<!-- Svargrond Arena: Killing a boss -->
+	<event type="kill" name="SvargrondArenaKill" script="arena_kill.lua" />
 </creaturescripts>

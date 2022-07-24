@@ -1,0 +1,20 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# boozer.npc: Datenbank für den Wirt Boozer
+
+Name = "Freezhild"
+Outfit = (149,0-47-105-105-0)
+Home = [32024,31442,5]
+Radius = 1
+
+Behaviour = {
+ADDRESS,"hello$",! -> "Welcome, to my cool home."
+ADDRESS,"hi$",!    -> *
+ADDRESS,!          -> Idle
+BUSY,"hello$",!    -> "Please give me a minute, %N.", Queue
+BUSY,"hi$",!       -> *
+BUSY,!             -> NOP
+VANISH,!           -> "I hope you have a cold day, friend."
+
+"bye"         -> "I hope you have a cold day, friend.", Idle
+"farewell"       -> *
+}

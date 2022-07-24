@@ -26,6 +26,9 @@ local dolls = {
 		"Have you been nice?",
 		"Merry Christmas!",
 		"Can you stop squeezing me now... I'm starting to feel a little sick."
+	},
+	[7184] = {
+		"Hug me!",
 	}
 }
 
@@ -65,6 +68,9 @@ function onUse(player, item, fromPosition, target, toPosition, isHotkey)
 		end
 	elseif item.itemid == 6511 then
 		item:transform(6567)
+		item:decay()
+	elseif item.itemid == 7184 then
+		item:transform(7183)
 		item:decay()
 	end
 

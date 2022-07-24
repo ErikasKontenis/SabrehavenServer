@@ -32415,8 +32415,8 @@ Flags       = {Unmove}
 
 TypeID      = 7183
 Name        = "a baby seal doll"
-Flags       = {Take}
-Attributes  = {Weight=850}
+Flags       = {Take,Expire}
+Attributes  = {Weight=850,ExpireTarget=7184,TotalExpireTime=3}
 
 TypeID      = 7184
 Name        = "a baby seal doll"
@@ -33289,37 +33289,37 @@ TypeID      = 7372
 Name        = "an ice cream cone"
 Description = "It's the famous Venorean Dream flavour, but the ice cream is melting rapidly"
 Flags       = {Take,Expire}
-Attributes  = {Weight=100,ExpireTarget=0,TotalExpireTime=120}
+Attributes  = {Weight=100,Nutrition=1,ExpireTarget=0,TotalExpireTime=120}
 
 TypeID      = 7373
 Name        = "an ice cream cone"
 Description = "It's the famous velvet vanilla flavour"
 Flags       = {Take}
-Attributes  = {Weight=100}
+Attributes  = {Weight=100,Nutrition=1}
 
 TypeID      = 7374
 Name        = "an ice cream cone"
 Description = "It's the famous sweet strawberry flavour"
 Flags       = {Take}
-Attributes  = {Weight=100}
+Attributes  = {Weight=100,Nutrition=1}
 
 TypeID      = 7375
 Name        = "an ice cream cone"
 Description = "It's the famous chilly cherry flavour"
 Flags       = {Take}
-Attributes  = {Weight=100}
+Attributes  = {Weight=100,Nutrition=1}
 
 TypeID      = 7376
 Name        = "an ice cream cone"
 Description = "It's the famous mellow melon flavour"
 Flags       = {Take}
-Attributes  = {Weight=100}
+Attributes  = {Weight=100,Nutrition=1}
 
 TypeID      = 7377
 Name        = "an ice cream cone"
 Description = "It's the famous blue-barian flavour"
 Flags       = {Take}
-Attributes  = {Weight=100}
+Attributes  = {Weight=100,Nutrition=1}
 
 TypeID      = 7378
 Name        = "a royal spear"
