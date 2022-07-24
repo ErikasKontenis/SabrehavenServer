@@ -96,6 +96,8 @@ local list = {
 	[6923] = {x = 0, y = -1, z = 1},
 	[6924] = {x = 0, y = 1, z = 1},
 	[7053] = {x = 1, y = 0, z = 1},
+	[17114] = {x = 0, y = 0, z = 1},
+	[17136] = {x = 0, y = 0, z = 1},
 }
 
 function onStepIn(creature, item, position, fromPosition)

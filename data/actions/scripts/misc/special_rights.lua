@@ -3,7 +3,7 @@ function onUse(player, item, fromPosition, target, toPosition)
 		if item:getId() == 372 then
 			item:transform(394, 1)
 			item:decay()
-		elseif item:getId() == 386 or item:getId() == 421 then
+		elseif item:getId() == 386 or item:getId() == 421 or item:getId() == 17115 or item:getId() == 17137 then
 			local relPos = item:getPosition():moveRel(0, 1, -1)
 			player:teleportTo(relPos)
 		elseif item:getId() == 593 then

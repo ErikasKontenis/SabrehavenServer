@@ -33932,3 +33932,262 @@ TypeID      = 8112
 Name        = "remains of a vampire lord"
 Flags       = {Container,Take,Corpse,Expire}
 Attributes  = {Capacity=10,Weight=85000,ExpireTarget=0,TotalExpireTime=1800}
+
+TypeID      = 17100
+Name        = "green floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=150}
+
+TypeID      = 17101
+Name        = "green floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=100}
+
+TypeID      = 17102
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17103
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17104
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17105
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17106
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17107
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17108
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17109
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17110
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17111
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17112
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17113
+Name        = "green floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17114
+Name        = "a hole"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=130}
+
+TypeID      = 17115
+Name        = "green floor"
+Description = "There is a hole in the ceiling"
+Flags       = {Bank,UseEvent,ForceUse,Unmove}
+Attributes  = {Waypoints=120}
+
+TypeID      = 17116
+Name        = "a human in a cobweb"
+Flags       = {Unmove}
+
+TypeID      = 17117
+Name        = "a cobweb"
+Flags       = {Unmove}
+
+TypeID      = 17118
+Name        = "a cobweb"
+Flags       = {Unmove}
+
+TypeID      = 17119
+Name        = "a cobweb"
+Flags       = {Unmove}
+
+TypeID      = 17120
+Name        = "a cobweb"
+Flags       = {Unmove}
+
+TypeID      = 17121
+Name        = "a spider egg"
+Flags       = {Bottom,Unpass,Unmove,Unlay}
+
+TypeID      = 17122
+Name        = "red floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=150}
+
+TypeID      = 17123
+Name        = "red floor"
+Flags       = {Bank,Unmove}
+Attributes  = {Waypoints=100}
+
+TypeID      = 17124
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17125
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17126
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17127
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17128
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17129
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17130
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17131
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17134
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17135
+Name        = "red floor"
+Flags       = {Clip,Unmove}
+
+TypeID      = 17136
+Name        = "a hole"
+Flags       = {Bank,CollisionEvent,Unmove,Avoid}
+Attributes  = {Waypoints=130}
+
+TypeID      = 17137
+Name        = "red floor"
+Description = "There is a hole in the ceiling"
+Flags       = {Bank,UseEvent,ForceUse,Unmove}
+Attributes  = {Waypoints=120}
+
+TypeID      = 17138
+Name        = "earth"
+Flags       = {Bank,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17139
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17140
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17141
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17142
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17143
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17144
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17145
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17146
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17147
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17148
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17149
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17150
+Name        = "a dirt wall"
+Flags       = {Bottom,Unpass,Unmove,Unthrow,Unlay}
+Attributes  = {Waypoints=0}
+
+TypeID      = 17151
+Name        = "a dead cyclops"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=17152,TotalExpireTime=1800}
+
+TypeID      = 17152
+Name        = "a dead cyclops"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=17153,TotalExpireTime=1800}
+
+TypeID      = 17153
+Name        = "a dead cyclops"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=1800}
+
+TypeID      = 17154
+Name        = "a fire spider"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=SLIME,ExpireTarget=17155,TotalExpireTime=1800}
+
+TypeID      = 17155
+Name        = "a fire spider"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=17156,TotalExpireTime=1800}
+
+TypeID      = 17156
+Name        = "a fire spider"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=1800}
+
+TypeID      = 17157
+Name        = "a blood graw"
+Flags       = {Container,Corpse,Expire}
+Attributes  = {Capacity=10,FluidSource=BLOOD,ExpireTarget=17158,TotalExpireTime=1800}
+
+TypeID      = 17158
+Name        = "a blood graw"
+Flags       = {Corpse,Expire}
+Attributes  = {ExpireTarget=0,TotalExpireTime=1800}

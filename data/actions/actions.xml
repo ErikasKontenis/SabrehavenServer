@@ -157,6 +157,8 @@
 	<action itemid="3653" script="misc/special_rights.lua" />
 	<action itemid="3696" script="misc/special_rights.lua" />
 	<action itemid="3702" script="misc/special_rights.lua" />
+	<action itemid="17115" script="misc/special_rights.lua" />
+	<action itemid="17137" script="misc/special_rights.lua" />
 	
 	<!-- Fun -->
 	<action actionid="17572" script="misc/rookgard_skip.lua" />
