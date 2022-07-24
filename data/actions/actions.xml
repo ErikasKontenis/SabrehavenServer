@@ -396,6 +396,8 @@
 	<action itemid="6194" script="misc/doors.lua" />
 	<action itemid="6248" script="misc/doors.lua" />
 	<action itemid="6251" script="misc/doors.lua" />
+	<action itemid="6799" script="misc/doors.lua" />
+	<action itemid="6801" script="misc/doors.lua" />
 	<action itemid="6891" script="misc/doors.lua" />
 	<action itemid="6900" script="misc/doors.lua" />
 	<action itemid="7033" script="misc/doors.lua" />
@@ -499,6 +501,8 @@
 	<action itemid="6252" script="misc/doors.lua" />
 	<action itemid="6254" script="misc/doors.lua" />
 	<action itemid="6256" script="misc/doors.lua" />
+	<action itemid="6795" script="misc/doors.lua" />
+	<action itemid="6797" script="misc/doors.lua" />
 	<action itemid="6892" script="misc/doors.lua" />
 	<action itemid="6894" script="misc/doors.lua" />
 	<action itemid="6901" script="misc/doors.lua" />
@@ -554,6 +558,7 @@
 	<action itemid="6255" script="misc/doors.lua" />
 	<action itemid="6259" script="misc/doors.lua" />
 	<action itemid="6263" script="misc/doors.lua" />
+	<action itemid="6798" script="misc/doors.lua" />
 	<action itemid="6902" script="misc/doors.lua" />
 	<action itemid="6904" script="misc/doors.lua" />
 	<action itemid="6906" script="misc/doors.lua" />
@@ -608,6 +613,7 @@
 	<action itemid="6257" script="misc/doors.lua" />
 	<action itemid="6261" script="misc/doors.lua" />
 	<action itemid="6265" script="misc/doors.lua" />
+	<action itemid="6796" script="misc/doors.lua" />
 	<action itemid="6893" script="misc/doors.lua" />
 	<action itemid="6895" script="misc/doors.lua" />
 	<action itemid="6897" script="misc/doors.lua" />

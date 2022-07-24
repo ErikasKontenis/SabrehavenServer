@@ -30810,24 +30810,24 @@ Flags       = {Bottom,Unpass,Unmove}
 
 TypeID      = 6795
 Name        = "an entrance"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6796
 Name        = "an entrance"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6797
 Name        = "an entrance"
-Flags       = {Unpass,Unmove}
+Flags       = {Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6798
 Name        = "an entrance"
-Flags       = {Top,Unmove}
+Flags       = {Top,Door,Unmove}
 
 TypeID      = 6799
 Name        = "an entrance"
 Description = "It seems tightly closed"
-Flags       = {Unpass,Unmove}
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6800
 Name        = "an entrance"
@@ -30836,7 +30836,7 @@ Flags       = {Top,Unmove}
 TypeID      = 6801
 Name        = "an entrance"
 Description = "It seems tightly closed"
-Flags       = {Unpass,Unmove}
+Flags       = {UseEvent,Door,Unpass,Unmove,Unthrow,Unlay}
 
 TypeID      = 6802
 Name        = "an entrance"
