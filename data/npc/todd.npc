@@ -3,8 +3,8 @@
 
 Name = "Todd"
 Outfit = (128,115-0-67-114-0)
-Home = [32363,32210,6]
-Radius = 7
+Home = [32363, 32211, 7]
+Radius = 2
 
 Behaviour = {
 ADDRESS,"hi$",!                               -> "Uhm oh hello... not so loud please... my head..."

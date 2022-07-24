@@ -3,7 +3,7 @@
 
 Name = "Frodo"
 Outfit = (128,58-68-109-131-0)
-Home = [32356,32209,7]
+Home = [32359, 32208, 7]
 Radius = 3
 
 Behaviour = {
