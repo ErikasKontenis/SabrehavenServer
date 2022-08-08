@@ -786,6 +786,8 @@ class LuaScriptInterface
 
 		static int luaCreatureGetPathTo(lua_State* L);
 
+		static int luaCreatureSetProgressbar(lua_State* L);
+
 		// Player
 		static int luaPlayerCreate(lua_State* L);
 
@@ -908,6 +910,10 @@ class LuaScriptInterface
 		static int luaPlayerRemoveOutfitAddon(lua_State* L);
 		static int luaPlayerHasOutfit(lua_State* L);
 		static int luaPlayerSendOutfitWindow(lua_State* L);
+
+		static int luaPlayerAddMount(lua_State* L);
+		static int luaPlayerRemoveMount(lua_State* L);
+		static int luaPlayerHasMount(lua_State* L);
 
 		static int luaPlayerGetPremiumDays(lua_State* L);
 		static int luaPlayerAddPremiumDays(lua_State* L);

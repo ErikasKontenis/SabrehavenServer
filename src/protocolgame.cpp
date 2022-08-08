@@ -56,6 +56,17 @@ void ProtocolGame::release()
 
 void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingSystem_t operatingSystem, bool isFake)
 {
+	// OTCv8 features and extended opcodes
+	if (otclientV8 || operatingSystem >= CLIENTOS_OTCLIENT_LINUX) {
+		if (otclientV8)
+			sendFeatures();
+		NetworkMessage opcodeMessage;
+		opcodeMessage.addByte(0x32);
+		opcodeMessage.addByte(0x00);
+		opcodeMessage.add<uint16_t>(0x00);
+		writeToOutputBuffer(opcodeMessage);
+	}
+
 	//dispatcher thread
 	Player* foundPlayer = g_game.getPlayerByName(name);
 	if (!foundPlayer || g_config.getBoolean(ConfigManager::ALLOW_CLONES)) {
@@ -145,6 +156,8 @@ void ProtocolGame::login(const std::string& name, uint32_t accountId, OperatingS
 			}
 		}
 
+		player->autoOpenContainers();
+
 		if (operatingSystem >= CLIENTOS_OTCLIENT_LINUX) {
 			player->registerCreatureEvent("ExtendedOpcode");
 		}
@@ -197,6 +210,7 @@ void ProtocolGame::connect(uint32_t playerId, OperatingSystem_t operatingSystem)
 
 	player->client = getThis();
 	sendAddCreature(player, player->getPosition(), 0, false);
+	player->autoOpenContainers();
 	player->lastIP = player->getIP();
 	player->lastLoginSaved = std::max<time_t>(time(nullptr), player->lastLoginSaved + 1);
 	acceptPackets = true;
@@ -263,19 +277,17 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 	enableXTEAEncryption();
 	setXTEAKey(key);
 
-	if (operatingSystem >= CLIENTOS_OTCLIENT_LINUX) {
-		NetworkMessage opcodeMessage;
-		opcodeMessage.addByte(0x32);
-		opcodeMessage.addByte(0x00);
-		opcodeMessage.add<uint16_t>(0x00);
-		writeToOutputBuffer(opcodeMessage);
-	}
-
 	msg.skipBytes(1); // gamemaster flag
 
 	uint32_t accountNumber = msg.get<uint32_t>();
 	std::string characterName = msg.getString();
 	std::string password = msg.getString();
+
+	// OTCv8 version detection
+	uint16_t otcV8StringLength = msg.get<uint16_t>();
+	if (otcV8StringLength == 5 && msg.getString(5) == "OTCv8") {
+		otclientV8 = msg.get<uint16_t>(); // 253, 260, 261, ...
+	}
 
 	/*if (version < CLIENT_VERSION_MIN || version > CLIENT_VERSION_MAX) {
 		//sendUpdateRequest();
@@ -338,8 +350,31 @@ void ProtocolGame::onRecvFirstMessage(NetworkMessage& msg)
 
 void ProtocolGame::onConnect()
 {
+	// Checksum missimplementation
+	/* auto output = OutputMessagePool::getOutputMessage();
+	static std::random_device rd;
+	static std::ranlux24 generator(rd());
+	static std::uniform_int_distribution<uint16_t> randNumber(0x00, 0xFF);
 
+	// Skip checksum
+	output->skipBytes(sizeof(uint32_t));
 
+	// Packet length & type
+	output->add<uint16_t>(0x0006);
+	output->addByte(0x1F);
+
+	// Add timestamp & random number
+	challengeTimestamp = static_cast<uint32_t>(time(nullptr));
+	output->add<uint32_t>(challengeTimestamp);
+
+	challengeRandom = randNumber(generator);
+	output->addByte(challengeRandom);
+
+	// Go back and write checksum
+	output->skipBytes(-12);
+	output->add<uint32_t>(adlerChecksum(output->getOutputBuffer() + sizeof(uint32_t), 8));
+
+	send(output); */
 }
 
 void ProtocolGame::disconnectClient(const std::string& message) const
@@ -390,6 +425,7 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0x1D: addGameTask(&Game::playerReceivePingBack, player->getID()); break;
 		case 0x1E: addGameTask(&Game::playerReceivePing, player->getID()); break;
 		case 0x32: parseExtendedOpcode(msg); break; //otclient extended opcode
+		case 0x40: parseNewPing(msg); break;
 		case 0x64: parseAutoWalk(msg); break;
 		case 0x65: addGameTask(&Game::playerMove, player->getID(), DIRECTION_NORTH); break;
 		case 0x66: addGameTask(&Game::playerMove, player->getID(), DIRECTION_EAST); break;
@@ -445,6 +481,7 @@ void ProtocolGame::parsePacket(NetworkMessage& msg)
 		case 0xCC: parseSeekInContainer(msg); break;
 		case 0xD2: addGameTask(&Game::playerRequestOutfit, player->getID()); break;
 		case 0xD3: parseSetOutfit(msg); break;
+		case 0xD4: parseToggleMount(msg); break;
 		case 0xDC: parseAddVip(msg); break;
 		case 0xDD: parseRemoveVip(msg); break;
 		case 0xE6: parseBugReport(msg); break;
@@ -735,7 +772,25 @@ void ProtocolGame::parseSetOutfit(NetworkMessage& msg)
 	newOutfit.lookLegs = msg.getByte();
 	newOutfit.lookFeet = msg.getByte();
 	newOutfit.lookAddons = msg.getByte();
+	newOutfit.lookMount = msg.get<uint16_t>();
+	newOutfit.lookWings = otclientV8 ? msg.get<uint16_t>() : 0;
+	newOutfit.lookAura = otclientV8 ? msg.get<uint16_t>() : 0;
+	std::string shaderName = otclientV8 ? msg.getString() : "";
+	Shader* shader = g_game.shaders.getShaderByName(shaderName);
+	newOutfit.lookShader = shader ? shader->id : 0;
 	addGameTask(&Game::playerChangeOutfit, player->getID(), newOutfit);
+}
+
+void ProtocolGame::parseToggleMount(NetworkMessage& msg)
+{
+	int mount = msg.get<int8_t>();
+	int wings = -1, aura = -1, shader = -1;
+	if (otclientV8 >= 254) {
+		wings = msg.get<int8_t>();
+		aura = msg.get<int8_t>();
+		shader = msg.get<int8_t>();
+	}
+	addGameTask(&Game::playerToggleOutfitExtension, player->getID(), mount, wings, aura, shader);
 }
 
 void ProtocolGame::parseUseItem(NetworkMessage& msg)
@@ -2127,9 +2182,13 @@ void ProtocolGame::sendOutfitWindow()
 	msg.addByte(0xC8);
 
 	Outfit_t currentOutfit = player->getDefaultOutfit();
+	Mount* currentMount = g_game.mounts.getMountByID(player->getCurrentMount());
+	if (currentMount) {
+		currentOutfit.lookMount = currentMount->clientId;
+	}
+
 	AddOutfit(msg, currentOutfit);
 
-	const ClientVersion_t clientVersion = g_game.getClientVersion();
 	std::vector<ProtocolOutfit> protocolOutfits;
 	if (player->isAccessPlayer()) {
 		static const std::string gamemasterOutfitName = "Gamemaster";
@@ -2145,20 +2204,70 @@ void ProtocolGame::sendOutfitWindow()
 		}
 
 		protocolOutfits.emplace_back(outfit.name, outfit.lookType, addons);
-		if (CLIENT_VERSION_780 <= clientVersion && clientVersion <= CLIENT_VERSION_792) {
-			if (protocolOutfits.size() == 20) { // Game client doesn't allow more than 15 outfits in 780-792
-				break;
-			}
+		if (protocolOutfits.size() == 100) { // Game client doesn't allow more than 100 outfits
+			break;
 		}
 	}
 
 	msg.addByte(protocolOutfits.size());
 	for (const ProtocolOutfit& outfit : protocolOutfits) {
 		msg.add<uint16_t>(outfit.lookType);
-		if (clientVersion > CLIENT_VERSION_781) {
-			msg.addString(outfit.name);
-		}
+		msg.addString(outfit.name);
 		msg.addByte(outfit.addons);
+	}
+
+	std::vector<const Mount*> mounts;
+	for (const Mount& mount : g_game.mounts.getMounts()) {
+		if (player->hasMount(&mount)) {
+			mounts.push_back(&mount);
+		}
+	}
+
+	msg.addByte(mounts.size());
+	for (const Mount* mount : mounts) {
+		msg.add<uint16_t>(mount->clientId);
+		msg.addString(mount->name);
+	}
+
+	if (otclientV8) {
+		std::vector<const Wing*> wings;
+		for (const Wing& wing : g_game.wings.getWings()) {
+			if (player->hasWing(&wing)) {
+				wings.push_back(&wing);
+			}
+		}
+
+		msg.addByte(wings.size());
+		for (const Wing* wing : wings) {
+			msg.add<uint16_t>(wing->clientId);
+			msg.addString(wing->name);
+		}
+
+		std::vector<const Aura*> auras;
+		for (const Aura& aura : g_game.auras.getAuras()) {
+			if (player->hasAura(&aura)) {
+				auras.push_back(&aura);
+			}
+		}
+
+		msg.addByte(auras.size());
+		for (const Aura* aura : auras) {
+			msg.add<uint16_t>(aura->clientId);
+			msg.addString(aura->name);
+		}
+
+		std::vector<const Shader*> shaders;
+		for (const Shader& shader : g_game.shaders.getShaders()) {
+			if (player->hasShader(&shader)) {
+				shaders.push_back(&shader);
+			}
+		}
+
+		msg.addByte(shaders.size());
+		for (const Shader* shader : shaders) {
+			msg.add<uint16_t>(shader->id);
+			msg.addString(shader->name);
+		}
 	}
 
 	writeToOutputBuffer(msg);
@@ -2284,8 +2393,17 @@ void ProtocolGame::AddOutfit(NetworkMessage& msg, const Outfit_t& outfit)
 		msg.addByte(outfit.lookLegs);
 		msg.addByte(outfit.lookFeet);
 		msg.addByte(outfit.lookAddons);
-	} else {
+	}
+	else {
 		msg.addItemId(outfit.lookTypeEx);
+	}
+
+	msg.add<uint16_t>(outfit.lookMount);
+	if (otclientV8) {
+		msg.add<uint16_t>(outfit.lookWings);
+		msg.add<uint16_t>(outfit.lookAura);
+		Shader* shader = g_game.shaders.getShaderByID(outfit.lookShader);
+		msg.addString(shader ? shader->name : "");
 	}
 }
 
@@ -2413,4 +2531,76 @@ void ProtocolGame::parseExtendedOpcode(NetworkMessage& msg)
 
 	// process additional opcodes via lua script event
 	addGameTask(&Game::parsePlayerExtendedOpcode, player->getID(), opcode, buffer);
+}
+
+// OTCv8
+void ProtocolGame::sendFeatures()
+{
+	if (!otclientV8)
+		return;
+
+	std::map<GameFeature, bool> features;
+	// place for non-standard OTCv8 features
+	//features[GameExtendedOpcode] = true;
+	//features[GameChangeMapAwareRange] = true;
+	//features[GameNewWalking] = true;
+	//features[GameEnvironmentEffect] = false; // disable it, useless 2 byte with every tile
+	//features[GameExtendedClientPing] = true;
+	//features[GameItemTooltip] = true; // fully available from version 2.6
+	//features[GameWingsAndAura] = true;
+	//features[GameOutfitShaders] = true;
+
+	// packet compression
+	// we don't send feature, because feature assumes all packets are compressed
+	// if adler32 is enabled then compression can be detected automaticly, just adlre32 must be 0
+	if (g_config.getBoolean(ConfigManager::PACKET_COMPRESSION)) {
+		enableCompression();
+	}
+
+	if (features.empty())
+		return;
+
+	auto msg = getOutputBuffer(1024);
+	msg->addByte(0x43);
+	msg->add<uint16_t>(features.size());
+	for (auto& feature : features) {
+		msg->addByte((uint8_t)feature.first);
+		msg->addByte(feature.second ? 1 : 0);
+	}
+
+	send(std::move(getCurrentBuffer())); // send this packet immediately
+}
+
+void ProtocolGame::parseNewPing(NetworkMessage& msg)
+{
+	uint32_t pingId = msg.get<uint32_t>();
+	uint16_t localPing = msg.get<uint16_t>();
+	uint16_t fps = msg.get<uint16_t>();
+
+	addGameTask(&Game::playerReceiveNewPing, player->getID(), localPing, fps);
+	g_dispatcher.addTask(createTask(std::bind(&ProtocolGame::sendNewPing, getThis(), pingId)));
+}
+
+void ProtocolGame::sendNewPing(uint32_t pingId)
+{
+	if (!otclientV8)
+		return;
+
+	NetworkMessage msg;
+	msg.addByte(0x40);
+	msg.add<uint32_t>(pingId);
+	writeToOutputBuffer(msg);
+}
+
+void ProtocolGame::sendProgressbar(uint32_t id, uint32_t duration, bool ltr)
+{
+	if (!otclientV8 || otclientV8 < 260)
+		return;
+
+	NetworkMessage msg;
+	msg.addByte(0x3b);
+	msg.add<uint32_t>(id);
+	msg.add<uint32_t>(duration);
+	msg.addByte(ltr);
+	writeToOutputBuffer(msg);
 }

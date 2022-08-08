@@ -52,7 +52,8 @@ class ProtocolGame final : public Protocol
 		// static protocol information
 		enum { server_sends_first = true };
 		enum { protocol_identifier = 0 }; // Not required as we send first
-		
+		enum { use_checksum = true };
+
 		static const char* protocol_name() {
 			return "gameworld protocol";
 		}
@@ -90,6 +91,7 @@ class ProtocolGame final : public Protocol
 		//Parse methods
 		void parseAutoWalk(NetworkMessage& msg);
 		void parseSetOutfit(NetworkMessage& msg);
+		void parseToggleMount(NetworkMessage& msg);
 		void parseSay(NetworkMessage& msg);
 		void parseLookAt(NetworkMessage& msg);
 		void parseLookInBattleList(NetworkMessage& msg);
@@ -265,6 +267,12 @@ class ProtocolGame final : public Protocol
 		//otclient
 		void parseExtendedOpcode(NetworkMessage& msg);
 
+		//OTCv8
+		void sendFeatures();
+		void sendProgressbar(uint32_t id, uint32_t duration, bool ltr = true);
+		void parseNewPing(NetworkMessage& msg);
+		void sendNewPing(uint32_t pingId);
+
 		friend class Player;
 
 		// Helpers so we don't need to bind every time
@@ -289,6 +297,7 @@ class ProtocolGame final : public Protocol
 
 		bool debugAssertSent = false;
 		bool acceptPackets = false;
+		uint16_t otclientV8 = 0;
 };
 
 #endif

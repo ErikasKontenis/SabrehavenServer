@@ -20,7 +20,7 @@
 #ifndef FS_CONST_H_0A49B5996F074465BF44B90F4F780E8B
 #define FS_CONST_H_0A49B5996F074465BF44B90F4F780E8B
 
-static constexpr int32_t NETWORKMESSAGE_MAXSIZE = 24590;
+static constexpr int32_t NETWORKMESSAGE_MAXSIZE = 65500;
 static constexpr int32_t MIN_MARKET_FEE = 20;
 static constexpr int32_t MAX_MARKET_FEE = 100000;
 
@@ -378,6 +378,7 @@ enum PlayerFlags : uint64_t {
 enum ReloadTypes_t : uint8_t {
 	RELOAD_TYPE_ALL,
 	RELOAD_TYPE_ACTIONS,
+	RELOAD_TYPE_AURAS,
 	RELOAD_TYPE_CHAT,
 	RELOAD_TYPE_COMMANDS,
 	RELOAD_TYPE_CONFIG,
@@ -393,8 +394,129 @@ enum ReloadTypes_t : uint8_t {
 	RELOAD_TYPE_QUESTS,
 	RELOAD_TYPE_RAIDS,
 	RELOAD_TYPE_SPELLS,
+	RELOAD_TYPE_SHADERS,
 	RELOAD_TYPE_TALKACTIONS,
 	RELOAD_TYPE_WEAPONS,
+	RELOAD_TYPE_WINGS,
+};
+
+// OTCv8 features (from src/client/const.h)
+enum GameFeature {
+	GameProtocolChecksum = 1,
+	GameAccountNames = 2,
+	GameChallengeOnLogin = 3,
+	GamePenalityOnDeath = 4,
+	GameNameOnNpcTrade = 5,
+	GameDoubleFreeCapacity = 6,
+	GameDoubleExperience = 7,
+	GameTotalCapacity = 8,
+	GameSkillsBase = 9,
+	GamePlayerRegenerationTime = 10,
+	GameChannelPlayerList = 11,
+	GamePlayerMounts = 12,
+	GameEnvironmentEffect = 13,
+	GameCreatureEmblems = 14,
+	GameItemAnimationPhase = 15,
+	GameMagicEffectU16 = 16,
+	GamePlayerMarket = 17,
+	GameSpritesU32 = 18,
+	GameTileAddThingWithStackpos = 19,
+	GameOfflineTrainingTime = 20,
+	GamePurseSlot = 21,
+	GameFormatCreatureName = 22,
+	GameSpellList = 23,
+	GameClientPing = 24,
+	GameExtendedClientPing = 25,
+	GameDoubleHealth = 28,
+	GameDoubleSkills = 29,
+	GameChangeMapAwareRange = 30,
+	GameMapMovePosition = 31,
+	GameAttackSeq = 32,
+	GameBlueNpcNameColor = 33,
+	GameDiagonalAnimatedText = 34,
+	GameLoginPending = 35,
+	GameNewSpeedLaw = 36,
+	GameForceFirstAutoWalkStep = 37,
+	GameMinimapRemove = 38,
+	GameDoubleShopSellAmount = 39,
+	GameContainerPagination = 40,
+	GameThingMarks = 41,
+	GameLooktypeU16 = 42,
+	GamePlayerStamina = 43,
+	GamePlayerAddons = 44,
+	GameMessageStatements = 45,
+	GameMessageLevel = 46,
+	GameNewFluids = 47,
+	GamePlayerStateU16 = 48,
+	GameNewOutfitProtocol = 49,
+	GamePVPMode = 50,
+	GameWritableDate = 51,
+	GameAdditionalVipInfo = 52,
+	GameBaseSkillU16 = 53,
+	GameCreatureIcons = 54,
+	GameHideNpcNames = 55,
+	GameSpritesAlphaChannel = 56,
+	GamePremiumExpiration = 57,
+	GameBrowseField = 58,
+	GameEnhancedAnimations = 59,
+	GameOGLInformation = 60,
+	GameMessageSizeCheck = 61,
+	GamePreviewState = 62,
+	GameLoginPacketEncryption = 63,
+	GameClientVersion = 64,
+	GameContentRevision = 65,
+	GameExperienceBonus = 66,
+	GameAuthenticator = 67,
+	GameUnjustifiedPoints = 68,
+	GameSessionKey = 69,
+	GameDeathType = 70,
+	GameIdleAnimations = 71,
+	GameKeepUnawareTiles = 72,
+	GameIngameStore = 73,
+	GameIngameStoreHighlights = 74,
+	GameIngameStoreServiceType = 75,
+	GameAdditionalSkills = 76,
+	GameDistanceEffectU16 = 77,
+	GamePrey = 78,
+	GameDoubleMagicLevel = 79,
+
+	GameExtendedOpcode = 80,
+	GameMinimapLimitedToSingleFloor = 81,
+	GameSendWorldName = 82,
+
+	GameDoubleLevel = 83,
+	GameDoubleSoul = 84,
+	GameDoublePlayerGoodsMoney = 85,
+	GameCreatureWalkthrough = 86,
+	GameDoubleTradeMoney = 87,
+	GameSequencedPackets = 88,
+	GameTibia12Protocol = 89,
+
+	// 90-99 otclientv8 features
+	GameNewWalking = 90,
+	GameSlowerManualWalking = 91,
+
+	GameItemTooltip = 93,
+
+	GameBot = 95,
+	GameBiggerMapCache = 96,
+	GameForceLight = 97,
+	GameNoDebug = 98,
+	GameBotProtection = 99,
+
+	// Custom features for customer
+	GameFasterAnimations = 101,
+	GameCenteredOutfits = 102,
+	GameSendIdentifiers = 103,
+	GameWingsAndAura = 104,
+	GamePlayerStateU32 = 105,
+	GameOutfitShaders = 106,
+
+	// advanced features
+	GamePacketSizeU32 = 110,
+	GamePacketCompression = 111,
+
+	LastGameFeature = 120
 };
 
 enum ClientVersion_t : uint16_t {
@@ -417,6 +539,22 @@ static constexpr int32_t PSTRG_RESERVED_RANGE_SIZE = 10000000;
 //[1000 - 1500];
 static constexpr int32_t PSTRG_OUTFITS_RANGE_START = (PSTRG_RESERVED_RANGE_START + 1000);
 static constexpr int32_t PSTRG_OUTFITS_RANGE_SIZE = 500;
+//[2001 - 2011];
+static constexpr int32_t PSTRG_MOUNTS_RANGE_START = (PSTRG_RESERVED_RANGE_START + 2001);
+static constexpr int32_t PSTRG_MOUNTS_RANGE_SIZE = 10;
+static constexpr int32_t PSTRG_MOUNTS_CURRENTMOUNT = (PSTRG_MOUNTS_RANGE_START + 10);
+//[2012 - 2022];
+static constexpr int32_t PSTRG_WINGS_RANGE_START = (PSTRG_RESERVED_RANGE_START + 2012);
+static constexpr int32_t PSTRG_WINGS_RANGE_SIZE = 10;
+static constexpr int32_t PSTRG_WINGS_CURRENTWINGS = (PSTRG_WINGS_RANGE_START + 10);
+//[2023 - 2033];
+static constexpr int32_t PSTRG_AURAS_RANGE_START = (PSTRG_RESERVED_RANGE_START + 2023);
+static constexpr int32_t PSTRG_AURAS_RANGE_SIZE = 10;
+static constexpr int32_t PSTRG_AURAS_CURRENTAURA = (PSTRG_AURAS_RANGE_START + 10);
+//[2034 - 2044];
+static constexpr int32_t PSTRG_SHADERS_RANGE_START = (PSTRG_RESERVED_RANGE_START + 2034);
+static constexpr int32_t PSTRG_SHADERS_RANGE_SIZE = 10;
+static constexpr int32_t PSTRG_SHADERS_CURRENTSHADER = (PSTRG_SHADERS_RANGE_START + 10);
 
 #define IS_IN_KEYRANGE(key, range) (key >= PSTRG_##range##_START && ((key - PSTRG_##range##_START) <= PSTRG_##range##_SIZE))
 

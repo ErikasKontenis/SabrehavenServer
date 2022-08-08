@@ -33,6 +33,10 @@
 #include "guild.h"
 #include "groups.h"
 #include "town.h"
+#include "mounts.h"
+#include "auras.h"
+#include "wings.h"
+#include "shaders.h"
 
 class BehaviourDatabase;
 class House;
@@ -130,6 +134,42 @@ class Player final : public Creature, public Cylinder
 			return name;
 		}
 		std::string getDescription(int32_t lookDistance) const final;
+
+		uint8_t getCurrentMount() const;
+		void setCurrentMount(uint8_t mountId);
+		bool isMounted() const
+		{
+			return defaultOutfit.lookMount != 0;
+		}
+		bool hasMount() const
+		{
+			return defaultOutfit.lookMount != 0;
+		}
+		bool hasAura() const
+		{
+			return defaultOutfit.lookAura != 0;
+		}
+		bool hasWings() const
+		{
+			return defaultOutfit.lookWings != 0;
+		}
+		bool hasShader() const
+		{
+			return defaultOutfit.lookShader != 0;
+		}
+		bool toggleMount(bool mount);
+		bool tameMount(uint8_t mountId);
+		bool untameMount(uint8_t mountId);
+		bool hasMount(const Mount* mount) const;
+		void dismount();
+
+		bool hasWing(const Wing* wing) const;
+		uint8_t getCurrentAura() const;
+		void setCurrentAura(uint8_t auraId);
+		bool hasAura(const Aura* aura) const;
+		uint8_t getCurrentWing() const;
+		void setCurrentWing(uint8_t wingId);
+		bool hasShader(const Shader* shader) const;
 
 		void setGUID(uint32_t guid) {
 			this->guid = guid;
@@ -761,6 +801,7 @@ class Player final : public Creature, public Cylinder
 				client->sendInventoryItem(slot, item);
 			}
 		}
+		void autoOpenContainers();
 
 		//event methods
 		void onUpdateTileItem(const Tile* tile, const Position& pos, const Item* oldItem,
@@ -997,8 +1038,37 @@ class Player final : public Creature, public Cylinder
 			}
 		}
 
+		void sendProgressbar(uint32_t id, uint32_t duration, bool ltr = true) {
+			if (client) {
+				client->sendProgressbar(id, duration, ltr);
+			}
+		}
+
 		void receivePing() {
 			lastPong = OTSYS_TIME();
+		}
+
+		void setFPS(uint16_t value)
+		{
+			fps = value;
+		}
+		void setLocalPing(uint16_t value)
+		{
+			localPing = value;
+		}
+		uint16_t getFPS() const
+		{
+			return fps;
+		}
+		uint16_t getLocalPing() const
+		{
+			return localPing;
+		}
+		uint16_t getOTCv8Version() const
+		{
+			if (client)
+				return client->otclientV8;
+			return 0;
 		}
 
 		void onThink(uint32_t interval) final;
@@ -1025,6 +1095,10 @@ class Player final : public Creature, public Cylinder
 		void learnInstantSpell(const std::string& spellName);
 		void forgetInstantSpell(const std::string& spellName);
 		bool hasLearnedInstantSpell(const std::string& spellName) const;
+		const std::map<uint8_t, OpenContainer>& getOpenContainers() const
+		{
+			return openContainers;
+		}
 
 	protected:
 		std::forward_list<Condition*> getMuteConditions() const;
@@ -1115,6 +1189,7 @@ class Player final : public Creature, public Cylinder
 		int64_t lastPong;
 		int64_t nextAction = 0;
 		int64_t earliestAttackTime = 0;
+		int64_t lastToggleMount = 0;
 		
 		BedItem* bedItem = nullptr;
 		Guild* guild = nullptr;
@@ -1162,6 +1237,8 @@ class Player final : public Creature, public Cylinder
 
 		uint16_t staminaMinutes = 3360;
 		uint16_t maxWriteLen = 0;
+		uint16_t localPing = 0;
+		uint16_t fps = 0;
 		int16_t lastDepotId = -1;
 
 		uint8_t soul = 0;
@@ -1179,6 +1256,7 @@ class Player final : public Creature, public Cylinder
 
 		bool secureMode = false;
 		bool inMarket = false;
+		bool wasMounted = false;
 		bool ghostMode = false;
 		bool pzLocked = false;
 		bool isConnecting = false;

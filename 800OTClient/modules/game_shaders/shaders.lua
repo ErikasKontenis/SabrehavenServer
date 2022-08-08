@@ -12,8 +12,8 @@ function init()
   -- outfit shaders
   g_shaders.createOutfitShader("outfit_default", "/shaders/outfit_default_vertex", "/shaders/outfit_default_fragment")
 
-  g_shaders.createOutfitShader("outfit_rainbow", "/shaders/outfit_rainbow_vertex", "/shaders/outfit_rainbow_fragment")
-  g_shaders.addTexture("outfit_rainbow", "/images/shaders/rainbow.png")
+  g_shaders.createOutfitShader("Rainbow Outfit", "/shaders/outfit_rainbow_vertex", "/shaders/outfit_rainbow_fragment")
+  g_shaders.addTexture("Rainbow Outfit", "/images/shaders/rainbow.png")
 
   -- you can use creature:setOutfitShader("outfit_rainbow") to set shader
 

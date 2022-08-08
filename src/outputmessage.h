@@ -43,7 +43,14 @@ public:
 		add_header(info.length);
 	}
 
-	void addCryptoHeader() {
+	void addCryptoHeader(bool addChecksum, bool compression = false) {
+		if (compression) {
+			add_header<uint32_t>(0);
+		}
+		else if (addChecksum) {
+			//add_header(adlerChecksum(buffer + outputBufferStart, info.length));
+		}
+
 		writeMessageLength();
 	}
 

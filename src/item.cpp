@@ -551,6 +551,17 @@ Attr_ReadValue Item::readAttr(AttrTypes_t attr, PropStream& propStream)
 		break;
 	}
 
+	case ATTR_AUTOOPEN:
+	{
+		int8_t autoOpen;
+		if (!propStream.read<int8_t>(autoOpen)) {
+			return ATTR_READ_ERROR;
+		}
+
+		setIntAttr(ITEM_ATTRIBUTE_AUTOOPEN, autoOpen);
+		break;
+	}
+
 	case ATTR_KEYNUMBER: {
 		uint16_t keyNumber;
 		if (!propStream.read<uint16_t>(keyNumber)) {
@@ -786,6 +797,11 @@ void Item::serializeAttr(PropWriteStream& propWriteStream) const
 	if (hasAttribute(ITEM_ATTRIBUTE_SHOOTRANGE)) {
 		propWriteStream.write<uint8_t>(ATTR_SHOOTRANGE);
 		propWriteStream.write<uint8_t>(getIntAttr(ITEM_ATTRIBUTE_SHOOTRANGE));
+	}
+
+	if (hasAttribute(ITEM_ATTRIBUTE_AUTOOPEN)) {
+		propWriteStream.write<uint8_t>(ATTR_AUTOOPEN);
+		propWriteStream.write<int8_t>(getIntAttr(ITEM_ATTRIBUTE_AUTOOPEN));
 	}
 
 	if (hasAttribute(ITEM_ATTRIBUTE_KEYNUMBER)) {

@@ -56,6 +56,7 @@ enum itemAttrTypes : uint32_t {
 	ITEM_ATTRIBUTE_DOORQUESTVALUE = 1 << 24,
 	ITEM_ATTRIBUTE_DOORLEVEL = 1 << 25,
 	ITEM_ATTRIBUTE_CHESTQUESTNUMBER = 1 << 26,
+	ITEM_ATTRIBUTE_AUTOOPEN = 1 << 27,
 };
 
 enum VipStatus_t : uint8_t {
@@ -93,6 +94,16 @@ enum OperatingSystem_t : uint8_t {
 	CLIENTOS_OTCLIENT_LINUX = 10,
 	CLIENTOS_OTCLIENT_WINDOWS = 11,
 	CLIENTOS_OTCLIENT_MAC = 12,
+
+	// by default OTCv8 uses CLIENTOS_WINDOWS for backward compatibility
+	// for correct value enable g_game.enableFeature(GameExtendedOpcode)
+	// in modules/game_features/features.lua
+	CLIENTOS_OTCLIENTV8_LINUX = 20,
+	CLIENTOS_OTCLIENTV8_WINDOWS = 21,
+	CLIENTOS_OTCLIENTV8_MAC = 22,
+	CLIENTOS_OTCLIENTV8_ANDROID = 23,
+	CLIENTOS_OTCLIENTV8_IOS = 24,
+	CLIENTOS_OTCLIENTV8_WEB = 25
 };
 
 enum AccountType_t : uint8_t {
@@ -379,6 +390,10 @@ enum ReturnValue {
 struct Outfit_t {
 	uint16_t lookType = 0;
 	uint16_t lookTypeEx = 0;
+	uint16_t lookMount = 0;
+	uint16_t lookWings = 0;
+	uint16_t lookAura = 0;
+	uint16_t lookShader = 0;
 	uint8_t lookHead = 0;
 	uint8_t lookBody = 0;
 	uint8_t lookLegs = 0;

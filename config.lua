@@ -51,7 +51,8 @@ allowClones = false
 serverName = "Tibianus"
 statusTimeout = 5000
 replaceKickOnLogin = true
-maxPacketsPerSecond = -1
+maxPacketsPerSecond = 50
+packetCompression = true
 autoStackCumulatives = true
 moneyRate = 1
 

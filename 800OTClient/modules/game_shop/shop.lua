@@ -21,9 +21,9 @@ local AD = {}
 local selectedOffer = {}
 
 local function sendAction(action, data)
-  if not g_game.getFeature(GameExtendedOpcode) then
-    return
-  end
+  --if not g_game.getFeature(GameExtendedOpcode) then
+  --  return
+  --end
   
   local protocolGame = g_game.getProtocolGame()
   if data == nil then

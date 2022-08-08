@@ -25,7 +25,17 @@ local reloadTypes = {
 
 	["monster"] = { targetType = RELOAD_TYPE_MONSTERS, name = "monsters" },
 	["monsters"] = { targetType = RELOAD_TYPE_MONSTERS, name = "monsters" },
+	["mount"] = RELOAD_TYPE_MOUNTS,
+	
+	["aura"] = RELOAD_TYPE_AURAS,
+	["auras"] = RELOAD_TYPE_AURAS,
 
+	["wing"] = RELOAD_TYPE_WINGS,
+	["wings"] = RELOAD_TYPE_WINGS,
+
+	["shader"] = RELOAD_TYPE_SHADERS,
+	["shaders"] = RELOAD_TYPE_SHADERS,
+	
 	["move"] = { targetType = RELOAD_TYPE_MOVEMENTS, name = "movements" },
 	["movement"] = { targetType = RELOAD_TYPE_MOVEMENTS, name = "movements" },
 	["movements"] = { targetType = RELOAD_TYPE_MOVEMENTS, name = "movements" },

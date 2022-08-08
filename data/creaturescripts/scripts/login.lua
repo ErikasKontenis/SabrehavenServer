@@ -324,6 +324,7 @@ function onLogin(player)
 	player:registerEvent("InquisitionUngreez")
 	player:registerEvent("InquisitionBosses")
 	player:registerEvent("SvargrondArenaKill")
-	
+	player:registerEvent("Shop")
+
 	return true
 end

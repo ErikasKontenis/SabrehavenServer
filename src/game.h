@@ -32,6 +32,7 @@
 #include "npc.h"
 #include "wildcardtree.h"
 #include "quests.h"
+#include "shaders.h"
 
 class ServiceManager;
 class Creature;
@@ -360,6 +361,7 @@ class Game
 		void playerOpenPrivateChannel(uint32_t playerId, std::string& receiver);
 		void playerReceivePing(uint32_t playerId);
 		void playerReceivePingBack(uint32_t playerId);
+		void playerReceiveNewPing(uint32_t playerId, uint16_t ping, uint16_t fps);
 		void playerAutoWalk(uint32_t playerId, const std::forward_list<Direction>& listDir);
 		void playerStopAutoWalk(uint32_t playerId);
 		void playerUseItemEx(uint32_t playerId, const Position& fromPos, uint8_t fromStackPos,
@@ -399,6 +401,7 @@ class Game
 		void playerPassPartyLeadership(uint32_t playerId, uint32_t newLeaderId);
 		void playerLeaveParty(uint32_t playerId);
 		void playerEnableSharedPartyExperience(uint32_t playerId, bool sharedExpActive);
+		void playerToggleOutfitExtension(uint32_t playerId, int mount, int wings, int aura, int shader);
 		void playerProcessRuleViolationReport(uint32_t playerId, const std::string& name);
 		void playerCloseRuleViolationReport(uint32_t playerId, const std::string& name);
 		void playerCancelRuleViolationReport(uint32_t playerId);
@@ -503,10 +506,16 @@ class Game
 		void setBedSleeper(BedItem* bed, uint32_t guid);
 		void removeBedSleeper(uint32_t guid);
 		bool reload(ReloadTypes_t reloadType);
+		void startProgressbar(Creature* creature, uint32_t duration, bool ltr = true);
+		
+		Auras auras;
 		Groups groups;
 		Map map;
+		Mounts mounts;
 		Raids raids;
 		Quests quests;
+		Wings wings;
+		Shaders shaders;
 
 	protected:
 		bool playerSaySpell(Player* player, SpeakClasses type, const std::string& text);

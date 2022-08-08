@@ -103,6 +103,7 @@ enum AttrTypes_t {
 	ATTR_DEFENSE = 35,
 	ATTR_ARMOR = 36,
 	ATTR_SHOOTRANGE = 37,
+	ATTR_AUTOOPEN = 38
 };
 
 enum Attr_ReadValue {
@@ -816,6 +817,22 @@ class Item : virtual public Thing
 		const Tile* getTile() const;
 		bool isRemoved() const {
 			return !parent || parent->isRemoved();
+		}
+
+		int8_t getAutoOpen()
+		{
+			if (hasAttribute(ITEM_ATTRIBUTE_AUTOOPEN)) {
+				return getIntAttr(ITEM_ATTRIBUTE_AUTOOPEN);
+			}
+			return -1;
+		}
+		void setAutoOpen(int8_t value)
+		{
+			setIntAttr(ITEM_ATTRIBUTE_AUTOOPEN, value);
+		}
+		void resetAutoOpen()
+		{
+			removeAttribute(ITEM_ATTRIBUTE_AUTOOPEN);
 		}
 
 	protected:

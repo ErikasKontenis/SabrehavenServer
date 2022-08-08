@@ -528,6 +528,9 @@ void Player::addStorageValue(const uint32_t key, const int32_t value, const bool
 			);
 			return;
 		}
+		else if (IS_IN_KEYRANGE(key, MOUNTS_RANGE) || IS_IN_KEYRANGE(key, WINGS_RANGE) || IS_IN_KEYRANGE(key, AURAS_RANGE)) {
+			// do nothing
+		}
 		else {
 			std::cout << "Warning: unknown reserved key: " << key << " player: " << getName() << std::endl;
 			return;
@@ -679,6 +682,31 @@ void Player::sendPing()
 				client->logout(true, true);
 			} else {
 				g_game.removeCreature(this, true);
+			}
+		}
+	}
+}
+
+void Player::autoOpenContainers()
+{
+	for (int32_t i = CONST_SLOT_FIRST; i <= CONST_SLOT_LAST; i++) {
+		Item* item = inventory[i];
+		if (!item) {
+			continue;
+		}
+
+		if (Container* container = item->getContainer()) {
+			if (container->getAutoOpen() >= 0) {
+				addContainer(container->getAutoOpen(), container);
+				onSendContainer(container);
+			}
+			for (ContainerIterator it = container->iterator(); it.hasNext(); it.advance()) {
+				if (Container* subContainer = (*it)->getContainer()) {
+					if (subContainer->getAutoOpen() >= 0) {
+						addContainer(subContainer->getAutoOpen(), subContainer);
+						onSendContainer(subContainer);
+					}
+				}
 			}
 		}
 	}
@@ -3034,6 +3062,11 @@ void Player::updateItemsLight(bool internal /*=false*/)
 void Player::onAddCondition(ConditionType_t type)
 {
 	Creature::onAddCondition(type);
+
+	if (type == CONDITION_OUTFIT) {
+		dismount();
+	}
+
 	sendIcons();
 }
 
@@ -3823,6 +3856,256 @@ void Player::sendClosePrivate(uint16_t channelId)
 	if (client) {
 		client->sendClosePrivate(channelId);
 	}
+}
+
+uint8_t Player::getCurrentMount() const
+{
+	int32_t value;
+	if (getStorageValue(PSTRG_MOUNTS_CURRENTMOUNT, value)) {
+		return value;
+	}
+	return 0;
+}
+
+void Player::setCurrentMount(uint8_t mountId)
+{
+	addStorageValue(PSTRG_MOUNTS_CURRENTMOUNT, mountId);
+}
+
+bool Player::toggleMount(bool mount)
+{
+	if ((OTSYS_TIME() - lastToggleMount) < 3000 && !wasMounted) {
+		sendCancelMessage(RETURNVALUE_YOUAREEXHAUSTED);
+		return false;
+	}
+
+	if (mount) {
+		if (isMounted()) {
+			return false;
+		}
+
+		if (!group->access && tile->hasFlag(TILESTATE_PROTECTIONZONE)) {
+			sendCancelMessage(RETURNVALUE_ACTIONNOTPERMITTEDINPROTECTIONZONE);
+			return false;
+		}
+
+		const Outfit* playerOutfit = Outfits::getInstance().getOutfitByLookType(getSex(), defaultOutfit.lookType);
+		if (!playerOutfit) {
+			return false;
+		}
+
+		uint8_t currentMountId = getCurrentMount();
+		if (currentMountId == 0) {
+			sendOutfitWindow();
+			return false;
+		}
+
+		Mount* currentMount = g_game.mounts.getMountByID(currentMountId);
+		if (!currentMount) {
+			return false;
+		}
+
+		if (!hasMount(currentMount)) {
+			setCurrentMount(0);
+			sendOutfitWindow();
+			return false;
+		}
+
+		if (currentMount->premium && !isPremium()) {
+			sendCancelMessage(RETURNVALUE_YOUNEEDPREMIUMACCOUNT);
+			return false;
+		}
+
+		if (hasCondition(CONDITION_OUTFIT)) {
+			sendCancelMessage(RETURNVALUE_NOTPOSSIBLE);
+			return false;
+		}
+
+		defaultOutfit.lookMount = currentMount->clientId;
+
+		if (currentMount->speed != 0) {
+			g_game.changeSpeed(this, currentMount->speed);
+		}
+	}
+	else {
+		if (!isMounted()) {
+			return false;
+		}
+
+		dismount();
+	}
+
+	g_game.internalCreatureChangeOutfit(this, defaultOutfit);
+	lastToggleMount = OTSYS_TIME();
+	return true;
+}
+
+bool Player::tameMount(uint8_t mountId)
+{
+	if (!g_game.mounts.getMountByID(mountId)) {
+		return false;
+	}
+
+	const uint8_t tmpMountId = mountId - 1;
+	const uint32_t key = PSTRG_MOUNTS_RANGE_START + (tmpMountId / 31);
+
+	int32_t value;
+	if (getStorageValue(key, value)) {
+		value |= (1 << (tmpMountId % 31));
+	}
+	else {
+		value = (1 << (tmpMountId % 31));
+	}
+
+	addStorageValue(key, value);
+	return true;
+}
+
+bool Player::untameMount(uint8_t mountId)
+{
+	if (!g_game.mounts.getMountByID(mountId)) {
+		return false;
+	}
+
+	const uint8_t tmpMountId = mountId - 1;
+	const uint32_t key = PSTRG_MOUNTS_RANGE_START + (tmpMountId / 31);
+
+	int32_t value;
+	if (!getStorageValue(key, value)) {
+		return true;
+	}
+
+	value &= ~(1 << (tmpMountId % 31));
+	addStorageValue(key, value);
+
+	if (getCurrentMount() == mountId) {
+		if (isMounted()) {
+			dismount();
+			g_game.internalCreatureChangeOutfit(this, defaultOutfit);
+		}
+
+		setCurrentMount(0);
+	}
+
+	return true;
+}
+
+bool Player::hasMount(const Mount* mount) const
+{
+	if (isAccessPlayer()) {
+		return true;
+	}
+
+	if (mount->premium && !isPremium()) {
+		return false;
+	}
+
+	const uint8_t tmpMountId = mount->id - 1;
+
+	int32_t value;
+	if (!getStorageValue(PSTRG_MOUNTS_RANGE_START + (tmpMountId / 31), value)) {
+		return false;
+	}
+
+	return ((1 << (tmpMountId % 31)) & value) != 0;
+}
+
+void Player::dismount()
+{
+	Mount* mount = g_game.mounts.getMountByID(getCurrentMount());
+	if (mount && mount->speed > 0) {
+		g_game.changeSpeed(this, -mount->speed);
+	}
+
+	defaultOutfit.lookMount = 0;
+}
+
+bool Player::hasWing(const Wing* wing) const
+{
+	if (isAccessPlayer()) {
+		return true;
+	}
+
+	if (wing->premium && !isPremium()) {
+		return false;
+	}
+
+	const uint8_t tmpWingId = wing->id - 1;
+
+	int32_t value;
+	if (!getStorageValue(PSTRG_WINGS_RANGE_START + (tmpWingId / 31), value)) {
+		return false;
+	}
+
+	return ((1 << (tmpWingId % 31)) & value) != 0;
+}
+
+uint8_t Player::getCurrentWing() const
+{
+	int32_t value;
+	if (getStorageValue(PSTRG_WINGS_CURRENTWINGS, value)) {
+		return value;
+	}
+	return 0;
+}
+
+void Player::setCurrentWing(uint8_t wingId)
+{
+	addStorageValue(PSTRG_WINGS_CURRENTWINGS, wingId);
+}
+
+bool Player::hasAura(const Aura* aura) const
+{
+	if (isAccessPlayer()) {
+		return true;
+	}
+
+	if (aura->premium && !isPremium()) {
+		return false;
+	}
+
+	const uint8_t tmpAuraId = aura->id - 1;
+
+	int32_t value;
+	if (!getStorageValue(PSTRG_AURAS_RANGE_START + (tmpAuraId / 31), value)) {
+		return false;
+	}
+
+	return ((1 << (tmpAuraId % 31)) & value) != 0;
+}
+
+uint8_t Player::getCurrentAura() const
+{
+	int32_t value;
+	if (getStorageValue(PSTRG_AURAS_CURRENTAURA, value)) {
+		return value;
+	}
+	return 0;
+}
+
+void Player::setCurrentAura(uint8_t auraId)
+{
+	addStorageValue(PSTRG_AURAS_CURRENTAURA, auraId);
+}
+
+bool Player::hasShader(const Shader* shader) const
+{
+	if (isAccessPlayer()) {
+		return true;
+	}
+
+	if (shader->premium && !isPremium()) {
+		return false;
+	}
+
+	const uint8_t tmpShaderId = shader->id - 1;
+
+	int32_t value;
+	if (!getStorageValue(PSTRG_SHADERS_RANGE_START + (tmpShaderId / 31), value)) {
+		return false;
+	}
+
+	return ((1 << (tmpShaderId % 31)) & value) != 0;
 }
 
 bool Player::addOfflineTrainingTries(skills_t skill, uint64_t tries)

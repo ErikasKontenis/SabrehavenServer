@@ -13,30 +13,28 @@ function updateFeatures(version)
     end
     
     -- you can add custom features here, list of them is in the modules\gamelib\const.lua
+    g_game.enableFeature(GameLooktypeU16)
+    g_game.enableFeature(GameMessageStatements)
+    g_game.enableFeature(GameLoginPacketEncryption)
+    g_game.enableFeature(GamePlayerAddons)
+    g_game.enableFeature(GamePlayerStamina)
+    g_game.enableFeature(GameNewFluids)
+    g_game.enableFeature(GameMessageLevel)
+    g_game.enableFeature(GamePlayerStateU16)
+    g_game.enableFeature(GameNewOutfitProtocol)
+    g_game.enableFeature(GameWritableDate)
+	
+	-- customs
+	--g_game.enableFeature(GameIngameStore)
 	g_game.enableFeature(GamePlayerMarket)
-    --g_game.enableFeature(GameClientPing)
-    --g_game.enableFeature(GameExtendedOpcode)
-    --g_game.enableFeature(GameMinimapLimitedToSingleFloor) -- it will generate minimap only for current floor
-    --g_game.enableFeature(GameSpritesAlphaChannel)
-    
-    --if(version >= 770) then
-        g_game.enableFeature(GameLooktypeU16)
-        g_game.enableFeature(GameMessageStatements)
-        g_game.enableFeature(GameLoginPacketEncryption)
-    --end
-
-    --if(version >= 780) then
-        g_game.enableFeature(GamePlayerAddons)
-        g_game.enableFeature(GamePlayerStamina)
-        g_game.enableFeature(GameNewFluids)
-        g_game.enableFeature(GameMessageLevel)
-        g_game.enableFeature(GamePlayerStateU16)
-        g_game.enableFeature(GameNewOutfitProtocol)
-    --end
-
-    --if(version >= 790) then
-        g_game.enableFeature(GameWritableDate)
-    --end
+	
+	g_game.enableFeature(GamePlayerMounts)
+	g_game.enableFeature(GameWingsAndAura)
+	g_game.enableFeature(GameOutfitShaders)
+	--g_game.enableFeature(GameExtendedOpcode)
+	--g_game.enableFeature(GamePacketCompression)
+	g_game.enableFeature(GameClientPing)
+g_game.enableFeature(GameExtendedClientPing)
 
     if(version >= 840) then
         g_game.enableFeature(GameProtocolChecksum)
