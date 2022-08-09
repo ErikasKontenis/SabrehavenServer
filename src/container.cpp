@@ -155,8 +155,19 @@ std::ostringstream& Container::getContentDescription(std::ostringstream& os) con
 		} else {
 			os << ", ";
 		}
-
-		os << item->getNameDescription();
+		
+		if (item->getCost() >= 50000) {
+			os << "[#BA90C7:" << item->getNameDescription() << "]";
+		}
+		else if (item->getCost() >= 15000) {
+			os << "[#F3E84A:" << item->getNameDescription() << "]";
+		}
+		else if (item->getCost() >= 1000) {
+			os << "[#629AC4:" << item->getNameDescription() << "]";
+		}
+		else {
+			os << item->getNameDescription();
+		}
 	}
 
 	if (firstitem) {

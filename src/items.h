@@ -208,6 +208,7 @@ class ItemType
 		uint32_t minReqLevel = 0;
 		uint32_t minReqMagicLevel = 0;
 		uint32_t charges = 0;
+		uint32_t cost = 0;
 		int32_t attackStrength = 0;
 		int32_t attackVariation = 0;
 		int32_t manaConsumption = 0;
@@ -222,7 +223,7 @@ class ItemType
 		int32_t runeLevel = 0;
 		int32_t nutrition = 0;
 		int32_t destroyTarget = 0;
-
+		
 		CombatType_t combatType = COMBAT_NONE;
 		CombatType_t damageType = COMBAT_NONE;
 

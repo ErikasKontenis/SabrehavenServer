@@ -565,6 +565,7 @@ class Item : virtual public Thing
 		std::string getDescription(int32_t lookDistance) const final;
 		std::string getNameDescription() const;
 		std::string getWeightDescription() const;
+		uint32_t getCost() const;
 
 		//serialization
 		virtual Attr_ReadValue readAttr(AttrTypes_t attr, PropStream& propStream);

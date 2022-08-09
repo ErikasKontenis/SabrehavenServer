@@ -92,12 +92,20 @@ function displayMessage(mode, text)
   end
 
   if msgtype.screenTarget then
-    local label = messagesPanel:recursiveGetChildById(msgtype.screenTarget)
-    label:setText(text)
-    label:setColor(msgtype.color)
-    label:setVisible(true)
-    removeEvent(label.hideEvent)
-    label.hideEvent = scheduleEvent(function() label:setVisible(false) end, calculateVisibleTime(text))
+	local label = messagesPanel:recursiveGetChildById(msgtype.screenTarget)
+    if mode == 20 then
+		local highlightData = toHighlightedText(text, msgtype.color)
+		label:setColoredText(highlightData)
+		label:setVisible(true)
+		removeEvent(label.hideEvent)
+		label.hideEvent = scheduleEvent(function() label:setVisible(false) end, calculateVisibleTime(text))
+	else
+		label:setText(text)
+		label:setColor(msgtype.color)
+		label:setVisible(true)
+		removeEvent(label.hideEvent)
+		label.hideEvent = scheduleEvent(function() label:setVisible(false) end, calculateVisibleTime(text))
+	end
   end
 end
 

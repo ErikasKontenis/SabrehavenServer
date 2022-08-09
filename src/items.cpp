@@ -423,6 +423,8 @@ bool Items::loadItems()
 						items[id].lightColor = script.readNumber();
 					} else if (identifier == "extrahitchance") {
 						items[id].extraHitChance = script.readNumber();
+					} else if (identifier == "cost") {
+						items[id].cost = script.readNumber();
 					} else if (identifier == "extraattack") {
 						items[id].extraAttack = script.readNumber();
 					} else if (identifier == "totalexpiretime") {

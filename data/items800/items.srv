@@ -14826,7 +14826,7 @@ TypeID      = 3280
 Name        = "a fire sword"
 Description = "The blade is a magic flame"
 Flags       = {MultiUse,Take,Weapon}
-Attributes  = {Weight=2300,Brightness=3,LightColor=199,WeaponType=SWORD,Attack=35,Defense=20}
+Attributes  = {Weight=2300,Brightness=3,LightColor=199,WeaponType=SWORD,Attack=35,Defense=20,Cost=4000}
 
 TypeID      = 3281
 Name        = "a giant sword"
@@ -15373,7 +15373,7 @@ Attributes  = {Weight=2950,SlotType=HEAD,ArmorValue=7}
 TypeID      = 3386
 Name        = "a dragon scale mail"
 Flags       = {Take,Armor}
-Attributes  = {Weight=11400,SlotType=BODY,ArmorValue=15}
+Attributes  = {Weight=11400,SlotType=BODY,ArmorValue=15,Cost=30000}
 
 TypeID      = 3387
 Name        = "a demon helmet"
@@ -15591,7 +15591,7 @@ Attributes  = {Weight=5200,Defense=27}
 TypeID      = 3428
 Name        = "a tower shield"
 Flags       = {Take,Shield}
-Attributes  = {Weight=8200,Defense=32}
+Attributes  = {Weight=8200,Defense=32,Cost=8000}
 
 TypeID      = 3429
 Name        = "a black shield"

@@ -1182,6 +1182,12 @@ std::string Item::getWeightDescription() const
 	return getWeightDescription(weight);
 }
 
+uint32_t Item::getCost() const
+{
+	const ItemType& it = items[id];
+	return it.cost;
+}
+
 bool Item::canDecay() const
 {
 	if (isRemoved()) {

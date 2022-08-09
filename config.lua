@@ -52,7 +52,7 @@ serverName = "Tibianus"
 statusTimeout = 5000
 replaceKickOnLogin = true
 maxPacketsPerSecond = 50
-packetCompression = true
+packetCompression = false
 autoStackCumulatives = true
 moneyRate = 1
 

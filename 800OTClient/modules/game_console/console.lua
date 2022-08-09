@@ -646,7 +646,12 @@ function addTabText(text, speaktype, tab, creatureName)
       label:setColoredText(highlightData)
     end
   end
-
+  
+  if tab == serverTab then
+    local highlightText = toHighlightedText(text, speaktype.color)
+    label:setColoredText(highlightText)
+  end
+  
   label.name = creatureName
   consoleBuffer.onMouseRelease = function(self, mousePos, mouseButton)
     processMessageMenu(mousePos, mouseButton, nil, nil, nil, tab)
