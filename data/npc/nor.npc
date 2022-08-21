@@ -1,0 +1,22 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# quentin.npc: Datenbank für den Mönch Quentin
+
+Name = "Nor"
+Outfit = (143,77-113-19-116-0)
+Home = [32004,31443,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Psst, not that loud."
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Wait, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Bye, %N."
+
+"bye"             -> "Bye, %N.", Idle
+"farewell"        -> *
+
+# Not finished talks
+}
