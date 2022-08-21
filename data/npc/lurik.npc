@@ -1,0 +1,25 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# quentin.npc: Datenbank für den Mönch Quentin
+
+Name = "Lurik"
+Outfit = (133,38-94-96-116-0)
+Home = [32318,31135,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Welcome to the explorer society headquarter of Svargrond, %N!"
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Please show some patience, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Good bye. Come back soon with exciting stories about your travels."
+
+"bye"             -> "Good bye. Come back soon with exciting stories about your travels.", Idle
+"farewell"        -> *
+"how","are","you"             -> "I am fine. Thank you. There is a bit less work here than I had expected but I am sure we will have some intriguing discoveries just waiting for us."
+"name"             -> "My name is Lurik. Odd enough you ask though. People hardly do that nowadays. I feel as if my name was painted above my head or something."
+"job"             -> "I am the local contact of the explorer's society. I just love it to be at the frontier of all known lands."
+
+# Not finished talks
+}

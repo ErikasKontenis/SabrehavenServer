@@ -1,0 +1,32 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# arito.npc: Datenbank fuer den Wirt Arito
+
+Name = "Iskan"
+Outfit = (143,38-116-38-19-0)
+Home = [32302,31082,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Greetings. What can I do for you?"
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Please show some patience, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Good bye."
+
+"bye"             -> "Good bye.", Idle
+"farewell"        -> *
+"do","for","you"             -> "I run the dog sled service from this city to Nibelor."
+"name"             -> "I am Iskan."
+"job"             -> "I run the dog sled service from this city to Nibelor."
+"shop"             -> *
+"nibelor"             -> "I can bring you to Nibelor with the sled if you want to. Just ask for a passage."
+"city"             -> "This city seems to be growing every day. First, there have been only a few huts and now ... look around, houses everywhere."
+"svargrond"             -> *
+"barbarian"             -> "Our people are very proud and honest. I guess that's more than most people can say about themselves and their people, right boys?"
+"rumours"             -> "I heard something about a ship crashing in the shelf ice between Nibelor and Grimlund. If I were you, I wouldn't go to chakoya terrain. It's pretty dangerous."
+"chakoya"             -> "Nasty little beasts. Me and the boys had quite some bloody encounters with them on the ice."
+# Not finished talks
+
+}

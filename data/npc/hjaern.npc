@@ -1,0 +1,24 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# arito.npc: Datenbank fuer den Wirt Arito
+
+Name = "Hjaern"
+Outfit = (154,0-94-95-114-3)
+Home = [32351,31026,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Be greeted, %N. The spiritual world looks upon you and your deeds."
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Please show some patience, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Good bye, %N."
+
+"bye"             -> "Good bye, %N.", Idle
+"farewell"        -> *
+"spiritual"             -> "I would not consider this as a job. But one of my responsibilities is the training of young shamans. Even druids can learn a few new tricks from me."
+
+# Not finished talks
+
+}
