@@ -75,5 +75,5 @@ Topic=8,"yes"                   -> "Come back, when you have enough money."
 Topic=8                         -> "Hmm, but next time."
 
 @"gen-t-runes-free-s.ndb"
-@"gen-t-wands-free-s.ndb"
+@"gen-t-wands-prem-s.ndb"
 }

@@ -1,0 +1,23 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# quentin.npc: Datenbank für den Mönch Quentin
+
+Name = "Nilsor"
+Outfit = (154,41-116-95-114-0)
+Home = [32330,31046,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Greetings, traveller %N. Is there anything I can do for you?"
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Please show some patience, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Bye, %N."
+
+"bye"             -> "Bye, %N.", Idle
+"farewell"        -> *
+"how","are","you"             -> "I am fine as long as my dogs are fine."
+
+# Not finished talks
+}
