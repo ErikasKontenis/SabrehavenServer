@@ -4,7 +4,7 @@ combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_EXPLOSIONHIT)
 combat:setArea(createCombatArea(AREA_BEAM5, AREADIAGONAL_BEAM5))
 
 function onGetFormulaValues(player, level, maglevel)
-	local base = 60
+	local base = 65
 	local variation = 20
 	
 	local formula = 3 * maglevel + (2 * level)

@@ -4,8 +4,8 @@ combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_GREEN_RINGS)
 combat:setArea(createCombatArea(AREA_SQUAREWAVE5))
 
 function onGetFormulaValues(player, level, maglevel)
-	local base = 150
-	local variation = 50
+	local base = 195
+	local variation = 45
 	
 	local formula = 3 * maglevel + (2 * level)
 	

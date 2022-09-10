@@ -6,7 +6,7 @@ combat:setArea(createCombatArea(AREA_CIRCLE2X2))
 
 function onGetFormulaValues(player, level, maglevel)
 	local base = 20
-	local variation = 10
+	local variation = 5
 	
 	local formula = 3 * maglevel + (2 * level)
 	

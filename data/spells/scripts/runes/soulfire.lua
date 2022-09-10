@@ -6,7 +6,7 @@ combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_FIRE)
 function onTargetCreature(creature, target)
 	local player = Player(creature)
 	
-	local condition = Condition(CONDITION_FIRE)
+local condition = Condition(CONDITION_FIRE)
 	condition:setTiming(computeFormula(player:getLevel(), player:getMagicLevel(), 120, 20))
 	target:addCondition(condition)
 end

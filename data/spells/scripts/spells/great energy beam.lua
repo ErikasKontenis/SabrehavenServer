@@ -4,8 +4,8 @@ combat:setParameter(COMBAT_PARAM_EFFECT, CONST_ME_FIREAREA)
 combat:setArea(createCombatArea(AREA_BEAM8))
 
 function onGetFormulaValues(player, level, maglevel)
-	local base = 120
-	local variation = 80
+	local base = 135
+	local variation = 35
 	
 	local formula = 3 * maglevel + (2 * level)
 	

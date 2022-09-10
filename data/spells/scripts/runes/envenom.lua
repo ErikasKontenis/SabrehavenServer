@@ -5,8 +5,8 @@ combat:setParameter(COMBAT_PARAM_DISTANCEEFFECT, CONST_ANI_ENERGY)
 
 function onTargetCreature(creature, target)
 	local player = Player(creature)
-	
-	local condition = Condition(CONDITION_POISON)
+
+local condition = Condition(CONDITION_POISON)
 	condition:setTiming(computeFormula(player:getLevel(), player:getMagicLevel(), 70, 20))
 	target:addCondition(condition)
 end

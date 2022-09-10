@@ -1,7 +1,7 @@
 local dead_human = {
 	4240, 4241, 4242, 4247, 4248
 }
-local removalLimit = 10
+local removalLimit = 500
 
 function onCastSpell(creature, variant)
 	local position = variant:getPosition()

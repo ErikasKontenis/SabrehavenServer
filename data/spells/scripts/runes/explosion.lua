@@ -6,7 +6,7 @@ combat:setParameter(COMBAT_PARAM_BLOCKARMOR, true)
 combat:setArea(createCombatArea(AREA_CROSS1X1))
 
 function onGetFormulaValues(player, level, maglevel)
-	local base = 60
+	local base = 70
 	local variation = 40
 	
 	local formula = 3 * maglevel + (2 * level)
