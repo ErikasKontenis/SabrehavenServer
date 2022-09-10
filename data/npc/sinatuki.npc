@@ -1,0 +1,22 @@
+# GIMUD - Graphical Interface Multi User Dungeon
+# quentin.npc: Datenbank für den Mönch Quentin
+
+Name = "Sinatuki"
+Outfit = (260,0-0-0-0-0)
+Home = [32425,31085,7]
+Radius = 3
+
+Behaviour = {
+ADDRESS,"hello$",!         -> "Sajoq, jinuma!"
+ADDRESS,"hi$",!            -> *
+ADDRESS,!                  -> Idle
+BUSY,"hello$",!            -> "Jinuma, %N.", Queue
+BUSY,"hi$",!               -> *
+BUSY,!                     -> NOP
+VANISH,!                   -> "Gukaju, jinuma!"
+
+"bye"             -> "Gukaju, jinuma!", Idle
+"farewell"        -> *
+
+# Not finished talks
+}
