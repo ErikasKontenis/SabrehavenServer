@@ -60,6 +60,12 @@ VANISH,!           -> "Good bye."
 "daramanian","axe"    -> Type=3328, Amount=1, Price=1000, "You want sell a daramanian waraxe for %P gold?", Topic=2
 "heavy","machete"   -> Type=3330, Amount=1, Price=90, "You want sell a heavy machete for %P gold?", Topic=2
 "daramanian","mace"   -> Type=3327, Amount=1, Price=110,  "You want sell a daramanian mace for %P gold?", Topic=2
+"dreaded","cleaver"   -> Type=7419, Amount=1, Price=10000,  "You want sell a dreaded cleaver for %P gold?", Topic=2
+"headchopper"   -> Type=7380, Amount=1, Price=6000,  "You want sell a headchopper for %P gold?", Topic=2
+"heroic","axe"   -> Type=7389, Amount=1, Price=30000,  "You want sell a heroic axe for %P gold?", Topic=2
+"noble","axe"   -> Type=7456, Amount=1, Price=10000,  "You want sell a noble axe for %P gold?", Topic=2
+"royal","axe"   -> Type=7434, Amount=1, Price=40000,  "You want sell a royal axe for %P gold?", Topic=2
+"vile","axe"   -> Type=7388, Amount=1, Price=30000,  "You want sell a vile axe for %P gold?", Topic=2
 
 "dragon","scale","mail"  -> Type=3386, Amount=1, Price=40000,  "You want sell a dragon scale mail for %P gold?", Topic=2
 "dwarven","armor"    -> Type=3397, Amount=1, Price=30000, "You want sell a dwarven armor for %P gold?", Topic=2
@@ -95,6 +101,12 @@ VANISH,!           -> "Good bye."
 %1,1<%1,"daramanian","axe"    -> Type=3328, Amount=%1, Price=1000*%1, "You want sell %A daramanian waraxes for %P gold?", Topic=2
 %1,1<%1,"heavy","machete"   -> Type=3330, Amount=%1, Price=90*%1, "You want sell %A heavy machetes for %P gold?", Topic=2
 %1,1<%1,"daramanian","mace"   -> Type=3327, Amount=%1, Price=110*%1,  "You want sell %A daramanian maces for %P gold?", Topic=2
+%1,1<%1,"dreaded","cleaver"   -> Type=7419, Amount=%1, Price=10000*%1,  "You want sell %A dreaded cleavers for %P gold?", Topic=2
+%1,1<%1,"headchopper"   -> Type=7380, Amount=%1, Price=6000*%1,  "You want sell %A headchoppers for %P gold?", Topic=2
+%1,1<%1,"heroic","axe"   -> Type=7389, Amount=%1, Price=30000*%1,  "You want sell %A heroic axes for %P gold?", Topic=2
+%1,1<%1,"noble","axe"   -> Type=7456, Amount=%1, Price=10000*%1,  "You want sell %A noble axes for %P gold?", Topic=2
+%1,1<%1,"royal","axe"   -> Type=7434, Amount=%1, Price=40000*%1,  "You want sell %A royal axes for %P gold?", Topic=2
+%1,1<%1,"vile","axe"   -> Type=7388, Amount=%1, Price=30000*%1,  "You want sell %A vile axes for %P gold?", Topic=2
 
 %1,1<%1,"dragon","scale","mail"  -> Type=3386, Amount=%1, Price=40000*%1,  "You want sell %A dragon scale mails for %P gold?", Topic=2
 %1,1<%1,"dwarven","armor"    -> Type=3397, Amount=%1, Price=30000*%1, "You want sell %A dwarven armors for %P gold?", Topic=2

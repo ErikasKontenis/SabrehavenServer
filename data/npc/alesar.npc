@@ -116,6 +116,8 @@ Topic=1         -> "<sighs> Of course not. How could you ... Well, at least you 
 "sell","scimitar"       		           -> Type=3307, Amount=1, Price=150, "Do you want to sell a scimitar for %P gold?", Topic=11
 "sell","skull","staff"       		       -> Type=3324, Amount=1, Price=6000, "Do you want to sell a skull staff for %P gold?", Topic=11
 "sell","knight","axe"       		       -> Type=3318, Amount=1, Price=2000, "Do you want to sell a knight axe for %P gold?", Topic=11
+"sell","ornamented","axe"       		       -> Type=7411, Amount=1, Price=20000, "Do you want to sell a ornamented axe for %P gold?", Topic=11
+"sell","titan","axe"       		       -> Type=7413, Amount=1, Price=4000, "Do you want to sell a titan axe for %P gold?", Topic=11
 
 "sell","tower","shield"       		       -> Type=3428, Amount=1, Price=8000, "Do you want to sell a tower shield for %P gold?", Topic=11
 "sell","black","shield"       		       -> Type=3429, Amount=1, Price=800, "Do you want to sell a black shield for %P gold?", Topic=11
@@ -137,6 +139,8 @@ Topic=1         -> "<sighs> Of course not. How could you ... Well, at least you 
 "sell",%1,1<%1,"scimitar"       		           -> Type=3307, Amount=%1, Price=150*%1, "Do you want to sell %A scimitars for %P gold?", Topic=11
 "sell",%1,1<%1,"skull","staff"       		       -> Type=3324, Amount=%1, Price=6000*%1, "Do you want to sell %A skull staffs for %P gold?", Topic=11
 "sell",%1,1<%1,"knight","axe"       		       -> Type=3318, Amount=%1, Price=2000*%1, "Do you want to sell %A knight axes for %P gold?", Topic=11
+"sell",%1,1<%1,"ornamented","axe"       		       -> Type=7411, Amount=%1, Price=20000*%1, "Do you want to sell %A ornamented axes for %P gold?", Topic=11
+"sell",%1,1<%1,"titan","axe"       		       -> Type=7413, Amount=%1, Price=4000*%1, "Do you want to sell %A titan axes for %P gold?", Topic=11
 
 "sell",%1,1<%1,"tower","shield"       		       -> Type=3428, Amount=%1, Price=8000*%1, "Do you want to sell %A tower shields for %P gold?", Topic=11
 "sell",%1,1<%1,"black","shield"       		       -> Type=3429, Amount=%1, Price=800*%1, "Do you want to sell %A black shields for %P gold?", Topic=11

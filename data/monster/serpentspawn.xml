@@ -76,6 +76,7 @@
 		<item id="3029" countmax="1" chance="60" /> <!-- a small sapphire -->
 		<item id="3373" countmax="1" chance="6" /> <!-- a strange helmet -->
 		<item id="3428" countmax="1" chance="4" /> <!-- a tower shield -->
+		<item id="7456" countmax="1" chance="10" /> <!-- a noble axe -->
 	</loot>
 	<script>
 		<event name="KillingInTheNameOf" />

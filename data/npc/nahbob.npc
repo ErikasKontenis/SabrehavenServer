@@ -119,6 +119,9 @@ Topic=1,"no"                 -> "So the old skinflint is still alive? Amazing! I
 "sell","dragon","lance"       		       -> Type=3302, Amount=1, Price=9000, "Do you want to sell a dragon lance for %P gold?", Topic=11
 "sell","obsidian","lance"       		   -> Type=3313, Amount=1, Price=500, "Do you want to sell an obsidian lance for %P gold?", Topic=11
 "sell","fire","axe"       		           -> Type=3320, Amount=1, Price=8000, "Do you want to sell a fire axe for %P gold?", Topic=11
+"sell","angelic","axe"       		           -> Type=7436, Amount=1, Price=5000, "Do you want to sell a angelic axe for %P gold?", Topic=11
+"sell","butcher","axe"       		           -> Type=7412, Amount=1, Price=18000, "Do you want to sell a butcher's axe for %P gold?", Topic=11
+"sell","glorious","axe"       		           -> Type=7454, Amount=1, Price=3000, "Do you want to sell a glorious axe for %P gold?", Topic=11
 
 "sell","guardian","shield"       		   -> Type=3415, Amount=1, Price=2000, "Do you want to sell a guardian shield for %P gold?", Topic=11
 "sell","dragon","shield"       		   -> Type=3416, Amount=1, Price=4000, "Do you want to sell a dragon shield for %P gold?", Topic=11
@@ -143,6 +146,9 @@ Topic=1,"no"                 -> "So the old skinflint is still alive? Amazing! I
 "sell",%1,1<%1,"dragon","lance"       		       -> Type=3302, Amount=%1, Price=9000*%1, "Do you want to sell %A dragon lances for %P gold?", Topic=11
 "sell",%1,1<%1,"obsidian","lance"       		   -> Type=3313, Amount=%1, Price=500*%1, "Do you want to sell %A obsidian lances for %P gold?", Topic=11
 "sell",%1,1<%1,"fire","axe"       		           -> Type=3320, Amount=%1, Price=8000*%1, "Do you want to sell %A fire axes for %P gold?", Topic=11
+"sell",%1,1<%1,"angelic","axe"       		           -> Type=7436, Amount=%1, Price=5000*%1, "Do you want to sell %A angelic axes for %P gold?", Topic=11
+"sell",%1,1<%1,"butcher","axe"       		           -> Type=7412, Amount=%1, Price=18000*%1, "Do you want to sell %A butcher's axes for %P gold?", Topic=11
+"sell",%1,1<%1,"glorious","axe"       		           -> Type=7454, Amount=%1, Price=3000*%1, "Do you want to sell %A glorious axes for %P gold?", Topic=11
 
 "sell",%1,1<%1,"guardian","shield"       		   -> Type=3415, Amount=%1, Price=2000*%1, "Do you want to sell %A guardian shields for %P gold?", Topic=11
 "sell",%1,1<%1,"dragon","shield"       		   -> Type=3416, Amount=%1, Price=4000*%1, "Do you want to sell %A dragon shields for %P gold?", Topic=11

@@ -60,5 +60,6 @@
 							<!-- haunted blade -->
 		<item id="3428" chance="8" />					<!-- tower shield -->
 		<item id="5741" chance="1" />					<!-- skull helmet -->
+		<item id="7413" countmax="1" chance="19" /> <!-- titan axe -->
 	</loot>
 </monster>

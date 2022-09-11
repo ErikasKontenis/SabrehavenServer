@@ -58,6 +58,7 @@
 		<item id="3265" countmax="1" chance="40" /> <!-- a two handed sword -->
 		<item id="5893" countmax="1" chance="9" /> <!-- perfect behemoth fang -->
 		<item id="5930" countmax="1" chance="9" /> <!-- behemoth claw -->
+		<item id="7413" countmax="1" chance="9" /> <!-- titan axe -->
 	</loot>
 	<script>
 		<event name="KillingInTheNameOf" />

@@ -134,5 +134,8 @@
 		<item id="3026" countmax="15" chance="125" /> <!-- a white pearl -->
 		<item id="5944" countmax="8" chance="125" /> <!-- a soul orb -->
 		<item id="5903" countmax="1" chance="1000" /> <!-- Ferumbras' hat -->
+		<item id="7435" chance="75" /><!-- impaler -->
+		<item id="7411" chance="75" /><!-- ornamented axe -->
+		<item id="7388" chance="100" /><!-- vile axe -->
 	</loot>
 </monster>

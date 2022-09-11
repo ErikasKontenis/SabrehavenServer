@@ -56,5 +56,6 @@
 	<loot>
 		<item id="3035" countmax="8" chance="200" /><!-- platinum coin -->
 		<item id="6546" chance="1000" /><!-- dracola's eye -->
+		<item id="7420" chance="100" /><!-- reaper's axe -->
 	</loot>
 </monster>

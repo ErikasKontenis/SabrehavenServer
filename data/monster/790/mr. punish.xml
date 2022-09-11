@@ -27,5 +27,6 @@
 	</immunities>
 	<loot>
 		<item id="6537" chance="1000" /><!-- mr punish's handcuffs -->
+		<item id="7435" chance="100" /><!-- impaler -->
 	</loot>
 </monster>

@@ -43,11 +43,13 @@
 		<item id="3035" countmax="8" chance="550" /><!-- platinum coin -->
 		<item id="6558" countmax="3" chance="333" /><!-- concentrated demonic blood -->
 		<item id="5944" chance="230" /><!-- soul orb -->
-		<item id="3554" chance="50" /><!-- steel boots -->
+		<item id="3554" chance="11" /><!-- steel boots -->
+		<item id="7412" chance="10" /><!-- butcher's axe -->
 		<item id="3461" chance="52" /><!-- saw -->
 		<item id="6299" chance="20" /><!-- death ring -->
 		<item id="5479" chance="22" /><!-- cat's paw -->
 		<item id="5021" countmax="2" chance="27" /><!-- orichalcum pearl -->
-		<item id="3364" chance="30" /><!-- golden legs -->
+		<item id="3364" chance="1" /><!-- golden legs -->
+		<item id="7388" chance="2" /><!-- vile axe -->
 	</loot>
 </monster>

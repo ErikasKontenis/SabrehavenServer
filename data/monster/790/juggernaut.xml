@@ -61,6 +61,7 @@
 		<item id="3113" chance="6" /><!-- broken pottery -->
 		<item id="3340" chance="4" /><!-- heavy mace -->
 		<item id="3342" chance="4" /><!-- war axe -->
+		<item id="7413" countmax="1" chance="20" /> <!-- titan axe -->
 	</loot>
 	<script>
 		<event name="KillingInTheNameOf" />

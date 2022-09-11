@@ -69,6 +69,7 @@
 		<item id="3065" chance="200" /><!-- terra rod -->
 		<item id="5944" chance="50" /><!-- assassin star -->
 		<item id="3007" chance="4" /><!-- crystal ring-->
-		<item id="6299" chance="60" /><!-- death ring-->
+		<item id="6299" chance="3" /><!-- death ring-->
+		<item id="7456" chance="35" /><!-- noble axe-->
 	</loot>
 </monster>
