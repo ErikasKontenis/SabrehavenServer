@@ -1296,10 +1296,23 @@ void Combat::getAttackValue(Creature* creature, uint32_t& attackValue, uint32_t&
 			}
 
 			skillValue = player->getSkillLevel(skill);
+
+			if (weapon->getMinimumLevel() > player->getLevel()) {
+				attackValue = std::max<uint32_t>(7, attackValue / 2);
+			}
 		} else {
 			attackValue = 7;
 			skillValue = player->getSkillLevel(skill);
 		}
+
+		// begin 8.0 combat formula
+		if (player->getVocationId() == 3 || player->getVocationId() == 7) {
+			attackValue += (player->getLevel() / 4.5);
+		}
+		else if (player->getVocationId() == 4 || player->getVocationId() == 8) {
+			attackValue += (player->getLevel() / 3.0);
+		}
+		// end 8.0 combat formula
 	} else if (Monster* monster = creature->getMonster()) {
 		attackValue = monster->mType->info.attack;
 		skillValue = monster->mType->info.skill;

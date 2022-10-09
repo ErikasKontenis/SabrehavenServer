@@ -137,5 +137,6 @@
 		<item id="7435" chance="75" /><!-- impaler -->
 		<item id="7411" chance="75" /><!-- ornamented axe -->
 		<item id="7388" chance="100" /><!-- vile axe -->
+		<item id="7414" chance="100" /><!-- abyss hammer -->
 	</loot>
 </monster>

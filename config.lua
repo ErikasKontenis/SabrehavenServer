@@ -1,7 +1,7 @@
 -- Custom
 clientVersion = 800
-knightCloseAttackDamageIncreasePercent = 15
-paladinRangeAttackDamageIncreasePercent = 10
+knightCloseAttackDamageIncreasePercent = -1
+paladinRangeAttackDamageIncreasePercent = -1
 -- Min/Max rate spawn is a multiplication of the map spawntime in spawns.xml Regular monster spawn time is 600. The formula would be randomValue = random(600*100, 600*200) which varies between 60s and 120s
 minRateSpawn = 100
 maxRateSpawn = 200

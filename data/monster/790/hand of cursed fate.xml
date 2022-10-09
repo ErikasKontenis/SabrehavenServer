@@ -66,6 +66,7 @@
 		<item id="5799" chance="1" /><!-- golden figurine -->
 		<item id="5668" chance="2" /><!-- mysterious voodoo skull -->
 		<item id="3155" countmax="8" chance="42" /><!-- sudden death rune -->
+		<item id="7414" chance="5" /><!-- abyss hammer -->
 	</loot>
 	<script>
 		<event name="KillingInTheNameOf" />

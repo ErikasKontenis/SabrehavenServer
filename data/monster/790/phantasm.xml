@@ -67,5 +67,6 @@
 		<item id="6299" chance="3" /><!-- death ring -->
 		<item id="3030" countmax="3" chance="121" /><!-- small ruby -->
 		<item id="3033" countmax="3" chance="145" /><!-- small amethyst -->
+		<item id="7414" chance="4" /><!-- abyss hammer -->
 	</loot>
 </monster>

@@ -66,6 +66,7 @@ VANISH,!           -> "Good bye."
 "noble","axe"   -> Type=7456, Amount=1, Price=10000,  "You want sell a noble axe for %P gold?", Topic=2
 "royal","axe"   -> Type=7434, Amount=1, Price=40000,  "You want sell a royal axe for %P gold?", Topic=2
 "vile","axe"   -> Type=7388, Amount=1, Price=30000,  "You want sell a vile axe for %P gold?", Topic=2
+"abyss","hammer"   -> Type=7414, Amount=1, Price=20000,  "You want sell a abyss hammer for %P gold?", Topic=2
 
 "dragon","scale","mail"  -> Type=3386, Amount=1, Price=40000,  "You want sell a dragon scale mail for %P gold?", Topic=2
 "dwarven","armor"    -> Type=3397, Amount=1, Price=30000, "You want sell a dwarven armor for %P gold?", Topic=2
@@ -107,6 +108,7 @@ VANISH,!           -> "Good bye."
 %1,1<%1,"noble","axe"   -> Type=7456, Amount=%1, Price=10000*%1,  "You want sell %A noble axes for %P gold?", Topic=2
 %1,1<%1,"royal","axe"   -> Type=7434, Amount=%1, Price=40000*%1,  "You want sell %A royal axes for %P gold?", Topic=2
 %1,1<%1,"vile","axe"   -> Type=7388, Amount=%1, Price=30000*%1,  "You want sell %A vile axes for %P gold?", Topic=2
+%1,1<%1,"abyss","hammer"   -> Type=7414, Amount=%1, Price=20000*%1,  "You want sell %A abyss hammers for %P gold?", Topic=2
 
 %1,1<%1,"dragon","scale","mail"  -> Type=3386, Amount=%1, Price=40000*%1,  "You want sell %A dragon scale mails for %P gold?", Topic=2
 %1,1<%1,"dwarven","armor"    -> Type=3397, Amount=%1, Price=30000*%1, "You want sell %A dwarven armors for %P gold?", Topic=2

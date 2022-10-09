@@ -933,7 +933,7 @@
 	<house name="Unnamed House #2382" houseid="2382" entryx="32345" entryy="32244" entryz="7" rent="0" townid="1" size="14" />
 	<house name="Unnamed House #2383" houseid="2383" entryx="32348" entryy="32244" entryz="7" rent="0" townid="1" size="14" />
 	<house name="Unnamed House #2384" houseid="2384" entryx="32347" entryy="32245" entryz="6" rent="0" townid="1" size="16" />
-	<house name="Unnamed House #2385" houseid="2385" entryx="32361" entryy="32244" entryz="6" rent="0" townid="1" size="30" />
+	<house name="Unnamed House #2385" houseid="2385" entryx="32361" entryy="32244" entryz="6" rent="0" townid="1" size="29" />
 	<house name="Unnamed House #2386" houseid="2386" entryx="32386" entryy="32238" entryz="7" rent="0" townid="1" size="44" />
 	<house name="Unnamed House #2387" houseid="2387" entryx="32374" entryy="32241" entryz="7" rent="0" townid="1" size="20" />
 	<house name="Unnamed House #2388" houseid="2388" entryx="32364" entryy="32241" entryz="7" rent="0" townid="1" size="30" />
@@ -941,7 +941,7 @@
 	<house name="Unnamed House #2390" houseid="2390" entryx="32352" entryy="32201" entryz="7" rent="0" townid="1" size="22" />
 	<house name="Unnamed House #2391" houseid="2391" entryx="32352" entryy="32196" entryz="7" rent="0" townid="1" size="22" />
 	<house name="Unnamed House #2392" houseid="2392" entryx="32361" entryy="32190" entryz="7" rent="0" townid="1" size="28" />
-	<house name="Unnamed House #2393" houseid="2393" entryx="32371" entryy="32201" entryz="7" rent="0" townid="1" size="90" />
+	<house name="Unnamed House #2393" houseid="2393" entryx="32371" entryy="32201" entryz="7" rent="0" townid="1" size="86" />
 	<house name="Unnamed House #2394" houseid="2394" entryx="32389" entryy="32216" entryz="7" rent="0" townid="1" size="66" />
 	<house name="Unnamed House #2395" houseid="2395" entryx="32387" entryy="32212" entryz="7" rent="0" townid="1" size="33" />
 	<house name="Unnamed House #2396" houseid="2396" entryx="32395" entryy="32218" entryz="6" rent="0" townid="1" size="39" />
@@ -1018,4 +1018,12 @@
 	<house name="Fimbul Shelf 2" houseid="2470" entryx="32209" entryy="31175" entryz="7" rent="1045" townid="13" size="21" />
 	<house name="Fimbul Shelf 1" houseid="2471" entryx="32204" entryy="31169" entryz="7" rent="975" townid="13" size="20" />
 	<house name="Frost Manor" houseid="2472" entryx="32287" entryy="31106" entryz="5" rent="26370" townid="13" size="378" />
+	<house name="Unnamed House #2473" houseid="2473" entryx="32346" entryy="32245" entryz="6" rent="0" townid="1" size="17" />
+	<house name="Unnamed House #2474" houseid="2474" entryx="32060" entryy="32449" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2475" houseid="2475" entryx="32060" entryy="32445" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2476" houseid="2476" entryx="32060" entryy="32441" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2477" houseid="2477" entryx="32060" entryy="32437" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2478" houseid="2478" entryx="32060" entryy="32433" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2479" houseid="2479" entryx="32060" entryy="32429" entryz="7" rent="0" townid="1" size="32" />
+	<house name="Unnamed House #2480" houseid="2480" entryx="32083" entryy="32440" entryz="7" rent="0" townid="1" size="47" />
 </houses>
