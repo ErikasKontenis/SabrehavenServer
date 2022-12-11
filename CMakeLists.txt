@@ -9,7 +9,7 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake")
 
 include(cotire)
 
-add_compile_options(-Wall -Werror -pipe -fvisibility=hidden)
+add_compile_options(-Wall -pipe -fvisibility=hidden)
 set(CMAKE_CXX_FLAGS_PERFORMANCE "${CMAKE_CXX_FLAGS_RELEASE} -march=native")
 
 if (CMAKE_COMPILER_IS_GNUCXX)
@@ -20,6 +20,7 @@ include(FindCXX11)
 include(FindLTO)
 
 # Find packages.
+find_package(fmt)
 find_package(Crypto++ REQUIRED)
 find_package(GMP REQUIRED)
 find_package(PugiXML REQUIRED)
@@ -50,7 +51,7 @@ add_subdirectory(src)
 add_executable(tfs ${tfs_SRC})
 
 include_directories(${MYSQL_INCLUDE_DIR} ${LUA_INCLUDE_DIR} ${Boost_INCLUDE_DIRS} ${PUGIXML_INCLUDE_DIR} ${GMP_INCLUDE_DIR} ${Crypto++_INCLUDE_DIR})
-target_link_libraries(tfs ${MYSQL_CLIENT_LIBS} ${LUA_LIBRARIES} ${Boost_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY} ${PUGIXML_LIBRARIES} ${ZLIB_LIBRARY} ${GMP_LIBRARIES} ${Crypto++_LIBRARIES} ${CMAKE_THREAD_LIBS_INIT})
+target_link_libraries(tfs ${MYSQL_CLIENT_LIBS} ${LUA_LIBRARIES} ${Boost_LIBRARIES} ${Boost_FILESYSTEM_LIBRARY} ${PUGIXML_LIBRARIES} ${ZLIB_LIBRARY} ${GMP_LIBRARIES} ${Crypto++_LIBRARIES} fmt::fmt ${CMAKE_THREAD_LIBS_INIT})
 
 set_target_properties(tfs PROPERTIES COTIRE_CXX_PREFIX_HEADER_INIT "src/otpch.h")
 set_target_properties(tfs PROPERTIES COTIRE_ADD_UNITY_BUILD FALSE)

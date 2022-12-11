@@ -349,7 +349,7 @@
 	<house name="Elm Street 4" houseid="347" entryx="32902" entryy="32055" entryz="6" rent="5140" townid="7" size="49" />
 	<house name="Seagull Walk 1" houseid="348" entryx="32918" entryy="32052" entryz="6" rent="10090" townid="7" size="100" />
 	<house name="Seagull Walk 2" houseid="349" entryx="32915" entryy="32037" entryz="6" rent="5330" townid="7" size="46" />
-	<house name="Lucky Lane 1 (Shop)" houseid="350" entryx="32936" entryy="32090" entryz="6" rent="13620" townid="7" size="128" />
+	<house name="Lucky Lane 1 (Shop)" houseid="350" entryx="32936" entryy="32090" entryz="6" rent="13620" townid="7" size="125" />
 	<house name="Paupers Palace, Flat 01" houseid="351" entryx="32918" entryy="32094" entryz="7" rent="810" townid="7" size="6" />
 	<house name="Paupers Palace, Flat 02" houseid="352" entryx="32914" entryy="32094" entryz="7" rent="900" townid="7" size="7" />
 	<house name="Paupers Palace, Flat 03" houseid="353" entryx="32911" entryy="32100" entryz="7" rent="810" townid="7" size="6" />
@@ -1026,4 +1026,18 @@
 	<house name="Unnamed House #2478" houseid="2478" entryx="32060" entryy="32433" entryz="7" rent="0" townid="1" size="32" />
 	<house name="Unnamed House #2479" houseid="2479" entryx="32060" entryy="32429" entryz="7" rent="0" townid="1" size="32" />
 	<house name="Unnamed House #2480" houseid="2480" entryx="32083" entryy="32440" entryz="7" rent="0" townid="1" size="47" />
+	<house name="Unnamed House #2481" houseid="2481" entryx="33259" entryy="31857" entryz="7" rent="0" townid="5" size="32" />
+	<house name="Unnamed House #2482" houseid="2482" entryx="33257" entryy="31867" entryz="7" rent="0" townid="5" size="45" />
+	<house name="Unnamed House #2483" houseid="2483" entryx="33217" entryy="31782" entryz="7" rent="0" townid="5" size="41" />
+	<house name="Unnamed House #2484" houseid="2484" entryx="33217" entryy="31782" entryz="6" rent="0" townid="5" size="41" />
+	<house name="Unnamed House #2485" houseid="2485" entryx="33242" entryy="31784" entryz="6" rent="0" townid="5" size="37" />
+	<house name="Unnamed House #2486" houseid="2486" entryx="33229" entryy="31765" entryz="6" rent="0" townid="5" size="26" />
+	<house name="Unnamed House #2487" houseid="2487" entryx="33220" entryy="31924" entryz="7" rent="0" townid="5" size="170" />
+	<house name="Unnamed House #2488" houseid="2488" entryx="33214" entryy="31759" entryz="7" rent="0" townid="5" size="32" />
+	<house name="Unnamed House #2489" houseid="2489" entryx="32869" entryy="32126" entryz="6" rent="0" townid="7" size="112" />
+	<house name="Unnamed House #2490" houseid="2490" entryx="32869" entryy="32125" entryz="6" rent="0" townid="7" size="116" />
+	<house name="Unnamed House #2491" houseid="2491" entryx="32954" entryy="32073" entryz="8" rent="0" townid="7" size="16" />
+	<house name="Unnamed House #2492" houseid="2492" entryx="32954" entryy="32069" entryz="8" rent="0" townid="7" size="16" />
+	<house name="Unnamed House #2493" houseid="2493" entryx="32951" entryy="32069" entryz="8" rent="0" townid="7" size="16" />
+	<house name="Unnamed House #2494" houseid="2494" entryx="32951" entryy="32073" entryz="8" rent="0" townid="7" size="16" />
 </houses>

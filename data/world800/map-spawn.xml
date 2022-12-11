@@ -8862,8 +8862,8 @@
 		<monster name="orc" x="0" y="0" z="7" spawntime="600" />
 		<monster name="orc" x="-2" y="1" z="7" spawntime="600" />
 	</spawn>
-	<spawn centerx="33180" centery="31796" centerz="7" radius="1">
-		<monster name="dog" x="0" y="0" z="7" spawntime="600" />
+	<spawn centerx="33179" centery="31796" centerz="7" radius="1">
+		<monster name="dog" x="1" y="0" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="32189" centery="31797" centerz="7" radius="3">
 		<monster name="rat" x="0" y="0" z="7" spawntime="600" />
@@ -9278,6 +9278,7 @@
 	<spawn centerx="33157" centery="31875" centerz="7" radius="4">
 		<monster name="deer" x="0" y="-2" z="7" spawntime="600" />
 		<monster name="deer" x="0" y="0" z="7" spawntime="600" />
+		<monster name="orc spearman" x="3" y="2" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="33148" centery="31876" centerz="7" radius="1">
 		<monster name="orc" x="-1" y="-1" z="7" spawntime="600" />
@@ -9335,8 +9336,10 @@
 		<monster name="rabbit" x="3" y="3" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="33140" centery="31887" centerz="7" radius="4">
+		<monster name="orc spearman" x="0" y="-1" z="7" spawntime="60" />
 		<monster name="poison spider" x="-1" y="0" z="7" spawntime="600" />
 		<monster name="poison spider" x="0" y="0" z="7" spawntime="600" />
+		<monster name="orc spearman" x="-4" y="1" z="7" spawntime="60" />
 		<monster name="poison spider" x="2" y="2" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="33323" centery="31888" centerz="7" radius="1">
@@ -9348,6 +9351,9 @@
 		<monster name="snake" x="0" y="0" z="7" spawntime="600" />
 		<monster name="snake" x="1" y="3" z="7" spawntime="600" />
 	</spawn>
+	<spawn centerx="33158" centery="31892" centerz="7" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="32837" centery="31894" centerz="7" radius="5">
 		<monster name="snake" x="2" y="-3" z="7" spawntime="600" />
 		<monster name="snake" x="0" y="0" z="7" spawntime="600" />
@@ -9358,6 +9364,9 @@
 		<monster name="deer" x="0" y="-2" z="7" spawntime="600" />
 		<monster name="deer" x="0" y="0" z="7" spawntime="600" />
 		<monster name="deer" x="-2" y="2" z="7" spawntime="600" />
+	</spawn>
+	<spawn centerx="33155" centery="31896" centerz="7" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32705" centery="31897" centerz="7" radius="6">
 		<monster name="rabbit" x="-5" y="-4" z="7" spawntime="600" />
@@ -9429,6 +9438,9 @@
 		<monster name="amazon" x="0" y="-2" z="7" spawntime="600" />
 		<monster name="amazon" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
+	<spawn centerx="33179" centery="31912" centerz="7" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="32539" centery="31913" centerz="7" radius="3">
 		<monster name="dwarf" x="0" y="0" z="7" spawntime="600" />
 		<monster name="dwarf" x="1" y="1" z="7" spawntime="600" />
@@ -9442,6 +9454,9 @@
 		<monster name="rabbit" x="1" y="-2" z="7" spawntime="600" />
 		<monster name="rabbit" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
+	<spawn centerx="33186" centery="31915" centerz="7" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="7" spawntime="60" />
+	</spawn>
 	<spawn centerx="32837" centery="31917" centerz="7" radius="3">
 		<monster name="amazon" x="0" y="0" z="7" spawntime="600" />
 		<monster name="amazon" x="-1" y="2" z="7" spawntime="600" />
@@ -9449,6 +9464,9 @@
 	<spawn centerx="32846" centery="31918" centerz="7" radius="3">
 		<monster name="amazon" x="0" y="0" z="7" spawntime="600" />
 		<monster name="amazon" x="0" y="1" z="7" spawntime="600" />
+	</spawn>
+	<spawn centerx="33180" centery="31920" centerz="7" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="7" spawntime="60" />
 	</spawn>
 	<spawn centerx="32159" centery="31924" centerz="7" radius="3">
 		<monster name="pig" x="0" y="0" z="7" spawntime="9000" />
@@ -10830,7 +10848,7 @@
 		<monster name="purple butterfly" x="0" y="0" z="7" spawntime="900" />
 	</spawn>
 	<spawn centerx="31968" centery="32167" centerz="7" radius="3">
-		<monster name="spider" x="-2" y="-2" z="7" spawntime="600" />
+		<monster name="spider" x="-1" y="0" z="7" spawntime="600" />
 		<monster name="spider" x="0" y="0" z="7" spawntime="600" />
 	</spawn>
 	<spawn centerx="32017" centery="32167" centerz="7" radius="4">
@@ -20567,6 +20585,9 @@
 		<monster name="goblin" x="0" y="-1" z="8" spawntime="600" />
 		<monster name="goblin" x="0" y="0" z="8" spawntime="600" />
 	</spawn>
+	<spawn centerx="33272" centery="31870" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="33082" centery="31871" centerz="8" radius="4">
 		<monster name="goblin" x="-1" y="0" z="8" spawntime="600" />
 		<monster name="goblin" x="0" y="0" z="8" spawntime="600" />
@@ -20578,6 +20599,9 @@
 	</spawn>
 	<spawn centerx="32830" centery="31873" centerz="8" radius="1">
 		<monster name="beholder" x="0" y="0" z="8" spawntime="6000" />
+	</spawn>
+	<spawn centerx="33287" centery="31873" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="32529" centery="31875" centerz="8" radius="3">
 		<monster name="dwarf" x="2" y="-1" z="8" spawntime="600" />
@@ -20602,6 +20626,12 @@
 		<monster name="goblin" x="-2" y="0" z="8" spawntime="600" />
 		<monster name="goblin" x="0" y="0" z="8" spawntime="600" />
 	</spawn>
+	<spawn centerx="33268" centery="31878" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="33285" centery="31878" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="32482" centery="31879" centerz="8" radius="3">
 		<monster name="dwarf" x="-1" y="0" z="8" spawntime="600" />
 		<monster name="dwarf" x="0" y="0" z="8" spawntime="600" />
@@ -20612,6 +20642,15 @@
 	<spawn centerx="32547" centery="31882" centerz="8" radius="3">
 		<monster name="dwarf" x="0" y="-1" z="8" spawntime="600" />
 		<monster name="dwarf" x="0" y="0" z="8" spawntime="600" />
+	</spawn>
+	<spawn centerx="33169" centery="31882" centerz="8" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="33171" centery="31884" centerz="8" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="33272" centery="31885" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="33211" centery="31886" centerz="8" radius="3">
 		<monster name="rotworm" x="-1" y="0" z="8" spawntime="500" />
@@ -20718,6 +20757,7 @@
 		<monster name="orc" x="0" y="-1" z="8" spawntime="600" />
 		<monster name="orc warrior" x="0" y="0" z="8" spawntime="600" />
 		<monster name="orc" x="1" y="2" z="8" spawntime="600" />
+		<monster name="orc spearman" x="-1" y="3" z="8" spawntime="60" />
 		<monster name="orc spearman" x="1" y="3" z="8" spawntime="600" />
 	</spawn>
 	<spawn centerx="32520" centery="31915" centerz="8" radius="3">
@@ -20733,6 +20773,9 @@
 		<monster name="poison spider" x="0" y="0" z="8" spawntime="600" />
 		<monster name="poison spider" x="2" y="1" z="8" spawntime="600" />
 		<monster name="poison spider" x="3" y="1" z="8" spawntime="600" />
+	</spawn>
+	<spawn centerx="33167" centery="31917" centerz="8" radius="1">
+		<monster name="orc spearman" x="0" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="32681" centery="31918" centerz="8" radius="3">
 		<monster name="spider" x="0" y="-1" z="8" spawntime="600" />
@@ -20824,6 +20867,7 @@
 		<monster name="orc spearman" x="0" y="1" z="8" spawntime="600" />
 		<monster name="orc spearman" x="-1" y="2" z="8" spawntime="600" />
 		<monster name="orc warrior" x="0" y="2" z="8" spawntime="600" />
+		<monster name="orc spearman" x="2" y="2" z="8" spawntime="60" />
 		<monster name="orc warrior" x="0" y="4" z="8" spawntime="600" />
 	</spawn>
 	<spawn centerx="32516" centery="31932" centerz="8" radius="4">
@@ -21314,6 +21358,9 @@
 	<spawn centerx="32708" centery="32073" centerz="8" radius="1">
 		<monster name="Wyvern" x="0" y="1" z="8" spawntime="60" />
 	</spawn>
+	<spawn centerx="32993" centery="32073" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
+	</spawn>
 	<spawn centerx="32073" centery="32076" centerz="8" radius="1">
 		<monster name="troll" x="0" y="0" z="8" spawntime="600" />
 	</spawn>
@@ -21322,6 +21369,9 @@
 	</spawn>
 	<spawn centerx="32730" centery="32077" centerz="8" radius="1">
 		<monster name="Wyvern" x="-1" y="-1" z="8" spawntime="60" />
+	</spawn>
+	<spawn centerx="32984" centery="32077" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="32318" centery="32078" centerz="8" radius="1">
 		<monster name="bear" x="0" y="0" z="8" spawntime="60" />
@@ -21338,6 +21388,9 @@
 	</spawn>
 	<spawn centerx="32835" centery="32080" centerz="8" radius="1">
 		<monster name="rotworm" x="0" y="0" z="8" spawntime="500" />
+	</spawn>
+	<spawn centerx="32980" centery="32080" centerz="8" radius="1">
+		<monster name="rotworm" x="0" y="0" z="8" spawntime="60" />
 	</spawn>
 	<spawn centerx="33109" centery="32080" centerz="8" radius="3">
 		<monster name="rotworm" x="0" y="0" z="8" spawntime="500" />
@@ -37259,7 +37312,6 @@
 		<monster name="rotworm" x="0" y="0" z="10" spawntime="500" />
 		<monster name="rotworm" x="1" y="1" z="10" spawntime="500" />
 	</spawn>
-	<spawn centerx="33066" centery="31841" centerz="10" radius="4" />
 	<spawn centerx="33095" centery="31841" centerz="10" radius="3">
 		<monster name="bug" x="0" y="-2" z="10" spawntime="600" />
 		<monster name="goblin" x="-1" y="-1" z="10" spawntime="600" />
@@ -43382,6 +43434,7 @@
 		<monster name="phantasm" x="0" y="1" z="11" spawntime="240" />
 	</spawn>
 	<spawn centerx="33137" centery="31810" centerz="11" radius="3">
+		<monster name="rat" x="-3" y="-2" z="11" spawntime="2500" />
 		<monster name="rat" x="0" y="0" z="11" spawntime="600" />
 		<monster name="rat" x="1" y="2" z="11" spawntime="600" />
 	</spawn>
@@ -43411,6 +43464,9 @@
 	</spawn>
 	<spawn centerx="33142" centery="31819" centerz="11" radius="1">
 		<monster name="rat" x="0" y="0" z="11" spawntime="600" />
+	</spawn>
+	<spawn centerx="33149" centery="31823" centerz="11" radius="1">
+		<monster name="rat" x="0" y="0" z="11" spawntime="60" />
 	</spawn>
 	<spawn centerx="33095" centery="31825" centerz="11" radius="3">
 		<monster name="phantasm" x="2" y="1" z="11" spawntime="240" />
