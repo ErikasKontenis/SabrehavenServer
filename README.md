@@ -6,6 +6,17 @@ I wish you the best use of the Sabrehaven server and its features. Server is bas
 - https://otland.net/threads/france-7-4-tibianus-the-enchanted-real-ots-starting-08-05-saturday-20-00-cet.276212/ [This is the 7.4 attempt which wasn't very great success as wel]
 - Lastly in private with CustomTibia OTLand user I started to do 8.0 branch which never saw the players from the open tibia world.
 
+# Sabrehaven features or whats new not in the Nostalrius fork
+  - 7.8-8.0 cities and quests including POI, INQ and other.
+  - Outfits, Outfit Addons, Mounts, Shaders, Auras, Wings...
+  - Market system.
+  - Built in client shop system.
+  - Offline training implementation.
+  - Stamina implementation.
+  - Guild wars with bounties implementation.
+  - Quest log support.
+  - And quite many more for you to discover including many bugfixes.
+
 # How to find things in this mess
 The very first and the very imporant thing is to take a look at the commit history! You can find the whole progress of the development which may be very useful for you.
 Now lets speak about branches:
@@ -13283,6 +13294,7 @@ otbm2json.write("svargrond_after.otbm", mapData);
 </details>
 
   - How you edit dat/spr? With old object builder exe which can be found somewhere in otland tools thread.
+  - How to open map? With the nostalrius map editor which you can find it here. https://github.com/Ezzz-dev/Map-Editor But you will need to rebuild dat/spr to 7.72 signatures with object builder. 
 # Sabrehaven Tools
   - https://gitlab.com/ErikasKontenis/SabrehavenMapEditor
   - https://gitlab.com/ErikasKontenis/sabrehavenitemeditor
