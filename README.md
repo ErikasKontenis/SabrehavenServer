@@ -13295,12 +13295,27 @@ otbm2json.write("svargrond_after.otbm", mapData);
 
   - How you edit dat/spr? With old object builder exe which can be found somewhere in otland tools thread.
   - How to open map? With the nostalrius map editor which you can find it here. https://github.com/Ezzz-dev/Map-Editor But you will need to rebuild dat/spr to 7.72 signatures with object builder. 
+  
 # Sabrehaven Tools
-  - https://gitlab.com/ErikasKontenis/SabrehavenMapEditor
-  - https://gitlab.com/ErikasKontenis/sabrehavenitemeditor
+  - https://github.com/Ezzz-dev/Map-Editor
+  - https://github.com/Inconcessus/OTBM2JSON
   - https://github.com/ErikasKontenis/SabrehavenStaticLibrary
   
 # Credits
   - Erikas Kontenis for the Sabrehaven Platform
   - CustomTibia OTLand user for the mapping 8.0 custom areas
   - Nostalrius and TheForgottenServer Team
+  
+# Some pictures from in-game
+![bank](https://user-images.githubusercontent.com/33052216/213016984-bfdbe92b-3241-4db8-9dcc-1fcb53d4de77.png)
+![color_loot](https://user-images.githubusercontent.com/33052216/213017027-8163742a-4f1e-4b17-b120-8ee3e0a359d3.png)
+![ingameshop](https://user-images.githubusercontent.com/33052216/213017035-f915f72b-e811-42ff-8f4b-83c43cda1639.png)
+![inq](https://user-images.githubusercontent.com/33052216/213017075-33c16144-f29c-4d47-b0e4-637b03e5e067.png)
+![market](https://user-images.githubusercontent.com/33052216/213017286-060c040c-aa98-449d-a106-f32b76d88a1a.png)
+![mounts_shaders](https://user-images.githubusercontent.com/33052216/213017319-22e4a758-7eb5-43a6-9bf6-ff095d236302.png)
+
+
+
+
+
+
