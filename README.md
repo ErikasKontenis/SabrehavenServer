@@ -13297,7 +13297,7 @@ otbm2json.write("svargrond_after.otbm", mapData);
   - How to open map? With the nostalrius map editor which you can find it here. https://github.com/Ezzz-dev/Map-Editor But you will need to rebuild dat/spr to 7.72 signatures with object builder. 
   
 # Sabrehaven Tools
-  - https://github.com/Ezzz-dev/Map-Editor
+  - https://github.com/ErikasKontenis/SabrehavenRme
   - https://github.com/Inconcessus/OTBM2JSON
   - https://github.com/ErikasKontenis/SabrehavenStaticLibrary
   
