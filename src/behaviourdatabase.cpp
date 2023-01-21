@@ -1440,10 +1440,10 @@ int32_t BehaviourDatabase::searchDigitNoLimit(const std::string& message)
 	try {
 		value = std::stoi(message.substr(start, end).c_str());
 	}
-	catch (std::invalid_argument) {
+    catch (std::invalid_argument const&) {
 		return 0;
 	}
-	catch (std::out_of_range) {
+    catch (std::out_of_range const&) {
 		return 0;
 	}
 
